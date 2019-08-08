@@ -1,0 +1,343 @@
+/*
+
+ACC's Blue
+
+$acc-blue            -  #004176; acc
+
+Styleguide DesignBase.Colors.ACC
+*/
+/*
+
+Theme Colors 
+
+Colors are based off of the ACC Scrub Colors.
+
+map-get($theme-palette, primary)              -  #198dae; primary
+map-get($theme-palette, secondary)            -  #676a72; secondary
+map-get($theme-palette, accent)               -  #c34198;  accent
+map-get($theme-palette, info)                 -  #a3988c; info
+map-get($theme-palette, highlight)            -  #976ad2; highlight
+
+Styleguide DesignBase.Colors
+ */
+/*
+
+Action Colors  
+
+Actionable colors used to respond to user inputs and messaging.
+
+map-get($theme-palette, alert)                -  #dd1a1a; alert
+map-get($theme-palette, warning)              -  #da8210; warning
+map-get($theme-palette, success)               -  #06a022;  success
+map-get($theme-palette, navigation)           -  #2b58c0; navigation
+
+Styleguide DesignBase.Colors.Actions
+*/
+/*
+
+Color Coding  
+
+Color Coding is used in specific products and concepts to illustrate cohesion and collections. All of these color codes are used universally through out the college and have an assoicated meaning. All of these colors are just used for reference and have no associated decorator classes.  You must include the the associated color-code_x.css have access to utlity classes that will color using the bellow colors. 
+
+Styleguide DesignBase.Colors.ColorCoding
+
+ */
+/*
+
+COR Colors  
+
+(COR) Class of Recomendation is a color collect used in Guideline recomendations.
+
+$cor-green                 	- #6fc284; I
+$cor-yellow              	- #ffd44f; IIA
+$cor-yellow-orange          - #faa74b; IIA
+$cor-orange               	- #f15d4c;III and III-NoHarm
+$cor-red               		- #ed1c00; III-harm
+
+Weight: 10
+
+Styleguide DesignBase.Colors.ColorCoding.COR
+
+ */
+/*
+
+LOE Colors  
+
+(LOE) level of Evedence is a color collect used in Guideline recomendations.
+
+$loe-dark-blue                 	- #3e6fb7;LOE A
+$loe-mid-blue              		- #659cd3;LOE B-R
+$loe-light-blue                	- #a1c1e6;LOE B-NR
+$loe-pale-blue                	- #b5d5e5; LOE C
+
+Weight: 10
+
+Styleguide DesignBase.Colors.ColorCoding.LOE
+
+ */
+/*
+
+Credit Type Color Coding  
+
+Credit Types in the ACC have a specific color coding.
+
+$credit-CME         	-  #00a15b; CME   
+$credit-ABP         	-  #007A5B; ABP   
+$credit-COP         	-  #775891; COP   
+$credit-CE         		-  #a8a8a8; CE   
+$credit-MOCII         	-  #9a1267; MOCII   
+$credit-MOCIV         	-  #D3248D; MOCIV   
+$credit-CNE         	-  #198dae; CNE   
+$credit-CNErx         	-  #52549E; CNErx   
+$credit-ECME         	-  #D16528; ECME   
+$credit-CPE         	-  #992E2E; CPE   
+
+Weight: 0
+
+Styleguide DesignBase.Colors.ColorCoding.Credits
+
+*/
+/*
+
+Clinical Pathway Colors  
+
+Each of the clinical pathways has a distinctive color.  These colors are used to give a distinct theme to our clinical apps, marketing, pdf's and tools.
+
+$pathway-invasive-cardiology 							- #c8b02f;  Invasive Cardiology Angiography and Intervention
+$pathway-congenital-heart-disease 						- #fdb918;  Congenital Heart Disease
+$pathway-noninvasive-cardiology 						- #947b33;  Noninvasive Cardiology
+$pathway-ecg-stress-test 								- #d9691f;  Standard ECG, Stress Test
+$pathway-vascular-medicine 								- #ae171c;  Vascular Medicine
+$pathway-pulmonary-hypertension 						- #d60e7e;  Pulmonary Hypertension and Venous Thromboembolic Disease
+$pathway-prevention 									- #a01d51;  Prevention
+$pathway-heart-failure 									- #410d49;  Heart Failure and Cardiomyopathies
+$pathway-valvular-heart-disease 						- #4f4190;  Valvular Heart Disease
+$pathway-arrthythmias-EP 								- #005b37;  Arrthythmias and Clinical EP
+$pathway-preicardial 									- #0079ad;  Preicardial Disease
+$pathway-acute-coronary-syndromes 						- #009974;  Acute Coronary Syndromes
+$pathway-stable-ischemnic-heart-disease 				- #0f3e65;  Stable Ischemnic Heart Disease
+$pathway-special 										- #00b6f1;  Special
+
+Weight: -1
+
+Styleguide DesignBase.Colors.ColorCoding.Pathways
+
+*/
+/*
+
+Social Network Colors  
+
+Each of the social networks has a distinctive color.  These colors are used to give a distinct theme to the social nav that is in different locations.
+
+$twitter            -   #00aced;  twitter     
+$facebook           -   #3b5998;  facebook    
+$linkedin           -   #007bb6;  linkedin    
+$apple-store        -   #ea4cc0;  apple-store 
+$google-play        -   #689f38;  google-play 
+$youtube            -   #bb0000;  youtube     
+
+
+Weight: 100
+
+Styleguide DesignBase.Colors.Social Networks
+
+*/
+.c_twitter {
+  color: #00aced !important;
+}
+
+.br_twitter {
+  border-color: #00aced !important;
+}
+
+.c_twitter {
+  background-color: #00aced !important;
+}
+
+/*
+
+"twitter" Decorator Classes 
+
+Font, Border and Background Colors using twitter Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_twitter`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_twitter p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_twitter`</h3>
+<div class="flex">
+   <div class="bg_twitter flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_twitter`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_twitter text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide CreditColors.twitter
+*/
+.c_facebook {
+  color: #3b5998 !important;
+}
+
+.br_facebook {
+  border-color: #3b5998 !important;
+}
+
+.c_facebook {
+  background-color: #3b5998 !important;
+}
+
+/*
+
+"facebook" Decorator Classes 
+
+Font, Border and Background Colors using facebook Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_facebook`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_facebook p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_facebook`</h3>
+<div class="flex">
+   <div class="bg_facebook flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_facebook`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_facebook text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide CreditColors.facebook
+*/
+.c_linkedin {
+  color: #0077b5 !important;
+}
+
+.br_linkedin {
+  border-color: #0077b5 !important;
+}
+
+.c_linkedin {
+  background-color: #0077b5 !important;
+}
+
+/*
+
+"linkedin" Decorator Classes 
+
+Font, Border and Background Colors using linkedin Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_linkedin`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_linkedin p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_linkedin`</h3>
+<div class="flex">
+   <div class="bg_linkedin flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_linkedin`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_linkedin text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide CreditColors.linkedin
+*/
+.c_apple-store {
+  color: #ea4cc0 !important;
+}
+
+.br_apple-store {
+  border-color: #ea4cc0 !important;
+}
+
+.c_apple-store {
+  background-color: #ea4cc0 !important;
+}
+
+/*
+
+"apple-store" Decorator Classes 
+
+Font, Border and Background Colors using apple-store Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_apple-store`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_apple-store p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_apple-store`</h3>
+<div class="flex">
+   <div class="bg_apple-store flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_apple-store`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_apple-store text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide CreditColors.apple-store
+*/
+.c_google-play {
+  color: #ef6c00 !important;
+}
+
+.br_google-play {
+  border-color: #ef6c00 !important;
+}
+
+.c_google-play {
+  background-color: #ef6c00 !important;
+}
+
+/*
+
+"google-play" Decorator Classes 
+
+Font, Border and Background Colors using google-play Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_google-play`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_google-play p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_google-play`</h3>
+<div class="flex">
+   <div class="bg_google-play flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_google-play`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_google-play text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide CreditColors.google-play
+*/
+.c_youtube {
+  color: #bb0000 !important;
+}
+
+.br_youtube {
+  border-color: #bb0000 !important;
+}
+
+.c_youtube {
+  background-color: #bb0000 !important;
+}
+
+/*
+
+"youtube" Decorator Classes 
+
+Font, Border and Background Colors using youtube Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_youtube`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_youtube p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_youtube`</h3>
+<div class="flex">
+   <div class="bg_youtube flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_youtube`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_youtube text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide CreditColors.youtube
+*/
+/*# sourceMappingURL=maps/color-code_social.css.map */

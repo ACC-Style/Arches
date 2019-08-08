@@ -320,7 +320,7 @@ $value-to-unit: (
 		11: 11/12 * 100%,
 		12: 1 * 100%
 	),
-	maxwidth: (
+	max-width: (
 		0: 0,
 		1: 30rem,
 		2: 40rem,
@@ -360,6 +360,14 @@ $value-to-unit: (
 		1: 1 * $base-font-size,
 		2: 2 * $base-font-size,
 		3: 3 * $base-font-size
+	),
+	z-index: (
+		0: -1,
+		1: 1,
+		2: 100,
+		3: 1000,
+		4: 5000,
+		5: 9999
 	),
 	shadow: (
 		0: make-shadow(3, "drop", #000, 0.4),
@@ -869,7 +877,16 @@ $style-definition: (
 			"max-width"
 		),
 		long-name: ".max-width",
-		unit: map-get($value-to-unit, maxwidth),
+		unit: map-get($value-to-unit, max-width),
+		alt: "none"
+	),
+	z-index: (
+		short-name: ".z",
+		css-style: (
+			"z-index"
+		),
+		long-name: ".z-index",
+		unit: map-get($value-to-unit, z-index),
 		alt: "none"
 	)
 );

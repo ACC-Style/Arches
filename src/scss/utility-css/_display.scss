@@ -40,22 +40,24 @@ Styleguide display
 }
 
 /*
-	Vertical Align
+Z Index
 
-	quickly alter the verticle alignment of the child. Cation the vertical only works on valid combinations. 
+Alter the Z Index of objects to help deal with objects that are out of normal z-index flow.
 
-	.vertical-align_top              		- the child is aligned to the top
-	.vertical-align_middle              	- the child is aligned to the top
-	.vertical-align_bottom            		- the child is aligned to the top
-	.vertical-align_baseline          		- the child is aligned to the top
+#{ class-name-constructor(z-index,0)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,0)}
+#{ class-name-constructor(z-index,1)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,1)}
+#{ class-name-constructor(z-index,2)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,2)}
+#{ class-name-constructor(z-index,3)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,3)}
+#{ class-name-constructor(z-index,4)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,4)}
+#{ class-name-constructor(z-index,5)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,5)}
 
+Markup:
+<div class="bg_alert-3 block br_solid br_transparent relative text_center" style=" height: 15rem; width: 100%;">
+	<div class="absolute bg_black-5 c_white inline-block l_0 m_4 t_1 text_center w_70 z_3" style=" height: 13rem;">z-index of 1000</div>
+	<div class="absolute bg_primary c_white inline-block m_5 r_0 t_1 text_center w_70 {{modifier_class}}" style=" height: 11rem;">{{modifier_class}}</div>
+</div>
 
-	Markup:
-	<div class="br_solid br_transparent bg_alert-3 text_center table-cell w_100 {{modifier_class}} " style="height:100px;">
-		<div class="bg_primary-5 text_center inline-block ">Content</div>
-	</div>
-
-	Styleguide display.vertical alignment
+Styleguide display.z-index
 
  */
 
@@ -71,3 +73,25 @@ Styleguide display
 .vertical-align_baseline {
 	vertical-align: baseline;
 }
+
+/*
+	Vertical Align
+
+	quickly alter the verticle alignment of the child. Cation the vertical only works on valid combinations. 
+
+	.vertical-align_top              		- the child is aligned to the top
+	.vertical-align_middle              	- the child is aligned to the top
+	.vertical-align_bottom            		- the child is aligned to the top
+	.vertical-align_baseline          		- the child is aligned to the top
+
+
+	Markup:
+	<div class="{{modifier_class}}">
+		<div class="bg_primary-5 text_center inline-block ">{{modifier_class}}</div>
+	</div>
+
+	Styleguide display.vertical alignment
+
+ */
+
+@include loop-style(z-index);

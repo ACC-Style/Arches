@@ -2,7 +2,7 @@
 /**
  * arches - Global style system focused on utility classes
  * @version v1.1.0
- * @link https://github.com/MattWatier/Arches#readme
+ * @link https://github.com/ACC-Style/Arches/
  */
 /**  Pre Header - modular scale default break points utility    *********************************/
 /**  Version: 1.1.0    *********************************/
@@ -37,7 +37,6 @@ html {
 }
 
 footer {
-  -webkit-transform: translate3d(0, 0, 0);
   /* enables on GPU processing, per http://davidwalsh.name/translate3d */
   transform: translate3d(0, 0, 0);
 }
@@ -182,35 +181,11 @@ Weight: -1
 Styleguide DesignBase.Colors.ColorCoding.Pathways
 
 */
-.twitter {
-  background-color: #00aced !important;
-}
-
-.facebook {
-  background-color: #3b5998 !important;
-}
-
-.linkedin {
-  background-color: #0077b5 !important;
-}
-
-.google-play {
-  background-color: #ef6c00 !important;
-}
-
-.apple-store {
-  background-color: #ea4cc0 !important;
-}
-
-.youtube {
-  background-color: #bb0000 !important;
-}
-
 /*
 
-Clinical Pathway Colors  
+Social Network Colors  
 
-Each of the clinical pathways has a distinctive color.  These colors are used to give a distinct theme to our clinical apps, marketing, pdf's and tools.
+Each of the social networks has a distinctive color.  These colors are used to give a distinct theme to the social nav that is in different locations.
 
 $twitter            -   #00aced;  twitter     
 $facebook           -   #3b5998;  facebook    
@@ -2309,6 +2284,222 @@ Styleguide Credit Colors.CPE
 */
 /*
 
+Social Network CC  
+
+Each of the social networks has a distinctive color.  These colors are used to give a distinct theme to the social nav that is in different locations.
+
+$twitter            -   #00aced;  twitter     
+$facebook           -   #3b5998;  facebook    
+$linkedin           -   #007bb6;  linkedin    
+$apple-store        -   #ea4cc0;  apple-store 
+$google-play        -   #689f38;  google-play 
+$youtube            -   #bb0000;  youtube     
+
+
+Weight: 10000
+
+Styleguide SocialColors
+*/
+.c_twitter {
+  color: #00aced !important;
+}
+
+.br_twitter {
+  border-color: #00aced !important;
+}
+
+.bg_twitter {
+  background-color: #00aced !important;
+}
+
+/*
+
+"twitter" Decorator Classes 
+
+Font, Border and Background Colors using twitter Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_twitter`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_twitter p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_twitter`</h3>
+<div class="flex">
+   <div class="bg_twitter flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_twitter`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_twitter text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide SocialColors.twitter
+*/
+.c_facebook {
+  color: #3b5998 !important;
+}
+
+.br_facebook {
+  border-color: #3b5998 !important;
+}
+
+.bg_facebook {
+  background-color: #3b5998 !important;
+}
+
+/*
+
+"facebook" Decorator Classes 
+
+Font, Border and Background Colors using facebook Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_facebook`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_facebook p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_facebook`</h3>
+<div class="flex">
+   <div class="bg_facebook flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_facebook`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_facebook text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide SocialColors.facebook
+*/
+.c_linkedin {
+  color: #0077b5 !important;
+}
+
+.br_linkedin {
+  border-color: #0077b5 !important;
+}
+
+.bg_linkedin {
+  background-color: #0077b5 !important;
+}
+
+/*
+
+"linkedin" Decorator Classes 
+
+Font, Border and Background Colors using linkedin Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_linkedin`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_linkedin p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_linkedin`</h3>
+<div class="flex">
+   <div class="bg_linkedin flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_linkedin`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_linkedin text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide SocialColors.linkedin
+*/
+.c_apple-store {
+  color: #ea4cc0 !important;
+}
+
+.br_apple-store {
+  border-color: #ea4cc0 !important;
+}
+
+.bg_apple-store {
+  background-color: #ea4cc0 !important;
+}
+
+/*
+
+"apple-store" Decorator Classes 
+
+Font, Border and Background Colors using apple-store Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_apple-store`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_apple-store p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_apple-store`</h3>
+<div class="flex">
+   <div class="bg_apple-store flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_apple-store`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_apple-store text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide SocialColors.apple-store
+*/
+.c_google-play {
+  color: #ef6c00 !important;
+}
+
+.br_google-play {
+  border-color: #ef6c00 !important;
+}
+
+.bg_google-play {
+  background-color: #ef6c00 !important;
+}
+
+/*
+
+"google-play" Decorator Classes 
+
+Font, Border and Background Colors using google-play Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_google-play`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_google-play p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_google-play`</h3>
+<div class="flex">
+   <div class="bg_google-play flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_google-play`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_google-play text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide SocialColors.google-play
+*/
+.c_youtube {
+  color: #bb0000 !important;
+}
+
+.br_youtube {
+  border-color: #bb0000 !important;
+}
+
+.bg_youtube {
+  background-color: #bb0000 !important;
+}
+
+/*
+
+"youtube" Decorator Classes 
+
+Font, Border and Background Colors using youtube Social colors have no need for Nuance so they only have a single color shade. 
+
+<h3>Decorator `br_youtube`</h3>
+<div class="p_4 bg_secondary_3 flex">
+    <div class="br_youtube p_3 br_solid br_0 text_center br-t_4 c_black flex_auto"> Border Color</div>
+</div>
+<h3>Background Color `bg_youtube`</h3>
+<div class="flex">
+   <div class="bg_youtube flex_auto text_center c_white p_2 p-y_5"> Background Color </div>
+ </div>
+<h3>Font Color `c_youtube`</h3>
+<div class="font_2 bg_secondary">
+    <div class="c_youtube text_left br_solid br_0 br-b_1 br_white-3 font_display p_5 p-y_2 bg_secondary"> font color.</div>
+</div>
+
+Styleguide SocialColors.youtube
+*/
+/*
+
 Basic Typography
 
 Basic Typography with this variation of Arches. Please note that typography can have a different base design depending on the brand or the framework underpinning.  
@@ -2394,372 +2585,6 @@ Markup:
 
 Styleguide HTML.Table
 */
-/*
-Scrollable Table
-
-Sometimes you have a table that will need a scrable comparison. 
-
-Markup:
-<div class="table-scrollable-container">
-<div class="instructions"> <i class="fa fa-long-arrow-left"></i> Scroll For Software Companies  <i class="fa fa-long-arrow-right"></i> </div>
-    <table class="table-scrollable">
-        <thead>
-            <tr>
-                <th>Certified NCDR Software Vendor</th>
-                <th>IMPACT Registry</th>
-                <th>ACTION Registry</th>
-                <th>PVI Registry</th>
-                <th>CathPCI Registry</th>
-                <th>ICD Registry</th>
-                <th>AFib Registry</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href="#157" class="parent-cell">ARMUS Corporation</a></td>
-                <td>Certified 04/21/2017</td>
-                <td>Certified 12/23/14</td>
-                <td>Certified October 18, 2017
-                </td>
-                <td>Certified - Interoperable with ACTION v2 07/14/10</td>
-                <td>Certified 08/05/2016</td>
-                <td>Certified 08/05/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#101" class="parent-cell">Axis Clinical Software, Inc.</a></td>
-                <td>Certified 08/24/2016</td>
-                <td>Interoperable with CathPCI and ICD v4 01/13/15</td>
-                <td>Certified 11/07/2014</td>
-                <td>Certified Interoperable with ACTION v2 10/28/11 and ICD v2 04/13/12
-                    <br><b>*Metric License </b></td>
-                <td>Certified 05/27/16
-                    <br><b>*Metric License </b></td>
-                <td>Certified 07/29/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#127" class="parent-cell">BayaTree, LLC</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 07/12/2017</td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 08/18/2009</td>
-                <td>Certified 05/24/16</td>
-                <td>Certified 09/09/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#179" class="parent-cell">CardioAccess, Inc.</a></td>
-                <td>Certified 06/03/2016</td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td><a href="#110" class="parent-cell">CardioPulse</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Interoperable with CathPCI v4 and ICD v2 04/10/15</td>
-                <td>&nbsp;
-                </td>
-                <td>Interoperable with ICD v2 and ACTION v2 9/6/11</td>
-                <td>Certified 09/08/2016</td>
-                <td>Certified 10/18/2017</td>
-            </tr>
-            <tr>
-                <td><a href="#103" class="parent-cell">Cedaron Medical, Inc.</a></td>
-                <td>Certified 01/15/2016</td>
-                <td>Interoperable with CathPCI and ICD v4 11/24/14
-                    <br><b>*Metric License </b></td>
-                <td>Certified 06/03/2014
-                    <br><b>*Metric License </b></td>
-                <td>Certified Interoperable with ACTION v2 05/04/10
-                    <br><b>*Metric License </b></td>
-                <td>Certified 05/25/16
-                    <br><b>*Metric License </b></td>
-                <td>Certified 07/13/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#140" class="parent-cell">Epic</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 06/09/2009</td>
-                <td>Certified 04/28/2016</td>
-                <td>Certified 04/12/2017</td>
-            </tr>
-            <tr>
-                <td><a href="#205" class="parent-cell">Flexible Informatics</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 07/13/2017</td>
-                <td>Certified 07/25/2017</td>
-            </tr>
-            <tr>
-                <td><a href="#105" class="parent-cell">GE Healthcare</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 03/06/2009</td>
-                <td>Certified 07/07/16</td>
-                <td>Certified 07/12/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#200" class="parent-cell">Health Level</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified v4.4 12/07/2016</td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td><a href="#108" class="parent-cell">heartbase</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Interoperable with CathPCI and ICD 05/01/15</td>
-                <td>Certified 06/18/2014</td>
-                <td>Interoperable with ACTION v2 and ICD v2 03/29/13
-                    <br><b>*Metric License </b></td>
-                <td>Certified 06/08/16</td>
-                <td>Certified 08/03/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#118" class="parent-cell">Juniper Consulting Group</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 06/22/2009</td>
-                <td>Certified 05/24/16</td>
-                <td>Certified 11/10/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#111" class="parent-cell">LUMEDX</a></td>
-                <td>Certified 03/17/2016
-                    <br><b>*Metric License </b></td>
-                <td>Interoperable with CathPCI and ICD v4 02/05/15</td>
-                <td>Certified 05/11/2015</td>
-                <td>Interoperable with ACTION v2</td>
-                <td>Certified 08/10/16
-                    <br><b>*Metric License </b></td>
-                <td>Certified 12/22/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#183" class="parent-cell">Navion Healthcare Solutions</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 01/23/15
-                    <br><b>*Metric License </b></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 04/01/2013
-                    <br><b>*Metric License </b></td>
-                <td>Certified 08/09/16
-                    <br><b>*Metric License </b></td>
-                <td>Certified 04/19/2017</td>
-            </tr>
-            <tr>
-                <td><a href="#199" class="parent-cell">Q-Centrix</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified v2.4 05/17/2016
-                    <br><b>*Metric License </b></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 04/28/16
-                    <br><b>*Metric License </b></td>
-                <td>Certified 11/22/2016</td>
-                <td>Certified 10/12/2017</td>
-            </tr>
-            <tr>
-                <td><a href="#138" class="parent-cell">Quantros, Inc.</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 09/30/2009</td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td><a href="#153" class="parent-cell">Quintiles</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 03/10/15</td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td><a href="#176" class="parent-cell">Scientific Software Solutions, Inc.</a></td>
-                <td>Certified 02/05/2016</td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td><a href="#174" class="parent-cell">SoftLink International Inc.</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 05/02/2012</td>
-                <td>Certified 05/26/2016</td>
-                <td>Certified 05/26/2016</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-Styleguide HTML.Table.Scrollable
-*/
-.table-scrollable-container:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-.table-scrollable-container table {
-  display: block;
-  position: relative;
-  border-top: 0 none transparent;
-}
-.table-scrollable-container thead,
-.table-scrollable-container tbody {
-  display: block;
-}
-.table-scrollable-container thead {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40%;
-}
-.table-scrollable-container thead tr {
-  display: block;
-  width: 100%;
-}
-.table-scrollable-container thead th {
-  display: block;
-  height: 112px;
-  height: 7rem;
-  font-size: 1.2em;
-}
-.table-scrollable-container tbody {
-  padding-left: 40%;
-  overflow-x: scroll;
-  white-space: nowrap;
-}
-.table-scrollable-container tbody tr {
-  display: inline-block;
-  width: 90%;
-  margin-right: -0.125em;
-  white-space: normal;
-}
-.table-scrollable-container tbody td {
-  display: block;
-  width: 100%;
-  height: 112px;
-  height: 7rem;
-}
-.table-scrollable-container th,
-.table-scrollable-container td {
-  padding: 8px 16px 4px 16px;
-  padding: 0.5rem 1rem 0.25rem 1rem;
-}
-.table-scrollable-container .instructions {
-  display: block;
-  width: 100%;
-  padding: 4px 16px;
-  padding: 0.25rem 1rem;
-  font-size: 0.8333333333em;
-  text-align: center;
-}
-.table-scrollable-container .instructions .fa {
-  margin: 0 4px;
-  margin: 0 0.25rem;
-}
-
-.table-scrollable .parent-cell {
-  font-size: 1.2em;
-}
-@media print {
-  .table-scrollable-container .table-scrollable .parent-cell {
-    padding: 1em;
-  }
-  .table-scrollable-container .instructions {
-    display: none;
-  }
-  .table-scrollable-container table {
-    display: table;
-    position: relative;
-    width: 100%;
-    clear: both;
-  }
-  .table-scrollable-container table * {
-    position: relative;
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
-  }
-  .table-scrollable-container table thead,
-.table-scrollable-container table tbody,
-.table-scrollable-container table tfoot {
-    display: table-row-group;
-  }
-  .table-scrollable-container table tr {
-    display: table-row;
-  }
-  .table-scrollable-container table td,
-.table-scrollable-container table th {
-    display: table-cell;
-    padding: 5px;
-  }
-}
 /*
 Logos
 
@@ -8374,22 +8199,24 @@ Styleguide display
   }
 }
 /*
-	Vertical Align
+Z Index
 
-	quickly alter the verticle alignment of the child. Cation the vertical only works on valid combinations. 
+Alter the Z Index of objects to help deal with objects that are out of normal z-index flow.
 
-	.vertical-align_top              		- the child is aligned to the top
-	.vertical-align_middle              	- the child is aligned to the top
-	.vertical-align_bottom            		- the child is aligned to the top
-	.vertical-align_baseline          		- the child is aligned to the top
+.z_0           -   	sets objects z-index to -1
+.z_1           -   	sets objects z-index to 1
+.z_2           -   	sets objects z-index to 100
+.z_3           -   	sets objects z-index to 1000
+.z_4           -   	sets objects z-index to 5000
+.z_5           -   	sets objects z-index to 9999
 
+Markup:
+<div class="bg_alert-3 block br_solid br_transparent relative text_center" style=" height: 15rem; width: 100%;">
+	<div class="absolute bg_black-5 c_white inline-block l_0 m_4 t_1 text_center w_70 z_3" style=" height: 13rem;">z-index of 1000</div>
+	<div class="absolute bg_primary c_white inline-block m_5 r_0 t_1 text_center w_70 {{modifier_class}}" style=" height: 11rem;">{{modifier_class}}</div>
+</div>
 
-	Markup:
-	<div class="br_solid br_transparent bg_alert-3 text_center table-cell w_100 {{modifier_class}} " style="height:100px;">
-		<div class="bg_primary-5 text_center inline-block ">Content</div>
-	</div>
-
-	Styleguide display.vertical alignment
+Styleguide display.z-index
 
  */
 .vertical-align_top {
@@ -8406,6 +8233,49 @@ Styleguide display
 
 .vertical-align_baseline {
   vertical-align: baseline;
+}
+
+/*
+	Vertical Align
+
+	quickly alter the verticle alignment of the child. Cation the vertical only works on valid combinations. 
+
+	.vertical-align_top              		- the child is aligned to the top
+	.vertical-align_middle              	- the child is aligned to the top
+	.vertical-align_bottom            		- the child is aligned to the top
+	.vertical-align_baseline          		- the child is aligned to the top
+
+
+	Markup:
+	<div class="{{modifier_class}}">
+		<div class="bg_primary-5 text_center inline-block ">{{modifier_class}}</div>
+	</div>
+
+	Styleguide display.vertical alignment
+
+ */
+.z_0 {
+  z-index: -1;
+}
+
+.z_1 {
+  z-index: 1;
+}
+
+.z_2 {
+  z-index: 100;
+}
+
+.z_3 {
+  z-index: 1000;
+}
+
+.z_4 {
+  z-index: 5000;
+}
+
+.z_5 {
+  z-index: 9999;
 }
 
 /*

@@ -2,7 +2,7 @@
 /**
  * arches - Global style system focused on utility classes
  * @version v1.1.0
- * @link https://github.com/MattWatier/Arches#readme
+ * @link https://github.com/ACC-Style/Arches/
  */
 /**  Pre Header - modular scale default break points utility    *********************************/
 /**  Version: 1.1.0    *********************************/
@@ -37,7 +37,6 @@ html {
 }
 
 footer {
-  -webkit-transform: translate3d(0, 0, 0);
   /* enables on GPU processing, per http://davidwalsh.name/translate3d */
   transform: translate3d(0, 0, 0);
 }
@@ -183,35 +182,11 @@ Weight: -1
 Styleguide DesignBase.Colors.ColorCoding.Pathways
 
 */
-.twitter {
-  background-color: #00aced !important;
-}
-
-.facebook {
-  background-color: #3b5998 !important;
-}
-
-.linkedin {
-  background-color: #0077b5 !important;
-}
-
-.google-play {
-  background-color: #ef6c00 !important;
-}
-
-.apple-store {
-  background-color: #ea4cc0 !important;
-}
-
-.youtube {
-  background-color: #bb0000 !important;
-}
-
 /*
 
-Clinical Pathway Colors  
+Social Network Colors  
 
-Each of the clinical pathways has a distinctive color.  These colors are used to give a distinct theme to our clinical apps, marketing, pdf's and tools.
+Each of the social networks has a distinctive color.  These colors are used to give a distinct theme to the social nav that is in different locations.
 
 $twitter            -   #00aced;  twitter     
 $facebook           -   #3b5998;  facebook    
@@ -3797,9 +3772,7 @@ input[type=button].btn-block {
   height: calc(1rem - 4px);
   border-radius: 0.5rem;
   background-color: #898989;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-switch .custom-control-label::after {
@@ -3807,8 +3780,7 @@ input[type=button].btn-block {
   }
 }
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
-  -webkit-transform: translateX(0.75rem);
-          transform: translateX(0.75rem);
+  transform: translateX(0.75rem);
   background-color: white;
 }
 .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -4652,12 +4624,10 @@ input[type=button].btn-block {
 @media (min-width: 480px) {
   .card-columns {
     orphans: 1;
-    -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
-            column-gap: 1.25rem;
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+    -moz-column-count: 3;
+         column-count: 3;
     widows: 1;
   }
   .card-columns .card {
@@ -5458,11 +5428,8 @@ a.close.disabled {
   pointer-events: none;
 }
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -50px);
-          transform: translate(0, -50px);
-  transition: -webkit-transform 0.3s ease-out;
+  transform: translate(0, -50px);
   transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
@@ -5470,8 +5437,7 @@ a.close.disabled {
   }
 }
 .modal.show .modal-dialog {
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
 }
 
 .modal-dialog-scrollable {
@@ -5935,9 +5901,7 @@ a.close.disabled {
   float: left;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
@@ -5953,19 +5917,16 @@ a.close.disabled {
 
 .carousel-item-next:not(.carousel-item-left),
 .active.carousel-item-right {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 .carousel-item-prev:not(.carousel-item-right),
 .active.carousel-item-left {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .carousel-fade .carousel-item {
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
   opacity: 0;
   transition-property: opacity;
 }
@@ -6094,15 +6055,13 @@ a.close.disabled {
 
 @-webkit-keyframes spinner-border {
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes spinner-border {
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 .spinner-border {
@@ -6129,8 +6088,7 @@ a.close.disabled {
 
 @-webkit-keyframes spinner-grow {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
   }
   50% {
     opacity: 1;
@@ -6139,8 +6097,7 @@ a.close.disabled {
 
 @keyframes spinner-grow {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
   }
   50% {
     opacity: 1;
@@ -6254,372 +6211,6 @@ Markup:
 
 Styleguide HTML.Table
 */
-/*
-Scrollable Table
-
-Sometimes you have a table that will need a scrable comparison. 
-
-Markup:
-<div class="table-scrollable-container">
-<div class="instructions"> <i class="fa fa-long-arrow-left"></i> Scroll For Software Companies  <i class="fa fa-long-arrow-right"></i> </div>
-    <table class="table-scrollable">
-        <thead>
-            <tr>
-                <th>Certified NCDR Software Vendor</th>
-                <th>IMPACT Registry</th>
-                <th>ACTION Registry</th>
-                <th>PVI Registry</th>
-                <th>CathPCI Registry</th>
-                <th>ICD Registry</th>
-                <th>AFib Registry</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href="#157" class="parent-cell">ARMUS Corporation</a></td>
-                <td>Certified 04/21/2017</td>
-                <td>Certified 12/23/14</td>
-                <td>Certified October 18, 2017
-                </td>
-                <td>Certified - Interoperable with ACTION v2 07/14/10</td>
-                <td>Certified 08/05/2016</td>
-                <td>Certified 08/05/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#101" class="parent-cell">Axis Clinical Software, Inc.</a></td>
-                <td>Certified 08/24/2016</td>
-                <td>Interoperable with CathPCI and ICD v4 01/13/15</td>
-                <td>Certified 11/07/2014</td>
-                <td>Certified Interoperable with ACTION v2 10/28/11 and ICD v2 04/13/12
-                    <br><b>*Metric License </b></td>
-                <td>Certified 05/27/16
-                    <br><b>*Metric License </b></td>
-                <td>Certified 07/29/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#127" class="parent-cell">BayaTree, LLC</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 07/12/2017</td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 08/18/2009</td>
-                <td>Certified 05/24/16</td>
-                <td>Certified 09/09/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#179" class="parent-cell">CardioAccess, Inc.</a></td>
-                <td>Certified 06/03/2016</td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td><a href="#110" class="parent-cell">CardioPulse</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Interoperable with CathPCI v4 and ICD v2 04/10/15</td>
-                <td>&nbsp;
-                </td>
-                <td>Interoperable with ICD v2 and ACTION v2 9/6/11</td>
-                <td>Certified 09/08/2016</td>
-                <td>Certified 10/18/2017</td>
-            </tr>
-            <tr>
-                <td><a href="#103" class="parent-cell">Cedaron Medical, Inc.</a></td>
-                <td>Certified 01/15/2016</td>
-                <td>Interoperable with CathPCI and ICD v4 11/24/14
-                    <br><b>*Metric License </b></td>
-                <td>Certified 06/03/2014
-                    <br><b>*Metric License </b></td>
-                <td>Certified Interoperable with ACTION v2 05/04/10
-                    <br><b>*Metric License </b></td>
-                <td>Certified 05/25/16
-                    <br><b>*Metric License </b></td>
-                <td>Certified 07/13/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#140" class="parent-cell">Epic</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 06/09/2009</td>
-                <td>Certified 04/28/2016</td>
-                <td>Certified 04/12/2017</td>
-            </tr>
-            <tr>
-                <td><a href="#205" class="parent-cell">Flexible Informatics</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 07/13/2017</td>
-                <td>Certified 07/25/2017</td>
-            </tr>
-            <tr>
-                <td><a href="#105" class="parent-cell">GE Healthcare</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 03/06/2009</td>
-                <td>Certified 07/07/16</td>
-                <td>Certified 07/12/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#200" class="parent-cell">Health Level</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified v4.4 12/07/2016</td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td><a href="#108" class="parent-cell">heartbase</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Interoperable with CathPCI and ICD 05/01/15</td>
-                <td>Certified 06/18/2014</td>
-                <td>Interoperable with ACTION v2 and ICD v2 03/29/13
-                    <br><b>*Metric License </b></td>
-                <td>Certified 06/08/16</td>
-                <td>Certified 08/03/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#118" class="parent-cell">Juniper Consulting Group</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 06/22/2009</td>
-                <td>Certified 05/24/16</td>
-                <td>Certified 11/10/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#111" class="parent-cell">LUMEDX</a></td>
-                <td>Certified 03/17/2016
-                    <br><b>*Metric License </b></td>
-                <td>Interoperable with CathPCI and ICD v4 02/05/15</td>
-                <td>Certified 05/11/2015</td>
-                <td>Interoperable with ACTION v2</td>
-                <td>Certified 08/10/16
-                    <br><b>*Metric License </b></td>
-                <td>Certified 12/22/2016</td>
-            </tr>
-            <tr>
-                <td><a href="#183" class="parent-cell">Navion Healthcare Solutions</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 01/23/15
-                    <br><b>*Metric License </b></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 04/01/2013
-                    <br><b>*Metric License </b></td>
-                <td>Certified 08/09/16
-                    <br><b>*Metric License </b></td>
-                <td>Certified 04/19/2017</td>
-            </tr>
-            <tr>
-                <td><a href="#199" class="parent-cell">Q-Centrix</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified v2.4 05/17/2016
-                    <br><b>*Metric License </b></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 04/28/16
-                    <br><b>*Metric License </b></td>
-                <td>Certified 11/22/2016</td>
-                <td>Certified 10/12/2017</td>
-            </tr>
-            <tr>
-                <td><a href="#138" class="parent-cell">Quantros, Inc.</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 09/30/2009</td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td><a href="#153" class="parent-cell">Quintiles</a></td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 03/10/15</td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td><a href="#176" class="parent-cell">Scientific Software Solutions, Inc.</a></td>
-                <td>Certified 02/05/2016</td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td><a href="#174" class="parent-cell">SoftLink International Inc.</a></td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>&nbsp;
-                </td>
-                <td>Certified 05/02/2012</td>
-                <td>Certified 05/26/2016</td>
-                <td>Certified 05/26/2016</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-Styleguide HTML.Table.Scrollable
-*/
-.table-scrollable-container:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-.table-scrollable-container table {
-  display: block;
-  position: relative;
-  border-top: 0 none transparent;
-}
-.table-scrollable-container thead,
-.table-scrollable-container tbody {
-  display: block;
-}
-.table-scrollable-container thead {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40%;
-}
-.table-scrollable-container thead tr {
-  display: block;
-  width: 100%;
-}
-.table-scrollable-container thead th {
-  display: block;
-  height: 112px;
-  height: 7rem;
-  font-size: 1.2em;
-}
-.table-scrollable-container tbody {
-  padding-left: 40%;
-  overflow-x: scroll;
-  white-space: nowrap;
-}
-.table-scrollable-container tbody tr {
-  display: inline-block;
-  width: 90%;
-  margin-right: -0.125em;
-  white-space: normal;
-}
-.table-scrollable-container tbody td {
-  display: block;
-  width: 100%;
-  height: 112px;
-  height: 7rem;
-}
-.table-scrollable-container th,
-.table-scrollable-container td {
-  padding: 8px 16px 4px 16px;
-  padding: 0.5rem 1rem 0.25rem 1rem;
-}
-.table-scrollable-container .instructions {
-  display: block;
-  width: 100%;
-  padding: 4px 16px;
-  padding: 0.25rem 1rem;
-  font-size: 0.8333333333em;
-  text-align: center;
-}
-.table-scrollable-container .instructions .fa {
-  margin: 0 4px;
-  margin: 0 0.25rem;
-}
-
-.table-scrollable .parent-cell {
-  font-size: 1.2em;
-}
-@media print {
-  .table-scrollable-container .table-scrollable .parent-cell {
-    padding: 1em;
-  }
-  .table-scrollable-container .instructions {
-    display: none;
-  }
-  .table-scrollable-container table {
-    display: table;
-    position: relative;
-    width: 100%;
-    clear: both;
-  }
-  .table-scrollable-container table * {
-    position: relative;
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
-  }
-  .table-scrollable-container table thead,
-.table-scrollable-container table tbody,
-.table-scrollable-container table tfoot {
-    display: table-row-group;
-  }
-  .table-scrollable-container table tr {
-    display: table-row;
-  }
-  .table-scrollable-container table td,
-.table-scrollable-container table th {
-    display: table-cell;
-    padding: 5px;
-  }
-}
 /*
 Logos
 
@@ -15195,22 +14786,24 @@ Styleguide display
   }
 }
 /*
-	Vertical Align
+Z Index
 
-	quickly alter the verticle alignment of the child. Cation the vertical only works on valid combinations. 
+Alter the Z Index of objects to help deal with objects that are out of normal z-index flow.
 
-	.vertical-align_top              		- the child is aligned to the top
-	.vertical-align_middle              	- the child is aligned to the top
-	.vertical-align_bottom            		- the child is aligned to the top
-	.vertical-align_baseline          		- the child is aligned to the top
+.z_0           -   	sets objects z-index to -1
+.z_1           -   	sets objects z-index to 1
+.z_2           -   	sets objects z-index to 100
+.z_3           -   	sets objects z-index to 1000
+.z_4           -   	sets objects z-index to 5000
+.z_5           -   	sets objects z-index to 9999
 
+Markup:
+<div class="bg_alert-3 block br_solid br_transparent relative text_center" style=" height: 15rem; width: 100%;">
+	<div class="absolute bg_black-5 c_white inline-block l_0 m_4 t_1 text_center w_70 z_3" style=" height: 13rem;">z-index of 1000</div>
+	<div class="absolute bg_primary c_white inline-block m_5 r_0 t_1 text_center w_70 {{modifier_class}}" style=" height: 11rem;">{{modifier_class}}</div>
+</div>
 
-	Markup:
-	<div class="br_solid br_transparent bg_alert-3 text_center table-cell w_100 {{modifier_class}} " style="height:100px;">
-		<div class="bg_primary-5 text_center inline-block ">Content</div>
-	</div>
-
-	Styleguide display.vertical alignment
+Styleguide display.z-index
 
  */
 .vertical-align_top {
@@ -15227,6 +14820,49 @@ Styleguide display
 
 .vertical-align_baseline {
   vertical-align: baseline;
+}
+
+/*
+	Vertical Align
+
+	quickly alter the verticle alignment of the child. Cation the vertical only works on valid combinations. 
+
+	.vertical-align_top              		- the child is aligned to the top
+	.vertical-align_middle              	- the child is aligned to the top
+	.vertical-align_bottom            		- the child is aligned to the top
+	.vertical-align_baseline          		- the child is aligned to the top
+
+
+	Markup:
+	<div class="{{modifier_class}}">
+		<div class="bg_primary-5 text_center inline-block ">{{modifier_class}}</div>
+	</div>
+
+	Styleguide display.vertical alignment
+
+ */
+.z_0 {
+  z-index: -1;
+}
+
+.z_1 {
+  z-index: 1;
+}
+
+.z_2 {
+  z-index: 100;
+}
+
+.z_3 {
+  z-index: 1000;
+}
+
+.z_4 {
+  z-index: 5000;
+}
+
+.z_5 {
+  z-index: 9999;
 }
 
 /*

@@ -2,7 +2,7 @@
 /**
  * arches - Global style system focused on utility classes
  * @version v1.1.0
- * @link https://github.com/MattWatier/Arches#readme
+ * @link https://github.com/ACC-Style/Arches/
  */
 /**  Pre Header - modular scale default break points utility    *********************************/
 /**  Version: 1.1.0    *********************************/
@@ -37,7 +37,6 @@ html {
 }
 
 footer {
-  -webkit-transform: translate3d(0, 0, 0);
   /* enables on GPU processing, per http://davidwalsh.name/translate3d */
   transform: translate3d(0, 0, 0);
 }
@@ -429,35 +428,11 @@ Weight: -1
 Styleguide DesignBase.Colors.ColorCoding.Pathways
 
 */
-.twitter {
-  background-color: #00aced !important;
-}
-
-.facebook {
-  background-color: #3b5998 !important;
-}
-
-.linkedin {
-  background-color: #0077b5 !important;
-}
-
-.google-play {
-  background-color: #ef6c00 !important;
-}
-
-.apple-store {
-  background-color: #ea4cc0 !important;
-}
-
-.youtube {
-  background-color: #bb0000 !important;
-}
-
 /*
 
-Clinical Pathway Colors  
+Social Network Colors  
 
-Each of the clinical pathways has a distinctive color.  These colors are used to give a distinct theme to our clinical apps, marketing, pdf's and tools.
+Each of the social networks has a distinctive color.  These colors are used to give a distinct theme to the social nav that is in different locations.
 
 $twitter            -   #00aced;  twitter     
 $facebook           -   #3b5998;  facebook    
@@ -4248,9 +4223,7 @@ input[type=button].btn-block {
   height: calc(1rem - 4px);
   border-radius: 0.5rem;
   background-color: #898989;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-switch .custom-control-label::after {
@@ -4258,8 +4231,7 @@ input[type=button].btn-block {
   }
 }
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
-  -webkit-transform: translateX(0.75rem);
-          transform: translateX(0.75rem);
+  transform: translateX(0.75rem);
   background-color: white;
 }
 .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -5137,12 +5109,10 @@ input[type=button].btn-block {
 @media (min-width: 576px) {
   .card-columns {
     orphans: 1;
-    -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
-            column-gap: 1.25rem;
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+    -moz-column-count: 3;
+         column-count: 3;
     widows: 1;
   }
   .card-columns .card {
@@ -5955,11 +5925,8 @@ a.close.disabled {
   pointer-events: none;
 }
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -50px);
-          transform: translate(0, -50px);
-  transition: -webkit-transform 0.3s ease-out;
+  transform: translate(0, -50px);
   transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
@@ -5967,8 +5934,7 @@ a.close.disabled {
   }
 }
 .modal.show .modal-dialog {
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
 }
 
 .modal-dialog-scrollable {
@@ -6435,9 +6401,7 @@ a.close.disabled {
   float: left;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
@@ -6453,19 +6417,16 @@ a.close.disabled {
 
 .carousel-item-next:not(.carousel-item-left),
 .active.carousel-item-right {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 .carousel-item-prev:not(.carousel-item-right),
 .active.carousel-item-left {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .carousel-fade .carousel-item {
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
   opacity: 0;
   transition-property: opacity;
 }
@@ -6594,15 +6555,13 @@ a.close.disabled {
 
 @-webkit-keyframes spinner-border {
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes spinner-border {
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 .spinner-border {
@@ -6629,8 +6588,7 @@ a.close.disabled {
 
 @-webkit-keyframes spinner-grow {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
   }
   50% {
     opacity: 1;
@@ -6639,8 +6597,7 @@ a.close.disabled {
 
 @keyframes spinner-grow {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
   }
   50% {
     opacity: 1;
@@ -6673,93 +6630,6 @@ h3 {
   color: #e87d1e;
 }
 
-/*
-
-Basic Typography
-
-Basic Typography with this variation of Arches. Please note that typography can have a different base design depending on the brand or the framework underpinning.  
-
-Markup:
-<h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
-elit</h1>
-<h2>Aenean commodo ligula eget dolor aenean massa</h2>
-<h3>Cum sociis natoque penatibus et magnis dis 
-parturient montes nascetur ridiculus mus</h3>
-<h4>Donec quam felis ultricies nec pellentesque eu 
-pretium quis sem nlla consequat massa quis enim</h4>
-<h5>Donec pede justo fringilla vel aliquet nec vulputate 
-eget arcu</h5>
-<h6>In enim justo rhoncus ut imperdiet a venenatis vitae 
-justo</h6>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem.</p>
-
-
-Styleguide HTML.Typography
-
-*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-td,
-th {
-  /* Safari */
-  transition: line-height 1s;
-  /* Safari */
-  transition: margin 1s;
-}
-
-.sub-line {
-  display: block;
-  margin-top: -0.25em;
-  clear: both;
-  font-size: 50%;
-  line-height: 1.25em;
-  opacity: 0.75;
-}
-
-/*
-Scrollable Table
-
-Sometimes you have a table that will need a scrable comparison. 
-
-Markup:
-<table class="data">
-  <tr>
-    <th>Entry Header 1</th>
-    <th>Entry Header 2</th>
-    <th>Entry Header 3</th>
-    <th>Entry Header 4</th>
-  </tr>
-  <tr>
-    <td>Entry First Line 1</td>
-    <td>Entry First Line 2</td>
-    <td>Entry First Line 3</td>
-    <td>Entry First Line 4</td>
-  </tr>
-  <tr>
-    <td>Entry Line 1</td>
-    <td>Entry Line 2</td>
-    <td>Entry Line 3</td>
-    <td>Entry Line 4</td>
-  </tr>
-  <tr>
-    <td>Entry Last Line 1</td>
-    <td>Entry Last Line 2</td>
-    <td>Entry Last Line 3</td>
-    <td>Entry Last Line 4</td>
-  </tr>
-</table>
-
-Styleguide HTML.Table
-*/
 /*
 Scrollable Table
 
@@ -7126,6 +6996,93 @@ Styleguide HTML.Table.Scrollable
     padding: 5px;
   }
 }
+/*
+
+Basic Typography
+
+Basic Typography with this variation of Arches. Please note that typography can have a different base design depending on the brand or the framework underpinning.  
+
+Markup:
+<h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
+elit</h1>
+<h2>Aenean commodo ligula eget dolor aenean massa</h2>
+<h3>Cum sociis natoque penatibus et magnis dis 
+parturient montes nascetur ridiculus mus</h3>
+<h4>Donec quam felis ultricies nec pellentesque eu 
+pretium quis sem nlla consequat massa quis enim</h4>
+<h5>Donec pede justo fringilla vel aliquet nec vulputate 
+eget arcu</h5>
+<h6>In enim justo rhoncus ut imperdiet a venenatis vitae 
+justo</h6>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit. Aenean commodo ligula eget dolor. Aenean massa. 
+Cum sociis natoque penatibus et magnis dis parturient 
+montes, nascetur ridiculus mus. Donec quam felis, 
+ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+Styleguide HTML.Typography
+
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td,
+th {
+  /* Safari */
+  transition: line-height 1s;
+  /* Safari */
+  transition: margin 1s;
+}
+
+.sub-line {
+  display: block;
+  margin-top: -0.25em;
+  clear: both;
+  font-size: 50%;
+  line-height: 1.25em;
+  opacity: 0.75;
+}
+
+/*
+Scrollable Table
+
+Sometimes you have a table that will need a scrable comparison. 
+
+Markup:
+<table class="data">
+  <tr>
+    <th>Entry Header 1</th>
+    <th>Entry Header 2</th>
+    <th>Entry Header 3</th>
+    <th>Entry Header 4</th>
+  </tr>
+  <tr>
+    <td>Entry First Line 1</td>
+    <td>Entry First Line 2</td>
+    <td>Entry First Line 3</td>
+    <td>Entry First Line 4</td>
+  </tr>
+  <tr>
+    <td>Entry Line 1</td>
+    <td>Entry Line 2</td>
+    <td>Entry Line 3</td>
+    <td>Entry Line 4</td>
+  </tr>
+  <tr>
+    <td>Entry Last Line 1</td>
+    <td>Entry Last Line 2</td>
+    <td>Entry Last Line 3</td>
+    <td>Entry Last Line 4</td>
+  </tr>
+</table>
+
+Styleguide HTML.Table
+*/
 /*
 Logos
 
@@ -9408,7 +9365,7 @@ Styleguide Recipes CVQualtiy.Navs.Primary
 }
 .card.testimonial .blockquote-cite:after,
 .card.product .blockquote-cite:after {
-  margin-right: 0.5em;
+  margin-left: 0.5em;
   content: "";
 }
 
@@ -9697,6 +9654,68 @@ Styleguide Recipes CVQualtiy.Decorator.Triangles
   border-right-color: #0000;
   border-bottom-color: inherit;
   border-left-color: #0000;
+}
+
+/*
+Editor Container Decorator
+
+Editor Decorators are only visible in the Sitefinity Editor
+
+Markup:
+<div class="sfPageEditor">
+     <div class="visible-authenticated-block">
+        <ul class="nav-pills nav">
+            <li class="nav-item active"><a class="nav-link">Profile</a></li>
+            <li class="nav-item"><a class="nav-link">Settings</a></li>
+            <li class="nav-item"><a class="nav-link">Logout</a></li>
+        </ul>
+     </div>
+     <div class="visible-anonymous-block">
+        <ul class="nav-pills nav">
+            <li class="nav-item active"><a class="nav-link">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link">Getting Started</a></li>
+            <li class="nav-item"><a class="nav-link">Login</a></li>
+        </ul>
+     </div>
+ </div>
+
+ Weight: 10000
+
+Styleguide Sitefinity.Decorator
+*/
+.sfPageEditor .visible-anonymous-block, .sfPageEditor .visible-authenticated-block {
+  display: block !important;
+  margin: 5px;
+  border: 2px dotted transparent;
+  opacity: 0.75;
+}
+
+.sfPageEditor .visible-anonymous-block:after, .sfPageEditor .visible-anonymous-block:before, .sfPageEditor .visible-authenticated-block:after, .sfPageEditor .visible-authenticated-block:before {
+  display: block;
+  position: relative;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sfPageEditor .visible-anonymous-block img,
+.sfPageEditor .visible-authenticated-block img {
+  display: none;
+}
+.sfPageEditor .visible-authenticated-block {
+  border-color: #58b5a5;
+  background-color: #eef8f6;
+}
+.sfPageEditor .visible-authenticated-block:after, .sfPageEditor .visible-authenticated-block:before {
+  color: #047294;
+  content: "AUTHENTICATED CONTENT - REMBER TO CHANGE PERMISIONS OF CONTENT IN AREA - Permision/Role/Authenticated";
+}
+.sfPageEditor .visible-anonymous-block {
+  border-color: #ffc425;
+  background-color: #fff9e9;
+}
+.sfPageEditor .visible-anonymous-block:after, .sfPageEditor .visible-anonymous-block:before {
+  color: #e87d1e;
+  content: "ANONYMOUS CONTENT - REMBER TO CHANGE PERMISIONS OF CONTENT IN AREA - Permision/Role/Anonymous";
 }
 
 /*
@@ -10395,6 +10414,14 @@ Markup:
 
  Styleguide Recipes CVQualtiy.Cards.Webinar
 
+*/
+/*
+List
+
+CVquatlity has some lists through out the design that go beyond basic lists. Below are collection of them and where they can be found. 
+
+
+ Styleguide Recipes CVQualtiy.Lists
 */
 /*
 Map Result List
@@ -14725,22 +14752,24 @@ Styleguide display
   }
 }
 /*
-	Vertical Align
+Z Index
 
-	quickly alter the verticle alignment of the child. Cation the vertical only works on valid combinations. 
+Alter the Z Index of objects to help deal with objects that are out of normal z-index flow.
 
-	.vertical-align_top              		- the child is aligned to the top
-	.vertical-align_middle              	- the child is aligned to the top
-	.vertical-align_bottom            		- the child is aligned to the top
-	.vertical-align_baseline          		- the child is aligned to the top
+.z_0           -   	sets objects z-index to -1
+.z_1           -   	sets objects z-index to 1
+.z_2           -   	sets objects z-index to 100
+.z_3           -   	sets objects z-index to 1000
+.z_4           -   	sets objects z-index to 5000
+.z_5           -   	sets objects z-index to 9999
 
+Markup:
+<div class="bg_alert-3 block br_solid br_transparent relative text_center" style=" height: 15rem; width: 100%;">
+	<div class="absolute bg_black-5 c_white inline-block l_0 m_4 t_1 text_center w_70 z_3" style=" height: 13rem;">z-index of 1000</div>
+	<div class="absolute bg_primary c_white inline-block m_5 r_0 t_1 text_center w_70 {{modifier_class}}" style=" height: 11rem;">{{modifier_class}}</div>
+</div>
 
-	Markup:
-	<div class="br_solid br_transparent bg_alert-3 text_center table-cell w_100 {{modifier_class}} " style="height:100px;">
-		<div class="bg_primary-5 text_center inline-block ">Content</div>
-	</div>
-
-	Styleguide display.vertical alignment
+Styleguide display.z-index
 
  */
 .vertical-align_top {
@@ -14757,6 +14786,49 @@ Styleguide display
 
 .vertical-align_baseline {
   vertical-align: baseline;
+}
+
+/*
+	Vertical Align
+
+	quickly alter the verticle alignment of the child. Cation the vertical only works on valid combinations. 
+
+	.vertical-align_top              		- the child is aligned to the top
+	.vertical-align_middle              	- the child is aligned to the top
+	.vertical-align_bottom            		- the child is aligned to the top
+	.vertical-align_baseline          		- the child is aligned to the top
+
+
+	Markup:
+	<div class="{{modifier_class}}">
+		<div class="bg_primary-5 text_center inline-block ">{{modifier_class}}</div>
+	</div>
+
+	Styleguide display.vertical alignment
+
+ */
+.z_0 {
+  z-index: -1;
+}
+
+.z_1 {
+  z-index: 1;
+}
+
+.z_2 {
+  z-index: 100;
+}
+
+.z_3 {
+  z-index: 1000;
+}
+
+.z_4 {
+  z-index: 5000;
+}
+
+.z_5 {
+  z-index: 9999;
 }
 
 /*

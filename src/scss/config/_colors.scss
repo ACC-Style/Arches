@@ -46,14 +46,6 @@ $theme-palette: map-merge(
 	$theme-palette
 );
 
-%hover-text-white {
-	color: $white !important;
-}
-
-%hover-text-black {
-	color: $black !important;
-}
-
 /*
 
 Theme Colors 
@@ -285,34 +277,25 @@ $apple-store: #ea4cc0;
 $google-play: #ef6c00;
 $youtube: #bb0000;
 
-.twitter {
-	background-color: $twitter !important;
-}
+$Social-Colors: () !default;
 
-.facebook {
-	background-color: $facebook !important;
-}
-
-.linkedin {
-	background-color: $linkedin !important;
-}
-
-.google-play {
-	background-color: $google-play !important;
-}
-
-.apple-store {
-	background-color: $apple-store !important;
-}
-.youtube {
-	background-color: $youtube !important;
-}
+$SocialColors: map-merge(
+	(
+		twitter: $twitter,
+		facebook: $facebook,
+		linkedin: $linkedin,
+		apple-store: $apple-store,
+		google-play: $google-play,
+		youtube: $youtube
+	),
+	$Social-Colors
+);
 
 /*
 
-Clinical Pathway Colors  
+Social Network Colors  
 
-Each of the clinical pathways has a distinctive color.  These colors are used to give a distinct theme to our clinical apps, marketing, pdf's and tools.
+Each of the social networks has a distinctive color.  These colors are used to give a distinct theme to the social nav that is in different locations.
 
 $twitter            -   #00aced;  twitter     
 $facebook           -   #3b5998;  facebook    
