@@ -10529,7 +10529,7 @@ For many images you will need top place background images in to a cardnial locat
 .bg_center           - cardnial center center
 
 Markup:
-   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="background-size:50%;width:200px; height:200px"><span class="alt">{{modifier_class}}</span></div></div>
+   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div></div>
 
 Styleguide Background.Image Positon
 
@@ -10566,7 +10566,7 @@ For many images you will need top place background images in to a cardnial locat
 
 
 Markup:
-   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="width:200px; height:200px"><span class="alt">{{modifier_class}}</span></div></div>
+   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;"><span class="alt">{{modifier_class}}</span></div></div>
 
 Styleguide Background.Size
 
@@ -10594,12 +10594,13 @@ repeating a background image is easy.
 
 .bg_norepeat	            - norepeat 
 .bg_repeat           - repeat
-.bg_repoeat-x	            - repoeat-x
+.bg_repeat-x            - repoeat-x
 .bg_repeat-y         - repeat-y
+.bg_repeat-space         - repeat-space
 
 
 Markup:
-   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny bg_auto" style="width:100%; height:200px"><span class="alt">{{modifier_class}}</span></div></div>
+   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny bg_auto" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div></div>
 
 Styleguide Background.Image Repeat
 
@@ -10613,14 +10614,14 @@ Styleguide Background.Image Repeat
 }
 
 .bg_repeat-x {
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
 }
 
 .bg_repeat-y {
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 }
 
-.bg_space {
+.bg_repeat-space {
   background-repeat: space;
 }
 

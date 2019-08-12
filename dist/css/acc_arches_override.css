@@ -4194,7 +4194,7 @@
   .bg_center           - cardnial center center
 
   Markup:
-     <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="background-size:50%;width:200px; height:200px"><span class="alt">{{modifier_class}}</span></div></div>
+     <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div></div>
 
   Styleguide Background.Image Positon
 
@@ -4211,7 +4211,7 @@
 
 
   Markup:
-     <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="width:200px; height:200px"><span class="alt">{{modifier_class}}</span></div></div>
+     <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;"><span class="alt">{{modifier_class}}</span></div></div>
 
   Styleguide Background.Size
 
@@ -4223,12 +4223,13 @@
 
   .bg_norepeat	            - norepeat 
   .bg_repeat           - repeat
-  .bg_repoeat-x	            - repoeat-x
+  .bg_repeat-x            - repoeat-x
   .bg_repeat-y         - repeat-y
+  .bg_repeat-space         - repeat-space
 
 
   Markup:
-     <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny bg_auto" style="width:100%; height:200px"><span class="alt">{{modifier_class}}</span></div></div>
+     <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny bg_auto" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div></div>
 
   Styleguide Background.Image Repeat
 
@@ -10400,12 +10401,12 @@
   background-repeat: repeat;
 }
 #acc_arches_override .bg_repeat-x {
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
 }
 #acc_arches_override .bg_repeat-y {
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 }
-#acc_arches_override .bg_space {
+#acc_arches_override .bg_repeat-space {
   background-repeat: space;
 }
 #acc_arches_override .texture_light {
