@@ -117,7 +117,14 @@ gulp.task("copy", function () {
 	console.log(
 		"Gulp: Gosh my back is tired. Moving boxes from Assets to the styleguide"
 	);
-	return gulp.src("./dist/**/*").pipe(gulp.dest(SOURCE.DOCS));
+	return gulp.src("./dist/**/*").pipe(gulp.dest("./Arches"));
+});
+gulp.task("copyToDocs", function () {
+	console.log("Gulp Copy Dist Package to Docs");
+	console.log(
+		"Gulp: Gosh my back is tired. Moving boxes from Assets to the styleguide"
+	);
+	return gulp.src("./Arches/**/*").pipe(gulp.dest(SOURCE.DOCS));
 });
 gulp.task("construct", function () {
 	var base = gulp
@@ -516,4 +523,5 @@ gulp.task(
 );
 
 gulp.task("build", gulp.series("construct", "style", "dist", "copy"));
+gulp.task("git", gulp.series("copy", "copyToDocs"));
 gulp.task("default", gulp.series("build", "watch"));
