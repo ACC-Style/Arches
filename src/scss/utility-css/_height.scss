@@ -1,3 +1,74 @@
 .h_unset {
 	height: unset;
 }
+
+@include loop-style(height-viewport, "", "");
+@include loop-style(min-height, "", "");
+
+@media #{$medium-up} {
+	@include loop-style(height-viewport, $bp-label_medium, "");
+	@include loop-style(min-height, $bp-label_medium, "");
+}
+
+@media #{$large-up} {
+	@include loop-style(height-viewport, $bp-label_large, "");
+	@include loop-style(min-height, $bp-label_large, "");
+}
+
+/*
+UC: Height
+
+<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>
+It is rare to use height but at times it is useful to set a matching set of cards or setting up a dashboard.<br><table><thead><tr><th>Classes</th><th>Effect</th></tr></thead><tbody><tr><td>.h_auto</td><td>height: auto</td></tr><tr><td>.h_0</td><td>height: 0vh</td></tr><tr><td>.h_10</td><td>height: 10vh</td></tr><tr><td>.h_20</td><td>height: 20vh</td></tr><tr><td>.h_30</td><td>height: 30vh</td></tr><tr><td>.h_40</td><td>height: 40vh</td></tr><tr><td>.h_50</td><td>height: 50vh</td></tr><tr><td>.h_60</td><td>height: 60vh</td></tr><tr><td>.h_70</td><td>height: 70vh</td></tr><tr><td>.h_80</td><td>height: 80vh</td></tr><tr><td>.h_90</td><td>height: 90vh</td></tr><tr><td>.h_100</td><td>height: 100vh</td></tr><tr><td>.h_unset</td><td>height: unset</td></tr></tbody></table>
+
+Markup:
+<div class="flex p_4 bg_primary-4">
+<div class="flex_auto br_solid br_white br_1 bg_primary h_auto">.h_auto</div> 
+<div class="flex_auto br_solid br_white br_1 bg_primary h_0">.h_0</div>    
+<div class="flex_auto br_solid br_white br_1 bg_primary h_10">.h_10</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary h_20">.h_20</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary h_30">.h_30</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary h_40">.h_40</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary h_50">.h_50</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary h_60">.h_60</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary h_70">.h_70</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary h_80">.h_80</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary h_90">.h_90</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary h_100">.h_100</div>  
+<div class="flex_auto br_solid br_white br_1 bg_primary h_60 h_unset:lg">.h_60.h_unset:lg</div>
+</div>
+
+  Weight: 107
+
+  Styleguide Height
+ 
+ */
+/*
+Min Height
+
+<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>
+Min heights can be very useful in interactions and keeping a consistent dimension feel without conflicts of overflow.<br><table><thead><tr><th>Classes</th><th>Effect</th></tr></thead><tbody><tr><td>.min-h_auto</td><td>min-height: auto</td></tr><tr><td>.min-h_0</td><td>min-height: 0vh</td></tr><tr><td>.min-h_10</td><td>min-height: 10vh</td></tr><tr><td>.min-h_20</td><td>min-height: 20vh</td></tr><tr><td>.min-h_30</td><td>min-height: 30vh</td></tr><tr><td>.min-h_40</td><td>min-height: 40vh</td></tr><tr><td>.min-h_50</td><td>min-height: 50vh</td></tr><tr><td>.min-h_60</td><td>min-height: 60vh</td></tr><tr><td>.min-h_70</td><td>min-height: 70vh</td></tr><tr><td>.min-h_80</td><td>min-height: 80vh</td></tr><tr><td>.min-h_90</td><td>min-height: 90vh</td></tr><tr><td>.min-h_100</td><td>min-height: 100vh</td></tr><tr><td>.min-h_unset</td><td>min-height: unset</td></tr></tbody></table>
+
+
+Markup:
+<div class="flex p_4 bg_primary-4">
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_auto">.min-h_auto</div> 
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_0">.min-h_0</div>    
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_10">.min-h_10</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_20">.min-h_20</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_30">.min-h_30</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_40">.min-h_40</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_50">.min-h_50</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_60">.min-h_60</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_70">.min-h_70</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_80">.min-h_80</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_90">.min-h_90</div>   
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_100">.min-h_100</div>  
+<div class="flex_auto br_solid br_white br_1 bg_primary min-h_60 min-h_unset:lg">.min-h_60.min-h_unset:lg</div>
+</div>
+
+  Weight: 107
+
+  Styleguide Height.min
+ 
+ */

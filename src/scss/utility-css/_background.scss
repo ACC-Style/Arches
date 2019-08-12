@@ -32,7 +32,7 @@ Styleguide Background
 /*
 Background Color Shades
 
-Background colors can be shifted by appending a modifier of n5 to 5.  The negative(n) numbers mix the color with black and the positive numbers mix the color with white.   
+Background colors can be shifted by appending a modifier of n5 through 5.  The negative(n) numbers mix the color with black and the positive numbers mix the color with white.<table><thead><tr><th>Classes</th><th>Effect</th></tr></thead><tbody><tr><td>.bg_(color)-0, .bg_(color)</td><td>pure color</td></tr><tr><td>.bg_(color)-0</td><td>color with 0% white mixed in</td></tr><tr><td>.bg_(color)-1</td><td>color with 15% white mixed in</td></tr><tr><td>.bg_(color)-2</td><td>color with 37% white mixed in</td></tr><tr><td>.bg_(color)-3</td><td>color with 60% white mixed in</td></tr><tr><td>.bg_(color)-4</td><td>color with 78% white mixed in</td></tr><tr><td>.bg_(color)-5</td><td>color with 90% white mixed in</td></tr><tr><td>.bg_(color)-n1</td><td>color with 10% black mixed in</td></tr><tr><td>.bg_(color)-n2</td><td>color with 25% black mixed in</td></tr><tr><td>.bg_(color)-n3</td><td>color with 45% black mixed in</td></tr><tr><td>.bg_(color)-n4</td><td>color with 58% black mixed in</td></tr><tr><td>.bg_(color)-n5</td><td>color with 75% black mixed in</td></tr></tbody></table>   
 
 bg_primary                - background color modified light to dark
 bg_secondary              - background color modified light to dark
@@ -47,7 +47,7 @@ bg_acc                    - background color modified light to dark
 
 
 Markup:
-<div class="flex">
+<div class="flex bg_secondary-5 p_2">
   <div class="bg_white flex_auto text_center p_2 p-y_5 ">white</div>
   <div class="{{modifier_class}}-5 flex_auto text_center  p_2 p-y_5">5</div>
   <div class="{{modifier_class}}-4 flex_auto text_center  p_2 p-y_5">4</div>
@@ -69,6 +69,16 @@ Styleguide Background.Color.Shades
  */
 .bg_tansparent {
 	background-color: transparent !important;
+}
+@media #{$medium-up} {
+	.bg_tansparent {
+		background-color: transparent !important;
+	}
+}
+@media #{$large-up} {
+	.bg_tansparent {
+		background-color: transparent !important;
+	}
 }
 @each $color-name, $color in $theme-palette {
 	@include color-loop(background-color, $color-name, $color);
@@ -121,7 +131,7 @@ For many images you will need top place background images in to a cardnial locat
 .bg_center           - cardnial center center
 
 Markup:
-   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="background-size:10%;width:200px; height:20px"><span class="alt">{{modifier_class}}</span></div></div>
+   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="background-size:50%;width:200px; height:200px"><span class="alt">{{modifier_class}}</span></div></div>
 
 Styleguide Background.Image Positon
 
@@ -140,9 +150,9 @@ For many images you will need top place background images in to a cardnial locat
 
 
 Markup:
-   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="background-size:10%;width:200px; height:20px"><span class="alt">{{modifier_class}}</span></div></div>
+   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="width:200px; height:200px"><span class="alt">{{modifier_class}}</span></div></div>
 
-Styleguide Background.Image Positon
+Styleguide Background.Size
 
 */
 .bg_unset {
@@ -159,20 +169,20 @@ Styleguide Background.Image Positon
 }
 
 /*
-Background Size
+Background Repeat
 
-For many images you will need top place background images in to a cardnial location.
+repeating a background image is easy.
 
-.bg_unset	            - removes any css background size 
-.bg_auto           - auto
-.bg_cover	            - cover
-.bg_contain	          - contain
+.bg_norepeat	            - norepeat 
+.bg_repeat           - repeat
+.bg_repoeat-x	            - repoeat-x
+.bg_repeat-y         - repeat-y
 
 
 Markup:
-   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="background-size:10%;width:200px; height:20px"><span class="alt">{{modifier_class}}</span></div></div>
+   <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny bg_auto" style="width:100%; height:200px"><span class="alt">{{modifier_class}}</span></div></div>
 
-Styleguide Background.Image Positon
+Styleguide Background.Image Repeat
 
 */
 
