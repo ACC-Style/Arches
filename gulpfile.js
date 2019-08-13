@@ -126,6 +126,40 @@ gulp.task("copyToDocs", function () {
 	);
 	return gulp.src("./Arches/**/*").pipe(gulp.dest(SOURCE.DOCS));
 });
+gulp.task("markdown", function () {
+	var base = gulp.src("markdown_footer.md");
+	var home = base
+		.pipe(clone())
+		.pipe(rename("home_readme.md"))
+		.pipe(
+			header(
+				fs.readFileSync("partial_home.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				fs.readFileSync("markdown_header.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				"<div class='home_nav'>", {
+					pkg: pkg
+				}
+			)
+		);
+	return merge(home)
+		.pipe(
+			header(
+				fs.readFileSync("markdown_preheader.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		)
+		.pipe(gulp.dest('./'));
+});
 gulp.task("construct", function () {
 	var base = gulp
 		.src(PATHS.SCSS + "/gulp_header/__utilityclasses.scss")
@@ -523,5 +557,5 @@ gulp.task(
 );
 
 gulp.task("build", gulp.series("construct", "style", "dist", "copy"));
-gulp.task("git", gulp.series("copy", "copyToDocs"));
+gulp.task("git", gulp.series("copy", "copyToDocs", 'markdown', 'styleguide'));
 gulp.task("default", gulp.series("build", "watch"));

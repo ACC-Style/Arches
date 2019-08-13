@@ -211,3 +211,14 @@ pre code.hljs {
 		padding: $padding_2 $padding_3;
 	}
 }
+
+.home_nav #home_nav,
+.accboot_nav #accboot_nav,
+.cvqualityboot_nav #cvqualityboot_nav,
+.accfoundation_nav #accfoundation_nav {
+	background-color: map-get($theme-palette, accent);
+	&:hover {
+		background-color: mix(map-get($theme-palette, accent), white);
+		color: $black;
+	}
+}
