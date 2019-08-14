@@ -150,7 +150,95 @@ gulp.task("markdown", function () {
 				}
 			)
 		);
-	return merge(home)
+		var cvqualtiy = base
+		.pipe(clone())
+		.pipe(rename("cvquality-boot_readme.md"))
+		.pipe(
+			header(
+				fs.readFileSync("partial_cvqualityboot.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				fs.readFileSync("markdown_header.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				"<div class='cvqualityboot_nav'>", {
+					pkg: pkg
+				}
+			)
+		);
+		var accfoundation = base
+		.pipe(clone())
+		.pipe(rename("accfoundation_readme.md"))
+		.pipe(
+			header(
+				fs.readFileSync("partial_accfoundation.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				fs.readFileSync("markdown_header.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				"<div class='accfoundation_nav'>", {
+					pkg: pkg
+				}
+			)
+		);
+		var noframework = base
+		.pipe(clone())
+		.pipe(rename("noframework_readme.md"))
+		.pipe(
+			header(
+				fs.readFileSync("partial_noframework.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				fs.readFileSync("markdown_header.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				"<div class='noframework_nav'>", {
+					pkg: pkg
+				}
+			)
+		);
+		var accboot = base
+		.pipe(clone())
+		.pipe(rename("accboot_readme.md"))
+		.pipe(
+			header(
+				fs.readFileSync("partial_accboot.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				fs.readFileSync("markdown_header.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				"<div class='accboot_nav'>", {
+					pkg: pkg
+				}
+			)
+		);
+	return merge(home,cvqualtiy,accboot,accfoundation,noframework)
 		.pipe(
 			header(
 				fs.readFileSync("markdown_preheader.md", "utf8"), {
@@ -556,6 +644,6 @@ gulp.task(
 	}
 );
 
-gulp.task("build", gulp.series("construct", "style", "dist", "copy"));
+gulp.task("build", gulp.series("construct", "style",  "copy"));
 gulp.task("git", gulp.series("copy", "copyToDocs", 'markdown', 'styleguide'));
 gulp.task("default", gulp.series("build", "watch"));

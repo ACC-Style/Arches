@@ -215,10 +215,11 @@ pre code.hljs {
 .home_nav #home_nav,
 .accboot_nav #accboot_nav,
 .cvqualityboot_nav #cvqualityboot_nav,
-.accfoundation_nav #accfoundation_nav {
-	background-color: map-get($theme-palette, accent);
+.accfoundation_nav #accfoundation_nav,
+.noframework_nav #noframework {
+	background-color: map-get($theme-palette, accent) !important;
 	&:hover {
-		background-color: mix(map-get($theme-palette, accent), white);
-		color: $black;
+		background-color: mix(map-get($theme-palette, accent), white) !important;s
+		color: $black !important;
 	}
 }
