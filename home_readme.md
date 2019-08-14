@@ -7,7 +7,7 @@
         <a href="/zurb_acc/" id="accfoundation_nav" class="bg_primary c_white br_white-1 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3">ACC & Foundation</a>
     </li>
 </ul>
-<div class="p_5 br_round relative shadow_2">
+<div class="br_1 br_round br_solid br_white-7 p_5 relative shadow_3 m-x_3">
 	<div class="absolute t_0 r_0 l_0 b_0 opacity_7 z_0 br_round bg_center bg_cover" style="background-image:url('/img/triangletexture/rainbowtriangles.PNG')"></div>
 		<div class="c_black font_11:lg font_6 font_8:md font_ui lh_1 m-y_4">Arches
 			<span class="block font_1 m-y_2 font_bold opacity_7">Multi Product, Framework, Brand Style System</span>
