@@ -155,7 +155,7 @@ gulp.task("markdown", function () {
 			)
 		).pipe(
 			header(
-				fs.readFileSync("markdown_header.md", "utf8"), {
+				fs.readFileSync("markdown_variation-header.md", "utf8"), {
 					pkg: pkg
 				}
 			)
@@ -177,7 +177,7 @@ gulp.task("markdown", function () {
 			)
 		).pipe(
 			header(
-				fs.readFileSync("markdown_header.md", "utf8"), {
+				fs.readFileSync("markdown_variation-header.md", "utf8"), {
 					pkg: pkg
 				}
 			)
@@ -199,7 +199,7 @@ gulp.task("markdown", function () {
 			)
 		).pipe(
 			header(
-				fs.readFileSync("markdown_header.md", "utf8"), {
+				fs.readFileSync("markdown_variation-header.md", "utf8"), {
 					pkg: pkg
 				}
 			)
@@ -221,7 +221,7 @@ gulp.task("markdown", function () {
 			)
 		).pipe(
 			header(
-				fs.readFileSync("markdown_header.md", "utf8"), {
+				fs.readFileSync("markdown_variation-header.md", "utf8"), {
 					pkg: pkg
 				}
 			)
