@@ -80,7 +80,7 @@ gulp.task("style", function () {
 		.pipe(clone())
 		.pipe(
 			rename(function (path) {
-				pathS.extname = ".min.css";
+				path.extname = ".min.css";
 			})
 		)
 		.pipe(postcss([cssnano()]));
@@ -121,119 +121,39 @@ gulp.task("copy", function () {
 	);
 	return gulp.src("./dist/**/*").pipe(gulp.dest(SOURCE.DOCS));
 });
-
+var markdownbuild = function(base,label){
+	var construct = base
+	.pipe(clone())
+	.pipe(rename(label + "_readme.md"))
+	.pipe(
+		header(
+			fs.readFileSync(PATHS.MARKDOWN+"partial_"+label+".md", "utf8"), {
+				pkg: pkg
+			}
+		)
+	).pipe(
+		header(
+			fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
+				pkg: pkg
+			}
+		)
+	).pipe(
+		header(
+			"<div class='"+label+"_nav'>", {
+				pkg: pkg
+			}
+		)
+	);
+	return construct;
+}
 gulp.task("markdown", function () {
 	var base = gulp.src(PATHS.MARKDOWN+"markdown_footer.md");
-	var home = base
-		.pipe(clone())
-		.pipe(rename("home_readme.md"))
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.MARKDOWN+"partial_home.md", "utf8"), {
-					pkg: pkg
-				}
-			)
-		).pipe(
-			header(
-				fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
-					pkg: pkg
-				}
-			)
-		).pipe(
-			header(
-				"<div class='home_nav'>", {
-					pkg: pkg
-				}
-			)
-		);
-		var cvqualtiy = base
-		.pipe(clone())
-		.pipe(rename("cvquality-boot_readme.md"))
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.MARKDOWN+"partial_cvqualityboot.md", "utf8"), {
-					pkg: pkg
-				}
-			)
-		).pipe(
-			header(
-				fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
-					pkg: pkg
-				}
-			)
-		).pipe(
-			header(
-				"<div class='cvqualityboot_nav'>", {
-					pkg: pkg
-				}
-			)
-		);
-		var accfoundation = base
-		.pipe(clone())
-		.pipe(rename("accfoundation_readme.md"))
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.MARKDOWN+"partial_accfoundation.md", "utf8"), {
-					pkg: pkg
-				}
-			)
-		).pipe(
-			header(
-				fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
-					pkg: pkg
-				}
-			)
-		).pipe(
-			header(
-				"<div class='accfoundation_nav'>", {
-					pkg: pkg
-				}
-			)
-		);
-		var noframework = base
-		.pipe(clone())
-		.pipe(rename("noframework_readme.md"))
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.MARKDOWN+"partial_noframework.md", "utf8"), {
-					pkg: pkg
-				}
-			)
-		).pipe(
-			header(
-				fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
-					pkg: pkg
-				}
-			)
-		).pipe(
-			header(
-				"<div class='noframework_nav'>", {
-					pkg: pkg
-				}
-			)
-		);
-		var accboot = base
-		.pipe(clone())
-		.pipe(rename("accboot_readme.md"))
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.MARKDOWN+"partial_accboot.md", "utf8"), {
-					pkg: pkg
-				}
-			)
-		).pipe(
-			header(
-				fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
-					pkg: pkg
-				}
-			)
-		).pipe(
-			header(
-				"<div class='accboot_nav'>", {
-					pkg: pkg
-				}
-			)
-		);
+	//markdownbuild(base,name,content,tag)
+	var home = markdownbuild(base,'home');
+	var cvqualtiy = markdownbuild(base,'cvqualityboot');
+	var accfoundation = markdownbuild(base,'accfoundation');
+	var noframework = markdownbuild(base,'noframework');
+	var accboot = markdownbuild(base,'accboot');
 	return merge(home,cvqualtiy,accboot,accfoundation,noframework)
 		.pipe(
 			header(

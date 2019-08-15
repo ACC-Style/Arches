@@ -1,17 +1,22 @@
-<div class='accfoundation_nav'><ul class="ul_none flex bg_primary block flex m-t_3 p_4 ul_none w_100"> 
+<div class='accfoundation_nav'><ul id="sitenav" class="block flex flex_column flex_row:md m-t_3 ul_none w_100" > 
         <li class="flex_auto p_1">
-        <a href="#" id="home_nav" class="bg_primary c_white br_white-1 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3">Arches</a>
-        </li><li class="flex_auto p_1">
-        <a href="/Arches/uconly_acc/" id="noframework_nav" class="bg_primary c_white br_white-1 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3">Utility Class Only</a>
-        </li><li class="flex_auto p_1">
-        <a href="/Arches/boot_acc/" id="accboot_nav" class="bg_primary c_white br_white-1 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3">ACC &amp; Bootstrap</a>
-        </li><li class="flex_auto p_1">
-        <a href="/Arches/boot_cvquality/" id="cvqualityboot_nav" class="bg_primary c_white br_white-1 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3">CVQualtiy &amp; </li><li class="flex_auto p_1">
+        <a href="#" id="home_nav" class="bg_primary c_white br_white-2 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3 block">Arches</a>
+        </li>
+        <li class="flex_auto p_1">
+        <a href="/Arches/uconly_acc/" id="noframework_nav" class="bg_primary c_white br_white-2 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3 block">Utility Class Only</a>
+        </li>
+        <li class="flex_auto p_1">
+        <a href="/Arches/boot_acc/" id="accboot_nav" class="bg_primary c_white br_white-2 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3 block">ACC &amp; Bootstrap</a>
+        </li>
+        <li class="flex_auto p_1">
+        <a href="/Arches/boot_cvquality/" id="cvqualityboot_nav" class="bg_primary c_white br_white-2 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3 block">CVQualtiy &amp;
         Bootstrap</a>
-        </li><li class="flex_auto p_1">
-        <a href="/Arches/zurb_acc/" id="accfoundation_nav" class="bg_primary c_white br_white-1 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3">ACC & Foundation</a>
+        </li>
+        <li class="flex_auto p_1">
+        <a href="/Arches/zurb_acc/" id="accfoundation_nav" class="bg_primary c_white br_white-2 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3 block">ACC & Foundation</a>
         </li>
 </ul>
+
 <div class="br_1 br_round br_solid br_white-7 p_5 relative shadow_3 m-x_3">
 	<div class="absolute t_0 r_0 l_0 b_0 opacity_7 z_0 br_round bg_center bg_cover" style="background-image:url('../img/triangletexture/greentriangles.PNG')"></div>
 		<div class="c_black font_11:lg font_6 font_8:md font_ui lh_1 m-y_4">Foundation &amp; ACC
