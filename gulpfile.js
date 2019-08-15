@@ -38,7 +38,8 @@ var SOURCE = {
 	JS: "/js",
 	FONTS: "/fonts",
 	IMG: "/img/Exports",
-	ICONS: "/icons"
+	ICONS: "/icons",
+	MD: "./markdown",
 };
 var PATHS = {
 	CSS: SOURCE.SRC + SOURCE.CSS,
@@ -52,7 +53,8 @@ var PATHS = {
 	ICONS: SOURCE.SRC + SOURCE.ICONS,
 	ALLICONS: SOURCE.SRC + SOURCE.ICONS + "/**/*.scss",
 	IMAGES: SOURCE.SRC + SOURCE.IMAGES,
-	ALLIMAGES: SOURCE.SRC + SOURCE.IMAGES + "*"
+	ALLIMAGES: SOURCE.SRC + SOURCE.IMAGES + "*",
+	MARKDOWN: SOURCE.MD+ "/partials/",
 };
 
 // Style Tasks
@@ -78,7 +80,7 @@ gulp.task("style", function () {
 		.pipe(clone())
 		.pipe(
 			rename(function (path) {
-				path.extname = ".min.css";
+				pathS.extname = ".min.css";
 			})
 		)
 		.pipe(postcss([cssnano()]));
@@ -121,19 +123,19 @@ gulp.task("copy", function () {
 });
 
 gulp.task("markdown", function () {
-	var base = gulp.src("markdown_footer.md");
+	var base = gulp.src(PATHS.MARKDOWN+"markdown_footer.md");
 	var home = base
 		.pipe(clone())
 		.pipe(rename("home_readme.md"))
 		.pipe(
 			header(
-				fs.readFileSync("partial_home.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN+"partial_home.md", "utf8"), {
 					pkg: pkg
 				}
 			)
 		).pipe(
 			header(
-				fs.readFileSync("markdown_header.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
 					pkg: pkg
 				}
 			)
@@ -149,13 +151,13 @@ gulp.task("markdown", function () {
 		.pipe(rename("cvquality-boot_readme.md"))
 		.pipe(
 			header(
-				fs.readFileSync("partial_cvqualityboot.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN+"partial_cvqualityboot.md", "utf8"), {
 					pkg: pkg
 				}
 			)
 		).pipe(
 			header(
-				fs.readFileSync("markdown_variation-header.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
 					pkg: pkg
 				}
 			)
@@ -171,13 +173,13 @@ gulp.task("markdown", function () {
 		.pipe(rename("accfoundation_readme.md"))
 		.pipe(
 			header(
-				fs.readFileSync("partial_accfoundation.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN+"partial_accfoundation.md", "utf8"), {
 					pkg: pkg
 				}
 			)
 		).pipe(
 			header(
-				fs.readFileSync("markdown_variation-header.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
 					pkg: pkg
 				}
 			)
@@ -193,13 +195,13 @@ gulp.task("markdown", function () {
 		.pipe(rename("noframework_readme.md"))
 		.pipe(
 			header(
-				fs.readFileSync("partial_noframework.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN+"partial_noframework.md", "utf8"), {
 					pkg: pkg
 				}
 			)
 		).pipe(
 			header(
-				fs.readFileSync("markdown_variation-header.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
 					pkg: pkg
 				}
 			)
@@ -215,13 +217,13 @@ gulp.task("markdown", function () {
 		.pipe(rename("accboot_readme.md"))
 		.pipe(
 			header(
-				fs.readFileSync("partial_accboot.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN+"partial_accboot.md", "utf8"), {
 					pkg: pkg
 				}
 			)
 		).pipe(
 			header(
-				fs.readFileSync("markdown_variation-header.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
 					pkg: pkg
 				}
 			)
@@ -235,12 +237,12 @@ gulp.task("markdown", function () {
 	return merge(home,cvqualtiy,accboot,accfoundation,noframework)
 		.pipe(
 			header(
-				fs.readFileSync("markdown_preheader.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN+"markdown_preheader.md", "utf8"), {
 					pkg: pkg
 				}
 			)
 		)
-		.pipe(gulp.dest('./'));
+		.pipe(gulp.dest(SOURCE.MD));
 });
 gulp.task("construct", function () {
 	var base = gulp
