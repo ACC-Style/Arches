@@ -1,6 +1,6 @@
 <ul id="sitenav" class="block flex flex_column flex_row:md m-t_3 ul_none w_100" > 
         <li class="flex_auto p_1">
-        <a href="#" id="home_nav" class="bg_primary c_white br_white-2 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3 block">Arches</a>
+        <a href="/Arches/" id="home_nav" class="bg_primary c_white br_white-2 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3 block">Arches</a>
         </li>
         <li class="flex_auto p_1">
         <a href="/Arches/uconly_acc/" id="noframework_nav" class="bg_primary c_white br_white-2 br_solid br_1 h:bg_primary-n2 br_radius p-x_4 p-y_3 block">Utility Class Only</a>
