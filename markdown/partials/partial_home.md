@@ -7,9 +7,9 @@
 </div>
 <div class="p_5">
 
-## Component Map of the Utiltity Classes
+## Arches Overview of Variations and Sub Stylesheets
 
-![Mind Map of Arches](arches-mindmap.png)
+![Mind Map of Arches](ArchesOverview.png)
 
 </div>
 

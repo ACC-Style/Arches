@@ -2498,34 +2498,6 @@ Font, Border and Background Colors using youtube Social colors have no need for 
 
 Styleguide SocialColors.youtube
 */
-/*
-
-Basic Typography
-
-Basic Typography with this variation of Arches. Please note that typography can have a different base design depending on the brand or the framework underpinning.  
-
-Markup:
-<h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
-elit</h1>
-<h2>Aenean commodo ligula eget dolor aenean massa</h2>
-<h3>Cum sociis natoque penatibus et magnis dis 
-parturient montes nascetur ridiculus mus</h3>
-<h4>Donec quam felis ultricies nec pellentesque eu 
-pretium quis sem nlla consequat massa quis enim</h4>
-<h5>Donec pede justo fringilla vel aliquet nec vulputate 
-eget arcu</h5>
-<h6>In enim justo rhoncus ut imperdiet a venenatis vitae 
-justo</h6>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem.</p>
-
-
-Styleguide HTML.Typography
-
-*/
 h1,
 h2,
 h3,
@@ -2596,7 +2568,7 @@ Logos in the design come in 4 variations the primary logo, the condensed logo, a
 .logo_condensed-alt.max-w_1         -  	 	Smaller Logo Reversed.
 
 Markup:
-<div class="bg_secondary-2 max-w_3"><div class="{{modifier_class}}"><span class="alt">{{modifier_class}}</span></div></div>
+<div class="bg_secondary-2 max-w_3"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}}"><span class="alt">{{modifier_class}}</span></div></div>
 
 Styleguide DesignBase.Logos
 
@@ -2652,7 +2624,7 @@ Seals in the design come in 3 variations the default, small, and tiny.  All Seal
 
 
 Markup:
-<div class="bg_secondary-2 max-w_1"><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
+<div class="bg_secondary-2 max-w_1"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
 
 Styleguide DesignBase.Seals
 
@@ -2721,7 +2693,7 @@ To create an image placeholder use the lorem-loader plus an aspect of the intend
 .aspect_4x1			- lock image to a 4 to 1 ratio 
 
 Markup:
-<div class="grid-w_2 max-w_1">
+<div class="grid-w_2 max-w_1"  data-style="{{ modifier_class }}" >
    <div class="m-y_2 lorem-loader {{modifier_class}} ">&nbsp;</div>
 </div>
 
@@ -2819,7 +2791,7 @@ Expanded Click Area
 allows for a relative container to be clickable by the link. 
 
 Markup:
-<div class="card shadow_2 cell small-6 large-4 max-w_3" >
+<div class="card shadow_2 cell small-6 large-4 max-w_3"  data-style="{{ modifier_class }}" >
   <div class=" font_slab border-top-left-square c_white font_3 p_4 texture_dust card-divider bg_primary card-header">
     This is a header
   </div>
@@ -2855,15 +2827,18 @@ Styleguide InteractiveExtras.Expanded Click Area
 Link Decorator
 
 Links with the `.link` will auto decorate with an icon of the corresponding file type
+| File            | Effect                                         |
+| --------------- | ---------------------------------------------- |
+| .pdf            | Portable Document Format                       |
+| .doc            | Word Document                                  |
+| .txt            | Text Document                                  |
+| .ppt            | Power Point                                    |
+| mailto:         | Email                                          |
+| tel:            | Telephone                                      |
+| fax:            | Fax                                            |
+| target=`_blank` | External Link icons will appear after any link |
 
-.pdf Portable Document Format
-.doc Word Documents
-.txt Text Documents
-.ppt Power Points
-mailto: email links
-tel: Telephone 
-fax: Fax 
-_blank External Link icons will appear after any link that has target blank, or the href begins with http, or https
+
 
 Markup:
  <a class="link" href="abc.pdf">A link that is a Pdf Document</a><br/>
@@ -2951,7 +2926,7 @@ Many momment there are needs for toggles of icon when the parent is in the state
 .icon-toggle_bars-times 					-  Toggle between bars and times
 
 Markup:
-<ul class="ul_none m_0 p_0">
+<ul data-style="{{ modifier_class }}" class="ul_none m_0 p_0">
 	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_secondary-3 font_1 bg_success-n1">	
 			<span class="">FA Solid {{ modifier_class }}</span>
 			<i class="font_3 fas fa-fw {{ modifier_class }}"></i>
@@ -3030,7 +3005,7 @@ This variation of the icon toggle responds to `is-complete` and not is `is-activ
 .icon-complete_check-circle		- Toggle a check mark to show.
 
 Markup:
-<ul class="ul_none">
+<ul class="ul_none" data-style="{{ modifier_class }}">
 <li class="br_solid br_secondary-5 p_3 br_1">
 	<div class="">FA Solid {{modifier_class}}</div>
 	<div class="p_2 font_4">
@@ -3079,7 +3054,7 @@ white              - text color modified light to dark
 black              - text color modified light to dark
 
 Markup:
-<div class="p_5 bg_primary texture_medium clearboth"> 
+<div  data-style="{{ modifier_class }}"  class="p_5 bg_primary texture_medium clearboth"> 
 <div class="lds-grid">
 		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
 		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
@@ -3544,27 +3519,78 @@ Interactions can be enhanced with toggle icons or loading graphics to show the s
 */
 /*
 
- Basic HTML
+Basic HTML
+
+The Arches Design System, at its core, is a Utility Class Styling Design.  It is built not to prescribe the design of the HTML and components but to paint with classes to create complicated UI without having to create more styles.  Arches rely on the browser or branding defaults for basic HTML styling.  Below is a kitchen sink of HTML elements so you can see how this variation look without further alteration from adding classes. There is No basic styling around the pure DOM with the utility class only, and there is improved styling as you add Bootstrap or Foundation.  
+
+Weight: -10
+
+Styleguide HTML
+*/
+/*
+
+Typography
+
+Basic Typography with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
+
+Markup:
+<h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
+elit</h1>
+<h2>Aenean commodo ligula eget dolor aenean massa</h2>
+<h3>Cum sociis natoque penatibus et magnis dis 
+parturient montes nascetur ridiculus mus</h3>
+<h4>Donec quam felis ultricies nec pellentesque eu 
+pretium quis sem nlla consequat massa quis enim</h4>
+<h5>Donec pede justo fringilla vel aliquet nec vulputate 
+eget arcu</h5>
+<h6>In enim justo rhoncus ut imperdiet a venenatis vitae 
+justo</h6>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit. Aenean commodo ligula eget dolor. Aenean massa. 
+Cum sociis natoque penatibus et magnis dis parturient 
+montes, nascetur ridiculus mus. Donec quam felis, 
+ultricies nec, pellentesque eu, pretium quis, sem.</p>
+<article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article>
+
+Styleguide HTML.Typography
+
+*/
+/*
+
+Lists
+
+Basic Lists with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
+
+Markup:
+<section><ul><li>Unordered List item one<ul><li>Nested list item<ul><li>Level 3, item one</li><li>Level 3, item two</li><li>Level 3, item three</li><li>Level 3, item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><hr><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></section>
+
+
+Styleguide HTML.Lists
+
+*/
+/*
+
+Table
+
+Basic Tables with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
+
+Markup:
+<section><table><caption>Tables can have captions now.</caption><tbody><tr><th>Person</th><th>Number</th><th>Third Column</th></tr><tr><td>Someone Lastname</td><td>900</td><td>Nullam quis risus eget urna mollis ornare vel eu leo.</td></tr><tr><td><a href="#">Person Name</a></td><td>1200</td><td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td></tr><tr><td>Another Person</td><td>1500</td><td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td></tr><tr><td>Last One</td><td>2800</td><td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td></tr></tbody></table></section>
+
+
+Styleguide HTML.BasicTable
+
+*/
+/*
+
+ Basic Inputs
 
  Arches is strongly based on utility classes styling everything so it commonly just builds on either the base of the browser defaults or the defaults of the framework that is built on. This is a kitchen sink of html elements so you can see how this variation will effect html. There is No basic styling around the pure DOM with the utlity class only.  To get full brand styling use a framework based version of arches.  
 
 Markup:
-<main><section><hgroup><h1>h1 HTML5 Kitchen Sink</h1><h2>h2 Back in my quaint <a href="#">garden</a></h2><h3>h3 Jaunty <a href="#">zinnias</a> vie with flaunting phlox</h3><h4>h4 Five or six big jet planes zoomed quickly by the new tower.</h4><h5>h5 Expect skilled signwriters to use many jazzy, quaint old alphabets effectively.</h5><h6>h6 Pack my box with five dozen liquor jugs.</h6></hgroup></section><hr><section><header><nav><ul><li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul></nav></header><article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article><aside>This is an aside.</aside><footer>This is footer for this section</footer></section><hr><section><blockquote><p>Blockquote: I quickly explained that many big jobs involve few hazards</p></blockquote><blockquote><p>This is a mult-line blockquote with a cite reference. People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’tdone as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote></section><hr><section><table><caption>Tables can have captions now.</caption><tbody><tr><th>Person</th><th>Number</th><th>Third Column</th></tr><tr><td>Someone Lastname</td><td>900</td><td>Nullam quis risus eget urna mollis ornare vel eu leo.</td></tr><tr><td><a href="#">Person Name</a></td><td>1200</td><td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td></tr><tr><td>Another Person</td><td>1500</td><td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td></tr><tr><td>Last One</td><td>2800</td><td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td></tr></tbody></table></section><hr><section><dl><dt>Definition List Title</dt><dd>Definition list division.</dd><dt>Kitchen Sink</dt><dd>Used in expressions to describe work in which all conceivable (and some inconceivable) sources have been mined. In this case, a bunch of markup.</dd><dt>aside</dt><dd>Defines content aside from the page content</dd><dt>blockquote</dt><dd>Defines a section that is quoted from another source</dd></dl></section><hr><section><ul><li>Unordered List item one<ul><li>Nested list item<ul><li>Level 3, item one</li><li>Level 3, item two</li><li>Level 3, item three</li><li>Level 3, item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><hr><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></section><hr><section><address>1 Infinite Loop<br>Cupertino, CA 95014<br>United States</address></section><hr><section><pre>
-pre {
-  display: block;
-  padding: 7px;
-  background-color: #F5F5F5;
-  border: 1px solid #E1E1E8;
-  border-radius: 3px;
-  white-space: pre-wrap;
-  word-break: break-all;
-  font-family: Menlo, Monaco;
-  line-height: 160%;
-}</pre></section><hr><figure><img src="https://www.fillmurray.com/505/314"><figcaption>Fig1. A picture of Bill Murray from <a href="https://www.fillmurray.com/">fillmurray.com</a></figcaption></figure><hr><section><form><p><label for="example-input-email">Email address</label> <input type="email" id="example-input-email" placeholder="Enter email"></p><p><label for="example-input-password1">Number</label> <input type="number" id="example-input-number" placeholder="Number"></p><p><label for="example-input-password">Password</label> <input type="password" id="example-input-password" placeholder="Password"></p><p><label for="example-input-search">Search</label> <input type="search" id="example-input-serach" placeholder="Search .."></p><p><label for="example-input-tel">Telephone number</label> <input type="tel" id="example-input-tel" placeholder="Telephone number"></p><p><label for="example-input-text">Text</label> <input type="text" id="example-input-text" placeholder="Enter some text here"></p><p><label for="example-input-url">Url</label> <input type="url" id="example-input-url" placeholder="Enter a url here"></p><p><label for="example-input-color">Color</label> <input type="color" id="example-inupt-color" placeholder="#fff"></p><p><label for="example-input-date">Date</label> <input type="date" id="example-input-date" placeholder="date"></p><p><label for="example-input-date-time">Date / Time</label> <input type="datetime" id="example-input-date-time" placeholder="date / time"></p><p><label for="example-input-date-time-local">Date / Time local</label> <input type="datetime-local" id="example-input-date-time-local" placeholder="date / time local"></p><p><label for="example-input-month">Month</label> <input type="month" id="example-input-month" placeholder="Month"></p><p><label for="example-input-week">Week</label> <input type="week" id="example-input-week" placeholder="Week"></p><p><label for="example-input-time">Time</label> <input type="time" id="example-input-time" placeholder="Time"></p><p><label for="example-select1">Example select</label> <select id="example-select1"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></p><p><label for="example-select2">Example multiple select</label> <select multiple id="example-select2"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></p><p><label for="example-textarea">Example textarea</label> <textarea id="example-textarea" rows="3"></textarea></p><p><label for="example-input-file">File input</label> <input type="file" id="example-input-file"></p><fieldset><legend>I am legend</legend><div><label><input type="radio" name="options-radios" id="optionsR-radios1" value="option1" checked> Option one is this and that&mdash;be sure to include why it's great</label></div><div><label><input type="radio" name="options-radios" id="options-radios2" value="option2"> Option two can be something else and selecting it will deselect option one</label></div><div><label><input type="radio" name="optionsRadios" id="options-radios3" value="option3" disabled> Option three is disabled</label></div></fieldset><fieldset><legend>I am also legend</legend><input type="checkbox"> Check me out <input type="checkbox"> Or check me out</fieldset><p><button type="button" name="button">Button</button> <input type="button" name="input" value="Input Button"> <input type="submit" name="submit" value="Submit Button"> <input type="reset" name="reset" value="Reset Button"></p></form></section></main><!-- end kitchen sink -->
+<main><section><form><p><label for="example-input-email">Email address</label> <input type="email" id="example-input-email" placeholder="Enter email"></p><p><label for="example-input-password1">Number</label> <input type="number" id="example-input-number" placeholder="Number"></p><p><label for="example-input-password">Password</label> <input type="password" id="example-input-password" placeholder="Password"></p><p><label for="example-input-search">Search</label> <input type="search" id="example-input-serach" placeholder="Search .."></p><p><label for="example-input-tel">Telephone number</label> <input type="tel" id="example-input-tel" placeholder="Telephone number"></p><p><label for="example-input-text">Text</label> <input type="text" id="example-input-text" placeholder="Enter some text here"></p><p><label for="example-input-url">Url</label> <input type="url" id="example-input-url" placeholder="Enter a url here"></p><p><label for="example-input-color">Color</label> <input type="color" id="example-inupt-color" placeholder="#fff"></p><p><label for="example-input-date">Date</label> <input type="date" id="example-input-date" placeholder="date"></p><p><label for="example-input-date-time">Date / Time</label> <input type="datetime" id="example-input-date-time" placeholder="date / time"></p><p><label for="example-input-date-time-local">Date / Time local</label> <input type="datetime-local" id="example-input-date-time-local" placeholder="date / time local"></p><p><label for="example-input-month">Month</label> <input type="month" id="example-input-month" placeholder="Month"></p><p><label for="example-input-week">Week</label> <input type="week" id="example-input-week" placeholder="Week"></p><p><label for="example-input-time">Time</label> <input type="time" id="example-input-time" placeholder="Time"></p><p><label for="example-select1">Example select</label> <select id="example-select1"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></p><p><label for="example-select2">Example multiple select</label> <select multiple id="example-select2"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></p><p><label for="example-textarea">Example textarea</label> <textarea id="example-textarea" rows="3"></textarea></p><p><label for="example-input-file">File input</label> <input type="file" id="example-input-file"></p><fieldset><legend>I am legend</legend><div><label><input type="radio" name="options-radios" id="optionsR-radios1" value="option1" checked> Option one is this and that&mdash;be sure to include why it's great</label></div><div><label><input type="radio" name="options-radios" id="options-radios2" value="option2"> Option two can be something else and selecting it will deselect option one</label></div><div><label><input type="radio" name="optionsRadios" id="options-radios3" value="option3" disabled> Option three is disabled</label></div></fieldset><fieldset><legend>I am also legend</legend><input type="checkbox"> Check me out <input type="checkbox"> Or check me out</fieldset><p><button type="button" name="button">Button</button> <input type="button" name="input" value="Input Button"> <input type="submit" name="submit" value="Submit Button"> <input type="reset" name="reset" value="Reset Button"></p></form></section></main>
 
- Weight: -10
-
- Styleguide HTML
+ Styleguide HTML.Inputs
 
 */
 .container,
