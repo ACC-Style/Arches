@@ -7,15 +7,15 @@
             <div class="flex_auto p-x_3 w_50">
                 <h3 class="c_black font_5:lg font_3 font_4:md">Powered by Bootstrap.</h3>
                 <p class="font_1 font_1:md font_3:lg">
-                    Arches variation for mobile projects are based on Foundation 6. Click below to see the documentation for
-                    bootstrap.
+                   Arches variation for ACC.org is based on Bootstrap 4. Click below to see the documentation for
+						bootstrap.
                 </p>
                 <div>
                     <a
-                        class="br_radius bg_primary button c_white  gradient_teal h:gradient_teal-reverse"
-                        href="https://foundation.zurb.com/sites/docs/"
+                        class="br_radius bg_primary btn btn-primary c_white  gradient_teal h:gradient_teal-reverse"
+                        href="https://getbootstrap.com/docs/4.0/getting-started/introduction/"
                         role="button"
-                        >Foundation</a
+                        >Bootstrap</a
                     >
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 </p>
                 <div>
                     <a
-                        class="br_radius bg_primary button c_white  gradient_teal h:gradient_teal-reverse"
+                        class="br_radius bg_primary btn btn-primary c_white  gradient_teal h:gradient_teal-reverse"
                         href="section-recipes-cvqualtiy.html"
                         role="button"
                         >Extra UI</a
