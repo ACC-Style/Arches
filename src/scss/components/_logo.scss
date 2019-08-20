@@ -15,6 +15,31 @@ Styleguide DesignBase.Logos
 
 */
 
+[class*="logo_"],
+[class*="seal_"] {
+	background-color: transparent;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	overflow: hidden;
+	&:before {
+		content: "";
+		width: 1px;
+		margin-left: -1px;
+		float: left;
+		height: 0;
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	> .alt-text:before {
+		display: none;
+	}
+}
+
 .logo_primary {
 	background-image: url(map-deep-get($logo, primary, url));
 	&:before {

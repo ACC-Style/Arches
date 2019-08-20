@@ -37,27 +37,3 @@ $seal: (
 		aspectratio: 1/1
 	)
 );
-[class*="logo_"],
-[class*="seal_"] {
-	background-color: transparent;
-	background-size: contain;
-	background-position: center center;
-	background-repeat: no-repeat;
-	text-indent: -9999px;
-	overflow: hidden;
-	&:before {
-		content: "";
-		width: 1px;
-		margin-left: -1px;
-		float: left;
-		height: 0;
-	}
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-	> .alt-text:before {
-		display: none;
-	}
-}

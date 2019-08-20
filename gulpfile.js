@@ -54,7 +54,7 @@ var PATHS = {
 	ALLICONS: SOURCE.SRC + SOURCE.ICONS + "/**/*.scss",
 	IMAGES: SOURCE.SRC + SOURCE.IMAGES,
 	ALLIMAGES: SOURCE.SRC + SOURCE.IMAGES + "*",
-	MARKDOWN: SOURCE.MD+ "/partials/",
+	MARKDOWN: SOURCE.MD + "/partials/",
 };
 
 // Style Tasks
@@ -121,56 +121,217 @@ gulp.task("copy", function () {
 	);
 	return gulp.src("./dist/**/*").pipe(gulp.dest(SOURCE.DOCS));
 });
-var markdownbuild = function(base,label){
+var markdownbuild = function (base, label) {
 	var construct = base
-	.pipe(clone())
-	.pipe(rename(label + "_readme.md"))
-	.pipe(
-		header(
-			fs.readFileSync(PATHS.MARKDOWN+"partial_"+label+".md", "utf8"), {
-				pkg: pkg
-			}
-		)
-	).pipe(
-		header(
-			fs.readFileSync(PATHS.MARKDOWN+"markdown_header.md", "utf8"), {
-				pkg: pkg
-			}
-		)
-	).pipe(
-		header(
-			"<div class='"+label+"_nav'>", {
-				pkg: pkg
-			}
-		)
-	);
-	return construct;
-}
-gulp.task("markdown", function () {
-	var base = gulp.src(PATHS.MARKDOWN+"markdown_footer.md");
-	//markdownbuild(base,name,content,tag)
-	var home = markdownbuild(base,'home');
-	var cvqualtiy = markdownbuild(base,'cvqualityboot');
-	var accfoundation = markdownbuild(base,'accfoundation');
-	var noframework = markdownbuild(base,'noframework');
-	var accboot = markdownbuild(base,'accboot');
-	return merge(home,cvqualtiy,accboot,accfoundation,noframework)
+		.pipe(clone())
+		.pipe(rename(label + "_readme.md"))
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.MARKDOWN+"markdown_preheader.md", "utf8"), {
+				fs.readFileSync(PATHS.MARKDOWN + "partial_" + label + ".md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				fs.readFileSync(PATHS.MARKDOWN + "markdown_header.md", "utf8"), {
+					pkg: pkg
+				}
+			)
+		).pipe(
+			header(
+				"<div class='" + label + "_nav'>", {
+					pkg: pkg
+				}
+			)
+		);
+	return construct;
+};
+gulp.task("markdown", function () {
+	var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
+	//markdownbuild(base,name,content,tag)
+	var home = markdownbuild(base, 'home');
+	var cvqualtiy = markdownbuild(base, 'cvqualityboot');
+	var accfoundation = markdownbuild(base, 'accfoundation');
+	var noframework = markdownbuild(base, 'noframework');
+	var accboot = markdownbuild(base, 'accboot');
+	return merge(home, cvqualtiy, accboot, accfoundation, noframework)
+		.pipe(
+			header(
+				fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md", "utf8"), {
 					pkg: pkg
 				}
 			)
 		)
 		.pipe(gulp.dest(SOURCE.MD));
 });
+var buildbrand = function (base, brand, framework) {
+	var construct = base;
+	switch (framework) {
+		case "zurb":
+			construct.pipe(
+				header(
+					fs.readFileSync(PATHS.SCSS + "/gulp_header/__setup.zurb.scss", "utf8"), {
+						pkg: pkg
+					}
+				)
+			);
+			break;
+		case "bootstrap":
+			construct.pipe(
+				header(
+					fs.readFileSync(PATHS.SCSS + "/gulp_header/__setup.boot.scss", "utf8"), {
+						pkg: pkg
+					}
+				)
+			).pipe(
+				header(
+					fs.readFileSync(PATHS.SCSS + "/config/__config.boot.scss", "utf8"), {
+						pkg: pkg
+					}
+				)
+			);
+			break;
+		case "noframe":
+			construct.pipe(
+				header(
+					fs.readFileSync(PATHS.SCSS + "/gulp_header/__setup.noframe.scss", "utf8"), {
+						pkg: pkg
+					}
+				)
+			).pipe(
+				header(
+					fs.readFileSync(PATHS.SCSS + "/config/__config.base.scss", "utf8"), {
+						pkg: pkg
+					}
+				)
+			);
+			break;
+		default:
+			construct.pipe(
+				header(
+					fs.readFileSync(PATHS.SCSS + "/gulp_header/__setup.none.scss", "utf8"), {
+						pkg: pkg
+					}
+				)
+			).pipe(
+				header(
+					fs.readFileSync(PATHS.SCSS + "/config/__config.base.scss", "utf8"), {
+						pkg: pkg
+					}
+				)
+			);
+			break;
+	};
+	switch (brand) {
+		case 'cvquality':
+			construct.pipe(
+				header(
+					"/** Built With CVQuality Branding **/", {
+						pkg: pkg
+					}
+				)
+			).pipe(
+				header(
+					fs.readFileSync(
+						PATHS.SCSS + "/gulp_header/__brand.cvquality.scss",
+						"utf8"
+					), {
+						pkg: pkg
+					}
+				)
+			);
+			break;
+		case 'acc':
+			construct.pipe(
+				header(
+					"/** Built With ACC Branding **/", {
+						pkg: pkg
+					}
+				)
+			).pipe(
+				header(
+					fs.readFileSync(
+						PATHS.SCSS + "/gulp_header/__brand.acc.scss",
+						"utf8"
+					), {
+						pkg: pkg
+					}
+				)
+			);
+			break;
+		default:
+			construct.pipe(
+				header(
+					"/** Built With Base Branding **/", {
+						pkg: pkg
+					}
+				)
+			).pipe(
+				header(
+					fs.readFileSync(PATHS.SCSS + "/gulp_header/__brand.none.scss", "utf8"), {
+						pkg: pkg
+					}
+				)
+			);
+			break;
+	}
+	construct.pipe(
+		header(
+			fs.readFileSync(PATHS.SCSS + "/gulp_header/__brand.base.scss", "utf8"), {
+				pkg: pkg
+			}
+		)
+	);
+	switch (framework) {
+		case "bootstrap":
+			construct.pipe(
+				header(
+					"/**Set Active Class for Bootstrap **/ \n $active-class-name: 'active';\n", {
+						pkg: pkg
+					}
+				)
+			).pipe(
+				header(
+					"/** Utility Class Built on top of Bootstrap 4.3 **/", {
+						pkg: pkg
+					}
+				)
+			);
+			break;
+		case "zurb":
+			construct.pipe(
+				header(
+					"/** Utility Class Built on top of Zurb Foundation 6.5.3**/", {
+						pkg: pkg
+					}
+				)
+			);
+			break;
+		case "noframe":
+			break;
+		default:
+			break;
+	}
+	return construct;
+};
 gulp.task("construct", function () {
 	var base = gulp
-		.src(PATHS.SCSS + "/gulp_header/__utilityclasses.scss")
+		.src(PATHS.SCSS + "/gulp_header/__globalshame.scss")
 		.pipe(rename("uc_base.scss"));
+	// var baseUC = buildbrand(gulp
+	// 	.src(PATHS.SCSS + "/gulp_header/__utilityclasses.scss"), 'acc', '').pipe(rename("noframework_uc.scss"));
+	var uc_acc = buildbrand(gulp
+		.src(PATHS.SCSS + "/gulp_header/__utilityclasses.scss"), 'acc', '').pipe(rename("noframework_uc.scss")).pipe(rename("uc_acc.scss"));
 	var noframe_acc = base
 		.pipe(clone())
-		.pipe(rename("noframework_acc.scss"))
+		.pipe(rename("noframe_acc.scss"))
+		.pipe(
+			header(
+				fs.readFileSync(PATHS.SCSS + "/gulp_header/__utilityclasses.scss", "utf8"), {
+					pkg: pkg
+				}
+			)
+		)
 		.pipe(
 			header(
 				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.noframe.scss", "utf8"), {
@@ -197,40 +358,15 @@ gulp.task("construct", function () {
 					pkg: pkg
 				}
 			)
-		)
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.SCSS + "/styleguide/_color-codes.scss", "utf8"), {
-					pkg: pkg
-				}
-			)
-		)
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.SCSS + "/gulp_header/__setup.base.scss", "utf8"), {
-					pkg: pkg
-				}
-			)
-		)
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.SCSS + "/gulp_header/__brand.base.scss", "utf8"), {
-					pkg: pkg
-				}
-			)
-		)
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.SCSS + "/gulp_header/__brand.acc.scss", "utf8"), {
-					pkg: pkg
-				}
-			)
-		)
-		.pipe(
-			header("/** Utility Class with No Framework Shims **/", {
-				pkg: pkg
-			})
 		);
+	// .pipe(
+	// 	header(
+	// 		fs.readFileSync(PATHS.SCSS + "/styleguide/_color-codes.scss", "utf8"), {
+	// 			pkg: pkg
+	// 		}
+	// 	)
+	// )
+	var noframe_acc_branded = buildbrand(noframe_acc, 'acc', '');
 	var uconly = base
 		.pipe(clone())
 		.pipe(rename("uconly_acc.scss"))
@@ -257,13 +393,6 @@ gulp.task("construct", function () {
 		.pipe(
 			header(
 				fs.readFileSync(PATHS.SCSS + "/styleguide/_color-codes.scss", "utf8"), {
-					pkg: pkg
-				}
-			)
-		)
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.SCSS + "/gulp_header/__setup.base.scss", "utf8"), {
 					pkg: pkg
 				}
 			)
@@ -391,43 +520,8 @@ gulp.task("construct", function () {
 					pkg: pkg
 				}
 			)
-		)
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.SCSS + "/gulp_header/__setup.boot.scss", "utf8"), {
-					pkg: pkg
-				}
-			)
-		)
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.SCSS + "/gulp_header/__brand.base.scss", "utf8"), {
-					pkg: pkg
-				}
-			)
-		)
-		.pipe(
-			header(
-				fs.readFileSync(PATHS.SCSS + "/gulp_header/__brand.acc.scss", "utf8"), {
-					pkg: pkg
-				}
-			)
-		)
-		.pipe(
-			header(
-				"/**Set Active Class for Bootstrap **/ \n $active-class-name: 'active';\n", {
-					pkg: pkg
-				}
-			)
-		)
-		.pipe(
-			header(
-				"/** Utility Class Built on top of Bootstrap 4.3 with ACC Branding **/", {
-					pkg: pkg
-				}
-			)
 		);
-
+	boot_acc = buildbrand(boot_acc, 'acc', 'bootstrap');
 	var boot_cvquality = base
 		.pipe(clone())
 		.pipe(rename("boot_cvquality.scss"))
@@ -524,7 +618,7 @@ gulp.task("construct", function () {
 			)
 		);
 
-	return merge(uconly, zurb_acc, boot_acc, noframe_acc, boot_cvquality)
+	return merge(uconly, zurb_acc, boot_acc, noframe_acc_branded, boot_cvquality, uc_acc)
 		.pipe(
 			header(
 				fs.readFileSync(PATHS.SCSS + "/gulp_header/__preheader.scss", "utf8"), {
@@ -560,6 +654,6 @@ gulp.task(
 	}
 );
 
-gulp.task("build", gulp.series("construct", "style",  "copy", 'markdown', 'styleguide'));
+gulp.task("build", gulp.series("construct", "style", "copy", 'markdown', 'styleguide'));
 gulp.task('md', gulp.series('markdown', 'styleguide'));
 gulp.task("default", gulp.series("build", "watch"));

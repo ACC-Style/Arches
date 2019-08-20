@@ -282,34 +282,6 @@ div[class*=texture_] {
 
  */
 /**  Logos  **/
-[class*=logo_],
-[class*=seal_] {
-  overflow: hidden;
-  background-color: transparent;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  text-indent: -9999px;
-}
-[class*=logo_]:before,
-[class*=seal_]:before {
-  width: 1px;
-  height: 0;
-  margin-left: -1px;
-  float: left;
-  content: "";
-}
-[class*=logo_]:after,
-[class*=seal_]:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-[class*=logo_] > .alt-text:before,
-[class*=seal_] > .alt-text:before {
-  display: none;
-}
-
 pre code.hljs {
   max-height: 100%;
   padding-top: 2em;

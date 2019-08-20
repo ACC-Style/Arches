@@ -811,19 +811,19 @@ Styleguide HTML.Table.Scrollable
 @import "components/cvquality/cvquality.triangle";
 @import "components/cvquality/cvquality.sitefinity.editor-decorator";
 .btn-primary {
-	@extend .br_0;
-	@extend .br_radius;
-	@extend .gradient_teal;
+	@extend .br_0 !optional;
+	@extend .br_radius !optional;
+	@extend .gradient_teal !optional;
 	&:hover {
-		@extend .gradient_teal-reverse;
+		@extend .gradient_teal-reverse !optional;
 	}
 }
 .btn-secondary {
-	@extend .br_0;
-	@extend .br_radius;
-	@extend .gradient_grey;
+	@extend .br_0 !optional;
+	@extend .br_radius !optional;
+	@extend .gradient_grey !optional;
 	&:hover {
-		@extend .gradient_grey-reverse;
+		@extend .gradient_grey-reverse !optional;
 	}
 }
 /*
@@ -853,8 +853,3 @@ Styleguide  Recipes Bootstrap.Intro
 @import "recipes/cvquality/_cvquality._lists";
 @import "recipes/cvquality/_cvquality._sidenav";
 @import "recipes/cvquality/_cvquality._decorators";
-/**  Utility Classes    *********************************/
-@import "utility-css/utility-css";
-
-/**  No Framework Recipes    *********************************/
-@import "recipes/__recipes.base";
