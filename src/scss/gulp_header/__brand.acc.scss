@@ -31,7 +31,7 @@ $gray-800: mix($white, $black, 80%);
 $gray-900: mix($white, $black, 90%);
 
 $theme-palette: map-merge(
-	(
+	$theme-palette,(
 		primary: $teal,
 		secondary: $dark-grey,
 		success: $green,
@@ -42,10 +42,9 @@ $theme-palette: map-merge(
 		info: $alt-grey,
 		highlight: $purple,
 		acc: $acc-blue
-	),
-	$theme-palette
+	)
 );
-
+@debug "brand ACC added theme accent "+ map-get($map: $theme-palette, $key: accent );
 $grays: map-merge(
 	(
 		"100": $gray-100,

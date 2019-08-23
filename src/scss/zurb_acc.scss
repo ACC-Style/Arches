@@ -16,7 +16,19 @@ $theme-palette: ();
 @import "vendor/modular-scale";
 @import "config/utility-css.vars";
 @import "helpers/breakpoint";
-/** Utility Class Only With Basic ACC Branding **//**  ACC Brands    *********************************/
+%font-awesome-pro {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 900;
+}
+/** Start of BRANDINGBUILD 0 **/ 
+/** Utility Class Built on top of Zurb Foundation 6.5.3 **/ 
+/**  ACC Brands    *********************************/
 $teal: #198dae;
 $green-blue: #16a385;
 $dark-grey: #676a72;
@@ -49,7 +61,7 @@ $gray-800: mix($white, $black, 80%);
 $gray-900: mix($white, $black, 90%);
 
 $theme-palette: map-merge(
-	(
+	$theme-palette,(
 		primary: $teal,
 		secondary: $dark-grey,
 		success: $green,
@@ -60,10 +72,9 @@ $theme-palette: map-merge(
 		info: $alt-grey,
 		highlight: $purple,
 		acc: $acc-blue
-	),
-	$theme-palette
+	)
 );
-
+@debug "brand ACC added theme accent "+ map-get($map: $theme-palette, $key: accent );
 $grays: map-merge(
 	(
 		"100": $gray-100,
@@ -160,7 +171,7 @@ $h6-font-size: map-deep-get($value-to-unit, font-size, 0);
 $font-size-base: $base-font-size-rem; // Assumes the browser default, typically `16px`
 $font-size-lg: map-deep-get($value-to-unit, font-size, 2);
 $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
-/**  Default Brands    *********************************/
+/** Built With ACC Branding **//**  Default Brands    *********************************/
 /**  Colors  **/
 
 @import "config/colors";
@@ -175,17 +186,8 @@ $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
 @import "config/__config.zurb";
 @import "../../node_modules/foundation-sites/scss/foundation.scss";
 @include foundation-everything();
-// ACC Design Alterations
-@import "base/base";
-@import "components/logo";
-
-@import "components/interactive-extras";
-
-@import "styleguide/styleguide";
-@import "styleguide/__basic-html.base";
-@import "structures/structures";
-@import "base/table.zurb";
-@import "components/zurb/zurb.buttons";
+@import "components/zurb/table.zurb.override";
+@import "components/zurb/zurb.buttons.override.scss";
 @import "components/zurb/zurb.close-button.override";
 @import "components/zurb/zurb.tabs.override";
 @import "components/zurb/zurb.questions";

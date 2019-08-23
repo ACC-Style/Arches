@@ -52,7 +52,25 @@ span {
   /* enables on GPU processing */
 }
 
-/** Utility Class Built on top of Bootstrap 4.3 with CVQuality Branding **/
+.card.testimonial .blockquote p:before, .card.testimonial .blockquote p:after,
+.card.testimonial .blockquote-cite:before,
+.card.testimonial .blockquote-cite:after,
+.card.product .blockquote p:before,
+.card.product .blockquote p:after,
+.card.product .blockquote-cite:before,
+.card.product .blockquote-cite:after, .carousel-alt.chevron-on .carousel-indicators li.active:before {
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+/** Start of BRANDINGBUILD 0 **/
+/** Utility Class Built on top of Bootstrap 4.3 **/
 /**Set Active Class for Bootstrap **/
 /**  ACC Brands    *********************************/
 /**  CV Quality Colors  **/
@@ -301,6 +319,7 @@ Styleguide DesignBase.Colors.Full Pallate
   /* W3C */
 }
 
+/** Built With CVQuality Branding **/
 /**  Default Brands    *********************************/
 /**  Colors  **/
 /*
@@ -318,7 +337,7 @@ Theme Colors
 Colors are based off of the ACC Scrub Colors.
 
 map-get($theme-palette, primary)              -  #0088aa; primary
-map-get($theme-palette, secondary)            -  #998e8b; secondary
+map-get($theme-palette, secondary)            -  #8a817f; secondary
 map-get($theme-palette, accent)               -  #e87d1e;  accent
 map-get($theme-palette, info)                 -  #a3988c; info
 map-get($theme-palette, highlight)            -  #05aee5; highlight
@@ -547,7 +566,7 @@ div[class*=texture_] {
   --gray: #a1a0a0;
   --gray-dark: #d0d0d0;
   --primary: #0088aa;
-  --secondary: #998e8b;
+  --secondary: #8a817f;
   --success: #078a2e;
   --info: #a3988c;
   --warning: #ffc425;
@@ -2141,21 +2160,21 @@ pre code {
 .table-secondary,
 .table-secondary > th,
 .table-secondary > td {
-  background-color: #f5f4f3;
+  background-color: #f3f2f2;
 }
 .table-secondary th,
 .table-secondary td,
 .table-secondary thead th,
 .table-secondary tbody + tbody {
-  border-color: #d6d2d1;
+  border-color: #d0cdcc;
 }
 
 .table-hover .table-secondary:hover {
-  background-color: #e9e7e5;
+  background-color: #e7e5e5;
 }
 .table-hover .table-secondary:hover > td,
 .table-hover .table-secondary:hover > th {
-  background-color: #e9e7e5;
+  background-color: #e7e5e5;
 }
 
 .table-success,
@@ -2929,30 +2948,30 @@ fieldset:disabled a.btn {
 }
 
 .btn-secondary {
-  border-color: #998e8b;
-  background-color: #998e8b;
+  border-color: #8a817f;
+  background-color: #8a817f;
   color: white;
 }
 .btn-secondary:hover {
-  border-color: #807471;
-  background-color: #877a77;
+  border-color: #706866;
+  background-color: #766e6c;
   color: white;
 }
 .btn-secondary:focus, .btn-secondary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(168, 159, 156, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(156, 148, 146, 0.5);
 }
 .btn-secondary.disabled, .btn-secondary:disabled {
-  border-color: #998e8b;
-  background-color: #998e8b;
+  border-color: #8a817f;
+  background-color: #8a817f;
   color: white;
 }
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
-  border-color: #796e6b;
-  background-color: #807471;
+  border-color: #696260;
+  background-color: #706866;
   color: white;
 }
 .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(168, 159, 156, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(156, 148, 146, 0.5);
 }
 
 .btn-success {
@@ -3143,28 +3162,28 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-secondary {
-  border-color: #998e8b;
-  color: #998e8b;
+  border-color: #8a817f;
+  color: #8a817f;
 }
 .btn-outline-secondary:hover {
-  border-color: #998e8b;
-  background-color: #998e8b;
+  border-color: #8a817f;
+  background-color: #8a817f;
   color: white;
 }
 .btn-outline-secondary:focus, .btn-outline-secondary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(153, 142, 139, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(138, 129, 127, 0.5);
 }
 .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
   background-color: transparent;
-  color: #998e8b;
+  color: #8a817f;
 }
 .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
-  border-color: #998e8b;
-  background-color: #998e8b;
+  border-color: #8a817f;
+  background-color: #8a817f;
   color: white;
 }
 .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(153, 142, 139, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(138, 129, 127, 0.5);
 }
 
 .btn-outline-success {
@@ -5008,16 +5027,16 @@ a.badge-primary:focus, a.badge-primary.focus {
 }
 
 .badge-secondary {
-  background-color: #998e8b;
+  background-color: #8a817f;
   color: white;
 }
 a.badge-secondary:hover, a.badge-secondary:focus {
-  background-color: #807471;
+  background-color: #706866;
   color: white;
 }
 a.badge-secondary:focus, a.badge-secondary.focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(153, 142, 139, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(138, 129, 127, 0.5);
 }
 
 .badge-success {
@@ -5159,15 +5178,15 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .alert-secondary {
-  border-color: #f5f4f3;
+  border-color: #f3f2f2;
   background-color: white;
-  color: #494442;
+  color: #433e3e;
 }
 .alert-secondary hr {
-  border-top-color: #e9e7e5;
+  border-top-color: #e7e5e5;
 }
 .alert-secondary .alert-link {
-  color: #2e2b2a;
+  color: #292525;
 }
 
 .alert-success {
@@ -5446,16 +5465,16 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .list-group-item-secondary {
-  background-color: #f5f4f3;
-  color: #494442;
+  background-color: #f3f2f2;
+  color: #433e3e;
 }
 .list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
-  background-color: #e9e7e5;
-  color: #494442;
+  background-color: #e7e5e5;
+  color: #433e3e;
 }
 .list-group-item-secondary.list-group-item-action.active {
-  border-color: #494442;
-  background-color: #494442;
+  border-color: #433e3e;
+  background-color: #433e3e;
   color: white;
 }
 
@@ -6717,1143 +6736,6 @@ Styleguide HTML.Table.Scrollable
     padding: 5px;
   }
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-td,
-th {
-  /* Safari */
-  transition: line-height 1s;
-  /* Safari */
-  transition: margin 1s;
-}
-
-.sub-line {
-  display: block;
-  margin-top: -0.25em;
-  clear: both;
-  font-size: 50%;
-  line-height: 1.25em;
-  opacity: 0.75;
-}
-
-/*
-Scrollable Table
-
-Sometimes you have a table that will need a scrable comparison. 
-
-Markup:
-<table class="data">
-  <tr>
-    <th>Entry Header 1</th>
-    <th>Entry Header 2</th>
-    <th>Entry Header 3</th>
-    <th>Entry Header 4</th>
-  </tr>
-  <tr>
-    <td>Entry First Line 1</td>
-    <td>Entry First Line 2</td>
-    <td>Entry First Line 3</td>
-    <td>Entry First Line 4</td>
-  </tr>
-  <tr>
-    <td>Entry Line 1</td>
-    <td>Entry Line 2</td>
-    <td>Entry Line 3</td>
-    <td>Entry Line 4</td>
-  </tr>
-  <tr>
-    <td>Entry Last Line 1</td>
-    <td>Entry Last Line 2</td>
-    <td>Entry Last Line 3</td>
-    <td>Entry Last Line 4</td>
-  </tr>
-</table>
-
-Styleguide HTML.Table
-*/
-/*
-Logos
-
-Logos in the design come in 4 variations the primary logo, the condensed logo, and alte version which are the reverse of primary and reversed.  All logos are controled by the width and will maintain there aspect ratios to respond to the container they are in.  For 508 compliance please place the brand name in the logo.
-
-.logo_primary	            		-   	Primary Logo great for desktop displays best used for when the logo can be taller then 80px.
-.logo_primary-alt 	            	-   	Primary Logo reversed for dark background situations.
-.logo_condensed.max-w_1             -  	 	Smaller Mobile Friendly Logo these logos and be readable between 40px to 80px in height. 
-.logo_condensed-alt.max-w_1         -  	 	Smaller Logo Reversed.
-
-Markup:
-<div class="bg_secondary-2 max-w_3"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}}"><span class="alt">{{modifier_class}}</span></div></div>
-
-Styleguide DesignBase.Logos
-
-*/
-[class*=logo_],
-[class*=seal_] {
-  overflow: hidden;
-  background-color: transparent;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  text-indent: -9999px;
-}
-[class*=logo_]:before,
-[class*=seal_]:before {
-  width: 1px;
-  height: 0;
-  margin-left: -1px;
-  float: left;
-  content: "";
-}
-[class*=logo_]:after,
-[class*=seal_]:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-[class*=logo_] > .alt-text:before,
-[class*=seal_] > .alt-text:before {
-  display: none;
-}
-
-.logo_primary {
-  background-image: url("../img/ACC_primaryLogo.svg");
-}
-.logo_primary:before {
-  padding-top: 33.3333333333%;
-}
-.logo_primary > span.alt-text:before {
-  content: "Logo of the American College Of Cardiology";
-}
-
-.logo_primary-alt {
-  background-image: url("../img/ACC_primaryLogo-alt.svg");
-}
-.logo_primary-alt:before {
-  padding-top: 33.3333333333%;
-}
-.logo_primary-alt > span.alt-text:before {
-  content: "Logo of the American College Of Cardiology";
-}
-
-.logo_condensed {
-  background-image: url("../img/ACC_mobileLogo.svg");
-}
-.logo_condensed:before {
-  padding-top: 33.3333333333%;
-}
-.logo_condensed > span.alt-text:before {
-  content: "Logo of the American College Of Cardiology";
-}
-
-.logo_condensed-alt {
-  background-image: url("../img/ACC_mobileLogo-alt.svg");
-}
-.logo_condensed-alt:before {
-  padding-top: 33.3333333333%;
-}
-.logo_condensed-alt > span.alt-text:before {
-  content: "Logo of the American College Of Cardiology";
-}
-
-/*
-Seals
-
-Seals in the design come in 3 variations the default, small, and tiny.  All Seals will maintain their aspect ratios and will respond to the container, but seals have a max width.  For 508 compliance, please place the brand name in the seal.
-
-.seal_normal	            - Full size seal great for desktop displays best used for when the seal can be taller then 100px.
-.seal_small	            - Condensed size seal great for Tablet displays best used for when the seal is between 100px to 40px.
-.seal_tiny	            - Smallest of the seals best used for icons when seal is 40px and bellow
-
-
-Markup:
-<div class="bg_secondary-2 max-w_1"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
-
-Styleguide DesignBase.Seals
-
-*/
-.seal_normal {
-  background-image: url("../img/ACC_seal.svg");
-}
-.seal_normal:before {
-  padding-top: 100%;
-}
-.seal_normal > span.alt-text:before {
-  content: "Seal of the American College Of Cardiology";
-}
-
-.seal_small {
-  max-width: 100px;
-  background-image: url("../img/ACC_sealCondensed.svg");
-}
-.seal_small:before {
-  padding-top: 100%;
-}
-.seal_small > span.alt-text:before {
-  content: "Seal of the American College Of Cardiology";
-}
-
-.seal_tiny {
-  max-width: 40px;
-  background-image: url("../img/ACC_sealCondensed-alt.svg");
-}
-.seal_tiny:before {
-  padding-top: 100%;
-}
-.seal_tiny > span.alt-text:before {
-  content: "Seal of the American College Of Cardiology";
-}
-
-/*
-
-Lorem Text Loader
-
-It is often we need to have space held for a return of details or text.  
-
-Markup:
-<div class="max-w_3">
-   <h1 class="lorem-loader font_3 m-y_3">&nbsp;</h1>
-   <p class="m-y_2 font_0 lorem-loader">&nbsp;</p>
-   <p class="m-y_2 font_0 lorem-loader">&nbsp;</p>
-   <p class="m-y_2 font_0 lorem-loader">&nbsp;</p>
-</div>
-
-Styleguide InteractiveExtras.Text Placeholder Loader
-*/
-/*
-
-Lorem + Aspect Ratio
-
-To create an image placeholder use the lorem-loader plus an aspect of the intended image on th parent container while waiting for the image.The placeholder will be a 100% of the container so size the container properly. 
-
-.aspect_1x2			- lock image to a 1 to 2 ratio
-.aspect_1x1			- lock image to a 1 to 1 ratio
-.aspect_2x1			- lock image to a 2 to 1 ratio
-.aspect_3x2			- lock image to a 3 to 2 ratio   
-.aspect_4x3			- lock image to a 4 to 3 ratio 
-.aspect_16x9		- lock image to a 16 to 9 ratio 
-.aspect_21x9		- lock image to a 21 to 9 ratio 
-.aspect_4x1			- lock image to a 4 to 1 ratio 
-
-Markup:
-<div class="grid-w_2 max-w_1"  data-style="{{ modifier_class }}" >
-   <div class="m-y_2 lorem-loader {{modifier_class}} ">&nbsp;</div>
-</div>
-
-Styleguide InteractiveExtras.Placeholder Aspect Ratio
-*/
-div[class*=aspect_],
-.lorem-loader {
-  width: 100%;
-  overflow: hidden;
-  text-indent: -9999px;
-  opacity: 0.5;
-}
-div[class*=aspect_]:before,
-.lorem-loader:before {
-  width: 1px;
-  height: 0;
-  margin-left: -1px;
-  float: left;
-  content: "";
-}
-div[class*=aspect_]:after,
-.lorem-loader:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.aspect_2x1 {
-  padding-top: 200%;
-}
-
-.aspect_1x1 {
-  padding-top: 100%;
-}
-
-.aspect_1x2 {
-  padding-top: 50%;
-}
-
-.aspect_4x3 {
-  padding-top: 75%;
-}
-
-.aspect_3x2 {
-  padding-top: 66.6666666667%;
-}
-
-.aspect_16x9 {
-  padding-top: 56.25%;
-}
-
-.aspect_21x9 {
-  padding-top: 42.8571428571%;
-}
-
-.aspect_4x1 {
-  padding-top: 25%;
-}
-
-.lorem-loader {
-  -webkit-animation: Gradient 4s ease infinite;
-  -moz-animation: Gradient 4s ease infinite;
-  background: linear-gradient(-45deg, #77e4ff, #d6d2d1);
-  background-size: 400% 400%;
-  color: #fff;
-  animation: Gradient 4s ease infinite;
-}
-
-@-webkit-keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-/*
-
-Expanded Click Area
-
-allows for a relative container to be clickable by the link. 
-
-Markup:
-<div class="card shadow_2 cell small-6 large-4 max-w_3"  data-style="{{ modifier_class }}" >
-  <div class=" font_slab border-top-left-square c_white font_3 p_4 texture_dust card-divider bg_primary card-header">
-    This is a header
-  </div>
-  <img src="https://picsum.photos/400/300">
-  <div class="card-section card-body">
-    <h4>This is a card.</h4>
-	 <p>It has an easy to override visual style, and is appropriately subdued.</p>
-	 <a href="#" class="expanded-click-area button btn btn-primary">I am so clickable</a>
-  </div>
-</div>
-
-Styleguide InteractiveExtras.Expanded Click Area
-*/
-.expanded-click-area::after {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #0000;
-  content: "";
-  pointer-events: auto;
-}
-
-.transition-all_1s {
-  transition-duration: 1s;
-  transition-property: all;
-  transition-timing-function: ease;
-}
-
-/*
-Link Decorator
-
-Links with the `.link` will auto decorate with an icon of the corresponding file type
-| File            | Effect                                         |
-| --------------- | ---------------------------------------------- |
-| .pdf            | Portable Document Format                       |
-| .doc            | Word Document                                  |
-| .txt            | Text Document                                  |
-| .ppt            | Power Point                                    |
-| mailto:         | Email                                          |
-| tel:            | Telephone                                      |
-| fax:            | Fax                                            |
-| target=`_blank` | External Link icons will appear after any link |
-
-
-
-Markup:
- <a class="link" href="abc.pdf">A link that is a Pdf Document</a><br/>
- <a class="link" href="abc.doc">A link that is a Word Document</a><br/>
- <a class="link" href="https://www.abc.ppt">An External link that is a Power Point Document</a><br/>
- <a class="link" href="tel:1-555-555-5555">1-555-555-5555</a><br/>
- <a class="link" href="mailto:test@abc.org">test@abc.org</a><br/>
- <a class="link" href="xyz.zip">A link that is a Zip Document</a><br/>
-
- Styleguide InteractiveExtras.Links
- */
-.card.testimonial .blockquote p:before, .card.testimonial .blockquote p:after,
-.card.testimonial .blockquote-cite:before,
-.card.testimonial .blockquote-cite:after,
-.card.product .blockquote p:before,
-.card.product .blockquote p:after,
-.card.product .blockquote-cite:before,
-.card.product .blockquote-cite:after, .carousel-alt.chevron-on .carousel-indicators li.active:before, .icon-after:after, a.link[target=_blank]:after, a.link[href^=http]:after, a.link[href^=https]:after, .icon-before:before, a.link:before {
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-family: "Font Awesome 5 Pro";
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 900;
-  line-height: 1;
-  text-rendering: auto;
-}
-
-.icon-before:before, a.link:before {
-  width: 1.28571429em;
-  margin-right: 0.5em;
-  text-align: center;
-}
-
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http]:after, a.link[href^=https]:after {
-  width: 1.28571429em;
-  margin-left: 0.5em;
-  text-align: center;
-}
-
-a.link[href$=".pdf"]:before {
-  content: "";
-}
-a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before {
-  content: "";
-}
-a.link[href$=".zip"]:before {
-  content: "";
-}
-a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before {
-  content: "";
-}
-a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before {
-  content: "";
-}
-a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before {
-  content: "";
-}
-a.link[target=_blank]:after, a.link[href^=http]:after, a.link[href^=https]:after {
-  content: "";
-}
-a.link[href^="mailto:"]:before {
-  content: "";
-}
-a.link[href^="tel:"]:before {
-  content: "";
-}
-a.link[href^="fax:"]:before {
-  content: "";
-}
-a.link:hover {
-  text-decoration: underline;
-}
-
-i.icon-complete_check-circle:before, .is-complete i.icon-complete_check:before, i.icon-toggle_arrow-circle:before, i.icon-toggle_caret-circle-right-down:before, i.icon-toggle_chevron-double-left-right:before, i.icon-toggle_chevron-double-up-down:before, i.icon-toggle_chevron-up-down:before, i.icon-toggle_plus-minus:before, i.icon-toggle_bars-times:before {
-  margin: 0 4px;
-  margin: 0 0.25rem;
-}
-
-/*
-Is Active Toggle 
-
-Many momment there are needs for toggles of icon when the parent is in the state of `is-active`.  Used in tree navs, dropdowns, and collapsing areas. 
-
-.icon-toggle_plus-minus 					-  Toggle between plus and minus square
-.icon-toggle_chevron-up-down				- 	Toggle a chevro pointing up and then down.
-.icon-toggle_chevron-double-up-down 					-  Toggle the double chevron to point up when active
-.icon-toggle_caret-circle-right-down 					-  Toggle the caret to point down when active.
-.icon-toggle_arrow-circle 					-  Toggle the arrow to have a circle when active.
-.icon-toggle_bars-times 					-  Toggle between bars and times
-.icon-toggle_bars-times 					-  Toggle between bars and times
-
-Markup:
-<ul data-style="{{ modifier_class }}" class="ul_none m_0 p_0">
-	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_secondary-3 font_1 bg_success-n1">	
-			<span class="">FA Solid {{ modifier_class }}</span>
-			<i class="font_3 fas fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (is-active) </span>
-	</li>
-	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_secondary-3 font_1 bg_success-n1">	
-			<span class="">FA Regular {{ modifier_class }}</span>
-			<i class="font_3 far  fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (is-active) </span>
-	</li>
-	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_secondary-3 font_1 bg_success-n1">	
-			<span class="">FA Light {{ modifier_class }}</span>
-			<i class="font_3 fal fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (is-active) </span>
-	</li>
-</ul>
-
-
-Styleguide InteractiveExtras.ToggleIcons
-*/
-i.icon-toggle_bars-times:before {
-  content: "";
-}
-.is-active i.icon-toggle_bars-times:before {
-  content: "";
-}
-
-i.icon-toggle_plus-minus:before {
-  content: "";
-}
-.is-active i.icon-toggle_plus-minus:before {
-  content: "";
-}
-
-i.icon-toggle_chevron-up-down:before {
-  content: "";
-}
-.is-active i.icon-toggle_chevron-up-down:before {
-  content: "";
-}
-
-i.icon-toggle_chevron-double-up-down:before {
-  content: "";
-}
-.is-active i.icon-toggle_chevron-double-up-down:before {
-  content: "";
-}
-
-i.icon-toggle_chevron-double-left-right:before {
-  content: "";
-}
-.is-active i.icon-toggle_chevron-double-left-right:before {
-  content: "";
-}
-
-i.icon-toggle_caret-circle-right-down:before {
-  content: "";
-}
-.is-active i.icon-toggle_caret-circle-right-down:before {
-  content: "";
-}
-
-i.icon-toggle_arrow-circle:before {
-  content: "";
-}
-.is-active i.icon-toggle_arrow-circle:before {
-  content: "";
-}
-
-/*
-Complete Toggle 
-
-This variation of the icon toggle responds to `is-complete` and not is `is-active`
-
-.icon-complete_check					- Toggle a check mark to show.
-.icon-complete_check-circle		- Toggle a check mark to show.
-
-Markup:
-<ul class="ul_none" data-style="{{ modifier_class }}">
-<li class="br_solid br_secondary-5 p_3 br_1">
-	<div class="">FA Solid {{modifier_class}}</div>
-	<div class="p_2 font_4">
-		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_secondary-4">default: <i class="fas fa-fw {{modifier_class}}"></i></span> 
-		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
-		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="fas {{modifier_class}}"></i></span></div>
-</li>
-<li class="br_solid br_secondary-5 p_3 br_1">
-	<div class="">FA Regular {{modifier_class}}</div>
-	<div class="p_2 font_4">
-		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_secondary-4">default: <i class="far fa-fw {{modifier_class}}"></i></span> 
-		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
-		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="far {{modifier_class}}"></i></span></div>
-</li>
-<li class="br_solid br_secondary-5 p_3 br_1">
-	<div class="">FA Light {{modifier_class}}</div>
-	<div class="p_2 font_4">
-		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_secondary-4">default: <i class="fal fa-fw {{modifier_class}}"></i></span> 
-		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
-		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="fal {{modifier_class}}"></i></span></div>
-</li>
-</ul>
-
-Styleguide InteractiveExtras.CompleteIcons
-*/
-i.icon-complete_check:before {
-  content: "";
-}
-.is-complete i.icon-complete_check:before {
-  content: "";
-}
-
-i.icon-complete_check-circle:before {
-  content: "";
-}
-.is-complete i.icon-complete_check-circle:before {
-  content: "";
-}
-
-/*
-Loading Grid Dots
-
-Animated Loading Dots
-
-white              - text color modified light to dark
-black              - text color modified light to dark
-
-Markup:
-<div  data-style="{{ modifier_class }}"  class="p_5 bg_primary texture_medium clearboth"> 
-<div class="lds-grid">
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-	</div>
-	</div>
-
-Styleguide InteractiveExtras.Loading Grid
-
-  */
-.lds-grid {
-  grid-gap: 12px;
-  display: -ms-grid;
-  display: grid;
-  position: relative;
-  -ms-grid-columns: 16px 12px 16px 12px 16px;
-  grid-template-columns: 16px 16px 16px;
-  -ms-grid-rows: auto 12px auto;
-  grid-template-rows: auto auto;
-  width: 64px;
-  height: 64px;
-  margin: 0 auto;
-}
-.lds-grid > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-.lds-grid > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-}
-.lds-grid > *:nth-child(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-}
-.lds-grid > *:nth-child(4) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-.lds-grid > *:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-}
-.lds-grid > *:nth-child(6) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
-}
-
-.lds-grid .dot {
-  width: 16px;
-  height: 16px;
-  -webkit-animation: lds-grid 1.5s linear infinite;
-          animation: lds-grid 1.5s linear infinite;
-}
-
-.lds-grid .dot:nth-child(1) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-.lds-grid .dot:nth-child(2) {
-  -webkit-animation-delay: -0.3s;
-          animation-delay: -0.3s;
-}
-
-.lds-grid .dot:nth-child(4) {
-  -webkit-animation-delay: -0.3s;
-          animation-delay: -0.3s;
-}
-
-.lds-grid .dot:nth-child(3) {
-  -webkit-animation-delay: -0.6s;
-          animation-delay: -0.6s;
-}
-
-.lds-grid .dot:nth-child(5) {
-  -webkit-animation-delay: -0.6s;
-          animation-delay: -0.6s;
-}
-
-.lds-grid .dot:nth-child(7) {
-  -webkit-animation-delay: -0.6s;
-          animation-delay: -0.6s;
-}
-
-.lds-grid .dot:nth-child(6) {
-  -webkit-animation-delay: -0.9s;
-          animation-delay: -0.9s;
-}
-
-.lds-grid .dot:nth-child(8) {
-  -webkit-animation-delay: -0.9s;
-          animation-delay: -0.9s;
-}
-
-.lds-grid .dot:nth-child(9) {
-  -webkit-animation-delay: -1.2s;
-          animation-delay: -1.2s;
-}
-
-@-webkit-keyframes lds-grid {
-  0%, 100% {
-    opacity: 0.95;
-  }
-  10%, 90% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.25;
-  }
-}
-
-@keyframes lds-grid {
-  0%, 100% {
-    opacity: 0.95;
-  }
-  10%, 90% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.25;
-  }
-}
-/*
-
-Scrollbar Mini
-
-Give a mini scroll bar to a content area. 
-
-Markup:
-<div class="card shadow_2 cell small-6 large-4 max-w_3" >
-    <div class=" font_slab border-top-left-square c_white font_3 p_4 texture_dust card-divider bg_primary card-header">
-    This is a header
-    </div>
-    <div class="card-section card-body p_4 scrollbar-mini overflow_auto" style="max-height:300px;">
-        <h4>This is a card.</h4>
-        <p class="font_1">It has an easy to override visual style, and is appropriately subdued.</p>
-        <img src="https://picsum.photos/400/300">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi dolorem et maxime, officiis nulla vel? Numquam quas voluptatibus, voluptatem fuga saepe animi nemo voluptatum repellendus in natus libero, nobis illum!</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi dolorem et maxime, officiis nulla vel? Numquam quas voluptatibus, voluptatem fuga saepe animi nemo voluptatum repellendus in natus libero, nobis illum!</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi dolorem et maxime, officiis nulla vel? Numquam quas voluptatibus, voluptatem fuga saepe animi nemo voluptatum repellendus in natus libero, nobis illum!</p>  
-    </div>
-    <div class="card-divider card-footer br_0 br_solid br-t_1 br_primary"> <a href="#" class="button btn btn-primary">I am so clickable</a></div>
-</div>
-
-Styleguide InteractiveExtras.Scrollbar
-*/
-/* Let's get this party started */
-.scrollbar-mini::-webkit-scrollbar {
-  width: 4px;
-  width: 0.25rem;
-  height: 5.6px;
-  height: 0.35rem;
-}
-
-/* Track */
-.scrollbar-mini::-webkit-scrollbar-track {
-  background-color: rgba(0, 54, 68, 0.1);
-  box-shadow: inset 1px 1px 4px 0.5px rgba(0, 0, 0, 0.2);
-}
-
-/* Handle */
-.scrollbar-mini::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
-  background: #007491;
-  box-shadow: inset 1px 1px 4px 0.5px rgba(0, 0, 0, 0.2);
-}
-
-.scrollbar-mini::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(0, 116, 145, 0.1);
-}
-
-.scrollbar-mini::-webkit-scrollbar-track:window-inactive {
-  background: rgba(0, 54, 68, 0.1);
-}
-
-/*
-Social Links
-
-The social links From the Footer.
-
-
-Markup:
-<section class="social p_4 m-y_2 bg_secondary-n3 font_2">
-    <ul class="flex social-bar ul_none c_white h:c_white m_0">
-        <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-twitter-square"></i></a></li>
-        <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-facebook-square"></i></a></li>
-        <li class="flex_auto m-r_2"><a href="https://www.linkedin.com/company/american-college-of-cardiology/" target="_blank" class="linkedin social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-linkedin"></i></a></li>
-        <li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-youtube"></i></a></li>
-        <li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&hl=en_US" target="_blank" class="google-play social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-google-play"></i></a></li>
-        <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-apple"></i></a></li>
-    </ul>
-</section>
-
-
-
-
-Styleguide Recipes.Social Links
-
-*/
-/*
-Social Links Monochrome
-
-The social links can be restyled to be smaller.
-
-
-Markup:
-<section class="social p_4 m-y_2 font_n1 max-w_1 bg_white">
-    <ul class="flex social-bar ul_none m_0">
-        <li class="flex_shrink m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-twitter-square"></i></a></li>
-        <li class="flex_shrink m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-facebook-square"></i></a></li>
-        <li class="flex_shrink m-r_2"><a href="https://www.linkedin.com/company/american-college-of-cardiology/" target="_blank" class="linkedin c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-linkedin"></i></a></li>
-        <li class="flex_shrink m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-youtube"></i></a></li>
-        <li class="flex_shrink m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&hl=en_US" target="_blank" class="google-play c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-google-play"></i></a></li>
-        <li class="flex_shrink m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-apple"></i></a></li>
-    </ul>
-</section>
-
-
-
-
-Styleguide Recipes.Social Links.Mono Chrome
-
-*/
-/*
-Social Links Smaller
-
-The social links can be restyled to be smaller.
-
-
-Markup:
-<section class="social p_4 m-y_2 font_0 max-w_1  bg_white">
-    <ul class="flex social-bar ul_none c_white m_0">
-        <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button br_radius block m-b_0 p_2 c_white-8 h:c_white text_center opacity_8 h:opacity"><i class="fab fa-twitter-square"></i></a></li>
-        <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button br_radius block m-b_0 p_2 c_white-8 h:c_white text_center opacity_8 h:opacity"><i class="fab fa-facebook-square"></i></a></li>
-        <li class="flex_auto m-r_2"><a href="https://www.linkedin.com/company/american-college-of-cardiology/" target="_blank" class="linkedin social-bar--button br_radius block m-b_0 p_2 c_white-8 h:c_white text_center opacity_8 h:opacity"><i class="fab fa-linkedin"></i></a></li>
-        <li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube social-bar--button br_radius block m-b_0 p_2 c_white-8 h:c_white text_center opacity_8 h:opacity"><i class="fab fa-youtube"></i></a></li>
-        <li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&hl=en_US" target="_blank" class="google-play social-bar--button br_radius block m-b_0 p_2 c_white-8 h:c_white text_center opacity_8 h:opacity"><i class="fab fa-google-play"></i></a></li>
-        <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button br_radius block m-b_0 p_2 c_white-8 h:c_white text_center opacity_8 h:opacity"><i class="fab fa-apple"></i></a></li>
-    </ul>
-</section>
-
-
-Styleguide Recipes.Social Links.Smaller
-
-*/
-/*
- Design Base
-
- Arches is design inspired by a pad of paper in the hand.  Subtle Textures and Layer shadows keep the readablity very high. 
-
- Weight: -50
-
- Styleguide DesignBase
-*/
-/*
-
-Fonts 
-
-The ACC is focused on stable, conservative, clean fonts.   Roboto Slab is the standard serif fonts across all products at the ACC.  Muli is the current successor to Open Sans, and Maven is a slightly modern font to give a small level of interests which replaces Raleway, or Lato in other products.
-
- Styleguide DesignBase.Fonts
-*/
-/*
-
-Roboto Slab
-
- A beuatiful slab font that shows a complexity and texture to the fonts used in the design. 
-
- Markup:
-	<div class="font_slab">
-		<h2 class="font_slab group-divide-bottom font--name small-12">
-			Roboto Slab
-			<span class="sub-line">font-family: 'Roboto Slab', "Times New Roman",  'Lucida Bright', Georgia, serif</span>
-		</h2>
-		<div class="font flex grid-padding-x grid-padding-y">
-			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">Rs</div>
-			<div class="flex_auto font--example">
-				<h3 class="font_slab">Slab Font</h3>
-				<div class="text-lowercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-uppercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-numbers font_4">0 1 2 3 4 5 6 7 8 9</div>
-				<div class="text-lowercase font_2">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-uppercase font_2">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-numbers font_2">0 1 2 3 4 5 6 7 8 9</div>
-			</div>
-		</div>
-	</div>
-
- Styleguide DesignBase.Fonts.Slab
-*/
-/*
-
-Maven Pro
-
- A Slick font that has a slight interest used for headers and UI. 
-
- Markup:
-	<div class="font_display">
-		<h2 class="font_display group-divide-bottom font--name small-12">
-			Maven Pro
-			<span class="sub-line">font-family: 'Maven Pro', "Times New Roman",  'Lucida Bright', Georgia, serif</span>
-		</h2>
-		<div class="font flex grid-padding-x grid-padding-y">
-			<div class="flex_shrink p-r_5  font_10 font--dropcase_2x">Mp</div>
-			<div class="flex_auto font--example">
-				<h3 class="font_display">Display Font</h3>
-				<div class="text-lowercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-uppercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-numbers font_4">0 1 2 3 4 5 6 7 8 9</div>
-				<div class="text-lowercase font_2">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-uppercase font_2">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-numbers font_2">0 1 2 3 4 5 6 7 8 9</div>
-			</div>
-		</div>
-	</div>
-
- Styleguide DesignBase.Fonts.Display
-*/
-/*
-
-Muli
-
- A clean font for content and text of none UI elements. 
-
- Markup:
-	<div class="font_copy">
-		<h2 class=" group-divide-bottom font--name small-12">
-			Muli
-			<span class="sub-line">font-family: 'Muli', "Times New Roman",  'Lucida Bright', Georgia, serif</span>
-		</h2>
-		<div class="font flex grid-padding-x grid-padding-y">
-			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">Mu</div>
-			<div class="felx_auto font--example">
-				<h3 class="">Content Font</h3>
-				<div class="text-lowercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-uppercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-numbers font_4">0 1 2 3 4 5 6 7 8 9</div>
-				<div class="text-lowercase font_2">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-uppercase font_2">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
-				<div class="text-numbers font_2">0 1 2 3 4 5 6 7 8 9</div>
-			</div>
-		</div>
-	</div>
-
- Styleguide DesignBase.Fonts.Copy
-*/
-.font .font--example {
-  background-image: url(http://basehold.it/i/24);
-}
-.font .font--name {
-  color: #000;
-}
-.font .font--dropcase_2x {
-  color: #0088aa;
-}
-
-/*
-
-Icons: Font Icons
-
- Font Awesome Pro
-
- Markup:
-<ul class="ul_none list m_0 p_0 flex flex_wrap justify-start items-start">
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">award</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">ban</span></div></div></li>
-	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">barcode</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bars</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">beer</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bug"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bug</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bullhorn"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bullhorn</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bullseye"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bullseye</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-calculator"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">calculator</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-calendar"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">calendar</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-calendar"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">calendar</span></div></div></li>
-</ul>
-
-
-Styleguide DesignBase.Icons
-*/
-/*
-
-Icons: Solid
-
- Font Awesome Pro Solid use `fas` when applying the icon to make it solid or bold
-
- Markup:
-<ul class="ul_none list m_0 p_0 flex flex_wrap justify-start items-start">
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">award</span></div></div></li>
-	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">ban</span></div></div></li>
-	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">barcode</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bars</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">beer</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-</ul>
-
-	Styleguide DesignBase.Icons.Solid
-*/
-/*
-
-Icons: Light
-
- Font Awesome Pro Light use `fal` when applying the icon to make it light
-
- Markup:
-<ul class="ul_none list m_0 p_0 flex flex_wrap justify-start items-start">
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">award</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">ban</span></div></div></li>
-	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">barcode</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bars</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">beer</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-</ul>
-
-	Styleguide DesignBase.Icons.Light
-*/
-/*
-
-Icons: Regular
-
- Font Awesome Pro Light use `fal` when applying the icon to make it light
-
- Markup:
-<ul class="ul_none list m_0 p_0 flex flex_wrap justify-start items-start">
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">award</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">ban</span></div></div></li>
-	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">barcode</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bars</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">beer</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-    <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-</ul>
-
-
-	Styleguide DesignBase.Icons.Regular
-*/
-/*
-Interactive Extras
-
-Interactions can be enhanced with toggle icons or loading graphics to show the system is responding to user input.
-
- Styleguide InteractiveExtras
-*/
-/*
-
-Basic HTML
-
-The Arches Design System, at its core, is a Utility Class Styling Design.  It is built not to prescribe the design of the HTML and components but to paint with classes to create complicated UI without having to create more styles.  Arches rely on the browser or branding defaults for basic HTML styling.  Below is a kitchen sink of HTML elements so you can see how this variation look without further alteration from adding classes. There is No basic styling around the pure DOM with the utility class only, and there is improved styling as you add Bootstrap or Foundation.  
-
-Weight: -10
-
-Styleguide HTML
-*/
-/*
-
-Typography
-
-Basic Typography with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
-
-Markup:
-<h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
-elit</h1>
-<h2>Aenean commodo ligula eget dolor aenean massa</h2>
-<h3>Cum sociis natoque penatibus et magnis dis 
-parturient montes nascetur ridiculus mus</h3>
-<h4>Donec quam felis ultricies nec pellentesque eu 
-pretium quis sem nlla consequat massa quis enim</h4>
-<h5>Donec pede justo fringilla vel aliquet nec vulputate 
-eget arcu</h5>
-<h6>In enim justo rhoncus ut imperdiet a venenatis vitae 
-justo</h6>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem.</p>
-<article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article>
-
-Weight: -9
-
-Styleguide HTML.Typography
-
-*/
-/*
-
-Lists
-
-Basic Lists with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
-
-Markup:
-<section><ul><li>Unordered List item one<ul><li>Nested list item<ul><li>Level 3, item one</li><li>Level 3, item two</li><li>Level 3, item three</li><li>Level 3, item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><hr><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></section>
-
-Weight: -8
-
-Styleguide HTML.Lists
-
-*/
-/*
-
-Table
-
-Basic Tables with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
-
-Markup:
-<section><table><caption>Tables can have captions now.</caption><tbody><tr><th>Person</th><th>Number</th><th>Third Column</th></tr><tr><td>Someone Lastname</td><td>900</td><td>Nullam quis risus eget urna mollis ornare vel eu leo.</td></tr><tr><td><a href="#">Person Name</a></td><td>1200</td><td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td></tr><tr><td>Another Person</td><td>1500</td><td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td></tr><tr><td>Last One</td><td>2800</td><td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td></tr></tbody></table></section>
-
-
-Styleguide HTML.BasicTable
-
-*/
-/*
-
- Basic Inputs
-
- Arches is strongly based on utility classes styling everything so it commonly just builds on either the base of the browser defaults or the defaults of the framework that is built on. This is a kitchen sink of html elements so you can see how this variation will effect html. There is No basic styling around the pure DOM with the utlity class only.  To get full brand styling use a framework based version of arches.  
-
-Markup:
-<main><section><form><p><label for="example-input-email">Email address</label> <input type="email" id="example-input-email" placeholder="Enter email"></p><p><label for="example-input-password1">Number</label> <input type="number" id="example-input-number" placeholder="Number"></p><p><label for="example-input-password">Password</label> <input type="password" id="example-input-password" placeholder="Password"></p><p><label for="example-input-search">Search</label> <input type="search" id="example-input-serach" placeholder="Search .."></p><p><label for="example-input-tel">Telephone number</label> <input type="tel" id="example-input-tel" placeholder="Telephone number"></p><p><label for="example-input-text">Text</label> <input type="text" id="example-input-text" placeholder="Enter some text here"></p><p><label for="example-input-url">Url</label> <input type="url" id="example-input-url" placeholder="Enter a url here"></p><p><label for="example-input-color">Color</label> <input type="color" id="example-inupt-color" placeholder="#fff"></p><p><label for="example-input-date">Date</label> <input type="date" id="example-input-date" placeholder="date"></p><p><label for="example-input-date-time">Date / Time</label> <input type="datetime" id="example-input-date-time" placeholder="date / time"></p><p><label for="example-input-date-time-local">Date / Time local</label> <input type="datetime-local" id="example-input-date-time-local" placeholder="date / time local"></p><p><label for="example-input-month">Month</label> <input type="month" id="example-input-month" placeholder="Month"></p><p><label for="example-input-week">Week</label> <input type="week" id="example-input-week" placeholder="Week"></p><p><label for="example-input-time">Time</label> <input type="time" id="example-input-time" placeholder="Time"></p><p><label for="example-select1">Example select</label> <select id="example-select1"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></p><p><label for="example-select2">Example multiple select</label> <select multiple id="example-select2"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></p><p><label for="example-textarea">Example textarea</label> <textarea id="example-textarea" rows="3"></textarea></p><p><label for="example-input-file">File input</label> <input type="file" id="example-input-file"></p><fieldset><legend>I am legend</legend><div><label><input type="radio" name="options-radios" id="optionsR-radios1" value="option1" checked> Option one is this and that&mdash;be sure to include why it's great</label></div><div><label><input type="radio" name="options-radios" id="options-radios2" value="option2"> Option two can be something else and selecting it will deselect option one</label></div><div><label><input type="radio" name="optionsRadios" id="options-radios3" value="option3" disabled> Option three is disabled</label></div></fieldset><fieldset><legend>I am also legend</legend><input type="checkbox"> Check me out <input type="checkbox"> Or check me out</fieldset><p><button type="button" name="button">Button</button> <input type="button" name="input" value="Input Button"> <input type="submit" name="submit" value="Submit Button"> <input type="reset" name="reset" value="Reset Button"></p></form></section></main>
-
- Styleguide HTML.Inputs
-
-*/
-.container,
-.card {
-  position: relative;
-}
-
 .table {
   font-family: "Lato","Open Sans","system-ui",sans-serif;
 }
@@ -7862,7 +6744,7 @@ Markup:
   text-align: left;
 }
 .table tbody tr:nth-of-type(odd) {
-  background-color: #f5f4f3;
+  background-color: #f3f2f2;
 }
 .table.unshaded tbody tr:nth-of-type(odd) {
   background-color: unset;
@@ -8905,8 +7787,8 @@ Styleguide  Recipes Bootstrap.Carousel
   text-indent: -9999px;
 }
 .carousel-alt .carousel-indicators li.active {
-  border-color: get-themcolor(accent);
-  background-color: get-themcolor(accent);
+  border-color: #e87d1e;
+  background-color: #e87d1e;
 }
 .carousel-alt.chevron-on .carousel-indicators li.active:before {
   top: 4px;
@@ -8968,9 +7850,9 @@ Styleguide  Recipes Bootstrap.Carousel
     height: auto;
     margin: 0;
     padding: 0.5rem 1rem;
-    border: 1px solid #d6d2d1;
+    border: 1px solid #d0cdcc;
     border-radius: 0;
-    background-color: #e9e6e5;
+    background-color: #e5e3e3;
     font-size: 1.2em;
     text-align: left;
     text-indent: 0;
@@ -8985,7 +7867,7 @@ Styleguide  Recipes Bootstrap.Carousel
   .carousel-alt.text-indicators .carousel-indicators li.active {
     padding-right: 10px;
     border-right: #e87d1e 10px solid;
-    background-color: #847874;
+    background-color: #766d6c;
     color: white;
   }
 }
@@ -9263,7 +8145,7 @@ Styleguide Recipes CVQualtiy.Navs.Primary
 .card.product .blockquote-cite {
   position: relative;
   right: 0;
-  color: #bfb8b6;
+  color: #b5b0ae;
   font-size: 1em;
 }
 .card.testimonial .blockquote-cite:after,
@@ -10356,300 +9238,67 @@ Side Nav
 Side Nav DOM
 
 Markup:
+<nav class="hidden-print nav-sub max-w-1"><ul class="bg_secondary-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav"><li data-nav="parent" class="nav-item parent"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation" target="_self"><i class="fa fa-holder toggle"></i>About Accreditation</a><ul data-nav="child" class="flex_column font_n1 nav text-indent_2 bg_secondary-4"><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/benefits-of-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Benefits of Accreditation</a></li><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/steps-to-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Pathway to Accreditation</a></li><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/testimonials-and-success-stories" target="_self"><i class="fa fa-holder toggle"></i>Testimonials and Success Stories</a></li><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/value-of-process-improvement" target="_self"><i class="fa fa-holder toggle"></i>Value of Process Improvement</a></li><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/faqs" target="_self"><i class="fa fa-holder toggle"></i>FAQs</a></li><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/accreditation-for-systems" target="_self"><i class="fa fa-holder toggle"></i>System-Wide Accreditation</a></li></ul></li><li data-nav="parent" class="is-active nav-item parent"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/services" target="_self"><i class="fa fa-holder toggle"></i>Products and Services</a><ul data-nav="child" class="bg_secondary-4 flex_column font_n1 nav text-indent_1"><li class="nav-item parent"><a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/CCL" target="_self"><i class="fa fa-holder toggle"></i>Cardiac Cath Lab Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/CCL/OnDemandCathLabwebianrs" target="_self">On-Demand Cath Lab Webinars</a></li><li class="nav-item"><a class="nav-link nav-link c_secondary-n4 p-y_2" href="/accreditation/services/CCL/CCLBenefits" target="_self">Cardiac Cath Lab Features Benefits</a></li><li class="nav-item"><a class="nav-link nav-link c_secondary-n4 p-y_2" href="/accreditation/services/CCL/cardiac-cath-lab-accreditation-training" target="_self">Cardiac Cath Lab Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="nav-link c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/cpcwebinars" target="_self"><i class="fa fa-holder toggle"></i>On-Demand Chest Pain Center Webinars</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCDesignations" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Designations</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCBenefits" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Features Benefits</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCsupplementalED" target="_self"><i class="fa fa-holder toggle"></i>Supplemental Education</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCGuidelines" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Guidelines</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCArticles" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Articles Abstracts</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCPublications" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Pubs</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCQuestions" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center FAQs</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/chest-pain-center-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/EP" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/EP/register-for-webinar" target="_self"><i class="fa fa-holder toggle"></i>On-Demand EP Webinars</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/EP/EPBenefits" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Features Benefits</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/EP/electrophysiology-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/HF" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/hfwebinars" target="_self"><i class="fa fa-holder toggle"></i>On-Demand Heart Failure Webinars</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFBenefits" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Features Benefits</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/supplementalED" target="_self"><i class="fa fa-holder toggle"></i>Supplemental Education</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFGuidelines" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Guidelines</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFArticles" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Articles and Abstracts</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFPublications" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Publications</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFQuestions" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure FAQs</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/heart-failure-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/TCV" target="_self"><i class="fa fa-holder toggle"></i>Transcatheter Valve Certification</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/TCV/TCV-certification-training" target="_self"><i class="fa fa-holder toggle"></i>Transcatheter Valve Certification Training</a></li></ul></li><li class="nav-item"><a class="h:bg_black-1 c_secondary-n3 nav-link p-y_2" href="/accreditation/services/C4Certification" target="_self"><i class="fa fa-holder toggle"></i>C4 Certification</a></li></ul></li><li class="nav-item"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/heartcare-center-recognition-program" target="_self"><i class="fa fa-holder toggle"></i>HeartCARE Center Recognition Program</a></li><li class="nav-item"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/acc-quality-summit-2020" target="_self"><i class="fa fa-holder toggle"></i>ACC Quality Summit</a></li><li class="nav-item active current"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/brand" target="_self"><i class="fa fa-holder toggle"></i>Promote Your Achievement</a></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/quality-initiative-proposal" target="_self"><i class="fa fa-holder toggle"></i>Quality Initiative Proposal</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-link c_secondary-n4 p-y_2"><a class="nav-link" href="/accreditation/quality-initiative-proposal/2018-recipients" target="_self"><i class="fa fa-holder toggle"></i>2018 Recipients</a></li></ul></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/advocacy" target="_self"><i class="fa fa-holder toggle"></i>Advocate Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link" href="/accreditation/advocacy/Community-Education" target="_self"><i class="fa fa-holder toggle"></i>Community Education &amp; EHAC</a></li><li class="nav-item"><a class="nav-link" href="/accreditation/advocacy/helpful-links" target="_self"><i class="fa fa-holder toggle"></i>Helpful Links</a></li></ul></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/about-us" target="_self"><i class="fa fa-holder toggle"></i>About Us</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_2"><li class="nav-item parent"><a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/about-us/awards" target="_self">Awards</a><ul class="nav flex_column bg_black-1"><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/awards/process-improvement-pioneer-award" target="_self"><i class="fa fa-holder toggle"></i>Process Improvement Pioneer Award</a></li><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/awards/bahr-award-of-excellence" target="_self"><i class="fa fa-holder toggle"></i>Bahr Award of Excellence</a></li></ul></li><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/staff-directory" target="_self"><i class="fa fa-holder toggle"></i>Staff Directory</a></li></ul></li><li class="nav-item"><a class="nav-link" href="/accreditation/map" target="_self"><i class="fa fa-holder toggle"></i>Accreditation Map</a></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/news-and-events" target="_self"><i class="fa fa-holder toggle"></i>News and Events</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link" href="/accreditation/news-and-events/upcoming-events" target="_self"><i class="fa fa-holder toggle"></i>Upcoming Events</a></li></ul></li></ul></nav>
+
+
+Styleguide Recipes CVQualtiy.Navs.SideNav
+*/
+/*
+Side Nav Parent
+
+Decoration classes with UC's to make the nav look like the primary level.
+
+Markup:
 <nav class="hidden-print nav-sub max-w-1">
 	<ul class="bg_secondary-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
 		<li data-nav="parent" class="nav-item parent">
-			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/about-accreditation" target="_self">
-				<i class="fa fa-holder toggle"></i>About Accreditation
+			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
+				Link with children
 			</a>
-			<ul data-nav="child" class="flex_column font_n1 nav text-indent_2 bg_secondary-4">
-				<li class="nav-item  ">
-					<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/benefits-of-accreditation" target="_self">
-						<i class="fa fa-holder toggle"></i>Benefits of Accreditation
-					</a>
-				</li>
-				<li class="nav-item  ">
-					<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/steps-to-accreditation" target="_self">
-						<i class="fa fa-holder toggle"></i>Pathway to Accreditation
-					</a>
-				</li>
-				<li class="nav-item  ">
-					<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/testimonials-and-success-stories" target="_self">
-						<i class="fa fa-holder toggle"></i>Testimonials and Success Stories
-					</a>
-				</li>
-				<li class="nav-item  ">
-					<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/value-of-process-improvement" target="_self">
-						<i class="fa fa-holder toggle"></i>Value of Process Improvement
-					</a>
-				</li>
-				<li class="nav-item  ">
-					<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/faqs" target="_self">
-						<i class="fa fa-holder toggle"></i>FAQs
-					</a>
-				</li>
-				<li class="nav-item  ">
-					<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/accreditation-for-systems" target="_self">
-						<i class="fa fa-holder toggle"></i>System-Wide Accreditation
-					</a>
-				</li>
-			</ul>
 		</li>
-		<li data-nav="parent" class="is-active nav-item parent">
-			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/services" target="_self">
-				<i class="fa fa-holder toggle"></i>Products and Services
+		<li  class="nav-item">
+			<a class="a:c_accent c_secondary-n3 h:bg_white-4 nav-link p-y_2" target="_self">
+				Link without children
 			</a>
-			<ul data-nav="child" class="bg_secondary-4 flex_column font_n1 nav text-indent_1">
-				<li class="nav-item parent">
-					<a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/CCL" target="_self">
-						<i class="fa fa-holder toggle"></i>Cardiac Cath Lab Accreditation
-					</a>
-					<ul class="nav flex_column bg_black-2 font_n1 text-indent_3">
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/CCL/OnDemandCathLabwebianrs" target="_self">
-								On-Demand Cath Lab Webinars
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link nav-link c_secondary-n4 p-y_2" href="/accreditation/services/CCL/CCLBenefits" target="_self">
-								Cardiac Cath Lab Features Benefits
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link nav-link c_secondary-n4 p-y_2" href="/accreditation/services/CCL/cardiac-cath-lab-accreditation-training" target="_self">
-								Cardiac Cath Lab Accreditation Training
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="nav-item parent ">
-					<a class="nav-link c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation" target="_self">
-						<i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation
-					</a>
-					<ul class="nav flex_column bg_black-2 font_n1 text-indent_3">
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/cpcwebinars" target="_self">
-								<i class="fa fa-holder toggle"></i>On-Demand Chest Pain Center Webinars
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCDesignations" target="_self">
-								<i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Designations
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCBenefits" target="_self">
-								<i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Features Benefits
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCsupplementalED" target="_self">
-								<i class="fa fa-holder toggle"></i>Supplemental Education
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCGuidelines" target="_self">
-								<i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Guidelines
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCArticles" target="_self">
-								<i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Articles Abstracts
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCPublications" target="_self">
-								<i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Pubs
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCQuestions" target="_self">
-								<i class="fa fa-holder toggle"></i>Chest Pain Center FAQs
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/chest-pain-center-accreditation-training" target="_self">
-								<i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Training
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="nav-item parent ">
-					<a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/EP" target="_self">
-						<i class="fa fa-holder toggle"></i>Electrophysiology Accreditation
-					</a>
-					<ul class="nav flex_column bg_black-2 font_n1 text-indent_3">
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/EP/register-for-webinar" target="_self">
-								<i class="fa fa-holder toggle"></i>On-Demand EP Webinars
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/EP/EPBenefits" target="_self">
-								<i class="fa fa-holder toggle"></i>Electrophysiology Features Benefits
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/EP/electrophysiology-accreditation-training" target="_self">
-								<i class="fa fa-holder toggle"></i>Electrophysiology Accreditation Training
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="nav-item parent ">
-					<a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/HF" target="_self">
-						<i class="fa fa-holder toggle"></i>Heart Failure Accreditation
-					</a>
+		</li>
+		<li data-nav="parent" class="nav-item parent active">
+			<a class="a:c_accent c_secondary-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
+				Link that is active
+			</a>
+		</li>
+	</ul>
+</nav>
 
+Weight: 1
 
-               <ul class="nav flex_column bg_black-2 font_n1 text-indent_3">
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/hfwebinars" target="_self">
-								<i class="fa fa-holder toggle"></i>On-Demand Heart Failure Webinars
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFBenefits" target="_self">
-								<i class="fa fa-holder toggle"></i>Heart Failure Accreditation Features Benefits
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/supplementalED" target="_self">
-								<i class="fa fa-holder toggle"></i>Supplemental Education
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFGuidelines" target="_self">
-								<i class="fa fa-holder toggle"></i>Heart Failure Accreditation Guidelines
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFArticles" target="_self">
-								<i class="fa fa-holder toggle"></i>Heart Failure Accreditation Articles and Abstracts
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFPublications" target="_self">
-								<i class="fa fa-holder toggle"></i>Heart Failure Accreditation Publications
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFQuestions" target="_self">
-								<i class="fa fa-holder toggle"></i>Heart Failure FAQs
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/heart-failure-accreditation-training" target="_self">
-								<i class="fa fa-holder toggle"></i>Heart Failure Accreditation Training
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="nav-item parent ">
-					<a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/TCV" target="_self">
-						<i class="fa fa-holder toggle"></i>Transcatheter Valve Certification
-					</a>
-					<ul class="nav flex_column bg_black-2 font_n1 text-indent_3">
-						<li class="nav-item  ">
-							<a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/TCV/TCV-certification-training" target="_self">
-								<i class="fa fa-holder toggle"></i>Transcatheter Valve Certification Training
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="nav-item  ">
-					<a class="h:bg_black-1 c_secondary-n3 nav-link p-y_2" href="/accreditation/services/C4Certification" target="_self">
-						<i class="fa fa-holder toggle"></i>C4 Certification
+Styleguide Recipes CVQualtiy.Navs.Primary Level
+*/
+/*
+Side Nav Child
+
+Decoration classes with UC's to make the nav look like the child of the primary level.
+
+Markup:
+<nav class="hidden-print nav-sub max-w-1">
+	<ul class="bg_secondary-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
+		<li data-nav="parent" class="nav-item parent">
+			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
+				Parent Link
+			</a>
+			<ul class="flex_column font_n1 nav text-indent_2 bg_secondary-4">
+				<li data-nav="parent" class="nav-item parent">
+					<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" target="_self">
+						Link with children
 					</a>
 				</li>
-			</ul>
-		</li>
-		<li class="nav-item  ">
-			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/heartcare-center-recognition-program" target="_self">
-				<i class="fa fa-holder toggle"></i>HeartCARE Center Recognition Program
-			</a>
-		</li>
-		<li class="nav-item  ">
-			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/acc-quality-summit-2020" target="_self">
-				<i class="fa fa-holder toggle"></i>ACC Quality Summit
-			</a>
-		</li>
-		<li class="nav-item  active current">
-			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/brand" target="_self">
-				<i class="fa fa-holder toggle"></i>Promote Your Achievement
-			</a>
-		</li>
-		<li data-nav="parent" class="nav-item parent ">
-			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/quality-initiative-proposal" target="_self">
-				<i class="fa fa-holder toggle"></i>Quality Initiative Proposal
-			</a>
-			<ul class="nav flex_column bg_black-2 font_n1 text-indent_3">
-				<li class="nav-link c_secondary-n4 p-y_2">
-					<a class="nav-link" href="/accreditation/quality-initiative-proposal/2018-recipients" target="_self">
-						<i class="fa fa-holder toggle"></i>2018 Recipients
+				<li  class="nav-item">
+					<a class="a:c_accent c_secondary-n3 h:bg_white-4 nav-link p-y_2" target="_self">
+						Link without children
 					</a>
 				</li>
-			</ul>
-		</li>
-		<li data-nav="parent" class="nav-item parent ">
-			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/advocacy" target="_self">
-				<i class="fa fa-holder toggle"></i>Advocate Accreditation
-			</a>
-			<ul class="nav flex_column bg_black-2 font_n1 text-indent_3">
-				<li class="nav-item  ">
-					<a class="nav-link" href="/accreditation/advocacy/Community-Education" target="_self">
-						<i class="fa fa-holder toggle"></i>Community Education &amp; EHAC
-					</a>
-				</li>
-				<li class="nav-item  ">
-					<a class="nav-link" href="/accreditation/advocacy/helpful-links" target="_self">
-						<i class="fa fa-holder toggle"></i>Helpful Links
-					</a>
-				</li>
-			</ul>
-		</li>
-		<li data-nav="parent" class="nav-item parent ">
-			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/about-us" target="_self">
-				<i class="fa fa-holder toggle"></i>About Us
-			</a>
-			<ul class="nav flex_column bg_black-2 font_n1 text-indent_2">
-				<li class="nav-item parent ">
-					<a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/about-us/awards" target="_self">
-						Awards
-					</a>
-					<ul class="nav flex_column bg_black-1">
-						<li class="nav-item  ">
-							<a class="nav-link" href="/accreditation/about-us/awards/process-improvement-pioneer-award" target="_self">
-								<i class="fa fa-holder toggle"></i>Process Improvement Pioneer Award
-							</a>
-						</li>
-						<li class="nav-item  ">
-							<a class="nav-link" href="/accreditation/about-us/awards/bahr-award-of-excellence" target="_self">
-								<i class="fa fa-holder toggle"></i>Bahr Award of Excellence
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="nav-item  ">
-					<a class="nav-link" href="/accreditation/about-us/staff-directory" target="_self">
-						<i class="fa fa-holder toggle"></i>Staff Directory
-					</a>
-				</li>
-			</ul>
-		</li>
-		<li class="nav-item  ">
-			<a class="nav-link" href="/accreditation/map" target="_self">
-				<i class="fa fa-holder toggle"></i>Accreditation Map
-			</a>
-		</li>
-		<li data-nav="parent" class="nav-item parent ">
-			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/news-and-events" target="_self">
-				<i class="fa fa-holder toggle"></i>News and Events
-			</a>
-			<ul class="nav flex_column bg_black-2 font_n1 text-indent_3">
-				<li class="nav-item  ">
-					<a class="nav-link" href="/accreditation/news-and-events/upcoming-events" target="_self">
-						<i class="fa fa-holder toggle"></i>Upcoming Events
+				<li data-nav="parent" class="nav-item parent active">
+					<a class="a:c_accent c_secondary-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
+						Link that is active
 					</a>
 				</li>
 			</ul>
@@ -10657,8 +9306,39 @@ Markup:
 	</ul>
 </nav>
 
+Weight: 2
 
-Styleguide Recipes CVQualtiy.Navs.SideNav
+Styleguide Recipes CVQualtiy.Navs.Child Level
+*/
+/*
+Side Nav Gran Child
+
+Decoration classes with UC's to make the nav look like the child of the primary level.
+
+Markup:
+<nav class="hidden-print nav-sub max-w-1">
+	<ul class="bg_secondary-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
+		<li data-nav="parent" class="nav-item parent">
+			<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" target="_self">
+				Link with children
+			</a>
+		</li>
+		<li  class="nav-item">
+			<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" target="_self">
+				Link without children
+			</a>
+		</li>
+		<li data-nav="parent" class="nav-item parent active">
+			<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" target="_self">
+				Link that is active
+			</a>
+		</li>
+	</ul>
+</nav>
+
+Weight: 3
+
+Styleguide Recipes CVQualtiy.Navs.Grand Child Level
 */
 /*
 Decorators

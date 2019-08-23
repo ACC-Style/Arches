@@ -1,7 +1,7 @@
 /**  ACC Brands    *********************************/
 $teal: #0088aa;
 $green-blue: #16a385;
-$grey-secondary: #998e8b;
+$grey-secondary: #8a817f;
 $dark-grey: #676a72;
 $alt-grey: #a3988c;
 $green: #078a2e;
@@ -155,7 +155,7 @@ $gray-800: mix($white, $black, 80%);
 $gray-900: mix($white, $black, 90%);
 
 $theme-palette: map-merge(
-	(
+	$theme-palette,(
 		primary: $teal,
 		secondary: $grey-secondary,
 		success: $green,
@@ -166,9 +166,10 @@ $theme-palette: map-merge(
 		info: $alt-grey,
 		highlight: $scrub-teal-light,
 		acc: $acc-blue
-	),
-	$theme-palette
+	)
+	
 );
+@debug "brand CVQuality theme accent is " + map-get($map: $theme-palette, $key: accent );
 
 $primary: $scrub-teal;
 $secondary: $warm-grey-dark;

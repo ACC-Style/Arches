@@ -16,18 +16,21 @@ $theme-palette: ();
 @import "vendor/modular-scale";
 @import "config/utility-css.vars";
 @import "helpers/breakpoint";
-/** Utility Class Built on top of Bootstrap 4.3 **//**Set Active Class for Bootstrap **/ 
+%font-awesome-pro {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 900;
+}
+/** Start of BRANDINGBUILD 0 **/ 
+/** Utility Class Built on top of Bootstrap 4.3 **/ 
+ 
+/**Set Active Class for Bootstrap **/ 
  $active-class-name: 'active';
-/**  Default Brands    *********************************/
-/**  Colors  **/
-
-@import "config/colors";
-/**  Fonts  **/
-@import "config/fonts";
-/**  Textures  **/
-@import "config/textures";
-/**  Logos  **/
-@import "config/logo";
 /**  ACC Brands    *********************************/
 $teal: #198dae;
 $green-blue: #16a385;
@@ -61,7 +64,7 @@ $gray-800: mix($white, $black, 80%);
 $gray-900: mix($white, $black, 90%);
 
 $theme-palette: map-merge(
-	(
+	$theme-palette,(
 		primary: $teal,
 		secondary: $dark-grey,
 		success: $green,
@@ -72,10 +75,9 @@ $theme-palette: map-merge(
 		info: $alt-grey,
 		highlight: $purple,
 		acc: $acc-blue
-	),
-	$theme-palette
+	)
 );
-
+@debug "brand ACC added theme accent "+ map-get($map: $theme-palette, $key: accent );
 $grays: map-merge(
 	(
 		"100": $gray-100,
@@ -172,7 +174,17 @@ $h6-font-size: map-deep-get($value-to-unit, font-size, 0);
 $font-size-base: $base-font-size-rem; // Assumes the browser default, typically `16px`
 $font-size-lg: map-deep-get($value-to-unit, font-size, 2);
 $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
-/** Built With ACC Branding **/// Variables
+/** Built With ACC Branding **//**  Default Brands    *********************************/
+/**  Colors  **/
+
+@import "config/colors";
+/**  Fonts  **/
+@import "config/fonts";
+/**  Textures  **/
+@import "config/textures";
+/**  Logos  **/
+@import "config/logo";
+// Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
@@ -1336,15 +1348,6 @@ $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 @import "../../node_modules/bootstrap/scss/spinners";
 // @import "../../node_modules/bootstrap/scss/utilities";
 // @import "../../node_modules/bootstrap/scss/print";
-// ACC Design Alterations
-@import "base/base";
-@import "components/logo";
-
-@import "components/interactive-extras";
-
-@import "styleguide/styleguide";
-@import "styleguide/__basic-html.base";
-@import "structures/structures";
 @import "base/table.boot";
 @import "styleguide/__basic-html.boot";
 @import "components/boot/_boot.carousel.override";
