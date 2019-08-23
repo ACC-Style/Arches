@@ -154,7 +154,9 @@ gulp.task("markdown", function () {
 	var accfoundation = markdownbuild(base, 'accfoundation');
 	var noframework = markdownbuild(base, 'noframework');
 	var accboot = markdownbuild(base, 'accboot');
-	return merge(home, cvqualtiy, accboot, accfoundation, noframework)
+	var layoutdemo = markdownbuild(base, 'layoutdemo');
+	var colorcodes = markdownbuild(base, 'colorcodes');
+	return merge(home, cvqualtiy, accboot, accfoundation, noframework, layoutdemo, colorcodes)
 		.pipe(
 			header(
 				fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md", "utf8"), {
@@ -378,7 +380,7 @@ gulp.task("construct", function () {
 	
 	var noframe_acc = buildbrand(baseUC, 'acc', '').pipe(rename("uc_acc.scss"));
 	var noframe_cvquality = buildbrand(baseUC, 'cvquality', '').pipe(rename("uc_cvquality.scss"));
-	var colors = baseUC
+	var colors = base
 		.pipe(clone())
 		.pipe(
 			header(
@@ -527,7 +529,7 @@ gulp.task(
 	"styleguide",
 	function () {
 		return run(
-			"npm run index && npm run uc && npm run zurb_acc &&  npm run boot_acc &&  npm run boot_cvquality"
+			"npm run index && npm run uc && npm run zurb_acc &&  npm run boot_acc &&  npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes"
 		).exec();
 	}
 );
