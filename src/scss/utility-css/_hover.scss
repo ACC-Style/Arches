@@ -123,32 +123,31 @@ a:focus {
 
 .hover\:underline,
 .h\:underline {
-	@extend %hover_text-decoration;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 .hover\:underline-none,
-.h\:underline-none {
-	@extend %hover_text-decoration;
+.h\:underline-none,
+.h\:undecorated {
 	&:hover {
 		text-decoration-style: none;
 	}
 }
 .hover\:dashed,
 .h\:dashed {
-	@extend %hover_text-decoration;
 	&:hover {
 		text-decoration-style: dashed;
 	}
 }
 .hover\:double,
 .h\:double {
-	@extend %hover_text-decoration;
 	&:hover {
 		text-decoration-style: double;
 	}
 }
 .hover\:dotted,
 .h\:dotted {
-	@extend %hover_text-decoration;
 	&:hover {
 		text-decoration-style: dotted;
 	}

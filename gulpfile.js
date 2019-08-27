@@ -168,7 +168,7 @@ gulp.task("markdown", function () {
 });
 var buildbrand = function (base, brand, framework) {
 	var construct = base.pipe(clone());
-	var i =0;
+	var i = 0;
 	switch (framework) {
 		case "zurb":
 			construct.pipe(
@@ -224,7 +224,7 @@ var buildbrand = function (base, brand, framework) {
 				)
 			);
 			break;
-	};
+	}
 	construct.pipe(
 		header(
 			fs.readFileSync(PATHS.SCSS + "/gulp_header/__brand.base.scss", "utf8"), {
@@ -284,7 +284,7 @@ var buildbrand = function (base, brand, framework) {
 				)
 			);
 			break;
-	};
+	}
 
 	switch (framework) {
 		case "bootstrap":
@@ -312,20 +312,20 @@ var buildbrand = function (base, brand, framework) {
 			);
 			break;
 		case "noframe":
-				construct.pipe(
-					header(
-						" \n/** No Framework **/ \n", {
-							pkg: pkg
-						}
-					)
-				);
+			construct.pipe(
+				header(
+					" \n/** No Framework **/ \n", {
+						pkg: pkg
+					}
+				)
+			);
 			break;
 		default:
 			break;
 	}
 	construct.pipe(
 		header(
-			"/** Start of BRANDINGBUILD "+i+" **/", {
+			"/** Start of BRANDINGBUILD " + i + " **/", {
 				pkg: pkg
 			}
 		)
@@ -339,7 +339,7 @@ gulp.task("construct", function () {
 	var baseUC = base.pipe(clone())
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS +"/gulp_header/__utilityclasses.scss", "utf8"), {
+				fs.readFileSync(PATHS.SCSS + "/gulp_header/__utilityclasses.scss", "utf8"), {
 					pkg: pkg
 				}
 			)
@@ -377,7 +377,7 @@ gulp.task("construct", function () {
 				}
 			)
 		);
-	
+
 	var noframe_acc = buildbrand(baseUC, 'acc', '').pipe(rename("uc_acc.scss"));
 	var noframe_cvquality = buildbrand(baseUC, 'cvquality', '').pipe(rename("uc_cvquality.scss"));
 	var colors = base
@@ -389,7 +389,7 @@ gulp.task("construct", function () {
 				}
 			)
 		);
-		colors = buildbrand(colors, '', '').pipe(rename("color_codes.scss"));
+	colors = buildbrand(colors, '', '').pipe(rename("color_codes.scss"));
 	var zurb_acc = base
 		.pipe(clone())
 		.pipe(rename("zurb_acc.scss"))
@@ -410,7 +410,7 @@ gulp.task("construct", function () {
 				}
 			)
 		);
-		zurb_acc = buildbrand(zurb_acc,'acc','zurb');
+	zurb_acc = buildbrand(zurb_acc, 'acc', 'zurb');
 	var boot_acc = base
 		.pipe(clone())
 		.pipe(rename("boot_acc.scss"))
@@ -495,10 +495,10 @@ gulp.task("construct", function () {
 				}
 			)
 		);
-		var boot_cvquality = buildbrand(boot_cvquality, 'cvquality', 'bootstrap');
+	boot_cvquality = buildbrand(boot_cvquality, 'cvquality', 'bootstrap');
 
 
-	return merge(zurb_acc, boot_acc, noframe_acc,noframe_cvquality, boot_cvquality, colors)
+	return merge(zurb_acc, boot_acc, noframe_acc, noframe_cvquality, boot_cvquality, colors)
 		.pipe(
 			header(
 				fs.readFileSync(PATHS.SCSS + "/gulp_header/__preheader.scss", "utf8"), {
