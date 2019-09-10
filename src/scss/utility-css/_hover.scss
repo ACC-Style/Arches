@@ -285,6 +285,10 @@ Weight: 50
 Styleguide hover.transition
  
  */
+*[class*="transition"] {
+	transition-timing-function: ease;
+	transition-property: all;
+}
 @include loop-style(transition, "", " !important");
 
 /*

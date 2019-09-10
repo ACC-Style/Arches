@@ -4,52 +4,6 @@
  * @link https://github.com/MattWatier/Arches#readme
  */
 /**  Pre Header - modular scale default break points utility    *********************************/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-}
-
-.clearfix {
-  zoom: 1;
-  /* For IE 6/7 (trigger hasLayout) */
-}
-.clearfix:before {
-  display: table;
-  content: "";
-}
-.clearfix:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-/* Smartphone resets and enhancements */
-html {
-  -webkit-font-smoothing: antialiased;
-  /*-webkit-backface-visibility: hidden; /* this breaks the sticky widget on article and landing pages */
-  /*-webkit-perspective: 1000; */
-}
-
-footer {
-  /* enables on GPU processing, per http://davidwalsh.name/translate3d */
-  transform: translate3d(0, 0, 0);
-}
-
-a:link, a:hover, a:active {
-  -webkit-tap-highlight-color: rbga(0, 0, 0, 0);
-  outline: none;
-  /* prevents pink highlight color on tap */
-}
-
-span {
-  -webkit-transform: translateZ(0);
-  /* enables on GPU processing */
-}
-
 /** Utility Class Only With Basic ACC Branding **/
 /**  ACC Brands    *********************************/
 /**  Default Brands    *********************************/
@@ -201,51 +155,51 @@ Styleguide DesignBase.Colors.Social Networks
 /**  Fonts  **/
 /* Robto Slab Regular */
 @font-face {
-  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url(https://fonts.gstatic.com/s/robotoslab/v7/BngMUXZYTXPIvIBgJJSb6ufN5qU.woff2) format("woff2");
   font-family: "Roboto Slab";
   font-style: normal;
   font-weight: 400;
+  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url(https://fonts.gstatic.com/s/robotoslab/v7/BngMUXZYTXPIvIBgJJSb6ufN5qU.woff2) format("woff2");
   unicode-range: U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* Robto Slab Bold */
 @font-face {
-  font-display: swap;
-  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url(https://fonts.gstatic.com/s/robotoslab/v8/BngMUXZYTXPIvIBgJJSb6ufA5qW54A.woff2) format("woff2");
   font-family: "Roboto Slab";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
+  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url(https://fonts.gstatic.com/s/robotoslab/v8/BngMUXZYTXPIvIBgJJSb6ufA5qW54A.woff2) format("woff2");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* Maven PRo */
 @font-face {
-  src: local("Maven Pro Medium"), local("MavenPro-Medium"), url(https://fonts.gstatic.com/s/mavenpro/v11/7Au4p_AqnyWWAxW2Wk3OPkcdP3kD.woff2) format("woff2");
   font-family: "Maven Pro";
   font-style: normal;
   font-weight: 500;
+  src: local("Maven Pro Medium"), local("MavenPro-Medium"), url(https://fonts.gstatic.com/s/mavenpro/v11/7Au4p_AqnyWWAxW2Wk3OPkcdP3kD.woff2) format("woff2");
   unicode-range: U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* Muli */
 @font-face {
-  src: local("Muli Regular"), local("Muli-Regular"), url(https://fonts.gstatic.com/s/muli/v11/7Auwp_0qiz-afTLGLQ.woff2) format("woff2");
   font-family: "Muli";
   font-style: normal;
   font-weight: 400;
+  src: local("Muli Regular"), local("Muli-Regular"), url(https://fonts.gstatic.com/s/muli/v11/7Auwp_0qiz-afTLGLQ.woff2) format("woff2");
   unicode-range: U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /*Muli */
 @font-face {
-  src: local("Muli ExtraBold"), local("Muli-ExtraBold"), url(https://fonts.gstatic.com/s/muli/v11/7Au_p_0qiz-adZXgOCX2zw.woff2) format("woff2");
   font-family: "Muli";
   font-style: normal;
   font-weight: 800;
+  src: local("Muli ExtraBold"), local("Muli-ExtraBold"), url(https://fonts.gstatic.com/s/muli/v11/7Au_p_0qiz-adZXgOCX2zw.woff2) format("woff2");
   unicode-range: U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* Define the "system" font family */
 @font-face {
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
   font-family: system;
   font-style: normal;
   font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 html {
   -webkit-font-smoothing: antialiased;
@@ -258,9 +212,9 @@ html {
 /**  Textures  **/
 div[class*=texture_] {
   background-attachment: local;
-  background-origin: border-box;
-  background-position: top right;
   background-repeat: repeat;
+  background-position: top right;
+  background-origin: border-box;
 }
 
 /*
@@ -283,9 +237,9 @@ div[class*=texture_] {
  */
 /**  Logos  **/
 pre code.hljs {
-  max-height: 100%;
   padding-top: 2em;
   padding-bottom: 2.5em;
+  max-height: 100%;
 }
 
 /*# sourceMappingURL=maps/styleguide_override.css.map */
@@ -294,10 +248,10 @@ pre code.hljs {
 }
 
 .kss-section__markup > pre.language-markup {
-  max-height: 20vh;
   margin: 0;
-  overflow-x: auto;
+  max-height: 20vh;
   overflow-y: auto;
+  overflow-x: auto;
 }
 
 .kss-section__markup > pre.language-markup::-webkit-scrollbar {
@@ -309,8 +263,8 @@ pre code.hljs {
 
 /* Track */
 .kss-section__markup > pre.language-markup::-webkit-scrollbar-track {
-  background-color: rgba(10, 56, 70, 0.1);
   box-shadow: inset 1px 1px 4px 0.5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(10, 56, 70, 0.1);
 }
 
 /* Handle */
@@ -337,9 +291,9 @@ pre code.hljs {
 }
 .kss-section__description table {
   min-width: 50%;
+  border: 1px solid #808080;
   margin: 8px 0 16px;
   margin: 0.5rem 0 1rem;
-  border: 1px solid #808080;
 }
 .kss-section__description .thead,
 .kss-section__description thead {
@@ -397,11 +351,7 @@ pre code.hljs {
   margin-bottom: 1.5rem;
 }
 
-[class*="[modifier class]"] {
-  display: none;
-}
-
-[data-style*="[modifier class]"] {
+[class*="[modifier class]"],[data-style*="[modifier class]"] {
   display: none;
 }
 /*# sourceMappingURL=maps/styleguide_override.css.map */

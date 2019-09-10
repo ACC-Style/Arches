@@ -6,6 +6,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var pixrem = require("pixrem");
 var cssnano = require("cssnano");
+var mergeRules = require("postcss-merge-rules");
 var postcssNormalize = require("postcss-normalize");
 var sourcemaps = require("gulp-sourcemaps");
 var clean = require("gulp-clean");
@@ -62,14 +63,15 @@ gulp.task("style", function () {
 	console.log("Gulp Style Tasks");
 	console.log("Gulp: I am making this pretty.");
 	var plugins = [
-		postcssNormalize( /* pluginOptions */ ),
+		//postcssNormalize( /* pluginOptions */ ),
 		pixrem(),
 		cssDeclarationSorter({
 			order: "smacss"
 		}),
 		autoprefixer({
 			grid: "autoplace"
-		})
+		}),
+		mergeRules({})
 	];
 	var css = gulp
 		.src(PATHS.SCSS + "/*.scss")
