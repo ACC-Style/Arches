@@ -1,7 +1,7 @@
-(function() {
+(function () {
   var KssStateGenerator;
 
-  KssStateGenerator = (function() {
+  KssStateGenerator = (function () {
     var pseudo_selectors;
 
     pseudo_selectors = ['hover', 'enabled', 'disabled', 'active', 'visited', 'focus', 'target', 'checked', 'empty', 'first-of-type', 'last-of-type', 'first-child', 'last-child'];
@@ -19,7 +19,7 @@
             for (idx = 0, _len2 = _ref2.length; idx < _len2; idx++) {
               rule = _ref2[idx];
               if ((rule.type === CSSRule.STYLE_RULE) && pseudos.test(rule.selectorText)) {
-                replaceRule = function(matched, stuff) {
+                replaceRule = function (matched, stuff) {
                   return matched.replace(/\:/g, '.pseudo-class-');
                 };
                 this.insertRule(rule.cssText.replace(pseudos, replaceRule));
@@ -31,7 +31,7 @@
       } catch (_error) {}
     }
 
-    KssStateGenerator.prototype.insertRule = function(rule) {
+    KssStateGenerator.prototype.insertRule = function (rule) {
       var headEl, styleEl;
       headEl = document.getElementsByTagName('head')[0];
       styleEl = document.createElement('style');
@@ -55,39 +55,69 @@
 
 
 // custom code.
-(function() {
+(function () {
+  $('.arches_site-nav').addClass(function () {
+    var path = "";
+    if (window.location.href.split('/').indexOf('Arches') != -1) {
+      path = window.location.href.split('/')[window.location.href.split('/').indexOf('Arches') + 1];
 
+    } else {
+      path = window.location.href.split('/')[3];
+    }
+    switch (path) {
+      case "uconly_acc":
+        path = "uconly_acc";
+        break;
+      case "boot_acc":
+        path = "boot_acc";
+        break;
+      case "boot_cvquality":
+        path = "boot_cvquality";
+        break;
+      case "zurb_acc":
+        path = "zurb_acc";
+        break;
+      case "color_codes":
+        path = "color_codes";
+        break;
+      case "layout_demo":
+        path = "layout_demo";
+        break;
+      default:
+        path = "home_nav";
+        break;
+    }
+    return path;
+  });
 
   // navigation.
   $('.kss-header__hamburger-trigger').on('click', function (e) {
-    var kssNavigation  = '.kss-navigation',
-        kssDocumentation  = '.kss-documentation',
-        kssHamburger = '.kss-header__hamburger';
+    var kssNavigation = '.kss-navigation',
+      kssDocumentation = '.kss-documentation',
+      kssHamburger = '.kss-header__hamburger';
 
     if ($(kssNavigation).hasClass('kss-state-active')) {
       $(kssNavigation).removeClass('kss-state-active');
       $(kssDocumentation).removeClass('kss-state-active');
-    }
-    else {
+    } else {
       $(kssNavigation).addClass('kss-state-active');
       $(kssDocumentation).addClass('kss-state-active');
     }
 
     if ($(kssHamburger).hasClass('kss-state-active')) {
       $(kssHamburger).removeClass('kss-state-active');
-    }
-    else {
+    } else {
       $(kssHamburger).addClass('kss-state-active');
     }
   });
 
 
   // smooth scrolling.
-  (function smoothScrolling () {
+  (function smoothScrolling() {
     $('.kss-nav__item > a[href*=section]').on('click', function (e) {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
         var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
         if (target.length) {
           $('html, body').animate({
@@ -102,7 +132,7 @@
 
 
   // colors.
-  (function(){
+  (function () {
     var parameters = $('.kss-parameters');
 
     if (parameters) {
@@ -111,11 +141,11 @@
         var colorName = description.split(';')[1] ? description.split(';')[1] : '';
         var colorVar = $(this).find('.kss-parameters__name').text().trim();
         var colorCode = description.split(';')[0];
-        var isHexadecimal  = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(colorCode);
-        var isRGB  = /(rgba?\((?:\d{1,3}(, +|,|\))){3}(?:\d+\.\d+\))?)/i.test(colorCode);
+        var isHexadecimal = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(colorCode);
+        var isRGB = /(rgba?\((?:\d{1,3}(, +|,|\))){3}(?:\d+\.\d+\))?)/i.test(colorCode);
         var colorContent = '<span class="kss-color__name">' + colorName + '</span>' +
-                           '<span class="kss-color__var">' + colorVar + '</span>' +
-                           '<span class="kss-color__code">' + colorCode + '</span>';
+          '<span class="kss-color__var">' + colorVar + '</span>' +
+          '<span class="kss-color__code">' + colorCode + '</span>';
 
         if (isHexadecimal || isRGB) {
           $(this).parent().addClass('kss-colors-container');
