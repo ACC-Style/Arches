@@ -29,52 +29,34 @@
 
         <!-- navigation. -->
         <section class="kss-navigation shadow_n2 texture_medium bg_acc overflow_auto scrollbar-mini">
-            <header class="arches_site-nav">
-                <ul class="block bg_black-2 flex flex_column ul_none w_100" id="sitenav">
-                    <li class="flex_auto">
-                        <a class="c_white h:bg_black-5 p-x_4 p-y_3 block" href="/Arches/" id="home_nav">Arches</a>
-                    </li>
-                    <li class="flex_auto">
-                        <a class="c_white h:bg_black-5 p-x_4 p-y_3 block" href="/Arches/uconly_acc/" id="noframework_nav">Utility Class Only</a>
-                    </li>
-                    <li class="flex_auto">
-                        <a class="c_white h:bg_black-5 p-x_4 p-y_3 block" href="/Arches/boot_acc/" id="accboot_nav">ACC &amp; Bootstrap</a>
-                    </li>
-                    <li class="flex_auto">
-                        <a class="c_white h:bg_black-5 p-x_4 p-y_3 block" href="/Arches/boot_cvquality/" id="cvqualityboot_nav">CVQualtiy &amp; Bootstrap</a>
-                    </li>
-                    <li class="flex_auto">
-                        <a class="c_white h:bg_black-5 p-x_4 p-y_3 block" href="/Arches/zurb_acc/" id="accfoundation_nav">ACC &amp; Foundation</a>
-                    </li>
-                    <li class="flex_auto">
-                        <a class="c_white h:bg_black-5 p-x_4 p-y_3 block" href="/Arches/color_codes/" id="colorCodes">Color Codes</a>
-                    </li>
-                    <li class="flex_auto">
-                        <a class="c_white h:bg_black-5 p-x_4 p-y_3 block" href="/Arches/layout_demo/" id="layoutDemo">Layout Demos</a>
-                    </li>
-                </ul>
-            </header>
+            <ul class="arches_site-nav  block bg_black-2 flex flex_column ul_none w_100 shadow_n1 ul_none" id="sitenav">
+                {{#each options.site_nav }}
+                <li class="flex_auto">
+                    <a class="c_white undecorated h:bg_black-5 p-x_4 p-y_3 block" href="{{ url }}" id="{{ id }}">{{title}}</a>
+                </li>
+                {{/each}}
+            </ul>
             <h1 class="c_white font_2 p-x_4 p-y_3 m-t_3 ">{{ options.title }}</h1>
-            <ul class="kss-nav bg_black-2">
+            <ul class="bg_black-3 shadow_n1 ul_none">
                 <li class="kss-nav__item">
-                    <a class="c_white {{#if isActive}}is-active{{/if}} h:bg_black-2 a:bg_accent" href="index.html">
+                    <a class="c_white {{#if isActive}}is-active{{/if}} h:bg_black-2 a:bg_accent h:undecorated" href="index.html">
                         <span class="kss-nav__ref">0</span>
                         <span class="kss-nav__name">Introduction</span>
                     </a>
                 </li>
                 {{#each menu}}
                     <li class="kss-nav__item">
-                        <a class="{{#if isActive}}is-active{{/if}} c_white h:bg_black-2 a:bg_accent a:c_white flex flex_row" href="section-{{ referenceURI }}.html">
-                            <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_20">{{ referenceNumber }}</span>
+                        <a class="{{#if isActive}}is-active{{/if}} c_white h:bg_black-2 a:bg_accent a:c_white flex flex_row h:undecorated" href="section-{{ referenceURI }}.html">
+                            <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">{{ referenceNumber }}</span>
                             <span class="kss-nav__name flex_auto">{{ header }}</span>
                         </a>
                         {{#if isActive}}
                             {{#if children}}
                                 <ul class="kss-nav__subnav">
                                     {{#each children}}
-                                        <li class="kss-nav__item {{#if isGrandChild}}kss-nav__item--grandchild{{/if}}">
-                                            <a class="c_white-8 h:c_white flex flex_row" href="section-{{ ../referenceURI }}.html#kssref-{{ referenceURI }}">
-                                                <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_20">{{ referenceNumber }}</span>
+                                        <li class="kss-nav__item {{#if isGrandChild}}kss-nav__item--grandchild bg_black-4 p-y_1{{else}}bg_black-2 p-y_2{{/if}}">
+                                            <a class="c_white-8 h:c_white flex flex_row h:undecorated" href="section-{{ ../referenceURI }}.html#kssref-{{ referenceURI }}">
+                                                <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">{{ referenceNumber }}</span>
                                                 <span class="kss-nav__name flex_auto">{{ header }}</span>
                                             </a>
                                         </li>

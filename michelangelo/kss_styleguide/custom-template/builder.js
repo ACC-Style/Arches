@@ -58,6 +58,15 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
         default: 'KSS Style Guide'
       }
     });
+    this.addOptionDefinitions({
+      site_nav: {
+        group: 'Style guide:',
+        string: false,
+        multiple: true,
+        describe: 'Title of the style guide',
+        default: 'KSS Style Guide'
+      }
+    });
   }
 
   /**
