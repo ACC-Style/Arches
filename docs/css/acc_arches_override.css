@@ -812,6 +812,20 @@
    Styleguide HTML.Inputs
 
   */
+  /*
+  Scrollable Table
+
+  Tables are often the bane of small veiw ports. This `table` design swaps to a scroll left functionality when the view port is smaller then mobile. 
+
+
+
+
+  Markup:
+  <div class="bg_secondary-2 max-w_1"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
+
+  Styleguide Recipes.Scrollable
+
+  */
   /* content Recipes.200 */
   /**  Utility Classes    *********************************/
   /*
@@ -6189,6 +6203,12 @@
 #acc_arches_override .table-cell {
   display: table-cell;
 }
+#acc_arches_override .table {
+  display: table;
+}
+#acc_arches_override .table-row {
+  display: table-row;
+}
 #acc_arches_override .flex {
   display: flex;
 }
@@ -6210,6 +6230,12 @@
   }
   #acc_arches_override .table-cell\:md {
     display: table-cell;
+  }
+  #acc_arches_override .table\:md {
+    display: table;
+  }
+  #acc_arches_override .table-row\:md {
+    display: table-row;
   }
   #acc_arches_override .flex\:md {
     display: flex;
@@ -6233,6 +6259,12 @@
   }
   #acc_arches_override .table-cell\:lg {
     display: table-cell;
+  }
+  #acc_arches_override .table\:lg {
+    display: table;
+  }
+  #acc_arches_override .table-row\:lg {
+    display: table-row;
   }
   #acc_arches_override .flex\:lg {
     display: flex;

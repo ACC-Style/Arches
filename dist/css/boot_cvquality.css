@@ -6205,8 +6205,8 @@ Sometimes you have a table that will need a scrable comparison.
 Markup:
 <div class="table-scrollable-container">
 <div class="instructions"> <i class="fa fa-long-arrow-left"></i> Scroll For Software Companies  <i class="fa fa-long-arrow-right"></i> </div>
-    <table class="table-scrollable">
-        <thead>
+    <table class="overflow_hidden relative table-scrollable flex flex_row">
+        <thead class="b_0 bg_secondary-5 br-r_1 br_primary-1 br_solid flex_shrink float_left l_0 relative:lg relative:md shadow_3 t_0 w_40">
             <tr>
                 <th>Certified NCDR Software Vendor</th>
                 <th>IMPACT Registry</th>
@@ -6217,7 +6217,7 @@ Markup:
                 <th>AFib Registry</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="flex_auto float_right overflow_scroll scrollbar-mini w_60">
             <tr>
                 <td><a href="#157" class="parent-cell">ARMUS Corporation</a></td>
                 <td>Certified 04/21/2017</td>
@@ -6465,53 +6465,19 @@ Styleguide HTML.Table.Scrollable
   clear: both;
   content: "";
 }
-.table-scrollable-container table {
-  display: block;
-  position: relative;
-  border-top: 0 none transparent;
-}
-.table-scrollable-container thead,
-.table-scrollable-container tbody {
-  display: block;
-}
-.table-scrollable-container thead {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40%;
-}
-.table-scrollable-container thead tr {
-  display: block;
-  width: 100%;
-}
 .table-scrollable-container thead th {
-  display: block;
   height: 112px;
   height: 7rem;
-  font-size: 1.2em;
 }
 .table-scrollable-container tbody {
-  padding-left: 40%;
-  overflow-x: scroll;
   white-space: nowrap;
 }
 .table-scrollable-container tbody tr {
-  display: inline-block;
-  width: 90%;
-  margin-right: -0.125em;
   white-space: normal;
 }
 .table-scrollable-container tbody td {
-  display: block;
-  width: 100%;
   height: 112px;
   height: 7rem;
-}
-.table-scrollable-container th,
-.table-scrollable-container td {
-  padding: 8px 16px 4px 16px;
-  padding: 0.5rem 1rem 0.25rem 1rem;
 }
 .table-scrollable-container .instructions {
   display: block;
@@ -6528,40 +6494,6 @@ Styleguide HTML.Table.Scrollable
 
 .table-scrollable .parent-cell {
   font-size: 1.2em;
-}
-@media print {
-  .table-scrollable-container .table-scrollable .parent-cell {
-    padding: 1em;
-  }
-  .table-scrollable-container .instructions {
-    display: none;
-  }
-  .table-scrollable-container table {
-    display: table;
-    position: relative;
-    width: 100%;
-    clear: both;
-  }
-  .table-scrollable-container table * {
-    position: relative;
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
-  }
-  .table-scrollable-container table thead,
-.table-scrollable-container table tbody,
-.table-scrollable-container table tfoot {
-    display: table-row-group;
-  }
-  .table-scrollable-container table tr {
-    display: table-row;
-  }
-  .table-scrollable-container table td,
-.table-scrollable-container table th {
-    display: table-cell;
-    padding: 5px;
-  }
 }
 .table {
   font-family: "Lato","Open Sans","system-ui",sans-serif;
