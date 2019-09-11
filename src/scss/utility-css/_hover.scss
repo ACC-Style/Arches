@@ -114,12 +114,7 @@ a:focus {
 	color: $black !important;
 }
 
-%hover_text-decoration {
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
-}
+
 
 .hover\:underline,
 .h\:underline {
@@ -131,24 +126,27 @@ a:focus {
 .h\:underline-none,
 .h\:undecorated {
 	&:hover {
-		text-decoration-style: none !important;
+    text-decoration: none !important;
 	}
 }
 .hover\:dashed,
 .h\:dashed {
 	&:hover {
+    text-decoration: underline;
 		text-decoration-style: dashed;
 	}
 }
 .hover\:double,
 .h\:double {
 	&:hover {
+    text-decoration: underline;
 		text-decoration-style: double;
 	}
 }
 .hover\:dotted,
 .h\:dotted {
 	&:hover {
+    text-decoration: underline;
 		text-decoration-style: dotted;
 	}
 }

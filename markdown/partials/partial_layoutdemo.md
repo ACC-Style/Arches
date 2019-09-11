@@ -6,7 +6,9 @@
 	<p class="c_black m-y_3 max-w_5 lh_3">Demos layouts.</p>
 </div>
 
-
-
+<div class="m-x_3 m-t_3">
+<h1 class="font_slab c_acc"> Playground of Layouts</h1>
+<p>These pages have a collection of unique layouts, and components used through out the products of ACC.</p>
+</div>
 
 
