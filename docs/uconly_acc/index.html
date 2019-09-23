@@ -189,6 +189,601 @@
 <h2>Utility Class Overview</h2>
 <p><img src="../UCOverview.png" alt="Mind Map of Arches"></p>
 </div>
+<h2>Utility Classes</h2>
+<p>Utility classes are a distinct departure from many previous learned CSS theories, but what utility classes allow for is an excellent separation of concerns between the HTML and CSS. The singular focus for utility classes is a single class controls a single style in CSS. Utility Class has significant benefits of reducing scope expansion in the CSS and also gives greater flexibility of crafting user interface components that are currently undefined. Html should continually be written using the best standards for semantics, but it is no longer a concern to follow a components design pattern because it is applicable at the HTML level.</p>
+<h3>Naming Convention</h3>
+<p>Strathmore does have a learning curve, but to reduce the curve the names follow a strict pattern. State of the elements which then effects a single style at a defined value which only effects at a specific breakpoint. <a href="./Strathmore/#!/section/100"> read more</a></p>
+<h4>[pseudo state]:[style name]_[value+unit]-[modifier]:[break point]</h4>
+<p>An example of wanting the text color of an object when hovered to become the primary the color only when the screen is large would be h:c_primary:lg.</p>
+<h3>Definition of Style Short Hand</h3>
+<p>Strathmore utilizes an abbreviated naming convention for utility classes to save typing for developers and to also reduce overall files size.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>Short Name</th>
+<th>CSS</th>
+<th>Long Nmae</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>margin</td>
+<td>'.m'</td>
+<td>'margin'</td>
+<td>'.margin'</td>
+</tr>
+<tr>
+<td>margin-top</td>
+<td>'.m-t'</td>
+<td>'margin-top'</td>
+<td>'.margin-top'</td>
+</tr>
+<tr>
+<td>margin-bottom</td>
+<td>'.m-b'</td>
+<td>'margin-bottom'</td>
+<td>'.margin-bottom'</td>
+</tr>
+<tr>
+<td>margin-left</td>
+<td>'.m-l'</td>
+<td>'margin-left'</td>
+<td>'.margin-left'</td>
+</tr>
+<tr>
+<td>margin-right</td>
+<td>'.m-r'</td>
+<td>'margin-right'</td>
+<td>'.margin-right'</td>
+</tr>
+<tr>
+<td>overflow</td>
+<td>'.overflow'</td>
+<td>'overflow'</td>
+<td>'.overflow'</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>'.p'</td>
+<td>'padding'</td>
+<td>'.padding'</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>'.p-t'</td>
+<td>'padding-top'</td>
+<td>'.padding-top'</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>'.p-b'</td>
+<td>'padding-bottom'</td>
+<td>'.padding-bottom'</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>'.p-l'</td>
+<td>'padding-left'</td>
+<td>'.padding-left'</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>'.p-r'</td>
+<td>'padding-right'</td>
+<td>'.padding-right'</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>'.lh'</td>
+<td>'line-height'</td>
+<td>'.line-height'</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>'.font'</td>
+<td>'font-size'</td>
+<td>'.font-size'</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>'.font'</td>
+<td>'font-family'</td>
+<td>'.font-family'</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>'.font'</td>
+<td>'font-weight'</td>
+<td>'.font-weight'</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>'.font'</td>
+<td>'font-style'</td>
+<td>'.font-style'</td>
+</tr>
+<tr>
+<td>color</td>
+<td>'.c'</td>
+<td>'color'</td>
+<td>'.color'</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>'.bg'</td>
+<td>'background-color'</td>
+<td>'.back'</td>
+</tr>
+<tr>
+<td>border-color</td>
+<td>'.br'</td>
+<td>'border-color'</td>
+<td>'.border'</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>'.br'</td>
+<td>'border-radius'</td>
+<td>'.border-radius'</td>
+</tr>
+<tr>
+<td>border-top-right-radius</td>
+<td>'.br-tr'</td>
+<td>'border-top-right-radius'</td>
+<td>'.border-top-right-radius'</td>
+</tr>
+<tr>
+<td>border-top-left-radius</td>
+<td>'.br-tl'</td>
+<td>'border-top-left-radius'</td>
+<td>'.border-top-left-radius'</td>
+</tr>
+<tr>
+<td>border-bottom-right-radius</td>
+<td>'.br-br'</td>
+<td>'border-bottom-right-radius'</td>
+<td>'.border-bottom-right-radius'</td>
+</tr>
+<tr>
+<td>border-bottom-left-radius</td>
+<td>'.br-bl'</td>
+<td>'border-bottom-left-radius'</td>
+<td>'.border-bottom-left-radius'</td>
+</tr>
+<tr>
+<td>border-width</td>
+<td>'.br'</td>
+<td>'border-width'</td>
+<td>'.border-width'</td>
+</tr>
+<tr>
+<td>border-top-width</td>
+<td>'.br-t'</td>
+<td>'border-top-width'</td>
+<td>'.border-top-width'</td>
+</tr>
+<tr>
+<td>border-right-width</td>
+<td>'.br-r'</td>
+<td>'border-right-width'</td>
+<td>'.border-right-width'</td>
+</tr>
+<tr>
+<td>border-left-width</td>
+<td>'.br-l'</td>
+<td>'border-left-width'</td>
+<td>'.border-left-width'</td>
+</tr>
+<tr>
+<td>border-bottom-width</td>
+<td>'.br-b'</td>
+<td>'border-bottom-width'</td>
+<td>'.border-bottom-width'</td>
+</tr>
+<tr>
+<td>width</td>
+<td>'.w'</td>
+<td>'width'</td>
+<td>'.width'</td>
+</tr>
+<tr>
+<td>display</td>
+<td>'.d'</td>
+<td>'display'</td>
+<td>'.display'</td>
+</tr>
+<tr>
+<td>max-width</td>
+<td>'.max-w'</td>
+<td>'max-width'</td>
+<td>'.max-width'</td>
+</tr>
+</tbody>
+</table>
+<h3>pseudo states</h3>
+<table>
+<thead>
+<tr>
+<th>states</th>
+<th>Short Name</th>
+<th>CSS</th>
+<th>Long Name</th>
+<th>Currently Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hover</td>
+<td>'h:'</td>
+<td>':hover'</td>
+<td>'hover'</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><s>active</s></td>
+<td><s>'a:'</s></td>
+<td>':active'</td>
+<td>'active'</td>
+<td><span class="c_alert">No</span></td>
+</tr>
+<tr>
+<td><s>visited</s></td>
+<td><s>'v:'</s></td>
+<td>':visited'</td>
+<td>'hover'</td>
+<td><span class="c_alert">No</span></td>
+</tr>
+</tbody>
+</table>
+<h3>Values</h3>
+<table>
+<thead>
+<tr>
+<th>Value Postfix</th>
+<th>Font Size</th>
+<th>Margin</th>
+<th>Padding</th>
+<th>Line Height</th>
+<th>border-width</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n5</td>
+<td>ms(-5)</td>
+<td>-2 * X<sup>†</sup></td>
+<td>Not Used</td>
+<td>Not Used</td>
+<td>Not Used</td>
+<td>mix(color, black, 90%)</td>
+</tr>
+<tr>
+<td>n4</td>
+<td>ms(-4)</td>
+<td>-1 * X<sup>†</sup></td>
+<td>Not Used</td>
+<td>Not Used</td>
+<td>Not Used</td>
+<td>mix(color, black, 70%)</td>
+</tr>
+<tr>
+<td>n3</td>
+<td>ms(-3)</td>
+<td>-.5 * X<sup>†</sup></td>
+<td>Not Used</td>
+<td>Not Used</td>
+<td>Not Used</td>
+<td>mix(color, black, 50%)</td>
+</tr>
+<tr>
+<td>n2</td>
+<td>ms(-2)</td>
+<td>-.25 * X<sup>†</sup></td>
+<td>Not Used</td>
+<td>Not Used</td>
+<td>Not Used</td>
+<td>mix(color, black, 30%)</td>
+</tr>
+<tr>
+<td>n1</td>
+<td>ms(-1)</td>
+<td>-.1 * X<sup>†</sup></td>
+<td>Not Used</td>
+<td>Not Used</td>
+<td>Not Used</td>
+<td>mix(color, black, 10%)</td>
+</tr>
+<tr>
+<td>0</td>
+<td>ms(0)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>color @ 100%</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ms(1)</td>
+<td>.1 * X<sup>†</sup></td>
+<td>.1 * X<sup>†</sup></td>
+<td>1</td>
+<td>1px</td>
+<td>mix(color, white, 10%)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ms(2)</td>
+<td>.25 * X<sup>†</sup></td>
+<td>.25 * X<sup>†</sup></td>
+<td>1.45</td>
+<td>3px</td>
+<td>mix(color, white, 30%)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ms(3)</td>
+<td>.5 * X<sup>†</sup></td>
+<td>5 * X<sup>†</sup></td>
+<td>1.65</td>
+<td>5px</td>
+<td>mix(color, white, 50%)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ms(4)</td>
+<td>1 * X<sup>†</sup></td>
+<td>1 * X<sup>†</sup></td>
+<td>1.75</td>
+<td>.5rem</td>
+<td>mix(color, white, 70%)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ms(5)</td>
+<td>2 * X<sup>†</sup></td>
+<td>2 * X<sup>†</sup></td>
+<td>2</td>
+<td>1rem</td>
+<td>mix(color, white, 90%)</td>
+</tr>
+</tbody>
+</table>
+<p><sup>†</sup> x = global spacing 1 rem</p>
+<h3>Break Points</h3>
+<table>
+<thead>
+<tr>
+<th>break point</th>
+<th>Short Name</th>
+<th>css</th>
+<th>dimension</th>
+<th>Currently Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>all sizes</td>
+<td>''</td>
+<td>min-width: 0em</td>
+<td>0px</td>
+<td>default</td>
+</tr>
+<tr>
+<td><s>small</s></td>
+<td>':sm'</td>
+<td>min-width: 30em</td>
+<td>480px</td>
+<td><span class="c_alert">No</span></td>
+</tr>
+<tr>
+<td>medium</td>
+<td>':md'</td>
+<td>min-width: 40em</td>
+<td>640px</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>large</td>
+<td>':lg'</td>
+<td>min-width: 40em</td>
+<td>1024px</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3>Alternate Values</h3>
+<h4>Border Radius</h4>
+<table>
+<thead>
+<tr>
+<th>Value Postfix</th>
+<th>Border Radius Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>square</td>
+<td>0</td>
+</tr>
+<tr>
+<td>radius</td>
+<td>5px or Global Radius</td>
+</tr>
+<tr>
+<td>round</td>
+<td>25px</td>
+</tr>
+<tr>
+<td>circle</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h4>Border Style</h4>
+<table>
+<thead>
+<tr>
+<th>Value Postfix</th>
+<th>Border Style Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>dashed</td>
+<td>dashed</td>
+</tr>
+<tr>
+<td>solid</td>
+<td>solid</td>
+</tr>
+</tbody>
+</table>
+<h4>Display</h4>
+<table>
+<thead>
+<tr>
+<th>Value Postfix</th>
+<th>Display</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>block</td>
+<td>block</td>
+</tr>
+<tr>
+<td>inline</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>inline-block</td>
+<td>inline-block</td>
+</tr>
+<tr>
+<td>flex</td>
+<td>flex</td>
+</tr>
+</tbody>
+</table>
+<h4>Overflow</h4>
+<table>
+<thead>
+<tr>
+<th>Value Postfix</th>
+<th>Overflow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>auto</td>
+</tr>
+<tr>
+<td>clip</td>
+<td>clip</td>
+</tr>
+<tr>
+<td>scroll</td>
+<td>scroll</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>hidden</td>
+</tr>
+<tr>
+<td>ellipsis</td>
+<td>ellipsis</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>visible</td>
+</tr>
+<tr>
+<td>unset</td>
+<td>unset</td>
+</tr>
+</tbody>
+</table>
+<div class="mw-readable m-r_5">
+<h2>Reserved Names</h2>
+<h3>Reserved Words and Modifier Descriptors</h3>
+<p>These words should be used to describe states and generic elements of the UI and should be used instead of some variation or alternate name.</p>
+<h3>Component Name Modifier</h3>
+<p>Components styling is most are</p>
+<ul>
+<li>** -container ** or UI Name with no modifier (Use instead of holder when items are UI based)</li>
+<li>** -group ** or UI Name with no modifier (Use instead of list, holder, collection when items or repeatable Content)</li>
+<li>** -item ** or UI Name with no modifier (generic child of container or group)</li>
+<li>** -separator ** (a visual treatment or break between items within a container or group )</li>
+</ul>
+<h3>States</h3>
+<ul>
+<li>show</li>
+<li>hide</li>
+<li>is-active</li>
+<li>is-complete</li>
+<li>is-disabled</li>
+<li>is-current</li>
+<li>is-selected</li>
+<li>focus</li>
+<li>success</li>
+<li>hover</li>
+<li>warning</li>
+<li>alert (Depreciate the use of ‘error’ for the native descriptor from foundation)</li>
+<li>primary</li>
+<li>secondary</li>
+<li>reverse</li>
+</ul>
+<h2>Colors</h2>
+<ul>
+<li>Scrub Colors
+<ul>
+<li>-ACC Blue</li>
+<li>-primary teal</li>
+<li>-blue</li>
+<li>-purple</li>
+<li>-magenta</li>
+</ul>
+</li>
+<li>State Colors
+<ul>
+<li>-success, -green</li>
+<li>-warning, -orange</li>
+<li>-alert, -red</li>
+<li>-primary, -productColor</li>
+<li>-secondary</li>
+<li>-highlight</li>
+</ul>
+</li>
+<li>Black</li>
+<li>White</li>
+<li>Black and White have transparencies
+<ul>
+<li>-10 alpha,</li>
+<li>-20 alpha,</li>
+<li>-30 alpha,</li>
+<li>-40 alpha,</li>
+<li>-50 alpha,</li>
+<li>-60 alpha,</li>
+<li>-70 alpha,</li>
+<li>-80 alpha,</li>
+<li>-90 alpha</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 
                 </article>
