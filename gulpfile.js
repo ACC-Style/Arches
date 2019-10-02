@@ -74,7 +74,7 @@ gulp.task("style", function() {
 		mergeRules({})
 	];
 	var css = gulp
-		.src(PATHS.ALLSCSS)
+		.src(PATHS.ALLSCSSg)
 		.pipe(sourcemaps.init())
 		.pipe(sass().on("error", sass.logError))
 		.pipe(postcss(plugins));
