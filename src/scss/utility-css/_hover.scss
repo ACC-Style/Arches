@@ -57,14 +57,12 @@ a:focus {
     color: inherit;
   }
 }
-%hover_transition-in {
+%hover_transition-in,
+*[class*="hover:c"],
+*[class*=" h:c"] {
   transition: all ease-in 0.2s; // used for text
 }
 
-*[class*="hover:c"],
-*[class*=" h:c"] {
-  @extend %hover_transition-in;
-}
 @each $color-name, $color in $theme-palette {
   @include hover-loop("background-color", $color-name, $color);
   @include hover-loop("color", $color-name, $color);
