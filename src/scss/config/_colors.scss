@@ -28,6 +28,48 @@ $pink: #e83e8c !default;
 $yellow: #ffc107 !default;
 $cyan: #17a2b8 !default;
 
+$gray-100: mix($white, $black, 10%) !default;
+$gray-200: mix($white, $black, 20%) !default;
+$gray-300: mix($white, $black, 30%) !default;
+$gray-400: mix($white, $black, 40%) !default;
+$gray-500: mix($white, $black, 50%) !default;
+$gray-600: mix($white, $black, 60%) !default;
+$gray-700: mix($white, $black, 70%) !default;
+$gray-800: mix($white, $black, 80%) !default;
+$gray-900: mix($white, $black, 90%) !default;
+
+$grays: map-merge(
+	(
+		'100': $gray-100,
+		'200': $gray-200,
+		'300': $gray-300,
+		'400': $gray-400,
+		'500': $gray-500,
+		'600': $gray-600,
+		'700': $gray-700,
+		'800': $gray-800,
+		'900': $gray-900
+	),
+	$grays
+);
+$colors: map-merge(
+	(
+		'blue': $blue,
+		'indigo': $indigo,
+		'purple': $purple,
+		'pink': $pink,
+		'red': $red,
+		'orange': $orange,
+		'yellow': $yellow,
+		'green': $green,
+		'teal': $teal,
+		'cyan': $cyan,
+		'white': $white,
+		'gray': $gray-600,
+		'gray-dark': $gray-800
+	),
+	$colors
+);
 $theme-palette: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-palette: map-merge(
@@ -45,7 +87,6 @@ $theme-palette: map-merge(
 	),
 	$theme-palette
 );
-
 
 /*
 

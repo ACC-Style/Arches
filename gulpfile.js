@@ -307,6 +307,25 @@ var buildbrand = function(base, brand, framework) {
 					)
 				);
 			break;
+		case "cardiosmart":
+			construct
+				.pipe(
+					header("/** Built With CardioSmart Branding **/", {
+						pkg: pkg
+					})
+				)
+				.pipe(
+					header(
+						fs.readFileSync(
+							PATHS.SCSS + "/gulp_header/__brand.cardiosmart.scss",
+							"utf8"
+						),
+						{
+							pkg: pkg
+						}
+					)
+				);
+			break;
 		default:
 			construct
 				.pipe(
@@ -599,7 +618,7 @@ gulp.task("styleguide", function() {
 
 gulp.task(
 	"build",
-	gulp.series("construct", "style", "dist", "copy", "markdown", "styleguide")
+	gulp.series("construct", "style", "copy", "markdown", "styleguide")
 );
 gulp.task("md", gulp.series("markdown", "styleguide"));
 gulp.task("default", gulp.series("build", "watch"));
