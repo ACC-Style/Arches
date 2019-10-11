@@ -1,0 +1,169 @@
+/**
+ * arches - Global style system focused on utility classes
+ * @version v1.1.0
+ * @link https://github.com/ACC-Style/Arches/
+ */
+/**  Pre Header - modular scale default break points utility    *********************************/
+/**  Version: 1.1.0    *********************************/
+// Consider using https://www.purgecss.com/ to remove styles not used in the project.
+$debug-trace: false !default;
+$name-mode: "SHORT" !default; // $name-mode: "SHORT","LONG","ALL"
+$ms-base: 1rem !default; // needs to be in rem's
+$colors: ();
+$grays: ();
+$theme-palette: ();
+@import "helpers/helpers";
+@import "vendor/modular-scale";
+@import "config/utility-css.vars";
+@import "helpers/breakpoint";
+%font-awesome-pro {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 900;
+}
+/** Start of BRANDINGBUILD 0 **//**  ACC Brands    *********************************/
+$teal: #009db1;
+$dark-blue: #015697;
+$dark-grey: #676a72;
+$alt-grey: #a3988c;
+$green: #078a2e;
+$yellow: #ffc423;
+$orange: #e9901a;
+$red: #dd1a1a;
+$blue: #2b58c0;
+$purple: #7742bd;
+$magenta: #c34198;
+$acc-blue: #004176;
+$white: rgb(255, 255, 255);
+$black: rgb(19, 18, 18);
+$real-black: #000;
+
+$theme-palette: map-merge(
+	$theme-palette,
+	(
+		primary: $dark-blue,
+		secondary: $teal,
+		success: $green,
+		warning: $orange,
+		alert: $red,
+		navigation: $blue,
+		accent: $orange,
+		info: $alt-grey,
+		highlight: $yellow,
+		acc: $acc-blue
+	)
+);
+@debug 'brand cardiosmart added theme accent ' + map-get($map: $theme-palette, $key: accent);
+
+$fonts: (
+	slab: (
+		name: 'Roboto Slab',
+		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"'
+	),
+	display: (
+		name: 'Maven Pro',
+		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif'
+	),
+	copy: (
+		name: 'Muli',
+		stack: '"Muli","Open Sans","system",sans-serif'
+	),
+	ui: (
+		name: 'Open Sans',
+		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+	)
+);
+
+// Reset Values of Utlity-css.vars.scss
+$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'slab', map-deep-get($fonts, 'slab', 'stack'));
+$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'display', map-deep-get($fonts, 'display', 'stack'));
+$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'copy', map-deep-get($fonts, 'copy', 'stack'));
+
+// reset all the references for the fonts
+$style-definition: map-deep-set(
+	$style-definition,
+	'font-family' 'unit' 'slab',
+	unquote(map-deep-get($value-to-unit, 'font-family', 'slab'))
+);
+$style-definition: map-deep-set(
+	$style-definition,
+	'font-family' 'unit' 'display',
+	unquote(map-deep-get($value-to-unit, 'font-family', 'display'))
+);
+$style-definition: map-deep-set(
+	$style-definition,
+	'font-family' 'unit' 'copy',
+	unquote(map-deep-get($value-to-unit, 'font-family', 'copy'))
+);
+$style-definition: map-deep-set(
+	$style-definition,
+	'font-family' 'unit' 'ui',
+	unquote(map-deep-get($value-to-unit, 'font-family', 'ui'))
+);
+
+$global-radus-on: false;
+$global-border-radius: 6px;
+$value-to-unit: map-deep-set($value-to-unit, 'radius' 'radius', $global-border-radius);
+$global-border-round: 25px;
+$value-to-unit: map-deep-set($value-to-unit, 'radius' 'round', $global-border-round);
+$basicSizeMultiplier: 1rem;
+
+$h1-font-size: map-deep-get($value-to-unit, font-size, 5);
+$h2-font-size: map-deep-get($value-to-unit, font-size, 4);
+$h3-font-size: map-deep-get($value-to-unit, font-size, 3);
+$h4-font-size: map-deep-get($value-to-unit, font-size, 2);
+$h5-font-size: map-deep-get($value-to-unit, font-size, 1);
+$h6-font-size: map-deep-get($value-to-unit, font-size, 0);
+
+$font-size-base: $base-font-size-rem; // Assumes the browser default, typically `16px`
+$font-size-lg: map-deep-get($value-to-unit, font-size, 2);
+$font-size-sm: map-deep-get($value-to-unit, font-size, n1);
+/** Built With CardioSmart Branding **//**  Default Brands    *********************************/
+/**  Colors  **/
+
+@import "config/colors";
+/**  Fonts  **/
+@import "config/fonts";
+/**  Textures  **/
+@import "config/textures";
+/**  Logos  **/
+@import "config/logo";
+
+
+$font-family-sans-serif: "Muli", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+/**  Default Setup  Not sure what this is doing    *********************************/
+/** changing default names to be used with frameworks. **/
+/** Base UC File **/// ACC Design Alterations
+@import "base/base";
+@import "components/logo";
+
+@import "components/interactive-extras";
+
+@import "styleguide/styleguide";
+@import "styleguide/__basic-html.base";
+@import "containers/containers";
+/*
+Scrollable Table
+
+Tables are often the bane of small veiw ports. This `table` design swaps to a scroll left functionality when the view port is smaller then mobile. 
+
+
+
+
+Markup:
+<div class="bg_secondary-2 max-w_1"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
+
+Styleguide Recipes.Scrollable
+
+*//* content Recipes.200 */
+
+/**  Utility Classes    *********************************/
+@import "utility-css/utility-css";
+
+/**  No Framework Recipes    *********************************/
+@import "recipes/__recipes.base";

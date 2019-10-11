@@ -74,7 +74,7 @@ gulp.task("style", function() {
 		mergeRules({})
 	];
 	var css = gulp
-		.src(PATHS.ALLSCSSg)
+		.src(PATHS.ALLSCSS)
 		.pipe(sourcemaps.init())
 		.pipe(sass().on("error", sass.logError))
 		.pipe(postcss(plugins));
@@ -153,6 +153,8 @@ gulp.task("markdown", function() {
 	var home = markdownbuild(base, "home");
 	var cvqualtiy = markdownbuild(base, "cvqualityboot");
 	var accfoundation = markdownbuild(base, "accfoundation");
+	var cardiosmartfoundation = markdownbuild(base, "cardiosmartfoundation");
+	var cardiosmartboot = markdownbuild(base, "cardiosmartboot");
 	var noframework = markdownbuild(base, "noframework");
 	var accboot = markdownbuild(base, "accboot");
 	var layoutdemo = markdownbuild(base, "layoutdemo");
@@ -164,7 +166,9 @@ gulp.task("markdown", function() {
 		accfoundation,
 		noframework,
 		layoutdemo,
-		colorcodes
+		colorcodes,
+		cardiosmartfoundation,
+		cardiosmartboot
 	)
 		.pipe(
 			header(
@@ -443,8 +447,11 @@ gulp.task("construct", function() {
 			})
 		);
 
-	var noframe_acc = buildbrand(baseUC, "acc", "").pipe(rename("uc_acc.scss"));
-	var noframe_cvquality = buildbrand(baseUC, "cvquality", "").pipe(
+	var uc_acc = buildbrand(baseUC, "acc", "").pipe(rename("uc_acc.scss"));
+	var uc_cardiosmart = buildbrand(baseUC, "cardiosmart", "").pipe(
+		rename("uc_cardiosmart.scss")
+	);
+	var uc_cvquality = buildbrand(baseUC, "cvquality", "").pipe(
 		rename("uc_cvquality.scss")
 	);
 	var colors = base.pipe(clone()).pipe(
@@ -479,6 +486,29 @@ gulp.task("construct", function() {
 			)
 		);
 	zurb_acc = buildbrand(zurb_acc, "acc", "zurb");
+	var zurb_cardiosmart = base
+		.pipe(clone())
+		.pipe(rename("zurb_cardiosmart.scss"))
+		.pipe(
+			header(
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.zurb.scss", "utf8"),
+				{
+					pkg: pkg
+				}
+			)
+		)
+		.pipe(
+			header(
+				fs.readFileSync(
+					PATHS.SCSS + "/components/__components.zurb.scss",
+					"utf8"
+				),
+				{
+					pkg: pkg
+				}
+			)
+		);
+	zurb_cardiosmart = buildbrand(zurb_cardiosmart, "cardiosmart", "zurb");
 	var boot_acc = base
 		.pipe(clone())
 		.pipe(rename("boot_acc.scss"))
@@ -521,6 +551,48 @@ gulp.task("construct", function() {
 			)
 		);
 	boot_acc = buildbrand(boot_acc, "acc", "bootstrap");
+	var boot_cardiosmart = base
+		.pipe(clone())
+		.pipe(rename("boot_cardiosmart.scss"))
+		.pipe(
+			header(
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.acc.scss", "utf8"),
+				{
+					pkg: pkg
+				}
+			)
+		)
+		.pipe(
+			header(
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.boot.scss", "utf8"),
+				{
+					pkg: pkg
+				}
+			)
+		)
+		.pipe(
+			header(
+				fs.readFileSync(
+					PATHS.SCSS + "/components/__components.acc.scss",
+					"utf8"
+				),
+				{
+					pkg: pkg
+				}
+			)
+		)
+		.pipe(
+			header(
+				fs.readFileSync(
+					PATHS.SCSS + "/components/__components.boot.scss",
+					"utf8"
+				),
+				{
+					pkg: pkg
+				}
+			)
+		);
+	boot_cardiosmart = buildbrand(boot_cardiosmart, "cardiosmart", "bootstrap");
 	var boot_cvquality = base
 		.pipe(clone())
 		.pipe(rename("boot_cvquality.scss"))
@@ -578,8 +650,11 @@ gulp.task("construct", function() {
 	return merge(
 		zurb_acc,
 		boot_acc,
-		noframe_acc,
-		noframe_cvquality,
+		uc_acc,
+		zurb_cardiosmart,
+		boot_cardiosmart,
+		uc_cardiosmart,
+		uc_cvquality,
 		boot_cvquality,
 		colors
 	)
@@ -612,7 +687,7 @@ gulp.task("watch", function() {
 
 gulp.task("styleguide", function() {
 	return run(
-		"npm run index && npm run uc && npm run zurb_acc &&  npm run boot_acc &&  npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes"
+		"npm run index && npm run uc && npm run zurb_acc &&  npm run boot_acc &&  npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run zurb_cardiosmart"
 	).exec();
 });
 
