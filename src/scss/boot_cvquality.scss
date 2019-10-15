@@ -64,46 +64,33 @@ $scrub-teal-dark: #047294;
 $mix-teal_orange: #58b5a5;
 $mix-orange_teal: #acbd65;
 
-.c_accent-alt {
-	color: $orange-light !important;
+.c_primary-alt {
+	color: $soft-blue !important;
 }
+.h\:c_primary-alt:hover {
+	color: $soft-blue !important;
+}
+.br_primary-alt {
+	background-color: $soft-blue !important;
+}
+.bg_primary-alt {
+	background-color: $soft-blue !important;
+}
+
 .c_mix-teal-orange {
 	color: $mix-teal_orange !important;
 }
 .c_mix-orange-teal {
 	color: $mix-orange_teal !important;
 }
-.c_primary-alt {
-	color: $soft-blue !important;
-}
-.c_accent-alt {
-	color: $orange-light !important;
-}
-.h\:c_primary-alt:hover {
-	color: $soft-blue !important;
-}
-.h\:c_accent-alt:hover {
-	color: $orange-light !important;
-}
 
-.br_accent-alt {
-	border-color: $orange-light !important;
-}
 .br_mix-teal-orange {
 	border-color: $mix-teal_orange !important;
 }
 .br_mix-orange-teal {
 	border-color: $mix-orange_teal !important;
 }
-.br__primary-alt {
-	background-color: $mix-orange_teal !important;
-}
-.bg_primary-alt {
-	background-color: $soft-blue !important;
-}
-.bg_accent-alt {
-	background-color: $orange-light !important;
-}
+
 .bg_mix-teal-orange {
 	background-color: $mix-teal_orange !important;
 }
@@ -115,9 +102,9 @@ $mix-orange_teal: #acbd65;
 
 	These Alternate colors are single use to embelish a design. These colors <strong>DO NOT</strong> have extra modifiers.    
 
-	.bg_accent-alt            	- light orange
+	.bg_primary-alt				-	Primary Alt
 	.bg_mix-teal-orange			-	Mix of 60% Teal And 40% Orange 
-	.bg_mix-orange-teal				-	Mix of 60% Orange and 40% Teal 	
+	.bg_mix-orange-teal			-	Mix of 60% Orange and 40% Teal 	
 
 
 	Markup:
@@ -131,8 +118,8 @@ $mix-orange_teal: #acbd65;
 
 	These Alternate colors are single use to embelish a design. These colors <strong>DO NOT</strong> have extra modifiers.    
 
-	.br_accent-alt            	- light orange
-	.br_mix-teal-orange			-	Mix of 60% Teal And 40% Orange 
+	.br_primary-alt            	- light orange
+	.br_mix-teal-orange				-	Mix of 60% Teal And 40% Orange 
 	.br_mix-orange-teal				-	Mix of 60% Orange and 40% Teal 	
 
 
@@ -175,18 +162,19 @@ $theme-palette: map-merge(
 	$theme-palette,
 	(
 		primary: $teal,
-		secondary: $grey-secondary,
+		secondary: $orange-dark,
+		shade: $grey-secondary,
 		success: $green,
 		warning: $orange-light,
 		alert: $error-color,
 		navigation: $blue,
-		accent: $orange-dark,
+		accent: $orange-light,
 		info: $alt-grey,
 		highlight: $scrub-teal-light,
 		acc: $acc-blue
 	)
 );
-@debug 'brand CVQuality theme accent is ' + map-get($map: $theme-palette, $key: accent);
+@debug "brand CVQuality theme accent is " + map-get($map: $theme-palette, $key: accent);
 
 $primary: $scrub-teal;
 $secondary: $warm-grey-dark;
@@ -197,43 +185,41 @@ $danger: $error-color;
 $light: $warm-grey-light;
 $dark: $warm-grey-dark;
 
-
-
 $fonts: (
 	display: (
-		name: 'Maven Pro',
+		name: "Maven Pro",
 		stack: '"Maven Pro",Verdana,Helvetica,sans-serif;'
 	),
 	copy: (
-		name: 'Lato',
+		name: "Lato",
 		stack: '"Lato","Open Sans","system-ui",sans-serif'
 	),
 	ui: (
-		name: 'Lato',
+		name: "Lato",
 		stack: '"Lato","Open Sans","system-ui",sans-serif'
 	)
 );
 
 // Reset Values of Utlity-css.vars.scss
 
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'display', map-deep-get($fonts, 'display', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'copy', map-deep-get($fonts, 'copy', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'ui', map-deep-get($fonts, 'ui', 'stack'));
+$value-to-unit: map-deep-set($value-to-unit, "font-family" "display", map-deep-get($fonts, "display", "stack"));
+$value-to-unit: map-deep-set($value-to-unit, "font-family" "copy", map-deep-get($fonts, "copy", "stack"));
+$value-to-unit: map-deep-set($value-to-unit, "font-family" "ui", map-deep-get($fonts, "ui", "stack"));
 
 $style-definition: map-deep-set(
 	$style-definition,
-	'font-family' 'unit' 'display',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'display'))
+	"font-family" "unit" "display",
+	unquote(map-deep-get($value-to-unit, "font-family", "display"))
 );
 $style-definition: map-deep-set(
 	$style-definition,
-	'font-family' 'unit' 'copy',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'copy'))
+	"font-family" "unit" "copy",
+	unquote(map-deep-get($value-to-unit, "font-family", "copy"))
 );
 $style-definition: map-deep-set(
 	$style-definition,
-	'font-family' 'unit' 'ui',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'ui'))
+	"font-family" "unit" "ui",
+	unquote(map-deep-get($value-to-unit, "font-family", "ui"))
 );
 
 $global-radus-on: false;
@@ -270,7 +256,7 @@ $font-size-base: $base-font-size-rem; // Assumes the browser default, typically 
 $font-size-lg: map-deep-get($value-to-unit, font-size, 2);
 $font-size-sm: map-deep-get($value-to-unit, font-size, 0);
 
-@import 'config/cvquality/cvquality.gradients';
+@import "config/cvquality/cvquality.gradients";
 /** Built With CVQuality Branding **//**  Default Brands    *********************************/
 /**  Colors  **/
 
