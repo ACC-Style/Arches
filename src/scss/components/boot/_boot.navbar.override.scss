@@ -1,13 +1,13 @@
 $navbar-font_primary: $font_slab !default;
-$navbar-font_secondary: $font_ui !default;
+$navbar-font_shade: $font_ui !default;
 $navbar-color_primary: map-get($theme-palette, acc);
-$navbar-color_secondary: map-get($theme-palette, accent);
+$navbar-color_shade: map-get($theme-palette, accent);
 
 .navbar {
 	font-family: $navbar-font_primary;
 }
 .dropdown-menu {
-	font-family: $navbar-font_secondary;
+	font-family: $navbar-font_shade;
 }
 .nav-link {
 	padding-left: $padding_2;
@@ -23,7 +23,7 @@ $navbar-color_secondary: map-get($theme-palette, accent);
 		&.active,
 		&.show,
 		&:hover {
-			border-top-color: $navbar-color_secondary;
+			border-top-color: $navbar-color_shade;
 			border-bottom-color: #fff;
 			background-color: #fff;
 			.nav-link {
@@ -39,7 +39,7 @@ $navbar-color_secondary: map-get($theme-palette, accent);
 		&.active,
 		&.show,
 		&:hover {
-			border-top-color: $navbar-color_secondary;
+			border-top-color: $navbar-color_shade;
 			border-bottom-color: #fff;
 			background-color: #fff;
 			.nav-link {

@@ -17,7 +17,7 @@ Styleguide hover
 
   bg_alert              - background color modified light to dark
   bg_primary              - background color modified light to dark
-  bg_secondary              - background color modified light to dark
+  bg_shade              - background color modified light to dark
   bg_info              - background color modified light to dark
   bg_highlight              - background color success color
   bg_success              - background color modified light to dark
@@ -25,17 +25,17 @@ Styleguide hover
 
   Markup:
   <div class="flex m_5">
-    <div class="h:{{modifier_class}}-5 flex_auto text_center br_1 br_solid br_secondary-4 p_2">5</div>
-    <div class="h:{{modifier_class}}-4 flex_auto text_center br_1 br_solid br_secondary-4 p_2">4</div>
-    <div class="h:{{modifier_class}}-3 flex_auto text_center br_1 br_solid br_secondary-4 p_2">3</div>
-    <div class="h:{{modifier_class}}-2 flex_auto text_center br_1 br_solid br_secondary-4 p_2">2</div>
-    <div class="h:{{modifier_class}}-1 flex_auto text_center br_1 br_solid br_secondary-4 p_2">1</div>
-    <div class="h:{{modifier_class}}-0 flex_auto text_center br_1 br_solid br_secondary-4 p_2">0</div>
-    <div class="h:{{modifier_class}}-n1 flex_auto text_center br_1 br_solid br_secondary-4 p_2 h:c_white">n1</div>
-    <div class="h:{{modifier_class}}-n2 flex_auto text_center br_1 br_solid br_secondary-4 p_2 h:c_white">n2</div>
-    <div class="h:{{modifier_class}}-n3 flex_auto text_center br_1 br_solid br_secondary-4 p_2 h:c_white">n3</div>
-    <div class="h:{{modifier_class}}-n4 flex_auto text_center br_1 br_solid br_secondary-4 p_2 h:c_white">n4</div>
-    <div class="h:{{modifier_class}}-n5 flex_auto text_center br_1 br_solid br_secondary-4 p_2 h:c_white">n5</div>
+    <div class="h:{{modifier_class}}-5 flex_auto text_center br_1 br_solid br_shade-4 p_2">5</div>
+    <div class="h:{{modifier_class}}-4 flex_auto text_center br_1 br_solid br_shade-4 p_2">4</div>
+    <div class="h:{{modifier_class}}-3 flex_auto text_center br_1 br_solid br_shade-4 p_2">3</div>
+    <div class="h:{{modifier_class}}-2 flex_auto text_center br_1 br_solid br_shade-4 p_2">2</div>
+    <div class="h:{{modifier_class}}-1 flex_auto text_center br_1 br_solid br_shade-4 p_2">1</div>
+    <div class="h:{{modifier_class}}-0 flex_auto text_center br_1 br_solid br_shade-4 p_2">0</div>
+    <div class="h:{{modifier_class}}-n1 flex_auto text_center br_1 br_solid br_shade-4 p_2 h:c_white">n1</div>
+    <div class="h:{{modifier_class}}-n2 flex_auto text_center br_1 br_solid br_shade-4 p_2 h:c_white">n2</div>
+    <div class="h:{{modifier_class}}-n3 flex_auto text_center br_1 br_solid br_shade-4 p_2 h:c_white">n3</div>
+    <div class="h:{{modifier_class}}-n4 flex_auto text_center br_1 br_solid br_shade-4 p_2 h:c_white">n4</div>
+    <div class="h:{{modifier_class}}-n5 flex_auto text_center br_1 br_solid br_shade-4 p_2 h:c_white">n5</div>
   </div>
 
   Weight: 30
@@ -44,29 +44,29 @@ Styleguide hover
  
  */
 a:focus {
-  color: unset;
+	color: unset;
 }
 %hover_transition,
 *[class*=" hover:"],
 *[class*=" h\:"] {
-  transition: all ease-out 0.2s; // used for backgrounds
-  cursor: pointer;
-  &:focus {
-    background-color: inherit;
-    border-color: inherit;
-    color: inherit;
-  }
+	transition: all ease-out 0.2s; // used for backgrounds
+	cursor: pointer;
+	&:focus {
+		background-color: inherit;
+		border-color: inherit;
+		color: inherit;
+	}
 }
 %hover_transition-in,
 *[class*="hover:c"],
 *[class*=" h:c"] {
-  transition: all ease-in 0.2s; // used for text
+	transition: all ease-in 0.2s; // used for text
 }
 
 @each $color-name, $color in $theme-palette {
-  @include hover-loop("background-color", $color-name, $color);
-  @include hover-loop("color", $color-name, $color);
-  @include hover-loop("border-color", $color-name, $color);
+	@include hover-loop("background-color", $color-name, $color);
+	@include hover-loop("color", $color-name, $color);
+	@include hover-loop("border-color", $color-name, $color);
 }
 
 /*
@@ -75,7 +75,7 @@ a:focus {
   hovers can easily be added to change the text color by adding `hover:` or `h:` in front of the text color utility like `h:primary`
 
   c_primary              - text color modified light to dark
-  c_secondary              - text color modified light to dark
+  c_shade              - text color modified light to dark
   c_info              - text color modified light to dark
   c_highlight              - text color success color
   c_success              - text color modified light to dark
@@ -84,17 +84,17 @@ a:focus {
 
   Markup:
   <div class="flex m_5">
-    <div class="h:{{modifier_class}}-5 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">5</div>
-    <div class="h:{{modifier_class}}-4 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">4</div>
-    <div class="h:{{modifier_class}}-3 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">3</div>
-    <div class="h:{{modifier_class}}-2 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">2</div>
-    <div class="h:{{modifier_class}}-1 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">1</div>
-    <div class="h:{{modifier_class}}-0 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">0</div>
-    <div class="h:{{modifier_class}}-n1 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1 ">n1</div>
-    <div class="h:{{modifier_class}}-n2 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1 ">n2</div>
-    <div class="h:{{modifier_class}}-n3 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1 ">n3</div>
-    <div class="h:{{modifier_class}}-n4 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1 ">n4</div>
-    <div class="h:{{modifier_class}}-n5 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1 ">n5</div>
+    <div class="h:{{modifier_class}}-5 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">5</div>
+    <div class="h:{{modifier_class}}-4 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">4</div>
+    <div class="h:{{modifier_class}}-3 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">3</div>
+    <div class="h:{{modifier_class}}-2 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">2</div>
+    <div class="h:{{modifier_class}}-1 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">1</div>
+    <div class="h:{{modifier_class}}-0 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">0</div>
+    <div class="h:{{modifier_class}}-n1 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1 ">n1</div>
+    <div class="h:{{modifier_class}}-n2 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1 ">n2</div>
+    <div class="h:{{modifier_class}}-n3 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1 ">n3</div>
+    <div class="h:{{modifier_class}}-n4 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1 ">n4</div>
+    <div class="h:{{modifier_class}}-n5 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1 ">n5</div>
   </div>
 
   Weight: 10
@@ -105,46 +105,46 @@ a:focus {
 
 #{ class-name-constructor(color, white, "", "hover")},
 #{ class-name-constructor(color, white, "", "is-active")} {
-  color: $white !important;
+	color: $white !important;
 }
 #{ class-name-constructor(color, black, "", "hover")},
 #{ class-name-constructor(color, black, "", "is-active")} {
-  color: $black !important;
+	color: $black !important;
 }
 
 .hover\:underline,
 .h\:underline {
-  &:hover {
-    text-decoration: underline;
-  }
+	&:hover {
+		text-decoration: underline;
+	}
 }
 .hover\:underline-none,
 .h\:underline-none,
 .h\:undecorated {
-  &:hover {
-    text-decoration: none !important;
-  }
+	&:hover {
+		text-decoration: none !important;
+	}
 }
 .hover\:dashed,
 .h\:dashed {
-  &:hover {
-    text-decoration: underline;
-    text-decoration-style: dashed;
-  }
+	&:hover {
+		text-decoration: underline;
+		text-decoration-style: dashed;
+	}
 }
 .hover\:double,
 .h\:double {
-  &:hover {
-    text-decoration: underline;
-    text-decoration-style: double;
-  }
+	&:hover {
+		text-decoration: underline;
+		text-decoration-style: double;
+	}
 }
 .hover\:dotted,
 .h\:dotted {
-  &:hover {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-  }
+	&:hover {
+		text-decoration: underline;
+		text-decoration-style: dotted;
+	}
 }
 
 /*
@@ -177,13 +177,13 @@ a:focus {
 /* Transparent Loop */
 #{ class-name-constructor(background-color, white, "", "hover")},
 #{ class-name-constructor(background-color, white, "", "is-active")} {
-  background-color: $white;
+	background-color: $white;
 }
 @include loop-transparent(background-transparent, white, "", "!important", true);
 
 #{ class-name-constructor(background-color, black, "", "hover")},
 #{ class-name-constructor(background-color, black, "", "is-active")} {
-  background-color: $black;
+	background-color: $black;
 }
 @include loop-transparent(background-transparent, black, "", "!important", true);
 
@@ -197,17 +197,17 @@ bg_black              - text color modified light to dark
 
 Markup:
 <div class="flex m_5 bg_primary m_5">
-  <div class="h:{{modifier_class}}-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">0</div>
-  <div class="h:{{modifier_class}}-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">1</div>
-  <div class="h:{{modifier_class}}-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">2</div>
-  <div class="h:{{modifier_class}}-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">3</div>
-  <div class="h:{{modifier_class}}-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">4</div>
-  <div class="h:{{modifier_class}}-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">5</div>
-  <div class="h:{{modifier_class}}-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">6</div>
-  <div class="h:{{modifier_class}}-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">7</div>
-  <div class="h:{{modifier_class}}-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">8</div>
-  <div class="h:{{modifier_class}}-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">9</div>
-  <div class="h:{{modifier_class}}  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">default</div>
+  <div class="h:{{modifier_class}}-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
+  <div class="h:{{modifier_class}}-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
+  <div class="h:{{modifier_class}}-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
+  <div class="h:{{modifier_class}}-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
+  <div class="h:{{modifier_class}}-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
+  <div class="h:{{modifier_class}}-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
+  <div class="h:{{modifier_class}}-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
+  <div class="h:{{modifier_class}}-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
+  <div class="h:{{modifier_class}}-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
+  <div class="h:{{modifier_class}}-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
+  <div class="h:{{modifier_class}}  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">default</div>
 </div>
 
 Weight: 50
@@ -224,16 +224,16 @@ Set the Opacity of an object to 100% while hovered.
 
 Markup:
 <div class="flex m_5 bg_primary m_5">
-  <div class="h:opacity opacity-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">0</div>
-  <div class="h:opacity opacity-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">1</div>
-  <div class="h:opacity opacity-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">2</div>
-  <div class="h:opacity opacity-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">3</div>
-  <div class="h:opacity opacity-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">4</div>
-  <div class="h:opacity opacity-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">5</div>
-  <div class="h:opacity opacity-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">6</div>
-  <div class="h:opacity opacity-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">7</div>
-  <div class="h:opacity opacity-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">8</div>
-  <div class="h:opacity opacity-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">9</div>
+  <div class="h:opacity opacity-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
+  <div class="h:opacity opacity-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
+  <div class="h:opacity opacity-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
+  <div class="h:opacity opacity-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
+  <div class="h:opacity opacity-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
+  <div class="h:opacity opacity-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
+  <div class="h:opacity opacity-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
+  <div class="h:opacity opacity-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
+  <div class="h:opacity opacity-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
+  <div class="h:opacity opacity-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
 </div>
 
 Weight: 60
@@ -244,7 +244,7 @@ Styleguide hover.opacity
 #{class-name-constructor(opacity,"", "","hover")},
 #{class-name-constructor(opacity,"", "","is-active")},
 #{class-name-constructor(opacity,"", "","is-active-self")} {
-  opacity: 1;
+	opacity: 1;
 }
 
 /*
@@ -261,17 +261,17 @@ soften the harshness of the switch of the style by adding transitions to the cha
 
 Markup:
 <div class="flex m_5 bg_primary m_5">
-  <div class="transition_{{modifier_class}} h:bg_black-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">0</div>
-  <div class="transition_{{modifier_class}} h:bg_black-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">1</div>
-  <div class="transition_{{modifier_class}} h:bg_black-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">2</div>
-  <div class="transition_{{modifier_class}} h:bg_black-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">3</div>
-  <div class="transition_{{modifier_class}} h:bg_black-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">4</div>
-  <div class="transition_{{modifier_class}} h:bg_black-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">5</div>
-  <div class="transition_{{modifier_class}} h:bg_black-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">6</div>
-  <div class="transition_{{modifier_class}} h:bg_black-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">7</div>
-  <div class="transition_{{modifier_class}} h:bg_black-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">8</div>
-  <div class="transition_{{modifier_class}} h:bg_black-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">9</div>
-  <div class="transition_{{modifier_class}} h:bg_black  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">default</div>
+  <div class="transition_{{modifier_class}} h:bg_black-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
+  <div class="transition_{{modifier_class}} h:bg_black-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
+  <div class="transition_{{modifier_class}} h:bg_black-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
+  <div class="transition_{{modifier_class}} h:bg_black-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
+  <div class="transition_{{modifier_class}} h:bg_black-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
+  <div class="transition_{{modifier_class}} h:bg_black-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
+  <div class="transition_{{modifier_class}} h:bg_black-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
+  <div class="transition_{{modifier_class}} h:bg_black-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
+  <div class="transition_{{modifier_class}} h:bg_black-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
+  <div class="transition_{{modifier_class}} h:bg_black-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
+  <div class="transition_{{modifier_class}} h:bg_black  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">default</div>
 </div>
 
 Weight: 50
@@ -280,8 +280,8 @@ Styleguide hover.transition
  
  */
 *[class*="transition"] {
-  transition-timing-function: ease;
-  transition-property: all;
+	transition-timing-function: ease;
+	transition-property: all;
 }
 @include loop-style(transition, "", " !important");
 
@@ -299,11 +299,11 @@ Styleguide hover.transition
 
 Markup:
 <div class="">
-  <div class="h:br_none br_3 br_solid br_primary-2 p_2 m_2 bg_secondary-5">None</div>
-  <div class="h:br_transparent br_3 br_solid br_primary-2 p_2 m_2 bg_secondary-5">Transparent</div>
-  <div class="h:br_solid br_3 br_dotted br_primary-2 p_2 m_2 bg_secondary-5">Solid</div>
-  <div class="h:br_dashed br_3 br_solid br_primary-2 p_2 m_2 bg_secondary-5">Dashed</div>
-  <div class="h:br_dotted br_3 br_solid br_primary-2 p_2 m_2 bg_secondary-5">Dotted</div>
+  <div class="h:br_none br_3 br_solid br_primary-2 p_2 m_2 bg_shade-5">None</div>
+  <div class="h:br_transparent br_3 br_solid br_primary-2 p_2 m_2 bg_shade-5">Transparent</div>
+  <div class="h:br_solid br_3 br_dotted br_primary-2 p_2 m_2 bg_shade-5">Solid</div>
+  <div class="h:br_dashed br_3 br_solid br_primary-2 p_2 m_2 bg_shade-5">Dashed</div>
+  <div class="h:br_dotted br_3 br_solid br_primary-2 p_2 m_2 bg_shade-5">Dotted</div>
 </div>
 
 Weight: 40
@@ -312,21 +312,21 @@ Styleguide hover.borders
 
 */
 #{ class-name-constructor(border-style,dotted,"","hover")} {
-  border-style: dotted !important;
+	border-style: dotted !important;
 }
 #{ class-name-constructor(border-style,dashed,"","hover")} {
-  border-style: dashed !important;
+	border-style: dashed !important;
 }
 #{ class-name-constructor(border-style,solid,"","hover")} {
-  border-style: solid !important;
+	border-style: solid !important;
 }
 #{ class-name-constructor(border-style,none,"","hover")} {
-  border-style: none !important;
+	border-style: none !important;
 }
 #{ class-name-constructor(border-color,transparent,"","hover")} {
-  border-color: transparent !important;
+	border-color: transparent !important;
 }
 
 @each $color-name, $hex-value in $theme-palette {
-  @include color-loop(border-color, $color-name, $hex-value);
+	@include color-loop(border-color, $color-name, $hex-value);
 }

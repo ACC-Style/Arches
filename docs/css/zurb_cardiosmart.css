@@ -28,6 +28,7 @@ Colors are based off of the ACC Scrub Colors.
 
 map-get($theme-palette, primary)              -  #015697; primary
 map-get($theme-palette, secondary)            -  #009db1; secondary
+map-get($theme-palette, shade)           		 -  #898989; shade
 map-get($theme-palette, accent)               -  #e9901a;  accent
 map-get($theme-palette, info)                 -  #a3988c; info
 map-get($theme-palette, highlight)            -  #ffc423; highlight
@@ -42,7 +43,7 @@ Actionable colors used to respond to user inputs and messaging.
 
 map-get($theme-palette, alert)                -  #dd1a1a; alert
 map-get($theme-palette, warning)              -  #e9901a; warning
-map-get($theme-palette, success)               -  #078a2e;  success
+map-get($theme-palette, success)              -  #078a2e;  success
 map-get($theme-palette, navigation)           -  #2b58c0; navigation
 
 Styleguide DesignBase.Colors.Actions
@@ -3492,6 +3493,14 @@ h3 {
   background-color: #066e25;
   color: white;
 }
+.button.shade {
+  background-color: #898989;
+  color: #131212;
+}
+.button.shade:hover, .button.shade:focus {
+  background-color: #6e6e6e;
+  color: #131212;
+}
 .button.warning {
   background-color: #e9901a;
   color: #131212;
@@ -3579,6 +3588,14 @@ h3 {
 .button.disabled.success, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success, .button[disabled].success:hover, .button[disabled].success:focus {
   background-color: #078a2e;
   color: white;
+}
+.button.disabled.shade, .button[disabled].shade {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+.button.disabled.shade, .button.disabled.shade:hover, .button.disabled.shade:focus, .button[disabled].shade, .button[disabled].shade:hover, .button[disabled].shade:focus {
+  background-color: #898989;
+  color: #131212;
 }
 .button.disabled.warning, .button[disabled].warning {
   cursor: not-allowed;
@@ -3682,6 +3699,18 @@ h3 {
 .button.hollow.success:hover.disabled, .button.hollow.success:hover[disabled], .button.hollow.success:focus.disabled, .button.hollow.success:focus[disabled] {
   border: 1px solid #078a2e;
   color: #078a2e;
+}
+.button.hollow.shade {
+  border: 1px solid #898989;
+  color: #898989;
+}
+.button.hollow.shade:hover, .button.hollow.shade:focus {
+  border-color: #454545;
+  color: #454545;
+}
+.button.hollow.shade:hover.disabled, .button.hollow.shade:hover[disabled], .button.hollow.shade:focus.disabled, .button.hollow.shade:focus[disabled] {
+  border: 1px solid #898989;
+  color: #898989;
 }
 .button.hollow.warning {
   border: 1px solid #e9901a;
@@ -3830,6 +3859,21 @@ h3 {
 .button.clear.success, .button.clear.success.disabled, .button.clear.success[disabled], .button.clear.success:hover, .button.clear.success:hover.disabled, .button.clear.success:hover[disabled], .button.clear.success:focus, .button.clear.success:focus.disabled, .button.clear.success:focus[disabled] {
   border-color: transparent;
 }
+.button.clear.shade {
+  border: 1px solid #898989;
+  color: #898989;
+}
+.button.clear.shade:hover, .button.clear.shade:focus {
+  border-color: #454545;
+  color: #454545;
+}
+.button.clear.shade:hover.disabled, .button.clear.shade:hover[disabled], .button.clear.shade:focus.disabled, .button.clear.shade:focus[disabled] {
+  border: 1px solid #898989;
+  color: #898989;
+}
+.button.clear.shade, .button.clear.shade.disabled, .button.clear.shade[disabled], .button.clear.shade:hover, .button.clear.shade:hover.disabled, .button.clear.shade:hover[disabled], .button.clear.shade:focus, .button.clear.shade:focus.disabled, .button.clear.shade:focus[disabled] {
+  border-color: transparent;
+}
 .button.clear.warning {
   border: 1px solid #e9901a;
   color: #e9901a;
@@ -3959,6 +4003,9 @@ h3 {
 .button.dropdown.hollow.success::after, .button.dropdown.clear.success::after {
   border-top-color: #078a2e;
 }
+.button.dropdown.hollow.shade::after, .button.dropdown.clear.shade::after {
+  border-top-color: #898989;
+}
 .button.dropdown.hollow.warning::after, .button.dropdown.clear.warning::after {
   border-top-color: #e9901a;
 }
@@ -4059,6 +4106,14 @@ a.button:hover, a.button:focus {
 .button-group.success .button:hover, .button-group.success .button:focus {
   background-color: #066e25;
   color: white;
+}
+.button-group.shade .button {
+  background-color: #898989;
+  color: #131212;
+}
+.button-group.shade .button:hover, .button-group.shade .button:focus {
+  background-color: #6e6e6e;
+  color: #131212;
 }
 .button-group.warning .button {
   background-color: #e9901a;
@@ -4209,6 +4264,10 @@ a.button:hover, a.button:focus {
   background: #078a2e;
   color: white;
 }
+.label.shade {
+  background: #898989;
+  color: #131212;
+}
 .label.warning {
   background: #e9901a;
   color: #131212;
@@ -4254,6 +4313,9 @@ a.button:hover, a.button:focus {
 }
 .progress.success .progress-meter {
   background-color: #078a2e;
+}
+.progress.shade .progress-meter {
+  background-color: #898989;
 }
 .progress.warning .progress-meter {
   background-color: #e9901a;
@@ -4674,6 +4736,10 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   background: #078a2e;
   color: white;
 }
+.badge.shade {
+  background: #898989;
+  color: #131212;
+}
 .badge.warning {
   background: #e9901a;
   color: #131212;
@@ -4771,6 +4837,10 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 }
 .callout.success {
   background-color: #cbfcda;
+  color: #131212;
+}
+.callout.shade {
+  background-color: #ededed;
   color: #131212;
 }
 .callout.warning {
@@ -7196,13 +7266,13 @@ Styleguide HTML.Table.BasicStyle
 }
 .table .tfoot,
 .table tfoot {
-  background-color: #defbff;
+  background-color: #f3f3f3;
 }
 .table .tfoot th,
 .table .tfoot td,
 .table tfoot th,
 .table tfoot td {
-  border-top: 1px solid #00c9e3;
+  border-top: 1px solid #9b9b9b;
   font-style: italic;
 }
 
@@ -7317,7 +7387,7 @@ Styleguide HTML.Table.Unshaded
   background-color: unset;
 }
 .table.unshaded tbody tr + tr td {
-  border-top: 1px #defbff solid;
+  border-top: 1px #f3f3f3 solid;
 }
 .table.unshaded tfoot {
   background-color: unset;
@@ -7472,7 +7542,7 @@ Markup:
       <td>row 1 cell B</td>
       <td>row 1 cell C</td>
     </tr>
-   <tr class="bg_secondary-3 border_solid border-left-width_0  border-right-width_0 border-width_1 border border_secondary font-weight_bold font_n2 text-left">
+   <tr class="bg_shade-3 border_solid border-left-width_0  border-right-width_0 border-width_1 border border_shade font-weight_bold font_n2 text-left">
       <td colspan='3' class="p_2">Separator With disabled</td>
     </tr>
     <tr>
@@ -7495,18 +7565,19 @@ Buttons
 
 Basic Buttons
 
-.primary	            - Primary Class Button (default)
+.primary	            	- Primary Class Button (default)
 .secondary 	            - Second Class Button
+.shade 	            	- Shade Class Button
 .navigation             - Button reserved for navigation elements
 .success                - Success State.
 .alert                  - Alert State.
-.warning	            - Warning State
+.warning	            	- Warning State
 .hollow		            - All button states can become hollow
 .clear		            - All button states can become hollow
-.dropdown		        - All button states can become hollow
+.dropdown		        	- All button states can become hollow
 .radius		            - Give the button softer corners
-.shadow.clear		    - Give a button a shadow
-.tiny		            - tiny buttons
+.shadow.clear		   	- Give a button a shadow
+.tiny		           		- tiny buttons
 .small		            - Small buttons
 default		            - Medium buttons (default)
 .large		            - Large buttons
@@ -7554,7 +7625,7 @@ Markup:
 
     Question Structure
 
-    secondary - default decoration when there is no validation run on the input.
+    shade - default decoration when there is no validation run on the input.
 
     Markup:
     <div data-style="{{ modifier_class }}"  class="question required {{modifier_class}}">
@@ -7565,16 +7636,16 @@ Markup:
         </span>
     </label>
     <div class="input-holder grid-x c_{{modifier_class}}">
-        <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+        <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
             <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-square"></i></span>
         </div>
-        <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+        <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
             <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-triangle"></i></span>
         </div>
-        <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+        <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
             <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-lightbulb-exclamation"></i></span>
         </div>
-        <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+        <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
             <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-check-square"></i></span>
         </div>
         <div class="input-space cell auto">
@@ -7589,7 +7660,7 @@ Markup:
         <div class="info p_2 bg_info-n1 c_white">
         <i class="fas fa-fw fa-lightbulb-exclamation m-r_3 m-l_2"></i> Informational message about your input</div>
     </div>
-    <div class="hint-holder m-t_2 font_n1 c_secondary p_2 p-t_0">This is some hint-holder text</div>
+    <div class="hint-holder m-t_2 font_n1 c_shade p_2 p-t_0">This is some hint-holder text</div>
     </div>
 
     Weight:-1
@@ -7600,7 +7671,7 @@ Markup:
 
     Question Structure with States applied
 
-    secondary - default decoration when there is no validation run on the input.
+    shade - default decoration when there is no validation run on the input.
     alert   - alert settings for questions
     warning - warning decoration for when required is missing. 
     info - sometimes inputs show extra informaiton when an item is selected or when a value is entered.
@@ -7615,16 +7686,16 @@ Markup:
         </span>
         </label>
     <div class="input-holder grid-x c_{{modifier_class}}">
-        <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+        <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
             <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-square"></i></span>
         </div>
-        <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+        <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
             <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-triangle"></i></span>
         </div>
-        <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+        <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
             <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-lightbulb-exclamation"></i></span>
         </div>
-        <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+        <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
             <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-check-square"></i></span>
         </div>
         <div class="input-space cell auto">
@@ -7641,7 +7712,7 @@ Markup:
             <div class="success br_success-n1 c_success ">
             <i class="fas fa-fw fa-lightbulb-exclamation m-r_3 m-l_2"></i> succes message are rare but sometimes needed.</div>
         </div>
-    <div class="hint-holder m-t_2 font_n1 c_secondary p_2 p-t_0">This is some hint-holder text</div>
+    <div class="hint-holder m-t_2 font_n1 c_shade p_2 p-t_0">This is some hint-holder text</div>
     </div>
 
     Styleguide Questions.States
@@ -7717,7 +7788,7 @@ Markup:
 
     Question Input Value Area
 
-    secondary - default decoration when there is no validation run on the input.
+    shade - default decoration when there is no validation run on the input.
     alert   - alert settings for questions
     warning - warning decoration for when required is missing. 
     info - sometimes inputs show extra informaiton when an item is selected or when a value is entered.
@@ -7732,22 +7803,22 @@ Markup:
         </span>
         </label>
         <div class="input-holder grid-x c_{{modifier_class}}">
-            <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-square"></i></span>
             </div>
-            <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-triangle"></i></span>
             </div>
-            <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-lightbulb-exclamation"></i></span>
             </div>
-            <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-check-square"></i></span>
             </div>
             <div class="input-space cell auto">
                 <input id="input-x" type="text" class="m-b_0 br_{{modifier_class}}-3 " />
             </div>
-            <div class="br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="value">Years</span>
             </div>
         </div>
@@ -7759,7 +7830,7 @@ Markup:
             <div class="info br_info-n1 c_info ">
             <i class="fas fa-fw fa-lightbulb-exclamation m-r_3 m-l_2"></i> Informational message about your input</div>
         </div>
-        <div class="hint-holder m-t_2 font_n1 c_secondary p_2 p-t_0">This is some hint-holder text</div>
+        <div class="hint-holder m-t_2 font_n1 c_shade p_2 p-t_0">This is some hint-holder text</div>
     </div>
 
     Styleguide Questions.Value Area
@@ -7768,7 +7839,7 @@ Markup:
 
     Question with grouped inputs
 
-    secondary - default decoration when there is no validation run on the input.
+    shade - default decoration when there is no validation run on the input.
     alert - alerts show up when errors are validated from the input.
 
     Markup:
@@ -7780,16 +7851,16 @@ Markup:
             </span>
             </label>
         <div class="input-holder grid-x c_{{modifier_class}}">
-            <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-square"></i></span>
             </div>
-            <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-triangle"></i></span>
             </div>
-            <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-lightbulb-exclamation"></i></span>
             </div>
-            <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-check-square"></i></span>
             </div>
             <div class="input-space cell small-2">
@@ -7802,7 +7873,7 @@ Markup:
             <div class="input-space cell auto">
                 <input id="input-x" type="text" class="m-b_0 br_{{modifier_class}}-3 " />
             </div>
-            <div class="br_{{modifier_class}}-3  bg_{{modifier_class}}-4 c_{{modifier_class}}-n2  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="br_{{modifier_class}}-3  bg_{{modifier_class}}-4 c_{{modifier_class}}-n2  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="value">Years</span>
             </div>
         </div>
@@ -7814,7 +7885,7 @@ Markup:
             <div class="info br_info-n1 c_info ">
             <i class="fas fa-fw fa-lightbulb-exclamation m-r_3 m-l_2"></i> Informational message about your input</div>
         </div>
-        <div class="hint-holder m-t_2 font_n1 c_secondary p_2 p-t_0">This is some hint-holder text</div>
+        <div class="hint-holder m-t_2 font_n1 c_shade p_2 p-t_0">This is some hint-holder text</div>
     </div>
 
     Styleguide Questions.Grouped Inputs
@@ -7823,7 +7894,7 @@ Markup:
 
     Question with Switches
 
-    secondary - default decoration when there is no validation run on the input.
+    shade - default decoration when there is no validation run on the input.
     alert - alert on the area of inputs
     warning - warning decoration for when required is missing. 
     info - sometimes inputs show extra informaiton when an item is selected or when a value is entered.
@@ -7837,16 +7908,16 @@ Markup:
             </span>
         </label>
         <div class="input-holder grid-x c_{{modifier_class}}">
-            <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-square"></i></span>
             </div>
-            <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-triangle"></i></span>
             </div>
-            <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-lightbulb-exclamation"></i></span>
             </div>
-            <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_secondary-4 texture_light">
+            <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
                 <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-check-square"></i></span>
             </div>
             <div class="input-space cell auto grid-x">
@@ -7878,7 +7949,7 @@ Markup:
             <div class="info br_info-n1 c_info ">
             <i class="fas fa-fw fa-lightbulb-exclamation m-r_3 m-l_2"></i> Informational message about your input</div>
         </div>
-        <div class="hint-holder m-t_2 font_n1 c_secondary p_2 p-t_0">This is some hint-holder text</div>
+        <div class="hint-holder m-t_2 font_n1 c_shade p_2 p-t_0">This is some hint-holder text</div>
     </div>
 
     Styleguide Questions.Switches
@@ -7907,7 +7978,7 @@ Markup:
 */
 .pagination-previous,
 .pagination-next {
-  background: #7af0ff;
+  background: #d0d0d0;
 }
 
 .pagination .disabled:hover {
@@ -8123,7 +8194,7 @@ Markup:
     Tabs Inset Area
 
     Markup:
-    <div class="bg_white br_1 br_secondary-4 br_solid p_4">
+    <div class="bg_white br_1 br_shade-4 br_solid p_4">
         hello this is some text
     </div>
     <ul class="texture_light tabs br_primary bg_primary-3 shadow_n3 p-x_2 p-t_3 br-b_0" data-active-collapse="true" data-tabs id="collapsing-tabs">
@@ -8214,13 +8285,13 @@ Cards
 Build from the basicfoundation card utility classes can be added to make many variations on the theme.
 
 bg_primary			- textures are slightly transparent so they can be colored with background-color classess
-bg_secondary		- textures are slightly transparent so they can be colored with background-color classess
+bg_shade		- textures are slightly transparent so they can be colored with background-color classess
 bg_highlight 		- textures are slightly transparent so they can be colored with background-color classess
 bg_warning			- textures are slightly transparent so they can be colored with background-color classess
 bg_alert			- textures are slightly transparent so they can be colored with background-color classess
 
 Markup:
-<div class="p_4 texture_light bg_secondary-4">
+<div class="p_4 texture_light bg_shade-4">
 	<div class="card shadow_2 max-w_1:md">
 		<div class="card-divider font_slab border-top-left-square c_white font_3 p_4 texture_dust {{modifier_class}}">
 			This is a header
@@ -8243,13 +8314,13 @@ Page Messages
 Page Messages are altered cards to bring attention to the content we are trying to convey to the user
 
 primary				- This page message is used for X
-secondary			- This page message is used for X
+shade			- This page message is used for X
 highlight 		- This page message is used for X
 warning				- This page message is used for X
 alert					- This page message is used for X
 
 Markup:
-<div class="p_5 texture_light bg_secondary-4">
+<div class="p_5 texture_light bg_shade-4">
 	<div class="card shadow_2 bg_{{modifier_class}}-5">
 		<div class=" font_slab br-tl_square c_white font_3 p_4 texture_dust bg_{{modifier_class}}">
 			This is page message
@@ -8279,36 +8350,36 @@ User Card
 Member Cards Used in the CSTool give a great represendation on how complex the UI can be with a combination of UCs
 
 Markup:
-<div class="p_5 p-t_3 p-b_3 texture_light bg_secondary-4">
+<div class="p_5 p-t_3 p-b_3 texture_light bg_shade-4">
 <div class="user-card shadow br_solid br_black-1 bg_white">
    <div class="grid-x">
       <div class="cell auto p_3">
-         <div class="member-name font_1 font_slab lh_2 member-name p-x_3 p-y-l_4">David Y. Wilder <a class="bg_secondary-4 float-right font_0 hover:bg_secondary p-l_3 p-r_3 p_2"><i class="fas fa-share-alt-square"></i></a>
+         <div class="member-name font_1 font_slab lh_2 member-name p-x_3 p-y-l_4">David Y. Wilder <a class="bg_shade-4 float-right font_0 hover:bg_shade p-l_3 p-r_3 p_2"><i class="fas fa-share-alt-square"></i></a>
          </div>
          <div>
             <ul class="details no-bullet p-l_3 p-r_3 m_0 font_0 grid-x grid-margin-x">
-            <li class="br_0 br-b_1 br_secondary-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_secondary-2 fal fa-user-slash"></i>NPI
+            <li class="br_0 br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-user-slash"></i>NPI
             </li>
-            <li class="br-b_1 br_secondary-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_secondary-2 fal fa-hashtag"></i>1696062374299
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-hashtag"></i>1696062374299
             </li>
-            <li class="br-b_1 br_secondary-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_secondary-2 fal fa-at"></i>Donec@quis.org <a class="link float-right p_2"><i class="fal fa-pencil"></i></a>
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-at"></i>Donec@quis.org <a class="link float-right p_2"><i class="fal fa-pencil"></i></a>
             </li>
-            <li class="br-b_1 br_secondary-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_secondary-2 fal fa-map-pin"></i>Polatlı
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-map-pin"></i>Polatlı
             </li>
-            <li class="br-b_1 br_secondary-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_secondary-2 fal fa-badge-check"></i>75988 <a href="" class="link float-right p_2"><i class="fal fa-exchange-alt"></i></a>
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-badge-check"></i>75988 <a href="" class="link float-right p_2"><i class="fal fa-exchange-alt"></i></a>
             </li>
-            <li class="br-b_1 br_secondary-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_secondary-2 fal fa-user-circle"></i>neque.et@neque.net <a href="#" class="link float-right p_2"><i class="fal fa-pencil"></i></a>
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-user-circle"></i>neque.et@neque.net <a href="#" class="link float-right p_2"><i class="fal fa-pencil"></i></a>
             </li>
-            <li class="br-b_1 br_secondary-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_secondary-2 fal fa-key"></i>GRW95WZD9VY <a href="#" class="link float-right p_2"><i class="fal fa-pencil"></i></a>
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-key"></i>GRW95WZD9VY <a href="#" class="link float-right p_2"><i class="fal fa-pencil"></i></a>
             </li></ul>
       <div class="p_4 flex font_n1">
-         <i class="m-l_3 c_secondary-2 fal fa-users-crown flex-shrink"></i>
+         <i class="m-l_3 c_shade-2 fal fa-users-crown flex-shrink"></i>
          <a class="link m-l_3 m-r_3 flex-auto"> <i class="fas fa-chevron-circle-right p-r_3"></i>1 linked account(s) </a>
          <a class="link float-right m-l_3 m-r_3 flex-1">manage &nbsp; <i class="fal fa-pencil"></i></a>
       </div>
    </div>
    </div>
-      <div class="cell shrink texture_light bg_secondary-3 m-r_3 c_secondary-1 font_n2">
+      <div class="cell shrink texture_light bg_shade-3 m-r_3 c_shade-1 font_n2">
          <ul class="flag no-bullet">
             <li class="is-active_toggle-function center member">
                <div class="a:bg_acc a:color_white p_3"><i class="fal fa-user-md"></i>
@@ -8344,8 +8415,8 @@ Styleguide  Recipes Zurb.User Card
 	Markup:
 	<div class="button-group">
 		<a class="button is-active primary"><i class="far icon-toggle_arrow-circle"></i> One</a>
-		<a class="button secondary"><i class="far icon-toggle_arrow-circle"></i> Two</a>
-		<a class="button secondary"><i class="far icon-toggle_arrow-circle"></i> Three</a>
+		<a class="button shade"><i class="far icon-toggle_arrow-circle"></i> Two</a>
+		<a class="button shade"><i class="far icon-toggle_arrow-circle"></i> Three</a>
 	</div>
 
 	Styleguide  Zurb Recipes.Navigation.Button Group

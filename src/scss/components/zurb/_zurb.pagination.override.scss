@@ -22,10 +22,10 @@
 */
 .pagination-previous,
 .pagination-next {
-  background: get-themecolor(secondary, 3);
+	background: get-themecolor(shade, 3);
 }
 .pagination .disabled:hover {
-  @include texture-disabled;
+	@include texture-disabled;
 }
 
 /*
@@ -57,19 +57,19 @@
 */
 
 .pagination-container {
-  background: get-themecolor(primary, 0);
-  padding: $padding_0 $padding_3;
-  .pagination {
-    margin-bottom: $margin_3;
-  }
-  .current {
-    background: $white;
-    color: get-themecolor(primary, 0);
-  }
-  a:not([class="pagination-previous"]):not([class="pagination-next"]) {
-    color: $white;
-    &:hover {
-      color: $black;
-    }
-  }
+	background: get-themecolor(primary, 0);
+	padding: $padding_0 $padding_3;
+	.pagination {
+		margin-bottom: $margin_3;
+	}
+	.current {
+		background: $white;
+		color: get-themecolor(primary, 0);
+	}
+	a:not([class="pagination-previous"]):not([class="pagination-next"]) {
+		color: $white;
+		&:hover {
+			color: $black;
+		}
+	}
 }

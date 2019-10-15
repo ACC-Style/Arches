@@ -40,6 +40,7 @@ Colors are based off of the ACC Scrub Colors.
 
 map-get($theme-palette, primary)              -  #015697; primary
 map-get($theme-palette, secondary)            -  #009db1; secondary
+map-get($theme-palette, shade)           		 -  #898989; shade
 map-get($theme-palette, accent)               -  #e9901a;  accent
 map-get($theme-palette, info)                 -  #a3988c; info
 map-get($theme-palette, highlight)            -  #ffc423; highlight
@@ -54,7 +55,7 @@ Actionable colors used to respond to user inputs and messaging.
 
 map-get($theme-palette, alert)                -  #dd1a1a; alert
 map-get($theme-palette, warning)              -  #e9901a; warning
-map-get($theme-palette, success)               -  #078a2e;  success
+map-get($theme-palette, success)              -  #078a2e;  success
 map-get($theme-palette, navigation)           -  #2b58c0; navigation
 
 Styleguide DesignBase.Colors.Actions
@@ -5944,7 +5945,7 @@ a.close.disabled {
   text-align: left;
 }
 .table tbody tr:nth-of-type(odd) {
-  background-color: #defbff;
+  background-color: #f3f3f3;
 }
 .table.unshaded tbody tr:nth-of-type(odd) {
   background-color: unset;
@@ -5992,7 +5993,7 @@ Markup:
 		<h3>Muted Text Class</h3>
 		<h3>
 			Heading Text
-			<small class="text-muted">With muted secondary text</small>
+			<small class="text-muted">With muted shade text</small>
 		</h3>
 		<h3>Blockquote</h3>
 		<blockquote class="blockquote">
@@ -6401,16 +6402,16 @@ Markup:
 			</ul>
 			<ul class="ul_none flex_auto p-r_4">
 				<li>
-					<button type="button" class="btn btn-secondary btn-sm">
-						Secondary
+					<button type="button" class="btn btn-shade btn-sm">
+						shade
 					</button>
 				</li>
 				<li>
-					<button type="button" class="btn btn-secondary">Secondary</button>
+					<button type="button" class="btn btn-shade">shade</button>
 				</li>
 				<li>
-					<button type="button" class="btn btn-secondary btn-lg">
-						Secondary
+					<button type="button" class="btn btn-shade btn-lg">
+						shade
 					</button>
 				</li>
 				<li><button type="button" class="btn btn-link">Link</button></li>
@@ -6422,13 +6423,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-secondary">1</button>
-			<button type="button" class="btn btn-secondary">2</button>
+			<button type="button" class="btn btn-shade">1</button>
+			<button type="button" class="btn btn-shade">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-secondary dropdown-toggle"
+					class="btn btn-shade dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -6446,13 +6447,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-secondary">1</button>
-			<button type="button" class="btn btn-secondary">2</button>
+			<button type="button" class="btn btn-shade">1</button>
+			<button type="button" class="btn btn-shade">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-secondary dropdown-toggle"
+					class="btn btn-shade dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -6470,13 +6471,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-secondary">1</button>
-			<button type="button" class="btn btn-secondary">2</button>
+			<button type="button" class="btn btn-shade">1</button>
+			<button type="button" class="btn btn-shade">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-secondary dropdown-toggle"
+					class="btn btn-shade dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -6530,7 +6531,7 @@ Markup:
 		<div class="btn-toolbar" role="toolbar">
 			<div class="btn-group">
 				<button
-					class="btn btn-secondary btn-lg dropdown-toggle"
+					class="btn btn-shade btn-lg dropdown-toggle"
 					type="button"
 					data-toggle="dropdown"
 					aria-haspopup="true"
@@ -6547,12 +6548,12 @@ Markup:
 				</div>
 			</div>
 			<div class="btn-group ml-2">
-				<button type="button" class="btn btn-lg btn-secondary">
+				<button type="button" class="btn btn-lg btn-shade">
 					Large split button
 				</button>
 				<button
 					type="button"
-					class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split"
+					class="btn btn-lg btn-shade dropdown-toggle dropdown-toggle-split"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -7050,9 +7051,9 @@ Styleguide  Recipes Bootstrap.Carousel
     height: auto;
     margin: 0;
     padding: 0.5rem 1rem;
-    border: 1px solid #7af0ff;
+    border: 1px solid #d0d0d0;
     border-radius: 0;
-    background-color: #b6f7ff;
+    background-color: #e5e5e5;
     font-size: 1.2em;
     text-align: left;
     text-indent: 0;
@@ -7067,7 +7068,7 @@ Styleguide  Recipes Bootstrap.Carousel
   .carousel-alt.text-indicators .carousel-indicators li.active {
     padding-right: 10px;
     border-right: #e9901a 10px solid;
-    background-color: #008596;
+    background-color: #747474;
     color: white;
   }
 }
@@ -7225,7 +7226,7 @@ Styleguide  Recipes Bootstrap.Carousel
 /*
 Login Nav
 
-The ACC.org Nav has a secondary nav that houses the login and profile nav with a secondary color. To make sure it doesn't resize when the main nav expands the login nav needs to be placed absolutely. 
+The ACC.org Nav has a shade nav that houses the login and profile nav with a shade color. To make sure it doesn't resize when the main nav expands the login nav needs to be placed absolutely. 
 
 Markup:
 <div class="flex  relative">
@@ -7553,7 +7554,7 @@ Markup:
 							</ul>
 						</div>
 						<div
-							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_secondary-4 br_solid:lg br_solid:md"
+							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md"
 						>
 							<ul class="ul_none">
 								<li>
@@ -7810,7 +7811,7 @@ Markup:
 							</ul>
 						</div>
 						<div
-							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_secondary-4 br_solid:lg br_solid:md"
+							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md"
 						>
 							<ul class="ul_none m_0">
 								<li>
@@ -7955,7 +7956,7 @@ Markup:
 							</ul>
 						</div>
 						<div
-							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_secondary-4 br_solid:lg br_solid:md order_1 order_2:md"
+							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md order_1 order_2:md"
 						>
 							<ul class="ul_none">
 								<li>
@@ -8171,7 +8172,7 @@ Markup:
 							</ul>
 						</div>
 						<div
-							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_secondary-4 br_solid:lg br_solid:md"
+							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md"
 						>
 							<ul class="ul_none">
 								<li>
@@ -8402,7 +8403,7 @@ Markup:
 							</ul>
 						</div>
 						<div
-							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_secondary-4 br_solid:lg br_solid:md"
+							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md"
 						>
 							<ul class="ul_none m_0">
 								<li>
@@ -8531,7 +8532,7 @@ Markup:
 							</ul>
 						</div>
 						<div
-							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_secondary-4 br_solid:lg br_solid:md order_1 order_2:md"
+							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md order_1 order_2:md"
 						>
 							<ul class="ul_none">
 								<li>
@@ -8744,7 +8745,7 @@ Basic Bootstrap
 Bootstrap nav un styled from the bootstrap documentation found here. <a href="https://getbootstrap.com/docs/4.0/components/navbar/">Bootstrap 4: Nav</a>
 
 Markup:
-<nav class="bg_secondary-2 navbar navbar-expand-lg navbar-light p-y_2">
+<nav class="bg_shade-2 navbar navbar-expand-lg navbar-light p-y_2">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8807,7 +8808,7 @@ Markup:
 	Home
 </div>
 <!-- This is the inner footer that we cache -->
-<div id="footer" role="contentinfo" class="flex bg_secondary-n3 flex_column flex_inline flex_wrap flex_row:md p-x_3 p-y_4 p-y_0:lg w_100">
+<div id="footer" role="contentinfo" class="flex bg_shade-n3 flex_column flex_inline flex_wrap flex_row:md p-x_3 p-y_4 p-y_0:lg w_100">
 	<div class="flex_auto p-x_3 p-y_4:lg w-grid_3:lg w-grid_6:md font_ui">
 		<h2 class="font_0 font_1:lg font_slab m-b_0:md m-b_2">
 			<a href="//www.acc.org/guidelines" target="_parent" title="Guidelines" class="c_white h:c_primary-3">Guidelines</a>

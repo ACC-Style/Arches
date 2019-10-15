@@ -29,6 +29,7 @@
 
   map-get($theme-palette, primary)              -  #198dae; primary
   map-get($theme-palette, secondary)            -  #676a72; secondary
+  map-get($theme-palette, shade)           		 -  #898989; shade
   map-get($theme-palette, accent)               -  #16a385;  accent
   map-get($theme-palette, info)                 -  #a3988c; info
   map-get($theme-palette, highlight)            -  #7742bd; highlight
@@ -43,7 +44,7 @@
 
   map-get($theme-palette, alert)                -  #dd1a1a; alert
   map-get($theme-palette, warning)              -  #da8210; warning
-  map-get($theme-palette, success)               -  #078a2e;  success
+  map-get($theme-palette, success)              -  #078a2e;  success
   map-get($theme-palette, navigation)           -  #2b58c0; navigation
 
   Styleguide DesignBase.Colors.Actions
@@ -233,7 +234,7 @@
   .logo_condensed-alt.max-w_1         -  	 	Smaller Logo Reversed.
 
   Markup:
-  <div class="bg_secondary-2 max-w_3"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}}"><span class="alt">{{modifier_class}}</span></div></div>
+  <div class="bg_shade-2 max-w_3"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}}"><span class="alt">{{modifier_class}}</span></div></div>
 
   Styleguide DesignBase.Logos
 
@@ -249,7 +250,7 @@
 
 
   Markup:
-  <div class="bg_secondary-2 max-w_1"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
+  <div class="bg_shade-2 max-w_1"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
 
   Styleguide DesignBase.Seals
 
@@ -355,17 +356,17 @@
 
   Markup:
   <ul data-style="{{ modifier_class }}" class="ul_none m_0 p_0">
-  	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_secondary-3 font_1 bg_success-n1">	
+  	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
   			<span class="">FA Solid {{ modifier_class }}</span>
   			<i class="font_3 fas fa-fw {{ modifier_class }}"></i>
   			<span class="a:inline"> (is-active) </span>
   	</li>
-  	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_secondary-3 font_1 bg_success-n1">	
+  	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
   			<span class="">FA Regular {{ modifier_class }}</span>
   			<i class="font_3 far  fa-fw {{ modifier_class }}"></i>
   			<span class="a:inline"> (is-active) </span>
   	</li>
-  	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_secondary-3 font_1 bg_success-n1">	
+  	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
   			<span class="">FA Light {{ modifier_class }}</span>
   			<i class="font_3 fal fa-fw {{ modifier_class }}"></i>
   			<span class="a:inline"> (is-active) </span>
@@ -385,24 +386,24 @@
 
   Markup:
   <ul class="ul_none" data-style="{{ modifier_class }}">
-  <li class="br_solid br_secondary-5 p_3 br_1">
+  <li class="br_solid br_shade-5 p_3 br_1">
   	<div class="">FA Solid {{modifier_class}}</div>
   	<div class="p_2 font_4">
-  		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_secondary-4">default: <i class="fas fa-fw {{modifier_class}}"></i></span> 
+  		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_shade-4">default: <i class="fas fa-fw {{modifier_class}}"></i></span> 
   		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
   		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="fas {{modifier_class}}"></i></span></div>
   </li>
-  <li class="br_solid br_secondary-5 p_3 br_1">
+  <li class="br_solid br_shade-5 p_3 br_1">
   	<div class="">FA Regular {{modifier_class}}</div>
   	<div class="p_2 font_4">
-  		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_secondary-4">default: <i class="far fa-fw {{modifier_class}}"></i></span> 
+  		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_shade-4">default: <i class="far fa-fw {{modifier_class}}"></i></span> 
   		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
   		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="far {{modifier_class}}"></i></span></div>
   </li>
-  <li class="br_solid br_secondary-5 p_3 br_1">
+  <li class="br_solid br_shade-5 p_3 br_1">
   	<div class="">FA Light {{modifier_class}}</div>
   	<div class="p_2 font_4">
-  		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_secondary-4">default: <i class="fal fa-fw {{modifier_class}}"></i></span> 
+  		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_shade-4">default: <i class="fal fa-fw {{modifier_class}}"></i></span> 
   		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
   		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="fal {{modifier_class}}"></i></span></div>
   </li>
@@ -470,7 +471,7 @@
 
 
   Markup:
-  <section class="social p_4 m-y_2 bg_secondary-n3 font_2">
+  <section class="social p_4 m-y_2 bg_shade-n3 font_2">
       <ul class="flex social-bar ul_none c_white h:c_white m_0">
           <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-twitter-square"></i></a></li>
           <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-facebook-square"></i></a></li>
@@ -496,12 +497,12 @@
   Markup:
   <section class="social p_4 m-y_2 font_n1 max-w_1 bg_white">
       <ul class="flex social-bar ul_none m_0">
-          <li class="flex_shrink m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-twitter-square"></i></a></li>
-          <li class="flex_shrink m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-facebook-square"></i></a></li>
-          <li class="flex_shrink m-r_2"><a href="https://www.linkedin.com/company/american-college-of-cardiology/" target="_blank" class="linkedin c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-linkedin"></i></a></li>
-          <li class="flex_shrink m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-youtube"></i></a></li>
-          <li class="flex_shrink m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&hl=en_US" target="_blank" class="google-play c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-google-play"></i></a></li>
-          <li class="flex_shrink m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store c_secondary-n2 bg_secondary-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-apple"></i></a></li>
+          <li class="flex_shrink m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter c_shade-n2 bg_shade-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-twitter-square"></i></a></li>
+          <li class="flex_shrink m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook c_shade-n2 bg_shade-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-facebook-square"></i></a></li>
+          <li class="flex_shrink m-r_2"><a href="https://www.linkedin.com/company/american-college-of-cardiology/" target="_blank" class="linkedin c_shade-n2 bg_shade-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-linkedin"></i></a></li>
+          <li class="flex_shrink m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube c_shade-n2 bg_shade-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-youtube"></i></a></li>
+          <li class="flex_shrink m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&hl=en_US" target="_blank" class="google-play c_shade-n2 bg_shade-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-google-play"></i></a></li>
+          <li class="flex_shrink m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store c_shade-n2 bg_shade-4 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-apple"></i></a></li>
       </ul>
   </section>
 
@@ -642,21 +643,21 @@
 
    Markup:
   <ul class="ul_none list m_0 p_0 flex flex_wrap justify-start items-start">
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">award</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">ban</span></div></div></li>
-  	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">barcode</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bars</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">beer</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-  	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bug"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bug</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bullhorn"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bullhorn</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bullseye"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bullseye</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-calculator"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">calculator</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-calendar"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">calendar</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-calendar"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">calendar</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">award</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">ban</span></div></div></li>
+  	<li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">barcode</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bars</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">beer</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell</span></div></div></li>
+  	<li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell-slash</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell-slash</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bug"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bug</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bullhorn"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bullhorn</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bullseye"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bullseye</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-calculator"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">calculator</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-calendar"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">calendar</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-calendar"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">calendar</span></div></div></li>
   </ul>
 
 
@@ -670,15 +671,15 @@
 
    Markup:
   <ul class="ul_none list m_0 p_0 flex flex_wrap justify-start items-start">
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">award</span></div></div></li>
-  	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">ban</span></div></div></li>
-  	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">barcode</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bars</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">beer</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-  	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">award</span></div></div></li>
+  	<li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">ban</span></div></div></li>
+  	<li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">barcode</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bars</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">beer</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell</span></div></div></li>
+  	<li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell-slash</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fas fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell-slash</span></div></div></li>
   </ul>
 
   	Styleguide DesignBase.Icons.Solid
@@ -691,15 +692,15 @@
 
    Markup:
   <ul class="ul_none list m_0 p_0 flex flex_wrap justify-start items-start">
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">award</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">ban</span></div></div></li>
-  	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">barcode</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bars</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">beer</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-  	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="fal fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fal fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">award</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fal fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">ban</span></div></div></li>
+  	<li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fal fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">barcode</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fal fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bars</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fal fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">beer</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fal fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell</span></div></div></li>
+  	<li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fal fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fal fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell-slash</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="fal fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell-slash</span></div></div></li>
   </ul>
 
   	Styleguide DesignBase.Icons.Light
@@ -712,15 +713,15 @@
 
    Markup:
   <ul class="ul_none list m_0 p_0 flex flex_wrap justify-start items-start">
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">award</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">ban</span></div></div></li>
-  	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">barcode</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bars</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">beer</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-  	<li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
-      <li class="relative br_secondary-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_secondary-5 expanded-click-area"><i class="far fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_secondary h:c_secondary-n2 text font_bold font_display">bell-slash</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="far fa-award"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">award</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="far fa-ban"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">ban</span></div></div></li>
+  	<li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="far fa-barcode"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">barcode</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="far fa-bars"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bars</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="far fa-beer"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">beer</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="far fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell</span></div></div></li>
+  	<li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="far fa-bell"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="far fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell-slash</span></div></div></li>
+      <li class="relative br_shade-4 br_solid br_1 flex_auto w-grid_3"><div class="flex"><div class="font_5 cell w-grid_3 text_center p_3 no-underline c_inherit flex_shrink justify_center h:bg_navigation-n3 h:c_white bg_shade-5 expanded-click-area"><i class="far fa-bell-slash"></i></div><div class="flex_auto p_4 p-y_2 self_center"><span class="c_shade h:c_shade-n2 text font_bold font_display">bell-slash</span></div></div></li>
   </ul>
 
 
@@ -821,7 +822,7 @@
 
 
   Markup:
-  <div class="bg_secondary-2 max-w_1"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
+  <div class="bg_shade-2 max-w_1"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
 
   Styleguide Recipes.Scrollable
 
@@ -846,7 +847,7 @@
 
     Markup:
     <p class="font_2">All of the Class Names follow this ordered pattern of construction.</p>
-    <ol class="font_1 font_bold m_4 br_solid br_1 br_secondary-4 lh_4" style="list-style-position: inside;">
+    <ol class="font_1 font_bold m_4 br_solid br_1 br_shade-4 lh_4" style="list-style-position: inside;">
           <li class="p_2 bg_success-3">State - Hover <em>(Optional)</em></li>
           <li class="p_2 bg_primary-3">Class Name</li>
           <li class="p_2 bg_alert-3">Class Name Modifier <em>(Optional)</em></li>
@@ -858,7 +859,7 @@
     <div class="font_2">
         <div class="font_bold font_3">Example 1</div>
         <div class="font_1 m-t_2">Make the background color primary modified by the shading of negative 2 when the cursor has hovered over it.</div>
-        <div class="h:bg_primary-n3 h:c_white  m-y_4 p_4 br_solid br_secondary-3 br_1">I have the class h:bg_primary-n2</div>
+        <div class="h:bg_primary-n3 h:c_white  m-y_4 p_4 br_solid br_shade-3 br_1">I have the class h:bg_primary-n2</div>
         <div class="font_bold font_1">Long Name</div>
         <div class="flex m-t_3">
               <div class="flex_auto bg_success-3 p_3">hover</div>
@@ -879,7 +880,7 @@
           <div class="flex_auto bg_warning-3 p_3">-</div>
           <div class="flex_auto bg_alert-3 p_3">n2</div>
         </div>
-        <ol class="font_0 font_bold c_black m_4 br_solid br_1 br_secondary-4 lh_4" style="list-style-position: inside;">
+        <ol class="font_0 font_bold c_black m_4 br_solid br_1 br_shade-4 lh_4" style="list-style-position: inside;">
             <li class="bg_success-3 p_3">'h' => Interaction State </li>
             <li class="bg_warning-3 p_3">`:`=> Interaction State Divider when use state interaction</li>
             <li class="bg_primary-3 p_3">'bg' => Class Name</li>
@@ -887,7 +888,7 @@
             <li class="bg_highlight-3 p_3">`primary` => Value</li>
             <li class="bg_warning-3 p_3">`-` => Modifier Divider think of this as shift from the value</li>
             <li class="bg_alert-3 p_3">`n2` => Modifier Values most follow a [n5 , n4, n3, n2, n1, {0 is
-            default} , 1, 2, 3, 4, 5, color names, or secondary values]</li>
+            default} , 1, 2, 3, 4, 5, color names, or shade values]</li>
             <li class="bg_warning-3 p_3">`:`=> Breakpoint Divider when rule should apply</li>
             <li class="bg_accent-3 p_3">`lg`=> Breakpoint Value</li>
         </ol>   
@@ -1190,7 +1191,7 @@
   .c_inherit - text that inherits from its parent
 
   Markup:
-  <div class="{{modifier_class}} font_normal font_2 font_bold bg_secondary-4 p_3">
+  <div class="{{modifier_class}} font_normal font_2 font_bold bg_shade-4 p_3">
     <div class="text-lowercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
     <div class="text-uppercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
   </div>
@@ -1404,7 +1405,7 @@
 
     Markup:
     <div class="font_normal font_1 p_3">
-      <h3 class="font_2 font_bold c_secondary_3 p-b_3">{{modifier_class}}</h3>
+      <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
       <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
@@ -1421,7 +1422,7 @@
 
     Markup:
     <div class="font_normal font_1 p_3">
-      <h3 class="font_2 font_bold c_secondary_3 p-b_3 {{modifier_class}}">{{modifier_class}}</h3>
+      <h3 class="font_2 font_bold c_shade_3 p-b_3 {{modifier_class}}">{{modifier_class}}</h3>
       <p class="{{modifier_class}} lh_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
@@ -1438,7 +1439,7 @@
 
     Markup:
     <div class="font_normal font_1 p_3">
-      <h3 class="font_2 font_bold c_secondary_3 p-b_3">{{modifier_class}}</h3>
+      <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
       <ul class="{{modifier_class}}">
       <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
       <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
@@ -1895,7 +1896,7 @@
     Background colors can be easily change with bg_`color-name`  
 
     bg_primary            	- background color warning color
-    bg_secondary            	- background color warning color
+    bg_shade            	- background color warning color
     bg_alert            	- background color alert color
     bg_warning            	- background color warning color
     bg_success              - background color success color
@@ -1916,7 +1917,7 @@
   Background colors can be shifted by appending a modifier of n5 through 5.  The negative(n) numbers mix the color with black and the positive numbers mix the color with white.<table><thead><tr><th>Classes</th><th>Effect</th></tr></thead><tbody><tr><td>.bg_(color)-0, .bg_(color)</td><td>pure color</td></tr><tr><td>.bg_(color)-0</td><td>color with 0% white mixed in</td></tr><tr><td>.bg_(color)-1</td><td>color with 15% white mixed in</td></tr><tr><td>.bg_(color)-2</td><td>color with 37% white mixed in</td></tr><tr><td>.bg_(color)-3</td><td>color with 60% white mixed in</td></tr><tr><td>.bg_(color)-4</td><td>color with 78% white mixed in</td></tr><tr><td>.bg_(color)-5</td><td>color with 90% white mixed in</td></tr><tr><td>.bg_(color)-n1</td><td>color with 10% black mixed in</td></tr><tr><td>.bg_(color)-n2</td><td>color with 25% black mixed in</td></tr><tr><td>.bg_(color)-n3</td><td>color with 45% black mixed in</td></tr><tr><td>.bg_(color)-n4</td><td>color with 58% black mixed in</td></tr><tr><td>.bg_(color)-n5</td><td>color with 75% black mixed in</td></tr></tbody></table>   
 
   bg_primary                - background color modified light to dark
-  bg_secondary              - background color modified light to dark
+  bg_shade              - background color modified light to dark
   bg_accent                 - background color modified light to dark
   bg_navigation             - background color modified light to dark
   bg_info                   - background color modified light to dark
@@ -1928,7 +1929,7 @@
 
 
   Markup:
-  <div class="flex bg_secondary-5 p_2">
+  <div class="flex bg_shade-5 p_2">
     <div class="bg_white flex_auto text_center p_2 p-y_5 ">white</div>
     <div class="{{modifier_class}}-5 flex_auto text_center  p_2 p-y_5">5</div>
     <div class="{{modifier_class}}-4 flex_auto text_center  p_2 p-y_5">4</div>
@@ -1986,7 +1987,7 @@
   .bg_center           - cardnial center center
 
   Markup:
-     <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div></div>
+     <div class="bg_shade-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div></div>
 
   Styleguide Background.Image Positon
 
@@ -2003,7 +2004,7 @@
 
 
   Markup:
-     <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;"><span class="alt">{{modifier_class}}</span></div></div>
+     <div class="bg_shade-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;"><span class="alt">{{modifier_class}}</span></div></div>
 
   Styleguide Background.Size
 
@@ -2021,7 +2022,7 @@
 
 
   Markup:
-     <div class="bg_secondary-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny bg_auto" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div></div>
+     <div class="bg_shade-2 max-w_1 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny bg_auto" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div></div>
 
   Styleguide Background.Image Repeat
 
@@ -2126,7 +2127,7 @@
   alter the border color of and object by adding the border color utitlity class.
 
   br_primary              - border color
-  br_secondary            - border color
+  br_shade            - border color
   br_alert                - border color
   br_warning              - border color
   br_info                 - border color
@@ -2228,7 +2229,7 @@
     br_primary-n5             - border color mixed with black 
 
     Markup:
-    <div class="{{modifier_class}} p_3 br_solid br_5 bg_secondary c_white">{{modifier_class}} border</div>
+    <div class="{{modifier_class}} p_3 br_solid br_5 bg_shade c_white">{{modifier_class}} border</div>
 
     Styleguide Borders.Colors.Modifiers
 
@@ -2312,7 +2313,7 @@
 
     bg_alert              - background color modified light to dark
     bg_primary              - background color modified light to dark
-    bg_secondary              - background color modified light to dark
+    bg_shade              - background color modified light to dark
     bg_info              - background color modified light to dark
     bg_highlight              - background color success color
     bg_success              - background color modified light to dark
@@ -2320,17 +2321,17 @@
 
     Markup:
     <div class="flex m_5">
-      <div class="h:{{modifier_class}}-5 flex_auto text_center br_1 br_solid br_secondary-4 p_2">5</div>
-      <div class="h:{{modifier_class}}-4 flex_auto text_center br_1 br_solid br_secondary-4 p_2">4</div>
-      <div class="h:{{modifier_class}}-3 flex_auto text_center br_1 br_solid br_secondary-4 p_2">3</div>
-      <div class="h:{{modifier_class}}-2 flex_auto text_center br_1 br_solid br_secondary-4 p_2">2</div>
-      <div class="h:{{modifier_class}}-1 flex_auto text_center br_1 br_solid br_secondary-4 p_2">1</div>
-      <div class="h:{{modifier_class}}-0 flex_auto text_center br_1 br_solid br_secondary-4 p_2">0</div>
-      <div class="h:{{modifier_class}}-n1 flex_auto text_center br_1 br_solid br_secondary-4 p_2 h:c_white">n1</div>
-      <div class="h:{{modifier_class}}-n2 flex_auto text_center br_1 br_solid br_secondary-4 p_2 h:c_white">n2</div>
-      <div class="h:{{modifier_class}}-n3 flex_auto text_center br_1 br_solid br_secondary-4 p_2 h:c_white">n3</div>
-      <div class="h:{{modifier_class}}-n4 flex_auto text_center br_1 br_solid br_secondary-4 p_2 h:c_white">n4</div>
-      <div class="h:{{modifier_class}}-n5 flex_auto text_center br_1 br_solid br_secondary-4 p_2 h:c_white">n5</div>
+      <div class="h:{{modifier_class}}-5 flex_auto text_center br_1 br_solid br_shade-4 p_2">5</div>
+      <div class="h:{{modifier_class}}-4 flex_auto text_center br_1 br_solid br_shade-4 p_2">4</div>
+      <div class="h:{{modifier_class}}-3 flex_auto text_center br_1 br_solid br_shade-4 p_2">3</div>
+      <div class="h:{{modifier_class}}-2 flex_auto text_center br_1 br_solid br_shade-4 p_2">2</div>
+      <div class="h:{{modifier_class}}-1 flex_auto text_center br_1 br_solid br_shade-4 p_2">1</div>
+      <div class="h:{{modifier_class}}-0 flex_auto text_center br_1 br_solid br_shade-4 p_2">0</div>
+      <div class="h:{{modifier_class}}-n1 flex_auto text_center br_1 br_solid br_shade-4 p_2 h:c_white">n1</div>
+      <div class="h:{{modifier_class}}-n2 flex_auto text_center br_1 br_solid br_shade-4 p_2 h:c_white">n2</div>
+      <div class="h:{{modifier_class}}-n3 flex_auto text_center br_1 br_solid br_shade-4 p_2 h:c_white">n3</div>
+      <div class="h:{{modifier_class}}-n4 flex_auto text_center br_1 br_solid br_shade-4 p_2 h:c_white">n4</div>
+      <div class="h:{{modifier_class}}-n5 flex_auto text_center br_1 br_solid br_shade-4 p_2 h:c_white">n5</div>
     </div>
 
     Weight: 30
@@ -2344,7 +2345,7 @@
     hovers can easily be added to change the text color by adding `hover:` or `h:` in front of the text color utility like `h:primary`
 
     c_primary              - text color modified light to dark
-    c_secondary              - text color modified light to dark
+    c_shade              - text color modified light to dark
     c_info              - text color modified light to dark
     c_highlight              - text color success color
     c_success              - text color modified light to dark
@@ -2353,17 +2354,17 @@
 
     Markup:
     <div class="flex m_5">
-      <div class="h:{{modifier_class}}-5 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">5</div>
-      <div class="h:{{modifier_class}}-4 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">4</div>
-      <div class="h:{{modifier_class}}-3 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">3</div>
-      <div class="h:{{modifier_class}}-2 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">2</div>
-      <div class="h:{{modifier_class}}-1 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">1</div>
-      <div class="h:{{modifier_class}}-0 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1">0</div>
-      <div class="h:{{modifier_class}}-n1 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1 ">n1</div>
-      <div class="h:{{modifier_class}}-n2 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1 ">n2</div>
-      <div class="h:{{modifier_class}}-n3 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1 ">n3</div>
-      <div class="h:{{modifier_class}}-n4 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1 ">n4</div>
-      <div class="h:{{modifier_class}}-n5 flex_auto font_bold bg_secondary-3 font_4 font_slab text_center br_1 br_solid br_secondary-4 p_1 ">n5</div>
+      <div class="h:{{modifier_class}}-5 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">5</div>
+      <div class="h:{{modifier_class}}-4 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">4</div>
+      <div class="h:{{modifier_class}}-3 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">3</div>
+      <div class="h:{{modifier_class}}-2 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">2</div>
+      <div class="h:{{modifier_class}}-1 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">1</div>
+      <div class="h:{{modifier_class}}-0 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1">0</div>
+      <div class="h:{{modifier_class}}-n1 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1 ">n1</div>
+      <div class="h:{{modifier_class}}-n2 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1 ">n2</div>
+      <div class="h:{{modifier_class}}-n3 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1 ">n3</div>
+      <div class="h:{{modifier_class}}-n4 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1 ">n4</div>
+      <div class="h:{{modifier_class}}-n5 flex_auto font_bold bg_shade-3 font_4 font_slab text_center br_1 br_solid br_shade-4 p_1 ">n5</div>
     </div>
 
     Weight: 10
@@ -2408,17 +2409,17 @@
 
   Markup:
   <div class="flex m_5 bg_primary m_5">
-    <div class="h:{{modifier_class}}-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">0</div>
-    <div class="h:{{modifier_class}}-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">1</div>
-    <div class="h:{{modifier_class}}-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">2</div>
-    <div class="h:{{modifier_class}}-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">3</div>
-    <div class="h:{{modifier_class}}-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">4</div>
-    <div class="h:{{modifier_class}}-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">5</div>
-    <div class="h:{{modifier_class}}-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">6</div>
-    <div class="h:{{modifier_class}}-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">7</div>
-    <div class="h:{{modifier_class}}-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">8</div>
-    <div class="h:{{modifier_class}}-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">9</div>
-    <div class="h:{{modifier_class}}  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">default</div>
+    <div class="h:{{modifier_class}}-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
+    <div class="h:{{modifier_class}}-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
+    <div class="h:{{modifier_class}}-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
+    <div class="h:{{modifier_class}}-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
+    <div class="h:{{modifier_class}}-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
+    <div class="h:{{modifier_class}}-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
+    <div class="h:{{modifier_class}}-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
+    <div class="h:{{modifier_class}}-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
+    <div class="h:{{modifier_class}}-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
+    <div class="h:{{modifier_class}}-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
+    <div class="h:{{modifier_class}}  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">default</div>
   </div>
 
   Weight: 50
@@ -2434,16 +2435,16 @@
 
   Markup:
   <div class="flex m_5 bg_primary m_5">
-    <div class="h:opacity opacity-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">0</div>
-    <div class="h:opacity opacity-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">1</div>
-    <div class="h:opacity opacity-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">2</div>
-    <div class="h:opacity opacity-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">3</div>
-    <div class="h:opacity opacity-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">4</div>
-    <div class="h:opacity opacity-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">5</div>
-    <div class="h:opacity opacity-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">6</div>
-    <div class="h:opacity opacity-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">7</div>
-    <div class="h:opacity opacity-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">8</div>
-    <div class="h:opacity opacity-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">9</div>
+    <div class="h:opacity opacity-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
+    <div class="h:opacity opacity-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
+    <div class="h:opacity opacity-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
+    <div class="h:opacity opacity-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
+    <div class="h:opacity opacity-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
+    <div class="h:opacity opacity-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
+    <div class="h:opacity opacity-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
+    <div class="h:opacity opacity-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
+    <div class="h:opacity opacity-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
+    <div class="h:opacity opacity-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
   </div>
 
   Weight: 60
@@ -2465,17 +2466,17 @@
 
   Markup:
   <div class="flex m_5 bg_primary m_5">
-    <div class="transition_{{modifier_class}} h:bg_black-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">0</div>
-    <div class="transition_{{modifier_class}} h:bg_black-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">1</div>
-    <div class="transition_{{modifier_class}} h:bg_black-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">2</div>
-    <div class="transition_{{modifier_class}} h:bg_black-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">3</div>
-    <div class="transition_{{modifier_class}} h:bg_black-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">4</div>
-    <div class="transition_{{modifier_class}} h:bg_black-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4">5</div>
-    <div class="transition_{{modifier_class}} h:bg_black-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">6</div>
-    <div class="transition_{{modifier_class}} h:bg_black-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">7</div>
-    <div class="transition_{{modifier_class}} h:bg_black-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">8</div>
-    <div class="transition_{{modifier_class}} h:bg_black-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">9</div>
-    <div class="transition_{{modifier_class}} h:bg_black  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_secondary-4 ">default</div>
+    <div class="transition_{{modifier_class}} h:bg_black-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
+    <div class="transition_{{modifier_class}} h:bg_black-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
+    <div class="transition_{{modifier_class}} h:bg_black-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
+    <div class="transition_{{modifier_class}} h:bg_black-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
+    <div class="transition_{{modifier_class}} h:bg_black-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
+    <div class="transition_{{modifier_class}} h:bg_black-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
+    <div class="transition_{{modifier_class}} h:bg_black-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
+    <div class="transition_{{modifier_class}} h:bg_black-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
+    <div class="transition_{{modifier_class}} h:bg_black-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
+    <div class="transition_{{modifier_class}} h:bg_black-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
+    <div class="transition_{{modifier_class}} h:bg_black  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">default</div>
   </div>
 
   Weight: 50
@@ -2497,11 +2498,11 @@
 
   Markup:
   <div class="">
-    <div class="h:br_none br_3 br_solid br_primary-2 p_2 m_2 bg_secondary-5">None</div>
-    <div class="h:br_transparent br_3 br_solid br_primary-2 p_2 m_2 bg_secondary-5">Transparent</div>
-    <div class="h:br_solid br_3 br_dotted br_primary-2 p_2 m_2 bg_secondary-5">Solid</div>
-    <div class="h:br_dashed br_3 br_solid br_primary-2 p_2 m_2 bg_secondary-5">Dashed</div>
-    <div class="h:br_dotted br_3 br_solid br_primary-2 p_2 m_2 bg_secondary-5">Dotted</div>
+    <div class="h:br_none br_3 br_solid br_primary-2 p_2 m_2 bg_shade-5">None</div>
+    <div class="h:br_transparent br_3 br_solid br_primary-2 p_2 m_2 bg_shade-5">Transparent</div>
+    <div class="h:br_solid br_3 br_dotted br_primary-2 p_2 m_2 bg_shade-5">Solid</div>
+    <div class="h:br_dashed br_3 br_solid br_primary-2 p_2 m_2 bg_shade-5">Dashed</div>
+    <div class="h:br_dotted br_3 br_solid br_primary-2 p_2 m_2 bg_shade-5">Dotted</div>
   </div>
 
   Weight: 40
@@ -2553,17 +2554,17 @@
 
   Markup:
   <div class="flex p_5 bg_primary m_5 is-active_toggle-function">
-    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-0 p-y_3 p-x_4 font_bold font_2 font_slab c_secondary text_center br_1 br_solid br_secondary-4">0</div>
-    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-1 p-y_3 p-x_4 font_bold font_2 font_slab c_secondary text_center br_1 br_solid br_secondary-4">1</div>
-    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-2 p-y_3 p-x_4 font_bold font_2 font_slab c_secondary text_center br_1 br_solid br_secondary-4">2</div>
-    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-3 p-y_3 p-x_4 font_bold font_2 font_slab c_secondary text_center br_1 br_solid br_secondary-4">3</div>
-    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-4 p-y_3 p-x_4 font_bold font_2 font_slab c_secondary text_center br_1 br_solid br_secondary-4">4</div>
-    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-5 p-y_3 p-x_4 font_bold font_2 font_slab c_secondary text_center br_1 br_solid br_secondary-4">5</div>
-    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-6 p-y_3 p-x_4 font_bold font_2 font_slab c_secondary text_center br_1 br_solid br_secondary-4 ">6</div>
-    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-7 p-y_3 p-x_4 font_bold font_2 font_slab c_secondary text_center br_1 br_solid br_secondary-4 ">7</div>
-    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-8 p-y_3 p-x_4 font_bold font_2 font_slab c_secondary text_center br_1 br_solid br_secondary-4 ">8</div>
-    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-9 p-y_3 p-x_4 font_bold font_2 font_slab c_secondary text_center br_1 br_solid br_secondary-4 ">9</div>
-    <div class="flex_auto  a:{{modifier_class}} bg_{{modifier_class}}-0 p-y_3 p-x_4 font_bold font_2 font_slab c_secondary text_center br_1 br_solid br_secondary-4 ">default</div>
+    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-0 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">0</div>
+    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-1 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">1</div>
+    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-2 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">2</div>
+    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-3 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">3</div>
+    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-4 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">4</div>
+    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-5 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">5</div>
+    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-6 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">6</div>
+    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-7 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">7</div>
+    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-8 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">8</div>
+    <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-9 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">9</div>
+    <div class="flex_auto  a:{{modifier_class}} bg_{{modifier_class}}-0 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">default</div>
   </div>
 
   Weight: 50
@@ -2577,7 +2578,7 @@
     <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Set the font color of the child by setting the parent to .is-active. `a:c_primary`
 
     c_primary              - text color modified light to dark
-    c_secondary              - text color modified light to dark
+    c_shade              - text color modified light to dark
     c_info              - text color modified light to dark
     c_highlight              - text color success color
     c_success              - text color modified light to dark
@@ -2586,17 +2587,17 @@
 
     Markup:
     <div class="flex p_5 is-active_toggle-function c_white">
-      <div class="flex_auto a:{{modifier_class}}-5 font_bold bg_secondary-n3 font_5 font_slab text_center br_1 br_solid br_secondary-4 p_1">5</div>
-      <div class="flex_auto a:{{modifier_class}}-4 font_bold bg_secondary-n3 font_5 font_slab text_center br_1 br_solid br_secondary-4 p_1">4</div>
-      <div class="flex_auto a:{{modifier_class}}-3 font_bold bg_secondary-n3 font_5 font_slab text_center br_1 br_solid br_secondary-4 p_1">3</div>
-      <div class="flex_auto a:{{modifier_class}}-2 font_bold bg_secondary-n3 font_5 font_slab text_center br_1 br_solid br_secondary-4 p_1">2</div>
-      <div class="flex_auto a:{{modifier_class}}-1 font_bold bg_secondary-n3 font_5 font_slab text_center br_1 br_solid br_secondary-4 p_1">1</div>
-      <div class="flex_auto a:{{modifier_class}}-0 font_bold bg_secondary-n3 font_5 font_slab text_center br_1 br_solid br_secondary-4 p_1">0</div>
-      <div class="flex_auto a:{{modifier_class}}-n1 font_bold bg_secondary-n3 font_5 font_slab text_center br_1 br_solid br_secondary-4 p_1">n1</div>
-      <div class="flex_auto a:{{modifier_class}}-n2 font_bold bg_secondary-n3 font_5 font_slab text_center br_1 br_solid br_secondary-4 p_1">n2</div>
-      <div class="flex_auto a:{{modifier_class}}-n3 font_bold bg_secondary-n3 font_5 font_slab text_center br_1 br_solid br_secondary-4 p_1">n3</div>
-      <div class="flex_auto a:{{modifier_class}}-n4 font_bold bg_secondary-n3 font_5 font_slab text_center br_1 br_solid br_secondary-4 p_1">n4</div>
-      <div class="flex_auto a:{{modifier_class}}-n5 font_bold bg_secondary-n3 font_5 font_slab text_center br_1 br_solid br_secondary-4 p_1">n5</div>
+      <div class="flex_auto a:{{modifier_class}}-5 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">5</div>
+      <div class="flex_auto a:{{modifier_class}}-4 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">4</div>
+      <div class="flex_auto a:{{modifier_class}}-3 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">3</div>
+      <div class="flex_auto a:{{modifier_class}}-2 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">2</div>
+      <div class="flex_auto a:{{modifier_class}}-1 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">1</div>
+      <div class="flex_auto a:{{modifier_class}}-0 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">0</div>
+      <div class="flex_auto a:{{modifier_class}}-n1 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n1</div>
+      <div class="flex_auto a:{{modifier_class}}-n2 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n2</div>
+      <div class="flex_auto a:{{modifier_class}}-n3 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n3</div>
+      <div class="flex_auto a:{{modifier_class}}-n4 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n4</div>
+      <div class="flex_auto a:{{modifier_class}}-n5 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n5</div>
     </div>
 
     Weight: 10
@@ -2610,7 +2611,7 @@
     <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Set the font color of the child by setting the parent to .is-active. `a:c_primary`
 
     bg_primary              - text color modified light to dark
-    bg_secondary              - text color modified light to dark
+    bg_shade              - text color modified light to dark
     bg_info              - text color modified light to dark
     bg_highlight              - text color success color
     bg_success              - text color modified light to dark
@@ -2619,17 +2620,17 @@
 
     Markup:
     <div class="flex p_5 is-active_toggle-function">
-      <div class="flex_auto a:{{modifier_class}}-5 bg_secondary-2 font_3  text_center br_1 br_solid br_secondary-4 p_1">5</div>
-      <div class="flex_auto a:{{modifier_class}}-4 bg_secondary-2 font_3  text_center br_1 br_solid br_secondary-4 p_1">4</div>
-      <div class="flex_auto a:{{modifier_class}}-3 bg_secondary-2 font_3  text_center br_1 br_solid br_secondary-4 p_1">3</div>
-      <div class="flex_auto a:{{modifier_class}}-2 bg_secondary-2 font_3  text_center br_1 br_solid br_secondary-4 p_1">2</div>
-      <div class="flex_auto a:{{modifier_class}}-1 bg_secondary-2 font_3  text_center br_1 br_solid br_secondary-4 p_1">1</div>
-      <div class="flex_auto a:{{modifier_class}}-0 bg_secondary-2 font_3  text_center br_1 br_solid br_secondary-4 p_1">0</div>
-      <div class="flex_auto a:{{modifier_class}}-n1 bg_secondary-2  font_3  text_center br_1 br_solid br_secondary-4 p_1">n1</div>
-      <div class="flex_auto a:{{modifier_class}}-n2 bg_secondary-2  font_3  text_center br_1 br_solid br_secondary-4 p_1">n2</div>
-      <div class="flex_auto a:{{modifier_class}}-n3 bg_secondary-2  font_3  text_center br_1 br_solid br_secondary-4 p_1">n3</div>
-      <div class="flex_auto a:{{modifier_class}}-n4 bg_secondary-2  font_3  text_center br_1 br_solid br_secondary-4 p_1">n4</div>
-      <div class="flex_auto a:{{modifier_class}}-n5 bg_secondary-2  font_3  text_center br_1 br_solid br_secondary-4 p_1">n5</div>
+      <div class="flex_auto a:{{modifier_class}}-5 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">5</div>
+      <div class="flex_auto a:{{modifier_class}}-4 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">4</div>
+      <div class="flex_auto a:{{modifier_class}}-3 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">3</div>
+      <div class="flex_auto a:{{modifier_class}}-2 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">2</div>
+      <div class="flex_auto a:{{modifier_class}}-1 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">1</div>
+      <div class="flex_auto a:{{modifier_class}}-0 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">0</div>
+      <div class="flex_auto a:{{modifier_class}}-n1 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n1</div>
+      <div class="flex_auto a:{{modifier_class}}-n2 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n2</div>
+      <div class="flex_auto a:{{modifier_class}}-n3 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n3</div>
+      <div class="flex_auto a:{{modifier_class}}-n4 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n4</div>
+      <div class="flex_auto a:{{modifier_class}}-n5 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n5</div>
     </div>
 
     Weight: 10
@@ -2650,8 +2651,8 @@
 
     Markup:
     <div class="flex is-active_toggle-function">
-      <div class="flex_auto a:bg_accent bg_secondary-2 font_3 text_center br_1 br_solid br_secondary-4 p_3"><i class="fas font_4 {{modifier_class}} a:icon-show"></i> Show When Active</div>
-      <div class="flex_auto a:bg_accent bg_secondary-2 font_3 text_center br_1 br_solid br_secondary-4 p_3"><i class="fas font_4 {{modifier_class}} a:icon-hide"></i> Hide when Active</div>
+      <div class="flex_auto a:bg_accent bg_shade-2 font_3 text_center br_1 br_solid br_shade-4 p_3"><i class="fas font_4 {{modifier_class}} a:icon-show"></i> Show When Active</div>
+      <div class="flex_auto a:bg_accent bg_shade-2 font_3 text_center br_1 br_solid br_shade-4 p_3"><i class="fas font_4 {{modifier_class}} a:icon-hide"></i> Hide when Active</div>
     </div>
 
     Weight: 10
@@ -2672,8 +2673,8 @@
 
   Markup:
   <div class="p_5 is-active_toggle-function">
-    <span class="a:bg_accent bg_secondary-2 font_4 text_center br_1 br_solid br_secondary-4 p_4">Click to Toggle parent is-active</span>
-    <span class="a:{{modifier_class}} a:bg_accent bg_secondary-2 font_4 text_center br_1 br_solid br_secondary-4 p_4">Span with display:{{modifier_class}} when parent is active</span>
+    <span class="a:bg_accent bg_shade-2 font_4 text_center br_1 br_solid br_shade-4 p_4">Click to Toggle parent is-active</span>
+    <span class="a:{{modifier_class}} a:bg_accent bg_shade-2 font_4 text_center br_1 br_solid br_shade-4 p_4">Span with display:{{modifier_class}} when parent is active</span>
   </div>
 
   Weight: 10
@@ -2787,13 +2788,13 @@
       Placed in applications used for navigation in mobile apps.
 
       Markup:
-      <div class="texture-medium bg_secondary-3 relative" style="max-width:412px;max-height:732px;width:100vw;height:100vh">
+      <div class="texture-medium bg_shade-3 relative" style="max-width:412px;max-height:732px;width:100vw;height:100vh">
       <div id="nav" class="bg_acc c_white shadow_3 font_2 flex sticky b_0 l_0 r_0 w_100">
-          <a href="#/" class="text_center p_2 flex_auto center clear c_secondary-5 c_white hover-text_primary-4 m-bottom_0 router-link-exact-active router-link-active"><i class="fas m_2 fa-sign-out-alt"></i></a>
-          <a href="#/search" class="text_center p_2 flex_auto center clear c_secondary-5 c_white hover-text_primary-4 m-bottom_0"><i class="fas m_2 fa-search"></i></a>
-          <a href="#/shared" class="text_center p_2 flex_auto center clear c_secondary-5 c_white hover-text_primary-4 m-bottom_0"><span class="fa-layers fa-fw"><i class="fas m_2 fa-share-alt-square"></i></span></a>
-          <a href="#/history" class="text_center p_2 flex_auto center clear c_secondary-5 c_white hover-text_primary-4 m-bottom_0"><span class="fa-layers fa-fw"><i class="fas m_2 fa-history"></i></span></a>
-          <a href="#/about" class="text_center p_2 flex_auto center clear c_secondary-5 c_white hover-text_primary-4 m-bottom_0"><i class="fas m_2 fa-info-square"></i></a>
+          <a href="#/" class="text_center p_2 flex_auto center clear c_shade-5 c_white hover-text_primary-4 m-bottom_0 router-link-exact-active router-link-active"><i class="fas m_2 fa-sign-out-alt"></i></a>
+          <a href="#/search" class="text_center p_2 flex_auto center clear c_shade-5 c_white hover-text_primary-4 m-bottom_0"><i class="fas m_2 fa-search"></i></a>
+          <a href="#/shared" class="text_center p_2 flex_auto center clear c_shade-5 c_white hover-text_primary-4 m-bottom_0"><span class="fa-layers fa-fw"><i class="fas m_2 fa-share-alt-square"></i></span></a>
+          <a href="#/history" class="text_center p_2 flex_auto center clear c_shade-5 c_white hover-text_primary-4 m-bottom_0"><span class="fa-layers fa-fw"><i class="fas m_2 fa-history"></i></span></a>
+          <a href="#/about" class="text_center p_2 flex_auto center clear c_shade-5 c_white hover-text_primary-4 m-bottom_0"><i class="fas m_2 fa-info-square"></i></a>
       </div>
       </div>
 
@@ -2808,7 +2809,7 @@
 
       Markup:
           <div class="footer">
-      <div class="p-t_3 p-b_3 p_4 flex br_0 br-t_3  br_solid br_secondary-n1 c_secondary-1 texture_light bg_secondary-1">
+      <div class="p-t_3 p-b_3 p_4 flex br_0 br-t_3  br_solid br_shade-n1 c_shade-1 texture_light bg_shade-1">
           <div class="logo_condensed max-w_1"><span class="alt">logo_condensed-alt max-w_1</span></div>
       </div>
       <div class="flex justify_between p_4 p_5-large texture_dark" style="
@@ -2916,8 +2917,8 @@
           </div>
       </div>
       <!-- Cite -->
-      <div class="texture_light bg_secondary-1 p_4">
-          <cite class="c_secondary-1 font_italic font_bold font_n1 p_3 lh_2">© 2015 American College of Cardiology</cite>
+      <div class="texture_light bg_shade-1 p_4">
+          <cite class="c_shade-1 font_italic font_bold font_n1 p_3 lh_2">© 2015 American College of Cardiology</cite>
       </div>
       <!-- /Cite -->
       </div>
@@ -2930,8 +2931,8 @@
   	Contains copy right 
 
   	Markup:
-      <div class="texture_light bg_secondary-1 p_4">
-          <cite class="c_secondary-1 font_italic font_bold font_n1 p_3 lh_2">&copy; 2015 American College of Cardiology</cite>
+      <div class="texture_light bg_shade-1 p_4">
+          <cite class="c_shade-1 font_italic font_bold font_n1 p_3 lh_2">&copy; 2015 American College of Cardiology</cite>
       </div>
 
 
@@ -3097,23 +3098,23 @@
 
 
       Markup:
-      <div class="p_5 p-y_4 bg_secondary-3 texture_medium">
-      <article class="result {{modifier_class}} grid-container br_solid br_1 br_secondary-3 bg_white p_3">
+      <div class="p_5 p-y_4 bg_shade-3 texture_medium">
+      <article class="result {{modifier_class}} grid-container br_solid br_1 br_shade-3 bg_white p_3">
           <header class="flex font_1 font_display">
               <div class="flex_auto result-title overflow-ellipsis nowrap font_2 wrap">
-                  <span class="c_secondary-n5 font_slab"><span class="c_acc font_bold p-r_3">5.1</span>Genetic Predisposition</span><br>
-                  <span class="font_italic c_secondary-3 font_n1">{{modifier_class}}</span>
+                  <span class="c_shade-n5 font_slab"><span class="c_acc font_bold p-r_3">5.1</span>Genetic Predisposition</span><br>
+                  <span class="font_italic c_shade-3 font_n1">{{modifier_class}}</span>
               </div>
               <div class="felx_shrink flex m-l_3 font_bold">
                     <div class="felx_shrink flex m-l_3 font_bold"><div class="flex_auto bg_loe-B-BR-0 bg_primary-2 p-x_3 p-y_1">B-BR</div><div class="flex_auto bg_cor-IIA p-x_3 p-y_1">II</div></div>
               </div>
           </header>
           <nav class="flex font_n2 display_none">
-              <a href="#saveToLibrary" class="felx_shrink bg_primary_5 link-fulldoc m-r_1 p-y_1 p-x_2 br_primary-5 c_secondary-n3 hover:c_white hover:bg_primary br_solid br_secondary-3 br_1 br_radius"><i
+              <a href="#saveToLibrary" class="felx_shrink bg_primary_5 link-fulldoc m-r_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
                       class="fas fa-save m-r_3"></i><span>SAVE</span></a>
-              <a href="#shareResult" class="felx_shrink bg_primary_5 link-pdf m-x_1 p-y_1 p-x_2 br_primary-5 c_secondary-n3 hover:c_white hover:bg_primary br_solid br_secondary-3 br_1 br_radius"><i
+              <a href="#shareResult" class="felx_shrink bg_primary_5 link-pdf m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
                       class="fas fa-file-pdf m-r_3"></i><span>SHARE</span></a>
-              <a href="#printResult" class="felx_shrink bg_primary_5 link-hub m-x_1 p-y_1 p-x_2 br_primary-5 c_secondary-n3 hover:c_white hover:bg_primary br_solid br_secondary-3 br_1 br_radius"><i
+              <a href="#printResult" class="felx_shrink bg_primary_5 link-hub m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
                       class="fas fa-print m-r_3"></i><span>PRINT</span></a>
           </nav>
           <main class="result-content p_3 p-y_4 font_0">
@@ -3121,21 +3122,21 @@
           		<p id="p2145">Hypertension is a complex polygenic disorder in which many genes or gene combinations influenceBP<a class="inline-reference" href="#bib200">[1]</a>,&nbsp;<a class="inline-reference"	href="#bib201">[2]</a>. Although several monogenic forms of hypertension have been identified, such asglucocorticoid-remediable aldosteronism, Liddle’s syndrome, Gordon’s syndrome, and others in whichsingle-gene mutations fully explain the pathophysiology of hypertension, these disorders are rare<a	class="inline-reference" href="#bib202">(S5.1-3)</a>. The current tabulation of known genetic variantscontributing to BP and hypertension includes more than 25 rare mutations and 120 single-nucleotidepolymorphisms<a class="inline-reference" href="#bib202">[1]</a>,&nbsp;<a class="inline-reference"	href="#bib203">[2]</a>. However, even with the discovery of multiple single-nucleotide polymorphismsinfluencing control of BP since completion of the Human Genome Project in 2003, the associated variants haveonly small effects. Indeed, at present, the collective effect of all BP loci identified through genome-wideassociation studies accounts for only about 3.5% of BP variability<a class="inline-reference"	href="#bib203">(S5.1-4)</a>. The presence of a high number of small-effect alleles associated withhigher BP results in a more rapid increase in BP with age<a class="inline-reference"	href="#bib204">(S5.1-5)</a>. Future studies will need to better elucidate genetic expression, epigeneticeffects, transcriptomics, and proteomics that link genotypes with underlying pathophysiological mechanisms.</p>
   	</section>
           </main>
-          <footer class="result-docuemnt br-t_1 br_0 br_solid br_acc-3 p-t_2 is-active bg_secondary-5 m-x_n3 p-x_4 p-y_2">
+          <footer class="result-docuemnt br-t_1 br_0 br_solid br_acc-3 p-t_2 is-active bg_shade-5 m-x_n3 p-x_4 p-y_2">
               <div class="clear-fix overflow_ellipsis document-title overflow-ellipsis font_slab c_acc-1 nowrap font_n1">
                  <i class="fas icon-toggle_chevron-up-down"></i> International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements
                   with Heart
               </div>
-              <div class="result-document-publish-date font_n2 c_secondary">Focused Update: March 15, 2018</div>
+              <div class="result-document-publish-date font_n2 c_shade">Focused Update: March 15, 2018</div>
               <nav class="flex font_n1">
-                  <a href="#fulldoc" class="felx_shrink link-fulldoc m-r_3 p-y_2 c_secondary-n3 hover:c_primary"><i class="fas fa-share-square m-r_3"></i><span>FULL DOC</span></a>
-                  <a href="#pdfdownload" class="felx_shrink link-pdf m-x_3 p-y_2 c_secondary-n3 hover:c_primary"><i class="fas fa-file-pdf m-r_3"></i><span>PDF</span></a>
-                  <a href="#hublink" class="felx_shrink link-hub m-x_3 p-y_2 c_secondary-n3 hover:c_primary"><i class="fas fa-share-alt m-r_3"></i><span>HUB</span></a>
+                  <a href="#fulldoc" class="felx_shrink link-fulldoc m-r_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-square m-r_3"></i><span>FULL DOC</span></a>
+                  <a href="#pdfdownload" class="felx_shrink link-pdf m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-file-pdf m-r_3"></i><span>PDF</span></a>
+                  <a href="#hublink" class="felx_shrink link-hub m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-alt m-r_3"></i><span>HUB</span></a>
               </nav>
           </footer>
-          <aside class="bg_secondary-4 m-x_n3 m-b_n3 p_2">
-              <div class="flex font_n2 c_secondary-1  p_2 p-x_4">
-                  <strong class="felx_shrink c_secondary"><i class="fas fa-quote"></i>cite document:&nbsp;</strong>
+          <aside class="bg_shade-4 m-x_n3 m-b_n3 p_2">
+              <div class="flex font_n2 c_shade-1  p_2 p-x_4">
+                  <strong class="felx_shrink c_shade"><i class="fas fa-quote"></i>cite document:&nbsp;</strong>
                   <span class="flex_auto overflow-ellipsis nowrap">International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements with Heart</span>
               </div>
           </aside>
@@ -3151,23 +3152,23 @@
 
 
       Markup:
-      <div class="p_5 p-t_3 p-b_3 bg_secondary-5">
-          <article class="result {{modifier_class}} grid-container br_solid br_1 br_secondary-3 bg_white p_3">
+      <div class="p_5 p-t_3 p-b_3 bg_shade-5">
+          <article class="result {{modifier_class}} grid-container br_solid br_1 br_shade-3 bg_white p_3">
               <header class="flex font_1 font_display">
                   <div class="flex_auto result-title overflow-ellipsis nowrap font_1 wrap">
                       <span class="c_acc font_slab">Result Title</span>
-                      <span class="font_italic c_secondary-3 font_n1">{{modifier_class}}</span>
+                      <span class="font_italic c_shade-3 font_n1">{{modifier_class}}</span>
                   </div>
                   <div class="felx_shrink flex m-l_3 font_bold">
                         <div class="felx_shrink flex m-l_3 font_bold"><div class="flex_auto bg_loe-B-BR-0 bg_primary-2 p-x_3 p-y_1">B-BR</div><div class="flex_auto bg_cor-IIA p-x_3 p-y_1">II</div></div>
                   </div>
               </header>
               <nav class="flex font_n2">
-                  <a href="#saveToLibrary" class="felx_shrink bg_primary_5 link-fulldoc m-r_1 p-y_1 p-x_2 br_primary-5 c_secondary-n3 hover:c_white hover:bg_primary br_solid br_secondary-3 br_1 br_radius"><i
+                  <a href="#saveToLibrary" class="felx_shrink bg_primary_5 link-fulldoc m-r_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
                           class="fas fa-save m-r_3"></i><span>SAVE</span></a>
-                  <a href="#shareResult" class="felx_shrink bg_primary_5 link-pdf m-x_1 p-y_1 p-x_2 br_primary-5 c_secondary-n3 hover:c_white hover:bg_primary br_solid br_secondary-3 br_1 br_radius"><i
+                  <a href="#shareResult" class="felx_shrink bg_primary_5 link-pdf m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
                           class="fas fa-file-pdf m-r_3"></i><span>SHARE</span></a>
-                  <a href="#printResult" class="felx_shrink bg_primary_5 link-hub m-x_1 p-y_1 p-x_2 br_primary-5 c_secondary-n3 hover:c_white hover:bg_primary br_solid br_secondary-3 br_1 br_radius"><i
+                  <a href="#printResult" class="felx_shrink bg_primary_5 link-hub m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
                           class="fas fa-print m-r_3"></i><span>PRINT</span></a>
               </nav>
               <main class="result-content p-y_2">
@@ -3178,16 +3179,16 @@
                   <i class="fas icon-toggle_chevron-up-down"></i> International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements
                       with Heart
                   </div>
-                  <div class="result-document-publish-date font_n2 c_secondary">Focused Update: March 15, 2018</div>
+                  <div class="result-document-publish-date font_n2 c_shade">Focused Update: March 15, 2018</div>
                   <nav class="flex font_n2">
-                      <a href="#fulldoc" class="felx_shrink link-fulldoc m-r_3 p-y_2 c_secondary-n3 hover:c_primary"><i class="fas fa-share-square m-r_3"></i><span>FULL DOC</span></a>
-                      <a href="#pdfdownload" class="felx_shrink link-pdf m-x_3 p-y_2 c_secondary-n3 hover:c_primary"><i class="fas fa-file-pdf m-r_3"></i><span>PDF</span></a>
-                      <a href="#hublink" class="felx_shrink link-hub m-x_3 p-y_2 c_secondary-n3 hover:c_primary"><i class="fas fa-share-alt m-r_3"></i><span>HUB</span></a>
+                      <a href="#fulldoc" class="felx_shrink link-fulldoc m-r_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-square m-r_3"></i><span>FULL DOC</span></a>
+                      <a href="#pdfdownload" class="felx_shrink link-pdf m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-file-pdf m-r_3"></i><span>PDF</span></a>
+                      <a href="#hublink" class="felx_shrink link-hub m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-alt m-r_3"></i><span>HUB</span></a>
                   </nav>
               </footer>
-              <aside class="bg_secondary-4 m-x_n3 m-b_n3 p_2">
-                  <div class="flex font_n3 c_secondary-1  p_1 p-x_3">
-                      <strong class="felx_shrink c_secondary"><i class="fas fa-quote"></i>cite document:&nbsp;</strong>
+              <aside class="bg_shade-4 m-x_n3 m-b_n3 p_2">
+                  <div class="flex font_n3 c_shade-1  p_1 p-x_3">
+                      <strong class="felx_shrink c_shade"><i class="fas fa-quote"></i>cite document:&nbsp;</strong>
                       <span class="flex_auto overflow-ellipsis nowrap">International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements with Heart</span>
                   </div>
               </aside>
@@ -3392,7 +3393,7 @@
 #acc_arches_override .lorem-loader {
   -webkit-animation: Gradient 4s ease infinite;
   -moz-animation: Gradient 4s ease infinite;
-  background: linear-gradient(-45deg, #92dbef, #c1c3c7);
+  background: linear-gradient(-45deg, #92dbef, #d0d0d0);
   background-size: 400% 400%;
   color: #fff;
   animation: Gradient 4s ease infinite;
@@ -3778,6 +3779,39 @@
 }
 #acc_arches_override .c_success-n5 {
   color: #02230c !important;
+}
+#acc_arches_override .c_shade,#acc_arches_override .c_shade-0 {
+  color: #898989 !important;
+}
+#acc_arches_override .c_shade-1 {
+  color: #9b9b9b !important;
+}
+#acc_arches_override .c_shade-2 {
+  color: #b5b5b5 !important;
+}
+#acc_arches_override .c_shade-3 {
+  color: #d0d0d0 !important;
+}
+#acc_arches_override .c_shade-4 {
+  color: #e5e5e5 !important;
+}
+#acc_arches_override .c_shade-5 {
+  color: #f3f3f3 !important;
+}
+#acc_arches_override .c_shade-n1 {
+  color: #7b7b7b !important;
+}
+#acc_arches_override .c_shade-n2 {
+  color: #676767 !important;
+}
+#acc_arches_override .c_shade-n3 {
+  color: #4b4b4b !important;
+}
+#acc_arches_override .c_shade-n4 {
+  color: #373737 !important;
+}
+#acc_arches_override .c_shade-n5 {
+  color: #222222 !important;
 }
 #acc_arches_override .c_warning,#acc_arches_override .c_warning-0 {
   color: #da8210 !important;
@@ -7655,6 +7689,39 @@
 #acc_arches_override .bg_success-n5 {
   background-color: #02230c !important;
 }
+#acc_arches_override .bg_shade,#acc_arches_override .bg_shade-0 {
+  background-color: #898989 !important;
+}
+#acc_arches_override .bg_shade-1 {
+  background-color: #9b9b9b !important;
+}
+#acc_arches_override .bg_shade-2 {
+  background-color: #b5b5b5 !important;
+}
+#acc_arches_override .bg_shade-3 {
+  background-color: #d0d0d0 !important;
+}
+#acc_arches_override .bg_shade-4 {
+  background-color: #e5e5e5 !important;
+}
+#acc_arches_override .bg_shade-5 {
+  background-color: #f3f3f3 !important;
+}
+#acc_arches_override .bg_shade-n1 {
+  background-color: #7b7b7b !important;
+}
+#acc_arches_override .bg_shade-n2 {
+  background-color: #676767 !important;
+}
+#acc_arches_override .bg_shade-n3 {
+  background-color: #4b4b4b !important;
+}
+#acc_arches_override .bg_shade-n4 {
+  background-color: #373737 !important;
+}
+#acc_arches_override .bg_shade-n5 {
+  background-color: #222222 !important;
+}
 #acc_arches_override .bg_warning,#acc_arches_override .bg_warning-0 {
   background-color: #da8210 !important;
 }
@@ -8317,6 +8384,39 @@
 }
 #acc_arches_override .br_success-n5 {
   border-color: #02230c !important;
+}
+#acc_arches_override .br_shade,#acc_arches_override .br_shade-0 {
+  border-color: #898989 !important;
+}
+#acc_arches_override .br_shade-1 {
+  border-color: #9b9b9b !important;
+}
+#acc_arches_override .br_shade-2 {
+  border-color: #b5b5b5 !important;
+}
+#acc_arches_override .br_shade-3 {
+  border-color: #d0d0d0 !important;
+}
+#acc_arches_override .br_shade-4 {
+  border-color: #e5e5e5 !important;
+}
+#acc_arches_override .br_shade-5 {
+  border-color: #f3f3f3 !important;
+}
+#acc_arches_override .br_shade-n1 {
+  border-color: #7b7b7b !important;
+}
+#acc_arches_override .br_shade-n2 {
+  border-color: #676767 !important;
+}
+#acc_arches_override .br_shade-n3 {
+  border-color: #4b4b4b !important;
+}
+#acc_arches_override .br_shade-n4 {
+  border-color: #373737 !important;
+}
+#acc_arches_override .br_shade-n5 {
+  border-color: #222222 !important;
 }
 #acc_arches_override .br_warning,#acc_arches_override .br_warning-0 {
   border-color: #da8210 !important;
@@ -9022,6 +9122,105 @@
 }
 #acc_arches_override .h\:br_success-n5:hover {
   border-color: #02230c !important;
+}
+#acc_arches_override .h\:bg_shade:hover,#acc_arches_override .h\:bg_shade-0:hover {
+  background-color: #898989 !important;
+}
+#acc_arches_override .h\:bg_shade-1:hover {
+  background-color: #9b9b9b !important;
+}
+#acc_arches_override .h\:bg_shade-2:hover {
+  background-color: #b5b5b5 !important;
+}
+#acc_arches_override .h\:bg_shade-3:hover {
+  background-color: #d0d0d0 !important;
+}
+#acc_arches_override .h\:bg_shade-4:hover {
+  background-color: #e5e5e5 !important;
+}
+#acc_arches_override .h\:bg_shade-5:hover {
+  background-color: #f3f3f3 !important;
+}
+#acc_arches_override .h\:bg_shade-n1:hover {
+  background-color: #7b7b7b !important;
+}
+#acc_arches_override .h\:bg_shade-n2:hover {
+  background-color: #676767 !important;
+}
+#acc_arches_override .h\:bg_shade-n3:hover {
+  background-color: #4b4b4b !important;
+}
+#acc_arches_override .h\:bg_shade-n4:hover {
+  background-color: #373737 !important;
+}
+#acc_arches_override .h\:bg_shade-n5:hover {
+  background-color: #222222 !important;
+}
+#acc_arches_override .h\:c_shade:hover,#acc_arches_override .h\:c_shade-0:hover {
+  color: #898989 !important;
+}
+#acc_arches_override .h\:c_shade-1:hover {
+  color: #9b9b9b !important;
+}
+#acc_arches_override .h\:c_shade-2:hover {
+  color: #b5b5b5 !important;
+}
+#acc_arches_override .h\:c_shade-3:hover {
+  color: #d0d0d0 !important;
+}
+#acc_arches_override .h\:c_shade-4:hover {
+  color: #e5e5e5 !important;
+}
+#acc_arches_override .h\:c_shade-5:hover {
+  color: #f3f3f3 !important;
+}
+#acc_arches_override .h\:c_shade-n1:hover {
+  color: #7b7b7b !important;
+}
+#acc_arches_override .h\:c_shade-n2:hover {
+  color: #676767 !important;
+}
+#acc_arches_override .h\:c_shade-n3:hover {
+  color: #4b4b4b !important;
+}
+#acc_arches_override .h\:c_shade-n4:hover {
+  color: #373737 !important;
+}
+#acc_arches_override .h\:c_shade-n5:hover {
+  color: #222222 !important;
+}
+#acc_arches_override .h\:br_shade:hover,#acc_arches_override .h\:br_shade-0:hover {
+  border-color: #898989 !important;
+}
+#acc_arches_override .h\:br_shade-1:hover {
+  border-color: #9b9b9b !important;
+}
+#acc_arches_override .h\:br_shade-2:hover {
+  border-color: #b5b5b5 !important;
+}
+#acc_arches_override .h\:br_shade-3:hover {
+  border-color: #d0d0d0 !important;
+}
+#acc_arches_override .h\:br_shade-4:hover {
+  border-color: #e5e5e5 !important;
+}
+#acc_arches_override .h\:br_shade-5:hover {
+  border-color: #f3f3f3 !important;
+}
+#acc_arches_override .h\:br_shade-n1:hover {
+  border-color: #7b7b7b !important;
+}
+#acc_arches_override .h\:br_shade-n2:hover {
+  border-color: #676767 !important;
+}
+#acc_arches_override .h\:br_shade-n3:hover {
+  border-color: #4b4b4b !important;
+}
+#acc_arches_override .h\:br_shade-n4:hover {
+  border-color: #373737 !important;
+}
+#acc_arches_override .h\:br_shade-n5:hover {
+  border-color: #222222 !important;
 }
 #acc_arches_override .h\:bg_warning:hover,#acc_arches_override .h\:bg_warning-0:hover {
   background-color: #da8210 !important;
@@ -9966,6 +10165,39 @@
 #acc_arches_override .br_success-n5 {
   border-color: #02230c !important;
 }
+#acc_arches_override .br_shade,#acc_arches_override .br_shade-0 {
+  border-color: #898989 !important;
+}
+#acc_arches_override .br_shade-1 {
+  border-color: #9b9b9b !important;
+}
+#acc_arches_override .br_shade-2 {
+  border-color: #b5b5b5 !important;
+}
+#acc_arches_override .br_shade-3 {
+  border-color: #d0d0d0 !important;
+}
+#acc_arches_override .br_shade-4 {
+  border-color: #e5e5e5 !important;
+}
+#acc_arches_override .br_shade-5 {
+  border-color: #f3f3f3 !important;
+}
+#acc_arches_override .br_shade-n1 {
+  border-color: #7b7b7b !important;
+}
+#acc_arches_override .br_shade-n2 {
+  border-color: #676767 !important;
+}
+#acc_arches_override .br_shade-n3 {
+  border-color: #4b4b4b !important;
+}
+#acc_arches_override .br_shade-n4 {
+  border-color: #373737 !important;
+}
+#acc_arches_override .br_shade-n5 {
+  border-color: #222222 !important;
+}
 #acc_arches_override .br_warning,#acc_arches_override .br_warning-0 {
   border-color: #da8210 !important;
 }
@@ -10466,6 +10698,96 @@
 #acc_arches_override .is-active.a\:c_success-n5,
 #acc_arches_override .is-active > .a\:c_success-n5 {
   color: #02230c !important;
+}
+#acc_arches_override .is-active.a\:bg_shade,
+#acc_arches_override .is-active > .a\:bg_shade,#acc_arches_override .is-active.a\:bg_shade-0,
+#acc_arches_override .is-active > .a\:bg_shade-0 {
+  background-color: #898989 !important;
+}
+#acc_arches_override .is-active.a\:bg_shade-1,
+#acc_arches_override .is-active > .a\:bg_shade-1 {
+  background-color: #9b9b9b !important;
+}
+#acc_arches_override .is-active.a\:bg_shade-2,
+#acc_arches_override .is-active > .a\:bg_shade-2 {
+  background-color: #b5b5b5 !important;
+}
+#acc_arches_override .is-active.a\:bg_shade-3,
+#acc_arches_override .is-active > .a\:bg_shade-3 {
+  background-color: #d0d0d0 !important;
+}
+#acc_arches_override .is-active.a\:bg_shade-4,
+#acc_arches_override .is-active > .a\:bg_shade-4 {
+  background-color: #e5e5e5 !important;
+}
+#acc_arches_override .is-active.a\:bg_shade-5,
+#acc_arches_override .is-active > .a\:bg_shade-5 {
+  background-color: #f3f3f3 !important;
+}
+#acc_arches_override .is-active.a\:bg_shade-n1,
+#acc_arches_override .is-active > .a\:bg_shade-n1 {
+  background-color: #7b7b7b !important;
+}
+#acc_arches_override .is-active.a\:bg_shade-n2,
+#acc_arches_override .is-active > .a\:bg_shade-n2 {
+  background-color: #676767 !important;
+}
+#acc_arches_override .is-active.a\:bg_shade-n3,
+#acc_arches_override .is-active > .a\:bg_shade-n3 {
+  background-color: #4b4b4b !important;
+}
+#acc_arches_override .is-active.a\:bg_shade-n4,
+#acc_arches_override .is-active > .a\:bg_shade-n4 {
+  background-color: #373737 !important;
+}
+#acc_arches_override .is-active.a\:bg_shade-n5,
+#acc_arches_override .is-active > .a\:bg_shade-n5 {
+  background-color: #222222 !important;
+}
+#acc_arches_override .is-active.a\:c_shade,
+#acc_arches_override .is-active > .a\:c_shade,#acc_arches_override .is-active.a\:c_shade-0,
+#acc_arches_override .is-active > .a\:c_shade-0 {
+  color: #898989 !important;
+}
+#acc_arches_override .is-active.a\:c_shade-1,
+#acc_arches_override .is-active > .a\:c_shade-1 {
+  color: #9b9b9b !important;
+}
+#acc_arches_override .is-active.a\:c_shade-2,
+#acc_arches_override .is-active > .a\:c_shade-2 {
+  color: #b5b5b5 !important;
+}
+#acc_arches_override .is-active.a\:c_shade-3,
+#acc_arches_override .is-active > .a\:c_shade-3 {
+  color: #d0d0d0 !important;
+}
+#acc_arches_override .is-active.a\:c_shade-4,
+#acc_arches_override .is-active > .a\:c_shade-4 {
+  color: #e5e5e5 !important;
+}
+#acc_arches_override .is-active.a\:c_shade-5,
+#acc_arches_override .is-active > .a\:c_shade-5 {
+  color: #f3f3f3 !important;
+}
+#acc_arches_override .is-active.a\:c_shade-n1,
+#acc_arches_override .is-active > .a\:c_shade-n1 {
+  color: #7b7b7b !important;
+}
+#acc_arches_override .is-active.a\:c_shade-n2,
+#acc_arches_override .is-active > .a\:c_shade-n2 {
+  color: #676767 !important;
+}
+#acc_arches_override .is-active.a\:c_shade-n3,
+#acc_arches_override .is-active > .a\:c_shade-n3 {
+  color: #4b4b4b !important;
+}
+#acc_arches_override .is-active.a\:c_shade-n4,
+#acc_arches_override .is-active > .a\:c_shade-n4 {
+  color: #373737 !important;
+}
+#acc_arches_override .is-active.a\:c_shade-n5,
+#acc_arches_override .is-active > .a\:c_shade-n5 {
+  color: #222222 !important;
 }
 #acc_arches_override .is-active.a\:bg_warning,
 #acc_arches_override .is-active > .a\:bg_warning,#acc_arches_override .is-active.a\:bg_warning-0,

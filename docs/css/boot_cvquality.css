@@ -177,7 +177,7 @@ Styleguide DesignBase.Colors.Full Pallate
   /* W3C */
 }
 
-.gradient_grey, .btn-secondary,
+.gradient_grey, .btn-shade,
 .h\:gradient_grey-reverse:hover {
   background: #a1a0a4;
   /* Old browsers */
@@ -192,7 +192,7 @@ Styleguide DesignBase.Colors.Full Pallate
   /* W3C */
 }
 
-.gradient_grey-reverse, .btn-secondary:hover,
+.gradient_grey-reverse, .btn-shade:hover,
 .h\:gradient_grey-reverse:hover {
   background: #817c7b;
   /* Old browsers */
@@ -292,6 +292,7 @@ Colors are based off of the ACC Scrub Colors.
 
 map-get($theme-palette, primary)              -  #0088aa; primary
 map-get($theme-palette, secondary)            -  #8a817f; secondary
+map-get($theme-palette, shade)           		 -  #898989; shade
 map-get($theme-palette, accent)               -  #e87d1e;  accent
 map-get($theme-palette, info)                 -  #a3988c; info
 map-get($theme-palette, highlight)            -  #05aee5; highlight
@@ -306,7 +307,7 @@ Actionable colors used to respond to user inputs and messaging.
 
 map-get($theme-palette, alert)                -  #990000; alert
 map-get($theme-palette, warning)              -  #ffc425; warning
-map-get($theme-palette, success)               -  #078a2e;  success
+map-get($theme-palette, success)              -  #078a2e;  success
 map-get($theme-palette, navigation)           -  #2b58c0; navigation
 
 Styleguide DesignBase.Colors.Actions
@@ -6204,9 +6205,9 @@ Sometimes you have a table that will need a scrable comparison.
 
 Markup:
 <div class="table-scrollable-container">
-<div class="instructions c_secondary"> <i class="fa fa-long-arrow-left"></i> Scroll For Software Companies  <i class="fa fa-long-arrow-right"></i> </div>
+<div class="instructions c_shade"> <i class="fa fa-long-arrow-left"></i> Scroll For Software Companies  <i class="fa fa-long-arrow-right"></i> </div>
     <table class="overflow_hidden relative table-scrollable flex flex_row">
-        <thead class="b_0 bg_secondary-5 br-r_1 br_primary-1 br_solid flex_shrink float_left l_0 relative:lg relative:md shadow_3 t_0 w_40">
+        <thead class="b_0 bg_shade-5 br-r_1 br_primary-1 br_solid flex_shrink float_left l_0 relative:lg relative:md shadow_3 t_0 w_40">
             <tr class=""flex flex_column>
                 <th>Certified NCDR Software Vendor</th>
                 <th>IMPACT Registry</th>
@@ -6503,7 +6504,7 @@ Styleguide HTML.Table.Scrollable
   text-align: left;
 }
 .table tbody tr:nth-of-type(odd) {
-  background-color: #f3f2f2;
+  background-color: #f3f3f3;
 }
 .table.unshaded tbody tr:nth-of-type(odd) {
   background-color: unset;
@@ -6551,7 +6552,7 @@ Markup:
 		<h3>Muted Text Class</h3>
 		<h3>
 			Heading Text
-			<small class="text-muted">With muted secondary text</small>
+			<small class="text-muted">With muted shade text</small>
 		</h3>
 		<h3>Blockquote</h3>
 		<blockquote class="blockquote">
@@ -6960,16 +6961,16 @@ Markup:
 			</ul>
 			<ul class="ul_none flex_auto p-r_4">
 				<li>
-					<button type="button" class="btn btn-secondary btn-sm">
-						Secondary
+					<button type="button" class="btn btn-shade btn-sm">
+						shade
 					</button>
 				</li>
 				<li>
-					<button type="button" class="btn btn-secondary">Secondary</button>
+					<button type="button" class="btn btn-shade">shade</button>
 				</li>
 				<li>
-					<button type="button" class="btn btn-secondary btn-lg">
-						Secondary
+					<button type="button" class="btn btn-shade btn-lg">
+						shade
 					</button>
 				</li>
 				<li><button type="button" class="btn btn-link">Link</button></li>
@@ -6981,13 +6982,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-secondary">1</button>
-			<button type="button" class="btn btn-secondary">2</button>
+			<button type="button" class="btn btn-shade">1</button>
+			<button type="button" class="btn btn-shade">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-secondary dropdown-toggle"
+					class="btn btn-shade dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -7005,13 +7006,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-secondary">1</button>
-			<button type="button" class="btn btn-secondary">2</button>
+			<button type="button" class="btn btn-shade">1</button>
+			<button type="button" class="btn btn-shade">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-secondary dropdown-toggle"
+					class="btn btn-shade dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -7029,13 +7030,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-secondary">1</button>
-			<button type="button" class="btn btn-secondary">2</button>
+			<button type="button" class="btn btn-shade">1</button>
+			<button type="button" class="btn btn-shade">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-secondary dropdown-toggle"
+					class="btn btn-shade dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -7089,7 +7090,7 @@ Markup:
 		<div class="btn-toolbar" role="toolbar">
 			<div class="btn-group">
 				<button
-					class="btn btn-secondary btn-lg dropdown-toggle"
+					class="btn btn-shade btn-lg dropdown-toggle"
 					type="button"
 					data-toggle="dropdown"
 					aria-haspopup="true"
@@ -7106,12 +7107,12 @@ Markup:
 				</div>
 			</div>
 			<div class="btn-group ml-2">
-				<button type="button" class="btn btn-lg btn-secondary">
+				<button type="button" class="btn btn-lg btn-shade">
 					Large split button
 				</button>
 				<button
 					type="button"
-					class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split"
+					class="btn btn-lg btn-shade dropdown-toggle dropdown-toggle-split"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -7609,9 +7610,9 @@ Styleguide  Recipes Bootstrap.Carousel
     height: auto;
     margin: 0;
     padding: 0.5rem 1rem;
-    border: 1px solid #d0cdcc;
+    border: 1px solid #d0d0d0;
     border-radius: 0;
-    background-color: #e5e3e3;
+    background-color: #e5e5e5;
     font-size: 1.2em;
     text-align: left;
     text-indent: 0;
@@ -7626,7 +7627,7 @@ Styleguide  Recipes Bootstrap.Carousel
   .carousel-alt.text-indicators .carousel-indicators li.active {
     padding-right: 10px;
     border-right: #e87d1e 10px solid;
-    background-color: #766d6c;
+    background-color: #747474;
     color: white;
   }
 }
@@ -7751,45 +7752,45 @@ The Header Nav of ACC.org
 
 Markup:
 <div class="flex relative br_solid br_0 br-t_3 br_accent-alt">
-	<nav class="bg_secondary-2 flex_auto font_0 font_1:lg font_display navbar navbar-dark navbar-expand-lg navbar-primary p-x_0 uppercase">
+	<nav class="bg_shade-2 flex_auto font_0 font_1:lg font_display navbar navbar-dark navbar-expand-lg navbar-primary p-x_0 uppercase">
 		<button class="br_white-2 flex is-active_toggle-function m-l_3 m-l_n2 m-y_2 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed" type="button" data-toggle="collapse" data-target="#navbarLoginContent" aria-controls="navbarLoginContent" aria-expanded="false" aria-label="Toggle navigation">
 			<i class="a:c_acc-2 c_white fas flex_shrink font_0 icon-toggle_bars-times self_center"></i><span class="a:c_acc-2 c_white flex_auto self_center">&nbsp;Menu</span>
 		</button>
 		<div class="navbar-collapse collapse" id="navbarLoginContent" style="">
 			<ul class="expand expanded flex flex_column flex_row:lg nav text_center:lg text_left w_100">
 				<li class="nav-item flex_shrink">
-					<a class="active c_white h:bg_secondary nav-link p-x_4 p-x_5:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources"><i class="fas fa-home"></i><span class="display_none:lg p-x_3">Home</span></a>
+					<a class="active c_white h:bg_shade nav-link p-x_4 p-x_5:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources"><i class="fas fa-home"></i><span class="display_none:lg p-x_3">Home</span></a>
 				</li>
 				<li class="nav-item flex_auto dropdown">
-					<a class="c_white dropdown-toggle h:bg_secondary is-active_toggle-function nav-link p-x_4" href="/NCDR-Home" target="_self" data-delay="300" data-close-others="false" id="clinicalTopicsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far faw icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Clinical Topics</a>
-					<div class="absolute:lg br_1 br_none br_secondary-3 br_solid:lg c_white dropdown-menu font_bold l_0 m-t_0 m-x_0 m-x_0:lg p_0 r_0 relative w_100" aria-labelledby="clinicalTopicsDropdown">
-						<ul class="bg_secondary-5 font_0 font_bold lh_1 ul_none">
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/about-ncdr" target="_self">About NCDR</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/registries" target="_self">Registries</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/data-collection" target="_self">Data Collection</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/reports" target="_self">Reports</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/quality-payment-program" target="_self">Quality Payment Program</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/research" target="_self">Research</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/analytics" target="_self">Analytics</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/annual-conference" target="_self">ACC Quality Summit</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/ncdr-learning-center" target="_self">NCDR Learning Center</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/transform-ldl-c-risk" target="_self">TRANSFORM LDL C Risk</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/participant-directory" target="_self">Participant Directory</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/acc-public-reporting" target="_self">ACC Public Reporting</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/clinical-quality-coach" target="_self">NCDR Clinical Quality Coach Practice Dashboard</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="https://www.ncdr.com/webncdr/Login?ReturnUrl=/webncdr/home/registry-selection" target="_self">Registry Participant Login</a></li>
-							<li class="nav-item"><a class="c_secondary-2 dropdown-item h:bg_secondary-1 h:c_secondary-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/join-a-registry" target="_self">Join a Registry</a></li>
+					<a class="c_white dropdown-toggle h:bg_shade is-active_toggle-function nav-link p-x_4" href="/NCDR-Home" target="_self" data-delay="300" data-close-others="false" id="clinicalTopicsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far faw icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Clinical Topics</a>
+					<div class="absolute:lg br_1 br_none br_shade-3 br_solid:lg c_white dropdown-menu font_bold l_0 m-t_0 m-x_0 m-x_0:lg p_0 r_0 relative w_100" aria-labelledby="clinicalTopicsDropdown">
+						<ul class="bg_shade-5 font_0 font_bold lh_1 ul_none">
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/about-ncdr" target="_self">About NCDR</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/registries" target="_self">Registries</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/data-collection" target="_self">Data Collection</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/reports" target="_self">Reports</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/quality-payment-program" target="_self">Quality Payment Program</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/research" target="_self">Research</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/analytics" target="_self">Analytics</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/annual-conference" target="_self">ACC Quality Summit</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/ncdr-learning-center" target="_self">NCDR Learning Center</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/transform-ldl-c-risk" target="_self">TRANSFORM LDL C Risk</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/participant-directory" target="_self">Participant Directory</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/acc-public-reporting" target="_self">ACC Public Reporting</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/clinical-quality-coach" target="_self">NCDR Clinical Quality Coach Practice Dashboard</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="https://www.ncdr.com/webncdr/Login?ReturnUrl=/webncdr/home/registry-selection" target="_self">Registry Participant Login</a></li>
+							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/join-a-registry" target="_self">Join a Registry</a></li>
 						</ul>
 					</div>
 				</li>
 				<li class="nav-item flex_auto">
-					<a class="nav-link active h:bg_secondary c_white p-x_4" href="#">deserunt</a>
+					<a class="nav-link active h:bg_shade c_white p-x_4" href="#">deserunt</a>
 				</li>
 				<li class="nav-item flex_auto">
-					<a class="nav-link h:bg_secondary c_white p-x_4" href="#">sit dolor commodo</a>
+					<a class="nav-link h:bg_shade c_white p-x_4" href="#">sit dolor commodo</a>
 				</li>
 				<li class="nav-item flex_auto">
-					<a class="nav-link h:bg_secondary c_white p-x_4" href="#">adipisicing</a>
+					<a class="nav-link h:bg_shade c_white p-x_4" href="#">adipisicing</a>
 				</li>
 			</ul>
 		</div>
@@ -7904,7 +7905,7 @@ Styleguide Recipes CVQualtiy.Navs.Primary
 .card.product .blockquote-cite {
   position: relative;
   right: 0;
-  color: #b5b0ae;
+  color: #b5b5b5;
   font-size: 1em;
 }
 .card.testimonial .blockquote-cite:after,
@@ -8017,9 +8018,9 @@ Graphic areas that hold a snippet of a webinar.
 .hf-webinar      	- 	 Changes the product graphic.
 
 Markup:
-<div class="bg_secondary-5 br_4 br_none br_radius br_secondary-4 br_solid card flex_row:md shadow_3"  data-style="{{ modifier_class }}" >
+<div class="bg_shade-5 br_4 br_none br_radius br_shade-4 br_solid card flex_row:md shadow_3"  data-style="{{ modifier_class }}" >
     <div class="bg_black-1 card-header br_0 flex_shrink">
-        <div class="bg_white br_2 br_secondary-3 br_solid {{modifier_class}} m-b_3 p_2 webinar"></div>
+        <div class="bg_white br_2 br_shade-3 br_solid {{modifier_class}} m-b_3 p_2 webinar"></div>
 		<div class="action">
 			<a class="btn btn-block btn-primary c_white">View Webinar <i class="fa fa-play-circle" aria-hidden="true"></i></a>
 		</div>
@@ -8043,19 +8044,19 @@ Graphic areas that hold a snippet of a webinar.
 | Style Combo | Effect                                                             | Classes                                      |
 | ----------- | ------------------------------------------------------------------ | -------------------------------------------- |
 | primary     | Alters the button style to a btn-primary instead of just a link.   | btn-primary c_white                          |
-| secondary   | Alters the button style to a btn-secondary instead of just a link. | btn-secondary c_white                        |
+| shade   | Alters the button style to a btn-shade instead of just a link. | btn-shade c_white                        |
 | success     | Alters the button style to a btn-success instead of just a link.   | bg_success h:bg_success-n2 br_radius c_white |
 
 
 
 .btn-primary.c_white                            -  Alters the button style to a btn-primary instead of just a link.  
-.btn-secondary.c_white                          -  Alters the button style to a btn-secondary instead of just a link.
+.btn-shade.c_white                          -  Alters the button style to a btn-shade instead of just a link.
 .bg_success.h:bg_success-n2.br_radius.c_white   -  Alters the button style to a btn-success instead of just a link.  
 
 Markup:
-<div class="bg_secondary-5 br_4 br_none br_radius br_secondary-4 br_solid card flex_row:md shadow_3"  data-style="{{ modifier_class }}" >
+<div class="bg_shade-5 br_4 br_none br_radius br_shade-4 br_solid card flex_row:md shadow_3"  data-style="{{ modifier_class }}" >
     <div class="bg_black-1 card-header  br_0 flex_shrink">
-        <div class="bg_white br_2 br_secondary-3 br_solid ep-webinar m-b_3 p_2 webinar"></div>
+        <div class="bg_white br_2 br_shade-3 br_solid ep-webinar m-b_3 p_2 webinar"></div>
 		<div class="action">
 			<a class="btn btn-block {{modifier_class}}">View Webinar <i class="fa fa-play-circle" aria-hidden="true"></i></a>
 		</div>
@@ -8192,8 +8193,8 @@ Colored Triangles are used through out the cvquality design.  To add triangle th
 .triangle_top   -  top placed triangle.
 
 Markup:
-<div class="bg_secondary-5 br_1 br_accent br_radius card highlighted shadow_1 ">
- <div class="{{modifier_class}} br_accent"><h2 class="bg_tansparent br-b_0 c_accent c_secondary-n4 card-header font_1 font_2:md font_bold font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Highlighted Card</h2>
+<div class="bg_shade-5 br_1 br_accent br_radius card highlighted shadow_1 ">
+ <div class="{{modifier_class}} br_accent"><h2 class="bg_tansparent br-b_0 c_accent c_shade-n4 card-header font_1 font_2:md font_bold font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Highlighted Card</h2>
   <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
     <p>Repudiandae adipisci illum omnis et suscipit at amet ex. Error magni laborum autem et rerum porro asperiores sunt. Et veritatis rerum voluptas hic eum sint. Ipsa labore eos autem cupiditate ut molestiae sit fugiat. Rerum sit dolorem veritatis est quia nesciunt tenetur ut. Animi earum illo sed incidunt fuga.</p>
   </div>
@@ -8356,7 +8357,7 @@ Basic Bootstrap
 Bootstrap nav un styled from the bootstrap documentation found here. <a href="https://getbootstrap.com/docs/4.0/components/navbar/">Bootstrap 4: Nav</a>
 
 Markup:
-<nav class="bg_secondary-2 navbar navbar-expand-lg navbar-light p-y_2">
+<nav class="bg_shade-2 navbar navbar-expand-lg navbar-light p-y_2">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8414,14 +8415,14 @@ The Footer of CVQuality.org
 Markup:
 <div id="footer-wrap" class="">
 	<!-- ********************************** breadcrumbs ********************************** -->
-	<div id="breadcrumbs" class="br-b_3 br-t_1 br_0 br_accent br_solid br_t_3 breadcrumbs-container c_secondary font_0 font_ui p-x_4 p_3">
+	<div id="breadcrumbs" class="br-b_3 br-t_1 br_0 br_accent br_solid br_t_3 breadcrumbs-container c_shade font_0 font_ui p-x_4 p_3">
 		<b class="breadcrumbs-title">YOU ARE HERE: </b>
 		Home
 	</div>
 	<!-- This is the inner footer that we cache -->
-	<div id="footer" role="contentinfo" class="bg_secondary-2 flex flex_column flex_inline flex_row:md flex_wrap p-x_3 p-y_0:lg p-y_4 w_100">
+	<div id="footer" role="contentinfo" class="bg_shade-2 flex flex_column flex_inline flex_row:md flex_wrap p-x_3 p-y_0:lg p-y_4 w_100">
 		<div class="br-l_1 br_so br_solid:lg br_white-3 flex_auto font_ui m-l_4:lg m-y_4:lg order-1 p-l_3:md p-l_4:lg p-y_4:md p-x_0 p-x_3 p-y_4:lg w-grid_2:lg w-grid_6:md">
-			<h2 class="br-b_1 br_dotted:md br_dotted:lg br_white-6 c_secondary-n4 font_0:md font_1 font_ui font_bold m-b_0:md m-b_2 m-b_2:lg m-t_4:md p-b_3 table-cell vertical-align_bottom w_10" style="height: 4rem;">
+			<h2 class="br-b_1 br_dotted:md br_dotted:lg br_white-6 c_shade-n4 font_0:md font_1 font_ui font_bold m-b_0:md m-b_2 m-b_2:lg m-t_4:md p-b_3 table-cell vertical-align_bottom w_10" style="height: 4rem;">
 				Quality Improvement for Institutions:
 			</h2>
 			<ul class="font_n1:lg font_0 font_ui m-b_4 p-t_2 ul_none">
@@ -8448,7 +8449,7 @@ Markup:
 			</ul>
 		</div>
 		<div class="br-r_1 br_0 br_solid:lg br_white-3 flex_auto font_ui m-r_4:lg m-y_4:lg order-1 p-r_4:lg p-x_3 p-y_4:md w-grid_2:lg w-grid_6:md">
-			<h2 class="br-b_1 br_dotted:md br_dotted:lg font_1 br_white-6 c_secondary-n5 font_0:md font_ui font_bold m-b_0 m-b_2:lg m-t_4:md nowrap p-b_3 table-cell vertical-align_bottom w_10" style="height: 4rem;">Offerings:</h2>
+			<h2 class="br-b_1 br_dotted:md br_dotted:lg font_1 br_white-6 c_shade-n5 font_0:md font_ui font_bold m-b_0 m-b_2:lg m-t_4:md nowrap p-b_3 table-cell vertical-align_bottom w_10" style="height: 4rem;">Offerings:</h2>
 			<ul class="font_n1:lg font_0 font_ui m-b_4 p-t_2 ul_none">
 				<li class="nav-item text-indent_n1 p-l_4 p-l_r">
 					<a class="nav-link c_white h:underline p-y_0" href="/NCDR-Home" id="msFooter_rptOfferings_hypLnk_0" target="_top">
@@ -8485,7 +8486,7 @@ Markup:
 <div class="bg_left block:md display_none logo_primary" style="height: 100px;">
 				<span class="alt">logo_condensed-alt max-w_1</span>
 			</div>
-			<section class="address c_secondary-n4 p-l_0:md p-y_0:md p-y_3">
+			<section class="address c_shade-n4 p-l_0:md p-y_0:md p-y_3">
 				<address>
 					<!-- http://microformats.org/wiki/hcard -->
 					<h4 class="m-b_0 font_bold m-b_2:md font_copy font_normal font_1:md font_2 m-t_4:md">
@@ -8504,22 +8505,22 @@ Markup:
 								<span class="postal-code">20037</span>
 							</li>
 							<li class="m-b_1 m-b_2:md font_normal">
-								<a href="mailto:resource@acc.org" class="email c_secondary-n4 h:c_secondary-n5 h:underline">
+								<a href="mailto:resource@acc.org" class="email c_shade-n4 h:c_shade-n5 h:underline">
 									<strong class="p-r_2">Email:</strong>
 									<span class="">resource@acc.org</span></a>
 							</li>
 						</ul>
 						<ul class="flex_auto p-l_0:lg p-l_4:md ul_none w_50:lg w_50:md">
 							<li class="m-b_1 m-b_2:md font_normal">
-								<a tel="+12023756000" href="tel:+12023756000" class="tel c_secondary-n4 h:c_secondary-n5 h:underline">
+								<a tel="+12023756000" href="tel:+12023756000" class="tel c_shade-n4 h:c_shade-n5 h:underline">
 									<strong class="p-r_2">Phone:</strong><span class="">(202) 375-6000, ext. 5603</span></a>
 							</li>
 							<li class="m-b_1 m-b_2:md font_normal">
-								<a tel="+18002574737" href="tel:+18002534636.5603" class="tel c_secondary-n4 h:c_secondary-n5 h:underline">
+								<a tel="+18002574737" href="tel:+18002534636.5603" class="tel c_shade-n4 h:c_shade-n5 h:underline">
 									<strong class="p-r_2">Toll Free:</strong><span class="">(800) 253-4636, ext. 5603</span></a>
 							</li>
 							<li class="m-b_1 m-b_2:md font_normal">
-								<a fax="+12023757000" href="fax:+12023757000" class="fax c_secondary-n4 h:c_secondary-n5 h:underline">
+								<a fax="+12023757000" href="fax:+12023757000" class="fax c_shade-n4 h:c_shade-n5 h:underline">
 									<strong class="p-r_2">Fax:</strong>
 									<span class="">(202) 375-7000</span>
 								</a>
@@ -8531,34 +8532,34 @@ Markup:
 		</div>
 		<div class="flex_auto order-10 order_last p-x_3 p-y_4:lg relative w-grid_3:lg w-grid_6:md">
 			<section class="acc-websites m-y_3">
-				<nav class="font_ui w_100 font_0"><h3 class="br-b_1 br_dotted br_white-4 c_secondary-n4 font_0 font_ui font_bold m-b_2 p-b_3 w_100">Improving Cardiovascular Care</h3>
+				<nav class="font_ui w_100 font_0"><h3 class="br-b_1 br_dotted br_white-4 c_shade-n4 font_0 font_ui font_bold m-b_2 p-b_3 w_100">Improving Cardiovascular Care</h3>
 					<ul class="lh_4 ul_none">
 						<li class="">
-							<a target="_blank" class="block c_secondary-5 h:bg_black-2 h:c_white flex" href="http://www.acc.org">
+							<a target="_blank" class="block c_shade-5 h:bg_black-2 h:c_white flex" href="http://www.acc.org">
 								<span class="flex_auto m-l_2">Acc</span>
 								<i class="fa-external-link-square fas flex_shrink  p-r_3 self_center"></i>
 							</a>
 						</li>
 						<li class="">
-							<a target="_blank" class="c_secondary-5 block h:bg_black-2 h:c_white flex" href="https://cvquality.acc.org/Accreditation?">
+							<a target="_blank" class="c_shade-5 block h:bg_black-2 h:c_white flex" href="https://cvquality.acc.org/Accreditation?">
 								<span class="flex_auto m-l_2 self_center">Accreditation Services</span>
 								<i class=" fa-external-link-square fas flex_shrink p-r_3 self_center"></i>
 							</a>
 						</li>
 						<li class="">
-							<a target="_blank" class="c_secondary-5 block h:bg_black-2 h:c_white flex" href="http://www.ncdr.com">
+							<a target="_blank" class="c_shade-5 block h:bg_black-2 h:c_white flex" href="http://www.ncdr.com">
 								<span class="flex_auto inline-block m-l_2 self_center">NCDR</span>
 								<i class=" fa-external-link-square fas flex_shrink p-r_3 self_center"></i>
 							</a>
 						</li>
 						<li class="">
-							<a target="_blank" class="c_secondary-5 block h:bg_black-2 h:c_white flex" href="http://www.cardiosmart.org">
+							<a target="_blank" class="c_shade-5 block h:bg_black-2 h:c_white flex" href="http://www.cardiosmart.org">
 								<span class="flex_auto inline-block m-l_2 self_center">CardioSmart</span>
 								<i class=" fa-external-link-square fas flex_shrink p-r_3 self_center"></i>
 							</a>
 						</li>
 						<li class="">
-							<a target="_blank" class="c_secondary-5 block h:bg_black-2 h:c_white flex" href="http://www.onlinejacc.org/">
+							<a target="_blank" class="c_shade-5 block h:bg_black-2 h:c_white flex" href="http://www.onlinejacc.org/">
 								<span class="flex_auto inline-block m-l_2 self_center">JACC</span>
 								<i class=" fa-external-link-square fas flex_shrink p-r_3 self_center"></i>
 							</a>
@@ -8591,7 +8592,7 @@ Markup:
 		</div>
 	</div>
 	<!-- / footer -->
-	<div id="subfooter" class="bg_secondary-n1 br-b_2 br_0 br_accent-n1 br_solid c_white font_n1 p-x_4 p-y_4">
+	<div id="subfooter" class="bg_shade-n1 br-b_2 br_0 br_accent-n1 br_solid c_white font_n1 p-x_4 p-y_4">
 		<ul class="block footer-bottom-links ul_none">
 			<li class="inline p_2">
 				<a href="//www.acc.org/footer-pages/media-center" class="c_white-6 h:c_white">Media Center</a>
@@ -8664,7 +8665,7 @@ Highlighted Cards are stylized cards with a soft blue background and changes all
 
 Markup:
 <div class="bg_primary-5 br_primary-4 br_radius card highlighted">
- <h2 class="bg_tansparent br-b_0 c_accent c_secondary-n4 card-header font_1 font_2:md font_3:lg p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Highlighted Card</h2>
+ <h2 class="bg_tansparent br-b_0 c_accent c_shade-n4 card-header font_1 font_2:md font_3:lg p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Highlighted Card</h2>
   <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
     <p>Repudiandae adipisci illum omnis et suscipit at amet ex. Error magni laborum autem et rerum porro asperiores sunt. Et veritatis rerum voluptas hic eum sint. Ipsa labore eos autem cupiditate ut molestiae sit fugiat. Rerum sit dolorem veritatis est quia nesciunt tenetur ut. Animi earum illo sed incidunt fuga.</p>
   </div>
@@ -8689,7 +8690,7 @@ Placing cards inside of content areas is needed within the design.  Placing some
 
 Markup:
 <div class="bg_primary-alt br_1 br_primary-4 br_radius card highlighted shadow_1 max-w_1 clear_right float_right w_50 w_40\:md w_20\:lg ">
- <h2 class="bg_tansparent br-b_0 c_accent c_secondary-n4 card-header font_1 font_2:md font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Positioned Small Right</h2>
+ <h2 class="bg_tansparent br-b_0 c_accent c_shade-n4 card-header font_1 font_2:md font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Positioned Small Right</h2>
   <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
   <p class=" font_n2"> Container Classes:max-w_1 clear_right float_right w_50 w_40:md w_20:lg</p>  
   <p>Repudiandae adipisci illum omnis et suscipit at amet ex. Error magni laborum autem et rerum porro asperiores sunt. Et veritatis rerum voluptas hic eum sint. Ipsa labore eos autem cupiditate ut molestiae sit fugiat. Rerum sit dolorem veritatis est quia nesciunt tenetur ut. Animi earum illo sed incidunt fuga.</p>
@@ -8705,8 +8706,8 @@ Info Card
 Info Cards are stylized cards with a warm grey background and changes all headers to bold.  These cards are side notes to the main content
 
 Markup:
-<div class="bg_secondary-4 br_radius card info shadow_n1 br_0">
- <h2 class="bg_tansparent br-b_0 c_secondary-n4 card-header font_1 font_2:md font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg">Info Card</h2>
+<div class="bg_shade-4 br_radius card info shadow_n1 br_0">
+ <h2 class="bg_tansparent br-b_0 c_shade-n4 card-header font_1 font_2:md font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg">Info Card</h2>
   <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
     <p>aliqua mollit consectetur labore ipsum velit officia nulla anim magna est id elit irure qui dolor exercitation incididunt exercitation proident anim officia veniam reprehenderit laboris incididunt irure enim amet esse</p>
   </div>
@@ -8721,8 +8722,8 @@ Notice Card
 Notice Cards are side notes usually associated with an action button.
 
 Markup:
-<div class="bg_primary-alt br_1  br_secondary-4 card info text_center">
- <h2 class="bg_tansparent br-b_0 br_secondary-4 c_primary-n2 card-header font_1 font_2:md font_3:lg font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg triangle_left">Notice Card</h2>
+<div class="bg_primary-alt br_1  br_shade-4 card info text_center">
+ <h2 class="bg_tansparent br-b_0 br_shade-4 c_primary-n2 card-header font_1 font_2:md font_3:lg font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg triangle_left">Notice Card</h2>
   <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
     <p>aliqua mollit consectetur labore ipsum velit officia nulla anim magna est id elit irure qui dolor exercitation incididunt exercitation proident anim officia veniam reprehenderit laboris incididunt irure enim amet esse</p>
   </div>
@@ -8737,12 +8738,12 @@ Notice Card Alt
 Notice Cards are side notes usually associated with an action button.
 
 Markup:
-<div class="bg_secondary-4 br_0   card info text_center">
+<div class="bg_shade-4 br_0   card info text_center">
  <h2 class="bg_tansparent br-b_0 br_accent-alt c_accent card-header font_1 font_2:md font_3:lg font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg triangle_left">Notice Card</h2>
   <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
     <p>aliqua mollit consectetur labore ipsum velit officia nulla anim magna est id elit irure qui dolor exercitation incididunt exercitation proident anim officia veniam reprehenderit laboris incididunt irure enim amet esse</p>
   </div>
-   <div class="bg_tansparent br-t_0 card-footer p-t_0 p-x_3 p-x_3:md p-x_4:lg"> <a href="#" class="btn btn-block btn-secondary font_0:md font_n1">Action</a></div>
+   <div class="bg_tansparent br-t_0 card-footer p-t_0 p-x_3 p-x_3:md p-x_4:lg"> <a href="#" class="btn btn-block btn-shade font_0:md font_n1">Action</a></div>
 </div>
 
 Styleguide Recipes CVQualtiy.Cards.Notice Alt
@@ -8753,14 +8754,14 @@ Address Card
 Decorated address card for accreditation
 
 Markup:
-<div class="bg_secondary-5 p_3 p_4:md">
+<div class="bg_shade-5 p_3 p_4:md">
 	<address class="m-b_3 m-x_2 vcard">
 		<h4 class="c_accent font_1 font_bold font_ui m-b_2 m-t_3">Questions About Accreditation?</h4>
 		<div class="contact font_n1">
 			<ul class="ul_none">
-				<li><a href="mailto:" class="c_secondary-n3 email link">non@.org</a></li>
-				<li><a href="tel:" class="c_secondary-n3 link tel">55-555-55555</a></li>
-				<li><a href="fax:" class="c_secondary-n3 fax link">55-444-55555</a></li>
+				<li><a href="mailto:" class="c_shade-n3 email link">non@.org</a></li>
+				<li><a href="tel:" class="c_shade-n3 link tel">55-555-55555</a></li>
+				<li><a href="fax:" class="c_shade-n3 fax link">55-444-55555</a></li>
 			</ul>
 		</div>
 		<h4 class="c_accent font_1 font_bold font_ui m-b_2 m-t_3">Office Hours:</h4>
@@ -8769,7 +8770,7 @@ Markup:
 				<li><span class="time">8:00am - 4pm EST</span><br /></li>
 				<li><span class="days">Monday - Firday</span></li>
 				<li>
-					<a href="blank.pdf" class="block c_secondary-n3 link"
+					<a href="blank.pdf" class="block c_shade-n3 link"
 						>Holiday Schedule &nbsp;<i class="fa-calendar far"></i
 					></a>
 				</li>
@@ -8792,7 +8793,7 @@ Markup:
 					<a
 						href="https://twitter.com/accintouch"
 						target="_blank"
-						class="bg_secondary-1 block br-bl_radius br-tl_radius c_secondary-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0 twitter"
+						class="bg_shade-1 block br-bl_radius br-tl_radius c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0 twitter"
 						><i class="fab fa-twitter-square"></i
 					></a>
 				</li>
@@ -8800,7 +8801,7 @@ Markup:
 					<a
 						href="https://www.facebook.com/AmericanCollegeofCardiology"
 						target="_blank"
-						class="facebook c_secondary-5 bg_secondary-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
+						class="facebook c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
 						><i class="fab fa-facebook-square"></i
 					></a>
 				</li>
@@ -8808,7 +8809,7 @@ Markup:
 					<a
 						href="https://www.linkedin.com/company/american-college-of-cardiology/"
 						target="_blank"
-						class="linkedin c_secondary-5 bg_secondary-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
+						class="linkedin c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
 						><i class="fab fa-linkedin"></i
 					></a>
 				</li>
@@ -8816,7 +8817,7 @@ Markup:
 					<a
 						href="http://www.youtube.com/user/ACCinTouch"
 						target="_blank"
-						class="youtube c_secondary-5 bg_secondary-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
+						class="youtube c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
 						><i class="fab fa-youtube"></i
 					></a>
 				</li>
@@ -8824,7 +8825,7 @@ Markup:
 					<a
 						href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US"
 						target="_blank"
-						class="google-play c_secondary-5 bg_secondary-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
+						class="google-play c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
 						><i class="fab fa-google-play"></i
 					></a>
 				</li>
@@ -8832,7 +8833,7 @@ Markup:
 					<a
 						href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps"
 						target="_blank"
-						class="apple-store bg_secondary-1 block br-br_radius br-tr_radius c_secondary-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
+						class="apple-store bg_shade-1 block br-br_radius br-tr_radius c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
 						><i class="fab fa-apple"></i
 					></a>
 				</li>
@@ -8850,7 +8851,7 @@ The Score Box Generic is currently used on the Assessments Page. These repeated 
 
 
 Markup:
-<div class="bg_secondary-5 box p-x_3 p-y_2 score">
+<div class="bg_shade-5 box p-x_3 p-y_2 score">
      <h3>veniam quis veniam enim</h3>
      <div class="flex results-points">
          <span class="flex_auto points-possible"><span class="points-breakdown">(0 of 96 possible points)</span></span>
@@ -8859,11 +8860,11 @@ Markup:
 </div>
 <div class="m-t_3 overall-score">
     <span class="c_accent float_right font_n1 your-score-label">Your Score</span>
-    <div class="br-t_2 br_secondary br_solid clear_both flex results-points">
+    <div class="br-t_2 br_shade br_solid clear_both flex results-points">
         <span class="br-b_1 br_accent br_dashed flex_auto p-t_4 points-possible">
-               <span class="c_accent font_2 font_bold font_ui m-b_n4 p_3 title">Overall Score</span> <span class="c_secondary-1 font_italic points-breakdown">(0 of 96 possible points)</span>
+               <span class="c_accent font_2 font_bold font_ui m-b_n4 p_3 title">Overall Score</span> <span class="c_shade-1 font_italic points-breakdown">(0 of 96 possible points)</span>
         </span>
-        <span class="bg_accent br_secondary c_white flex_shrink font_1 p_3 points-total triangle_top">
+        <span class="bg_accent br_shade c_white flex_shrink font_1 p_3 points-total triangle_top">
             0%
         </span>
     </div>
@@ -8892,8 +8893,8 @@ Date
 Style a date marker
 
 Markup:
-<div class="br_secondary-2 card event">
-    <div class="bg_secondary-4 br-l_1 br-t_1 br_solid br_white-5 card-header flex">
+<div class="br_shade-2 card event">
+    <div class="bg_shade-4 br-l_1 br-t_1 br_solid br_white-5 card-header flex">
             <div class="flex_shrink"><div class="bg_white br_3 br_primary br_solid event-date flex flex_column font_display lh_1 p-x_2 text_center">
   <span class="month font_2">May</span>
   <span class="day font_3 font_bold">12</span>
@@ -8902,15 +8903,15 @@ Markup:
             <div class="event-details flex_grow lh_1 p-l_4">
                 <div class="c_accent-n1 font_2 m-b_2 title">voluptate anim consequat tempor adipisicing aliquip non do</div>
                 <div class="c_primary font_0 font_bold location-title m-b_2">Grand Hayatt</div>
-                <div class="c_secondary-n4 font_n1 location">Cincinnati, OH </div>
+                <div class="c_shade-n4 font_n1 location">Cincinnati, OH </div>
                 <span class="font_italic font_n2 full-date p-r_3">May 12, 2018</span><span class="time font_italic font_n2 p-r_3"><span class="begin">8:00AM</span> - <span class="end">2:00PM</span> <span class="timezone">(EST)</span></span>
             </div>
     </div>
     <div class="card-body font_0 p-x_3 p-x_4:md p-y_3 p-y_4:md">
         <p>Eu dolore ullamco laboris veniam commodo pariatur pariatur proident ea. Esse in in nisi non eiusmod consequat pariatur officia mollit incididunt qui consectetur est. Ex aute non amet elit. Voluptate commodo minim sit Lorem occaecat sit aute reprehenderit. Dolore pariatur cupidatat velit anim enim veniam mollit aute fugiat magna do. Culpa non veniam non officia exercitation laborum dolor irure exercitation tempor adipisicing tempor elit nulla.</p>
     </div>
-    <div class="bg_secondary-5 c_secondary-1 card-footer font_n1 text_center"><strong>Add to Calendar: </strong><a href="#" class="link">Outlook</a> | <a href="#" class="link">Google</a> | <a href="#" class="link">iCal</a></div>
-    <div class="bg_secondary-5 br-t_0 card-footer p-t_0"><a href="#" class="bg_accent br_radius btn btn-accent btn-block c_white font_bold h:bg_accent-n2 h:shadow shadow_2">Register</a></div></div>
+    <div class="bg_shade-5 c_shade-1 card-footer font_n1 text_center"><strong>Add to Calendar: </strong><a href="#" class="link">Outlook</a> | <a href="#" class="link">Google</a> | <a href="#" class="link">iCal</a></div>
+    <div class="bg_shade-5 br-t_0 card-footer p-t_0"><a href="#" class="bg_accent br_radius btn btn-accent btn-block c_white font_bold h:bg_accent-n2 h:shadow shadow_2">Register</a></div></div>
 
     Styleguide Recipes CVQualtiy.Cards.Date Event
 */
@@ -8945,7 +8946,7 @@ Graphic areas that hold a snippet of a product.
 
 Markup:
 <div class="card product">
-  <header class="card-header bg_secondary-3">
+  <header class="card-header bg_shade-3">
      <img class="card-img" src="https://cvquality.acc.org/images/default-source/accreditation/afbutton.jpg?sfvrsn=f32980bf_2" alt="">
   </header>
   <div class="card-body">
@@ -8976,13 +8977,13 @@ Result lists is the list view of all of the pins on the map
 
 
 Markup:
-<ul class="bg_secondary-2 font_ui result-list ul_none">
-      <li class="address bg_secondary-4 br-r_4 br_solid br_white-0 h:bg_secondary-n2 h:br_accent h:c_accent-alt p_2 p_3:md p_4:lg relative transition_1">
+<ul class="bg_shade-2 font_ui result-list ul_none">
+      <li class="address bg_shade-4 br-r_4 br_solid br_white-0 h:bg_shade-n2 h:br_accent h:c_accent-alt p_2 p_3:md p_4:lg relative transition_1">
          <div class="c_primary-n2 expanded-click-area font_1 h:c_white name">proident ad velit sit</div>
          <div class="address-line">sunt magna ea exercitation</div>
          <div class="address-line">nisi qui culpa labore</div>
       </li>
-      <li class="address bg_secondary-4 br-r_4 br_solid br_white-0 h:bg_secondary-n2 h:br_accent h:c_accent-alt m-t_1 p_2 p_3:md p_4:lg relative transition_1">
+      <li class="address bg_shade-4 br-r_4 br_solid br_white-0 h:bg_shade-n2 h:br_accent h:c_accent-alt m-t_1 p_2 p_3:md p_4:lg relative transition_1">
          <div class="c_primary-n2 expanded-click-area font_1 h:c_white name">proident ad velit sit</div>
          <div class="address-line">sunt magna ea exercitation</div>
          <div class="address-line">nisi qui culpa labore</div>
@@ -8997,7 +8998,7 @@ Side Nav
 Side Nav DOM
 
 Markup:
-<nav class="hidden-print nav-sub max-w-1"><ul class="bg_secondary-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav"><li data-nav="parent" class="nav-item parent"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation" target="_self"><i class="fa fa-holder toggle"></i>About Accreditation</a><ul data-nav="child" class="flex_column font_n1 nav text-indent_2 bg_secondary-4"><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/benefits-of-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Benefits of Accreditation</a></li><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/steps-to-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Pathway to Accreditation</a></li><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/testimonials-and-success-stories" target="_self"><i class="fa fa-holder toggle"></i>Testimonials and Success Stories</a></li><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/value-of-process-improvement" target="_self"><i class="fa fa-holder toggle"></i>Value of Process Improvement</a></li><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/faqs" target="_self"><i class="fa fa-holder toggle"></i>FAQs</a></li><li class="nav-item"><a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/accreditation-for-systems" target="_self"><i class="fa fa-holder toggle"></i>System-Wide Accreditation</a></li></ul></li><li data-nav="parent" class="is-active nav-item parent"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/services" target="_self"><i class="fa fa-holder toggle"></i>Products and Services</a><ul data-nav="child" class="bg_secondary-4 flex_column font_n1 nav text-indent_1"><li class="nav-item parent"><a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/CCL" target="_self"><i class="fa fa-holder toggle"></i>Cardiac Cath Lab Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/CCL/OnDemandCathLabwebianrs" target="_self">On-Demand Cath Lab Webinars</a></li><li class="nav-item"><a class="nav-link nav-link c_secondary-n4 p-y_2" href="/accreditation/services/CCL/CCLBenefits" target="_self">Cardiac Cath Lab Features Benefits</a></li><li class="nav-item"><a class="nav-link nav-link c_secondary-n4 p-y_2" href="/accreditation/services/CCL/cardiac-cath-lab-accreditation-training" target="_self">Cardiac Cath Lab Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="nav-link c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/cpcwebinars" target="_self"><i class="fa fa-holder toggle"></i>On-Demand Chest Pain Center Webinars</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCDesignations" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Designations</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCBenefits" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Features Benefits</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCsupplementalED" target="_self"><i class="fa fa-holder toggle"></i>Supplemental Education</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCGuidelines" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Guidelines</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCArticles" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Articles Abstracts</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCPublications" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Pubs</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCQuestions" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center FAQs</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/chest-pain-center-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/EP" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/EP/register-for-webinar" target="_self"><i class="fa fa-holder toggle"></i>On-Demand EP Webinars</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/EP/EPBenefits" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Features Benefits</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/EP/electrophysiology-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/HF" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/hfwebinars" target="_self"><i class="fa fa-holder toggle"></i>On-Demand Heart Failure Webinars</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFBenefits" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Features Benefits</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/supplementalED" target="_self"><i class="fa fa-holder toggle"></i>Supplemental Education</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFGuidelines" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Guidelines</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFArticles" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Articles and Abstracts</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFPublications" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Publications</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/HFQuestions" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure FAQs</a></li><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/HF/heart-failure-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/TCV" target="_self"><i class="fa fa-holder toggle"></i>Transcatheter Valve Certification</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_secondary-n4 p-y_2" href="/accreditation/services/TCV/TCV-certification-training" target="_self"><i class="fa fa-holder toggle"></i>Transcatheter Valve Certification Training</a></li></ul></li><li class="nav-item"><a class="h:bg_black-1 c_secondary-n3 nav-link p-y_2" href="/accreditation/services/C4Certification" target="_self"><i class="fa fa-holder toggle"></i>C4 Certification</a></li></ul></li><li class="nav-item"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/heartcare-center-recognition-program" target="_self"><i class="fa fa-holder toggle"></i>HeartCARE Center Recognition Program</a></li><li class="nav-item"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/acc-quality-summit-2020" target="_self"><i class="fa fa-holder toggle"></i>ACC Quality Summit</a></li><li class="nav-item active current"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/brand" target="_self"><i class="fa fa-holder toggle"></i>Promote Your Achievement</a></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/quality-initiative-proposal" target="_self"><i class="fa fa-holder toggle"></i>Quality Initiative Proposal</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-link c_secondary-n4 p-y_2"><a class="nav-link" href="/accreditation/quality-initiative-proposal/2018-recipients" target="_self"><i class="fa fa-holder toggle"></i>2018 Recipients</a></li></ul></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/advocacy" target="_self"><i class="fa fa-holder toggle"></i>Advocate Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link" href="/accreditation/advocacy/Community-Education" target="_self"><i class="fa fa-holder toggle"></i>Community Education &amp; EHAC</a></li><li class="nav-item"><a class="nav-link" href="/accreditation/advocacy/helpful-links" target="_self"><i class="fa fa-holder toggle"></i>Helpful Links</a></li></ul></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/about-us" target="_self"><i class="fa fa-holder toggle"></i>About Us</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_2"><li class="nav-item parent"><a class="h:bg_black-1 c_secondary-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/about-us/awards" target="_self">Awards</a><ul class="nav flex_column bg_black-1"><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/awards/process-improvement-pioneer-award" target="_self"><i class="fa fa-holder toggle"></i>Process Improvement Pioneer Award</a></li><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/awards/bahr-award-of-excellence" target="_self"><i class="fa fa-holder toggle"></i>Bahr Award of Excellence</a></li></ul></li><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/staff-directory" target="_self"><i class="fa fa-holder toggle"></i>Staff Directory</a></li></ul></li><li class="nav-item"><a class="nav-link" href="/accreditation/map" target="_self"><i class="fa fa-holder toggle"></i>Accreditation Map</a></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/news-and-events" target="_self"><i class="fa fa-holder toggle"></i>News and Events</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link" href="/accreditation/news-and-events/upcoming-events" target="_self"><i class="fa fa-holder toggle"></i>Upcoming Events</a></li></ul></li></ul></nav>
+<nav class="hidden-print nav-sub max-w-1"><ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav"><li data-nav="parent" class="nav-item parent"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation" target="_self"><i class="fa fa-holder toggle"></i>About Accreditation</a><ul data-nav="child" class="flex_column font_n1 nav text-indent_2 bg_shade-4"><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/benefits-of-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Benefits of Accreditation</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/steps-to-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Pathway to Accreditation</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/testimonials-and-success-stories" target="_self"><i class="fa fa-holder toggle"></i>Testimonials and Success Stories</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/value-of-process-improvement" target="_self"><i class="fa fa-holder toggle"></i>Value of Process Improvement</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/faqs" target="_self"><i class="fa fa-holder toggle"></i>FAQs</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/accreditation-for-systems" target="_self"><i class="fa fa-holder toggle"></i>System-Wide Accreditation</a></li></ul></li><li data-nav="parent" class="is-active nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/services" target="_self"><i class="fa fa-holder toggle"></i>Products and Services</a><ul data-nav="child" class="bg_shade-4 flex_column font_n1 nav text-indent_1"><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/CCL" target="_self"><i class="fa fa-holder toggle"></i>Cardiac Cath Lab Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/CCL/OnDemandCathLabwebianrs" target="_self">On-Demand Cath Lab Webinars</a></li><li class="nav-item"><a class="nav-link nav-link c_shade-n4 p-y_2" href="/accreditation/services/CCL/CCLBenefits" target="_self">Cardiac Cath Lab Features Benefits</a></li><li class="nav-item"><a class="nav-link nav-link c_shade-n4 p-y_2" href="/accreditation/services/CCL/cardiac-cath-lab-accreditation-training" target="_self">Cardiac Cath Lab Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="nav-link c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/cpcwebinars" target="_self"><i class="fa fa-holder toggle"></i>On-Demand Chest Pain Center Webinars</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCDesignations" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Designations</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCBenefits" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Features Benefits</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCsupplementalED" target="_self"><i class="fa fa-holder toggle"></i>Supplemental Education</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCGuidelines" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Guidelines</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCArticles" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Articles Abstracts</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCPublications" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Pubs</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCQuestions" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center FAQs</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/chest-pain-center-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/EP" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/EP/register-for-webinar" target="_self"><i class="fa fa-holder toggle"></i>On-Demand EP Webinars</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/EP/EPBenefits" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Features Benefits</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/EP/electrophysiology-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/HF" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/hfwebinars" target="_self"><i class="fa fa-holder toggle"></i>On-Demand Heart Failure Webinars</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFBenefits" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Features Benefits</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/supplementalED" target="_self"><i class="fa fa-holder toggle"></i>Supplemental Education</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFGuidelines" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Guidelines</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFArticles" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Articles and Abstracts</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFPublications" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Publications</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFQuestions" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure FAQs</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/heart-failure-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/TCV" target="_self"><i class="fa fa-holder toggle"></i>Transcatheter Valve Certification</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/TCV/TCV-certification-training" target="_self"><i class="fa fa-holder toggle"></i>Transcatheter Valve Certification Training</a></li></ul></li><li class="nav-item"><a class="h:bg_black-1 c_shade-n3 nav-link p-y_2" href="/accreditation/services/C4Certification" target="_self"><i class="fa fa-holder toggle"></i>C4 Certification</a></li></ul></li><li class="nav-item"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/heartcare-center-recognition-program" target="_self"><i class="fa fa-holder toggle"></i>HeartCARE Center Recognition Program</a></li><li class="nav-item"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/acc-quality-summit-2020" target="_self"><i class="fa fa-holder toggle"></i>ACC Quality Summit</a></li><li class="nav-item active current"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/brand" target="_self"><i class="fa fa-holder toggle"></i>Promote Your Achievement</a></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/quality-initiative-proposal" target="_self"><i class="fa fa-holder toggle"></i>Quality Initiative Proposal</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-link c_shade-n4 p-y_2"><a class="nav-link" href="/accreditation/quality-initiative-proposal/2018-recipients" target="_self"><i class="fa fa-holder toggle"></i>2018 Recipients</a></li></ul></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/advocacy" target="_self"><i class="fa fa-holder toggle"></i>Advocate Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link" href="/accreditation/advocacy/Community-Education" target="_self"><i class="fa fa-holder toggle"></i>Community Education &amp; EHAC</a></li><li class="nav-item"><a class="nav-link" href="/accreditation/advocacy/helpful-links" target="_self"><i class="fa fa-holder toggle"></i>Helpful Links</a></li></ul></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/about-us" target="_self"><i class="fa fa-holder toggle"></i>About Us</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_2"><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/about-us/awards" target="_self">Awards</a><ul class="nav flex_column bg_black-1"><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/awards/process-improvement-pioneer-award" target="_self"><i class="fa fa-holder toggle"></i>Process Improvement Pioneer Award</a></li><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/awards/bahr-award-of-excellence" target="_self"><i class="fa fa-holder toggle"></i>Bahr Award of Excellence</a></li></ul></li><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/staff-directory" target="_self"><i class="fa fa-holder toggle"></i>Staff Directory</a></li></ul></li><li class="nav-item"><a class="nav-link" href="/accreditation/map" target="_self"><i class="fa fa-holder toggle"></i>Accreditation Map</a></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/news-and-events" target="_self"><i class="fa fa-holder toggle"></i>News and Events</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link" href="/accreditation/news-and-events/upcoming-events" target="_self"><i class="fa fa-holder toggle"></i>Upcoming Events</a></li></ul></li></ul></nav>
 
 
 Styleguide Recipes CVQualtiy.Navs.SideNav
@@ -9009,19 +9010,19 @@ Decoration classes with UC's to make the nav look like the primary level.
 
 Markup:
 <nav class="hidden-print nav-sub max-w-1">
-	<ul class="bg_secondary-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
+	<ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
 		<li data-nav="parent" class="nav-item parent">
-			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
+			<a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
 				Link with children
 			</a>
 		</li>
 		<li  class="nav-item">
-			<a class="a:c_accent c_secondary-n3 h:bg_white-4 nav-link p-y_2" target="_self">
+			<a class="a:c_accent c_shade-n3 h:bg_white-4 nav-link p-y_2" target="_self">
 				Link without children
 			</a>
 		</li>
 		<li data-nav="parent" class="nav-item parent active">
-			<a class="a:c_accent c_secondary-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
+			<a class="a:c_accent c_shade-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
 				Link that is active
 			</a>
 		</li>
@@ -9039,24 +9040,24 @@ Decoration classes with UC's to make the nav look like the child of the primary 
 
 Markup:
 <nav class="hidden-print nav-sub max-w-1">
-	<ul class="bg_secondary-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
+	<ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
 		<li data-nav="parent" class="nav-item parent">
-			<a class="a:c_accent c_secondary-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
+			<a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
 				Parent Link
 			</a>
-			<ul class="flex_column font_n1 nav text-indent_2 bg_secondary-4">
+			<ul class="flex_column font_n1 nav text-indent_2 bg_shade-4">
 				<li data-nav="parent" class="nav-item parent">
-					<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" target="_self">
+					<a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" target="_self">
 						Link with children
 					</a>
 				</li>
 				<li  class="nav-item">
-					<a class="a:c_accent c_secondary-n3 h:bg_white-4 nav-link p-y_2" target="_self">
+					<a class="a:c_accent c_shade-n3 h:bg_white-4 nav-link p-y_2" target="_self">
 						Link without children
 					</a>
 				</li>
 				<li data-nav="parent" class="nav-item parent active">
-					<a class="a:c_accent c_secondary-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
+					<a class="a:c_accent c_shade-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
 						Link that is active
 					</a>
 				</li>
@@ -9076,19 +9077,19 @@ Decoration classes with UC's to make the nav look like the child of the primary 
 
 Markup:
 <nav class="hidden-print nav-sub max-w-1">
-	<ul class="bg_secondary-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
+	<ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
 		<li data-nav="parent" class="nav-item parent">
-			<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" target="_self">
+			<a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" target="_self">
 				Link with children
 			</a>
 		</li>
 		<li  class="nav-item">
-			<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" target="_self">
+			<a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" target="_self">
 				Link without children
 			</a>
 		</li>
 		<li data-nav="parent" class="nav-item parent active">
-			<a class="nav-link p-y_2 c_secondary-n3 h:bg_black-2 h:c_black" target="_self">
+			<a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" target="_self">
 				Link that is active
 			</a>
 		</li>
@@ -9113,7 +9114,7 @@ Dividers
 There are many dividers in the design. Bellow are the types and how to create them. 
 | Style Combo     | Effect                                                            | Classes                       |
 | --------------- | ----------------------------------------------------------------- | ----------------------------- |
-| item-divider    | dividing items from eachother like between paragraphs.            | br_secondary-4 br_dashed br_1 |
+| item-divider    | dividing items from eachother like between paragraphs.            | br_shade-4 br_dashed br_1 |
 | group-divider   | A mid weight divider to show the differnce between grouped items. | br_accent br_dotted br_1      |
 | section-divider | A strong division between Secotions of a page                     | br_primary br_solid br_2      |
 | spacer          | No decoration but adds space between objects                      | br_0                          |
@@ -9123,7 +9124,7 @@ There are many dividers in the design. Bellow are the types and how to create th
 Markup:
 <hr class="divider br_0 br-b_1 br_dotted br_accent">
 <p>Est veniam anim duis ex irure occaecat velit voluptate. Exercitation incididunt ea esse duis voluptate esse veniam est officia id voluptate. In labore cupidatat do nulla anim labore. Esse ipsum velit sunt eu eiusmod fugiat sit culpa. Qui occaecat adipisicing minim minim minim ipsum esse ut id adipisicing duis duis. Esse esse ut amet ullamco. Est excepteur sunt laboris anim.</p>
-<hr class="divider br_0 br-b_1 br_dashed br_secondary-4">
+<hr class="divider br_0 br-b_1 br_dashed br_shade-4">
 <strong>There is a spacer between the two sentences</strong>
 <p>Cupidatat id incididunt tempor magna consectetur laboris cillum laborum. Enim non reprehenderit eiusmod nisi velit veniam ea eiusmod esse aute proident. Laborum pariatur consequat cillum est officia exercitation esse et consectetur ea ad sint. Sunt esse do cupidatat laborum. Deserunt occaecat id tempor consectetur velit pariatur nulla fugiat sit laboris ipsum.</p>
 <hr class="br_none"/>
