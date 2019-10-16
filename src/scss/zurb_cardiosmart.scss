@@ -33,10 +33,11 @@ $teal: #009db1;
 $dark-blue: #015697;
 $dark-grey: #676a72;
 $alt-grey: #a3988c;
-$green: #078a2e;
-$yellow: #ffc423;
-$orange: #e9901a;
-$red: #dd1a1a;
+$green: #468847;
+$yellow: #f5ca4f;
+$orange: #e17009;
+$red: #953b39;
+$alt-orange: #c67605;
 $blue: #2b58c0;
 $purple: #7742bd;
 $magenta: #c34198;
@@ -51,7 +52,7 @@ $theme-palette: map-merge(
 		primary: $dark-blue,
 		secondary: $teal,
 		success: $green,
-		warning: $orange,
+		warning: $alt-orange,
 		alert: $red,
 		navigation: $blue,
 		accent: $orange,
@@ -125,6 +126,46 @@ $h6-font-size: map-deep-get($value-to-unit, font-size, 0);
 $font-size-base: $base-font-size-rem; // Assumes the browser default, typically `16px`
 $font-size-lg: map-deep-get($value-to-unit, font-size, 2);
 $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
+
+$logo: (
+	primary: (
+		url: '../img/cardiosmart/cardiosmart_logo.png',
+		alt: 'Logo of the American College Of Cardiology',
+		aspectratio: 1/3
+	),
+	primary_alt: (
+		url: '../img/ACC_primaryLogo-alt.svg',
+		alt: 'Logo of the American College Of Cardiology',
+		aspectratio: 1/3
+	),
+	condensed: (
+		url: '../img/ACC_mobileLogo.svg',
+		alt: 'Logo of the American College Of Cardiology',
+		aspectratio: 1/3
+	),
+	condensed_alt: (
+		url: '../img/ACC_mobileLogo-alt.svg',
+		alt: 'Logo of the American College Of Cardiology',
+		aspectratio: 1/3
+	)
+);
+$seal: (
+	normal: (
+		url: '../img/cardiosmart/cardiosmart_seal.png',
+		alt: 'Seal of the American College Of Cardiology',
+		aspectratio: 1/1
+	),
+	small: (
+		url: '../img/ACC_sealCondensed.svg',
+		alt: 'Seal of the American College Of Cardiology',
+		aspectratio: 1/1
+	),
+	tiny: (
+		url: '../img/ACC_sealCondensed-alt.svg',
+		alt: 'Seal of the American College Of Cardiology',
+		aspectratio: 1/1
+	)
+);
 /** Built With CardioSmart Branding **//**  Default Brands    *********************************/
 /**  Colors  **/
 
@@ -150,6 +191,17 @@ $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
 @import "components/zurb/zurb.pagination.override";
 @import "components/zurb/zurb.breadcrumbs";
 @import "styleguide/__basic-html.zurb";
+/*
+	CardioSmart Recipes
+
+	The use of Utiltiy Class give us the ablitiy to create much of the UI needed for CardioSmart without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of CardioSmart.
+
+	Weight: 3000
+
+	Styleguide Recipes CardioSmart
+
+*/
+@import 'recipes/cardiosmart/_cardiosmart._footer';
 /*
 	Foudation Zurb Recipes
 

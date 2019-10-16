@@ -500,6 +500,18 @@ gulp.task("construct", function() {
 		.pipe(
 			header(
 				fs.readFileSync(
+					PATHS.SCSS + "/recipes/__recipes.cardiosmart.scss",
+					"utf8"
+				),
+				{
+					pkg: pkg
+				}
+			)
+		)
+
+		.pipe(
+			header(
+				fs.readFileSync(
 					PATHS.SCSS + "/components/__components.zurb.scss",
 					"utf8"
 				),

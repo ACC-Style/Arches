@@ -12,7 +12,7 @@
                 </p>
                 <div>
                     <a
-                        class="br_radius bg_primary button c_white  gradient_teal h:gradient_teal-reverse"
+                        class="br_radius bg_primary button c_white"
                         href="https://foundation.zurb.com/sites/docs/"
                         role="button"
                         >Foundation</a
@@ -26,7 +26,7 @@
                 </p>
                 <div>
                     <a
-                        class="br_radius bg_primary button c_white  gradient_teal h:gradient_teal-reverse"
+                        class="br_radius bg_primary button c_white"
                         href="section-recipes-cvqualtiy.html"
                         role="button"
                         >Extra UI</a
