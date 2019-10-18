@@ -699,7 +699,7 @@ gulp.task("watch", function() {
 
 gulp.task("styleguide", function() {
 	return run(
-		"npm run index && npm run uc && npm run zurb_acc &&  npm run boot_acc &&  npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run zurb_cardiosmart"
+		"npm run index && npm run uc && npm run zurb_acc &&  npm run boot_acc &&  npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run uc_cardiosmart"
 	).exec();
 });
 
