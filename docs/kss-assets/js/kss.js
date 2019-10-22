@@ -83,8 +83,8 @@
       case "layout_demo":
         path = "layout_demo";
         break;
-      case "zurb_cardiosmart":
-        path = "zurb_cardiosmart";
+      case "uc_cardiosmart":
+        path = "uc_cardiosmart";
         break;
       default:
         path = "home_nav";

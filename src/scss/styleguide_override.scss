@@ -5,15 +5,15 @@
  */
 /**  Pre Header - modular scale default break points utility    *********************************/
 $debug-trace: false !default;
-$name-mode: 'SHORT' !default; // $name-mode: "SHORT","LONG","ALL"
+$name-mode: "SHORT" !default; // $name-mode: "SHORT","LONG","ALL"
 $ms-base: 1rem !default; // needs to be in rem's
 $colors: ();
 $grays: ();
 $theme-palette: ();
-@import 'helpers/helpers';
-@import 'vendor/modular-scale';
-@import 'config/utility-css.vars';
-@import 'helpers/breakpoint';
+@import "helpers/helpers";
+@import "vendor/modular-scale";
+@import "config/utility-css.vars";
+@import "helpers/breakpoint";
 /** Utility Class Only With Basic ACC Branding **/ /**  ACC Brands    *********************************/
 $teal: #198dae;
 $green-blue: #16a385;
@@ -64,60 +64,60 @@ $theme-palette: map-merge(
 
 $grays: map-merge(
 	(
-		'100': $gray-100,
-		'200': $gray-200,
-		'300': $gray-300,
-		'400': $gray-400,
-		'500': $gray-500,
-		'600': $gray-600,
-		'700': $gray-700,
-		'800': $gray-800,
-		'900': $gray-900
+		"100": $gray-100,
+		"200": $gray-200,
+		"300": $gray-300,
+		"400": $gray-400,
+		"500": $gray-500,
+		"600": $gray-600,
+		"700": $gray-700,
+		"800": $gray-800,
+		"900": $gray-900
 	),
 	$grays
 );
 $colors: map-merge(
 	(
-		'blue': $blue,
-		'indigo': $indigo,
-		'purple': $purple,
-		'pink': $pink,
-		'red': $red,
-		'orange': $orange,
-		'yellow': $yellow,
-		'green': $green,
-		'teal': $teal,
-		'cyan': $cyan,
-		'white': $white,
-		'gray': $gray-600,
-		'gray-dark': $gray-800
+		"blue": $blue,
+		"indigo": $indigo,
+		"purple": $purple,
+		"pink": $pink,
+		"red": $red,
+		"orange": $orange,
+		"yellow": $yellow,
+		"green": $green,
+		"teal": $teal,
+		"cyan": $cyan,
+		"white": $white,
+		"gray": $gray-600,
+		"gray-dark": $gray-800
 	),
 	$colors
 );
 
 $fonts: (
 	slab: (
-		name: 'Roboto Slab',
+		name: "Roboto Slab",
 		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"'
 	),
 	display: (
-		name: 'Maven Pro',
+		name: "Maven Pro",
 		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif'
 	),
 	copy: (
-		name: 'Muli',
+		name: "Muli",
 		stack: '"Muli","Open Sans","system",sans-serif'
 	),
 	ui: (
-		name: 'Open Sans',
+		name: "Open Sans",
 		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
 	)
 );
 
 // Reset Values of Utlity-css.vars.scss
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'slab', map-deep-get($fonts, 'slab', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'display', map-deep-get($fonts, 'display', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'copy', map-deep-get($fonts, 'copy', 'stack'));
+$value-to-unit: map-deep-set($value-to-unit, "font-family" "slab", map-deep-get($fonts, "slab", "stack"));
+$value-to-unit: map-deep-set($value-to-unit, "font-family" "display", map-deep-get($fonts, "display", "stack"));
+$value-to-unit: map-deep-set($value-to-unit, "font-family" "copy", map-deep-get($fonts, "copy", "stack"));
 
 $global-radus-on: false;
 $global-border-radius: 6px;
@@ -125,13 +125,13 @@ $global-border-round: 25px;
 $basicSizeMultiplier: 1rem;
 /**  Default Brands    *********************************/
 /**  Colors  **/
-@import 'config/colors';
+@import "config/colors";
 /**  Fonts  **/
-@import 'config/fonts';
+@import "config/fonts";
 /**  Textures  **/
-@import 'config/textures';
+@import "config/textures";
 /**  Logos  **/
-@import 'config/logo';
+@import "config/logo";
 
 pre code.hljs {
 	padding-top: 2em;
@@ -158,14 +158,14 @@ pre code.hljs {
 }
 /* Track */
 .kss-section__markup > pre.language-markup::-webkit-scrollbar-track {
-	box-shadow: make-shadow(2, 'inset', #000, 0.2);
+	box-shadow: make-shadow(2, "inset", #000, 0.2);
 	background-color: rgba(get-themecolor(primary, -3), 0.1);
 }
 /* Handle */
 .kss-section__markup > pre.language-markup::-webkit-scrollbar-thumb {
 	border-radius: get-css-size(border-radius, round);
 	background: get-themecolor(primary, -1);
-	box-shadow: make-shadow(2, 'inset', #000, 0.2);
+	box-shadow: make-shadow(2, "inset", #000, 0.2);
 }
 .kss-section__markup > pre.language-markup::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(get-themecolor(primary, -1), 0.1);
@@ -215,6 +215,9 @@ pre code.hljs {
 .home_nav #home_nav,
 .boot_acc #boot_acc,
 .boot_cvquality #boot_cvquality,
+.uc_cardiosmart #uc_cardiosmart,
+.boot_cardiosmart #boot_cardiosmart,
+.zurb_cardiosmart #zurb_cardiosmart,
 .zurb_acc #zurb_acc,
 .uconly_acc #uconly_acc,
 .color_codes #color_codes,
@@ -230,10 +233,10 @@ pre code.hljs {
 	min-height: 0;
 	margin-bottom: 1.5rem;
 }
-[class*='[modifier class]'] {
+[class*="[modifier class]"] {
 	display: none;
 }
-[data-style*='[modifier class]'] {
+[data-style*="[modifier class]"] {
 	display: none;
 }
 .kss-markdown {
