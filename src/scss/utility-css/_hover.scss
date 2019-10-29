@@ -248,44 +248,6 @@ Styleguide hover.opacity
 }
 
 /*
-Transition on Hover 
-
-soften the harshness of the switch of the style by adding transitions to the changed decorators.
-
-0              - 0 second transition
-1              - .1 second transition
-2              - .25 second transition
-3              - .3 second transition
-4              - .5 second transition
-5              - .5 second transition
-
-Markup:
-<div class="flex m_5 bg_primary m_5">
-  <div class="transition_{{modifier_class}} h:bg_black-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
-  <div class="transition_{{modifier_class}} h:bg_black-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
-  <div class="transition_{{modifier_class}} h:bg_black-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
-  <div class="transition_{{modifier_class}} h:bg_black-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
-  <div class="transition_{{modifier_class}} h:bg_black-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
-  <div class="transition_{{modifier_class}} h:bg_black-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
-  <div class="transition_{{modifier_class}} h:bg_black-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
-  <div class="transition_{{modifier_class}} h:bg_black-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
-  <div class="transition_{{modifier_class}} h:bg_black-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
-  <div class="transition_{{modifier_class}} h:bg_black-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
-  <div class="transition_{{modifier_class}} h:bg_black  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">default</div>
-</div>
-
-Weight: 50
-
-Styleguide hover.transition
- 
- */
-*[class*="transition"] {
-	transition-timing-function: ease;
-	transition-property: all;
-}
-@include loop-style(transition, "", " !important");
-
-/*
   Hover:Border Color
  
   hovers can easily effect the border style to toggle between styles.  Very useful fo toggling from a border type to none or vice versa. 
@@ -327,6 +289,6 @@ Styleguide hover.borders
 	border-color: transparent !important;
 }
 
-@each $color-name, $hex-value in $theme-palette {
-	@include color-loop(border-color, $color-name, $hex-value);
-}
+// @each $color-name, $hex-value in $theme-palette {
+// 	@include color-loop(border-color, $color-name, $hex-value);
+// }

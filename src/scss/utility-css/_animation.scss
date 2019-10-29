@@ -1,0 +1,113 @@
+/*
+Animation
+
+Transitions Eases and Transforms.
+
+Create simple toggleable animations with a combination of classes. 
+
+Weight: 140
+
+Styleguide Animation
+
+
+*/
+/*
+Transition on Hover 
+
+soften the harshness of the switch of the style by adding transitions to the changed decorators.
+
+0              - 0 second transition
+1              - .1 second transition
+2              - .25 second transition
+3              - .3 second transition
+4              - .5 second transition
+5              - 1 second transition
+
+Markup:
+<div class="flex m_5 bg_primary m_5">
+  <div class="transition_{{modifier_class}} h:bg_black-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
+  <div class="transition_{{modifier_class}} h:bg_black-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
+  <div class="transition_{{modifier_class}} h:bg_black-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
+  <div class="transition_{{modifier_class}} h:bg_black-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
+  <div class="transition_{{modifier_class}} h:bg_black-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
+  <div class="transition_{{modifier_class}} h:bg_black-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
+  <div class="transition_{{modifier_class}} h:bg_black-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
+  <div class="transition_{{modifier_class}} h:bg_black-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
+  <div class="transition_{{modifier_class}} h:bg_black-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
+  <div class="transition_{{modifier_class}} h:bg_black-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
+  <div class="transition_{{modifier_class}} h:bg_black  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">default</div>
+</div>
+
+
+
+Styleguide animation.transition
+ 
+ */
+*[class*="transition"] {
+	transition-timing-function: ease;
+	transition-property: all;
+}
+@include loop-style(transition, "", "");
+
+/*
+Easing the on Hover 
+
+Dynamic adjustment of transition with easing.
+
+out-in              - ease timing
+out              - ease-out timing
+in              - ease-in timing
+in-out              - ease-in-out timing
+linear              - linear timing
+
+
+Markup:
+<div class="flex m_5 bg_primary m_5">
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">default</div>
+</div>
+
+
+
+Styleguide animation.ease
+ 
+ */
+
+@include loop-style(ease, "", "");
+
+/*
+Transform Scale 
+
+Dynamic adjustment of objects scale for toggling between
+
+0              - Scale to 0%
+100            - Scale to 100%
+X-0            - Scale the X to 0%
+X-100            - Scale the X to 100%
+Y-0            - Scale the X to 0%
+Y-100            - Scale the X to 100%
+
+
+Markup:
+<div class="flex m_5 bg_primary m_5">
+  <div class="scale_{{modifier_class}} w-10 p-y_3 p-x_4 font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">This is content that will be scaled.</div>
+ 
+</div>
+
+
+
+Styleguide animation.ease
+ 
+ */
+
+@include loop-style(scale, "", "");
+@include loop-style(transform-origin, "", "");

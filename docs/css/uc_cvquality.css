@@ -11514,67 +11514,6 @@ Styleguide hover.opacity
 }
 
 /*
-Transition on Hover 
-
-soften the harshness of the switch of the style by adding transitions to the changed decorators.
-
-0              - 0 second transition
-1              - .1 second transition
-2              - .25 second transition
-3              - .3 second transition
-4              - .5 second transition
-5              - .5 second transition
-
-Markup:
-<div class="flex m_5 bg_primary m_5">
-  <div class="transition_{{modifier_class}} h:bg_black-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
-  <div class="transition_{{modifier_class}} h:bg_black-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
-  <div class="transition_{{modifier_class}} h:bg_black-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
-  <div class="transition_{{modifier_class}} h:bg_black-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
-  <div class="transition_{{modifier_class}} h:bg_black-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
-  <div class="transition_{{modifier_class}} h:bg_black-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
-  <div class="transition_{{modifier_class}} h:bg_black-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
-  <div class="transition_{{modifier_class}} h:bg_black-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
-  <div class="transition_{{modifier_class}} h:bg_black-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
-  <div class="transition_{{modifier_class}} h:bg_black-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
-  <div class="transition_{{modifier_class}} h:bg_black  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">default</div>
-</div>
-
-Weight: 50
-
-Styleguide hover.transition
-
- */
-*[class*=transition] {
-  transition-property: all;
-  transition-timing-function: ease;
-}
-
-.transition_0 {
-  transition: all 0s ease-in  !important;
-}
-
-.transition_1 {
-  transition: all 0.1s ease-in  !important;
-}
-
-.transition_2 {
-  transition: all 0.2s ease-in  !important;
-}
-
-.transition_3 {
-  transition: all 0.35s ease-in  !important;
-}
-
-.transition_4 {
-  transition: all 0.5s ease-in  !important;
-}
-
-.transition_5 {
-  transition: all 1s ease-in  !important;
-}
-
-/*
   Hover:Border Color
 
   hovers can easily effect the border style to toggle between styles.  Very useful fo toggling from a border type to none or vice versa. 
@@ -11618,490 +11557,6 @@ Styleguide hover.borders
 
 .h\:br_transparent:hover {
   border-color: transparent !important;
-}
-
-.br_primary,.br_primary-0 {
-  border-color: #0088aa !important;
-}
-
-.br_primary-1 {
-  border-color: #269ab7 !important;
-}
-
-.br_primary-2 {
-  border-color: #5eb4c9 !important;
-}
-
-.br_primary-3 {
-  border-color: #99cfdd !important;
-}
-
-.br_primary-4 {
-  border-color: #c7e5ec !important;
-}
-
-.br_primary-5 {
-  border-color: #e6f3f7 !important;
-}
-
-.br_primary-n1 {
-  border-color: #007a99 !important;
-}
-
-.br_primary-n2 {
-  border-color: #006680 !important;
-}
-
-.br_primary-n3 {
-  border-color: #004b5e !important;
-}
-
-.br_primary-n4 {
-  border-color: #003644 !important;
-}
-
-.br_primary-n5 {
-  border-color: #00222b !important;
-}
-
-.br_secondary,.br_secondary-0 {
-  border-color: #e87d1e !important;
-}
-
-.br_secondary-1 {
-  border-color: #eb9140 !important;
-}
-
-.br_secondary-2 {
-  border-color: #f1ad71 !important;
-}
-
-.br_secondary-3 {
-  border-color: #f6cba5 !important;
-}
-
-.br_secondary-4 {
-  border-color: #fae2ce !important;
-}
-
-.br_secondary-5 {
-  border-color: #fdf2e9 !important;
-}
-
-.br_secondary-n1 {
-  border-color: #d1711b !important;
-}
-
-.br_secondary-n2 {
-  border-color: #ae5e17 !important;
-}
-
-.br_secondary-n3 {
-  border-color: #804511 !important;
-}
-
-.br_secondary-n4 {
-  border-color: #5d320c !important;
-}
-
-.br_secondary-n5 {
-  border-color: #3a1f08 !important;
-}
-
-.br_success,.br_success-0 {
-  border-color: #078a2e !important;
-}
-
-.br_success-1 {
-  border-color: #2c9c4d !important;
-}
-
-.br_success-2 {
-  border-color: #63b57b !important;
-}
-
-.br_success-3 {
-  border-color: #9cd0ab !important;
-}
-
-.br_success-4 {
-  border-color: #c8e5d1 !important;
-}
-
-.br_success-5 {
-  border-color: #e6f3ea !important;
-}
-
-.br_success-n1 {
-  border-color: #067c29 !important;
-}
-
-.br_success-n2 {
-  border-color: #056823 !important;
-}
-
-.br_success-n3 {
-  border-color: #044c19 !important;
-}
-
-.br_success-n4 {
-  border-color: #033712 !important;
-}
-
-.br_success-n5 {
-  border-color: #02230c !important;
-}
-
-.br_shade,.br_shade-0 {
-  border-color: #8a817f !important;
-}
-
-.br_shade-1 {
-  border-color: #9c9492 !important;
-}
-
-.br_shade-2 {
-  border-color: #b5b0ae !important;
-}
-
-.br_shade-3 {
-  border-color: #d0cdcc !important;
-}
-
-.br_shade-4 {
-  border-color: #e5e3e3 !important;
-}
-
-.br_shade-5 {
-  border-color: #f3f2f2 !important;
-}
-
-.br_shade-n1 {
-  border-color: #7c7472 !important;
-}
-
-.br_shade-n2 {
-  border-color: #68615f !important;
-}
-
-.br_shade-n3 {
-  border-color: #4c4746 !important;
-}
-
-.br_shade-n4 {
-  border-color: #373433 !important;
-}
-
-.br_shade-n5 {
-  border-color: #232020 !important;
-}
-
-.br_warning,.br_warning-0 {
-  border-color: #f4a122 !important;
-}
-
-.br_warning-1 {
-  border-color: #f6af43 !important;
-}
-
-.br_warning-2 {
-  border-color: #f8c474 !important;
-}
-
-.br_warning-3 {
-  border-color: #fbd9a7 !important;
-}
-
-.br_warning-4 {
-  border-color: #fdeace !important;
-}
-
-.br_warning-5 {
-  border-color: #fef6e9 !important;
-}
-
-.br_warning-n1 {
-  border-color: #dc911f !important;
-}
-
-.br_warning-n2 {
-  border-color: #b7791a !important;
-}
-
-.br_warning-n3 {
-  border-color: #865913 !important;
-}
-
-.br_warning-n4 {
-  border-color: #62400e !important;
-}
-
-.br_warning-n5 {
-  border-color: #3d2809 !important;
-}
-
-.br_alert,.br_alert-0 {
-  border-color: #990000 !important;
-}
-
-.br_alert-1 {
-  border-color: #a82626 !important;
-}
-
-.br_alert-2 {
-  border-color: #bf5e5e !important;
-}
-
-.br_alert-3 {
-  border-color: #d69999 !important;
-}
-
-.br_alert-4 {
-  border-color: #e9c7c7 !important;
-}
-
-.br_alert-5 {
-  border-color: #f5e6e6 !important;
-}
-
-.br_alert-n1 {
-  border-color: #8a0000 !important;
-}
-
-.br_alert-n2 {
-  border-color: #730000 !important;
-}
-
-.br_alert-n3 {
-  border-color: #540000 !important;
-}
-
-.br_alert-n4 {
-  border-color: #3d0000 !important;
-}
-
-.br_alert-n5 {
-  border-color: #260000 !important;
-}
-
-.br_navigation,.br_navigation-0 {
-  border-color: #2b58c0 !important;
-}
-
-.br_navigation-1 {
-  border-color: #4b71c9 !important;
-}
-
-.br_navigation-2 {
-  border-color: #7996d7 !important;
-}
-
-.br_navigation-3 {
-  border-color: #aabce6 !important;
-}
-
-.br_navigation-4 {
-  border-color: #d0daf1 !important;
-}
-
-.br_navigation-5 {
-  border-color: #eaeef9 !important;
-}
-
-.br_navigation-n1 {
-  border-color: #274fad !important;
-}
-
-.br_navigation-n2 {
-  border-color: #204290 !important;
-}
-
-.br_navigation-n3 {
-  border-color: #18306a !important;
-}
-
-.br_navigation-n4 {
-  border-color: #11234d !important;
-}
-
-.br_navigation-n5 {
-  border-color: #0b1630 !important;
-}
-
-.br_accent,.br_accent-0 {
-  border-color: #ffc425 !important;
-}
-
-.br_accent-1 {
-  border-color: #ffcd46 !important;
-}
-
-.br_accent-2 {
-  border-color: #ffda76 !important;
-}
-
-.br_accent-3 {
-  border-color: #ffe7a8 !important;
-}
-
-.br_accent-4 {
-  border-color: #fff2cf !important;
-}
-
-.br_accent-5 {
-  border-color: #fff9e9 !important;
-}
-
-.br_accent-n1 {
-  border-color: #e6b021 !important;
-}
-
-.br_accent-n2 {
-  border-color: #bf931c !important;
-}
-
-.br_accent-n3 {
-  border-color: #8c6c14 !important;
-}
-
-.br_accent-n4 {
-  border-color: #664e0f !important;
-}
-
-.br_accent-n5 {
-  border-color: #403109 !important;
-}
-
-.br_info,.br_info-0 {
-  border-color: #a3988c !important;
-}
-
-.br_info-1 {
-  border-color: #b1a79d !important;
-}
-
-.br_info-2 {
-  border-color: #c5beb7 !important;
-}
-
-.br_info-3 {
-  border-color: #dad6d1 !important;
-}
-
-.br_info-4 {
-  border-color: #ebe8e6 !important;
-}
-
-.br_info-5 {
-  border-color: #f6f5f4 !important;
-}
-
-.br_info-n1 {
-  border-color: #93897e !important;
-}
-
-.br_info-n2 {
-  border-color: #7a7269 !important;
-}
-
-.br_info-n3 {
-  border-color: #5a544d !important;
-}
-
-.br_info-n4 {
-  border-color: #413d38 !important;
-}
-
-.br_info-n5 {
-  border-color: #292623 !important;
-}
-
-.br_highlight,.br_highlight-0 {
-  border-color: #05aee5 !important;
-}
-
-.br_highlight-1 {
-  border-color: #2bbae9 !important;
-}
-
-.br_highlight-2 {
-  border-color: #62ccef !important;
-}
-
-.br_highlight-3 {
-  border-color: #9bdff5 !important;
-}
-
-.br_highlight-4 {
-  border-color: #c8edf9 !important;
-}
-
-.br_highlight-5 {
-  border-color: #e6f7fc !important;
-}
-
-.br_highlight-n1 {
-  border-color: #059dce !important;
-}
-
-.br_highlight-n2 {
-  border-color: #0483ac !important;
-}
-
-.br_highlight-n3 {
-  border-color: #03607e !important;
-}
-
-.br_highlight-n4 {
-  border-color: #02465c !important;
-}
-
-.br_highlight-n5 {
-  border-color: #012c39 !important;
-}
-
-.br_acc,.br_acc-0 {
-  border-color: #004176 !important;
-}
-
-.br_acc-1 {
-  border-color: #265e8b !important;
-}
-
-.br_acc-2 {
-  border-color: #5e87a9 !important;
-}
-
-.br_acc-3 {
-  border-color: #99b3c8 !important;
-}
-
-.br_acc-4 {
-  border-color: #c7d5e1 !important;
-}
-
-.br_acc-5 {
-  border-color: #e6ecf1 !important;
-}
-
-.br_acc-n1 {
-  border-color: #003b6a !important;
-}
-
-.br_acc-n2 {
-  border-color: #003159 !important;
-}
-
-.br_acc-n3 {
-  border-color: #002441 !important;
-}
-
-.br_acc-n4 {
-  border-color: #001a2f !important;
-}
-
-.br_acc-n5 {
-  border-color: #00101e !important;
 }
 
 /*
@@ -13543,6 +12998,216 @@ Weight: 10
 Styleguide is-active.display
 
 */
+/*
+Animation
+
+Transitions Eases and Transforms.
+
+Create simple toggleable animations with a combination of classes. 
+
+Weight: 140
+
+Styleguide Animation
+
+
+*/
+/*
+Transition on Hover 
+
+soften the harshness of the switch of the style by adding transitions to the changed decorators.
+
+0              - 0 second transition
+1              - .1 second transition
+2              - .25 second transition
+3              - .3 second transition
+4              - .5 second transition
+5              - 1 second transition
+
+Markup:
+<div class="flex m_5 bg_primary m_5">
+  <div class="transition_{{modifier_class}} h:bg_black-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
+  <div class="transition_{{modifier_class}} h:bg_black-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
+  <div class="transition_{{modifier_class}} h:bg_black-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
+  <div class="transition_{{modifier_class}} h:bg_black-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
+  <div class="transition_{{modifier_class}} h:bg_black-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
+  <div class="transition_{{modifier_class}} h:bg_black-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
+  <div class="transition_{{modifier_class}} h:bg_black-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
+  <div class="transition_{{modifier_class}} h:bg_black-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
+  <div class="transition_{{modifier_class}} h:bg_black-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
+  <div class="transition_{{modifier_class}} h:bg_black-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
+  <div class="transition_{{modifier_class}} h:bg_black  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">default</div>
+</div>
+
+
+
+Styleguide animation.transition
+
+ */
+*[class*=transition] {
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.transition_0 {
+  transition: all 0s;
+}
+
+.transition_1 {
+  transition: all 0.1s;
+}
+
+.transition_2 {
+  transition: all 0.2s;
+}
+
+.transition_3 {
+  transition: all 0.35s;
+}
+
+.transition_4 {
+  transition: all 0.5s;
+}
+
+.transition_5 {
+  transition: all 1s;
+}
+
+/*
+Easing the on Hover 
+
+Dynamic adjustment of transition with easing.
+
+out-in              - ease timing
+out              - ease-out timing
+in              - ease-in timing
+in-out              - ease-in-out timing
+linear              - linear timing
+
+
+Markup:
+<div class="flex m_5 bg_primary m_5">
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-0  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">0</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-1  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">1</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-2  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">2</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-3  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">3</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-4  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">4</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-5  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">5</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-6  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">6</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-7  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">7</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-8  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">8</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black-9  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">9</div>
+  <div class="transition_3 ease_{{modifier_class}} h:bg_black  p-y_3 p-x_4 flex_auto font_bold font_2 font_slab text_center br_1 br_solid br_shade-4 ">default</div>
+</div>
+
+
+
+Styleguide animation.ease
+
+ */
+.ease_linear {
+  transition-timing-function: linear;
+}
+
+.ease_out-in {
+  transition-timing-function: ease;
+}
+
+.ease_in {
+  transition-timing-function: ease-in;
+}
+
+.ease_out {
+  transition-timing-function: ease-out;
+}
+
+.ease_in-out {
+  transition-timing-function: ease-in-out;
+}
+
+/*
+Transform Scale 
+
+Dynamic adjustment of objects scale for toggling between
+
+0              - Scale to 0%
+100            - Scale to 100%
+X-0            - Scale the X to 0%
+X-100            - Scale the X to 100%
+Y-0            - Scale the X to 0%
+Y-100            - Scale the X to 100%
+
+
+Markup:
+<div class="flex m_5 bg_primary m_5">
+  <div class="scale_{{modifier_class}} w-10 p-y_3 p-x_4 font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">This is content that will be scaled.</div>
+
+</div>
+
+
+
+Styleguide animation.ease
+
+ */
+.scale_X-0 {
+  transform: scaleX(0);
+}
+
+.scale_X-100 {
+  transform: scaleX(1);
+}
+
+.scale_Y-0 {
+  transform: scaleY(0);
+}
+
+.scale_Y-100 {
+  transform: scaleY(1);
+}
+
+.scale_0 {
+  transform: scale(0, 0);
+}
+
+.scale_100 {
+  transform: scale(1, 1);
+}
+
+.origin_tl {
+  transform-origin: left top;
+}
+
+.origin_rt {
+  transform-origin: right top;
+}
+
+.origin_c {
+  transform-origin: center center;
+}
+
+.origin_lb {
+  transform-origin: left bottom;
+}
+
+.origin_rb {
+  transform-origin: right bottom;
+}
+
+.origin_t {
+  transform-origin: center top;
+}
+
+.origin_b {
+  transform-origin: center bottom;
+}
+
+.origin_r {
+  transform-origin: right center;
+}
+
+.origin_l {
+  transform-origin: left center;
+}
+
 /*
 UC: Counters
 

@@ -268,12 +268,38 @@ $value-to-unit: (
 		light: 30%
 	),
 	transition: (
-		0: all 0s ease-in,
-		1: all 0.1s ease-in,
-		2: all 0.2s ease-in,
-		3: all 0.35s ease-in,
-		4: all 0.5s ease-in,
-		5: all 1s ease-in
+		0: all 0s,
+		1: all 0.1s,
+		2: all 0.2s,
+		3: all 0.35s,
+		4: all 0.5s,
+		5: all 1s
+	),
+	ease: (
+		linear: linear,
+		out-in: ease,
+		in: ease-in,
+		out: ease-out,
+		in-out: ease-in-out
+	),
+	transform-origin: (
+		tl: left top,
+		rt: right top,
+		c: center center,
+		lb: left bottom,
+		rb: right bottom,
+		t: center top,
+		b: center bottom,
+		r: right center,
+		l: left center
+	),
+	scale: (
+		X-0: scaleX(0),
+		X-100: scaleX(1),
+		Y-0: scaleY(0),
+		Y-100: scaleY(1),
+		0: scale(0, 0),
+		100: scale(1, 1)
 	),
 	active: (
 		dark: 100%,
@@ -868,6 +894,33 @@ $style-definition: (
 		),
 		long-name: ".transition",
 		unit: map-get($value-to-unit, "transition"),
+		alt: "none"
+	),
+	ease: (
+		short-name: ".ease",
+		css-style: (
+			"transition-timing-function"
+		),
+		long-name: ".ease",
+		unit: map-get($value-to-unit, "ease"),
+		alt: "none"
+	),
+	transform-origin: (
+		short-name: ".origin",
+		css-style: (
+			"transform-origin"
+		),
+		long-name: ".transform-origin",
+		unit: map-get($value-to-unit, "transform-origin"),
+		alt: "none"
+	),
+	scale: (
+		short-name: ".scale",
+		css-style: (
+			"transform"
+		),
+		long-name: ".scale",
+		unit: map-get($value-to-unit, "scale"),
 		alt: "none"
 	),
 	grid-width: (
