@@ -260,8 +260,14 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: Maven Pro, Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+h6 {
+  font-weight: 600;
 }
 
 h1,
@@ -269,8 +275,14 @@ h2,
 h3,
 h4,
 h5,
+h6 {
+  margin: 16px 0 8px;
+  margin: 1rem 0 0.5rem;
+  line-height: 1.35;
+}
+
 p {
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -279,100 +291,91 @@ ol {
   line-height: 1.65;
 }
 
-p,
-h5,
-h6,
-li {
+body {
+  font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+p + p {
+  margin-top: 8px;
+  margin-top: 0.5rem;
+}
+
+h6,h5 {
   font-size: 16px;
   font-size: 1rem;
 }
 
 h4 {
-  font-size: 19.2px;
-  font-size: 1.2rem;
-}
-
-h3 {
   font-size: 23.04px;
   font-size: 1.44rem;
 }
 
-h2 {
+h3 {
   font-size: 27.648px;
   font-size: 1.728rem;
 }
 
-h1 {
+h2 {
   font-size: 33.177px;
   font-size: 2.0736rem;
 }
 
-h6 {
-  font-weight: 700;
-}
-
-h5 {
-  font-weight: 900;
-}
-
-.typography_document {
-  max-width: 1024px;
-  max-width: 64rem;
-  font-size: font_0;
-}
-.typography_document h5 {
-  font-size: font_1;
-}
-.typography_document h4 {
-  font-size: font_2;
-}
-.typography_document h3 {
-  font-size: font_3;
-}
-.typography_document h2 {
-  font-size: font_4;
-}
-.typography_document h1 {
+h1 {
   margin: 16px 0;
   margin: 1rem 0;
-  font-size: font_5;
+  font-size: 39.813px;
+  font-size: 2.48832rem;
+}
+
+a {
+  color: #155b4c;
 }
 
 /*
-Scrollable Table
 
-Sometimes you have a table that will need a scrable comparison. 
+Table
+
+Basic Tables with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
 
 Markup:
-<table class="data">
-  <tr>
-    <th>Entry Header 1</th>
-    <th>Entry Header 2</th>
-    <th>Entry Header 3</th>
-    <th>Entry Header 4</th>
-  </tr>
-  <tr>
-    <td>Entry First Line 1</td>
-    <td>Entry First Line 2</td>
-    <td>Entry First Line 3</td>
-    <td>Entry First Line 4</td>
-  </tr>
-  <tr>
-    <td>Entry Line 1</td>
-    <td>Entry Line 2</td>
-    <td>Entry Line 3</td>
-    <td>Entry Line 4</td>
-  </tr>
-  <tr>
-    <td>Entry Last Line 1</td>
-    <td>Entry Last Line 2</td>
-    <td>Entry Last Line 3</td>
-    <td>Entry Last Line 4</td>
-  </tr>
-</table>
+<section><table><caption>Tables can have captions now.</caption><tbody><tr><th>Person</th><th>Number</th><th>Third Column</th></tr><tr><td>Someone Lastname</td><td>900</td><td>Nullam quis risus eget urna mollis ornare vel eu leo.</td></tr><tr><td><a href="#">Person Name</a></td><td>1200</td><td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td></tr><tr><td>Another Person</td><td>1500</td><td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td></tr><tr><td>Last One</td><td>2800</td><td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td></tr></tbody></table></section>
 
-Styleguide HTML.Table
+
+Styleguide HTML.BasicTable
+
 */
+table {
+  font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+table caption {
+  padding: 8px;
+  padding: 0.5rem;
+}
+
+th,
+td {
+  padding: 4px 8px;
+  padding: 0.25rem 0.5rem;
+}
+
+thead {
+  font-weight: 600;
+}
+
+tfoot,
+caption {
+  font-size: 13.333px;
+  font-size: 0.8333333333rem;
+}
+
 /*
 Logos
 
@@ -1341,7 +1344,10 @@ Typography
 Basic Typography with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
 
 Markup:
+<section class="max-w_3">
 <h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
+elit Lorem ipsum dolor sit amet consectetuer adipiscing 
+elit Lorem ipsum dolor sit amet consectetuer adipiscing 
 elit</h1>
 <h2>Aenean commodo ligula eget dolor aenean massa</h2>
 <h3>Cum sociis natoque penatibus et magnis dis 
@@ -1358,87 +1364,11 @@ Cum sociis natoque penatibus et magnis dis parturient
 montes, nascetur ridiculus mus. Donec quam felis, 
 ultricies nec, pellentesque eu, pretium quis, sem.</p>
 <article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article>
+</section>
 
 Weight: -9
 
 Styleguide HTML.Typography
-
-*/
-/*
-
-Typography Document
-
-Basic Typography with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
-
-Markup:
-<div class="typography_document"><h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
-elit</h1><p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem.</p>
-<h2>Aenean commodo ligula eget dolor aenean massa</h2><p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem.</p>
-<h3>Cum sociis natoque penatibus et magnis dis 
-parturient montes nascetur ridiculus mus</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem.</p>
-<h4>Donec quam felis ultricies nec pellentesque eu 
-pretium quis sem nlla consequat massa quis enim</h4><p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem.</p>
-<h5>Donec pede justo fringilla vel aliquet nec vulputate 
-eget arcu</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem.</p>
-<h6>In enim justo rhoncus ut imperdiet a venenatis vitae 
-justo</h6>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem.</p>
-<article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article></div>
-
-Weight: -10
-
-Styleguide HTML.Typography Document
-
-*/
-/*
-
-Lists
-
-Basic Lists with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
-
-Markup:
-<section><ul><li>Unordered List item one<ul><li>Nested list item<ul><li>Level 3, item one</li><li>Level 3, item two</li><li>Level 3, item three</li><li>Level 3, item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><hr><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></section>
-
-Weight: -8
-
-Styleguide HTML.Lists
-
-*/
-/*
-
-Table
-
-Basic Tables with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
-
-Markup:
-<section><table><caption>Tables can have captions now.</caption><tbody><tr><th>Person</th><th>Number</th><th>Third Column</th></tr><tr><td>Someone Lastname</td><td>900</td><td>Nullam quis risus eget urna mollis ornare vel eu leo.</td></tr><tr><td><a href="#">Person Name</a></td><td>1200</td><td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td></tr><tr><td>Another Person</td><td>1500</td><td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td></tr><tr><td>Last One</td><td>2800</td><td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td></tr></tbody></table></section>
-
-
-Styleguide HTML.BasicTable
 
 */
 /*
@@ -2561,11 +2491,11 @@ Styleguide Typography.Font.Color Transparency
 }
 
 .font_regular {
-  font-weight: 300 !important;
+  font-weight: 400 !important;
 }
 
 .font_bold {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 .font_xbold {

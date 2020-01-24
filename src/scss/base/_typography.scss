@@ -2,14 +2,25 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
 	font-family: $font_display;
+	font-weight: $font_regular;
 }
+
+h6 {
+	font-weight: $font_bold;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
+h6 {
+	line-height: $line-height_2;
+	margin: $margin_4 $margin_0 $margin_3;
+}
 p {
 	line-height: $line-height_3;
 	font-weight: $font_regular;
@@ -19,53 +30,36 @@ ol {
 	line-height: $line-height_4;
 }
 
-p,
-h5,
-h6,
-li {
+body {
+	font-family: $font_copy;
+	font-size: $font_0;
+}
+
+p {
+	line-height: $line-height_3;
+}
+p + p {
+	margin-top: $margin_3;
+}
+h6 {
+	font-size: $font_0;
+}
+h5 {
 	font-size: $font_0;
 }
 h4 {
-	font-size: $font_1;
-}
-h3 {
 	font-size: $font_2;
 }
-
-h2 {
+h3 {
 	font-size: $font_3;
 }
-h1 {
+h2 {
 	font-size: $font_4;
 }
-
-h6 {
-	font-weight: $font_bold;
+h1 {
+	font-size: $font_5;
+	margin: $margin_4 $margin_0;
 }
-h5 {
-	font-weight: $font_xbold;
-}
-.typography_document {
-	font-size: font_0;
-	max-width: get-css-size(max-width, 4);
-	p {
-	}
-	h6 {
-	}
-	h5 {
-		font-size: font_1;
-	}
-	h4 {
-		font-size: font_2;
-	}
-	h3 {
-		font-size: font_3;
-	}
-	h2 {
-		font-size: font_4;
-	}
-	h1 {
-		font-size: font_5;
-		margin: $margin_4 $margin_0;
-	}
+a {
+	color: mix(map-get($theme-palette, accent), $black);
 }

@@ -1,35 +1,32 @@
 /*
-Scrollable Table
 
-Sometimes you have a table that will need a scrable comparison. 
+Table
+
+Basic Tables with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
 
 Markup:
-<table class="data">
-  <tr>
-    <th>Entry Header 1</th>
-    <th>Entry Header 2</th>
-    <th>Entry Header 3</th>
-    <th>Entry Header 4</th>
-  </tr>
-  <tr>
-    <td>Entry First Line 1</td>
-    <td>Entry First Line 2</td>
-    <td>Entry First Line 3</td>
-    <td>Entry First Line 4</td>
-  </tr>
-  <tr>
-    <td>Entry Line 1</td>
-    <td>Entry Line 2</td>
-    <td>Entry Line 3</td>
-    <td>Entry Line 4</td>
-  </tr>
-  <tr>
-    <td>Entry Last Line 1</td>
-    <td>Entry Last Line 2</td>
-    <td>Entry Last Line 3</td>
-    <td>Entry Last Line 4</td>
-  </tr>
-</table>
+<section><table><caption>Tables can have captions now.</caption><tbody><tr><th>Person</th><th>Number</th><th>Third Column</th></tr><tr><td>Someone Lastname</td><td>900</td><td>Nullam quis risus eget urna mollis ornare vel eu leo.</td></tr><tr><td><a href="#">Person Name</a></td><td>1200</td><td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td></tr><tr><td>Another Person</td><td>1500</td><td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td></tr><tr><td>Last One</td><td>2800</td><td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td></tr></tbody></table></section>
 
-Styleguide HTML.Table
+
+Styleguide HTML.BasicTable
+
 */
+
+table {
+	font-family: $font_ui;
+	font-size: $font_0;
+	caption {
+		padding: $padding_3;
+	}
+}
+th,
+td {
+	padding: $padding_2 $padding_3;
+}
+thead {
+	font-weight: $font_bold;
+}
+tfoot,
+caption {
+	font-size: $font_n1;
+}
