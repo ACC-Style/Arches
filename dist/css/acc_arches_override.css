@@ -778,6 +778,56 @@
   */
   /*
 
+  Typography Document
+
+  Basic Typography with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
+
+  Markup:
+  <div class="typography_document"><h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
+  elit</h1><p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+  Cum sociis natoque penatibus et magnis dis parturient 
+  montes, nascetur ridiculus mus. Donec quam felis, 
+  ultricies nec, pellentesque eu, pretium quis, sem.</p>
+  <h2>Aenean commodo ligula eget dolor aenean massa</h2><p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+  Cum sociis natoque penatibus et magnis dis parturient 
+  montes, nascetur ridiculus mus. Donec quam felis, 
+  ultricies nec, pellentesque eu, pretium quis, sem.</p>
+  <h3>Cum sociis natoque penatibus et magnis dis 
+  parturient montes nascetur ridiculus mus</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+  Cum sociis natoque penatibus et magnis dis parturient 
+  montes, nascetur ridiculus mus. Donec quam felis, 
+  ultricies nec, pellentesque eu, pretium quis, sem.</p>
+  <h4>Donec quam felis ultricies nec pellentesque eu 
+  pretium quis sem nlla consequat massa quis enim</h4><p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+  Cum sociis natoque penatibus et magnis dis parturient 
+  montes, nascetur ridiculus mus. Donec quam felis, 
+  ultricies nec, pellentesque eu, pretium quis, sem.</p>
+  <h5>Donec pede justo fringilla vel aliquet nec vulputate 
+  eget arcu</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+  Cum sociis natoque penatibus et magnis dis parturient 
+  montes, nascetur ridiculus mus. Donec quam felis, 
+  ultricies nec, pellentesque eu, pretium quis, sem.</p>
+  <h6>In enim justo rhoncus ut imperdiet a venenatis vitae 
+  justo</h6>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+  Cum sociis natoque penatibus et magnis dis parturient 
+  montes, nascetur ridiculus mus. Donec quam felis, 
+  ultricies nec, pellentesque eu, pretium quis, sem.</p>
+  <article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article></div>
+
+  Weight: -10
+
+  Styleguide HTML.Typography Document
+
+  */
+  /*
+
   Lists
 
   Basic Lists with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
@@ -3316,6 +3366,77 @@
   background-position: top right;
   background-repeat: repeat;
 }
+#acc_arches_override h1,
+#acc_arches_override h2,
+#acc_arches_override h3,
+#acc_arches_override h4,
+#acc_arches_override h5 {
+  font-family: Maven Pro, Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;
+}
+#acc_arches_override h1,
+#acc_arches_override h2,
+#acc_arches_override h3,
+#acc_arches_override h4,
+#acc_arches_override h5,
+#acc_arches_override p {
+  font-weight: 300;
+  line-height: 1.5;
+}
+#acc_arches_override ul,
+#acc_arches_override ol {
+  line-height: 1.65;
+}
+#acc_arches_override p,
+#acc_arches_override h5,
+#acc_arches_override h6,
+#acc_arches_override li {
+  font-size: 16px;
+  font-size: 1rem;
+}
+#acc_arches_override h4 {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+}
+#acc_arches_override h3 {
+  font-size: 23.04px;
+  font-size: 1.44rem;
+}
+#acc_arches_override h2 {
+  font-size: 27.648px;
+  font-size: 1.728rem;
+}
+#acc_arches_override h1 {
+  font-size: 33.177px;
+  font-size: 2.0736rem;
+}
+#acc_arches_override h6 {
+  font-weight: 700;
+}
+#acc_arches_override h5 {
+  font-weight: 900;
+}
+#acc_arches_override .typography_document {
+  max-width: 1024px;
+  max-width: 64rem;
+  font-size: font_0;
+}
+#acc_arches_override .typography_document h5 {
+  font-size: font_1;
+}
+#acc_arches_override .typography_document h4 {
+  font-size: font_2;
+}
+#acc_arches_override .typography_document h3 {
+  font-size: font_3;
+}
+#acc_arches_override .typography_document h2 {
+  font-size: font_4;
+}
+#acc_arches_override .typography_document h1 {
+  margin: 16px 0;
+  margin: 1rem 0;
+  font-size: font_5;
+}
 #acc_arches_override [class*=logo_],
 #acc_arches_override [class*=seal_] {
   overflow: hidden;
@@ -4186,7 +4307,7 @@
   font-weight: 100 !important;
 }
 #acc_arches_override .font_regular {
-  font-weight: 400 !important;
+  font-weight: 300 !important;
 }
 #acc_arches_override .font_bold {
   font-weight: 700 !important;
