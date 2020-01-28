@@ -9,7 +9,7 @@ $debug-trace: true !default;
 		$names: class-name-constructor($key, $unit, $breakpoint);
 		#{$names} {
 			@each $style in $styles {
-				#{$style}: $val #{$important};
+				#{$style}: #{$val} #{$important};
 			}
 		}
 		@if $debug-trace {

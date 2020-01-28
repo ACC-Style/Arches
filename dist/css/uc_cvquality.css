@@ -7724,7 +7724,7 @@ Markup:
 
 	Weight: 100
 
-	Styleguide Background.Shadows
+	Styleguide Background.Shadows.Basic
 
  */
 .shadow_0 {
@@ -7769,6 +7769,51 @@ Markup:
 
 .shadow_n5 {
   box-shadow: inset 2px 2px 8px 1px rgba(0, 0, 0, 0.65);
+}
+
+/*
+	Rich Shadows
+
+	Rich Shadows are multi layered showdows that add depth and finer quality of shadows for large UI elements .shadow_{{modifier_class}}  
+
+	.shadow_bevel-light				- bevel-light
+	.shadow_bevel-bold				- bevel-bold
+	.shadow_overlap-light			- overlap-light
+	.shadow_overlap-bold			- overlap-bold
+	.shadow_emboss-light			- emboss-light
+	.shadow_emboss-bold				- emboss-bold
+
+
+	Markup:
+	<div class="texture_dust bg_primary_4 p_5"><div class="{{modifier_class}} br_1 br_black-1 br_shade-2 br_solid bg_shade-5 m_5 p_5">container has shadow of {{modifier_class}}</div></div>
+
+	Weight: 100
+
+	Styleguide Background.Shadows.Rich
+
+ */
+.shadow_emboss-light {
+  box-shadow: -2px -2px 4px inset rgba(255, 255, 255, 0.05), -2px -2px 3px inset rgba(255,255,255, 0.25), 0px 1.5px 3.5px inset rgba(0, 0, 0, 0.2), 0 6.4px 13.1px inset rgba(0, 0, 0, 0.041);
+}
+
+.shadow_emboss-bold {
+  box-shadow: -2px -2px 4px inset rgba(255, 255, 255, 0.7), -5px -4px 6px inset rgba(255,255,255,.4), -2px 0.5px 5.5px inset rgba(0, 0, 0, .3), 1px 2.5px 5.5px inset rgba(0, 0, 0, .4), 1px 2.4px 8.1px inset rgba(0, 0, 0, 0.041), 3px 6.4px 13.1px inset rgba(0, 0, 0, 0.041);
+}
+
+.shadow_bevel-light {
+  box-shadow: -2px -2px 4px rgba(255, 255, 255, 0.05), -2px -2px 3px rgba(255,255,255, 0.25), 2px 3.5px 5.5px rgba(0, 0, 0, 0.132), 0 6.4px 13.1px rgba(0, 0, 0, 0.041), 0 16px 19px rgba(0, 0, 0, 0.07);
+}
+
+.shadow_bevel-bold {
+  box-shadow: -7px -7px 14px rgba(255,255,255, 0.28), -1px -1.7px 5.8px rgba(255,255,255, 0.75), 3px 2.5px 7.5px rgba(0, 0, 0, 0.52), 3px 12.4px 23.1px rgba(0, 0, 0, 0.31), 1px 29px 63px rgba(0, 0, 0, 0.07);
+}
+
+.shadow_overlap-light {
+  box-shadow: 0px 1px 3px rgba(255,255,255,.125), 0px 2px 4px rgba(0,0,0,.5), 1px 5px 5px rgba(0,0,0,.01);
+}
+
+.shadow_overlap-bold {
+  box-shadow: 0px 0px 4px rgba(255,255,255,.25), -1px 3px 4px rgba(0,0,0,.35), 1px 3px 4px rgba(0,0,0,.35), 0px 5px 6px rgba(0,0,0,.25);
 }
 
 /*

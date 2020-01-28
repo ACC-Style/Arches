@@ -20,7 +20,30 @@
 
 	Weight: 100
 
-	Styleguide Background.Shadows
+	Styleguide Background.Shadows.Basic
  
  */
 @include loop-style(box-shadow);
+
+/*
+	Rich Shadows
+
+	Rich Shadows are multi layered showdows that add depth and finer quality of shadows for large UI elements .shadow_{{modifier_class}}  
+
+	#{class-name-constructor(rich-shadow,bevel-light)}				- bevel-light
+	#{class-name-constructor(rich-shadow,bevel-bold)}				- bevel-bold
+	#{class-name-constructor(rich-shadow,overlap-light)}			- overlap-light
+	#{class-name-constructor(rich-shadow,overlap-bold)}			- overlap-bold
+	#{class-name-constructor(rich-shadow,emboss-light)}			- emboss-light
+	#{class-name-constructor(rich-shadow,emboss-bold)}				- emboss-bold
+	
+
+	Markup:
+	<div class="texture_dust bg_primary_4 p_5"><div class="{{modifier_class}} br_1 br_black-1 br_shade-2 br_solid bg_shade-5 m_5 p_5">container has shadow of {{modifier_class}}</div></div>
+
+	Weight: 100
+
+	Styleguide Background.Shadows.Rich
+ 
+ */
+@include loop-style(rich-shadow);
