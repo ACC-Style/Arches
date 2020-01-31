@@ -257,7 +257,7 @@ Colors are based off of the ACC Scrub Colors.
 
 map-get($theme-palette, primary)              -  #0088aa; primary
 map-get($theme-palette, secondary)            -  #e87d1e; secondary
-map-get($theme-palette, shade)           		 -  #8a817f; shade
+map-get($theme-palette, shade)           		-  #8a817f; shade
 map-get($theme-palette, accent)               -  #ffc425;  accent
 map-get($theme-palette, info)                 -  #a3988c; info
 map-get($theme-palette, highlight)            -  #05aee5; highlight
@@ -389,30 +389,23 @@ Styleguide DesignBase.Colors.Social Networks
 
 */
 /**  Fonts  **/
-/* Robto Slab Regular */
-@font-face {
-  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url(https://fonts.gstatic.com/s/robotoslab/v7/BngMUXZYTXPIvIBgJJSb6ufN5qU.woff2) format("woff2");
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-weight: 400;
-  unicode-range: U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* Robto Slab Bold */
+/* latin-ext */
 @font-face {
   font-display: swap;
-  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url(https://fonts.gstatic.com/s/robotoslab/v8/BngMUXZYTXPIvIBgJJSb6ufA5qW54A.woff2) format("woff2");
+  src: url(https://fonts.gstatic.com/s/robotoslab/v10/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYWRjRdE.woff2) format("woff2");
   font-family: "Roboto Slab";
   font-style: normal;
   font-weight: 400;
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-/* Maven PRo */
+/* latin */
 @font-face {
-  src: local("Maven Pro Medium"), local("MavenPro-Medium"), url(https://fonts.gstatic.com/s/mavenpro/v11/7Au4p_AqnyWWAxW2Wk3OPkcdP3kD.woff2) format("woff2");
-  font-family: "Maven Pro";
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v10/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rj.woff2) format("woff2");
+  font-family: "Roboto Slab";
   font-style: normal;
-  font-weight: 500;
-  unicode-range: U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-weight: 400;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* Muli */
 @font-face {
@@ -1362,18 +1355,18 @@ The ACC is focused on stable, conservative, clean fonts.   Roboto Slab is the st
 */
 /*
 
-Roboto Slab
+Slab: Roboto Slab
 
- A beuatiful slab font that shows a complexity and texture to the fonts used in the design. 
+A beuatiful slab font that shows a complexity and texture to the fonts used in the design. 
 
- Markup:
+Markup:
 	<div class="font_slab">
 		<h2 class="font_slab group-divide-bottom font--name small-12">
 			Roboto Slab
-			<span class="sub-line">font-family: 'Roboto Slab', "Times New Roman",  'Lucida Bright', Georgia, serif</span>
+			<span class="sub-line">font-family: "Roboto Slab","Times New Roman","Lucida Bright",Georgia,"slab",serif</span>
 		</h2>
 		<div class="font flex grid-padding-x grid-padding-y">
-			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">Rs</div>
+			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">RS</div>
 			<div class="flex_auto font--example">
 				<h3 class="font_slab">Slab Font</h3>
 				<div class="text-lowercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
@@ -1386,11 +1379,13 @@ Roboto Slab
 		</div>
 	</div>
 
+ Weight: -1
+
  Styleguide DesignBase.Fonts.Slab
 */
 /*
 
-Maven Pro
+Display: Maven Pro
 
  A Slick font that has a slight interest used for headers and UI. 
 
@@ -1398,10 +1393,10 @@ Maven Pro
 	<div class="font_display">
 		<h2 class="font_display group-divide-bottom font--name small-12">
 			Maven Pro
-			<span class="sub-line">font-family: 'Maven Pro', "Times New Roman",  'Lucida Bright', Georgia, serif</span>
+			<span class="sub-line">font-family: "Maven Pro",Verdana,Helvetica,sans-serif;</span>
 		</h2>
 		<div class="font flex grid-padding-x grid-padding-y">
-			<div class="flex_shrink p-r_5  font_10 font--dropcase_2x">Mp</div>
+			<div class="flex_shrink p-r_5  font_10 font--dropcase_2x">MP</div>
 			<div class="flex_auto font--example">
 				<h3 class="font_display">Display Font</h3>
 				<div class="text-lowercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
@@ -1414,22 +1409,24 @@ Maven Pro
 		</div>
 	</div>
 
+ Weight: 0
+
  Styleguide DesignBase.Fonts.Display
 */
 /*
 
-Muli
+Copy: Lato
 
  A clean font for content and text of none UI elements. 
 
  Markup:
 	<div class="font_copy">
 		<h2 class=" group-divide-bottom font--name small-12">
-			Muli
-			<span class="sub-line">font-family: 'Muli', "Times New Roman",  'Lucida Bright', Georgia, serif</span>
+			"Lato"
+			<span class="sub-line">font-family: ""Lato","Open Sans","system-ui",sans-serif"</span>
 		</h2>
 		<div class="font flex grid-padding-x grid-padding-y">
-			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">Mu</div>
+			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">Lt</div>
 			<div class="felx_auto font--example">
 				<h3 class="">Content Font</h3>
 				<div class="text-lowercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
@@ -1442,7 +1439,39 @@ Muli
 		</div>
 	</div>
 
+ Weight: 0
+
  Styleguide DesignBase.Fonts.Copy
+*/
+/*
+
+UI: Lato
+
+ A clean font for content and text of none UI elements. 
+
+ Markup:
+	<div class="font_ui">
+		<h2 class=" group-divide-bottom font--name small-12">
+			"Lato"
+			<span class="sub-line">font-family: ""Lato","Open Sans","system-ui",sans-serif"</span>
+		</h2>
+		<div class="font flex grid-padding-x grid-padding-y">
+			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">Lt</div>
+			<div class="felx_auto font--example">
+				<h3 class="">Content Font</h3>
+				<div class="text-lowercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+				<div class="text-uppercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+				<div class="text-numbers font_4">0 1 2 3 4 5 6 7 8 9</div>
+				<div class="text-lowercase font_2">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+				<div class="text-uppercase font_2">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+				<div class="text-numbers font_2">0 1 2 3 4 5 6 7 8 9</div>
+			</div>
+		</div>
+	</div>
+
+ Weight: 1
+
+ Styleguide DesignBase.Fonts.UI
 */
 .font .font--example {
   background-image: url(http://basehold.it/i/24);
@@ -1973,7 +2002,7 @@ Styleguide Typography
   Styleguide Typography.Font.Family
  */
 .font_slab {
-  font-family: Roboto Slab, Times New Roman, Lucida Bright, Georgia, serif;
+  font-family: "Roboto Slab","Times New Roman","Lucida Bright",Georgia,"slab",serif;
 }
 
 .font_display {

@@ -19,18 +19,18 @@ The ACC is focused on stable, conservative, clean fonts.   Roboto Slab is the st
 
 /*
 
-Roboto Slab
+Slab: #{map-deep-get($fonts, 'slab', 'name')}
  
- A beuatiful slab font that shows a complexity and texture to the fonts used in the design. 
+A beuatiful slab font that shows a complexity and texture to the fonts used in the design. 
 
- Markup:
+Markup:
 	<div class="font_slab">
 		<h2 class="font_slab group-divide-bottom font--name small-12">
-			Roboto Slab
-			<span class="sub-line">font-family: 'Roboto Slab', "Times New Roman",  'Lucida Bright', Georgia, serif</span>
+			#{map-deep-get($fonts, 'slab', 'name')}
+			<span class="sub-line">font-family: #{map-deep-get($fonts, 'slab', 'stack')}</span>
 		</h2>
 		<div class="font flex grid-padding-x grid-padding-y">
-			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">Rs</div>
+			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">#{map-deep-get($fonts, 'slab', 'short-name')}</div>
 			<div class="flex_auto font--example">
 				<h3 class="font_slab">Slab Font</h3>
 				<div class="text-lowercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
@@ -43,22 +43,24 @@ Roboto Slab
 		</div>
 	</div>
 
+ Weight: -1
+
  Styleguide DesignBase.Fonts.Slab
 */
 /*
 
-Maven Pro
+Display: #{map-deep-get($fonts, 'display', 'name')}
  
  A Slick font that has a slight interest used for headers and UI. 
 
  Markup:
 	<div class="font_display">
 		<h2 class="font_display group-divide-bottom font--name small-12">
-			Maven Pro
-			<span class="sub-line">font-family: 'Maven Pro', "Times New Roman",  'Lucida Bright', Georgia, serif</span>
+			#{map-deep-get($fonts, 'display', 'name')}
+			<span class="sub-line">font-family: #{map-deep-get($fonts, 'display', 'stack')}</span>
 		</h2>
 		<div class="font flex grid-padding-x grid-padding-y">
-			<div class="flex_shrink p-r_5  font_10 font--dropcase_2x">Mp</div>
+			<div class="flex_shrink p-r_5  font_10 font--dropcase_2x">#{map-deep-get($fonts, 'display', 'short-name')}</div>
 			<div class="flex_auto font--example">
 				<h3 class="font_display">Display Font</h3>
 				<div class="text-lowercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
@@ -71,23 +73,25 @@ Maven Pro
 		</div>
 	</div>
 
+ Weight: 0
+
  Styleguide DesignBase.Fonts.Display
 */
 
 /*
 
-Muli
+Copy: #{map-deep-get($fonts, 'copy', 'name')}
  
  A clean font for content and text of none UI elements. 
 
  Markup:
 	<div class="font_copy">
 		<h2 class=" group-divide-bottom font--name small-12">
-			Muli
-			<span class="sub-line">font-family: 'Muli', "Times New Roman",  'Lucida Bright', Georgia, serif</span>
+			"#{map-deep-get($fonts, 'copy', 'name')}"
+			<span class="sub-line">font-family: "#{map-deep-get($fonts, 'copy', 'stack')}"</span>
 		</h2>
 		<div class="font flex grid-padding-x grid-padding-y">
-			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">Mu</div>
+			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">#{map-deep-get($fonts, 'copy', 'short-name')}</div>
 			<div class="felx_auto font--example">
 				<h3 class="">Content Font</h3>
 				<div class="text-lowercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
@@ -100,7 +104,39 @@ Muli
 		</div>
 	</div>
 
+ Weight: 0
+
  Styleguide DesignBase.Fonts.Copy
+*/
+/*
+
+UI: #{map-deep-get($fonts, 'ui', 'name')}
+ 
+ A clean font for content and text of none UI elements. 
+
+ Markup:
+	<div class="font_ui">
+		<h2 class=" group-divide-bottom font--name small-12">
+			"#{map-deep-get($fonts, 'ui', 'name')}"
+			<span class="sub-line">font-family: "#{map-deep-get($fonts, 'ui', 'stack')}"</span>
+		</h2>
+		<div class="font flex grid-padding-x grid-padding-y">
+			<div class="flex_shrink p-r_5 font_10 font--dropcase_2x">#{map-deep-get($fonts, 'ui', 'short-name')}</div>
+			<div class="felx_auto font--example">
+				<h3 class="">Content Font</h3>
+				<div class="text-lowercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+				<div class="text-uppercase font_4">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+				<div class="text-numbers font_4">0 1 2 3 4 5 6 7 8 9</div>
+				<div class="text-lowercase font_2">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+				<div class="text-uppercase font_2">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+				<div class="text-numbers font_2">0 1 2 3 4 5 6 7 8 9</div>
+			</div>
+		</div>
+	</div>
+
+ Weight: 1
+
+ Styleguide DesignBase.Fonts.UI
 */
 
 .font {
