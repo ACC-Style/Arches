@@ -4,7 +4,7 @@ News Hero (1.01.01-D)
 Large Featured Rotater of News Tieles and short synopsis (Empashized Level Item)
 
 Markup:
-<div class="font_1 bg_shade-5"><h1 class="font_6">News Hero (Empashized Level Item)</h1></div>
+<div class="bg_cover bg_shade-5 font_1 p_4" style="background-image:url('https://i.picsum.photos/id/789/700/300.jpg');height: 300px;"><h1 class="c_white font_4">News Hero (Empashized Level Item)</h1></div>
 
 Weight: 0
 
@@ -17,11 +17,64 @@ News Item (1.01.01-E)
 A short synopsis of a news article that is used in a repeating list. (Primary Level Item) 
 
 Markup:
-<div class="font_0">News Item (Primary Item)</div>
+<article class="font_0 font_copy br-b_1 br_dotted br_secondary-2 p-x_2 p-t_3 p-b_4 flex">
+   <aside class="flex_shrink"><img src="https://picsum.photos/100" alt=""></aside>
+   <section class="flex_auto p-l_4">
+   <header data-attr="article" class="c_primary font_2 font_bold font_display">
+     Long Work Hours Linked to High Blood Pressure
+   </header>
+   <div data-attr="article-sample">Working more than 40 hours a week may increase risk of high blood pressure, finds study of white-collar workers.</div><div data-attr="metadata" class="align-middle br-t_1 br_shade-5 br_solid flex flex_inline font_n2 font_ui m-t_2 p-t_1 w_auto">
+      <time datetime="1963-11-23" data-attr="article-published-date" class="c_accent-1 font_bold flex_shrink">Nov 23, 1963</time><ul data-attr="authors" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
+         <li class="flex_shrink p-x_2" data-attr="author">
+         <a class="c_primary-2 font_bold link">Heidi D. Nelson, MD, MPH</a></li>
+         <li class="flex_shrink p-x_2" data-attr="article-authors"><a class="c_primary-2 font_bold link">Amy Cantor, MD, MPH</a></li>
+      </ul>
+      <ul data-attr="taxonomy" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
+         <li data-attr="topic " class="flex_shrink p-x_1"><a class="link c_shade-1">AFIB</a></li>
+         <li data-attr="topic" class="flex_shrink p-x_1"><a class="link c_shade-1">Endocarditis</a></li>
+         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">Living With</a></li>
+         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">New Science</a></li>
+      </ul>
+   </div>
+   </section>
+</article>
 
 Weight: 0
 
 Styleguide CardioSmart.News.Item
+
+*/
+/*
+News Item No Byline (1.01.01-E)
+
+A short synopsis of a news article that is used in a repeating list. (Primary Level Item) 
+
+Markup:
+<article class="font_0 font_copy br-b_1 br_dotted br_secondary-2 p-x_2 p-t_3 p-b_4 flex">
+   <aside class="flex_shrink"><img src="https://picsum.photos/100" alt=""></aside>
+   <section class="flex_auto p-l_4">
+   <header data-attr="article" class="c_primary font_2 font_bold font_display">
+     More Research Needed to Achieve Health Equity in Preventive Care
+   </header>
+   <div data-attr="article-sample">Experts identify gaps in knowledge about how to put proven services into practice.</div><div data-attr="metadata" class="align-middle br-t_1 br_shade-5 br_solid flex flex_inline font_n2 font_ui m-t_2 p-t_1 w_auto">
+      <time datetime="1963-11-23" data-attr="article-published-date" class="c_accent-1 font_bold flex_shrink">Nov 23, 1963</time><ul data-attr="authors" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
+         <li class="flex_shrink p-x_2" data-attr="author">
+            <a class="c_primary-2 font_bold link">CardioSmart Editorial</a>
+         </li>
+      </ul>
+      <ul data-attr="taxonomy" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
+         <li data-attr="topic " class="flex_shrink p-x_1"><a class="link c_shade-1">AFIB</a></li>
+         <li data-attr="topic" class="flex_shrink p-x_1"><a class="link c_shade-1">Endocarditis</a></li>
+         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">Living With</a></li>
+         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">New Science</a></li>
+      </ul>
+   </div>
+   </section>
+</article>
+
+Weight: 0
+
+Styleguide CardioSmart.News.Item No Byline
 
 */
 /*
