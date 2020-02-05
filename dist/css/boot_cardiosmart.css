@@ -13482,8 +13482,8 @@ Styleguide  Recipes Bootstrap.Carousel
 
 @media only screen and (min-width : 640px) {
   .navbar-primary.navbar-expand-md .nav-item {
-    border-top: 5px #004176 solid;
-    border-bottom: 5px #004176 solid;
+    border-top: 0.25rem #004176 solid;
+    border-bottom: 0.25rem #004176 solid;
   }
   .navbar-primary.navbar-expand-md .nav-item.active, .navbar-primary.navbar-expand-md .nav-item.show, .navbar-primary.navbar-expand-md .nav-item:hover {
     border-top-color: #e17009;
@@ -13497,8 +13497,8 @@ Styleguide  Recipes Bootstrap.Carousel
 
 @media only screen and (min-width : 1024px) {
   .navbar-primary.navbar-expand-lg .nav-item {
-    border-top: 5px #004176 solid;
-    border-bottom: 5px #004176 solid;
+    border-top: 0.25rem #004176 solid;
+    border-bottom: 0.25rem #004176 solid;
   }
   .navbar-primary.navbar-expand-lg .nav-item.active, .navbar-primary.navbar-expand-lg .nav-item.show, .navbar-primary.navbar-expand-lg .nav-item:hover {
     border-top-color: #e17009;
@@ -15096,415 +15096,564 @@ Styleguide  Recipes Bootstrap.BootNav
 
 */
 /*
-	ACC.org Recipes
+	CardioSmart Recipes
 
-	The use of Utiltiy Class give us the ablitiy to create much of the UI needed for ACC.org without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of ACC.org
+	The use of Utiltiy Class give us the ablitiy to create much of the UI needed for CardioSmart without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of CardioSmart.
 
-	Weight: 2000
+	Weight: 3000
 
-	Styleguide Recipes ACC
+	Styleguide CardioSmart
 
 */
 /*
-ACC.org Footer
+Featured Tool (1.01.01-C)
 
-The Footer of ACC.org 
+A featured tool is a single selected tool that can be pulled in when needed. (Secondary Level Item)
+
+Markup:
+<div> Featured Tool (Secondary Item)</div>
+
+Weight: 0
+
+Styleguide CardioSmart.Basic.Featured Tool
+
+*/
+/*
+Related News Items (1.01.01-G)
+
+A news Item that is related to the news topic that is not the news topic.  This content is an expoloritive item to drive discovery of other sections of the website. (Secondary Level Item)
+
+Markup:
+<div>Related News List Item (Secondary Item)</div>
+
+Weight: 0
+
+Styleguide CardioSmart.Basic.Related News
+
+*/
+/*
+
+Patient Story Excerpt (1.01.02-A)
+
+Render an excerpt of a survivor story that is related to the topic of the page. There are 3 click actions: read story, next story, view all stories.  (Secondary Level Content)
+
+Markup:
+<aside> Story insert with navigation system to stories.</aside>
+
+Weight: 1000
+
+Styleguide CardioSmart.Page.Patient Story
+
+*/
+/*
+
+Editor Credit (1.01-D)
+
+Meta Data Driven Component that renders when it published/last reviewed and who is credited as reviewers for the page. (Third Level Content)
+
+Markup:
+<cite>Meta Data Driven Component that renders when it published/last reviewed and who is credited as reviewers for the page.
+.</cite>
+
+Weight: 1000
+
+Styleguide CardioSmart.Page.Editor Credit
+
+*/
+/*
+
+Living With Call to Action (1.01-E)
+
+A dynamic block that fills the Topic Name into the call to action and links to the corresponding sub page "Living With X"
+
+Markup:
+<div>A dynamic block that fills the Topic Name into the call to action and links to the corresponding sub page "Living With X".</div>
+
+Weight: 10
+
+Styleguide CardioSmart.Page.Living With Call to Action
+
+*/
+/*
+Related Section (1.00-F)
+
+Related Content is a multi bucket area that can be set to filter on Topic and number or elements.   When the elements are above X  then the area implements a carousel.   (Secondary Level Item)
+
+Markup:
+<div>Related Items Listed here(Secondary Level)</div>
+
+Weight: 2000
+
+Styleguide CardioSmart.Page.Related Section
+*/
+/*
+Related Topics Nav (1.01-G)
+
+A list of topics that link to the topic pages that are deemed related through a centralized "Matrix"  This should not be edited on page but through a centralized interface. (Secondary Level Item)
+
+Markup:
+<div>Related Topic names and urls(Secondary Level)</div>
+
+Weight: 2000
+
+Styleguide CardioSmart.Page.Related Topic
+*/
+/*
+Related Decision Tools (1.01-H)
+
+A curated list of patient tools or decision page that can be added with short title and link. Expander should be added if list exceeds X.(Secondary Level Item)
+
+Markup:
+<div>Related Decision Tools with expander(Secondary Level)</div>
+
+Weight: 2000
+
+Styleguide CardioSmart.Page.Related Decision Tools
+*/
+/*
+Related Item
+
+Related Items on a page can be , news, tool, etc...  (Secondary Level Item)
+
+Markup:
+<div>Hub Link (Secondary Level Item)</div>
+
+Weight: 0
+
+Styleguide CardioSmart.Page.Related Items
+*/
+/*
+Related Topics
+
+Related Topics is a list of topics that can be related to the current topic.  (Primary Level Item)
+
+Markup:
+<div>List of related topic links (Primary Level Item)</div>
+
+Weight: 0
+
+Styleguide CardioSmart.Page.Related Topics
+*/
+/*
+Featured Tools
+
+Featured Tools is a list of tools related to the current topics  (Secondary Level Item)
+
+Markup:
+<div>List of featured items to the current topic. This featured list can be Tools,(Secondary Level Item)</div>
+
+Weight: 0
+
+Styleguide CardioSmart.Page.Featured List
+*/
+/*
+News Hero (1.01.01-D)
+
+Large Featured Rotater of News Tieles and short synopsis (Empashized Level Item)
+
+Markup:
+<div class="bg_cover bg_shade-5 font_1 p_4" style="background-image:url('https://i.picsum.photos/id/789/700/300.jpg');height: 300px;"><h1 class="c_white font_4">News Hero (Empashized Level Item)</h1></div>
+
+Weight: 0
+
+Styleguide CardioSmart.News.Hero
+
+*/
+/*
+News Item (1.01.01-E)
+
+A short synopsis of a news article that is used in a repeating list. (Primary Level Item) 
+
+Markup:
+<article class="font_0 font_copy br-b_1 br_dotted br_secondary-2 p-x_2 p-t_3 p-b_4 flex">
+   <aside class="flex_shrink"><img src="https://picsum.photos/100" alt=""></aside>
+   <section class="flex_auto p-l_4">
+   <header data-attr="article" class="c_primary font_2 font_bold font_display">
+     Long Work Hours Linked to High Blood Pressure
+   </header>
+   <div data-attr="article-sample">Working more than 40 hours a week may increase risk of high blood pressure, finds study of white-collar workers.</div><div data-attr="metadata" class="align-middle br-t_1 br_shade-5 br_solid flex flex_inline font_n2 font_ui m-t_2 p-t_1 w_auto">
+      <time datetime="1963-11-23" data-attr="article-published-date" class="c_accent-1 font_bold flex_shrink">Nov 23, 1963</time><ul data-attr="authors" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
+         <li class="flex_shrink p-x_2" data-attr="author">
+         <a class="c_primary-2 font_bold link">Heidi D. Nelson, MD, MPH</a></li>
+         <li class="flex_shrink p-x_2" data-attr="article-authors"><a class="c_primary-2 font_bold link">Amy Cantor, MD, MPH</a></li>
+      </ul>
+      <ul data-attr="taxonomy" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
+         <li data-attr="topic " class="flex_shrink p-x_1"><a class="link c_shade-1">AFIB</a></li>
+         <li data-attr="topic" class="flex_shrink p-x_1"><a class="link c_shade-1">Endocarditis</a></li>
+         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">Living With</a></li>
+         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">New Science</a></li>
+      </ul>
+   </div>
+   </section>
+</article>
+
+Weight: 0
+
+Styleguide CardioSmart.News.Item
+
+*/
+/*
+News Item No Byline (1.01.01-E)
+
+A short synopsis of a news article that is used in a repeating list. (Primary Level Item) 
+
+Markup:
+<article class="font_0 font_copy br-b_1 br_dotted br_secondary-2 p-x_2 p-t_3 p-b_4 flex">
+   <aside class="flex_shrink"><img src="https://picsum.photos/100" alt=""></aside>
+   <section class="flex_auto p-l_4">
+   <header data-attr="article" class="c_primary font_2 font_bold font_display">
+     More Research Needed to Achieve Health Equity in Preventive Care
+   </header>
+   <div data-attr="article-sample">Experts identify gaps in knowledge about how to put proven services into practice.</div><div data-attr="metadata" class="align-middle br-t_1 br_shade-5 br_solid flex flex_inline font_n2 font_ui m-t_2 p-t_1 w_auto">
+      <time datetime="1963-11-23" data-attr="article-published-date" class="c_accent-1 font_bold flex_shrink">Nov 23, 1963</time><ul data-attr="authors" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
+         <li class="flex_shrink p-x_2" data-attr="author">
+            <a class="c_primary-2 font_bold link">CardioSmart Editorial</a>
+         </li>
+      </ul>
+      <ul data-attr="taxonomy" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
+         <li data-attr="topic " class="flex_shrink p-x_1"><a class="link c_shade-1">AFIB</a></li>
+         <li data-attr="topic" class="flex_shrink p-x_1"><a class="link c_shade-1">Endocarditis</a></li>
+         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">Living With</a></li>
+         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">New Science</a></li>
+      </ul>
+   </div>
+   </section>
+</article>
+
+Weight: 0
+
+Styleguide CardioSmart.News.Item No Byline
+
+*/
+/*
+News Featured (1.01.01-F)
+
+A news Item that is featured in a sidebar becuase it is sponsored, partnererd, or featured as a static item. (Primary Level Item)
+
+Markup:
+<div>News Featured (Primary Item)</div>
+
+Weight: 0
+
+Styleguide CardioSmart.News.Featured
+
+*/
+/*
+Article Content (1.01.01.01-A)
+
+Content Item of a news article. The Content of the article.  Rich text area allowing for all standard Word Like typography definitions. 
+ (Primary Level Item)
+
+Markup:
+<div>Content Item of a news article</div>
+
+Weight: 0
+
+Styleguide CardioSmart.Article.Content
+*/
+/*
+Author & Article Meta Data.(1.01.01.01-B)
+
+information about the article, author and taxonimy. Meta Data of an article may include: Author, Photo/Avatar of Author, Date Published, Tags & Topics of the Article, And last edited. (Secondary Level Item)
+
+Markup:
+<div>Meta Data of a news article</div>
+
+Weight: 0
+
+Styleguide CardioSmart.Article.Author 
+*/
+/*
+Share Content (1.01.01.01-C)
+
+Widget to share to a social media. Shared Content clips url and pushes it to common platforms like facebook, twitter, instagram, etc.
+ (Third Level)
+
+
+Markup:
+<div<ul class="flex m_0 social-bar ul_none">
+				<li class="flex_shrink m-r_1">
+					<a href="https://twitter.com/accintouch" target="_blank" class="bg_twitter block br-bl_radius br-tl_radius c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0 twitter"><i class="fab fa-twitter-square"></i></a>
+				</li>
+				<li class="flex_shrink m-r_1">
+					<a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook bg_facebook  c_shade-5 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-facebook-square"></i></a>
+				</li>
+				<li class="flex_shrink m-r_1">
+					<a href="https://www.linkedin.com/company/american-college-of-cardiology/" target="_blank" class="linkedin bg_linkedin  block  c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-linkedin"></i></a>
+				</li>
+				<li class="flex_shrink m-r_1">
+					<a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube bg_youtube  c_shade-5  block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-youtube"></i></a>
+				</li>
+				<li class="flex_shrink m-r_1">
+					<a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="google-play bg_google-play   c_shade-5 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-google-play"></i></a>
+				</li>
+				<li class="flex_shrink m-r_1">
+					<a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store bg_apple-store block br-br_radius br-tr_radius c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-apple"></i></a>
+				</li>
+         </ul>
+         </div>
+
+Weight: 2000
+
+Styleguide CardioSmart.Article.Share
+*/
+/*
+Page Title (1.01-Z)
+
+Dynamical Driven from the Meta Data, and should also populate the meta Tag Title in the header of the html
+ (Emphasis Level)
+
+
+Markup:
+<div>Title and meta data of a page</div>
+
+Weight: -1
+
+Styleguide CardioSmart.Page.Title
+*/
+/*
+
+Collapsed Content Section (1.01-b)
+
+Easy to edit content wells wrapped in a collapser.  These content area should support all rich text needs and hyperlinks (Primary Level Content)
+
+<section>header and collapser with rich content insite</section>
+
+Weight: 10
+
+Styleguide CardioSmart.Page.Collapsed Content
+
+*/
+/*
+Page Intro Content
+
+Content that is the teaser or leading concept of the page.  This is an (Emphasis Level Item)
+
+Markup:
+<div>Page Intro(Emphasis Item)</div>
+
+Weight: 0
+
+Styleguide CardioSmart.Page.Intro
+
+*/
+/*
+Hub, Concept, or Category Link
+
+Main pages have concepts or categories which lead to a deeper dive of content.  (Emphasis Level Item)
+
+Markup:
+<div>Hub Link (Emphasis Level Item)</div>
+
+Weight: 0
+
+Styleguide CardioSmart.Page.Category Links
+
+*/
+/*
+Main Nav
+
+The Desktop version of the main navigation
+
+Markup:
+<div class="top-bar p_0 font_1 font_slab">
+  <div class="top-bar-left">
+    <ul class="bg_primary dropdown flex menu" data-dropdown-menu="" role="menubar" data-n="ieisee-n">
+      <li class="br-t_3 br_highlight br_solid  h:br_accent has-submenu is-dropdown-submenu-parent opens-right flex_auto" role="menuitem" aria-haspopup="true" aria-label="Topics &amp; Conditions" data-is-click="false">
+        <a href="#" class="bg_primary c_white h:bg_primary-n2">Topics &amp; Conditions</a>
+        <div  class="block:md font_0:lg font_n1 m-b_4 ul_none submenu menu vertical is-dropdown-submenu first-sub" data-submenu="" role="menubar" style="">
+        <ul class="">
+            <li class="p-l_4 text-indent_n1 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">EHAC</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Atrial Fibrillation</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Heart Failure</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Diabetes and Your Heart</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">High Blood Pressure</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">High Cholesterol</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Women and Heart Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Cancer Treatment and Your Heart (Cardio-oncology)</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Congenital Heart Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Healthy Living (Primary Prevention)</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">CAD</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Heart Attack</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Stroke</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Metabolic Syndrome</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Sudden Cardiac Arrest</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Peripheral Artery Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Heart Valve Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Aortic Stenosis</a></li></ul>
+             <ul class="">
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Mitral Regurgitation</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Geriatric Cardiology</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Bradycardia</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Angina</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Aortic Aneurysm</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Supraventricular Tachycardia</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Endocarditis</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Very High Triglycerides</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Renal Artery Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Subclavian Artery Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Varicose Veins</a></li>
+        </ul>
+        </div>   
+      </li>
+      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Decisions</a></li>
+      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Manage Your Health</a></li>
+      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Healthy Living</a></li>
+      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Caregivers</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right ">
+    <ul class="menu bg_accent">
+      <li class=" br-t_3 br_highlight br_solid h:br_accent"><a class="c_black h:bg_accent-n2 h:c_white ">For Clinicians</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+
+Weight: -1
+
+Styleguide CardioSmart.Main Nav
+
+*/
+/*
+CardioSmart Footer
+
+The Footer of CarddioSmart 
 
 Markup:
 <div id="footer-wrap" class="max-w_5">
-<!-- ********************************** breadcrumbs ********************************** -->
-<div id="breadcrumbs" class="bg_acc breadcrumbs-container c_white font_0 font_ui p-x_4 p_3">
-	<b class="breadcrumbs-title">YOU ARE HERE: </b>
-	Home
-</div>
+    <!-- ********************************** breadcrumbs ********************************** -->
+    <div id="breadcrumbs" class="bg_secondary breadcrumbs-container c_white font_0 font_ui p-x_4 p_3"><b class="breadcrumbs-title">YOU ARE HERE: </b>Home</div>
 <!-- This is the inner footer that we cache -->
-<div id="footer" role="contentinfo" class="flex bg_shade-n3 flex_column flex_inline flex_wrap flex_row:md p-x_3 p-y_4 p-y_0:lg w_100">
-	<div class="flex_auto p-x_3 p-y_4:lg w-grid_3:lg w-grid_6:md font_ui">
-		<h2 class="font_0 font_1:lg font_slab m-b_0:md m-b_2">
-			<a href="//www.acc.org/guidelines" target="_parent" title="Guidelines" class="c_white h:c_primary-3">Guidelines</a>
-		</h2>
-		<h2 class="font_0 font_1:lg font_slab m-b_0:md m-b_2  m-t_4:md">
-			<a class="c_white h:c_primary-3" href="//www.acc.org/jacc-journals">JACC Journals on ACC.org</a>
-		</h2>
-		<ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none">
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="http://www.acc.org/jacc-journals?w_nav=FN#journal=Journal of the American College of Cardiology">JACC</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="http://www.acc.org/jacc-journals?w_nav=FN#journal=JACC: Basic to Translational Science">JACC: Basic to Translational Science</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="http://www.onlinejacc.org/CardioOncology" target="_blank">JACC: CardioOncology</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/jacc-journals#journal=JACC: Cardiovascular Imaging" target="_parent" title="JACC: Cardiovascular Imaging">JACC: Cardiovascular Imaging
-				</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/jacc-journals#journal=JACC: Cardiovascular Interventions" target="_parent" title="JACC: Cardiovascular Interventions">JACC: Cardiovascular Interventions
-				</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="https://casereports.onlinejacc.org/" target="_blank">JACC: Case Reports</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="http://www.acc.org/jacc-journals?w_nav=FN#journal=JACC: Clinical Electrophysiology">JACC: Clinical Electrophysiology</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/jacc-journals#journal=JACC: Heart Failure" target="_parent" title="JACC Heart Failure">JACC Heart Failure</a>
-			</li>
-		</ul>
-		<h2 class="font_0 font_1:lg font_slab m-b_0:md m-b_2 m-t_4:md">
-			<a class="c_white h:c_primary-3" href="//www.acc.org/membership" target="_parent" title="Membership ">Membership
-			</a>
-		</h2>
-		<ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none">
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/membership/about-membership">About Membership</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/membership/become-a-member">Become a Member</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/membership/renew-your-membership">Renew Your Membership</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/membership/member-benefits-and-resources">Member Benefits and Resources</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/membership/sections-and-councils">Member Sections</a>
-			</li>
-			<li class="reverse-indent"><a class="c_white h:c_primary-3" href="//www.acc.org/membership/chapters">Chapters</a></li>
-			<li class="reverse-indent"><a class="c_white h:c_primary-3" href="//www.acc.org">Member Directory</a></li>
-		</ul>
-		<h2 class="font_0 font_1:lg font_slab m-b_0:md m-b_2 m-t_4:md">
-			<a class="c_white h:c_primary-3" href="//www.acc.org/about-acc" title="About ACC">About ACC</a>
-		</h2>
-		<ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none">
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/about-acc/our-strategic-direction">Our Strategic Direction</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/about-acc/our-history" target="_parent" title="Our History ">Our History
-				</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/about-acc/our-bylaws-and-code-of-ethics">Our Bylaws and Code of Ethics</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/about-acc/leadership">Leadership and Governance</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/about-acc/industry-relations">Industry Relations</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/about-acc/support-the-acc">Support the ACC</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/about-acc/jobs-at-the-acc">Jobs at the ACC</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/about-acc/press-releases">Press Releases</a>
-			</li>
-			<li class="reverse-indent"><a class="c_white h:c_primary-3" href="//www.acc.org/about-acc/social-media">Social Media</a></li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/about-acc/book-our-conference-center">Book Our Conference Center</a>
-			</li>
-		</ul>
-	</div>
-	<div class="flex_auto p-x_3 p-y_4:lg w-grid_3:lg w-grid_6:md font_ui">
-		<h2 class="font_0 font_1:lg font_slab m-b_0:md m-b_2">
-			<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics">Clinical Topics</a>
-		</h2>
-		<ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none">
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/acute-coronary-syndromes">Acute Coronary Syndromes</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/anticoagulation-management">Anticoagulation Management</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/arrhythmias-and-clinical-ep">Arrhythmias and Clinical EP</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/cardiac-surgery">Cardiac Surgery</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/cardio-oncology">Cardio-Oncology</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/stable-ischemic-heart-disease/chronic-angina">Chronic Angina</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/congenital-heart-disease-pediatric-cardiology">Congenital Heart Disease and Pediatric Cardiology</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/diabetes-and-cardiometabolic-disease">Diabetes and Cardiometabolic Disease</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/dyslipidemia">Dyslipidemia</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/geriatric-cardiology">Geriatric Cardiology</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/heart-failure-and-cardiomyopathies">Heart Failure and Cardiomyopathies</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/dyslipidemia/hypertriglyceridemia">Hypertriglyceridemia</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/invasive-cardiovascular-angiography-and-intervention">Invasive Cardiovascular Angiography and Intervention</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/noninvasive-imaging">Noninvasive Imaging</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/pericardial-disease">Pericardial Disease</a>
-			</li>
-			<li class="reverse-indent"><a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/prevention">Prevention</a></li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/pulmonary-hypertension-and-venous-thromboembolism">Pulmonary Hypertension and Venous Thromboembolism</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/sports-and-exercise-cardiology">Sports and Exercise Cardiology</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/stable-ischemic-heart-disease">Stable Ischemic Heart Disease</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/valvular-heart-disease">Valvular Heart Disease</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/clinical-topics/vascular-medicine">Vascular Medicine</a>
-			</li>
-		</ul>
-	</div>
-	<div class="flex_auto p-x_3 p-y_4:lg w-grid_3:lg w-grid_6:md font_ui">
-		<h2 class="font_0 font_1:lg font_slab m-b_0:md m-b_2">
-			<a class="c_white h:c_primary-3" href="//www.acc.org/latest-in-cardiology">Latest in Cardiology</a>
-		</h2>
-		<ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none">
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/latest-in-cardiology#theme=Clinical Updates and Discoveries">Clinical Updates &amp; Discoveries</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/latest-in-cardiology#theme=Advocacy and Policy">Advocacy &amp; Policy</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/latest-in-cardiology#theme=Perspectives and Analysis">Perspectives &amp; Analysis</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/latest-in-cardiology#theme=Meeting Coverage">Meeting Coverage</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/membership/member-benefits-and-resources/acc-member-publications">ACC Member Publications</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/latest-in-cardiology/features/podcasts">ACC Podcasts</a>
-			</li>
-		</ul>
-		<h2 class="font_0 font_1:lg font_slab m-b_0:md m-b_2 m-t_4:md">
-			<a class="c_white h:c_primary-3" href="//www.acc.org/education-and-meetings">Education and Meetings</a>
-		</h2>
-		<ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none">
-			<li class="reverse-indent"><a class="c_white h:c_primary-3" href="//www.acc.org">Online Learning Catalog</a></li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/education-and-meetings/maintenance-of-certification-information-hub">Understanding MOC</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/education-and-meetings/products-and-resources">Products and Resources</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/education-and-meetings/image-and-slide-gallery">Image and Slide Gallery</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/education-and-meetings/meetings">Meetings</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="https://accscientificsession.acc.org/" target="_blank">Annual Scientific Session</a>
-			</li>
-		</ul>
-		<h2 class="font_0 font_1:lg font_slab m-b_0:md m-b_2 m-t_4:md">
-			<a class="c_white h:c_primary-3" href="//www.acc.org/tools-and-practice-support">Tools and Practice Support</a>
-		</h2>
-		<ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none">
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="http://cvquality.acc.org/">Quality Improvement for Institutions</a>
-			</li>
-			<li class="reverse-indent"><a class="c_white h:c_primary-3 block" href="https://www.ncdr.com/webncdr/" target="_blank">NCDR <i class="c_white fa-external-link-square fal h:c_white m-l_3 p-r_3 p-t_2" style="text-indent: 0;"></i></a></li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="https://www.cardiosmart.org/" target="_blank">CardioSmart  <i class="c_white fa-external-link-square fal h:c_white m-l_3 p-r_3 p-t_2" style="text-indent: 0;"></i></a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="https://cvquality.acc.org/Accreditation" target="_blank">Accreditation Services  <i class="c_white fa-external-link-square fal h:c_white m-l_3 p-r_3 p-t_2" style="text-indent: 0;"></i></a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/tools-and-practice-support/clinical-toolkits">Clinical Toolkits</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/tools-and-practice-support/mobile-resources">Mobile Resources</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/tools-and-practice-support/advocacy-at-the-acc" target="_parent">Advocacy at the ACC</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3 " href="http://www.healthecareers.com/acc" target="_blank">Cardiology Careers <i class="c_white fa-external-link-square fal h:c_white m-l_3 p-r_3 p-t_2" style="text-indent: 0;"></i></a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/tools-and-practice-support/practice-solutions">Practice Solutions</a>
-			</li>
-			<li class="reverse-indent">
-				<a class="c_white h:c_primary-3" href="//www.acc.org/tools-and-practice-support/quality-programs">Quality Programs</a>
-			</li>
-		</ul>
-	</div>
-	<!-- column 4 -->
-	<div class="flex_auto p-x_3 p-y_4:lg w-grid_3:lg w-grid_6:md relative">
-		<section class="acc-websites m-y_3">
-			<nav class="clearfix block font_bold font_ui w_100">
-				<ul class="font_1 lh_4 ul_none">
-					<li class="">
-						<a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.acc.org">
-							<span class="inline-block flex_auto p-l_3 self_center">Acc</span>
-							<i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square "></i>
-						</a>
-					</li>
-					<li class="">
-						<a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="https://cvquality.acc.org/Accreditation?">
-							<span class="inline-block flex_auto p-l_3 self_center">Accreditation Services</span>
-							<i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square "></i>
-						</a>
-					</li>
-					<li class="">
-						<a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.ncdr.com">
-							<span class="inline-block flex_auto p-l_3 self_center">NCDR</span>
-							<i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square "></i>
-						</a>
-					</li>
-					<li class="">
-						<a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.cardiosmart.org">
-							<span class="inline-block flex_auto p-l_3 self_center">CardioSmart</span>
-							<i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square "></i>
-						</a>
-					</li>
-					<li class="">
-						<a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.onlinejacc.org/">
-							<span class="inline-block flex_auto p-l_3 self_center">JACC</span>
-							<i class="flex_shrink self_center fas p-r_3 c_white fa-external-link-square "></i>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</section>
-		<section class="address c_white">
-			<address>
-				<!-- http://microformats.org/wiki/hcard -->
-				<h4 class="m-b_0 font_bold font_copy font_normal font_1 m-t_4:md">Heart House</h4>
-				<div class="font_ui font_0">
-					<ul class="ul_none  lh_2">
-						<li class="m-b_1 m-b_3:md font_normal">
-							<span class="street-address">2400 N. St. NW</span>
-						</li>
-						<li class="m-b_1 m-b_3:md font_normal">
-							<span class="locality ">Washington</span>,
-							<span class="city-name ">
-								<abbr title="District of Colombia">DC</abbr>
-							</span>
-							<span class="postal-code">20037</span>
-						</li>
-						<li class="m-b_1 m-b_3:md font_normal">
-							<a href="mailto:resource@acc.org" class="email c_white text_underline  h:c_white ">
-								<strong class="p-r_2 inline block:md inline:lg">Email:</strong>
-								<span class="inline block:md inline:lg">resource@acc.org</span></a>
-						</li>
-					</ul>
-					<ul class="ul_none lh_2">
-						<li class="m-b_1 m-b_3:md font_normal">
-							<a tel="+12023756000" href="tel:+12023756000" class="tel c_white h:c_white h:underline">
-								<strong class="p-r_2 block:md inline:lg">Phone:</strong><span class=" block:md inline:lg">(202) 375-6000, ext. 5603</span></a>
-						</li>
-						<li class="m-b_1 m-b_3:md font_normal">
-							<a tel="+18002574737" href="tel:+18002534636.5603" class="tel c_white h:c_white h:underline">
-								<strong class="p-r_2 block:md inline:lg">Toll Free:</strong><span class=" block:md inline:lg">(800) 253-4636, ext. 5603</span></a>
-						</li>
-						<li class="m-b_1 m-b_3:md font_normal">
-							<a fax="+12023757000" href="fax:+12023757000" class="fax c_white h:c_white h:underline">
-								<strong class="p-r_2 block:md inline:lg">Fax:</strong>
-								<span class="block:md inline:lg">(202) 375-7000</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</address>
-			<div class="logo_condensed-alt max-w_1 bg_left" style="height: 50px;">
-				<span class="alt">logo_condensed-alt max-w_1</span>
-			</div>
-		</section>
-		<section class="absolute:md b_4 l_0 m-t_4 p-t_0:md p-t_5 r_0 relative social">
-			<ul class="flex social-bar ul_none c_white h:c_white m_0">
-				<li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-twitter-square"></i></a></li>
-				<li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-facebook-square"></i></a></li>
-				<li class="flex_auto m-r_2"><a href="https://www.linkedin.com/company/american-college-of-cardiology/" target="_blank" class="linkedin social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-linkedin"></i></a></li>
-				<li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-youtube"></i></a></li>
-				<li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&hl=en_US" target="_blank" class="google-play social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-google-play"></i></a></li>
-				<li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-apple"></i></a></li>
-			</ul>
-		</section>
-	</div>
+<div id="footer" role="contentinfo" class="flex bg_shade-n3 flex_column flex_inline flex_wrap flex_row:md p-x_3 p-y_4 p-y_0:lg w_100"><div class="flex_auto p-x_3 p-y_4:lg w-grid_4:lg w-grid_6:md font_ui"><h2 class="font_2 font_3:lg font_display p-t_2 m-b_0:md m-b_2 br_none:md"><i class="display_none:md fas fa-minus-square c_white-8 p-r_4"></i><a class="c_highlight h:c_secondary-3" href="">Conditions &amp; Topics</a></h2>
+        <ul class="block:md font_0:lg font_n1 m-b_4 ul_none"><li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Angina</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Aortic Aneurysm</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Atrial Fibrillation</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Bradycardia</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Cancer Treatment and Your Heart</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Congenital Heart Disease</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Coronary Artery Disease</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Diabetes and Your Heart</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Endocarditis</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Heart Attack</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Heart Failure</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Heart Valve Disease</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">High Blood Pressure</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">High Cholesterol</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Metabolic Syndrome</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Older Adults and Heart Disease</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Peripheral Artery Disease</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Renal Artery Disease</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Stroke</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Subclavian Artery Disease</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Sudden Cardiac Arrest</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Supraventricular Tachycardia</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Varicose Veins</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Women and Heart Disease</a></li>
+</ul>
 </div>
-<!-- / footer -->
-<div id="subfooter bg_primary-n1 c_white" class="bg_primary c_white font_n1 p-x_4 p-y_4">
-	<ul class="block footer-bottom-links ul_none">
-		<li class="inline p_2">
-			<a href="//www.acc.org/footer-pages/media-center" class="c_white-6 h:c_white">Media Center</a>
-		</li>
-		<li class="inline p_2">
-			<a href="//www.acc.org/footer-pages/quick-start-guide" class="c_white-6 h:c_white">ACC.org Quick Start Guide</a>
-		</li>
-		<li class="inline p_2">
-			<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/advertising-and-sponsorship-policy">Advertising &amp; Sponsorship Policy</a>
-		</li>
-		<li class="inline p_2">
-			<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/clinical-content-disclaimer">Clinical Content Disclaimer</a>
-		</li>
-		<li class="inline p_2">
-			<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/editorial-board">Editorial Board</a>
-		</li>
-		<li class="inline p_2">
-			<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/privacy-policy">Privacy Policy</a>
-		</li>
-		<li class="inline p_2">
-			<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/registered-user-agreement">Registered User Agreement</a>
-		</li>
-		<li class="inline p_2">
-			<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/terms-and-conditions">Terms of Service</a>
-		</li>
-		<li class="inline p_2">
-			<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/cookie-policy">Cookie Policy</a>
-		</li>
-		<li class="inline p_2">
-			<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/member-hub-terms-of-use">Member Hub Terms of Use</a>
-		</li>
-		<li class="inline p_2">
-			<a class="c_white-6 h:c_white" href="//www.acc.org/sitemap-acc.xml">Site Map</a>
-		</li>
+<!-- column 4 -->
+<div class="flex_auto p-x_3 p-y_4:lg w-grid_2:lg w-grid_6:md font_ui">
+    <h2 class="font_2 font_3:lg font_display p-t_2 m-b_0:md m-b_2 br_none:md br_none:lg br_dotted br_white-5 br-t_1"><i class="display_none:md fas fa-plus-square c_white-8 p-r_4"></i><a class="c_highlight h:c_secondary-3" href="">Decisions</a></h2>
+    <ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none"><li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Shared Decision-Making</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">What Are Decision Aids?</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Benefits of Decision Aids</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">When to Use Decision Aids</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">What to Expect</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Questions to Ask</a></li>
+    </ul>
+    <h2 class="font_2 font_3:lg font_display p-t_2 m-b_0:md m-b_2 br_none:md br_none:lg br_dotted br_white-5 br-t_1"><i class="display_none:md fas fa-plus-square c_white-8 p-r_4"></i><a class="c_highlight h:c_secondary-3" href="">Health Basics</a></h2>
+    <ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none"><li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Preparing for Your Appointment</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Your Responsibilities</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Your Care Team</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">What is a Cardiologist?</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Getting Support</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Understanding Medication Adherence</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">The Research</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Understanding Clinical Trials</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Cardiac Rehab</a></li>
+</ul>
+</div><div class="flex_auto p-x_3 p-y_4:lg w-grid_2:lg w-grid_6:md font_ui"><h2 class="font_2 font_3:lg font_display p-t_2 m-b_0:md m-b_2 br_none:md br_none:lg br_dotted br_white-5 br-t_1"><i class="display_none:md fas fa-plus-square c_white-8 p-r_4"></i><a class="c_highlight h:c_secondary-3" href="">Healthy Living</a></h2>
+        <ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none"><li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">My Plan for Heart Healthier Living</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Healthy Habits Protect Your Heart</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Know Your Numbers</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Eat Better</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Lose Weight</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Move More</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Relax</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Stop Smoking</a></li>
+</ul>
+</div><div class="flex_auto p-x_3 p-y_4:lg w-grid_2:lg w-grid_6:md font_ui"><h2 class="font_2 font_3:lg font_display p-t_2 m-b_0:md m-b_2 br_none:md br_none:lg br_dotted br_white-5 br-t_1"><i class="display_none:md fas fa-plus-square c_white-8 p-r_4"></i><a class="c_highlight h:c_secondary-3" href="">Care Givers</a></h2>
+        <ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none"><li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Care for Yourself</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Managing the Details</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Planning for the Future</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Resources for Caregivers</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Palliative Care</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Hospice Care</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Planning Your Care</a></li>
+</ul>
+<h2 class="font_2 font_3:lg font_display p-t_2 m-b_0:md m-b_2 br_none:md br_none:lg br_dotted br_white-5 br-t_1"><i class="display_none:md fas fa-plus-square c_white-8 p-r_4"></i><a class="c_highlight h:c_secondary-3" href="">Other ACC Offerings</a></h2>
+    <ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none"><li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Care for Yourself</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Early Heart Attack Care (EHAC)</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Find Your Heart a Home</a></li>
+    <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Cardiology Directory</a></li>
+</ul>
+</div></div><div class="p-x_3 p-y_4:lg relative flex flex_column flex_row:md bg_shade-n4 shadow_n1">
+    <section class="address c_white p-y_4 p-x_4 flex_auto w-grid_6:md w-grid_12 m-r_5:md"><div class="bg_left logo_condensed-alt max-w_1" style="height:62px"><span class="alt">logo_condensed-alt max-w_1</span></div><address>
+    <!-- http://microformats.org/wiki/hcard -->
+    <h4 class="m-b_0 font_bold font_copy font_normal font_1 m-t_4:md">Heart House</h4><div class="font_ui font_0">
+            <ul class="ul_none lh_2"><li class="m-b_1 m-b_3:md font_normal"><span class="street-address">2400 N. St. NW</span></li>
+        <li class="m-b_1 m-b_3:md font_normal"><span class="locality">Washington</span>, <span class="city-name"><abbr title="District of Colombia">DC</abbr> </span><span class="postal-code">20037</span></li>
+        <li class="m-b_1 m-b_3:md font_normal"><a href="mailto:resource@acc.org" class="email c_white text_underline h:c_white"><strong class="p-r_2 inline block:md inline:lg">Email:</strong> <span class="inline block:md inline:lg">resource@acc.org</span></a></li>
 	</ul>
-	<!-- /footer-bottom-links -->
-	<p class="c_white-5 font_italic font_n2 legal m-b_2 m-t_3">
-		© 2019 American College of Cardiology Foundation. All rights reserved.
-	</p>
-</div>
+	<ul class="ul_none lh_2"><li class="m-b_1 m-b_3:md font_normal"><a tel="+12023756000" href="tel:+12023756000" class="tel c_white h:c_white h:underline"><strong class="p-r_2 block:md inline:lg">Phone:</strong><span class="block:md inline:lg">(202) 375-6000, ext. 5603</span></a></li>
+        <li class="m-b_1 m-b_3:md font_normal"><a tel="+18002574737" href="tel:+18002534636.5603" class="tel c_white h:c_white h:underline"><strong class="p-r_2 block:md inline:lg">Toll Free:</strong><span class="block:md inline:lg">(800) 253-4636, ext. 5603</span></a></li>
+        <li class="m-b_1 m-b_3:md font_normal"><a fax="+12023757000" href="fax:+12023757000" class="fax c_white h:c_white h:underline"><strong class="p-r_2 block:md inline:lg">Fax:</strong> <span class="block:md inline:lg">(202) 375-7000</span></a></li>
+    </ul>
+</div></address><section class="b_4 l_0 m-t_5 p-t_0:md p-t_5 r_0 relative social">
+        <ul class="flex social-bar ul_none c_white h:c_white m_0"><li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-twitter-square"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-facebook-square"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://www.linkedin.com/company/american-college-of-cardiology/" target="_blank" class="linkedin social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-linkedin"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-youtube"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="google-play social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-google-play"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-apple"></i></a></li>
+    </ul>
+</section></section><section class="acc-websites flex_auto m-l_5:md m-y_5 w-grid_6:md w-grid_12"><h2 class="font_2 c_white font_3:lg font_display m-b_0:md m-b_2 text_center">Transforming Education to Knowledge</h2><nav class="clearfix block font_bold font_ui w_100">
+        <ul class="font_1 lh_4 ul_none"><li class="text-indent_n1 p-l_4"><a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.acc.org"><span class="inline-block flex_auto p-l_3 self_center">Acc</span> <i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square"></i></a></li>
+        <li class="text-indent_n1 p-l_4"><a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="https://cvquality.acc.org/Accreditation?"><span class="inline-block flex_auto p-l_3 self_center">Accreditation Services</span> <i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square"></i></a></li>
+        <li class="text-indent_n1 p-l_4"><a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.ncdr.com"><span class="inline-block flex_auto p-l_3 self_center">NCDR</span> <i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square"></i></a></li>
+        <li class="text-indent_n1 p-l_4"><a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.cardiosmart.org"><span class="inline-block flex_auto p-l_3 self_center">CVQuality</span> <i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square"></i></a></li>
+        <li class="text-indent_n1 p-l_4"><a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.onlinejacc.org/"><span class="inline-block flex_auto p-l_3 self_center">JACC</span> <i class="flex_shrink self_center fas p-r_3 c_white fa-external-link-square"></i></a></li>
+    </ul>
+</nav>
+    </section></div>
+<!-- / footer -->
+<div id="subfooter" class="bg_secondary-n3 font_n1 p-x_4 p-y_4">
+        <ul class="block footer-bottom-links ul_none"><li class="inline p_2"><a href="//www.acc.org/footer-pages/media-center" class="c_white-6 h:c_white">Media Center</a></li>
+        <li class="inline p_2"><a href="//www.acc.org/footer-pages/quick-start-guide" class="c_white-6 h:c_white">ACC.org Quick Start Guide</a></li>
+        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/advertising-and-sponsorship-policy">Advertising &amp; Sponsorship Policy</a></li>
+        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/clinical-content-disclaimer">Clinical Content Disclaimer</a></li>
+        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/editorial-board">Editorial Board</a></li>
+        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/privacy-policy">Privacy Policy</a></li>
+        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/registered-user-agreement">Registered User Agreement</a></li>
+        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/terms-and-conditions">Terms of Service</a></li>
+        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/cookie-policy">Cookie Policy</a></li>
+        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/member-hub-terms-of-use">Member Hub Terms of Use</a></li>
+        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/sitemap-acc.xml">Site Map</a></li>
+    </ul>
+    <!-- /footer-bottom-links -->
+    <p class="c_white-5 font_italic font_n2 legal m-b_2 m-t_3">© 2019 American College of Cardiology Foundation. All rights reserved.</p></div>
 <!-- /subfooter -->
 </div>
 
 Weight: -1
 
-Styleguide Recipes ACCFooter
+Styleguide CardioSmart.Footer
 
 */
 @media only screen and (min-width: 640px) {
-  .reverse-indent {
+  .text-indent_n1 p-l_4 {
     display: inline-block;
     width: 100%;
     margin-left: 1em;
@@ -15512,7 +15661,7 @@ Styleguide Recipes ACCFooter
     text-indent: -1em;
   }
 
-  .reverse-indent:after {
+  .text-indent_n1 p-l_4:after {
     display: table;
     clear: both;
     content: "";

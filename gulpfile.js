@@ -643,7 +643,7 @@ gulp.task("construct", function() {
 		.pipe(
 			header(
 				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.acc.scss",
+					PATHS.SCSS + "/recipes/__recipes.cardiosmart.scss",
 					"utf8"
 				),
 				{
@@ -665,7 +665,7 @@ gulp.task("construct", function() {
 		.pipe(
 			header(
 				fs.readFileSync(
-					PATHS.SCSS + "/components/__components.acc.scss",
+					PATHS.SCSS + "/components/__components.cardiosmart.scss",
 					"utf8"
 				),
 				{

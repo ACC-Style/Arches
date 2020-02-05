@@ -7741,7 +7741,8 @@ Markup:
 .message-holder div {
   padding: 4px;
   padding: 0.25rem;
-  border-top-width: 5px;
+  border-top-width: 4px;
+  border-top-width: 0.25rem;
   border-top-style: solid;
 }
 
@@ -8374,7 +8375,7 @@ News Hero (1.01.01-D)
 Large Featured Rotater of News Tieles and short synopsis (Empashized Level Item)
 
 Markup:
-<div class="font_1 bg_shade-5" style="background-image:url('https://i.picsum.photos/id/789/700/300.jpg')"><h1 class="font_6">News Hero (Empashized Level Item)</h1></div>
+<div class="bg_cover bg_shade-5 font_1 p_4" style="background-image:url('https://i.picsum.photos/id/789/700/300.jpg');height: 300px;"><h1 class="c_white font_4">News Hero (Empashized Level Item)</h1></div>
 
 Weight: 0
 
@@ -8573,76 +8574,69 @@ Styleguide CardioSmart.Page.Category Links
 
 */
 /*
-CardioSmart Header
+Main Nav
 
-The Header of CarddioSmart 
+The Desktop version of the main navigation
 
 Markup:
-<div id="header-wrap" class="">
-<div id="header" role="contentinfo" class="">
-    <section id="branding" class="flex flex_row w-100">
-        <div class="flex_auto logo_primary"><span class="alt">CardioSmart</span></div>
-        <div class="flex_auto"><input type="text"><i class="fas fa-search"></i></div>
-    </section>
-<div class="top-bar">
+<div class="top-bar p_0 font_1 font_slab">
   <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="has-submenu">
-        <a href="#">Topics &amp; Conditions</a>
-        <ul class="block:md font_0:lg font_n1 m-b_4 ul_none submenu menu vertical"  data-submenu>
-            <li class=" p-l_4 text-indent_n1"><a class="c_black h:c_secondary-3 h:underline">EHAC</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Atrial Fibrillation</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Heart Failure</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Diabetes and Your Heart</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">High Blood Pressure</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">High Cholesterol</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Women and Heart Disease</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Cancer Treatment and Your Heart (Cardio-oncology)</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Congenital Heart Disease</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Healthy Living (Primary Prevention)</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">CAD</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Heart Attack</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Stroke</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Metabolic Syndrome</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Sudden Cardiac Arrest</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Peripheral Artery Disease</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Heart Valve Disease</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Aortic Stenosis</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Mitral Regurgitation</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Geriatric Cardiology</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Bradycardia</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Angina</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Aortic Aneurysm</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Supraventricular Tachycardia</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Endocarditis</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Very High Triglycerides</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Renal Artery Disease</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Subclavian Artery Disease</a></li>
-            <li class="text-indent_n1 p-l_4"><a class="c_black h:c_secondary-3 h:underline">Varicose Veins</a></li>
+    <ul class="bg_primary dropdown flex menu" data-dropdown-menu="" role="menubar" data-n="ieisee-n">
+      <li class="br-t_3 br_highlight br_solid  h:br_accent has-submenu is-dropdown-submenu-parent opens-right flex_auto" role="menuitem" aria-haspopup="true" aria-label="Topics &amp; Conditions" data-is-click="false">
+        <a href="#" class="bg_primary c_white h:bg_primary-n2">Topics &amp; Conditions</a>
+        <div  class="block:md font_0:lg font_n1 m-b_4 ul_none submenu menu vertical is-dropdown-submenu first-sub" data-submenu="" role="menubar" style="">
+        <ul class="">
+            <li class="p-l_4 text-indent_n1 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">EHAC</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Atrial Fibrillation</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Heart Failure</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Diabetes and Your Heart</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">High Blood Pressure</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">High Cholesterol</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Women and Heart Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Cancer Treatment and Your Heart (Cardio-oncology)</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Congenital Heart Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Healthy Living (Primary Prevention)</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">CAD</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Heart Attack</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Stroke</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Metabolic Syndrome</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Sudden Cardiac Arrest</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Peripheral Artery Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Heart Valve Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Aortic Stenosis</a></li></ul>
+             <ul class="">
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Mitral Regurgitation</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Geriatric Cardiology</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Bradycardia</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Angina</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Aortic Aneurysm</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Supraventricular Tachycardia</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Endocarditis</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Very High Triglycerides</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Renal Artery Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Subclavian Artery Disease</a></li>
+            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Varicose Veins</a></li>
         </ul>
+        </div>   
       </li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li>
+      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Decisions</a></li>
+      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Manage Your Health</a></li>
+      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Healthy Living</a></li>
+      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Caregivers</a></li>
     </ul>
   </div>
-  <div class="top-bar-right">
-    <ul class="menu">
-      <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
+  <div class="top-bar-right ">
+    <ul class="menu bg_accent">
+      <li class=" br-t_3 br_highlight br_solid h:br_accent"><a class="c_black h:bg_accent-n2 h:c_white ">For Clinicians</a></li>
     </ul>
   </div>
 </div>
 </div>
-<!-- ********************************** breadcrumbs ********************************** -->
-<div id="breadcrumbs" class="">
-	<b class="breadcrumbs-title">YOU ARE HERE: </b>
-	Home
-</div>
-</div>
+
 
 Weight: -1
 
-Styleguide CardioSmart.Header
+Styleguide CardioSmart.Main Nav
 
 */
 /*
