@@ -5,7 +5,7 @@ Scrollbar Mini
 Give a mini scroll bar to a content area. 
 
 Markup:
-<div class="card shadow_2 cell small-6 large-4 max-w_3" >
+<div class="card shadow_2 cell small-6 large-4 max-w_30" >
     <div class=" font_slab border-top-left-square c_white font_3 p_4 texture_dust card-divider bg_primary card-header">
     This is a header
     </div>
@@ -30,14 +30,14 @@ Styleguide InteractiveExtras.Scrollbar
 }
 /* Track */
 .scrollbar-mini::-webkit-scrollbar-track {
-	box-shadow: make-shadow(2, "inset", #000, 0.2);
+	box-shadow: make-shadow(2, 'inset', #000, 0.2);
 	background-color: rgba(get-themecolor(primary, -3), 0.1);
 }
 /* Handle */
 .scrollbar-mini::-webkit-scrollbar-thumb {
 	border-radius: get-css-size(border-radius, round);
 	background: get-themecolor(primary, -1);
-	box-shadow: make-shadow(2, "inset", #000, 0.2);
+	box-shadow: make-shadow(2, 'inset', #000, 0.2);
 }
 .scrollbar-mini::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(get-themecolor(primary, -1), 0.1);

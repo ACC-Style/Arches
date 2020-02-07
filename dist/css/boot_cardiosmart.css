@@ -618,7 +618,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.5rem;
   font-family: "Maven Pro","Muli","Open Sans","system",sans-serif;
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 h1, .h1 {
@@ -664,7 +664,7 @@ h6, .h6 {
 
 .display-1,.display-2 {
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 .display-2 {
@@ -679,7 +679,7 @@ h6, .h6 {
 
 .display-3,.display-4 {
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 .display-4 {
@@ -6745,7 +6745,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.5rem;
   font-family: "Maven Pro","Muli","Open Sans","system",sans-serif;
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 h1, .h1 {
@@ -6791,7 +6791,7 @@ h6, .h6 {
 
 .display-1,.display-2 {
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 .display-2 {
@@ -6806,7 +6806,7 @@ h6, .h6 {
 
 .display-3,.display-4 {
   font-weight: 300;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 .display-4 {
@@ -12267,7 +12267,7 @@ Bootstrap
 
 <div class="p_4 bg_white">
     <div class="jumbotron relative overflow_hidden br_round blue-grey">
-        <div class="container p-x_4 max-w_4 w_auto m_auto">
+        <div class="container p-x_4 max-w_50 w_auto m_auto">
                 <h1 class="c_black font_10:lg font_6 font_8:md">CVQuality's Bootstrap</h1>
                 <p class="font_1 font_1:md font_3:lg">Bootstrap 4 is a complete UI framework with many features. Please familiarize yourself with bootstrap framework as you build. It will give you access to grid, forms and other UI items.</p>				
 				<div class="flex">
@@ -15036,7 +15036,7 @@ Markup:
 	</nav>
 	</div>
 
-Styleguide Recipes ACCBranded Nav
+Styleguide Recipes CardioSmart Nav
 
 */
 /*
@@ -15260,31 +15260,62 @@ Styleguide CardioSmart.News.Hero
 
 */
 /*
-News Item (1.01.01-E)
+News List Item (1.01.01-E)
 
 A short synopsis of a news article that is used in a repeating list. (Primary Level Item) 
 
 Markup:
-<article class="font_0 font_copy br-b_1 br_dotted br_secondary-2 p-x_2 p-t_3 p-b_4 flex">
-   <aside class="flex_shrink"><img src="https://picsum.photos/100" alt=""></aside>
-   <section class="flex_auto p-l_4">
-   <header data-attr="article" class="c_primary font_2 font_bold font_display">
-     Long Work Hours Linked to High Blood Pressure
-   </header>
-   <div data-attr="article-sample">Working more than 40 hours a week may increase risk of high blood pressure, finds study of white-collar workers.</div><div data-attr="metadata" class="align-middle br-t_1 br_shade-5 br_solid flex flex_inline font_n2 font_ui m-t_2 p-t_1 w_auto">
-      <time datetime="1963-11-23" data-attr="article-published-date" class="c_accent-1 font_bold flex_shrink">Nov 23, 1963</time><ul data-attr="authors" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
-         <li class="flex_shrink p-x_2" data-attr="author">
-         <a class="c_primary-2 font_bold link">Heidi D. Nelson, MD, MPH</a></li>
-         <li class="flex_shrink p-x_2" data-attr="article-authors"><a class="c_primary-2 font_bold link">Amy Cantor, MD, MPH</a></li>
-      </ul>
-      <ul data-attr="taxonomy" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
-         <li data-attr="topic " class="flex_shrink p-x_1"><a class="link c_shade-1">AFIB</a></li>
-         <li data-attr="topic" class="flex_shrink p-x_1"><a class="link c_shade-1">Endocarditis</a></li>
-         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">Living With</a></li>
-         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">New Science</a></li>
-      </ul>
-   </div>
-   </section>
+<article class="font_0 font_copy p_3 h:bg_secondary-5 m-t_2 m-b_3 flex shadow_bevel-light br_solid br_shade-3 br_1">
+	<aside class="flex_shrink">
+		<img class="" src="https://picsum.photos/100" alt="" />
+	</aside>
+	<section class="flex_auto p-l_4">
+		<header
+			data-attr="article"
+			class="c_primary font_2 font_bold font_display"
+		>
+			Long Work Hours Linked to High Blood Pressure
+		</header>
+		<div data-attr="article-sample">
+			Working more than 40 hours a week may increase risk of high
+			blood pressure, finds study of white-collar workers.
+		</div>
+		<div
+			data-attr="metadata"
+			class="align-middle br-t_1 br_shade-4 br_solid flex flex_inline font_n1 font_ui m-t_2 p-t_1 w_auto"
+		>
+			<ul
+				data-attr="authors"
+				class="flex_wrap flex flex_row ul_none"
+			>
+				<li class="flex_shrink p-r_2" data-attr="publish-date">
+					<time
+						datetime="1963-11-23"
+						data-attr="article-published-date"
+						class="c_accent-1 font_bold"
+						>Nov 23, 1963</time
+					>
+				</li>
+				<li class="flex_shrink p-x_2" data-attr="author">
+					<a class="c_primary-2 font_bold link"
+						>CardioSmart News</a
+					>
+				</li>
+				<li data-attr="topic " class="flex_shrink p-x_2">
+					<a class="link c_shade-n2">AFIB</a>
+				</li>
+				<li data-attr="topic" class="flex_shrink p-x_2">
+					<a class="link c_shade-n2">Endocarditis</a>
+				</li>
+				<li data-attr="tag" class="flex_shrink p-x_2">
+					<a class="link c_shade-n2">Living With</a>
+				</li>
+				<li data-attr="tag" class="flex_shrink p-x_2">
+					<a class="link c_shade-n2">New Science</a>
+				</li>
+			</ul>
+		</div>
+	</section>
 </article>
 
 Weight: 0
@@ -15293,71 +15324,263 @@ Styleguide CardioSmart.News.Item
 
 */
 /*
-News Item No Byline (1.01.01-E)
-
-A short synopsis of a news article that is used in a repeating list. (Primary Level Item) 
+Author Header (1.01.01.01-A)
 
 Markup:
-<article class="font_0 font_copy br-b_1 br_dotted br_secondary-2 p-x_2 p-t_3 p-b_4 flex">
-   <aside class="flex_shrink"><img src="https://picsum.photos/100" alt=""></aside>
-   <section class="flex_auto p-l_4">
-   <header data-attr="article" class="c_primary font_2 font_bold font_display">
-     More Research Needed to Achieve Health Equity in Preventive Care
-   </header>
-   <div data-attr="article-sample">Experts identify gaps in knowledge about how to put proven services into practice.</div><div data-attr="metadata" class="align-middle br-t_1 br_shade-5 br_solid flex flex_inline font_n2 font_ui m-t_2 p-t_1 w_auto">
-      <time datetime="1963-11-23" data-attr="article-published-date" class="c_accent-1 font_bold flex_shrink">Nov 23, 1963</time><ul data-attr="authors" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
-         <li class="flex_shrink p-x_2" data-attr="author">
-            <a class="c_primary-2 font_bold link">CardioSmart Editorial</a>
-         </li>
-      </ul>
-      <ul data-attr="taxonomy" class="br-l_1 br_shade-2 br_solid flex flex_row m-l_2 p-l_2 ul_none">
-         <li data-attr="topic " class="flex_shrink p-x_1"><a class="link c_shade-1">AFIB</a></li>
-         <li data-attr="topic" class="flex_shrink p-x_1"><a class="link c_shade-1">Endocarditis</a></li>
-         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">Living With</a></li>
-         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">New Science</a></li>
-      </ul>
-   </div>
-   </section>
-</article>
+<header class="p-x_5">
+	<h1 data-attr="title" class="">Quality Comes First in Carbs vs. Fats Debate</h1>
+	<div
+		data-attr="authors"
+		class="flex_wrap flex flex_row m-t_n4 m-b_3 p-l_3 font_0 font_ui"
+	>
+		<span class="flex_shrink p-r_2" data-attr="publish-date">
+			<time
+				datetime="1963-11-23"
+				data-attr="article-published-date"
+				class="c_accent-1 font_bold"
+				>Nov 23, 1963</time
+			>
+		</span>
+		<span class="flex_shrink p-x_2" data-attr="author">
+			<a class="c_primary-2 font_bold link"
+				>CardioSmart News</a
+			>
+		</span>
+	</div>
+</header>
 
-Weight: 0
+Weight: -1
 
-Styleguide CardioSmart.News.Item No Byline
-
-*/
-/*
-News Featured (1.01.01-F)
-
-A news Item that is featured in a sidebar becuase it is sponsored, partnererd, or featured as a static item. (Primary Level Item)
-
-Markup:
-<div>News Featured (Primary Item)</div>
-
-Weight: 0
-
-Styleguide CardioSmart.News.Featured
-
+Styleguide CardioSmart.Article.Header 
 */
 /*
 Article Content (1.01.01.01-A)
 
-Content Item of a news article. The Content of the article.  Rich text area allowing for all standard Word Like typography definitions. 
- (Primary Level Item)
+Content Item of a news article. The Content of the article.  Rich text area allowing for all standard Word Like typography definitions. (Primary Level Item)
 
 Markup:
-<div>Content Item of a news article</div>
+<div class="br-b_1 br_secondary-2 br_solid p-b_3 m-b_2 lh_4">
+	<img class="br_2 br_radius br_solid br_white-5 float_left m-b_4 m-r_5 max-w_10 max-w_25:lg shadow_bevel-light w-grid_4" src="https://picsum.photos/400" alt="">
+	<p>
+		Quality counts. And this may be especially true
+			when it comes to what you eat.
+	</p>
+	<p>
+		When talking about diets these days, a lot of
+			discussion seems to come down to carbohydrates vs.
+			fats. Is eating fewer carbohydrates or less fat
+			better for your health? To help shed light on this
+			debate, a
+			<a href="https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2759134" class="link c_secondary-n2">study recently published in
+				<em>JAMA Internal Medicine</em></a>
+			focused on how low-carbohydrate diets and low-fat
+			diets are linked to deaths.
+	</p>
+	<p>
+		Study authors found that healthy low-carb diets and
+			healthy low-fat diets were associated with decreased
+			mortality. A healthy low-carb diet limited
+			low-quality carbs—refined and added sugars—while
+			incorporating more plant protein and unsaturated
+			fat. A healthy low-fat diet had limited saturated
+			fat and included plant protein and more high-quality
+			carbs—whole grains, non-starchy vegetables, whole
+			fruits.
+	</p>
+	<p>
+		"Our study extended the previous evidence and
+			suggests that the health benefits of [a
+			low-carbohydrate diet] or [low-fat diet] may depend
+			not only on the types of protein and fat or
+			carbohydrate but also on the quality of carbohydrate
+			or fat remaining in the diet," the authors state.
+	</p>
+	<p>
+		In a similar way, unhealthy low-carb and unhealthy
+			low-fat diets were linked to increased mortality.
+			Low-carb and low-fat diets overall were not
+			associated with total mortality, according to the
+			study. &nbsp;</span>
+	</p>
+	<p>
+		Researchers examined information about the dietary
+			intake of 37,233 adults (20 years old or older)
+			reported to the U.S. National Health and Nutrition
+			Examination Survey from 1999 to 2014. The average
+			age of the group was 50, and more than half were
+			women. When conducting the analysis, they adjusted
+			for factors including age, sex, race or ethnicity,
+			as well as educational level, family income,
+			smoking, and family history of diabetes, heart
+			disease or cancer.
+	</p>
+	<p>
+		What is at work with low-quality diets and
+			mortality? The authors suggest that diets high in
+			saturated fat lead to overeating and obesity.
+			Saturated fats are tasty to many people but have a
+			low-satiety effect. In terms of low-quality carbs,
+			refined grains and added sugars have limited
+			nutritional value but can lead to high blood sugar
+			and insulin in the body after eating, and in turn
+			this can cause inflammation, insulin resistance, and
+			dyslipidemia.
+	</p>
+	<p>
+		It’s important to note that the diets in this study
+			don’t correspond to any specific popular diet. The
+			study broke down a day’s worth of dietary intake in
+			terms of percentage of energy from fat, protein and
+			carbohydrates. Interestingly, a moderate low-carb
+			diet still has about 40% of energy coming from
+			carbs, and a low-fat diet still has about 30% energy
+			from fat (20% for a very low-fat diet), according to
+			authors.
+	</p>
+	<p>
+		Participants reported what they ate based on their
+			memory, which could mean food intake was
+			underreported or overreported. Another significant
+			limitation: People were designated as eating a
+			low-carb or low-fat diet based on an initial
+			assessment. However, over time people may change the
+			way they eat, so information about dietary intake
+			may have been misclassified. Finally, as with other
+			nutritional studies, this was based on observations,
+			and therefore no conclusions about causes could be
+			determined.
+	</p>
+	<p>
+		Low-fat diets have been<a href="https://health.gov/dietaryguidelines/dga2005/report/HTML/G5_History.htm" class="link c_secondary-n2">recommended since the late 1970s</a>
+			to prevent chronic diseases. But recent research
+			about the links between total fat intake and health
+			outcomes have been inconsistent, the authors write.
+			Meanwhile, low-carb diets have become a popular way
+			to lose weight, but the long-term health effects of
+			those diets remain unclear. This issue is more
+			complex than looking just at fats or carbohydrates
+			or proteins. More research is needed into the types
+			of food as well as the quality of each component in
+			a healthy diet.
+	</p>
+	<p>
+		This study strengthens the idea that the quality of
+			food you eat matters to your overall health.
+			Whatever eating pattern you follow, it’s a good idea
+			to eat quality carbs and fats. That means avoiding
+			refined carbohydrates, added sugars, and saturated
+			fats. Instead, focus on whole grains, non-starchy
+			vegetables, whole fruits, and unsaturated
+			fats.
+	</p>
+</div>
 
 Weight: 0
 
 Styleguide CardioSmart.Article.Content
 */
 /*
-Author & Article Meta Data.(1.01.01.01-B)
+Article Footer Data (1.01.01.01-B)
+
+Information about the orginial article, author and disclaimer. (Secondary Level Item)
+
+Markup:
+<div class="font_n1 lh_4 font_ui" data-attr="article-cite">
+	<span class="font_bold">Read the full text:</span>
+	<a class="link c_secondary-n2" href="https://google.com">Association of Low-Carbohydrate and Low-Fat Diets With
+		Mortality Among U.S. Adults</a>,
+	<span class="font_italic">
+		Journal of the American Medical Association (JAMA)
+		Internal Medicine</span>, Jan. 21, 2020.
+	<br>
+	<span data-attr="editor-author"><a href="" class="link c_secondary-n2"><i class="fas fa-user p-r_3"></i>Martha Gulati, MD,
+			FACC, is the editor-in-chief of CardioSmart.</a></span>
+	<section data-attr="boilerplate">
+		Learn about CardioSmart’s editorial process. Information
+		provided for educational purposes only. Please talk to
+		your health care professional about your specific needs.
+	</section>
+</div>
+
+Weight: 1
+
+Styleguide CardioSmart.Article.Footer Data
+*/
+/*
+Author & Article Tag Block CardioSmart.(1.01.01.01-B)
 
 information about the article, author and taxonimy. Meta Data of an article may include: Author, Photo/Avatar of Author, Date Published, Tags & Topics of the Article, And last edited. (Secondary Level Item)
 
 Markup:
-<div>Meta Data of a news article</div>
+<aside class="bg_white bg_white-0 br_1 br_shade-3 br_solid m-b_4 p_3">
+	<div style="height: 10rem; width:10rem" class="seal_normal-alt bg_contain br_round max-w_10 m_auto m-t_3 br_shade-4 br_2 br_solid shadow_overlap-light block bg_acc">&nbsp;</div>
+	<section data-attr="author" class="font_0 m-x_4 lh_1 br-t_1 br_solid br_primary-3 m-t_4 p-t_3 font_copy">
+		<span data-attr="author-name" class="block font_1 font_display font_bold"><a class="c_primary-2 font_bold link"
+		>CardioSmart News</a
+	></span>
+		<span data-attr="associated" class="block font_n1">American College of Cardiology</span>
+		<span data-attr="address-city-state" class="block font_n1">Washington, DC</span>
+	</section>
+	<section data-attr="article" class="font_n1 m-x_4 font_ui">
+		<ul data-attr="taxonomy" class="flex_wrap flex flex_row ul_none">
+			<li data-attr="topic " class="flex_shrink p-r_2 font_bold c_accent-n1 uppercase">
+				tags
+			</li>
+			<li data-attr="topic " class="flex_shrink p-x_2">
+				<a class="link c_shade-n2">AFIB</a>
+			</li>
+			<li data-attr="topic" class="flex_shrink p-x_2">
+				<a class="link c_shade-n2">Endocarditis</a>
+			</li>
+			<li data-attr="tag" class="flex_shrink p-x_2">
+				<a class="link c_shade-n2">Living With</a>
+			</li>
+			<li data-attr="tag" class="flex_shrink p-x_2">
+				<a class="link c_shade-n2">New Science</a>
+			</li>
+		</ul>
+	</section>
+</aside>
+
+Weight: 0
+
+Styleguide CardioSmart.Article.Author CardioSmart 
+*/
+/*
+Author & Article Tag Block.(1.01.01.01-B)
+
+information about the article, author and taxonimy. Meta Data of an article may include: Author, Photo/Avatar of Author, Date Published, Tags & Topics of the Article, And last edited. (Secondary Level Item)
+
+Markup:
+<aside class="bg_white bg_white-0 br_1 br_shade-3 br_solid m-b_4 p_3">
+	<img src="https://i.pravatar.cc/300?img=25 alt="Author Name" class="br_round max-w_10 m_auto m-t_3 br_shade-4 br_2 br_solid shadow_overlap-light block">
+	<section data-attr="author" class="font_0 m-x_4 lh_1 br-t_1 br_solid br_primary-3 m-t_4 p-t_3 font_copy">
+		<span data-attr="author-name" class="block font_1 font_display font_bold"><a class="c_primary-2 font_bold link"
+		>Wendy Vasquez</a
+	></span>
+		<span data-attr="associated" class="block font_n1">George Mason, Medical</span>
+		<span data-attr="address-city-state" class="block font_n1">Washington, DC</span>
+	</section>
+	<section data-attr="article" class="font_n1 m-x_4 font_ui">
+		<ul data-attr="taxonomy" class="flex_wrap flex flex_row ul_none">
+			<li data-attr="topic " class="flex_shrink p-r_2 font_bold c_accent-n1 uppercase">
+				tags
+			</li>
+			<li data-attr="topic " class="flex_shrink p-x_2">
+				<a class="link c_shade-n2">AFIB</a>
+			</li>
+			<li data-attr="topic" class="flex_shrink p-x_2">
+				<a class="link c_shade-n2">Endocarditis</a>
+			</li>
+			<li data-attr="tag" class="flex_shrink p-x_2">
+				<a class="link c_shade-n2">Living With</a>
+			</li>
+			<li data-attr="tag" class="flex_shrink p-x_2">
+				<a class="link c_shade-n2">New Science</a>
+			</li>
+		</ul>
+	</section>
+</aside>
 
 Weight: 0
 
@@ -15369,29 +15592,24 @@ Share Content (1.01.01.01-C)
 Widget to share to a social media. Shared Content clips url and pushes it to common platforms like facebook, twitter, instagram, etc.
  (Third Level)
 
-
 Markup:
-<div<ul class="flex m_0 social-bar ul_none">
-				<li class="flex_shrink m-r_1">
-					<a href="https://twitter.com/accintouch" target="_blank" class="bg_twitter block br-bl_radius br-tl_radius c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0 twitter"><i class="fab fa-twitter-square"></i></a>
-				</li>
-				<li class="flex_shrink m-r_1">
-					<a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook bg_facebook  c_shade-5 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-facebook-square"></i></a>
-				</li>
-				<li class="flex_shrink m-r_1">
-					<a href="https://www.linkedin.com/company/american-college-of-cardiology/" target="_blank" class="linkedin bg_linkedin  block  c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-linkedin"></i></a>
-				</li>
-				<li class="flex_shrink m-r_1">
-					<a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube bg_youtube  c_shade-5  block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-youtube"></i></a>
-				</li>
-				<li class="flex_shrink m-r_1">
-					<a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="google-play bg_google-play   c_shade-5 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-google-play"></i></a>
-				</li>
-				<li class="flex_shrink m-r_1">
-					<a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store bg_apple-store block br-br_radius br-tr_radius c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"><i class="fab fa-apple"></i></a>
-				</li>
-         </ul>
-         </div>
+<nav>
+	<ul class="flex m_0 social-bar ul_none font_2 lh_4">
+	<li class="flex_shrink m-r_3">
+		<a href="https://twitter.com/accintouch" target="_blank" class="bg_twitter block br_radius c_shade-5 h:bg_accent h:c_white m-b_0 p-y_1 p-x_4 social-bar--button text_center transition_0 twitter"><i class="fab fa-twitter-square"></i></a>
+	</li>
+	<li class="flex_shrink m-r_3">
+		<a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook bg_facebook br_radius c_shade-5 block h:bg_accent h:c_white m-b_0 p-y_1 p-x_4 social-bar--button text_center transition_0"><i class="fab fa-facebook-square"></i></a>
+	</li>
+	<li class="flex_shrink m-r_3">
+		<a href="https://www.linkedin.com/company/american-college-of-cardiology/" target="_blank" class="linkedin br_radius bg_linkedin  block  c_shade-5 h:bg_accent h:c_white m-b_0 p-y_1 p-x_4 social-bar--button text_center transition_0"><i class="fab fa-linkedin"></i></a>
+	</li>
+	<li class="flex_shrink m-r_3">
+		<a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube bg_youtube br_radius c_shade-5  block h:bg_accent h:c_white m-b_0 p-y_1 p-x_4 social-bar--button text_center transition_0"><i class="fab fa-pinterest"></i></a>
+	</li>
+</ul>
+<small class="c_accent-1">Please share to your networks</small>
+</nav>
 
 Weight: 2000
 
@@ -15456,59 +15674,294 @@ Main Nav
 The Desktop version of the main navigation
 
 Markup:
-<div class="top-bar p_0 font_1 font_slab">
-  <div class="top-bar-left">
-    <ul class="bg_primary dropdown flex menu" data-dropdown-menu="" role="menubar" data-n="ieisee-n">
-      <li class="br-t_3 br_highlight br_solid  h:br_accent has-submenu is-dropdown-submenu-parent opens-right flex_auto" role="menuitem" aria-haspopup="true" aria-label="Topics &amp; Conditions" data-is-click="false">
-        <a href="#" class="bg_primary c_white h:bg_primary-n2">Topics &amp; Conditions</a>
-        <div  class="block:md font_0:lg font_n1 m-b_4 ul_none submenu menu vertical is-dropdown-submenu first-sub" data-submenu="" role="menubar" style="">
-        <ul class="">
-            <li class="p-l_4 text-indent_n1 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">EHAC</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Atrial Fibrillation</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Heart Failure</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Diabetes and Your Heart</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">High Blood Pressure</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">High Cholesterol</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Women and Heart Disease</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Cancer Treatment and Your Heart (Cardio-oncology)</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Congenital Heart Disease</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Healthy Living (Primary Prevention)</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">CAD</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Heart Attack</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Stroke</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Metabolic Syndrome</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Sudden Cardiac Arrest</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Peripheral Artery Disease</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Heart Valve Disease</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Aortic Stenosis</a></li></ul>
-             <ul class="">
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Mitral Regurgitation</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Geriatric Cardiology</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Bradycardia</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Angina</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Aortic Aneurysm</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Supraventricular Tachycardia</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Endocarditis</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Very High Triglycerides</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Renal Artery Disease</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Subclavian Artery Disease</a></li>
-            <li class="text-indent_n1 p-l_4 is-submenu-item is-dropdown-submenu-item" role="menuitem"><a class="c_black h:c_secondary-3 h:underline">Varicose Veins</a></li>
-        </ul>
-        </div>   
-      </li>
-      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Decisions</a></li>
-      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Manage Your Health</a></li>
-      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Healthy Living</a></li>
-      <li class="flex_auto br-t_3 br_highlight br_solid  h:br_accent " role="menuitem"><a href="#" class="bg_primary c_white h:bg_primary-n2 text_center">Caregivers</a></li>
-    </ul>
-  </div>
-  <div class="top-bar-right ">
-    <ul class="menu bg_accent">
-      <li class=" br-t_3 br_highlight br_solid h:br_accent"><a class="c_black h:bg_accent-n2 h:c_white ">For Clinicians</a></li>
-    </ul>
-  </div>
-</div>
-</div>
+		<h1>Main Header</h1>
+		<div
+			class="title-bar"
+			data-responsive-toggle="primary-menu"
+			data-hide-for="medium"
+		>
+			<button
+				class="menu-icon"
+				type="button"
+				data-toggle="primary-menu"
+			></button>
+			<div class="title-bar-title">Menu</div>
+		</div>
+		<div
+			id="primary-menu"
+			class="top-bar p_0 font_2 font_display shadow_overlap-light"
+		>
+			<div class="top-bar-left">
+				<ul
+					class="bg_primary dropdown flex menu"
+					data-dropdown-menu
+					role="menubar"
+				>
+					<li
+						class="br-t_3 br_primary br_solid  h:br_secondary has-submenu is-dropdown-submenu-parent opens-right flex_auto"
+						role="menuitem"
+						aria-haspopup="true"
+						aria-label="Topics &amp; Conditions"
+						data-is-click="false"
+					>
+						<a
+							href="#"
+							class="bg_primary c_white h:bg_primary-n2 text_center"
+							data-toggle="topic-dropdown"
+							>Topics &amp; Conditions</a
+						>
+					</li>
+					<li
+						class="flex_auto br-t_3 br_primary br_solid  h:br_secondary "
+						role="menuitem"
+					>
+						<a
+							href="#"
+							class="bg_primary c_white h:bg_primary-n2 text_center"
+							>Decisions</a
+						>
+					</li>
+					<li
+						class="flex_auto br-t_3 br_primary br_solid  h:br_secondary "
+						role="menuitem"
+					>
+						<a
+							href="#"
+							class="bg_primary c_white h:bg_primary-n2 text_center"
+							>Manage Your Health</a
+						>
+					</li>
+					<li
+						class="flex_auto br-t_3 br_primary br_solid  h:br_secondary "
+						role="menuitem"
+					>
+						<a
+							href="#"
+							class="bg_primary c_white h:bg_primary-n2 text_center"
+							>Healthy Living</a
+						>
+					</li>
+					<li
+						class="flex_auto br-t_3 br_primary br_solid  h:br_secondary "
+						role="menuitem"
+					>
+						<a
+							href="#"
+							class="bg_primary c_white h:bg_primary-n2 text_center"
+							>Caregivers</a
+						>
+					</li>
+				</ul>
+			</div>
+			<div class="top-bar-right">
+				<ul class="menu bg_highlight">
+					<li class=" br-t_3 br_highlight br_solid h:bg_accent">
+						<a class="c_black h:bg_accent h:c_white  p-x_5"
+							>For Clinicians</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div
+			class="font_regular font_0 lh_1 p_0 p-t_4 dropdown-pane bg_black-1 row w_100 display_block shadow_emboss-light br-b_2 br_solid br_accent"
+			id="topic-dropdown"
+			data-dropdown
+			data-auto-focus="true"
+		>
+			<ul
+				class="ul_none row w_100 flex flex_row flex_wrap row ul_none p-y_2 p-x_4"
+			>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink ">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>EHAC</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Atrial Fibrillation</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Heart Failure</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Diabetes and Your Heart</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>High Blood Pressure</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>High Cholesterol</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Women and Heart Disease</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Cancer Treatment and Your Heart (Cardio-oncology)</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Congenital Heart Disease</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Healthy Living (Primary Prevention)</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>CAD</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Heart Attack</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Stroke</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Metabolic Syndrome</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Sudden Cardiac Arrest</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Peripheral Artery Disease</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Heart Valve Disease</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Aortic Stenosis</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Mitral Regurgitation</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Geriatric Cardiology</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Bradycardia</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Angina</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Aortic Aneurysm</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Supraventricular Tachycardia</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Endocarditis</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Very High Triglycerides</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Renal Artery Disease</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Subclavian Artery Disease</a
+					>
+				</li>
+				<li class="p-r_2 p-b_1 w-grid_3:lg w-grid_6:md flex_shrink">
+					<a
+						class="c_black h:bg_accent-n1 h:c_white block p-x_3 p-y_2"
+						>Varicose Veins</a
+					>
+				</li>
+			</ul>
+			<div class="br-t_1 br_dotted br_shade-2 m-x_4 text_center">
+				<a
+					href=""
+					data-toggle="topic-dropdown"
+					class="bg_shade-n1 br_radius button font_n2 h:bg_shade-n4 hover m-b_3 m-t_2 p-y_2 small"
+					aria-controls="topic-dropdown"
+					data-is-focus="false"
+					data-yeti-box="topic-dropdown"
+					aria-haspopup="true"
+					aria-expanded="true"
+				>
+					close <i class="fa fa-times"></i
+				></a>
+			</div>
+		</div>
 
 
 Weight: -1
@@ -15522,7 +15975,7 @@ CardioSmart Footer
 The Footer of CarddioSmart 
 
 Markup:
-<div id="footer-wrap" class="max-w_5">
+<div id="footer-wrap" class="max-w_90">
     <!-- ********************************** breadcrumbs ********************************** -->
     <div id="breadcrumbs" class="bg_secondary breadcrumbs-container c_white font_0 font_ui p-x_4 p_3"><b class="breadcrumbs-title">YOU ARE HERE: </b>Home</div>
 <!-- This is the inner footer that we cache -->
@@ -15600,7 +16053,7 @@ Markup:
     <li class="text-indent_n1 p-l_4"><a class="c_white h:c_secondary-3 h:underline">Cardiology Directory</a></li>
 </ul>
 </div></div><div class="p-x_3 p-y_4:lg relative flex flex_column flex_row:md bg_shade-n4 shadow_n1">
-    <section class="address c_white p-y_4 p-x_4 flex_auto w-grid_6:md w-grid_12 m-r_5:md"><div class="bg_left logo_condensed-alt max-w_1" style="height:62px"><span class="alt">logo_condensed-alt max-w_1</span></div><address>
+    <section class="address c_white p-y_4 p-x_4 flex_auto w-grid_6:md w-grid_12 m-r_5:md"><div class="bg_left logo_condensed-alt max-w_10" style="height:62px"><span class="alt">logo_condensed-alt max-w_10</span></div><address>
     <!-- http://microformats.org/wiki/hcard -->
     <h4 class="m-b_0 font_bold font_copy font_normal font_1 m-t_4:md">Heart House</h4><div class="font_ui font_0">
             <ul class="ul_none lh_2"><li class="m-b_1 m-b_3:md font_normal"><span class="street-address">2400 N. St. NW</span></li>

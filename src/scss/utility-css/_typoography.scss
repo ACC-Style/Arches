@@ -174,8 +174,8 @@ Styleguide Typography.Font.Color Transparency
 	color: $black !important;
 }
 
-@include loop-transparent(color-transparent, "black", "", "!important", false);
-@include loop-transparent(color-transparent, "white", "", "!important", false);
+@include loop-transparent(color-transparent, 'black', '', '!important', false);
+@include loop-transparent(color-transparent, 'white', '', '!important', false);
 
 .c_inherit {
 	color: inherit;
@@ -199,7 +199,7 @@ Styleguide Typography.Font.Color Transparency
 
   Styleguide Typography.Weight
  */
-@include loop-style(font-weight, "", "!important");
+@include loop-style(font-weight, '', '!important');
 // .font_light {
 // 	font-weight: 100 !important;
 // }
@@ -250,11 +250,11 @@ Styleguide Typography.Font.Color Transparency
 @include loop-style(font-size);
 
 @media #{$medium-up} {
-	@include loop-style(font-size, $bp-label_medium, "");
+	@include loop-style(font-size, $bp-label_medium, '');
 }
 
 @media #{$large-up} {
-	@include loop-style(font-size, $bp-label_large, "");
+	@include loop-style(font-size, $bp-label_large, '');
 }
 
 /*
@@ -267,7 +267,7 @@ Styleguide Typography.Font.Color Transparency
   .nowrap         - alter the wrapping style to nowrap  
 
   Markup:
-  <div class="{{modifier_class}} font_normal max-w_1">
+  <div class="{{modifier_class}} font_normal max-w_30">
     Quae sapiente reprehenderit explicabo esse consequatur error fugiat. Voluptas odit ipsam architecto quae perspiciatis nostrum autem at. Ut veritatis molestiae distinctio autem repudiandae voluptatem voluptatibus aspernatur.
   </div>
 
@@ -430,7 +430,7 @@ Styleguide Typography.Text.Indent
 
   Styleguide Typography.Text.LineHeight
  */
-@include loop-style(line-height);
+@include loop-style(line-height, '', '!important');
 /*
   Alignment
 
@@ -516,4 +516,4 @@ Styleguide Typography.Text.Indent
 	padding: 0;
 	margin: 0;
 }
-@include loop-style(list-type, "", "!important");
+@include loop-style(list-type, '', '!important');

@@ -12,31 +12,62 @@ Styleguide CardioSmart.News.Hero
 
 */
 /*
-News Item (1.01.01-E)
+News List Item (1.01.01-E)
 
 A short synopsis of a news article that is used in a repeating list. (Primary Level Item) 
 
 Markup:
-<article class="font_0 font_copy br-b_1 br_dotted br_secondary-2 p-x_2 p-t_3 p-b_4 flex">
-   <aside class="flex_shrink  w_20"><img class="w_100" src="https://picsum.photos/100" alt=""/></aside>
-   <section class="flex_auto p-l_4">
-   <header data-attr="article" class="c_primary font_2 font_bold font_display">
-     Long Work Hours Linked to High Blood Pressure
-   </header>
-   <div data-attr="article-sample">Working more than 40 hours a week may increase risk of high blood pressure, finds study of white-collar workers.</div>
-   <div data-attr="metadata" class="align-middle br-t_1 br_shade-5 br_solid flex flex_inline font_n2 font_ui m-t_2 p-t_1 w_auto">
-         <ul data-attr="authors" class="flex_wrap flex flex_row m-l_2 p-l_2 ul_none">
-         <li class="flex_shrink p-x_2" data-attr="publish-date">
-            <time datetime="1963-11-23" data-attr="article-published-date" class="c_accent-1 font_bold">Nov 23, 1963</time></li>
-         <li class="flex_shrink p-x_2" data-attr="author"><a class="c_primary-2 font_bold link">Heidi D. Nelson, MD, MPH</a></li>
-         <li class="flex_shrink p-x_2" data-attr="article-authors"><a class="c_primary-2 font_bold link">Amy Cantor, MD, MPH</a></li>
-         <li data-attr="topic " class="flex_shrink p-x_1"><a class="link c_shade-1">AFIB</a></li>
-         <li data-attr="topic" class="flex_shrink p-x_1"><a class="link c_shade-1">Endocarditis</a></li>
-         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">Living With</a></li>
-         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">New Science</a></li>
-      </ul>
-   </div>
-   </section>
+<article class="font_0 font_copy p_3 h:bg_secondary-5 m-t_2 m-b_3 flex shadow_bevel-light br_solid br_shade-3 br_1">
+	<aside class="flex_shrink">
+		<img class="" src="https://picsum.photos/100" alt="" />
+	</aside>
+	<section class="flex_auto p-l_4">
+		<header
+			data-attr="article"
+			class="c_primary font_2 font_bold font_display"
+		>
+			Long Work Hours Linked to High Blood Pressure
+		</header>
+		<div data-attr="article-sample">
+			Working more than 40 hours a week may increase risk of high
+			blood pressure, finds study of white-collar workers.
+		</div>
+		<div
+			data-attr="metadata"
+			class="align-middle br-t_1 br_shade-4 br_solid flex flex_inline font_n1 font_ui m-t_2 p-t_1 w_auto"
+		>
+			<ul
+				data-attr="authors"
+				class="flex_wrap flex flex_row ul_none"
+			>
+				<li class="flex_shrink p-r_2" data-attr="publish-date">
+					<time
+						datetime="1963-11-23"
+						data-attr="article-published-date"
+						class="c_accent-1 font_bold"
+						>Nov 23, 1963</time
+					>
+				</li>
+				<li class="flex_shrink p-x_2" data-attr="author">
+					<a class="c_primary-2 font_bold link"
+						>CardioSmart News</a
+					>
+				</li>
+				<li data-attr="topic " class="flex_shrink p-x_2">
+					<a class="link c_shade-n2">AFIB</a>
+				</li>
+				<li data-attr="topic" class="flex_shrink p-x_2">
+					<a class="link c_shade-n2">Endocarditis</a>
+				</li>
+				<li data-attr="tag" class="flex_shrink p-x_2">
+					<a class="link c_shade-n2">Living With</a>
+				</li>
+				<li data-attr="tag" class="flex_shrink p-x_2">
+					<a class="link c_shade-n2">New Science</a>
+				</li>
+			</ul>
+		</div>
+	</section>
 </article>
 
 Weight: 0
@@ -44,69 +75,3 @@ Weight: 0
 Styleguide CardioSmart.News.Item
 
 */
-/*
-News Item No Byline (1.01.01-E)
-
-A short synopsis of a news article that is used in a repeating list. (Primary Level Item) 
-
-Markup:
-<article class="font_0 font_copy br-b_1 br_dotted br_secondary-2 p-x_2 p-t_3 p-b_4 flex">
-   <aside class="flex_shrink  w_20"><img class="w_100" src="https://picsum.photos/100" alt=""/></aside>
-   <section class="flex_auto p-l_4">
-   <header data-attr="article" class="c_primary font_2 font_bold font_display">
-     Long Work Hours Linked to High Blood Pressure
-   </header>
-   <div data-attr="article-sample">Working more than 40 hours a week may increase risk of high blood pressure, finds study of white-collar workers.</div>
-   <div data-attr="metadata" class="align-middle br-t_1 br_shade-5 br_solid flex flex_inline font_n2 font_ui m-t_2 p-t_1 w_auto">
-         <ul data-attr="authors" class="flex_wrap flex flex_row m-l_2 p-l_2 ul_none">
-         <li class="flex_shrink p-x_2" data-attr="publish-date">
-         <time datetime="1963-11-23" data-attr="article-published-date" class="c_accent-1 font_bold">Nov 23, 1963</time></li>
-         <li class="flex_shrink p-x_2" data-attr="author">
-            <a class="c_primary-2 font_bold link">CardioSmart News</a>
-         </li><li data-attr="topic " class="flex_shrink p-x_1"><a class="link c_shade-1">AFIB</a></li>
-         <li data-attr="topic" class="flex_shrink p-x_1"><a class="link c_shade-1">Endocarditis</a></li>
-         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">Living With</a></li>
-         <li data-attr="tag" class="flex_shrink p-x_1"><a class="link c_shade-1">New Science</a></li>
-      </ul>
-   </div>
-   </section>
-</article>
-
-Weight: 0
-
-Styleguide CardioSmart.News.Item No Byline
-
-*/
-/*
-News Featured (1.01.01-F)
-
-A news Item that is featured in a sidebar becuase it is sponsored, partnererd, or featured as a static item. (Primary Level Item)
-
-Markup:
-<div>News Featured (Primary Item)</div>
-
-Weight: 0
-
-Styleguide CardioSmart.News.Featured
-
-*/
-
-/*
-Article Cite (1.01.01.01-A)
-
-A news Item that is featured in a sidebar becuase it is sponsored, partnererd, or featured as a static item. (Primary Level Item)
-
-Markup:
-<div class="font_n3" data-attr="article-cite">
-Read the full text: <a class="link">Association of Low-Carbohydrate and Low-Fat Diets With Mortality Among U.S. Adults</a>, JAMA Internal Medicine, Jan. 21, 2020.
-<br>
-Martha Gulati, MD, FACC, is the editor-in-chief of CardioSmart.
-</br>
-Learn about CardioSmart’s editorial process. Information provided for educational purposes only. Please talk to your health care professional about your specific needs.</div>
-
-Weight: 0
-
-Styleguide CardioSmart.News.Featured
-
-*/
-

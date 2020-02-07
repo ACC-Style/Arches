@@ -5,7 +5,7 @@ Lorem Text Loader
 It is often we need to have space held for a return of details or text.  
 
 Markup:
-<div class="max-w_3">
+<div class="max-w_40">
    <h1 class="lorem-loader font_3 m-y_3">&nbsp;</h1>
    <p class="m-y_2 font_0 lorem-loader">&nbsp;</p>
    <p class="m-y_2 font_0 lorem-loader">&nbsp;</p>
@@ -31,27 +31,27 @@ To create an image placeholder use the lorem-loader plus an aspect of the intend
 .aspect_4x1			- lock image to a 4 to 1 ratio 
 
 Markup:
-<div class="grid-w_2 max-w_1"  data-style="{{ modifier_class }}" >
+<div class="grid-w_2 max-w_20"  data-style="{{ modifier_class }}" >
    <div class="m-y_2 lorem-loader {{modifier_class}} ">&nbsp;</div>
 </div>
 
 Styleguide InteractiveExtras.Placeholder Aspect Ratio
 */
-div[class*="aspect_"],
+div[class*='aspect_'],
 .lorem-loader {
 	width: 100%;
 	overflow: hidden;
 	text-indent: -9999px;
 	opacity: 0.5;
 	&:before {
-		content: "";
+		content: '';
 		width: 1px;
 		margin-left: -1px;
 		float: left;
 		height: 0;
 	}
 	&:after {
-		content: "";
+		content: '';
 		display: table;
 		clear: both;
 	}

@@ -5,18 +5,18 @@ Logos in the design come in 4 variations the primary logo, the condensed logo, a
 
 .logo_primary	            		-   	Primary Logo great for desktop displays best used for when the logo can be taller then 80px.
 .logo_primary-alt 	            	-   	Primary Logo reversed for dark background situations.
-.logo_condensed.max-w_1             -  	 	Smaller Mobile Friendly Logo these logos and be readable between 40px to 80px in height. 
-.logo_condensed-alt.max-w_1         -  	 	Smaller Logo Reversed.
+.logo_condensed.max-w_15             -  	 	Smaller Mobile Friendly Logo these logos and be readable between 40px to 80px in height. 
+.logo_condensed-alt.max-w_15         -  	 	Smaller Logo Reversed.
 
 Markup:
-<div class="bg_shade-2 max-w_3"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}}"><span class="alt">{{modifier_class}}</span></div></div>
+<div class="bg_shade-2 max-w_40"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}}"><span class="alt">{{modifier_class}}</span></div></div>
 
 Styleguide DesignBase.Logos
 
 */
 
-[class*="logo_"],
-[class*="seal_"] {
+[class*='logo_'],
+[class*='seal_'] {
 	background-color: transparent;
 	background-size: contain;
 	background-position: center center;
@@ -24,14 +24,14 @@ Styleguide DesignBase.Logos
 	text-indent: -9999px;
 	overflow: hidden;
 	&:before {
-		content: "";
+		content: '';
 		width: 1px;
 		margin-left: -1px;
 		float: left;
 		height: 0;
 	}
 	&:after {
-		content: "";
+		content: '';
 		display: table;
 		clear: both;
 	}
@@ -121,5 +121,35 @@ Styleguide DesignBase.Seals
 	}
 	> span.alt-text:before {
 		content: map-deep-get($seal, tiny, alt);
+	}
+}
+
+.seal_normal-alt {
+	background-image: url(map-deep-get($seal, normal_alt, url));
+	&:before {
+		padding-top: map-deep-get($seal, normal_alt, aspectratio) * 100%;
+	}
+	> span.alt-text:before {
+		content: map-deep-get($seal, normal_alt, alt);
+	}
+}
+.seal_small-alt {
+	background-image: url(map-deep-get($seal, small_alt, url));
+	max-width: 100px;
+	&:before {
+		padding-top: map-deep-get($seal, small_alt, aspectratio) * 100%;
+	}
+	> span.alt-text:before {
+		content: map-deep-get($seal, small_alt, alt);
+	}
+}
+.seal_tiny-alt {
+	background-image: url(map-deep-get($seal, tiny_alt, url));
+	max-width: 40px;
+	&:before {
+		padding-top: map-deep-get($seal, tiny_alt, aspectratio) * 100%;
+	}
+	> span.alt-text:before {
+		content: map-deep-get($seal, tiny_alt, alt);
 	}
 }
