@@ -8503,56 +8503,38 @@ News List Item (1.01.01-E)
 A short synopsis of a news article that is used in a repeating list. (Primary Level Item) 
 
 Markup:
-<article class="font_0 font_copy p_3 h:bg_secondary-5 m-t_2 m-b_3 flex shadow_bevel-light br_solid br_shade-3 br_1">
+<article class="br-t_1  br-b_1 br_black-2 br_dotted flex font_0 font_copy h:bg_secondary-5 m-b_3 m-t_2 p-b_4 p-t_4 p_3 relative">
 	<aside class="flex_shrink">
-		<img class="" src="https://picsum.photos/100" alt="" />
+		<img class="a:_block p-x_3" src="https://picsum.photos/100" alt="">
 	</aside>
 	<section class="flex_auto p-l_4">
-		<header
-			data-attr="article"
-			class="c_primary font_2 font_bold font_display"
-		>
+		<header data-attr="article" class="c_primary font_3 font_bold font_display">
 			Long Work Hours Linked to High Blood Pressure
 		</header>
 		<div data-attr="article-sample">
 			Working more than 40 hours a week may increase risk of high
 			blood pressure, finds study of white-collar workers.
 		</div>
-		<div
-			data-attr="metadata"
-			class="align-middle br-t_1 br_shade-4 br_solid flex flex_inline font_n1 font_ui m-t_2 p-t_1 w_auto"
-		>
-			<ul
-				data-attr="authors"
-				class="flex_wrap flex flex_row ul_none"
-			>
-				<li class="flex_shrink p-r_2" data-attr="publish-date">
-					<time
-						datetime="1963-11-23"
-						data-attr="article-published-date"
-						class="c_accent-1 font_bold"
-						>Nov 23, 1963</time
-					>
-				</li>
+		<footer data-attr="metadata" class="align-middle br-t_1 br_secondary-3 br_solid flex flex_inline font_n1 font_ui m-t_2 p-t_2 w_auto">
+			<ul data-attr="authors" class="flex flex_row-reverse flex_wrap l_0 m-t_n2 r_0 t_0 ul_none">
 				<li class="flex_shrink p-x_2" data-attr="author">
-					<a class="c_primary-2 font_bold link"
-						>CardioSmart News</a
-					>
+					<a class="c_primary-2 font_bold link">CardioSmart News</a>
 				</li>
-				<li data-attr="topic " class="flex_shrink p-x_2">
-					<a class="link c_shade-n2">AFIB</a>
-				</li>
-				<li data-attr="topic" class="flex_shrink p-x_2">
-					<a class="link c_shade-n2">Endocarditis</a>
-				</li>
-				<li data-attr="tag" class="flex_shrink p-x_2">
+				<li class="flex_shrink p-r_2" data-attr="publish-date">
+					<time datetime="1963-11-23" data-attr="article-published-date" class="c_accent-1 font_bold">Nov 23, 1963</time>
+				</li></ul>
+			<ul data-attr="authors" class="absolute flex flex_row flex_row-reverse flex_wrap b_0 l_0 r_0 ul_none">
+				<li data-attr="topic" class="bg_black-2 flex_shrink p-x_2">
+					<a class="c_shade-n4 font_bold link p-x_3">Endocarditis</a>
+				</li><li data-attr="topic " class="bg_black-2 br-r_1 br_dotted br_white-7 flex_shrink p-x_3" bg_black-2="" flex_shrink="">
+					<a class="c_shade-n4 font_bold link p-x_3">AFIB</a>
+				</li><li data-attr="tag" class="bg_black-2 br-r_1 br_dotted br_white-7 flex_shrink p-x_3">
 					<a class="link c_shade-n2">Living With</a>
-				</li>
-				<li data-attr="tag" class="flex_shrink p-x_2">
-					<a class="link c_shade-n2">New Science</a>
-				</li>
+				</li><li data-attr="tag" class="bg_black-2 br-r_1 br_dotted br_white-7 flex_shrink h:bg_secondary-3">
+					<a class="link c_shade-n2 p-x_3">New Science</a>
+				</li>		
 			</ul>
-		</div>
+		</footer>
 	</section>
 </article>
 
@@ -8723,7 +8705,7 @@ Article Footer Data (1.01.01.01-B)
 Information about the orginial article, author and disclaimer. (Secondary Level Item)
 
 Markup:
-<div class="font_n1 lh_4 font_ui" data-attr="article-cite">
+<div class="font_n2 lh_3 font_ui" data-attr="article-cite">
 	<span class="font_bold">Read the full text:</span>
 	<a class="link c_secondary-n2" href="https://google.com">Association of Low-Carbohydrate and Low-Fat Diets With
 		Mortality Among U.S. Adults</a>,
@@ -8873,7 +8855,50 @@ Collapsed Content Section (1.01-b)
 
 Easy to edit content wells wrapped in a collapser.  These content area should support all rich text needs and hyperlinks (Primary Level Content)
 
-<section>header and collapser with rich content insite</section>
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </button>
+      </h2>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
 
 Weight: 10
 
@@ -9312,14 +9337,42 @@ Markup:
         <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-apple"></i></a></li>
     </ul>
 </section></section><section class="acc-websites flex_auto m-l_5:md m-r_5:md m-y_5 max-w_30 w-grid_12 w-grid_6:md"><h2 class="font_2 c_white font_3:lg font_display m-b_0:md m-b_2 text_center">Transforming Education to Knowledge</h2><nav class="clearfix block font_bold font_ui w_100">
-        <ul class="font_1 lh_4 ul_none"><li class="text-indent_n1 p-l_4"><a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.acc.org"><span class="inline-block flex_auto p-l_3 self_center">Acc</span> <i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square"></i></a></li>
-        <li class="text-indent_n1 p-l_4"><a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="https://cvquality.acc.org/Accreditation?"><span class="inline-block flex_auto p-l_3 self_center">Accreditation Services</span> <i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square"></i></a></li>
-        <li class="text-indent_n1 p-l_4"><a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.ncdr.com"><span class="inline-block flex_auto p-l_3 self_center">NCDR</span> <i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square"></i></a></li>
-        <li class="text-indent_n1 p-l_4"><a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.cardiosmart.org"><span class="inline-block flex_auto p-l_3 self_center">CVQuality</span> <i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square"></i></a></li>
-        <li class="text-indent_n1 p-l_4"><a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.onlinejacc.org/"><span class="inline-block flex_auto p-l_3 self_center">JACC</span> <i class="flex_shrink self_center fas p-r_3 c_white fa-external-link-square"></i></a></li>
-    </ul>
-</nav>
-    </section></div>
+        <nav class="clearfix block font_bold font_ui w_100">
+				<ul class="font_1 lh_4 ul_none">
+					<li class="">
+						<a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.acc.org">
+							<span class="inline-block flex_auto p-l_3 self_center">ACC</span>
+							<i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square "></i>
+						</a>
+					</li>
+					<li class="">
+						<a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="https://cvquality.acc.org/Accreditation?">
+							<span class="inline-block flex_auto p-l_3 self_center">Accreditation Services</span>
+							<i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square "></i>
+						</a>
+					</li>
+					<li class="">
+						<a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.cardiosmart.org">
+							<span class="inline-block flex_auto p-l_3 self_center">CardioSmart</span>
+							<i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square "></i>
+						</a>
+					</li>
+					<li class="">
+						<a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.onlinejacc.org/">
+							<span class="inline-block flex_auto p-l_3 self_center">JACC Journals</span>
+							<i class="flex_shrink self_center fas p-r_3 c_white fa-external-link-square "></i>
+						</a>
+					</li>
+					<li class="">
+						<a target="_blank" class="c_white block flex h:bg_black-2 h:c_white" href="http://www.ncdr.com">
+							<span class="inline-block flex_auto p-l_3 self_center">NCDR</span>
+							<i class="flex_shrink self_center fas p-r_3 c_white h:c_white fa-external-link-square "></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+    </section>
+</div>
 <!-- / footer -->
 <div id="subfooter" class="bg_secondary-n3 font_n1 p-x_4 p-y_4">
         <ul class="block footer-bottom-links ul_none"><li class="inline p_2"><a href="//www.acc.org/footer-pages/media-center" class="c_white-6 h:c_white">Media Center</a></li>
