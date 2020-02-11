@@ -7,9 +7,7 @@
 </div>
 <div class="p_5">
 
-## Utility Class Overview
 
-![Mind Map of Arches](../UCOverview.png)
 
 </div>
 
@@ -129,6 +127,41 @@ Strathmore utilizes an abbreviated naming convention for utility classes to save
 | inline        | inline       |
 | inline-block  | inline-block |
 | flex          | flex         |
+#### Overflow
+
+| Value Postfix | Overflow |
+| ------------- | -------- |
+| auto          | auto     |
+| clip          | clip     |
+| scroll        | scroll   |
+| hidden        | hidden   |
+| ellipsis      | ellipsis |
+| visible       | visible  |
+| unset         | unset    |
+
+#### max-width
+
+| Value Postfix | dimension | Use case            |
+| ------------- | --------- | ------------------- |
+| 5             | 5 rem     |                     |
+| 10            | 10rem     |                     |
+| 15            | 15rem     |                     |
+| 20            | 20rem     | Small Phone Size    |
+| 25            | 25rem     |                     |
+| 30            | 30rem     | Short Readable Zone |
+| 35            | 35rem     | Short Readable Zone |
+| 40            | 40rem     | Short Readable Zone |
+| 45            | 45rem     | Readable Zone       |
+| 50            | 50rem     | Readable Zone       |
+| 55            | 55rem     | Readable Zone       |
+| 60            | 60rem     | Readable Zone       |
+| 65            | 65rem     | Readable Zone       |
+| 70            | 70rem     | Readable Zone       |
+| 75            | 75rem     |                     |
+| 80            | 80rem     |                     |
+| 85            | 85rem     | Max Desktop Range   |
+| 90            | 90rem     | Max Desktop Range   |
+| 95            | 95rem     | Max Desktop Range   |
 
 #### Overflow
 
@@ -204,6 +237,10 @@ Components styling is most are
     -   -70 alpha,
     -   -80 alpha,
     -   -90 alpha
+
+## Utility Class Overview
+
+![Mind Map of Arches](../UCOverview.png)
 
 </div>
 </div>
