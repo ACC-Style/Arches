@@ -299,6 +299,25 @@ div[class*=texture_] {
     Styleguide Recipes.mobile nav
 */
 /* Nav Recipes.04x */
+.address {
+  font-style: unset;
+}
+
+@media only screen and (min-width: 640px) {
+  .reverse-indent {
+    display: inline-block;
+    width: 100%;
+    margin-left: 1em;
+    padding-right: 1em;
+    text-indent: -1em;
+  }
+
+  .reverse-indent:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
 /*
     Generic Footer
 
@@ -361,63 +380,88 @@ div[class*=texture_] {
         </section>
         <!-- /Address -->
         <!-- Social -->
-        <h4 class="c_white font_regular font_slab m-b_3 m-b_4:lg text_center text_left:lg">Stay Connected</h4>
+        <h4 class="c_white font_regular font_slab m-b_3 m-b_4:lg text_center text_left:lg">Stay Connected
+        </h4>
         <ul class="flex social-bar ul_none c_white h:c_white m_0">
-            <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-twitter-square"></i></a></li>
-            <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-facebook-square"></i></a></li>
-            <li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-youtube"></i></a></li>
-            <li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="google-play social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-google-play"></i></a></li>
-            <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-apple"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-twitter-square"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-facebook-square"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-youtube"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://www.instagram.com/" target="_blank" class="instagram social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-instagram"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="google-play social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-google-play"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-apple"></i></a></li>
         </ul>
         <!-- Social -->
     </div>
     <div class="flex_shrink p-l_4:md p-r_4:md w_100 w_auto:md">
-        <!-- Footer External Links -->
-        <section class="acc-websites c_white p-x_3 row">
-            <h3 class="font_0 font_1:md font_regular font_slab m-b_3 m-b_4:lg m-t_4:lg m-t_5 text_center text_left:lg w_100">Improving Cardiovascular Care</h3>
-            <nav class="block clearfix font_copy w_100">
+                    <!-- ACC Product Links -->
+            <section class="acc-websites flex_auto m-l_5:md m-r_5:md m-y_5 max-w_30">
+                <h4 class="c_white font_regular font_slab m-b_3 m-b_4:lg text_center text_left:lg">
+                    Transforming Education to Knowledge</h4>
                 <ul class="ul_none lh_2 font_0">
-                    <li class="c_white br_solid  br_0 br-b_1  br_white-5">
-                        <a target="_blank" class="c_white flex flex_row h:bg_black-2 h:c_white justify_between p-x_2 p_3" href="http://www.acc.org">
-                        <span class="flex_auto inline-block p-l_3">Acc</span>
-                        <i class="c_white fa-external-link-square fas flex_shrink float_right h:c_white p-r_3"></i>
-                        </a>
-                    </li>
-                    <li class="c_white br_solid br_0 br-b_1  br_white-5">
-                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3  justify_between flex flex_row " href="https://cvquality.acc.org/Accreditation?">
-                        <span class="inline-block flex_auto p-l_3">Accreditation Services</span>
-                        <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
-                        </a>
-                    </li>
-                    <li class="c_white br_solid br_0 br-b_1  br_white-5">
-                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="http://www.ncdr.com">
-                        <span class="inline-block flex_auto p-l_3">NCDR</span>
-                        <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
-                        </a>
-                    </li>
-                    <li class="c_white br_solid br_0 br-b_1  br_white-5">
-                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="http://www.cardiosmart.org">
-                        <span class="inline-block flex_auto p-l_3">CardioSmart</span>
-                        <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
-                        </a>
-                    </li>
                     <li class="c_white">
+                        <a target="_blank" class="c_white flex flex_row h:bg_black-2 h:c_white justify_between p-x_2 p_3" href="http://www.acc.org">
+                            <span class="flex_auto inline-block p-l_3">ACC</span>
+                            <i class="c_white fa-external-link-square fas flex_shrink float_right h:c_white p-r_3"></i>
+                        </a>
+                    </li>
+                    <li class="c_white br_solid br_0 br-t_1  br_white-5">
+                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3  justify_between flex flex_row " href="https://cvquality.acc.org/Accreditation?">
+                            <span class="inline-block flex_auto p-l_3">Accreditation Services</span>
+                            <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
+                        </a>
+                    </li>
+                    <li class="c_white br_solid br_0 br-t_1  br_white-5">
+                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="http://www.cardiosmart.org">
+                            <span class="inline-block flex_auto p-l_3">CardioSmart</span>
+                            <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
+                        </a>
+                    </li>
+                    <li class="c_white br_solid br_0 br-t_1  br_white-5">
+                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="https://cvquality.acc.org/">
+                            <span class="inline-block flex_auto p-l_3">CV Quality</span>
+                            <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
+                        </a>
+                    </li>
+                    <li class="c_white br_solid br_0 br-t_1  br_white-5">
                         <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="http://www.onlinejacc.org/">
-                        <span class="inline-block flex_auto p-l_3">JACC</span>
-                        <i class="float_right flex_shrink fas p-r_3 c_white fa-external-link-square "></i>
+                            <span class="inline-block flex_auto p-l_3">JACC Journal</span>
+                            <i class="float_right flex_shrink fas p-r_3 c_white fa-external-link-square "></i>
+                        </a>
+                    </li>
+                    <li class="c_white br_solid br_0 br-t_1  br_white-5">
+                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="http://www.ncdr.com">
+                            <span class="inline-block flex_auto p-l_3">NCDR</span>
+                            <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
                         </a>
                     </li>
                 </ul>
-            </nav>
-        </section>
-        <!-- /Footer External Links -->
+            </section>
+            <!-- /ACC Product Links -->
     </div>
 </div>
-<!-- Cite -->
-<div class="texture_light bg_shade-1 p_4">
-    <cite class="c_shade-1 font_italic font_bold font_n1 p_3 lh_2">© 2015 American College of Cardiology</cite>
-</div>
-<!-- /Cite -->
+<!-- subfooter -->
+<div id="subfooter" class="bg_primary font_n1 p-x_4 p-y_4">
+            <ul class="block footer-bottom-links ul_none">
+                <li class="inline p_2"><a href="//www.acc.org/footer-pages/media-center" class="c_white-6 h:c_white">Media Center</a></li>
+                <li class="inline p_2"><a href="//www.acc.org/footer-pages/quick-start-guide" class="c_white-6 h:c_white">ACC.org Quick Start Guide</a></li>
+                <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/advertising-and-sponsorship-policy">Advertising &amp;
+                        Sponsorship Policy</a></li>
+                <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/clinical-content-disclaimer">Clinical Content Disclaimer</a>
+                </li>
+                <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/editorial-board">Editorial Board</a></li>
+                <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/privacy-policy">Privacy Policy</a></li>
+                <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/registered-user-agreement">Registered User Agreement</a></li>
+                <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/terms-and-conditions">Terms of Service</a></li>
+                <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/cookie-policy">Cookie Policy</a></li>
+                <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/member-hub-terms-of-use">Member Hub Terms of Use</a></li>
+                <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/sitemap-acc.xml">Site Map</a>
+                </li>
+            </ul>
+            <!-- /footer-bottom-links -->
+            <p class="c_white-5 font_italic font_n2 legal m-b_2 m-t_3">© 2019 American College of Cardiology Foundation.
+                All rights reserved.</p>
+        </div>
+        <!-- /subfooter -->
 </div>
 
     Styleguide Recipes.Footer
@@ -494,17 +538,14 @@ div[class*=texture_] {
 	Styleguide Recipes.Footer.Address
 
 */
-.address {
-  font-style: unset;
-}
-
 /*
     List of Links for Fat Footers
 
     Footers in the ACC sometimes have fat footers with a list of categories and links. 
 
     Markup:
-    <div class="flex_auto p-x_3 p-y_4:lg w-grid_4:lg w-grid_6:md font_ui is-active_toggle-function">
+<div class=" texture_dark p_4 ">
+    <section class="flex_auto p-x_3 p-y_4:lg w-grid_4:lg w-grid_6:md font_ui is-active_toggle-function">
         <h2 class="font_2 font_3:lg font_display p-t_2 m-b_0:md m-b_2 br_none:md ">
             <span class="toggle display_none:md ">
             <i class="fas fa-minus-square c_white-8 p-r_4"></i></span>
@@ -512,21 +553,22 @@ div[class*=texture_] {
         </h2>
         <ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none a:_block">
             <li class="text-indent_n1 p-l_4">
-                <a class="c_white h:c_secondary-3 h:underline">Angina</a>
+                <a class="c_white h:c_secondary-3 h:underline" href="foo.html">Angina</a>
             </li>
             <li class="text-indent_n1 p-l_4">
-                <a class="c_white h:c_secondary-3 h:underline">Aortic Aneurysm</a>
+                <a class="c_white h:c_secondary-3 h:underline" href="foo.html">Aortic Aneurysm</a>
             </li>
             <li class="text-indent_n1 p-l_4">
-                <a class="c_white h:c_secondary-3 h:underline">Atrial Fibrillation</a>
+                <a class="c_white h:c_secondary-3 h:underline" href="foo.html">Atrial Fibrillation</a>
             </li>
             <li class="text-indent_n1 p-l_4">
-                <a class="c_white h:c_secondary-3 h:underline">Bradycardia</a>
+                <a class="c_white h:c_secondary-3 h:underline" href="foo.html">Bradycardia</a>
             </li>
         </ul>
-    </div>
+    </section>
+</div>
 
-    Styleguide Recipes.Footer.Category Link List
+    Styleguide Recipes.Footer.Fat Footer Links
 
 */
 /*
@@ -535,49 +577,52 @@ div[class*=texture_] {
     Links to the other major products in the ACC portfolio 
 
     Markup:
-    <section class="acc-websites c_white p-x_3 row texture_dark">
-        <h3 class="font_0 font_1:md font_regular font_slab m-b_3 m-b_4:lg m-t_4:lg m-t_5 text_center text_left:lg w_100">Transforming Education to Knowledge</h3>
-        <nav class="block clearfix font_copy w_100">
-            <ul class="ul_none lh_2 font_0">
-                <li class="c_white br_solid  br_0 br-b_1  br_white-5">
-                    <a target="_blank" class="c_white flex flex_row h:bg_black-2 h:c_white justify_between p-x_2 p_3" href="http://www.acc.org">
-                    <span class="flex_auto inline-block p-l_3">ACC</span>
-                    <i class="c_white fa-external-link-square fas flex_shrink float_right h:c_white p-r_3"></i>
-                    </a>
-                </li>
-                <li class="c_white br_solid br_0 br-b_1  br_white-5">
-                    <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3  justify_between flex flex_row " href="https://cvquality.acc.org/Accreditation?">
-                    <span class="inline-block flex_auto p-l_3">Accreditation Services</span>
-                    <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
-                    </a>
-                </li>
-                <li class="c_white br_solid br_0 br-b_1  br_white-5">
-                    <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="http://www.cardiosmart.org">
-                    <span class="inline-block flex_auto p-l_3">CardioSmart</span>
-                    <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
-                    </a>
-                </li>
-                <li class="c_white br_solid br_0 br-b_1  br_white-5">
-                    <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="https://cvquality.acc.org/">
-                    <span class="inline-block flex_auto p-l_3">CV Quality</span>
-                    <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
-                    </a>
-                </li>
-                <li class="c_white">
-                    <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="http://www.onlinejacc.org/">
-                    <span class="inline-block flex_auto p-l_3">JACC Journal</span>
-                    <i class="float_right flex_shrink fas p-r_3 c_white fa-external-link-square "></i>
-                    </a>
-                </li>
-                <li class="c_white br_solid br_0 br-b_1  br_white-5">
-                    <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="http://www.ncdr.com">
-                    <span class="inline-block flex_auto p-l_3">NCDR</span>
-                    <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
+    <div class=" texture_dark p_4 ">
+    <!-- ACC Product Links -->
+        <section class="acc-websites flex_auto m-l_5:md m-r_5:md m-y_5 max-w_30 w-grid_12 w-grid_6:md">
+                <h3 class="font_0 font_1:md c_white font_regular font_slab m-b_3 m-b_4:lg m-t_4:lg m-t_5 text_center text_left:lg w_100">
+                    Transforming Education to Knowledge</h3>
+                <ul class="ul_none lh_2 font_0">
+                    <li class="c_white">
+                        <a target="_blank" class="c_white flex flex_row h:bg_black-2 h:c_white justify_between p-x_2 p_3" href="http://www.acc.org">
+                            <span class="flex_auto inline-block p-l_3">ACC</span>
+                            <i class="c_white fa-external-link-square fas flex_shrink float_right h:c_white p-r_3"></i>
+                        </a>
+                    </li>
+                    <li class="c_white br_solid br_0 br-t_1  br_white-5">
+                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3  justify_between flex flex_row " href="https://cvquality.acc.org/Accreditation?">
+                            <span class="inline-block flex_auto p-l_3">Accreditation Services</span>
+                            <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
+                        </a>
+                    </li>
+                    <li class="c_white br_solid br_0 br-t_1  br_white-5">
+                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="http://www.cardiosmart.org">
+                            <span class="inline-block flex_auto p-l_3">CardioSmart</span>
+                            <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
+                        </a>
+                    </li>
+                    <li class="c_white br_solid br_0 br-t_1  br_white-5">
+                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="https://cvquality.acc.org/">
+                            <span class="inline-block flex_auto p-l_3">CV Quality</span>
+                            <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
+                        </a>
+                    </li>
+                    <li class="c_white br_solid br_0 br-t_1  br_white-5">
+                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="http://www.onlinejacc.org/">
+                            <span class="inline-block flex_auto p-l_3">JACC Journal</span>
+                            <i class="float_right flex_shrink fas p-r_3 c_white fa-external-link-square "></i>
+                        </a>
+                    </li>
+                    <li class="c_white br_solid br_0 br-t_1  br_white-5">
+                        <a target="_blank" class="h:bg_black-2  h:c_white c_white p-x_2 p_3 justify_between flex flex_row " href="http://www.ncdr.com">
+                            <span class="inline-block flex_auto p-l_3">NCDR</span>
+                            <i class="float_right flex_shrink fas p-r_3 c_white h:c_white fa-external-link-square "></i>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        <!-- /ACC Product Links -->
+    </div>
 
     Styleguide Recipes.Footer.ACC Product Links
 
@@ -589,18 +634,19 @@ The college has a collection of social or secondary platforms we interact with.
 
 Markup:
 <!-- Social -->
-        <h4 class="c_white font_regular font_slab m-b_3 m-b_4:lg text_center text_left:lg">Stay Connected</h4>
-        <ul class="flex social-bar ul_none c_white h:c_white m_0">
-            <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-twitter-square"></i></a></li>
-            <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-facebook-square"></i></a></li>
-            <li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-youtube"></i></a></li>
-             <li class="flex_auto m-r_2"><a href="https://www.instagram.com/" target="_blank" class="instagram social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-instagram"></i></a></li>
-            <li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="google-play social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-google-play"></i></a></li>
-            <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-apple"></i></a></li>
-        </ul>
-        <!-- Social -->
+    <h4 class="c_white font_regular font_slab m-b_3 m-b_4:lg text_center text_left:lg">Stay Connected
+    </h4>
+    <ul class="flex social-bar ul_none c_white h:c_white m_0">
+        <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-twitter-square"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-facebook-square"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-youtube"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://www.instagram.com/" target="_blank" class="instagram social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-instagram"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="google-play social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-google-play"></i></a></li>
+        <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-apple"></i></a></li>
+</ul>
+<!-- Social -->
 
-            Styleguide Recipes.Footer.Social
+Styleguide Recipes.Footer.Social
 
 */
 /* Nav Recipes.04x */
@@ -648,7 +694,7 @@ Markup:
 </nav>
 
 
-    Styleguide Recipes.Quick Utility Links
+    Styleguide Recipes.Utility Links
 */
 /* content Recipes.100 */
 /*
@@ -702,49 +748,46 @@ Styleguide Recipes.Ordered Cards
 
 
     Markup:
-    <div class="p_5 p-y_4 bg_shade-3 texture_medium">
-    <article class="result {{modifier_class}} grid-container br_solid br_1 br_shade-3 bg_white p_3">
-        <header class="flex font_1 font_display">
-            <div class="flex_auto result-title overflow-ellipsis nowrap font_2 wrap">
-                <span class="c_shade-n5 font_slab"><span class="c_acc font_bold p-r_3">5.1</span>Genetic Predisposition</span><br>
-                <span class="font_italic c_shade-3 font_n1">{{modifier_class}}</span>
-            </div>
-            <div class="felx_shrink flex m-l_3 font_bold">
-                  <div class="felx_shrink flex m-l_3 font_bold"><div class="flex_auto bg_loe-B-BR-0 bg_primary-2 p-x_3 p-y_1">B-BR</div><div class="flex_auto bg_cor-IIA p-x_3 p-y_1">II</div></div>
-            </div>
-        </header>
-        <nav class="flex font_n2 display_none">
-            <a href="#saveToLibrary" class="felx_shrink bg_primary_5 link-fulldoc m-r_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
-                    class="fas fa-save m-r_3"></i><span>SAVE</span></a>
-            <a href="#shareResult" class="felx_shrink bg_primary_5 link-pdf m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
-                    class="fas fa-file-pdf m-r_3"></i><span>SHARE</span></a>
-            <a href="#printResult" class="felx_shrink bg_primary_5 link-hub m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
-                    class="fas fa-print m-r_3"></i><span>PRINT</span></a>
-        </nav>
-        <main class="result-content p_3 p-y_4 font_0">
-            <section id="sec22.1">  
-        		<p id="p2145">Hypertension is a complex polygenic disorder in which many genes or gene combinations influenceBP<a class="inline-reference" href="#bib200">[1]</a>,&nbsp;<a class="inline-reference"	href="#bib201">[2]</a>. Although several monogenic forms of hypertension have been identified, such asglucocorticoid-remediable aldosteronism, Liddle’s syndrome, Gordon’s syndrome, and others in whichsingle-gene mutations fully explain the pathophysiology of hypertension, these disorders are rare<a	class="inline-reference" href="#bib202">(S5.1-3)</a>. The current tabulation of known genetic variantscontributing to BP and hypertension includes more than 25 rare mutations and 120 single-nucleotidepolymorphisms<a class="inline-reference" href="#bib202">[1]</a>,&nbsp;<a class="inline-reference"	href="#bib203">[2]</a>. However, even with the discovery of multiple single-nucleotide polymorphismsinfluencing control of BP since completion of the Human Genome Project in 2003, the associated variants haveonly small effects. Indeed, at present, the collective effect of all BP loci identified through genome-wideassociation studies accounts for only about 3.5% of BP variability<a class="inline-reference"	href="#bib203">(S5.1-4)</a>. The presence of a high number of small-effect alleles associated withhigher BP results in a more rapid increase in BP with age<a class="inline-reference"	href="#bib204">(S5.1-5)</a>. Future studies will need to better elucidate genetic expression, epigeneticeffects, transcriptomics, and proteomics that link genotypes with underlying pathophysiological mechanisms.</p>
+   <div class="p_5 p-y_4 bg_shade-3 texture_medium">
+<article class="bg_white br_1 br_shade-3 br_solid grid-container m_auto max-w_85 p_3 result section shadow_overlap-light">
+<header class="flex font_1 font_display">
+    <div class="flex_auto result-title overflow-ellipsis nowrap font_2 wrap">
+        <span class="c_shade-n5 font_slab"><span class="c_acc font_bold p-r_3">5.1</span>Genetic Predisposition</span><br>
+        <span class="font_italic c_shade-3 font_n1">section</span>
+    </div>
+    <div class="felx_shrink m-l_3 font_bold">
+          <div class="br_2 br_radius br_shade-3 br_solid flex font_bold m-l_3 shadow_emboss-light"><div class="bg_loe-B-BR-0 flex_auto p-x_3 p-y_1">B-BR</div><div class="flex_auto bg_cor-IIA p-x_3 p-y_1">II</div></div>
+    </div>
+</header>
+
+<div class="br-b_1 br_dotted br_primary-4 p-b_3"><nav class="flex font_n2 display_none">
+    <a href="#saveToLibrary" class="felx_shrink bg_primary_5 link-fulldoc m-r_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i class="fas fa-save m-r_3"></i><span>SAVE</span></a>
+    <a href="#shareResult" class="felx_shrink bg_primary_5 link-pdf m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i class="fas fa-file-pdf m-r_3"></i><span>SHARE</span></a>
+    <a href="#printResult" class="felx_shrink bg_primary_5 link-hub m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i class="fas fa-print m-r_3"></i><span>PRINT</span></a>
+    </nav></div><main class="font_0 p-t_2 p-y_4 p_3 result-content">
+    <section id="sec22.1">
+		<p id="p2145">Hypertension is a complex polygenic disorder in which many genes or gene combinations influenceBP<a class="inline-reference" href="#bib200">[1]</a>,&nbsp;<a class="inline-reference" href="#bib201">[2]</a>. Although several monogenic forms of hypertension have been identified, such asglucocorticoid-remediable aldosteronism, Liddle’s syndrome, Gordon’s syndrome, and others in whichsingle-gene mutations fully explain the pathophysiology of hypertension, these disorders are rare<a class="inline-reference" href="#bib202">(S5.1-3)</a>. The current tabulation of known genetic variantscontributing to BP and hypertension includes more than 25 rare mutations and 120 single-nucleotidepolymorphisms<a class="inline-reference" href="#bib202">[1]</a>,&nbsp;<a class="inline-reference" href="#bib203">[2]</a>. However, even with the discovery of multiple single-nucleotide polymorphismsinfluencing control of BP since completion of the Human Genome Project in 2003, the associated variants haveonly small effects. Indeed, at present, the collective effect of all BP loci identified through genome-wideassociation studies accounts for only about 3.5% of BP variability<a class="inline-reference" href="#bib203">(S5.1-4)</a>. The presence of a high number of small-effect alleles associated withhigher BP results in a more rapid increase in BP with age<a class="inline-reference" href="#bib204">(S5.1-5)</a>. Future studies will need to better elucidate genetic expression, epigeneticeffects, transcriptomics, and proteomics that link genotypes with underlying pathophysiological mechanisms.</p>
 	</section>
-        </main>
-        <footer class="result-docuemnt br-t_1 br_0 br_solid br_acc-3 p-t_2 is-active bg_shade-5 m-x_n3 p-x_4 p-y_2">
-            <div class="clear-fix overflow_ellipsis document-title overflow-ellipsis font_slab c_acc-1 nowrap font_n1">
-               <i class="fas icon-toggle_chevron-up-down"></i> International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements
-                with Heart
-            </div>
-            <div class="result-document-publish-date font_n2 c_shade">Focused Update: March 15, 2018</div>
-            <nav class="flex font_n1">
-                <a href="#fulldoc" class="felx_shrink link-fulldoc m-r_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-square m-r_3"></i><span>FULL DOC</span></a>
-                <a href="#pdfdownload" class="felx_shrink link-pdf m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-file-pdf m-r_3"></i><span>PDF</span></a>
-                <a href="#hublink" class="felx_shrink link-hub m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-alt m-r_3"></i><span>HUB</span></a>
-            </nav>
-        </footer>
-        <aside class="bg_shade-4 m-x_n3 m-b_n3 p_2">
-            <div class="flex font_n2 c_shade-1  p_2 p-x_4">
-                <strong class="felx_shrink c_shade"><i class="fas fa-quote"></i>cite document:&nbsp;</strong>
-                <span class="flex_auto overflow-ellipsis nowrap">International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements with Heart</span>
-            </div>
-        </aside>
-    </article>
+</main>
+<footer class="result-docuemnt br-t_1 br_0 br_solid br_acc-3 p-t_2 is-active bg_shade-5 m-x_n3 p-x_4 p-y_2">
+    <div class="clear-fix overflow_ellipsis document-title overflow-ellipsis font_slab c_acc-1 nowrap font_n1">
+       <i class="fas icon-toggle_chevron-up-down"></i> International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements
+        with Heart
+    </div>
+    <div class="result-document-publish-date font_n2 c_shade">Focused Update: March 15, 2018</div>
+    <nav class="flex font_n1">
+        <a href="#fulldoc" class="felx_shrink link-fulldoc m-r_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-square m-r_3"></i><span>FULL DOC</span></a>
+        <a href="#pdfdownload" class="felx_shrink link-pdf m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-file-pdf m-r_3"></i><span>PDF</span></a>
+        <a href="#hublink" class="felx_shrink link-hub m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-alt m-r_3"></i><span>HUB</span></a>
+    </nav>
+</footer>
+<aside class="bg_shade-4 m-x_n3 m-b_n3 p_2">
+    <div class="flex font_n2 c_shade-1  p_2 p-x_4">
+        <strong class="felx_shrink c_shade"><i class="fas fa-quote"></i>cite document:&nbsp;</strong>
+        <span class="flex_auto overflow-ellipsis nowrap">International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements with Heart</span>
+    </div>
+</aside>
+</article>
 </div>
 
     Styleguide Recipes.Guideline.Result
@@ -756,48 +799,47 @@ Styleguide Recipes.Ordered Cards
 
 
     Markup:
-    <div class="p_5 p-t_3 p-b_3 bg_shade-5">
-        <article class="result {{modifier_class}} grid-container br_solid br_1 br_shade-3 bg_white p_3">
-            <header class="flex font_1 font_display">
-                <div class="flex_auto result-title overflow-ellipsis nowrap font_1 wrap">
-                    <span class="c_acc font_slab">Result Title</span>
-                    <span class="font_italic c_shade-3 font_n1">{{modifier_class}}</span>
-                </div>
-                <div class="felx_shrink flex m-l_3 font_bold">
-                      <div class="felx_shrink flex m-l_3 font_bold"><div class="flex_auto bg_loe-B-BR-0 bg_primary-2 p-x_3 p-y_1">B-BR</div><div class="flex_auto bg_cor-IIA p-x_3 p-y_1">II</div></div>
-                </div>
-            </header>
-            <nav class="flex font_n2">
-                <a href="#saveToLibrary" class="felx_shrink bg_primary_5 link-fulldoc m-r_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
-                        class="fas fa-save m-r_3"></i><span>SAVE</span></a>
-                <a href="#shareResult" class="felx_shrink bg_primary_5 link-pdf m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
-                        class="fas fa-file-pdf m-r_3"></i><span>SHARE</span></a>
-                <a href="#printResult" class="felx_shrink bg_primary_5 link-hub m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i
-                        class="fas fa-print m-r_3"></i><span>PRINT</span></a>
-            </nav>
-            <main class="result-content p-y_2">
-                <p class="lh_3 font_0 m-b_0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aperiam alias explicabo impedit eius, ducimus nihil animi sapiente placeat ullam sequi, hic quod <span class="bg_highlight-4 c_highlight-n4  underline p-x_2">expedita laboriosam</span>, dolor et. Maiores, illum animi!</p>
-            </main>
-            <footer class="result-docuemnt br-t_1 br_0 br_dashed br_acc-3 p-t_2 is-active">
-                <div class="clear-fix document-title overflow-ellipsis font_slab c_acc-1 nowrap font_n1">
-                <i class="fas icon-toggle_chevron-up-down"></i> International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements
-                    with Heart
-                </div>
-                <div class="result-document-publish-date font_n2 c_shade">Focused Update: March 15, 2018</div>
-                <nav class="flex font_n2">
-                    <a href="#fulldoc" class="felx_shrink link-fulldoc m-r_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-square m-r_3"></i><span>FULL DOC</span></a>
-                    <a href="#pdfdownload" class="felx_shrink link-pdf m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-file-pdf m-r_3"></i><span>PDF</span></a>
-                    <a href="#hublink" class="felx_shrink link-hub m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-alt m-r_3"></i><span>HUB</span></a>
-                </nav>
-            </footer>
-            <aside class="bg_shade-4 m-x_n3 m-b_n3 p_2">
-                <div class="flex font_n3 c_shade-1  p_1 p-x_3">
-                    <strong class="felx_shrink c_shade"><i class="fas fa-quote"></i>cite document:&nbsp;</strong>
-                    <span class="flex_auto overflow-ellipsis nowrap">International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements with Heart</span>
-                </div>
-            </aside>
-        </article>
+   <div class="p_5 p-y_4 bg_shade-3 texture_medium">
+    <article class="bg_white br_1 br_shade-3 br_solid grid-container p_3 result shadow_overlap-light">
+        <header class="flex font_1 font_display">
+            <div class="flex_auto result-title overflow-ellipsis nowrap font_1 wrap">
+                <span class="c_acc font_slab">Result Title</span>
+                <span class="font_italic c_shade-3 font_n1"></span>
+            </div>
+            <div class="felx_shrink flex m-l_3 font_bold">
+                  <div class="felx_shrink m-l_3 font_bold">
+          <div class="br_2 br_radius br_shade-3 br_solid flex font_bold m-l_3 shadow_emboss-light"><div class="bg_loe-A flex_auto p-x_3 p-y_1">A</div><div class="flex_auto bg_cor-I p-x_3 p-y_1">I</div></div>
     </div>
+            </div>
+        </header>
+        <nav class="flex font_n2">
+            <a href="#saveToLibrary" class="felx_shrink bg_primary_5 link-fulldoc m-r_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i class="fas fa-save m-r_3"></i><span>SAVE</span></a>
+            <a href="#shareResult" class="felx_shrink bg_primary_5 link-pdf m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i class="fas fa-file-pdf m-r_3"></i><span>SHARE</span></a>
+            <a href="#printResult" class="felx_shrink bg_primary_5 link-hub m-x_1 p-y_1 p-x_2 br_primary-5 c_shade-n3 hover:c_white hover:bg_primary br_solid br_shade-3 br_1 br_radius"><i class="fas fa-print m-r_3"></i><span>PRINT</span></a>
+        </nav>
+        <main class="result-content p-y_2">
+            <p class="lh_3 font_0 m-b_0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem aperiam alias explicabo impedit eius, ducimus nihil animi sapiente placeat ullam sequi, hic quod <span class="bg_highlight-4 c_highlight-n4  underline p-x_2">expedita laboriosam</span>, dolor et. Maiores, illum animi!</p>
+        </main>
+        <footer class="result-docuemnt br-t_1 br_0 br_dashed br_acc-3 p-t_2 is-active">
+            <div class="clear-fix document-title overflow-ellipsis font_slab c_acc-1 nowrap font_n1">
+            <i class="fas icon-toggle_chevron-up-down"></i> International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements
+                with Heart
+            </div>
+            <div class="result-document-publish-date font_n2 c_shade">Focused Update: March 15, 2018</div>
+            <nav class="flex font_n2">
+                <a href="#fulldoc" class="felx_shrink link-fulldoc m-r_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-square m-r_3"></i><span>FULL DOC</span></a>
+                <a href="#pdfdownload" class="felx_shrink link-pdf m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-file-pdf m-r_3"></i><span>PDF</span></a>
+                <a href="#hublink" class="felx_shrink link-hub m-x_3 p-y_2 c_shade-n3 hover:c_primary"><i class="fas fa-share-alt m-r_3"></i><span>HUB</span></a>
+            </nav>
+        </footer>
+        <aside class="bg_shade-4 m-x_n3 m-b_n3 p_2">
+            <div class="flex font_n3 c_shade-1  p_1 p-x_3">
+                <strong class="felx_shrink c_shade"><i class="fas fa-quote"></i>cite document:&nbsp;</strong>
+                <span class="flex_auto overflow-ellipsis nowrap">International Organization for Standardization. (2016). Occupational health and safety management systems—Requirements with Heart</span>
+            </div>
+        </aside>
+    </article>
+</div>
 
     Styleguide Recipes.Guideline.ResultAlt
 */
@@ -2010,20 +2052,6 @@ Markup:
   position: relative;
 }
 
-/*
-Scrollable Table
-
-Tables are often the bane of small veiw ports. This `table` design swaps to a scroll left functionality when the view port is smaller then mobile. 
-
-
-
-
-Markup:
-<div class="bg_shade-2 max-w_20"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
-
-Styleguide Recipes.Scrollable
-
-*/
 /* content Recipes.200 */
 /**  Utility Classes    *********************************/
 /*
