@@ -51,7 +51,7 @@ var PATHS = {
 	FONTS: SOURCE.SRC + SOURCE.FONTS,
 	ALLFONTS: SOURCE.SRC + SOURCE.FONTS + "/**/*",
 	JS: SOURCE.SRC + SOURCE.JS,
-	ALLJS: SOURCE.SRC + SOURCE.JS + "/**/*.js",
+	ALLJS: SOURCE.SRC + SOURCE.JS + "/*",
 	ICONS: SOURCE.SRC + SOURCE.ICONS,
 	ALLICONS: SOURCE.SRC + SOURCE.ICONS + "/**/*.scss",
 	IMAGES: SOURCE.SRC + SOURCE.IMAGES,
@@ -112,8 +112,9 @@ gulp.task("dist", function() {
 		"Gulp: Gosh my back is tired. Moving boxes from Assets to the styleguide"
 	);
 	return gulp
-		.src([PATHS.ALLFONTS, PATHS.ALLICONS, PATHS.ALLJS, PATHS.ALLIMAGES], {
-			base: ""
+		.src(["css/*", "fonts/*", "js/*", "img/*"], {
+			cwd: "./src",
+			cwdbase: true
 		})
 		.pipe(gulp.dest(SOURCE.DIST));
 });
@@ -130,16 +131,22 @@ var markdownbuild = function(base, label) {
 		.pipe(rename(label + "_readme.md"))
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.MARKDOWN + "partial_" + label + ".md", "utf8"),
+				fs.readFileSync(
+					PATHS.MARKDOWN + "partial_" + label + ".md",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
 			)
 		)
 		.pipe(
-			header(fs.readFileSync(PATHS.MARKDOWN + "markdown_header.md", "utf8"), {
-				pkg: pkg
-			})
+			header(
+				fs.readFileSync(PATHS.MARKDOWN + "markdown_header.md", "utf8"),
+				{
+					pkg: pkg
+				}
+			)
 		)
 		.pipe(
 			header("<div class='" + label + "_nav'>", {
@@ -175,7 +182,10 @@ gulp.task("markdown", function() {
 	)
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md", "utf8"),
+				fs.readFileSync(
+					PATHS.MARKDOWN + "markdown_preheader.md",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -215,7 +225,10 @@ var buildbrand = function(base, brand, framework) {
 				)
 				.pipe(
 					header(
-						fs.readFileSync(PATHS.SCSS + "/config/__config.boot.scss", "utf8"),
+						fs.readFileSync(
+							PATHS.SCSS + "/config/__config.boot.scss",
+							"utf8"
+						),
 						{
 							pkg: pkg
 						}
@@ -237,7 +250,10 @@ var buildbrand = function(base, brand, framework) {
 				)
 				.pipe(
 					header(
-						fs.readFileSync(PATHS.SCSS + "/config/__config.base.scss", "utf8"),
+						fs.readFileSync(
+							PATHS.SCSS + "/config/__config.base.scss",
+							"utf8"
+						),
 						{
 							pkg: pkg
 						}
@@ -259,7 +275,10 @@ var buildbrand = function(base, brand, framework) {
 				)
 				.pipe(
 					header(
-						fs.readFileSync(PATHS.SCSS + "/config/__config.base.scss", "utf8"),
+						fs.readFileSync(
+							PATHS.SCSS + "/config/__config.base.scss",
+							"utf8"
+						),
 						{
 							pkg: pkg
 						}
@@ -269,7 +288,10 @@ var buildbrand = function(base, brand, framework) {
 	}
 	construct.pipe(
 		header(
-			fs.readFileSync(PATHS.SCSS + "/gulp_header/__brand.base.scss", "utf8"),
+			fs.readFileSync(
+				PATHS.SCSS + "/gulp_header/__brand.base.scss",
+				"utf8"
+			),
 			{
 				pkg: pkg
 			}
@@ -343,7 +365,8 @@ var buildbrand = function(base, brand, framework) {
 				.pipe(
 					header(
 						fs.readFileSync(
-							PATHS.SCSS + "/gulp_header/__brand.cardiosmart.scss",
+							PATHS.SCSS +
+								"/gulp_header/__brand.cardiosmart.scss",
 							"utf8"
 						),
 						{
@@ -385,9 +408,12 @@ var buildbrand = function(base, brand, framework) {
 					)
 				)
 				.pipe(
-					header(" \n/** Utility Class Built on top of Bootstrap 4.3 **/ \n", {
-						pkg: pkg
-					})
+					header(
+						" \n/** Utility Class Built on top of Bootstrap 4.3 **/ \n",
+						{
+							pkg: pkg
+						}
+					)
 				);
 			break;
 		case "zurb":
@@ -435,7 +461,10 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.noframe.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/recipes/__recipes.noframe.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -465,7 +494,10 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.base.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/recipes/__recipes.base.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -487,7 +519,10 @@ gulp.task("construct", function() {
 	);
 	var colors = base.pipe(clone()).pipe(
 		header(
-			fs.readFileSync(PATHS.SCSS + "/styleguide/_color-codes.scss", "utf8"),
+			fs.readFileSync(
+				PATHS.SCSS + "/styleguide/_color-codes.scss",
+				"utf8"
+			),
 			{
 				pkg: pkg
 			}
@@ -499,7 +534,10 @@ gulp.task("construct", function() {
 		.pipe(rename("zurb_acc.scss"))
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.zurb.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/recipes/__recipes.zurb.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -521,13 +559,19 @@ gulp.task("construct", function() {
 		.pipe(clone())
 		.pipe(rename("zurb_cardiosmart.scss"))
 		.pipe(
-			header(fs.readFileSync(PATHS.SCSS + "/components/_logo.scss", "utf8"), {
-				pkg: pkg
-			})
+			header(
+				fs.readFileSync(PATHS.SCSS + "/components/_logo.scss", "utf8"),
+				{
+					pkg: pkg
+				}
+			)
 		)
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.zurb.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/recipes/__recipes.zurb.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -562,7 +606,10 @@ gulp.task("construct", function() {
 		.pipe(rename("boot_acc.scss"))
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.acc.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/recipes/__recipes.acc.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -570,7 +617,10 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.boot.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/recipes/__recipes.boot.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -615,7 +665,10 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.boot.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/recipes/__recipes.boot.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -660,7 +713,10 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.boot.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/recipes/__recipes.boot.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -690,7 +746,10 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/base/__cvquality.base.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/base/__cvquality.base.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -704,7 +763,10 @@ gulp.task("construct", function() {
 		.pipe(rename("boot_jacc.scss"))
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.jacc.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/recipes/__recipes.jacc.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -712,7 +774,10 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.boot.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/recipes/__recipes.boot.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -741,9 +806,12 @@ gulp.task("construct", function() {
 			)
 		)
 		.pipe(
-			header(fs.readFileSync(PATHS.SCSS + "/base/__jacc.base.scss", "utf8"), {
-				pkg: pkg
-			})
+			header(
+				fs.readFileSync(PATHS.SCSS + "/base/__jacc.base.scss", "utf8"),
+				{
+					pkg: pkg
+				}
+			)
 		);
 	boot_jacc = buildbrand(boot_jacc, "jacc", "bootstrap");
 	return merge(
@@ -761,7 +829,10 @@ gulp.task("construct", function() {
 	)
 		.pipe(
 			header(
-				fs.readFileSync(PATHS.SCSS + "/gulp_header/__preheader.scss", "utf8"),
+				fs.readFileSync(
+					PATHS.SCSS + "/gulp_header/__preheader.scss",
+					"utf8"
+				),
 				{
 					pkg: pkg
 				}
@@ -800,7 +871,14 @@ gulp.task("styleguide", function() {
 
 gulp.task(
 	"build",
-	gulp.series("construct", "concat", "style", "copy", "markdown", "styleguide")
+	gulp.series(
+		"construct",
+		"concat",
+		"style",
+		"copy",
+		"markdown",
+		"styleguide"
+	)
 );
 gulp.task("md", gulp.series("markdown", "styleguide"));
 gulp.task("default", gulp.series("build", "watch"));
