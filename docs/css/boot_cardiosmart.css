@@ -14906,8 +14906,20 @@ Editor Credit (1.01-D)
 Meta Data Driven Component that renders when it published/last reviewed and who is credited as reviewers for the page. (Third Level Content)
 
 Markup:
-<cite>Meta Data Driven Component that renders when it published/last reviewed and who is credited as reviewers for the page.
-.</cite>
+<cite class="font_italic font_n2 font_ui">
+   <ul class="ul_none flex flex_wrap" data-attr="editors">
+      <li class="p-r_3" data-attr="date">
+         Last Edited<span class="font_bold c_secondary p-x_2 "> DD/MM/YYYY</span>
+      </li>
+      <li class="br-l_1 br_primary-3 br_solid p-l_3 p-r_2">Medical Reviewer(s):</li>
+      <li class="p-l_2 p-r_3" data-attr="editor">
+         <a class="link">Editor Name</a>
+      </li>
+      <li class="br-l_1 br_secondary-3 br_dotted p-l_2 p-r_3" data-attr="editor">
+         <a class="link">Editor Name</a>
+      </li>
+   </ul>
+</cite>
 
 Weight: 1000
 
@@ -14946,7 +14958,58 @@ Related Topics Nav (1.01-G)
 A list of topics that link to the topic pages that are deemed related through a centralized "Matrix"  This should not be edited on page but through a centralized interface. (Secondary Level Item)
 
 Markup:
-<div>Related Topic names and urls(Secondary Level)</div>
+   <div
+         class="br_1 br_radius br_shade-4 br_solid flex_auto font_ui p-y_4:lg w-grid_6:md"
+      >
+         <h2
+            class="br-b_1 br_dotted br_accent c_accent font_bold font_n1 font_0:lg font_display m-b_0 m-t_0 p-b_2 p-t_3 p-x_4"
+         >
+            Related Topics
+         </h2>
+         <ul class="block:md font_n1 lh_2 ul_none">
+            <li class="p-l_5 p-r_4 text-indent_n1 p-y_2 h:bg_secondary-5">
+               <a href="#" class="c_primary h:c_secondary-n1 h:underline-none-none"
+                  >AnginaAng inaAng inaAngina Angina Angina Angina AnginaAnginaAng
+                  inaAng inaAngina Angina Angina Angina Angina</a
+               >
+            </li>
+            <li class="p-l_5 p-r_4 text-indent_n1 p-y_2 h:bg_secondary-5">
+               <a href="#" class="c_primary h:c_secondary-n1 h:underline-none"
+                  >Aortic Aneurysm</a
+               >
+            </li>
+            <li class="p-l_5 p-r_4 text-indent_n1 p-y_2 h:bg_secondary-5">
+               <a href="#" class="c_primary h:c_secondary-n1 h:underline-none"
+                  >Atrial Fibrillation</a
+               >
+            </li>
+            <li class="p-l_5 p-r_4 text-indent_n1 p-y_2 h:bg_secondary-5">
+               <a href="#" class="c_primary h:c_secondary-n1 h:underline-none"
+                  >Bradycardia</a
+               >
+            </li>
+            <li class="p-l_5 p-r_4 text-indent_n1 p-y_2 h:bg_secondary-5">
+               <a href="#" class="c_primary h:c_secondary-n1 h:underline-none"
+                  >Cancer Treatment and Your Heart</a
+               >
+            </li>
+            <li class="p-l_5 p-r_4 text-indent_n1 p-y_2 h:bg_secondary-5">
+               <a href="#" class="c_primary h:c_secondary-n1 h:underline-none"
+                  >Congenital Heart Disease</a
+               >
+            </li>
+            <li class="p-l_5 p-r_4 text-indent_n1 p-y_2 h:bg_secondary-5">
+               <a href="#" class="c_primary h:c_secondary-n1 h:underline-none"
+                  >Coronary Artery Disease</a
+               >
+            </li>
+            <li class="p-l_5 p-r_4 text-indent_n1 p-y_2 h:bg_secondary-5">
+               <a href="#" class="c_primary h:c_secondary-n1 h:underline-none"
+                  >Diabetes and Your Heart</a
+               >
+            </li>
+         </ul>
+      </div>
 
 Weight: 2000
 
@@ -15862,7 +15925,7 @@ Markup:
             <div class="flex_shrink lh_1 self_center">
                 <i class="{{modifier_class}} fad font_8 m-b_2 fa-fw"></i>
                 <div class="c_white-5 font_n3  text_center">
-                    {{modifier_class}}
+                    The Object Type Label
                 </div>
             </div>
         </div>
