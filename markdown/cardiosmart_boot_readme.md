@@ -22,4 +22,101 @@
             </div>
         </div>	
 </div>
+<h2>Color Mapping of Topics to Clinical Pathways</h2>
+<table class="table">
+<thead>
+<tr>
+<th>Class</th>
+<th>Topic</th>
+<th>Pathway</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.bg_acute</td>
+<td>CAD, PAD</td>
+<td>Acute Coronary Syndromes</td>
+</tr>
+<tr>
+<td>.bg_arrthythmias</td>
+<td>Atrial Fibulation, Bradycardia, Supraventricular Tachycardia</td>
+<td>Arrthythmias and Clinical EP</td>
+</tr>
+<tr>
+<td>.bg_congenital-n1</td>
+<td>Congenital Heart Defects</td>
+<td>Congenital Heart Disease</td>
+</tr>
+<tr>
+<td>.bg_ecg-n1</td>
+<td>Stress Test</td>
+<td>Standard ECG</td>
+</tr>
+<tr>
+<td>.bg_hf</td>
+<td>Heart Valve Disease, Aortic Stenosis, Mitral Regurgitation</td>
+<td>Heart Failure</td>
+</tr>
+<tr>
+<td>.bg_prevention</td>
+<td>High blood presure</td>
+<td>Prevention</td>
+</tr>
+<tr>
+<td>.bg_valvular</td>
+<td>Heart Valve Disease,Aortic Stenosis,Mitral Regurgitation</td>
+<td>Valvular Heart Disease</td>
+</tr>
+<tr>
+<td>.bg_vascular</td>
+<td>Aortic Aneurysm, Peripheral Artery Disease, Renal Artery Disease, Subclavian Artery Disease,Varicose Veins</td>
+<td>Vascular Medicine</td>
+</tr>
+<tr>
+<td>.bg_secondary</td>
+<td>Diabetes, Diabetes and Your Heart, Metabolic Syndrome</td>
+<td>No Direct Pathway</td>
+</tr>
+<tr>
+<td>.bg_shade-n2</td>
+<td>Angina, Endocarditis, Cardio-oncology, Geriatric Cardiology, Cardiac Rehab</td>
+<td>No Direct Pathway</td>
+</tr>
+<tr>
+<td>.bg_accent-n2</td>
+<td>Heart Attack, Stroke, Sudden Cardiac Arrest, Sudden Cardiac Arrest and Sports</td>
+<td>No Direct Pathway</td>
+</tr>
+<tr>
+<td>.bg_ischemnic</td>
+<td>No Related Topic</td>
+<td>Stable Ischemic Heart Disease</td>
+</tr>
+<tr>
+<td>.bg_invasive</td>
+<td>No Related Topic</td>
+<td>Invasive Cardiovascular Angiography and Intervention</td>
+</tr>
+<tr>
+<td>.bg_noninvasive</td>
+<td>No Related Topic</td>
+<td>Noninvasive Imaging (Noninvasive Cardiology)</td>
+</tr>
+<tr>
+<td>.bg_preicardial</td>
+<td>No Related Topic</td>
+<td>Pericardial Disease</td>
+</tr>
+<tr>
+<td>.bg_pulmonary</td>
+<td>No Related Topic</td>
+<td>Pulmonary Hypertension and Venous Thromboembolism</td>
+</tr>
+<tr>
+<td>.bg_special</td>
+<td>No Related Topic</td>
+<td>Special</td>
+</tr>
+</tbody>
+</table>
 </div>

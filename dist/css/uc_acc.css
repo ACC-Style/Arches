@@ -6,6 +6,16 @@
  */
 /**  Pre Header - modular scale default break points utility    *********************************/
 /**  Version: 1.1.0    *********************************/
+/*  
+get-themecolor()
+
+Gets a color value that fits into the set color patterns for usage in new css.
+
+ $key - The color name to be modified [primary,secondary,etc...]
+ $modifier   - The color shift you desire default is 0 but you can pass in [-5,-4,...0,1...4,5]. 
+
+ Styleguide: mixins.get-themecolor
+*/
 .icon-after:after, a.link[target=_blank]:after, a.link[href^=http]:after, a.link[href^=https]:after, .icon-before:before, a.link:before {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -548,7 +558,7 @@ div[class*=texture_] {
     </section>
 </div>
 
-    Styleguide Recipes.Footer.Fat Footer Links
+    Styleguide Recipes.Footer.Fat Footer-Links
 
 */
 /*
@@ -558,6 +568,7 @@ div[class*=texture_] {
 
     Markup:
     <div class=" texture_dark p_4 ">
+    {{> "Recipes.Footer.Fat Footer-Links" modifier_class=""}}
     <!-- ACC Product Links -->
         <section class="acc-websites flex_auto m-l_5:md m-r_5:md m-y_5 max-w_30 w-grid_12 w-grid_6:md">
                 <h3 class="font_0 font_1:md c_white font_regular font_slab m-b_3 m-b_4:lg m-t_4:lg m-t_5 text_center text_left:lg w_100">
@@ -1486,7 +1497,7 @@ i.icon-complete_check-circle:before {
 /*
 Loading Grid Dots
 
-Animated Loading Dots
+Experimental: Animated Loading Dots
 
 white              - text color modified light to dark
 black              - text color modified light to dark

@@ -101,7 +101,7 @@ gulp.task("fontawesome", function() {
 	console.log("Gulp Font Awesome Tasks");
 	console.log("Gulp: Going to the store node_modules to pick up some fonts.");
 	return gulp
-		.src(["css/*", "webfonts/*"], {
+		.src(["css/**/*", "webfonts/**/*"], {
 			cwd: "./node_modules/@fortawesome/fontawesome-pro/",
 			cwdbase: true
 		})
@@ -119,7 +119,7 @@ gulp.task("dist", function() {
 		"Gulp: Gosh my back is tired. Moving boxes from Assets to the dist"
 	);
 	return gulp
-		.src(["css/*", "fonts/*", "js/**/*", "img/**/*"], {
+		.src(["css/*", "fonts/*", "js/**/*", "img/**/*", "icons/**/*"], {
 			cwd: "./src",
 			cwdbase: true
 		})
