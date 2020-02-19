@@ -432,7 +432,7 @@ var buildbrand = function(base, brand, framework) {
 				)
 				.pipe(
 					header(
-						" \n/** Utility Class Built on top of Bootstrap 4.3 **/ \n",
+						" \n/** Utility Class Built on top of Bootstrap 4.4 **/ \n",
 						{
 							pkg: pkg
 						}
