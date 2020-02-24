@@ -1,0 +1,39 @@
+- Reciepes
+  - Primary Nav -- 0
+  - Footer
+  - Page
+    - Page Title
+    - Page Intro Content
+    - Collapsed Content
+    - Category Link
+    - Living With
+    - Editor Credit
+  - News
+    - Article Snippet
+      - Hero
+      - list
+      - Carousel
+    - Article Header
+    - Article Content
+    - Article Cite
+    - Author
+      - Editorial
+      - Single Author
+  - Related &amp; Featured
+    - Featured Block
+      - Icon
+      - Thumbnail
+    - Related
+      - Group
+        - Carousel
+        - Grid
+      - Item
+        - Pathway Color
+        - Type Icons
+      - Pages
+        - Topics
+        - Tools
+        - Descsions
+  - Patient Story
+    - Excerpt
+    - Full
