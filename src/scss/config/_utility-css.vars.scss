@@ -213,6 +213,14 @@ $value-to-unit: (
 		left: left,
 		right: right
 	),
+	text-align: (
+		unset: unset,
+		center: center,
+		left: left,
+		right: right,
+		start: start,
+		end: end
+	),
 	background-position: (
 		left: left center,
 		right: right center,
@@ -267,7 +275,8 @@ $value-to-unit: (
 		table: table,
 		table-row: table-row,
 		flex: flex,
-		flex-inline: flex-inline
+		flex-inline: flex-inline,
+		grid: grid
 	),
 	hover: (
 		dark: -30%,
@@ -605,6 +614,15 @@ $style-definition: (
 		unit: map-get($value-to-unit, 'display'),
 		alt: 'none'
 	),
+	text-align: (
+		short-name: '.text',
+		css-style: (
+			'text-align'
+		),
+		long-name: '.text-align',
+		unit: map-get($value-to-unit, 'text-align'),
+		alt: 'none'
+	),
 	color: (
 		short-name: '.c',
 		css-style: (
@@ -791,6 +809,22 @@ $style-definition: (
 		),
 		long-name: '.margin-right',
 		unit: map-get($value-to-unit, 'size')
+	),
+	grid-column-gap: (
+		short-name: '.gap-x',
+		css-style: (
+			'grid-column-gap'
+		),
+		long-name: '.grid-column-gap',
+		unit: map-get($value-to-unit, 'size-positive')
+	),
+	grid-row-gap: (
+		short-name: '.gap-y',
+		css-style: (
+			'grid-row-gap'
+		),
+		long-name: '.grid-row-gap',
+		unit: map-get($value-to-unit, 'size-positive')
 	),
 	padding: (
 		short-name: '.p',

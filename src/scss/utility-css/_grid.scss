@@ -1,0 +1,59 @@
+/*
+Grid Gap
+ 
+Description: Grid Docs
+ 
+Markup:
+
+ 
+Weight:0
+ 
+Styleguide  display.Grid.Gap
+*/
+@include loop-style(grid-column-gap, '', '!important');
+@media #{$medium-up} {
+	@include loop-style(grid-column-gap, $bp-label_medium, '!important');
+}
+
+@media #{$large-up} {
+	@include loop-style(grid-column-gap, $bp-label_large, '!important');
+}
+
+@include loop-style(grid-row-gap, '', '!important');
+@media #{$medium-up} {
+	@include loop-style(grid-row-gap, $bp-label_medium, '!important');
+}
+
+@media #{$large-up} {
+	@include loop-style(grid-row-gap, $bp-label_large, '!important');
+}
+/*
+Grid Column Template
+ 
+Description: Grid Docs
+ 
+Markup:
+
+ 
+Weight:0
+ 
+Styleguide  display.Grid.Template
+*/
+.template-x_40 {
+	grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+}
+.template-x_30 {
+	grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+}
+.template-x_15 {
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.template-y_40 {
+	grid-template-row: repeat(auto-fill, minmax(40rem, 1fr));
+}
+.template-y_30 {
+	grid-template-row: repeat(auto-fill, minmax(30rem, 1fr));
+}
+.template-y_15 {
+	grid-template-row: repeat(auto-fill, minmax(15rem, 1fr));
+}

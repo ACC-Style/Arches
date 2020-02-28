@@ -4,7 +4,7 @@
 		<div class="c_black font_11:lg font_6 font_8:md font_ui lh_1 m-y_4">Color Codes
 			<span class="block font_1 m-y_2 font_bold opacity_7">Multi Product, Framework, Brand Style System</span>
 		</div>
-	<p class="c_black m-y_3 max-w_5 lh_3">Demos layouts.</p>
+	<p class="c_black m-y_3 max-w_65 lh_3">Demos layouts.</p>
 </div>
 
 
@@ -12,3 +12,6 @@
 
 
 </div>
+<style>
+
+</style>

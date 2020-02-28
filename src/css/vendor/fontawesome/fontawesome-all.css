@@ -13,8 +13,8 @@
   display: inline-block;
   font-style: normal;
   font-variant: normal;
-  text-rendering: auto;
   line-height: 1;
+  text-rendering: auto;
 }
 
 .fa-lg {
@@ -72,31 +72,31 @@
 }
 
 .fa-fw {
-  text-align: center;
   width: 1.25em;
+  text-align: center;
 }
 
 .fa-ul {
-  list-style-type: none;
   margin-left: 2.5em;
   padding-left: 0;
+  list-style-type: none;
 }
 .fa-ul > li {
   position: relative;
 }
 
 .fa-li {
-  left: -2em;
   position: absolute;
-  text-align: center;
+  left: -2em;
   width: 2em;
   line-height: inherit;
+  text-align: center;
 }
 
 .fa-border {
+  padding: 0.2em 0.25em 0.15em;
   border: solid 0.08em #eee;
   border-radius: 0.1em;
-  padding: 0.2em 0.25em 0.15em;
 }
 
 .fa-pull-left {
@@ -123,11 +123,22 @@
 }
 
 .fa-spin {
-  animation: fa-spin 2s infinite linear;
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
 }
 
 .fa-pulse {
-  animation: fa-spin 1s infinite steps(8);
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fa-spin {
@@ -159,12 +170,14 @@
 }
 
 .fa-flip-vertical {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   transform: scale(1, -1);
 }
 
-.fa-flip-horizontal.fa-flip-vertical {
+.fa-flip-vertical,.fa-flip-horizontal.fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+}
+
+.fa-flip-horizontal.fa-flip-vertical {
   transform: scale(-1, -1);
 }
 
@@ -173,24 +186,25 @@
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  filter: none;
+  -webkit-filter: none;
+          filter: none;
 }
 
 .fa-stack {
   display: inline-block;
+  position: relative;
+  width: 2em;
   height: 2em;
   line-height: 2em;
-  position: relative;
   vertical-align: middle;
-  width: 2em;
 }
 
 .fa-stack-1x,
 .fa-stack-2x {
-  left: 0;
   position: absolute;
-  text-align: center;
+  left: 0;
   width: 100%;
+  text-align: center;
 }
 
 .fa-stack-1x {
@@ -7056,22 +7070,22 @@ readers do not read off random characters that represent icons */
 }
 
 .sr-only {
-  border: 0;
   clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
   position: absolute;
   width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
 }
 
 .sr-only-focusable:active, .sr-only-focusable:focus {
   clip: auto;
+  position: static;
+  width: auto;
   height: auto;
   margin: 0;
   overflow: visible;
-  position: static;
-  width: auto;
 }
 /*# sourceMappingURL=../../maps/vendor/fontawesome/fontawesome-all.css.map */

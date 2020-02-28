@@ -448,44 +448,13 @@ Styleguide Typography.Text.Indent
 
   Styleguide Typography.Text.Alignment
  */
-.text_right {
-	text-align: right !important;
-}
-
-.text_center {
-	text-align: center !important;
-}
-
-.text_left {
-	text-align: left !important;
-}
-
+@include loop-style(text-align, '', '!important');
 @media #{$medium-up} {
-	.text_right\:md {
-		text-align: right !important;
-	}
-
-	.text_center\:md {
-		text-align: center !important;
-	}
-
-	.text_left\:md {
-		text-align: left !important;
-	}
+	@include loop-style(text-align, $bp-label_medium, '!important');
 }
 
 @media #{$large-up} {
-	.text_right\:lg {
-		text-align: right !important;
-	}
-
-	.text_center\:lg {
-		text-align: center !important;
-	}
-
-	.text_left\:lg {
-		text-align: left !important;
-	}
+	@include loop-style(text-align, $bp-label_large, '!important');
 }
 
 /*

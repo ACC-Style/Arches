@@ -94,7 +94,7 @@ gulp.task("style", function() {
 
 	return merge(css, min, gz)
 		.pipe(sourcemaps.write("/maps"))
-		.pipe(gulp.dest(SOURCE.DIST + SOURCE.CSS));
+		.pipe(gulp.dest(SOURCE.SRC + SOURCE.CSS));
 });
 
 gulp.task("fontawesome", function() {
@@ -171,7 +171,6 @@ gulp.task("markdown", function() {
 		"cvqualtiy_boot",
 		"cardiosmart_boot",
 		"cardiosmart_zurb",
-		"acc_uc",
 		"acc_boot",
 		"acc_zurb",
 		"jacc_boot",
@@ -186,7 +185,6 @@ gulp.task("markdown", function() {
 	var acc_zurb = markdownbuild(base, "acc_zurb");
 	var cardiosmart_zurb = markdownbuild(base, "cardiosmart_zurb");
 	var cardiosmart_boot = markdownbuild(base, "cardiosmart_boot");
-	var acc_uc = markdownbuild(base, "acc_uc");
 	var acc_boot = markdownbuild(base, "acc_boot");
 	var jacc_boot = markdownbuild(base, "jacc_boot");
 	var layoutdemo = markdownbuild(base, "layoutdemo");
@@ -197,7 +195,6 @@ gulp.task("markdown", function() {
 		acc_boot,
 		jacc_boot,
 		acc_zurb,
-		acc_uc,
 		cardiosmart_zurb,
 		cardiosmart_boot,
 		layoutdemo,
@@ -888,7 +885,7 @@ gulp.task("watch", function() {
 
 gulp.task("styleguide", function() {
 	return run(
-		"npm run index && npm run uc && npm run zurb_acc && npm run boot_acc && npm run boot_jacc && npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run uc_cardiosmart"
+		"npm run index && npm run zurb_acc && npm run boot_acc && npm run boot_jacc && npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run uc_cardiosmart"
 	).exec();
 });
 
