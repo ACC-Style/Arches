@@ -13759,10 +13759,6 @@ Styleguide  Recipes Bootstrap.Carousel
   color: white;
 }
 
-.show i.icon-toggle_plus-minus:before, .dropdown:hover i.icon-toggle_plus-minus:before {
-  content: "";
-}
-
 /*
 CardioSmart Nav
 
@@ -14568,6 +14564,13 @@ Weight: 3
 Styleguide Recipes.Branded Nav.Dropdowns.Alt Content
 
 */
+.show i.icon-toggle_plus-minus:before, .dropdown:hover i.icon-toggle_plus-minus:before,.accordion i.icon-toggle_plus-minus:before {
+  content: "";
+}
+.accordion .collapsed i.icon-toggle_plus-minus:before {
+  content: "";
+}
+
 /*
 	Bootstrap Recipes
 
@@ -14653,6 +14656,32 @@ Pagination Design
 Weight: 100
 
 Styleguide  Recipes Bootstrap.Pagination
+
+*/
+/*
+Simple Tabs
+
+Simple in page tabs 
+
+Markup:
+<nav class="br-b_3 br_acc br_solid">
+  <ul class="bg_black-1 c_primary font_0 font_bold font_ui nav m-b_n2">
+    <li class="bg_white br-b_0 br_2 br_acc br_solid m-x_1 nav-item">
+      <a class="active nav-link p-x_3" href="#">Active</a>
+    </li>
+    <li class="nav-item  m-x_1">
+      <a class="nav-link p-x_4 h:bg_acc h:c_white" href="#">Link</a>
+    </li>
+    <li class="nav-item  m-x_1">
+      <a class="nav-link p-x_4 h:bg_acc h:c_white" href="#">Link</a>
+    </li>
+    <li class="nav-item  m-x_2">
+      <a class="nav-link p-x_3 h:bg_black-3" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>
+</nav>
+
+Styleguide  Recipes Bootstrap.Tabs
 
 */
 /*
@@ -15481,12 +15510,14 @@ Styleguide RecipesPages.blockquote
 /*
 Page Title (1.01-Z)
 
-Dynamical Driven from the Meta Data, and should also populate the meta Tag Title in the header of the html
- (Emphasis Level)
+Dynamical Driven from the Meta Data, and should also populate the meta Tag Title in the header of the html (Emphasis Level)
 
 
 Markup:
-<div>Title and meta data of a page</div>
+<header class="">
+	<h1 data-attr="title" class="">Quality Comes First in Carbs vs. Fats Debate</h1>
+
+</header>
 
 Weight: -1
 
@@ -15538,47 +15569,40 @@ Collapsed Content Section (1.01-b)
 
 Easy to edit content wells wrapped in a collapser.  These content area should support all rich text needs and hyperlinks (Primary Level Content)
 
+Markup:
 <div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
+  <div class="br_none card">
+    <div class="bg_white-0 br_none card-header p-b_0 p-t_3 p-x_0" id="headingOne">
+        <button class="btn btn-link br_none br_none font_1 font_bold" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <i class="fas icon-toggle_plus-minus p-r_3"></i>Collapsible Group Item #1
         </button>
-      </h2>
     </div>
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="collapseOne" class="card-body p-b_4 p-l_3 p-t_2 collapse show" aria-labelledby="headingOne" data-parent="#accordionExample" >
+      <div class="">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
+   <div class="br_none card">
+    <div class="bg_white-0 br_none card-header p-b_0 p-t_3 p-x_0" id="headerTwo">
+        <button class="btn btn-link br_none br_none font_1 font_bold collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <i class="fas icon-toggle_plus-minus p-r_3"></i>Collapsible Group Item #2
         </button>
-      </h2>
     </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="collapseTwo" class="card-body p-b_4 p-l_3 p-t_2 collapse" aria-labelledby="headerTwo" data-parent="#accordionExample" >
+      <div class="">
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
+    <div class="br_none card">
+    <div class="bg_white-0 br_none card-header p-b_0 p-t_3 p-x_0" id="headingThree">
+        <button class="btn btn-link br_none br_none font_1 font_bold collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <i class="fas icon-toggle_plus-minus p-r_3"></i>Collapsible Group Item #3
         </button>
-      </h2>
     </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
+    <div id="collapseThree" class="card-body p-b_4 p-l_3 p-t_2 collapse" aria-labelledby="headingThree" data-parent="#accordionExample" >
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab voluptatibus ut quibusdam officiis, debitis quae ipsum fugiat, facere repellat assumenda dolorum ducimus ad rem blanditiis, deleniti dolorem consequuntur nostrum corrupti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aliquid tempora quo optio explicabo deleniti cupiditate ducimus error, quam minus rem mollitia. Sequi sint ratione voluptatem assumenda mollitia id rerum.   
     </div>
   </div>
 </div>
