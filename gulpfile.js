@@ -139,22 +139,16 @@ var markdownbuild = function(base, label) {
 		.pipe(rename(label + "_readme.md"))
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.MARKDOWN + "partial_" + label + ".md",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.MARKDOWN + "partial_" + label + ".md", "utf8"),
 				{
 					pkg: pkg
 				}
 			)
 		)
 		.pipe(
-			header(
-				fs.readFileSync(PATHS.MARKDOWN + "markdown_header.md", "utf8"),
-				{
-					pkg: pkg
-				}
-			)
+			header(fs.readFileSync(PATHS.MARKDOWN + "markdown_header.md", "utf8"), {
+				pkg: pkg
+			})
 		)
 		.pipe(
 			header("<div class='" + label + "_nav'>", {
@@ -202,10 +196,7 @@ gulp.task("markdown", function() {
 	)
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.MARKDOWN + "markdown_preheader.md",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -245,10 +236,7 @@ var buildbrand = function(base, brand, framework) {
 				)
 				.pipe(
 					header(
-						fs.readFileSync(
-							PATHS.SCSS + "/config/__config.boot.scss",
-							"utf8"
-						),
+						fs.readFileSync(PATHS.SCSS + "/config/__config.boot.scss", "utf8"),
 						{
 							pkg: pkg
 						}
@@ -270,10 +258,7 @@ var buildbrand = function(base, brand, framework) {
 				)
 				.pipe(
 					header(
-						fs.readFileSync(
-							PATHS.SCSS + "/config/__config.base.scss",
-							"utf8"
-						),
+						fs.readFileSync(PATHS.SCSS + "/config/__config.base.scss", "utf8"),
 						{
 							pkg: pkg
 						}
@@ -295,10 +280,7 @@ var buildbrand = function(base, brand, framework) {
 				)
 				.pipe(
 					header(
-						fs.readFileSync(
-							PATHS.SCSS + "/config/__config.base.scss",
-							"utf8"
-						),
+						fs.readFileSync(PATHS.SCSS + "/config/__config.base.scss", "utf8"),
 						{
 							pkg: pkg
 						}
@@ -308,10 +290,7 @@ var buildbrand = function(base, brand, framework) {
 	}
 	construct.pipe(
 		header(
-			fs.readFileSync(
-				PATHS.SCSS + "/gulp_header/__brand.base.scss",
-				"utf8"
-			),
+			fs.readFileSync(PATHS.SCSS + "/gulp_header/__brand.base.scss", "utf8"),
 			{
 				pkg: pkg
 			}
@@ -385,8 +364,7 @@ var buildbrand = function(base, brand, framework) {
 				.pipe(
 					header(
 						fs.readFileSync(
-							PATHS.SCSS +
-								"/gulp_header/__brand.cardiosmart.scss",
+							PATHS.SCSS + "/gulp_header/__brand.cardiosmart.scss",
 							"utf8"
 						),
 						{
@@ -428,12 +406,9 @@ var buildbrand = function(base, brand, framework) {
 					)
 				)
 				.pipe(
-					header(
-						" \n/** Utility Class Built on top of Bootstrap 4.4 **/ \n",
-						{
-							pkg: pkg
-						}
-					)
+					header(" \n/** Utility Class Built on top of Bootstrap 4.4 **/ \n", {
+						pkg: pkg
+					})
 				);
 			break;
 		case "zurb":
@@ -481,10 +456,7 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.noframe.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.noframe.scss", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -514,10 +486,7 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.base.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.base.scss", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -539,10 +508,7 @@ gulp.task("construct", function() {
 	);
 	var colors = base.pipe(clone()).pipe(
 		header(
-			fs.readFileSync(
-				PATHS.SCSS + "/styleguide/_color-codes.scss",
-				"utf8"
-			),
+			fs.readFileSync(PATHS.SCSS + "/styleguide/_color-codes.scss", "utf8"),
 			{
 				pkg: pkg
 			}
@@ -554,10 +520,7 @@ gulp.task("construct", function() {
 		.pipe(rename("zurb_acc.scss"))
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.zurb.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.zurb.scss", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -579,19 +542,13 @@ gulp.task("construct", function() {
 		.pipe(clone())
 		.pipe(rename("zurb_cardiosmart.scss"))
 		.pipe(
-			header(
-				fs.readFileSync(PATHS.SCSS + "/components/_logo.scss", "utf8"),
-				{
-					pkg: pkg
-				}
-			)
+			header(fs.readFileSync(PATHS.SCSS + "/components/_logo.scss", "utf8"), {
+				pkg: pkg
+			})
 		)
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.zurb.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.zurb.scss", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -626,10 +583,7 @@ gulp.task("construct", function() {
 		.pipe(rename("boot_acc.scss"))
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.acc.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.acc.scss", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -637,10 +591,7 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.boot.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.boot.scss", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -685,10 +636,7 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.boot.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.boot.scss", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -733,10 +681,7 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.boot.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.boot.scss", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -766,10 +711,7 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/base/__cvquality.base.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/base/__cvquality.base.scss", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -777,16 +719,12 @@ gulp.task("construct", function() {
 		);
 	boot_cvquality = buildbrand(boot_cvquality, "cvquality", "bootstrap");
 	//jacc bootstrap
-	boot_cardiosmart = buildbrand(boot_cardiosmart, "cardiosmart", "bootstrap");
 	var boot_jacc = base
 		.pipe(clone())
 		.pipe(rename("boot_jacc.scss"))
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.jacc.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.jacc.scss", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -794,10 +732,7 @@ gulp.task("construct", function() {
 		)
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.boot.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/recipes/__recipes.boot.scss", "utf8"),
 				{
 					pkg: pkg
 				}
@@ -826,12 +761,9 @@ gulp.task("construct", function() {
 			)
 		)
 		.pipe(
-			header(
-				fs.readFileSync(PATHS.SCSS + "/base/__jacc.base.scss", "utf8"),
-				{
-					pkg: pkg
-				}
-			)
+			header(fs.readFileSync(PATHS.SCSS + "/base/__jacc.base.scss", "utf8"), {
+				pkg: pkg
+			})
 		);
 	boot_jacc = buildbrand(boot_jacc, "jacc", "bootstrap");
 	return merge(
@@ -849,10 +781,7 @@ gulp.task("construct", function() {
 	)
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/gulp_header/__preheader.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/gulp_header/__preheader.scss", "utf8"),
 				{
 					pkg: pkg
 				}
