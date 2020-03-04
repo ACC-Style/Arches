@@ -12436,12 +12436,14 @@ a:focus {
 
  */
 .h\:c_white:hover,
-.is-active > .a\:c_white {
+.is-active > .a\:c_white,
+.is-active.a\:c_white {
   color: white !important;
 }
 
 .h\:c_black:hover,
-.is-active > .a\:c_black {
+.is-active > .a\:c_black,
+.is-active.a\:c_black {
   color: #131212 !important;
 }
 
@@ -12511,7 +12513,8 @@ a:focus {
   */
 /* Transparent Loop */
 .h\:bg_white:hover,
-.is-active > .a\:bg_white {
+.is-active > .a\:bg_white,
+.is-active.a\:bg_white {
   background-color: white;
 }
 
@@ -12560,7 +12563,8 @@ a:focus {
 }
 
 .h\:bg_black:hover,
-.is-active > .a\:bg_black {
+.is-active > .a\:bg_black,
+.is-active.a\:bg_black {
   background-color: #131212;
 }
 
@@ -14115,9 +14119,7 @@ Styleguide is-active.black and white
   display: inline-block !important;
 }
 
-.a\:inline,
-.a\:inline-block,
-.a\:block,
+.a\:visible,
 .is-active > .a\:_none,
 .is-active.a\:_none {
   display: none !important;
@@ -23771,7 +23773,7 @@ Pagination Design
   <li class="page-item">
     <a class="a:bg_secondary a:c_white-9 br_none h:bg_primary-n2 h:c_white lh_2 p_2 p-x_3 m-l_1 page-link" href="#">1</a>
   </li>
-  <li class="page-item active is-active">
+  <li class="page-item active">
     <a class="a:bg_secondary a:c_white-9 br_none h:bg_primary-n2 h:c_white lh_2 p_2 p-x_3 m-l_1 page-link"> 2 </a>
   </li>
   <li class="page-item">
@@ -23796,7 +23798,7 @@ Markup:
 <nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_slab p-x_0 p-x_4:md shadow_bevel-light">
   <ul class="flex_column flex_row:md  nav">
     <li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item">
-      <a class="a:bg_primary-4 h:underline-none a:c_primary-n2 active br-b_3 br_primary br_solid c_primary h:bg_acc h:br_accent h:c_white is-active m-y_n2:md nav-link p-y_3:md p-x_4" href="#">Active</a>
+      <a class="a:bg_primary-4 h:underline-none a:c_primary-n2 active br-b_3 br_primary br_solid c_primary h:bg_acc h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4" href="#">Active</a>
     </li>
     <li class="br-t_3 br_white-0 br_solid:md m-l_1 nav-item">
       <a href="#" class="a:bg_primary-4 a:c_primary-n2 br-b_3 br_solid br_white-0 c_primary h:underline-none h:bg_acc h:br_accent h:c_white m-y_n2:md nav-link p-x_3 p-x_4">Link</a>

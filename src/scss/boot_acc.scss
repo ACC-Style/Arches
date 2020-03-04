@@ -163,7 +163,10 @@ $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-$active-class-name: "active";
+// Set the active state for this framework
+$active-class-name: 'active';
+$style-definition: map-deep-set($style-definition, 'is-active' 'short-name', '#{$active-class-name}>.a\\3A ');
+$style-definition: map-deep-set($style-definition, 'is-active-self' 'short-name', '#{$active-class-name}.a\\3A ');
 // Color system
 
 $white: #fff !default;
@@ -182,15 +185,15 @@ $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $grays: map-merge(
 	(
-		"100": $gray-100,
-		"200": $gray-200,
-		"300": $gray-300,
-		"400": $gray-400,
-		"500": $gray-500,
-		"600": $gray-600,
-		"700": $gray-700,
-		"800": $gray-800,
-		"900": $gray-900
+		'100': $gray-100,
+		'200': $gray-200,
+		'300': $gray-300,
+		'400': $gray-400,
+		'500': $gray-500,
+		'600': $gray-600,
+		'700': $gray-700,
+		'800': $gray-800,
+		'900': $gray-900
 	),
 	$grays
 );
@@ -210,19 +213,19 @@ $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
 	(
-		"blue": $blue,
-		"indigo": $indigo,
-		"purple": $purple,
-		"pink": $pink,
-		"red": $red,
-		"orange": $orange,
-		"yellow": $yellow,
-		"green": $green,
-		"teal": $teal,
-		"cyan": $cyan,
-		"white": $white,
-		"gray": $gray-600,
-		"gray-dark": $gray-800
+		'blue': $blue,
+		'indigo': $indigo,
+		'purple': $purple,
+		'pink': $pink,
+		'red': $red,
+		'orange': $orange,
+		'yellow': $yellow,
+		'green': $green,
+		'teal': $teal,
+		'cyan': $cyan,
+		'white': $white,
+		'gray': $gray-600,
+		'gray-dark': $gray-800
 	),
 	$colors
 );
@@ -240,14 +243,14 @@ $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
 	(
-		"primary": map-get($theme-palette, primary),
-		"secondary": map-get($theme-palette, secondary),
-		"success": map-get($theme-palette, success),
-		"info": map-get($theme-palette, info),
-		"warning": map-get($theme-palette, warning),
-		"danger": map-get($theme-palette, alert),
-		"light": $light,
-		"dark": $dark
+		'primary': map-get($theme-palette, primary),
+		'secondary': map-get($theme-palette, secondary),
+		'success': map-get($theme-palette, success),
+		'info': map-get($theme-palette, info),
+		'warning': map-get($theme-palette, warning),
+		'danger': map-get($theme-palette, alert),
+		'light': $light,
+		'dark': $dark
 	),
 	$theme-colors
 );
@@ -328,16 +331,16 @@ $body-color: #000;
 
 $link-color: map-get($theme-palette, primary);
 $link-decoration: none !default;
-$link-hover-color: scale-color($link-color, $lightness: map-deep-get($value-to-unit, "hover", "dark"));
+$link-hover-color: scale-color($link-color, $lightness: map-deep-get($value-to-unit, 'hover', 'dark'));
 $link-hover-decoration: underline !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
-$emphasized-link-hover-darken-percentage: map-deep-get($value-to-unit, "hover", "dark") * -1;
+$emphasized-link-hover-darken-percentage: map-deep-get($value-to-unit, 'hover', 'dark') * -1;
 
 // Paragraphs
 //
 // Style p element.
 
-$paragraph-margin-bottom: map-deep-get($value-to-unit, "size", "3");
+$paragraph-margin-bottom: map-deep-get($value-to-unit, 'size', '3');
 
 // Grid breakpoints
 //
@@ -391,7 +394,7 @@ $box-shadow: map-deep-get($value-to-unit, shadow, 0);
 $box-shadow-lg: map-deep-get($value-to-unit, shadow, 4);
 
 $component-active-color: $white !default;
-$component-active-bg: get-themecolor("primary", 0);
+$component-active-bg: get-themecolor('primary', 0);
 
 $caret-width: 0.3em !default;
 $caret-vertical-align: $caret-width * 0.85 !default;
@@ -415,7 +418,7 @@ $font-family-monospace: #{map-deep-get($value-to-unit, font-family, mono)};
 $font-family-base: $font-family-sans-serif;
 $headings-font-family: #{map-deep-get($value-to-unit, font-family, display)};
 // stylelint-enable value-keyword-case
-@debug "#{$headings-font-family}";
+@debug '#{$headings-font-family}';
 
 $font-size-base: $base-font-size-rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg: map-deep-get($value-to-unit, font-size, 2) !default;
@@ -676,7 +679,7 @@ $custom-control-label-disabled-color: $gray-600 !default;
 
 $custom-control-indicator-checked-color: $component-active-color !default;
 $custom-control-indicator-checked-bg: $component-active-bg !default;
-$custom-control-indicator-checked-disabled-bg: rgba(theme-color("primary"), 0.5) !default;
+$custom-control-indicator-checked-disabled-bg: rgba(theme-color('primary'), 0.5) !default;
 $custom-control-indicator-checked-box-shadow: none !default;
 $custom-control-indicator-checked-border-color: $custom-control-indicator-checked-bg !default;
 
@@ -691,16 +694,16 @@ $custom-control-indicator-active-border-color: $custom-control-indicator-active-
 $custom-checkbox-indicator-border-radius: $border-radius !default;
 $custom-checkbox-indicator-icon-checked: str-replace(
 	url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e"),
-	"#",
-	"%23"
+	'#',
+	'%23'
 ) !default;
 
 $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default;
 $custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
 $custom-checkbox-indicator-icon-indeterminate: str-replace(
 	url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3e%3cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3e%3c/svg%3e"),
-	"#",
-	"%23"
+	'#',
+	'%23'
 ) !default;
 $custom-checkbox-indicator-indeterminate-box-shadow: none !default;
 $custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-bg !default;
@@ -708,8 +711,8 @@ $custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicato
 $custom-radio-indicator-border-radius: 50% !default;
 $custom-radio-indicator-icon-checked: str-replace(
 	url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3e%3c/svg%3e"),
-	"#",
-	"%23"
+	'#',
+	'%23'
 ) !default;
 
 $custom-switch-width: $custom-control-indicator-size * 1.75 !default;
@@ -734,8 +737,8 @@ $custom-select-bg-size: 8px 10px !default; // In pixels because image dimensions
 $custom-select-indicator-color: $gray-800 !default;
 $custom-select-indicator: str-replace(
 	url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e"),
-	"#",
-	"%23"
+	'#',
+	'%23'
 ) !default;
 $custom-select-background: $custom-select-indicator no-repeat right $custom-select-padding-x center /
 	$custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
@@ -803,40 +806,40 @@ $custom-file-box-shadow: $input-box-shadow !default;
 $custom-file-button-color: $custom-file-color !default;
 $custom-file-button-bg: $input-group-addon-bg !default;
 $custom-file-text: (
-	en: "Browse"
+	en: 'Browse'
 ) !default;
 
 // Form validation
 
 $form-feedback-margin-top: $form-text-margin-top !default;
 $form-feedback-font-size: $small-font-size !default;
-$form-feedback-valid-color: theme-color("success") !default;
-$form-feedback-invalid-color: theme-color("danger") !default;
+$form-feedback-valid-color: theme-color('success') !default;
+$form-feedback-invalid-color: theme-color('danger') !default;
 
 $form-feedback-icon-valid-color: $form-feedback-valid-color !default;
 $form-feedback-icon-valid: str-replace(
 	url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e"),
-	"#",
-	"%23"
+	'#',
+	'%23'
 ) !default;
 $form-feedback-icon-invalid-color: $form-feedback-invalid-color !default;
 $form-feedback-icon-invalid: str-replace(
 	url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$form-feedback-icon-invalid-color}' viewBox='-2 -2 7 7'%3e%3cpath stroke='#{$form-feedback-icon-invalid-color}' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E"),
-	"#",
-	"%23"
+	'#',
+	'%23'
 ) !default;
 
 $form-validation-states: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $form-validation-states: map-merge(
 	(
-		"valid": (
-			"color": $form-feedback-valid-color,
-			"icon": $form-feedback-icon-valid
+		'valid': (
+			'color': $form-feedback-valid-color,
+			'icon': $form-feedback-icon-valid
 		),
-		"invalid": (
-			"color": $form-feedback-invalid-color,
-			"icon": $form-feedback-icon-invalid
+		'invalid': (
+			'color': $form-feedback-invalid-color,
+			'icon': $form-feedback-icon-invalid
 		)
 	),
 	$form-validation-states
@@ -900,8 +903,8 @@ $navbar-dark-active-color: $white !default;
 $navbar-dark-disabled-color: rgba($white, 0.25) !default;
 $navbar-dark-toggler-icon-bg: str-replace(
 	url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"),
-	"#",
-	"%23"
+	'#',
+	'%23'
 ) !default;
 $navbar-dark-toggler-border-color: rgba($white, 0.1) !default;
 
@@ -911,8 +914,8 @@ $navbar-light-active-color: rgba($black, 0.9) !default;
 $navbar-light-disabled-color: rgba($black, 0.3) !default;
 $navbar-light-toggler-icon-bg: str-replace(
 	url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"),
-	"#",
-	"%23"
+	'#',
+	'%23'
 ) !default;
 $navbar-light-toggler-border-color: rgba($black, 0.1) !default;
 
@@ -1153,7 +1156,7 @@ $progress-bg: $gray-200 !default;
 $progress-border-radius: $border-radius !default;
 $progress-box-shadow: inset 0 0.1rem 0.1rem rgba($black, 0.1) !default;
 $progress-bar-color: $white !default;
-$progress-bar-bg: theme-color("primary") !default;
+$progress-bar-bg: theme-color('primary') !default;
 $progress-bar-animation-timing: 1s linear infinite !default;
 $progress-bar-transition: width 0.6s ease !default;
 
@@ -1207,7 +1210,7 @@ $breadcrumb-margin-bottom: 1rem !default;
 $breadcrumb-bg: $gray-200 !default;
 $breadcrumb-divider-color: $gray-600 !default;
 $breadcrumb-active-color: $gray-600 !default;
-$breadcrumb-divider: quote("/") !default;
+$breadcrumb-divider: quote('/') !default;
 
 $breadcrumb-border-radius: $border-radius !default;
 
@@ -1233,13 +1236,13 @@ $carousel-control-icon-width: 20px !default;
 
 $carousel-control-prev-icon-bg: str-replace(
 	url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e"),
-	"#",
-	"%23"
+	'#',
+	'%23'
 ) !default;
 $carousel-control-next-icon-bg: str-replace(
 	url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e"),
-	"#",
-	"%23"
+	'#',
+	'%23'
 ) !default;
 
 $carousel-transition-duration: 0.6s !default;
@@ -1285,7 +1288,7 @@ $positions: static, relative, absolute, fixed, sticky !default;
 // Printing
 
 $print-page-size: a3 !default;
-$print-body-min-width: map-get($grid-breakpoints, "lg") !default;
+$print-body-min-width: map-get($grid-breakpoints, 'lg') !default;
 /*Bootstrap Framework Setup Files.*/
 
 /*!

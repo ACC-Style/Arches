@@ -9030,26 +9030,47 @@ Styleguide Recipes.Footer.Complete
 
 */
 /*
-Block Quotes
+Block Quotes Large
 
 Description: Text that needs a little extra something when it is quoted. 
 
 Markup:
-    <blockquote
-        class="bg_highlight-5 flex block p_4 p-y_5 br_round relative z1 m-x_4 max-w_35 shadow_bevel-light br_2 br_solid br_highlight-4">
-        <i class="absolute font_7 t_3 l_n5 fas fa-quote-left fa-fw c_highlight-3 z_1 text-shadow_black-1"></i>
-        <div class="flex_auto font_2 p-x_5 font_display c_black z_2">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Numquam consequuntur delectus vero. Ratione fugit totam
-            ipsum aperiam modi! Quas facilis consequuntur totam quod
-            inventore atque magnam deleniti labore quae minus?
-        </div>
-        <i class="absolute font_7 b_3 r_n5 fas fa-quote-right fa-fw c_highlight-3 z_1 text-shadow_black-1"></i>
-    </blockquote>
+<blockquote class="bg_highlight-5 flex block p_4 p-y_5:md  br_round relative z1 m-x_4:md m-x_5 shadow_bevel-light br_2 br_solid br_highlight-4  font_display">
+    <i class="absolute font_5 font_7:md  t_2 t_3:md l_n5 m-l_n3 fas fa-quote-left fa-fw c_highlight-2 z_1 text-shadow_black-1"></i>
+    <div class="flex_auto font_2:md font_1 p-x_5:md p-x_3 c_black z_2">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Numquam consequuntur delectus vero. Ratione fugit totam
+        ipsum aperiam modi! Quas facilis consequuntur totam quod
+        inventore atque magnam deleniti labore quae minus?</p>
+        <cite class="c_highlight-n3 float_right font_ui font_bold font_0 m-r_4 m-t_n3"><i class="fa-user fal p-r_3"></i>Dr. Ainsley Conolly, FACC</cite>
+    </div>
+    <i class="absolute b_3:md b_4 c_highlight-2 fa-fw fa-quote-right fas font_5 font_7:md m-r_n3 r_n5 text-shadow_black-1 z_1"></i>
+</blockquote>
 
 Weight:0
 
-Styleguide RecipesPages.blockquote
+Styleguide RecipesPages.blockquote large
+*/
+/*
+Block Quotes Small
+
+Description: Text that needs a little extra something when it is quoted. 
+
+Markup:
+<blockquote class="flex relative font_display">
+    <div class="bg_highlight bg_hightlight c_highlight-5 flex_grow font_2 p_2"><i class="fas fa-quote-left fa-fw"></i></div>
+    <div class="a:_block c_black flex_auto font_0 p-l_4">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Numquam consequuntur delectus vero. Ratione fugit totam
+        ipsum aperiam modi! Quas facilis consequuntur totam quod
+        inventore atque magnam deleniti labore quae minus?</p>
+        <cite class="c_highlight-n3 float_right font_ui font_bold font_n1  m-t_n3"><i class="fa-user fal p-r_3"></i>Dr. Ainsley Conolly, FACC</cite>
+    </div>
+</blockquote>
+
+Weight:0
+
+Styleguide RecipesPages.blockquote small
 */
 /*
 Page Title (1.01-Z)

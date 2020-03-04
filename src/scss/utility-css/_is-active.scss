@@ -153,8 +153,8 @@ Styleguide is-active.black and white
  */
 
 @each $color-name, $color in $theme-palette {
-	@include is-active-loop("background-color", $color-name, $color);
-	@include is-active-loop("color", $color-name, $color);
+	@include is-active-loop('background-color', $color-name, $color);
+	@include is-active-loop('color', $color-name, $color);
 }
 
 .a\:icon-show,
@@ -167,9 +167,7 @@ Styleguide is-active.black and white
 	display: inline-block !important;
 }
 
-.a\:inline,
-.a\:inline-block,
-.a\:block,
+.a\:visible,
 #{class-name-constructor(display,none,"",is-active)},
 #{class-name-constructor(display,none,"",is-active-self)} {
 	display: none !important;

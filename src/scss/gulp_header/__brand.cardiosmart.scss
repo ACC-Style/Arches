@@ -32,7 +32,10 @@ $theme-palette: map-merge(
 	)
 );
 @debug 'brand cardiosmart added theme accent ' + map-get($map: $theme-palette, $key: accent);
-
+// Set the active state for this framework & brand
+$active-class-name: 'active';
+$style-definition: map-deep-set($style-definition, 'is-active' 'short-name', '#{$active-class-name}>.a\\3A ');
+$style-definition: map-deep-set($style-definition, 'is-active-self' 'short-name', '#{$active-class-name}.a\\3A ');
 $fonts: (
 	slab: (
 		name: 'Roboto Slab',

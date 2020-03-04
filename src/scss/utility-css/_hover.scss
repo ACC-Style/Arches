@@ -47,8 +47,8 @@ a:focus {
 	color: unset;
 }
 %hover_transition,
-*[class*=" hover:"],
-*[class*=" h\:"] {
+*[class*=' hover:'],
+*[class*=' h\:'] {
 	transition: all ease-out 0.2s; // used for backgrounds
 	cursor: pointer;
 	&:focus {
@@ -58,15 +58,15 @@ a:focus {
 	}
 }
 %hover_transition-in,
-*[class*="hover:c"],
-*[class*=" h:c"] {
+*[class*='hover:c'],
+*[class*=' h:c'] {
 	transition: all ease-in 0.2s; // used for text
 }
 
 @each $color-name, $color in $theme-palette {
-	@include hover-loop("background-color", $color-name, $color);
-	@include hover-loop("color", $color-name, $color);
-	@include hover-loop("border-color", $color-name, $color);
+	@include hover-loop('background-color', $color-name, $color);
+	@include hover-loop('color', $color-name, $color);
+	@include hover-loop('border-color', $color-name, $color);
 }
 
 /*
@@ -104,11 +104,13 @@ a:focus {
  */
 
 #{ class-name-constructor(color, white, "", "hover")},
-#{ class-name-constructor(color, white, "", "is-active")} {
+#{ class-name-constructor(color, white, "", "is-active")},
+#{ class-name-constructor(color, white, "", "is-active-self")} {
 	color: $white !important;
 }
 #{ class-name-constructor(color, black, "", "hover")},
-#{ class-name-constructor(color, black, "", "is-active")} {
+#{ class-name-constructor(color, black, "", "is-active")},
+#{ class-name-constructor(color, black, "", "is-active-self")} {
 	color: $black !important;
 }
 
@@ -181,16 +183,18 @@ a:focus {
 
 /* Transparent Loop */
 #{ class-name-constructor(background-color, white, "", "hover")},
-#{ class-name-constructor(background-color, white, "", "is-active")} {
+#{ class-name-constructor(background-color, white, "", "is-active")},
+#{ class-name-constructor(background-color, white, "", "is-active-self")} {
 	background-color: $white;
 }
-@include loop-transparent(background-transparent, white, "", "!important", true);
+@include loop-transparent(background-transparent, white, '', '!important', true);
 
 #{ class-name-constructor(background-color, black, "", "hover")},
-#{ class-name-constructor(background-color, black, "", "is-active")} {
+#{ class-name-constructor(background-color, black, "", "is-active")},
+#{ class-name-constructor(background-color, black, "", "is-active-self")} {
 	background-color: $black;
 }
-@include loop-transparent(background-transparent, black, "", "!important", true);
+@include loop-transparent(background-transparent, black, '', '!important', true);
 
 /*
 Hover: Background Black and White Opacity 

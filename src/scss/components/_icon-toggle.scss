@@ -5,7 +5,7 @@
 /*
 Is Active Toggle 
 
-Many momment there are needs for toggles of icon when the parent is in the state of `is-active`.  Used in tree navs, dropdowns, and collapsing areas. 
+Many momment there are needs for toggles of icon when the parent is in the state of `#{$active-class-name}`.  Used in tree navs, dropdowns, and collapsing areas. 
 
 .icon-toggle_plus-minus 					-  Toggle between plus and minus square
 .icon-toggle_chevron-up-down				- 	Toggle a chevro pointing up and then down.
@@ -17,20 +17,20 @@ Many momment there are needs for toggles of icon when the parent is in the state
 
 Markup:
 <ul data-style="{{ modifier_class }}" class="ul_none m_0 p_0">
-	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
+	<li class="m-t_1 is-active_toggle-function #{$active-class-name} c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
 			<span class="">FA Solid {{ modifier_class }}</span>
 			<i class="font_3 fas fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (is-active) </span>
+			<span class="a:inline"> (#{$active-class-name}) </span>
 	</li>
-	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
+	<li class="m-t_1 is-active_toggle-function #{$active-class-name} c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
 			<span class="">FA Regular {{ modifier_class }}</span>
 			<i class="font_3 far  fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (is-active) </span>
+			<span class="a:inline"> (#{$active-class-name}) </span>
 	</li>
-	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
+	<li class="m-t_1 is-active_toggle-function #{$active-class-name} c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
 			<span class="">FA Light {{ modifier_class }}</span>
 			<i class="font_3 fal fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (is-active) </span>
+			<span class="a:inline"> (#{$active-class-name}) </span>
 	</li>
 </ul>
 
@@ -41,71 +41,71 @@ Styleguide InteractiveExtras.ToggleIcons
 i.icon-toggle_bars-times:before {
 	@extend %icon-toggle-space;
 
-	content: "\f0c9";
+	content: '\f0c9';
 
-	.is-active &,
-	[class^="is-active"] {
-		content: "\f2d3";
+	.#{$active-class-name} &,
+	[class^='#{$active-class-name}'] {
+		content: '\f2d3';
 	}
 }
 
 i.icon-toggle_plus-minus:before {
 	@extend %icon-toggle-space;
 
-	content: "\f0fe";
+	content: '\f0fe';
 
-	.is-active &,
-	[class^="is-active"] {
-		content: "\f146";
+	.#{$active-class-name} &,
+	[class^='#{$active-class-name}'] {
+		content: '\f146';
 	}
 }
 i.icon-toggle_chevron-up-down:before {
 	@extend %icon-toggle-space;
-	content: "\f106";
-	.is-active &,
-	[class^="is-active"] {
-		content: "\f107";
+	content: '\f106';
+	.#{$active-class-name} &,
+	[class^='#{$active-class-name}'] {
+		content: '\f107';
 	}
 }
 i.icon-toggle_chevron-double-up-down:before {
 	@extend %icon-toggle-space;
-	content: "\f103";
-	.is-active &,
-	[class^="is-active"] {
-		content: "\f325";
+	content: '\f103';
+	.#{$active-class-name} &,
+	[class^='#{$active-class-name}'] {
+		content: '\f325';
 	}
 }
 
 i.icon-toggle_chevron-double-left-right:before {
 	@extend %icon-toggle-space;
-	content: "\f324";
-	.is-active &,
-	[class^="is-active"] {
-		content: "\f323";
+	content: '\f324';
+	.#{$active-class-name} &,
+	[class^='#{$active-class-name}'] {
+		content: '\f323';
 	}
 }
 
 i.icon-toggle_caret-circle-right-down:before {
 	@extend %icon-toggle-space;
-	content: "\f32d";
-	.is-active &,
-	[class^="is-active"] {
-		content: "\f330";
+	content: '\f32d';
+	.#{$active-class-name} &,
+	[class^='#{$active-class-name}'] {
+		content: '\f330';
 	}
 }
 i.icon-toggle_arrow-circle:before {
 	@extend %icon-toggle-space;
-	content: "\f061";
-	.is-active &,
-	[class^="is-active"] {
-		content: "\f0a9";
+	content: '\f061';
+	.#{$active-class-name} &,
+	[class^='#{$active-class-name}'] {
+		content: '\f0a9';
 	}
 }
 
 /*
 Complete Toggle 
 
-This variation of the icon toggle responds to `is-complete` and not is `is-active`
+This variation of the icon toggle responds to `is-complete` and not is `#{$active-class-name}`
 
 .icon-complete_check					- Toggle a check mark to show.
 .icon-complete_check-circle		- Toggle a check mark to show.
@@ -138,16 +138,16 @@ Markup:
 Styleguide InteractiveExtras.CompleteIcons
 */
 i.icon-complete_check:before {
-	content: "";
+	content: '';
 	.is-complete & {
 		@extend %icon-toggle-space;
-		content: "\f00c";
+		content: '\f00c';
 	}
 }
 i.icon-complete_check-circle:before {
 	@extend %icon-toggle-space;
-	content: "\f111";
+	content: '\f111';
 	.is-complete & {
-		content: "\f058";
+		content: '\f058';
 	}
 }

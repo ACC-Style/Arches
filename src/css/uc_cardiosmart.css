@@ -1542,7 +1542,7 @@ i.icon-complete_check-circle:before, .is-complete i.icon-complete_check:before, 
 /*
 Is Active Toggle 
 
-Many momment there are needs for toggles of icon when the parent is in the state of `is-active`.  Used in tree navs, dropdowns, and collapsing areas. 
+Many momment there are needs for toggles of icon when the parent is in the state of `active`.  Used in tree navs, dropdowns, and collapsing areas. 
 
 .icon-toggle_plus-minus 					-  Toggle between plus and minus square
 .icon-toggle_chevron-up-down				- 	Toggle a chevro pointing up and then down.
@@ -1554,20 +1554,20 @@ Many momment there are needs for toggles of icon when the parent is in the state
 
 Markup:
 <ul data-style="{{ modifier_class }}" class="ul_none m_0 p_0">
-	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
+	<li class="m-t_1 is-active_toggle-function active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
 			<span class="">FA Solid {{ modifier_class }}</span>
 			<i class="font_3 fas fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (is-active) </span>
+			<span class="a:inline"> (active) </span>
 	</li>
-	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
+	<li class="m-t_1 is-active_toggle-function active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
 			<span class="">FA Regular {{ modifier_class }}</span>
 			<i class="font_3 far  fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (is-active) </span>
+			<span class="a:inline"> (active) </span>
 	</li>
-	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
+	<li class="m-t_1 is-active_toggle-function active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
 			<span class="">FA Light {{ modifier_class }}</span>
 			<i class="font_3 fal fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (is-active) </span>
+			<span class="a:inline"> (active) </span>
 	</li>
 </ul>
 
@@ -1577,63 +1577,63 @@ Styleguide InteractiveExtras.ToggleIcons
 i.icon-toggle_bars-times:before {
   content: "";
 }
-.is-active i.icon-toggle_bars-times:before,
-i.icon-toggle_bars-times:before [class^=is-active] {
+.active i.icon-toggle_bars-times:before,
+i.icon-toggle_bars-times:before [class^=active] {
   content: "";
 }
 
 i.icon-toggle_plus-minus:before {
   content: "";
 }
-.is-active i.icon-toggle_plus-minus:before,
-i.icon-toggle_plus-minus:before [class^=is-active] {
+.active i.icon-toggle_plus-minus:before,
+i.icon-toggle_plus-minus:before [class^=active] {
   content: "";
 }
 
 i.icon-toggle_chevron-up-down:before {
   content: "";
 }
-.is-active i.icon-toggle_chevron-up-down:before,
-i.icon-toggle_chevron-up-down:before [class^=is-active] {
+.active i.icon-toggle_chevron-up-down:before,
+i.icon-toggle_chevron-up-down:before [class^=active] {
   content: "";
 }
 
 i.icon-toggle_chevron-double-up-down:before {
   content: "";
 }
-.is-active i.icon-toggle_chevron-double-up-down:before,
-i.icon-toggle_chevron-double-up-down:before [class^=is-active] {
+.active i.icon-toggle_chevron-double-up-down:before,
+i.icon-toggle_chevron-double-up-down:before [class^=active] {
   content: "";
 }
 
 i.icon-toggle_chevron-double-left-right:before {
   content: "";
 }
-.is-active i.icon-toggle_chevron-double-left-right:before,
-i.icon-toggle_chevron-double-left-right:before [class^=is-active] {
+.active i.icon-toggle_chevron-double-left-right:before,
+i.icon-toggle_chevron-double-left-right:before [class^=active] {
   content: "";
 }
 
 i.icon-toggle_caret-circle-right-down:before {
   content: "";
 }
-.is-active i.icon-toggle_caret-circle-right-down:before,
-i.icon-toggle_caret-circle-right-down:before [class^=is-active] {
+.active i.icon-toggle_caret-circle-right-down:before,
+i.icon-toggle_caret-circle-right-down:before [class^=active] {
   content: "";
 }
 
 i.icon-toggle_arrow-circle:before {
   content: "";
 }
-.is-active i.icon-toggle_arrow-circle:before,
-i.icon-toggle_arrow-circle:before [class^=is-active] {
+.active i.icon-toggle_arrow-circle:before,
+i.icon-toggle_arrow-circle:before [class^=active] {
   content: "";
 }
 
 /*
 Complete Toggle 
 
-This variation of the icon toggle responds to `is-complete` and not is `is-active`
+This variation of the icon toggle responds to `is-complete` and not is `active`
 
 .icon-complete_check					- Toggle a check mark to show.
 .icon-complete_check-circle		- Toggle a check mark to show.
@@ -12390,12 +12390,14 @@ a:focus {
 
  */
 .h\:c_white:hover,
-.is-active > .a\:c_white {
+.active > .a\:c_white,
+.active.a\:c_white {
   color: white !important;
 }
 
 .h\:c_black:hover,
-.is-active > .a\:c_black {
+.active > .a\:c_black,
+.active.a\:c_black {
   color: #131212 !important;
 }
 
@@ -12465,7 +12467,8 @@ a:focus {
   */
 /* Transparent Loop */
 .h\:bg_white:hover,
-.is-active > .a\:bg_white {
+.active > .a\:bg_white,
+.active.a\:bg_white {
   background-color: white;
 }
 
@@ -12514,7 +12517,8 @@ a:focus {
 }
 
 .h\:bg_black:hover,
-.is-active > .a\:bg_black {
+.active > .a\:bg_black,
+.active.a\:bg_black {
   background-color: #131212;
 }
 
@@ -12616,8 +12620,8 @@ Styleguide hover.opacity
 
 */
 .h\:opacity:hover,
-.is-active > .a\:opacity,
-.is-active.a\:opacity {
+.active > .a\:opacity,
+.active.a\:opacity {
   opacity: 1;
 }
 
@@ -12670,7 +12674,7 @@ Styleguide hover.borders
 /*
 UC: Is-active 
 
-A common class name given to the parent container can effect the color, background and opacity of the children.  The active class is different depending if you are using Bootstrap or Foundation. <h1>This Variation of Arches uses <strong>"is-active"</strong></h1>  
+A common class name given to the parent container can effect the color, background and opacity of the children.  The active class is different depending if you are using Bootstrap or Foundation. <h1>This Variation of Arches uses <strong>"active"</strong></h1>  
 
 Weight: 135
 
@@ -12732,7 +12736,7 @@ Styleguide is-active.black and white
 /*
   Is active font color
 
-  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Set the font color of the child by setting the parent to .is-active. `a:c_primary`
+  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Set the font color of the child by setting the parent to .active. `a:c_primary`
 
   c_primary              - text color modified light to dark
   c_shade              - text color modified light to dark
@@ -12765,7 +12769,7 @@ Styleguide is-active.black and white
 /*
   Is active font color
 
-  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Set the font color of the child by setting the parent to .is-active. `a:c_primary`
+  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Set the font color of the child by setting the parent to .active. `a:c_primary`
 
   bg_primary              - text color modified light to dark
   bg_shade              - text color modified light to dark
@@ -12818,1276 +12822,1274 @@ Styleguide is-active.black and white
 
  */
 
-.is-active.a\:bg_primary,
-.is-active > .a\:bg_primary,.is-active.a\:bg_primary-0,
-.is-active > .a\:bg_primary-0 {
+.active.a\:bg_primary,
+.active > .a\:bg_primary,.active.a\:bg_primary-0,
+.active > .a\:bg_primary-0 {
   background-color: #015697 !important;
 }
 
-.is-active.a\:bg_primary-1,
-.is-active > .a\:bg_primary-1 {
+.active.a\:bg_primary-1,
+.active > .a\:bg_primary-1 {
   background-color: #276fa7 !important;
 }
 
-.is-active.a\:bg_primary-2,
-.is-active > .a\:bg_primary-2 {
+.active.a\:bg_primary-2,
+.active > .a\:bg_primary-2 {
   background-color: #5f95bd !important;
 }
 
-.is-active.a\:bg_primary-3,
-.is-active > .a\:bg_primary-3 {
+.active.a\:bg_primary-3,
+.active > .a\:bg_primary-3 {
   background-color: #99bbd5 !important;
 }
 
-.is-active.a\:bg_primary-4,
-.is-active > .a\:bg_primary-4 {
+.active.a\:bg_primary-4,
+.active > .a\:bg_primary-4 {
   background-color: #c7dae8 !important;
 }
 
-.is-active.a\:bg_primary-5,
-.is-active > .a\:bg_primary-5 {
+.active.a\:bg_primary-5,
+.active > .a\:bg_primary-5 {
   background-color: #e6eef5 !important;
 }
 
-.is-active.a\:bg_primary-n1,
-.is-active > .a\:bg_primary-n1 {
+.active.a\:bg_primary-n1,
+.active > .a\:bg_primary-n1 {
   background-color: #014d88 !important;
 }
 
-.is-active.a\:bg_primary-n2,
-.is-active > .a\:bg_primary-n2 {
+.active.a\:bg_primary-n2,
+.active > .a\:bg_primary-n2 {
   background-color: #014171 !important;
 }
 
-.is-active.a\:bg_primary-n3,
-.is-active > .a\:bg_primary-n3 {
+.active.a\:bg_primary-n3,
+.active > .a\:bg_primary-n3 {
   background-color: #012f53 !important;
 }
 
-.is-active.a\:bg_primary-n4,
-.is-active > .a\:bg_primary-n4 {
+.active.a\:bg_primary-n4,
+.active > .a\:bg_primary-n4 {
   background-color: #00223c !important;
 }
 
-.is-active.a\:bg_primary-n5,
-.is-active > .a\:bg_primary-n5 {
+.active.a\:bg_primary-n5,
+.active > .a\:bg_primary-n5 {
   background-color: #001626 !important;
 }
 
-.is-active.a\:c_primary,
-.is-active > .a\:c_primary,.is-active.a\:c_primary-0,
-.is-active > .a\:c_primary-0 {
+.active.a\:c_primary,
+.active > .a\:c_primary,.active.a\:c_primary-0,
+.active > .a\:c_primary-0 {
   color: #015697 !important;
 }
 
-.is-active.a\:c_primary-1,
-.is-active > .a\:c_primary-1 {
+.active.a\:c_primary-1,
+.active > .a\:c_primary-1 {
   color: #276fa7 !important;
 }
 
-.is-active.a\:c_primary-2,
-.is-active > .a\:c_primary-2 {
+.active.a\:c_primary-2,
+.active > .a\:c_primary-2 {
   color: #5f95bd !important;
 }
 
-.is-active.a\:c_primary-3,
-.is-active > .a\:c_primary-3 {
+.active.a\:c_primary-3,
+.active > .a\:c_primary-3 {
   color: #99bbd5 !important;
 }
 
-.is-active.a\:c_primary-4,
-.is-active > .a\:c_primary-4 {
+.active.a\:c_primary-4,
+.active > .a\:c_primary-4 {
   color: #c7dae8 !important;
 }
 
-.is-active.a\:c_primary-5,
-.is-active > .a\:c_primary-5 {
+.active.a\:c_primary-5,
+.active > .a\:c_primary-5 {
   color: #e6eef5 !important;
 }
 
-.is-active.a\:c_primary-n1,
-.is-active > .a\:c_primary-n1 {
+.active.a\:c_primary-n1,
+.active > .a\:c_primary-n1 {
   color: #014d88 !important;
 }
 
-.is-active.a\:c_primary-n2,
-.is-active > .a\:c_primary-n2 {
+.active.a\:c_primary-n2,
+.active > .a\:c_primary-n2 {
   color: #014171 !important;
 }
 
-.is-active.a\:c_primary-n3,
-.is-active > .a\:c_primary-n3 {
+.active.a\:c_primary-n3,
+.active > .a\:c_primary-n3 {
   color: #012f53 !important;
 }
 
-.is-active.a\:c_primary-n4,
-.is-active > .a\:c_primary-n4 {
+.active.a\:c_primary-n4,
+.active > .a\:c_primary-n4 {
   color: #00223c !important;
 }
 
-.is-active.a\:c_primary-n5,
-.is-active > .a\:c_primary-n5 {
+.active.a\:c_primary-n5,
+.active > .a\:c_primary-n5 {
   color: #001626 !important;
 }
 
-.is-active.a\:bg_secondary,
-.is-active > .a\:bg_secondary,.is-active.a\:bg_secondary-0,
-.is-active > .a\:bg_secondary-0 {
+.active.a\:bg_secondary,
+.active > .a\:bg_secondary,.active.a\:bg_secondary-0,
+.active > .a\:bg_secondary-0 {
   background-color: #009db1 !important;
 }
 
-.is-active.a\:bg_secondary-1,
-.is-active > .a\:bg_secondary-1 {
+.active.a\:bg_secondary-1,
+.active > .a\:bg_secondary-1 {
   background-color: #26acbd !important;
 }
 
-.is-active.a\:bg_secondary-2,
-.is-active > .a\:bg_secondary-2 {
+.active.a\:bg_secondary-2,
+.active > .a\:bg_secondary-2 {
   background-color: #5ec1ce !important;
 }
 
-.is-active.a\:bg_secondary-3,
-.is-active > .a\:bg_secondary-3 {
+.active.a\:bg_secondary-3,
+.active > .a\:bg_secondary-3 {
   background-color: #99d8e0 !important;
 }
 
-.is-active.a\:bg_secondary-4,
-.is-active > .a\:bg_secondary-4 {
+.active.a\:bg_secondary-4,
+.active > .a\:bg_secondary-4 {
   background-color: #c7e9ee !important;
 }
 
-.is-active.a\:bg_secondary-5,
-.is-active > .a\:bg_secondary-5 {
+.active.a\:bg_secondary-5,
+.active > .a\:bg_secondary-5 {
   background-color: #e6f5f7 !important;
 }
 
-.is-active.a\:bg_secondary-n1,
-.is-active > .a\:bg_secondary-n1 {
+.active.a\:bg_secondary-n1,
+.active > .a\:bg_secondary-n1 {
   background-color: #008d9f !important;
 }
 
-.is-active.a\:bg_secondary-n2,
-.is-active > .a\:bg_secondary-n2 {
+.active.a\:bg_secondary-n2,
+.active > .a\:bg_secondary-n2 {
   background-color: #007685 !important;
 }
 
-.is-active.a\:bg_secondary-n3,
-.is-active > .a\:bg_secondary-n3 {
+.active.a\:bg_secondary-n3,
+.active > .a\:bg_secondary-n3 {
   background-color: #005661 !important;
 }
 
-.is-active.a\:bg_secondary-n4,
-.is-active > .a\:bg_secondary-n4 {
+.active.a\:bg_secondary-n4,
+.active > .a\:bg_secondary-n4 {
   background-color: #003f47 !important;
 }
 
-.is-active.a\:bg_secondary-n5,
-.is-active > .a\:bg_secondary-n5 {
+.active.a\:bg_secondary-n5,
+.active > .a\:bg_secondary-n5 {
   background-color: #00272c !important;
 }
 
-.is-active.a\:c_secondary,
-.is-active > .a\:c_secondary,.is-active.a\:c_secondary-0,
-.is-active > .a\:c_secondary-0 {
+.active.a\:c_secondary,
+.active > .a\:c_secondary,.active.a\:c_secondary-0,
+.active > .a\:c_secondary-0 {
   color: #009db1 !important;
 }
 
-.is-active.a\:c_secondary-1,
-.is-active > .a\:c_secondary-1 {
+.active.a\:c_secondary-1,
+.active > .a\:c_secondary-1 {
   color: #26acbd !important;
 }
 
-.is-active.a\:c_secondary-2,
-.is-active > .a\:c_secondary-2 {
+.active.a\:c_secondary-2,
+.active > .a\:c_secondary-2 {
   color: #5ec1ce !important;
 }
 
-.is-active.a\:c_secondary-3,
-.is-active > .a\:c_secondary-3 {
+.active.a\:c_secondary-3,
+.active > .a\:c_secondary-3 {
   color: #99d8e0 !important;
 }
 
-.is-active.a\:c_secondary-4,
-.is-active > .a\:c_secondary-4 {
+.active.a\:c_secondary-4,
+.active > .a\:c_secondary-4 {
   color: #c7e9ee !important;
 }
 
-.is-active.a\:c_secondary-5,
-.is-active > .a\:c_secondary-5 {
+.active.a\:c_secondary-5,
+.active > .a\:c_secondary-5 {
   color: #e6f5f7 !important;
 }
 
-.is-active.a\:c_secondary-n1,
-.is-active > .a\:c_secondary-n1 {
+.active.a\:c_secondary-n1,
+.active > .a\:c_secondary-n1 {
   color: #008d9f !important;
 }
 
-.is-active.a\:c_secondary-n2,
-.is-active > .a\:c_secondary-n2 {
+.active.a\:c_secondary-n2,
+.active > .a\:c_secondary-n2 {
   color: #007685 !important;
 }
 
-.is-active.a\:c_secondary-n3,
-.is-active > .a\:c_secondary-n3 {
+.active.a\:c_secondary-n3,
+.active > .a\:c_secondary-n3 {
   color: #005661 !important;
 }
 
-.is-active.a\:c_secondary-n4,
-.is-active > .a\:c_secondary-n4 {
+.active.a\:c_secondary-n4,
+.active > .a\:c_secondary-n4 {
   color: #003f47 !important;
 }
 
-.is-active.a\:c_secondary-n5,
-.is-active > .a\:c_secondary-n5 {
+.active.a\:c_secondary-n5,
+.active > .a\:c_secondary-n5 {
   color: #00272c !important;
 }
 
-.is-active.a\:bg_success,
-.is-active > .a\:bg_success,.is-active.a\:bg_success-0,
-.is-active > .a\:bg_success-0 {
+.active.a\:bg_success,
+.active > .a\:bg_success,.active.a\:bg_success-0,
+.active > .a\:bg_success-0 {
   background-color: #468847 !important;
 }
 
-.is-active.a\:bg_success-1,
-.is-active > .a\:bg_success-1 {
+.active.a\:bg_success-1,
+.active > .a\:bg_success-1 {
   background-color: #629a63 !important;
 }
 
-.is-active.a\:bg_success-2,
-.is-active > .a\:bg_success-2 {
+.active.a\:bg_success-2,
+.active > .a\:bg_success-2 {
   background-color: #8ab48b !important;
 }
 
-.is-active.a\:bg_success-3,
-.is-active > .a\:bg_success-3 {
+.active.a\:bg_success-3,
+.active > .a\:bg_success-3 {
   background-color: #b5cfb5 !important;
 }
 
-.is-active.a\:bg_success-4,
-.is-active > .a\:bg_success-4 {
+.active.a\:bg_success-4,
+.active > .a\:bg_success-4 {
   background-color: #d6e5d7 !important;
 }
 
-.is-active.a\:bg_success-5,
-.is-active > .a\:bg_success-5 {
+.active.a\:bg_success-5,
+.active > .a\:bg_success-5 {
   background-color: #edf3ed !important;
 }
 
-.is-active.a\:bg_success-n1,
-.is-active > .a\:bg_success-n1 {
+.active.a\:bg_success-n1,
+.active > .a\:bg_success-n1 {
   background-color: #3f7a40 !important;
 }
 
-.is-active.a\:bg_success-n2,
-.is-active > .a\:bg_success-n2 {
+.active.a\:bg_success-n2,
+.active > .a\:bg_success-n2 {
   background-color: #356635 !important;
 }
 
-.is-active.a\:bg_success-n3,
-.is-active > .a\:bg_success-n3 {
+.active.a\:bg_success-n3,
+.active > .a\:bg_success-n3 {
   background-color: #274b27 !important;
 }
 
-.is-active.a\:bg_success-n4,
-.is-active > .a\:bg_success-n4 {
+.active.a\:bg_success-n4,
+.active > .a\:bg_success-n4 {
   background-color: #1c361c !important;
 }
 
-.is-active.a\:bg_success-n5,
-.is-active > .a\:bg_success-n5 {
+.active.a\:bg_success-n5,
+.active > .a\:bg_success-n5 {
   background-color: #122212 !important;
 }
 
-.is-active.a\:c_success,
-.is-active > .a\:c_success,.is-active.a\:c_success-0,
-.is-active > .a\:c_success-0 {
+.active.a\:c_success,
+.active > .a\:c_success,.active.a\:c_success-0,
+.active > .a\:c_success-0 {
   color: #468847 !important;
 }
 
-.is-active.a\:c_success-1,
-.is-active > .a\:c_success-1 {
+.active.a\:c_success-1,
+.active > .a\:c_success-1 {
   color: #629a63 !important;
 }
 
-.is-active.a\:c_success-2,
-.is-active > .a\:c_success-2 {
+.active.a\:c_success-2,
+.active > .a\:c_success-2 {
   color: #8ab48b !important;
 }
 
-.is-active.a\:c_success-3,
-.is-active > .a\:c_success-3 {
+.active.a\:c_success-3,
+.active > .a\:c_success-3 {
   color: #b5cfb5 !important;
 }
 
-.is-active.a\:c_success-4,
-.is-active > .a\:c_success-4 {
+.active.a\:c_success-4,
+.active > .a\:c_success-4 {
   color: #d6e5d7 !important;
 }
 
-.is-active.a\:c_success-5,
-.is-active > .a\:c_success-5 {
+.active.a\:c_success-5,
+.active > .a\:c_success-5 {
   color: #edf3ed !important;
 }
 
-.is-active.a\:c_success-n1,
-.is-active > .a\:c_success-n1 {
+.active.a\:c_success-n1,
+.active > .a\:c_success-n1 {
   color: #3f7a40 !important;
 }
 
-.is-active.a\:c_success-n2,
-.is-active > .a\:c_success-n2 {
+.active.a\:c_success-n2,
+.active > .a\:c_success-n2 {
   color: #356635 !important;
 }
 
-.is-active.a\:c_success-n3,
-.is-active > .a\:c_success-n3 {
+.active.a\:c_success-n3,
+.active > .a\:c_success-n3 {
   color: #274b27 !important;
 }
 
-.is-active.a\:c_success-n4,
-.is-active > .a\:c_success-n4 {
+.active.a\:c_success-n4,
+.active > .a\:c_success-n4 {
   color: #1c361c !important;
 }
 
-.is-active.a\:c_success-n5,
-.is-active > .a\:c_success-n5 {
+.active.a\:c_success-n5,
+.active > .a\:c_success-n5 {
   color: #122212 !important;
 }
 
-.is-active.a\:bg_shade,
-.is-active > .a\:bg_shade,.is-active.a\:bg_shade-0,
-.is-active > .a\:bg_shade-0 {
+.active.a\:bg_shade,
+.active > .a\:bg_shade,.active.a\:bg_shade-0,
+.active > .a\:bg_shade-0 {
   background-color: #898989 !important;
 }
 
-.is-active.a\:bg_shade-1,
-.is-active > .a\:bg_shade-1 {
+.active.a\:bg_shade-1,
+.active > .a\:bg_shade-1 {
   background-color: #9b9b9b !important;
 }
 
-.is-active.a\:bg_shade-2,
-.is-active > .a\:bg_shade-2 {
+.active.a\:bg_shade-2,
+.active > .a\:bg_shade-2 {
   background-color: #b5b5b5 !important;
 }
 
-.is-active.a\:bg_shade-3,
-.is-active > .a\:bg_shade-3 {
+.active.a\:bg_shade-3,
+.active > .a\:bg_shade-3 {
   background-color: #d0d0d0 !important;
 }
 
-.is-active.a\:bg_shade-4,
-.is-active > .a\:bg_shade-4 {
+.active.a\:bg_shade-4,
+.active > .a\:bg_shade-4 {
   background-color: #e5e5e5 !important;
 }
 
-.is-active.a\:bg_shade-5,
-.is-active > .a\:bg_shade-5 {
+.active.a\:bg_shade-5,
+.active > .a\:bg_shade-5 {
   background-color: #f3f3f3 !important;
 }
 
-.is-active.a\:bg_shade-n1,
-.is-active > .a\:bg_shade-n1 {
+.active.a\:bg_shade-n1,
+.active > .a\:bg_shade-n1 {
   background-color: #7b7b7b !important;
 }
 
-.is-active.a\:bg_shade-n2,
-.is-active > .a\:bg_shade-n2 {
+.active.a\:bg_shade-n2,
+.active > .a\:bg_shade-n2 {
   background-color: #676767 !important;
 }
 
-.is-active.a\:bg_shade-n3,
-.is-active > .a\:bg_shade-n3 {
+.active.a\:bg_shade-n3,
+.active > .a\:bg_shade-n3 {
   background-color: #4b4b4b !important;
 }
 
-.is-active.a\:bg_shade-n4,
-.is-active > .a\:bg_shade-n4 {
+.active.a\:bg_shade-n4,
+.active > .a\:bg_shade-n4 {
   background-color: #373737 !important;
 }
 
-.is-active.a\:bg_shade-n5,
-.is-active > .a\:bg_shade-n5 {
+.active.a\:bg_shade-n5,
+.active > .a\:bg_shade-n5 {
   background-color: #222222 !important;
 }
 
-.is-active.a\:c_shade,
-.is-active > .a\:c_shade,.is-active.a\:c_shade-0,
-.is-active > .a\:c_shade-0 {
+.active.a\:c_shade,
+.active > .a\:c_shade,.active.a\:c_shade-0,
+.active > .a\:c_shade-0 {
   color: #898989 !important;
 }
 
-.is-active.a\:c_shade-1,
-.is-active > .a\:c_shade-1 {
+.active.a\:c_shade-1,
+.active > .a\:c_shade-1 {
   color: #9b9b9b !important;
 }
 
-.is-active.a\:c_shade-2,
-.is-active > .a\:c_shade-2 {
+.active.a\:c_shade-2,
+.active > .a\:c_shade-2 {
   color: #b5b5b5 !important;
 }
 
-.is-active.a\:c_shade-3,
-.is-active > .a\:c_shade-3 {
+.active.a\:c_shade-3,
+.active > .a\:c_shade-3 {
   color: #d0d0d0 !important;
 }
 
-.is-active.a\:c_shade-4,
-.is-active > .a\:c_shade-4 {
+.active.a\:c_shade-4,
+.active > .a\:c_shade-4 {
   color: #e5e5e5 !important;
 }
 
-.is-active.a\:c_shade-5,
-.is-active > .a\:c_shade-5 {
+.active.a\:c_shade-5,
+.active > .a\:c_shade-5 {
   color: #f3f3f3 !important;
 }
 
-.is-active.a\:c_shade-n1,
-.is-active > .a\:c_shade-n1 {
+.active.a\:c_shade-n1,
+.active > .a\:c_shade-n1 {
   color: #7b7b7b !important;
 }
 
-.is-active.a\:c_shade-n2,
-.is-active > .a\:c_shade-n2 {
+.active.a\:c_shade-n2,
+.active > .a\:c_shade-n2 {
   color: #676767 !important;
 }
 
-.is-active.a\:c_shade-n3,
-.is-active > .a\:c_shade-n3 {
+.active.a\:c_shade-n3,
+.active > .a\:c_shade-n3 {
   color: #4b4b4b !important;
 }
 
-.is-active.a\:c_shade-n4,
-.is-active > .a\:c_shade-n4 {
+.active.a\:c_shade-n4,
+.active > .a\:c_shade-n4 {
   color: #373737 !important;
 }
 
-.is-active.a\:c_shade-n5,
-.is-active > .a\:c_shade-n5 {
+.active.a\:c_shade-n5,
+.active > .a\:c_shade-n5 {
   color: #222222 !important;
 }
 
-.is-active.a\:bg_warning,
-.is-active > .a\:bg_warning,.is-active.a\:bg_warning-0,
-.is-active > .a\:bg_warning-0 {
+.active.a\:bg_warning,
+.active > .a\:bg_warning,.active.a\:bg_warning-0,
+.active > .a\:bg_warning-0 {
   background-color: #c67605 !important;
 }
 
-.is-active.a\:bg_warning-1,
-.is-active > .a\:bg_warning-1 {
+.active.a\:bg_warning-1,
+.active > .a\:bg_warning-1 {
   background-color: #cf8b2b !important;
 }
 
-.is-active.a\:bg_warning-2,
-.is-active > .a\:bg_warning-2 {
+.active.a\:bg_warning-2,
+.active > .a\:bg_warning-2 {
   background-color: #dba962 !important;
 }
 
-.is-active.a\:bg_warning-3,
-.is-active > .a\:bg_warning-3 {
+.active.a\:bg_warning-3,
+.active > .a\:bg_warning-3 {
   background-color: #e8c89b !important;
 }
 
-.is-active.a\:bg_warning-4,
-.is-active > .a\:bg_warning-4 {
+.active.a\:bg_warning-4,
+.active > .a\:bg_warning-4 {
   background-color: #f2e1c8 !important;
 }
 
-.is-active.a\:bg_warning-5,
-.is-active > .a\:bg_warning-5 {
+.active.a\:bg_warning-5,
+.active > .a\:bg_warning-5 {
   background-color: #f9f1e6 !important;
 }
 
-.is-active.a\:bg_warning-n1,
-.is-active > .a\:bg_warning-n1 {
+.active.a\:bg_warning-n1,
+.active > .a\:bg_warning-n1 {
   background-color: #b26a05 !important;
 }
 
-.is-active.a\:bg_warning-n2,
-.is-active > .a\:bg_warning-n2 {
+.active.a\:bg_warning-n2,
+.active > .a\:bg_warning-n2 {
   background-color: #955904 !important;
 }
 
-.is-active.a\:bg_warning-n3,
-.is-active > .a\:bg_warning-n3 {
+.active.a\:bg_warning-n3,
+.active > .a\:bg_warning-n3 {
   background-color: #6d4103 !important;
 }
 
-.is-active.a\:bg_warning-n4,
-.is-active > .a\:bg_warning-n4 {
+.active.a\:bg_warning-n4,
+.active > .a\:bg_warning-n4 {
   background-color: #4f2f02 !important;
 }
 
-.is-active.a\:bg_warning-n5,
-.is-active > .a\:bg_warning-n5 {
+.active.a\:bg_warning-n5,
+.active > .a\:bg_warning-n5 {
   background-color: #321e01 !important;
 }
 
-.is-active.a\:c_warning,
-.is-active > .a\:c_warning,.is-active.a\:c_warning-0,
-.is-active > .a\:c_warning-0 {
+.active.a\:c_warning,
+.active > .a\:c_warning,.active.a\:c_warning-0,
+.active > .a\:c_warning-0 {
   color: #c67605 !important;
 }
 
-.is-active.a\:c_warning-1,
-.is-active > .a\:c_warning-1 {
+.active.a\:c_warning-1,
+.active > .a\:c_warning-1 {
   color: #cf8b2b !important;
 }
 
-.is-active.a\:c_warning-2,
-.is-active > .a\:c_warning-2 {
+.active.a\:c_warning-2,
+.active > .a\:c_warning-2 {
   color: #dba962 !important;
 }
 
-.is-active.a\:c_warning-3,
-.is-active > .a\:c_warning-3 {
+.active.a\:c_warning-3,
+.active > .a\:c_warning-3 {
   color: #e8c89b !important;
 }
 
-.is-active.a\:c_warning-4,
-.is-active > .a\:c_warning-4 {
+.active.a\:c_warning-4,
+.active > .a\:c_warning-4 {
   color: #f2e1c8 !important;
 }
 
-.is-active.a\:c_warning-5,
-.is-active > .a\:c_warning-5 {
+.active.a\:c_warning-5,
+.active > .a\:c_warning-5 {
   color: #f9f1e6 !important;
 }
 
-.is-active.a\:c_warning-n1,
-.is-active > .a\:c_warning-n1 {
+.active.a\:c_warning-n1,
+.active > .a\:c_warning-n1 {
   color: #b26a05 !important;
 }
 
-.is-active.a\:c_warning-n2,
-.is-active > .a\:c_warning-n2 {
+.active.a\:c_warning-n2,
+.active > .a\:c_warning-n2 {
   color: #955904 !important;
 }
 
-.is-active.a\:c_warning-n3,
-.is-active > .a\:c_warning-n3 {
+.active.a\:c_warning-n3,
+.active > .a\:c_warning-n3 {
   color: #6d4103 !important;
 }
 
-.is-active.a\:c_warning-n4,
-.is-active > .a\:c_warning-n4 {
+.active.a\:c_warning-n4,
+.active > .a\:c_warning-n4 {
   color: #4f2f02 !important;
 }
 
-.is-active.a\:c_warning-n5,
-.is-active > .a\:c_warning-n5 {
+.active.a\:c_warning-n5,
+.active > .a\:c_warning-n5 {
   color: #321e01 !important;
 }
 
-.is-active.a\:bg_alert,
-.is-active > .a\:bg_alert,.is-active.a\:bg_alert-0,
-.is-active > .a\:bg_alert-0 {
+.active.a\:bg_alert,
+.active > .a\:bg_alert,.active.a\:bg_alert-0,
+.active > .a\:bg_alert-0 {
   background-color: #953b39 !important;
 }
 
-.is-active.a\:bg_alert-1,
-.is-active > .a\:bg_alert-1 {
+.active.a\:bg_alert-1,
+.active > .a\:bg_alert-1 {
   background-color: #a55857 !important;
 }
 
-.is-active.a\:bg_alert-2,
-.is-active > .a\:bg_alert-2 {
+.active.a\:bg_alert-2,
+.active > .a\:bg_alert-2 {
   background-color: #bc8482 !important;
 }
 
-.is-active.a\:bg_alert-3,
-.is-active > .a\:bg_alert-3 {
+.active.a\:bg_alert-3,
+.active > .a\:bg_alert-3 {
   background-color: #d5b1b0 !important;
 }
 
-.is-active.a\:bg_alert-4,
-.is-active > .a\:bg_alert-4 {
+.active.a\:bg_alert-4,
+.active > .a\:bg_alert-4 {
   background-color: #e8d4d3 !important;
 }
 
-.is-active.a\:bg_alert-5,
-.is-active > .a\:bg_alert-5 {
+.active.a\:bg_alert-5,
+.active > .a\:bg_alert-5 {
   background-color: #f4ebeb !important;
 }
 
-.is-active.a\:bg_alert-n1,
-.is-active > .a\:bg_alert-n1 {
+.active.a\:bg_alert-n1,
+.active > .a\:bg_alert-n1 {
   background-color: #863533 !important;
 }
 
-.is-active.a\:bg_alert-n2,
-.is-active > .a\:bg_alert-n2 {
+.active.a\:bg_alert-n2,
+.active > .a\:bg_alert-n2 {
   background-color: #702c2b !important;
 }
 
-.is-active.a\:bg_alert-n3,
-.is-active > .a\:bg_alert-n3 {
+.active.a\:bg_alert-n3,
+.active > .a\:bg_alert-n3 {
   background-color: #52201f !important;
 }
 
-.is-active.a\:bg_alert-n4,
-.is-active > .a\:bg_alert-n4 {
+.active.a\:bg_alert-n4,
+.active > .a\:bg_alert-n4 {
   background-color: #3c1817 !important;
 }
 
-.is-active.a\:bg_alert-n5,
-.is-active > .a\:bg_alert-n5 {
+.active.a\:bg_alert-n5,
+.active > .a\:bg_alert-n5 {
   background-color: #250f0e !important;
 }
 
-.is-active.a\:c_alert,
-.is-active > .a\:c_alert,.is-active.a\:c_alert-0,
-.is-active > .a\:c_alert-0 {
+.active.a\:c_alert,
+.active > .a\:c_alert,.active.a\:c_alert-0,
+.active > .a\:c_alert-0 {
   color: #953b39 !important;
 }
 
-.is-active.a\:c_alert-1,
-.is-active > .a\:c_alert-1 {
+.active.a\:c_alert-1,
+.active > .a\:c_alert-1 {
   color: #a55857 !important;
 }
 
-.is-active.a\:c_alert-2,
-.is-active > .a\:c_alert-2 {
+.active.a\:c_alert-2,
+.active > .a\:c_alert-2 {
   color: #bc8482 !important;
 }
 
-.is-active.a\:c_alert-3,
-.is-active > .a\:c_alert-3 {
+.active.a\:c_alert-3,
+.active > .a\:c_alert-3 {
   color: #d5b1b0 !important;
 }
 
-.is-active.a\:c_alert-4,
-.is-active > .a\:c_alert-4 {
+.active.a\:c_alert-4,
+.active > .a\:c_alert-4 {
   color: #e8d4d3 !important;
 }
 
-.is-active.a\:c_alert-5,
-.is-active > .a\:c_alert-5 {
+.active.a\:c_alert-5,
+.active > .a\:c_alert-5 {
   color: #f4ebeb !important;
 }
 
-.is-active.a\:c_alert-n1,
-.is-active > .a\:c_alert-n1 {
+.active.a\:c_alert-n1,
+.active > .a\:c_alert-n1 {
   color: #863533 !important;
 }
 
-.is-active.a\:c_alert-n2,
-.is-active > .a\:c_alert-n2 {
+.active.a\:c_alert-n2,
+.active > .a\:c_alert-n2 {
   color: #702c2b !important;
 }
 
-.is-active.a\:c_alert-n3,
-.is-active > .a\:c_alert-n3 {
+.active.a\:c_alert-n3,
+.active > .a\:c_alert-n3 {
   color: #52201f !important;
 }
 
-.is-active.a\:c_alert-n4,
-.is-active > .a\:c_alert-n4 {
+.active.a\:c_alert-n4,
+.active > .a\:c_alert-n4 {
   color: #3c1817 !important;
 }
 
-.is-active.a\:c_alert-n5,
-.is-active > .a\:c_alert-n5 {
+.active.a\:c_alert-n5,
+.active > .a\:c_alert-n5 {
   color: #250f0e !important;
 }
 
-.is-active.a\:bg_navigation,
-.is-active > .a\:bg_navigation,.is-active.a\:bg_navigation-0,
-.is-active > .a\:bg_navigation-0 {
+.active.a\:bg_navigation,
+.active > .a\:bg_navigation,.active.a\:bg_navigation-0,
+.active > .a\:bg_navigation-0 {
   background-color: #2b58c0 !important;
 }
 
-.is-active.a\:bg_navigation-1,
-.is-active > .a\:bg_navigation-1 {
+.active.a\:bg_navigation-1,
+.active > .a\:bg_navigation-1 {
   background-color: #4b71c9 !important;
 }
 
-.is-active.a\:bg_navigation-2,
-.is-active > .a\:bg_navigation-2 {
+.active.a\:bg_navigation-2,
+.active > .a\:bg_navigation-2 {
   background-color: #7996d7 !important;
 }
 
-.is-active.a\:bg_navigation-3,
-.is-active > .a\:bg_navigation-3 {
+.active.a\:bg_navigation-3,
+.active > .a\:bg_navigation-3 {
   background-color: #aabce6 !important;
 }
 
-.is-active.a\:bg_navigation-4,
-.is-active > .a\:bg_navigation-4 {
+.active.a\:bg_navigation-4,
+.active > .a\:bg_navigation-4 {
   background-color: #d0daf1 !important;
 }
 
-.is-active.a\:bg_navigation-5,
-.is-active > .a\:bg_navigation-5 {
+.active.a\:bg_navigation-5,
+.active > .a\:bg_navigation-5 {
   background-color: #eaeef9 !important;
 }
 
-.is-active.a\:bg_navigation-n1,
-.is-active > .a\:bg_navigation-n1 {
+.active.a\:bg_navigation-n1,
+.active > .a\:bg_navigation-n1 {
   background-color: #274fad !important;
 }
 
-.is-active.a\:bg_navigation-n2,
-.is-active > .a\:bg_navigation-n2 {
+.active.a\:bg_navigation-n2,
+.active > .a\:bg_navigation-n2 {
   background-color: #204290 !important;
 }
 
-.is-active.a\:bg_navigation-n3,
-.is-active > .a\:bg_navigation-n3 {
+.active.a\:bg_navigation-n3,
+.active > .a\:bg_navigation-n3 {
   background-color: #18306a !important;
 }
 
-.is-active.a\:bg_navigation-n4,
-.is-active > .a\:bg_navigation-n4 {
+.active.a\:bg_navigation-n4,
+.active > .a\:bg_navigation-n4 {
   background-color: #11234d !important;
 }
 
-.is-active.a\:bg_navigation-n5,
-.is-active > .a\:bg_navigation-n5 {
+.active.a\:bg_navigation-n5,
+.active > .a\:bg_navigation-n5 {
   background-color: #0b1630 !important;
 }
 
-.is-active.a\:c_navigation,
-.is-active > .a\:c_navigation,.is-active.a\:c_navigation-0,
-.is-active > .a\:c_navigation-0 {
+.active.a\:c_navigation,
+.active > .a\:c_navigation,.active.a\:c_navigation-0,
+.active > .a\:c_navigation-0 {
   color: #2b58c0 !important;
 }
 
-.is-active.a\:c_navigation-1,
-.is-active > .a\:c_navigation-1 {
+.active.a\:c_navigation-1,
+.active > .a\:c_navigation-1 {
   color: #4b71c9 !important;
 }
 
-.is-active.a\:c_navigation-2,
-.is-active > .a\:c_navigation-2 {
+.active.a\:c_navigation-2,
+.active > .a\:c_navigation-2 {
   color: #7996d7 !important;
 }
 
-.is-active.a\:c_navigation-3,
-.is-active > .a\:c_navigation-3 {
+.active.a\:c_navigation-3,
+.active > .a\:c_navigation-3 {
   color: #aabce6 !important;
 }
 
-.is-active.a\:c_navigation-4,
-.is-active > .a\:c_navigation-4 {
+.active.a\:c_navigation-4,
+.active > .a\:c_navigation-4 {
   color: #d0daf1 !important;
 }
 
-.is-active.a\:c_navigation-5,
-.is-active > .a\:c_navigation-5 {
+.active.a\:c_navigation-5,
+.active > .a\:c_navigation-5 {
   color: #eaeef9 !important;
 }
 
-.is-active.a\:c_navigation-n1,
-.is-active > .a\:c_navigation-n1 {
+.active.a\:c_navigation-n1,
+.active > .a\:c_navigation-n1 {
   color: #274fad !important;
 }
 
-.is-active.a\:c_navigation-n2,
-.is-active > .a\:c_navigation-n2 {
+.active.a\:c_navigation-n2,
+.active > .a\:c_navigation-n2 {
   color: #204290 !important;
 }
 
-.is-active.a\:c_navigation-n3,
-.is-active > .a\:c_navigation-n3 {
+.active.a\:c_navigation-n3,
+.active > .a\:c_navigation-n3 {
   color: #18306a !important;
 }
 
-.is-active.a\:c_navigation-n4,
-.is-active > .a\:c_navigation-n4 {
+.active.a\:c_navigation-n4,
+.active > .a\:c_navigation-n4 {
   color: #11234d !important;
 }
 
-.is-active.a\:c_navigation-n5,
-.is-active > .a\:c_navigation-n5 {
+.active.a\:c_navigation-n5,
+.active > .a\:c_navigation-n5 {
   color: #0b1630 !important;
 }
 
-.is-active.a\:bg_accent,
-.is-active > .a\:bg_accent,.is-active.a\:bg_accent-0,
-.is-active > .a\:bg_accent-0 {
+.active.a\:bg_accent,
+.active > .a\:bg_accent,.active.a\:bg_accent-0,
+.active > .a\:bg_accent-0 {
   background-color: #e17009 !important;
 }
 
-.is-active.a\:bg_accent-1,
-.is-active > .a\:bg_accent-1 {
+.active.a\:bg_accent-1,
+.active > .a\:bg_accent-1 {
   background-color: #e6852e !important;
 }
 
-.is-active.a\:bg_accent-2,
-.is-active > .a\:bg_accent-2 {
+.active.a\:bg_accent-2,
+.active > .a\:bg_accent-2 {
   background-color: #eca564 !important;
 }
 
-.is-active.a\:bg_accent-3,
-.is-active > .a\:bg_accent-3 {
+.active.a\:bg_accent-3,
+.active > .a\:bg_accent-3 {
   background-color: #f3c69d !important;
 }
 
-.is-active.a\:bg_accent-4,
-.is-active > .a\:bg_accent-4 {
+.active.a\:bg_accent-4,
+.active > .a\:bg_accent-4 {
   background-color: #f8e0c9 !important;
 }
 
-.is-active.a\:bg_accent-5,
-.is-active > .a\:bg_accent-5 {
+.active.a\:bg_accent-5,
+.active > .a\:bg_accent-5 {
   background-color: #fcf1e6 !important;
 }
 
-.is-active.a\:bg_accent-n1,
-.is-active > .a\:bg_accent-n1 {
+.active.a\:bg_accent-n1,
+.active > .a\:bg_accent-n1 {
   background-color: #cb6508 !important;
 }
 
-.is-active.a\:bg_accent-n2,
-.is-active > .a\:bg_accent-n2 {
+.active.a\:bg_accent-n2,
+.active > .a\:bg_accent-n2 {
   background-color: #a95407 !important;
 }
 
-.is-active.a\:bg_accent-n3,
-.is-active > .a\:bg_accent-n3 {
+.active.a\:bg_accent-n3,
+.active > .a\:bg_accent-n3 {
   background-color: #7c3e05 !important;
 }
 
-.is-active.a\:bg_accent-n4,
-.is-active > .a\:bg_accent-n4 {
+.active.a\:bg_accent-n4,
+.active > .a\:bg_accent-n4 {
   background-color: #5a2d04 !important;
 }
 
-.is-active.a\:bg_accent-n5,
-.is-active > .a\:bg_accent-n5 {
+.active.a\:bg_accent-n5,
+.active > .a\:bg_accent-n5 {
   background-color: #381c02 !important;
 }
 
-.is-active.a\:c_accent,
-.is-active > .a\:c_accent,.is-active.a\:c_accent-0,
-.is-active > .a\:c_accent-0 {
+.active.a\:c_accent,
+.active > .a\:c_accent,.active.a\:c_accent-0,
+.active > .a\:c_accent-0 {
   color: #e17009 !important;
 }
 
-.is-active.a\:c_accent-1,
-.is-active > .a\:c_accent-1 {
+.active.a\:c_accent-1,
+.active > .a\:c_accent-1 {
   color: #e6852e !important;
 }
 
-.is-active.a\:c_accent-2,
-.is-active > .a\:c_accent-2 {
+.active.a\:c_accent-2,
+.active > .a\:c_accent-2 {
   color: #eca564 !important;
 }
 
-.is-active.a\:c_accent-3,
-.is-active > .a\:c_accent-3 {
+.active.a\:c_accent-3,
+.active > .a\:c_accent-3 {
   color: #f3c69d !important;
 }
 
-.is-active.a\:c_accent-4,
-.is-active > .a\:c_accent-4 {
+.active.a\:c_accent-4,
+.active > .a\:c_accent-4 {
   color: #f8e0c9 !important;
 }
 
-.is-active.a\:c_accent-5,
-.is-active > .a\:c_accent-5 {
+.active.a\:c_accent-5,
+.active > .a\:c_accent-5 {
   color: #fcf1e6 !important;
 }
 
-.is-active.a\:c_accent-n1,
-.is-active > .a\:c_accent-n1 {
+.active.a\:c_accent-n1,
+.active > .a\:c_accent-n1 {
   color: #cb6508 !important;
 }
 
-.is-active.a\:c_accent-n2,
-.is-active > .a\:c_accent-n2 {
+.active.a\:c_accent-n2,
+.active > .a\:c_accent-n2 {
   color: #a95407 !important;
 }
 
-.is-active.a\:c_accent-n3,
-.is-active > .a\:c_accent-n3 {
+.active.a\:c_accent-n3,
+.active > .a\:c_accent-n3 {
   color: #7c3e05 !important;
 }
 
-.is-active.a\:c_accent-n4,
-.is-active > .a\:c_accent-n4 {
+.active.a\:c_accent-n4,
+.active > .a\:c_accent-n4 {
   color: #5a2d04 !important;
 }
 
-.is-active.a\:c_accent-n5,
-.is-active > .a\:c_accent-n5 {
+.active.a\:c_accent-n5,
+.active > .a\:c_accent-n5 {
   color: #381c02 !important;
 }
 
-.is-active.a\:bg_info,
-.is-active > .a\:bg_info,.is-active.a\:bg_info-0,
-.is-active > .a\:bg_info-0 {
+.active.a\:bg_info,
+.active > .a\:bg_info,.active.a\:bg_info-0,
+.active > .a\:bg_info-0 {
   background-color: #a3988c !important;
 }
 
-.is-active.a\:bg_info-1,
-.is-active > .a\:bg_info-1 {
+.active.a\:bg_info-1,
+.active > .a\:bg_info-1 {
   background-color: #b1a79d !important;
 }
 
-.is-active.a\:bg_info-2,
-.is-active > .a\:bg_info-2 {
+.active.a\:bg_info-2,
+.active > .a\:bg_info-2 {
   background-color: #c5beb7 !important;
 }
 
-.is-active.a\:bg_info-3,
-.is-active > .a\:bg_info-3 {
+.active.a\:bg_info-3,
+.active > .a\:bg_info-3 {
   background-color: #dad6d1 !important;
 }
 
-.is-active.a\:bg_info-4,
-.is-active > .a\:bg_info-4 {
+.active.a\:bg_info-4,
+.active > .a\:bg_info-4 {
   background-color: #ebe8e6 !important;
 }
 
-.is-active.a\:bg_info-5,
-.is-active > .a\:bg_info-5 {
+.active.a\:bg_info-5,
+.active > .a\:bg_info-5 {
   background-color: #f6f5f4 !important;
 }
 
-.is-active.a\:bg_info-n1,
-.is-active > .a\:bg_info-n1 {
+.active.a\:bg_info-n1,
+.active > .a\:bg_info-n1 {
   background-color: #93897e !important;
 }
 
-.is-active.a\:bg_info-n2,
-.is-active > .a\:bg_info-n2 {
+.active.a\:bg_info-n2,
+.active > .a\:bg_info-n2 {
   background-color: #7a7269 !important;
 }
 
-.is-active.a\:bg_info-n3,
-.is-active > .a\:bg_info-n3 {
+.active.a\:bg_info-n3,
+.active > .a\:bg_info-n3 {
   background-color: #5a544d !important;
 }
 
-.is-active.a\:bg_info-n4,
-.is-active > .a\:bg_info-n4 {
+.active.a\:bg_info-n4,
+.active > .a\:bg_info-n4 {
   background-color: #413d38 !important;
 }
 
-.is-active.a\:bg_info-n5,
-.is-active > .a\:bg_info-n5 {
+.active.a\:bg_info-n5,
+.active > .a\:bg_info-n5 {
   background-color: #292623 !important;
 }
 
-.is-active.a\:c_info,
-.is-active > .a\:c_info,.is-active.a\:c_info-0,
-.is-active > .a\:c_info-0 {
+.active.a\:c_info,
+.active > .a\:c_info,.active.a\:c_info-0,
+.active > .a\:c_info-0 {
   color: #a3988c !important;
 }
 
-.is-active.a\:c_info-1,
-.is-active > .a\:c_info-1 {
+.active.a\:c_info-1,
+.active > .a\:c_info-1 {
   color: #b1a79d !important;
 }
 
-.is-active.a\:c_info-2,
-.is-active > .a\:c_info-2 {
+.active.a\:c_info-2,
+.active > .a\:c_info-2 {
   color: #c5beb7 !important;
 }
 
-.is-active.a\:c_info-3,
-.is-active > .a\:c_info-3 {
+.active.a\:c_info-3,
+.active > .a\:c_info-3 {
   color: #dad6d1 !important;
 }
 
-.is-active.a\:c_info-4,
-.is-active > .a\:c_info-4 {
+.active.a\:c_info-4,
+.active > .a\:c_info-4 {
   color: #ebe8e6 !important;
 }
 
-.is-active.a\:c_info-5,
-.is-active > .a\:c_info-5 {
+.active.a\:c_info-5,
+.active > .a\:c_info-5 {
   color: #f6f5f4 !important;
 }
 
-.is-active.a\:c_info-n1,
-.is-active > .a\:c_info-n1 {
+.active.a\:c_info-n1,
+.active > .a\:c_info-n1 {
   color: #93897e !important;
 }
 
-.is-active.a\:c_info-n2,
-.is-active > .a\:c_info-n2 {
+.active.a\:c_info-n2,
+.active > .a\:c_info-n2 {
   color: #7a7269 !important;
 }
 
-.is-active.a\:c_info-n3,
-.is-active > .a\:c_info-n3 {
+.active.a\:c_info-n3,
+.active > .a\:c_info-n3 {
   color: #5a544d !important;
 }
 
-.is-active.a\:c_info-n4,
-.is-active > .a\:c_info-n4 {
+.active.a\:c_info-n4,
+.active > .a\:c_info-n4 {
   color: #413d38 !important;
 }
 
-.is-active.a\:c_info-n5,
-.is-active > .a\:c_info-n5 {
+.active.a\:c_info-n5,
+.active > .a\:c_info-n5 {
   color: #292623 !important;
 }
 
-.is-active.a\:bg_highlight,
-.is-active > .a\:bg_highlight,.is-active.a\:bg_highlight-0,
-.is-active > .a\:bg_highlight-0 {
+.active.a\:bg_highlight,
+.active > .a\:bg_highlight,.active.a\:bg_highlight-0,
+.active > .a\:bg_highlight-0 {
   background-color: #f5ca4f !important;
 }
 
-.is-active.a\:bg_highlight-1,
-.is-active > .a\:bg_highlight-1 {
+.active.a\:bg_highlight-1,
+.active > .a\:bg_highlight-1 {
   background-color: #f7d269 !important;
 }
 
-.is-active.a\:bg_highlight-2,
-.is-active > .a\:bg_highlight-2 {
+.active.a\:bg_highlight-2,
+.active > .a\:bg_highlight-2 {
   background-color: #f9de90 !important;
 }
 
-.is-active.a\:bg_highlight-3,
-.is-active > .a\:bg_highlight-3 {
+.active.a\:bg_highlight-3,
+.active > .a\:bg_highlight-3 {
   background-color: #fbeab9 !important;
 }
 
-.is-active.a\:bg_highlight-4,
-.is-active > .a\:bg_highlight-4 {
+.active.a\:bg_highlight-4,
+.active > .a\:bg_highlight-4 {
   background-color: #fdf3d8 !important;
 }
 
-.is-active.a\:bg_highlight-5,
-.is-active > .a\:bg_highlight-5 {
+.active.a\:bg_highlight-5,
+.active > .a\:bg_highlight-5 {
   background-color: #fefaed !important;
 }
 
-.is-active.a\:bg_highlight-n1,
-.is-active > .a\:bg_highlight-n1 {
+.active.a\:bg_highlight-n1,
+.active > .a\:bg_highlight-n1 {
   background-color: #ddb647 !important;
 }
 
-.is-active.a\:bg_highlight-n2,
-.is-active > .a\:bg_highlight-n2 {
+.active.a\:bg_highlight-n2,
+.active > .a\:bg_highlight-n2 {
   background-color: #b8983b !important;
 }
 
-.is-active.a\:bg_highlight-n3,
-.is-active > .a\:bg_highlight-n3 {
+.active.a\:bg_highlight-n3,
+.active > .a\:bg_highlight-n3 {
   background-color: #876f2b !important;
 }
 
-.is-active.a\:bg_highlight-n4,
-.is-active > .a\:bg_highlight-n4 {
+.active.a\:bg_highlight-n4,
+.active > .a\:bg_highlight-n4 {
   background-color: #625120 !important;
 }
 
-.is-active.a\:bg_highlight-n5,
-.is-active > .a\:bg_highlight-n5 {
+.active.a\:bg_highlight-n5,
+.active > .a\:bg_highlight-n5 {
   background-color: #3d3314 !important;
 }
 
-.is-active.a\:c_highlight,
-.is-active > .a\:c_highlight,.is-active.a\:c_highlight-0,
-.is-active > .a\:c_highlight-0 {
+.active.a\:c_highlight,
+.active > .a\:c_highlight,.active.a\:c_highlight-0,
+.active > .a\:c_highlight-0 {
   color: #f5ca4f !important;
 }
 
-.is-active.a\:c_highlight-1,
-.is-active > .a\:c_highlight-1 {
+.active.a\:c_highlight-1,
+.active > .a\:c_highlight-1 {
   color: #f7d269 !important;
 }
 
-.is-active.a\:c_highlight-2,
-.is-active > .a\:c_highlight-2 {
+.active.a\:c_highlight-2,
+.active > .a\:c_highlight-2 {
   color: #f9de90 !important;
 }
 
-.is-active.a\:c_highlight-3,
-.is-active > .a\:c_highlight-3 {
+.active.a\:c_highlight-3,
+.active > .a\:c_highlight-3 {
   color: #fbeab9 !important;
 }
 
-.is-active.a\:c_highlight-4,
-.is-active > .a\:c_highlight-4 {
+.active.a\:c_highlight-4,
+.active > .a\:c_highlight-4 {
   color: #fdf3d8 !important;
 }
 
-.is-active.a\:c_highlight-5,
-.is-active > .a\:c_highlight-5 {
+.active.a\:c_highlight-5,
+.active > .a\:c_highlight-5 {
   color: #fefaed !important;
 }
 
-.is-active.a\:c_highlight-n1,
-.is-active > .a\:c_highlight-n1 {
+.active.a\:c_highlight-n1,
+.active > .a\:c_highlight-n1 {
   color: #ddb647 !important;
 }
 
-.is-active.a\:c_highlight-n2,
-.is-active > .a\:c_highlight-n2 {
+.active.a\:c_highlight-n2,
+.active > .a\:c_highlight-n2 {
   color: #b8983b !important;
 }
 
-.is-active.a\:c_highlight-n3,
-.is-active > .a\:c_highlight-n3 {
+.active.a\:c_highlight-n3,
+.active > .a\:c_highlight-n3 {
   color: #876f2b !important;
 }
 
-.is-active.a\:c_highlight-n4,
-.is-active > .a\:c_highlight-n4 {
+.active.a\:c_highlight-n4,
+.active > .a\:c_highlight-n4 {
   color: #625120 !important;
 }
 
-.is-active.a\:c_highlight-n5,
-.is-active > .a\:c_highlight-n5 {
+.active.a\:c_highlight-n5,
+.active > .a\:c_highlight-n5 {
   color: #3d3314 !important;
 }
 
-.is-active.a\:bg_acc,
-.is-active > .a\:bg_acc,.is-active.a\:bg_acc-0,
-.is-active > .a\:bg_acc-0 {
+.active.a\:bg_acc,
+.active > .a\:bg_acc,.active.a\:bg_acc-0,
+.active > .a\:bg_acc-0 {
   background-color: #004176 !important;
 }
 
-.is-active.a\:bg_acc-1,
-.is-active > .a\:bg_acc-1 {
+.active.a\:bg_acc-1,
+.active > .a\:bg_acc-1 {
   background-color: #265e8b !important;
 }
 
-.is-active.a\:bg_acc-2,
-.is-active > .a\:bg_acc-2 {
+.active.a\:bg_acc-2,
+.active > .a\:bg_acc-2 {
   background-color: #5e87a9 !important;
 }
 
-.is-active.a\:bg_acc-3,
-.is-active > .a\:bg_acc-3 {
+.active.a\:bg_acc-3,
+.active > .a\:bg_acc-3 {
   background-color: #99b3c8 !important;
 }
 
-.is-active.a\:bg_acc-4,
-.is-active > .a\:bg_acc-4 {
+.active.a\:bg_acc-4,
+.active > .a\:bg_acc-4 {
   background-color: #c7d5e1 !important;
 }
 
-.is-active.a\:bg_acc-5,
-.is-active > .a\:bg_acc-5 {
+.active.a\:bg_acc-5,
+.active > .a\:bg_acc-5 {
   background-color: #e6ecf1 !important;
 }
 
-.is-active.a\:bg_acc-n1,
-.is-active > .a\:bg_acc-n1 {
+.active.a\:bg_acc-n1,
+.active > .a\:bg_acc-n1 {
   background-color: #003b6a !important;
 }
 
-.is-active.a\:bg_acc-n2,
-.is-active > .a\:bg_acc-n2 {
+.active.a\:bg_acc-n2,
+.active > .a\:bg_acc-n2 {
   background-color: #003159 !important;
 }
 
-.is-active.a\:bg_acc-n3,
-.is-active > .a\:bg_acc-n3 {
+.active.a\:bg_acc-n3,
+.active > .a\:bg_acc-n3 {
   background-color: #002441 !important;
 }
 
-.is-active.a\:bg_acc-n4,
-.is-active > .a\:bg_acc-n4 {
+.active.a\:bg_acc-n4,
+.active > .a\:bg_acc-n4 {
   background-color: #001a2f !important;
 }
 
-.is-active.a\:bg_acc-n5,
-.is-active > .a\:bg_acc-n5 {
+.active.a\:bg_acc-n5,
+.active > .a\:bg_acc-n5 {
   background-color: #00101e !important;
 }
 
-.is-active.a\:c_acc,
-.is-active > .a\:c_acc,.is-active.a\:c_acc-0,
-.is-active > .a\:c_acc-0 {
+.active.a\:c_acc,
+.active > .a\:c_acc,.active.a\:c_acc-0,
+.active > .a\:c_acc-0 {
   color: #004176 !important;
 }
 
-.is-active.a\:c_acc-1,
-.is-active > .a\:c_acc-1 {
+.active.a\:c_acc-1,
+.active > .a\:c_acc-1 {
   color: #265e8b !important;
 }
 
-.is-active.a\:c_acc-2,
-.is-active > .a\:c_acc-2 {
+.active.a\:c_acc-2,
+.active > .a\:c_acc-2 {
   color: #5e87a9 !important;
 }
 
-.is-active.a\:c_acc-3,
-.is-active > .a\:c_acc-3 {
+.active.a\:c_acc-3,
+.active > .a\:c_acc-3 {
   color: #99b3c8 !important;
 }
 
-.is-active.a\:c_acc-4,
-.is-active > .a\:c_acc-4 {
+.active.a\:c_acc-4,
+.active > .a\:c_acc-4 {
   color: #c7d5e1 !important;
 }
 
-.is-active.a\:c_acc-5,
-.is-active > .a\:c_acc-5 {
+.active.a\:c_acc-5,
+.active > .a\:c_acc-5 {
   color: #e6ecf1 !important;
 }
 
-.is-active.a\:c_acc-n1,
-.is-active > .a\:c_acc-n1 {
+.active.a\:c_acc-n1,
+.active > .a\:c_acc-n1 {
   color: #003b6a !important;
 }
 
-.is-active.a\:c_acc-n2,
-.is-active > .a\:c_acc-n2 {
+.active.a\:c_acc-n2,
+.active > .a\:c_acc-n2 {
   color: #003159 !important;
 }
 
-.is-active.a\:c_acc-n3,
-.is-active > .a\:c_acc-n3 {
+.active.a\:c_acc-n3,
+.active > .a\:c_acc-n3 {
   color: #002441 !important;
 }
 
-.is-active.a\:c_acc-n4,
-.is-active > .a\:c_acc-n4 {
+.active.a\:c_acc-n4,
+.active > .a\:c_acc-n4 {
   color: #001a2f !important;
 }
 
-.is-active.a\:c_acc-n5,
-.is-active > .a\:c_acc-n5 {
+.active.a\:c_acc-n5,
+.active > .a\:c_acc-n5 {
   color: #00101e !important;
 }
 
 .a\:icon-show,
-.is-active.a\:icon-hide,
-.is-active > .a\:icon-hide {
+.active.a\:icon-hide,
+.active > .a\:icon-hide {
   display: none !important;
 }
 
-.is-active > .a\:icon-show,
-.is-active.a\:icon-show {
+.active > .a\:icon-show,
+.active.a\:icon-show {
   display: inline-block !important;
 }
 
-.a\:inline,
-.a\:inline-block,
-.a\:block,
-.is-active > .a\:_none,
-.is-active.a\:_none {
+.a\:visible,
+.active > .a\:_none,
+.active.a\:_none {
   display: none !important;
 }
 
-.is-active > .a\:_inline,
-.is-active.a\:_inline {
+.active > .a\:_inline,
+.active.a\:_inline {
   display: inline !important;
 }
 
-.is-active > .a\:_inline-block,
-.is-active.a\:_inline-block {
+.active > .a\:_inline-block,
+.active.a\:_inline-block {
   display: inline-block !important;
 }
 
-.is-active > .a\:_block,
-.is-active.a\:_inline-block {
+.active > .a\:_block,
+.active.a\:_inline-block {
   display: block !important;
 }
 
 /*
 Is active Display
 
-<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg"> Click the areas below to toggle the "is-active" state.</span></div>Toggle the display type of an object when it's parent 'is-active'
+<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg"> Click the areas below to toggle the "is-active" state.</span></div>Toggle the display type of an object when it's parent 'active'
 
 none            -  make the display none when parent is-active
 inline          -  make the display inline when parent is-active
