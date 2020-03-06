@@ -967,67 +967,40 @@
   .icon-toggle_plus-minus 					-  Toggle between plus and minus square
   .icon-toggle_chevron-up-down				- 	Toggle a chevro pointing up and then down.
   .icon-toggle_chevron-double-up-down 					-  Toggle the double chevron to point up when active
+  .icon-toggle_chevron-double-left-right		- Toggle cheverons left and right
   .icon-toggle_caret-circle-right-down 					-  Toggle the caret to point down when active.
   .icon-toggle_arrow-circle 					-  Toggle the arrow to have a circle when active.
   .icon-toggle_bars-times 					-  Toggle between bars and times
-  .icon-toggle_bars-times 					-  Toggle between bars and times
+  .icon-toggle_check-sqaure					-  Check Marks toggle on and off
+  .icon-toggle_check-circle 					-  Check Marks toggle on and off
+  .icon-toggle_check 							-  Check Marks toggle on and off
 
   Markup:
   <ul data-style="{{ modifier_class }}" class="ul_none m_0 p_0">
-  	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
-  			<span class="">FA Solid {{ modifier_class }}</span>
-  			<i class="font_3 fas fa-fw {{ modifier_class }}"></i>
-  			<span class="a:inline"> (is-active) </span>
+  	<li class="m-t_1 is-active_toggle-function c_black a:c_white flex p-x_3 p-y_2 a:bg_primary font_1 bg_shade-2 ">	
+  	<i class="flex_grow font_3 fas fa-fw {{ modifier_class }}"></i>
+  			<span class="flex_auto ">FA Solid {{ modifier_class }}</span>
+  			<span class="flex_grow w_20 self_end a:_block display_none"> is-active </span>
   	</li>
-  	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
-  			<span class="">FA Regular {{ modifier_class }}</span>
-  			<i class="font_3 far  fa-fw {{ modifier_class }}"></i>
-  			<span class="a:inline"> (is-active) </span>
+  	<li class="m-t_1 is-active_toggle-function c_black a:c_white flex p-x_3 p-y_2 a:bg_primary font_1 bg_shade-2 ">	
+  	<i class="flex_grow font_3 far  fa-fw {{ modifier_class }}"></i>
+  			<span class="flex_auto ">FA Regular {{ modifier_class }}</span>
+  			<span class="flex_grow w_20 self_end a:_block display_none"> is-active </span>
   	</li>
-  	<li class="m-t_1 is-active_toggle-function is-active c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
-  			<span class="">FA Light {{ modifier_class }}</span>
-  			<i class="font_3 fal fa-fw {{ modifier_class }}"></i>
-  			<span class="a:inline"> (is-active) </span>
+  	<li class="m-t_1 is-active_toggle-function c_black a:c_white flex p-x_3 p-y_2 a:bg_primary font_1 bg_shade-2 ">	
+  	<i class="flex_grow font_3 fal fa-fw {{ modifier_class }}"></i>
+  			<span class="flex_auto">FA Light {{ modifier_class }}</span>
+  			<span class="flex_grow w_20 self_end a:_block display_none"> is-active </span>
+  	</li>
+  	<li class="m-t_1 is-active_toggle-function c_black a:c_white flex p-x_3 p-y_2 a:bg_primary font_1 bg_shade-2 ">	
+  	<i class="flex_grow font_3 fad fa-fw {{ modifier_class }}"></i>
+  			<span class="flex_auto ">FA Duotone {{ modifier_class }}</span>
+  			<span class="flex_grow w_20 self_end a:_block display_none"> is-active </span>
   	</li>
   </ul>
 
 
   Styleguide InteractiveExtras.ToggleIcons
-  */
-  /*
-  Complete Toggle 
-
-  This variation of the icon toggle responds to `is-complete` and not is `is-active`
-
-  .icon-complete_check					- Toggle a check mark to show.
-  .icon-complete_check-circle		- Toggle a check mark to show.
-
-  Markup:
-  <ul class="ul_none" data-style="{{ modifier_class }}">
-  <li class="br_solid br_shade-5 p_3 br_1">
-  	<div class="">FA Solid {{modifier_class}}</div>
-  	<div class="p_2 font_4">
-  		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_shade-4">default: <i class="fas fa-fw {{modifier_class}}"></i></span> 
-  		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
-  		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="fas {{modifier_class}}"></i></span></div>
-  </li>
-  <li class="br_solid br_shade-5 p_3 br_1">
-  	<div class="">FA Regular {{modifier_class}}</div>
-  	<div class="p_2 font_4">
-  		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_shade-4">default: <i class="far fa-fw {{modifier_class}}"></i></span> 
-  		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
-  		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="far {{modifier_class}}"></i></span></div>
-  </li>
-  <li class="br_solid br_shade-5 p_3 br_1">
-  	<div class="">FA Light {{modifier_class}}</div>
-  	<div class="p_2 font_4">
-  		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_shade-4">default: <i class="fal fa-fw {{modifier_class}}"></i></span> 
-  		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
-  		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="fal {{modifier_class}}"></i></span></div>
-  </li>
-  </ul>
-
-  Styleguide InteractiveExtras.CompleteIcons
   */
   /*
   Loading Grid Dots
@@ -3952,70 +3925,69 @@
   content: "";
   pointer-events: auto;
 }
-#acc_arches_override i.icon-complete_check-circle:before, .is-complete #acc_arches_override i.icon-complete_check:before, #acc_arches_override i.icon-toggle_arrow-circle:before, #acc_arches_override i.icon-toggle_caret-circle-right-down:before, #acc_arches_override i.icon-toggle_chevron-double-left-right:before, #acc_arches_override i.icon-toggle_chevron-double-up-down:before, #acc_arches_override i.icon-toggle_chevron-up-down:before, #acc_arches_override i.icon-toggle_plus-minus:before, #acc_arches_override i.icon-toggle_bars-times:before {
+#acc_arches_override i.icon-toggle_check:before, #acc_arches_override i.icon-toggle_check-circle:before, #acc_arches_override i.icon-toggle_check-sqaure:before, #acc_arches_override i.icon-toggle_arrow-circle:before, #acc_arches_override i.icon-toggle_caret-circle-right-down:before, #acc_arches_override i.icon-toggle_chevron-double-left-right:before, #acc_arches_override i.icon-toggle_chevron-double-up-down:before, #acc_arches_override i.icon-toggle_chevron-up-down:before, #acc_arches_override i.icon-toggle_plus-minus:before, #acc_arches_override i.icon-toggle_bars-times:before {
   margin: 0 4px;
   margin: 0 0.25rem;
 }
 #acc_arches_override i.icon-toggle_bars-times:before {
   content: "";
 }
-.is-active #acc_arches_override i.icon-toggle_bars-times:before,
-#acc_arches_override i.icon-toggle_bars-times:before [class^=is-active] {
+.is-active #acc_arches_override i.icon-toggle_bars-times:before, .is-active > #acc_arches_override i.icon-toggle_bars-times:before {
   content: "";
 }
 #acc_arches_override i.icon-toggle_plus-minus:before {
   content: "";
 }
-.is-active #acc_arches_override i.icon-toggle_plus-minus:before,
-#acc_arches_override i.icon-toggle_plus-minus:before [class^=is-active] {
+.is-active #acc_arches_override i.icon-toggle_plus-minus:before, .is-active > #acc_arches_override i.icon-toggle_plus-minus:before {
   content: "";
 }
 #acc_arches_override i.icon-toggle_chevron-up-down:before {
   content: "";
 }
-.is-active #acc_arches_override i.icon-toggle_chevron-up-down:before,
-#acc_arches_override i.icon-toggle_chevron-up-down:before [class^=is-active] {
+.is-active #acc_arches_override i.icon-toggle_chevron-up-down:before, .is-active > #acc_arches_override i.icon-toggle_chevron-up-down:before {
   content: "";
 }
 #acc_arches_override i.icon-toggle_chevron-double-up-down:before {
   content: "";
 }
-.is-active #acc_arches_override i.icon-toggle_chevron-double-up-down:before,
-#acc_arches_override i.icon-toggle_chevron-double-up-down:before [class^=is-active] {
+.is-active #acc_arches_override i.icon-toggle_chevron-double-up-down:before, .is-active > #acc_arches_override i.icon-toggle_chevron-double-up-down:before {
   content: "";
 }
 #acc_arches_override i.icon-toggle_chevron-double-left-right:before {
   content: "";
 }
-.is-active #acc_arches_override i.icon-toggle_chevron-double-left-right:before,
-#acc_arches_override i.icon-toggle_chevron-double-left-right:before [class^=is-active] {
+.is-active #acc_arches_override i.icon-toggle_chevron-double-left-right:before, .is-active > #acc_arches_override i.icon-toggle_chevron-double-left-right:before {
   content: "";
 }
 #acc_arches_override i.icon-toggle_caret-circle-right-down:before {
   content: "";
 }
-.is-active #acc_arches_override i.icon-toggle_caret-circle-right-down:before,
-#acc_arches_override i.icon-toggle_caret-circle-right-down:before [class^=is-active] {
+.is-active #acc_arches_override i.icon-toggle_caret-circle-right-down:before, .is-active > #acc_arches_override i.icon-toggle_caret-circle-right-down:before {
   content: "";
 }
 #acc_arches_override i.icon-toggle_arrow-circle:before {
   content: "";
 }
-.is-active #acc_arches_override i.icon-toggle_arrow-circle:before,
-#acc_arches_override i.icon-toggle_arrow-circle:before [class^=is-active] {
+.is-active #acc_arches_override i.icon-toggle_arrow-circle:before, .is-active > #acc_arches_override i.icon-toggle_arrow-circle:before {
   content: "";
 }
-#acc_arches_override i.icon-complete_check:before {
-  content: "";
+#acc_arches_override i.icon-toggle_check-sqaure:before {
+  content: "";
 }
-.is-complete #acc_arches_override i.icon-complete_check:before {
-  content: "";
+.is-active #acc_arches_override i.icon-toggle_check-sqaure:before, .is-active > #acc_arches_override i.icon-toggle_check-sqaure:before {
+  content: "";
 }
-#acc_arches_override i.icon-complete_check-circle:before {
+#acc_arches_override i.icon-toggle_check-circle:before {
   content: "";
 }
-.is-complete #acc_arches_override i.icon-complete_check-circle:before {
+.is-active #acc_arches_override i.icon-toggle_check-circle:before, .is-active > #acc_arches_override i.icon-toggle_check-circle:before {
   content: "";
+}
+#acc_arches_override i.icon-toggle_check:before {
+  content: "";
+}
+.is-active #acc_arches_override i.icon-toggle_check:before, .is-active > #acc_arches_override i.icon-toggle_check:before {
+  content: "";
 }
 #acc_arches_override .lds-grid {
   grid-gap: 12px;

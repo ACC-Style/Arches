@@ -10,27 +10,35 @@ Many momment there are needs for toggles of icon when the parent is in the state
 .icon-toggle_plus-minus 					-  Toggle between plus and minus square
 .icon-toggle_chevron-up-down				- 	Toggle a chevro pointing up and then down.
 .icon-toggle_chevron-double-up-down 					-  Toggle the double chevron to point up when active
+.icon-toggle_chevron-double-left-right		- Toggle cheverons left and right
 .icon-toggle_caret-circle-right-down 					-  Toggle the caret to point down when active.
 .icon-toggle_arrow-circle 					-  Toggle the arrow to have a circle when active.
 .icon-toggle_bars-times 					-  Toggle between bars and times
-.icon-toggle_bars-times 					-  Toggle between bars and times
-
+.icon-toggle_check-sqaure					-  Check Marks toggle on and off
+.icon-toggle_check-circle 					-  Check Marks toggle on and off
+.icon-toggle_check 							-  Check Marks toggle on and off
+ 
 Markup:
 <ul data-style="{{ modifier_class }}" class="ul_none m_0 p_0">
-	<li class="m-t_1 is-active_toggle-function #{$active-class-name} c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
-			<span class="">FA Solid {{ modifier_class }}</span>
-			<i class="font_3 fas fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (#{$active-class-name}) </span>
+	<li class="m-t_1 is-active_toggle-function c_black a:c_white flex p-x_3 p-y_2 a:bg_primary font_1 bg_shade-2 ">	
+	<i class="flex_grow font_3 fas fa-fw {{ modifier_class }}"></i>
+			<span class="flex_auto ">FA Solid {{ modifier_class }}</span>
+			<span class="flex_grow w_20 self_end a:_block display_none"> #{$active-class-name} </span>
 	</li>
-	<li class="m-t_1 is-active_toggle-function #{$active-class-name} c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
-			<span class="">FA Regular {{ modifier_class }}</span>
-			<i class="font_3 far  fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (#{$active-class-name}) </span>
+	<li class="m-t_1 is-active_toggle-function c_black a:c_white flex p-x_3 p-y_2 a:bg_primary font_1 bg_shade-2 ">	
+	<i class="flex_grow font_3 far  fa-fw {{ modifier_class }}"></i>
+			<span class="flex_auto ">FA Regular {{ modifier_class }}</span>
+			<span class="flex_grow w_20 self_end a:_block display_none"> #{$active-class-name} </span>
 	</li>
-	<li class="m-t_1 is-active_toggle-function #{$active-class-name} c_white a:c_black flex p-x_3 p-y_2 a:bg_shade-3 font_1 bg_success-n1">	
-			<span class="">FA Light {{ modifier_class }}</span>
-			<i class="font_3 fal fa-fw {{ modifier_class }}"></i>
-			<span class="a:inline"> (#{$active-class-name}) </span>
+	<li class="m-t_1 is-active_toggle-function c_black a:c_white flex p-x_3 p-y_2 a:bg_primary font_1 bg_shade-2 ">	
+	<i class="flex_grow font_3 fal fa-fw {{ modifier_class }}"></i>
+			<span class="flex_auto">FA Light {{ modifier_class }}</span>
+			<span class="flex_grow w_20 self_end a:_block display_none"> #{$active-class-name} </span>
+	</li>
+	<li class="m-t_1 is-active_toggle-function c_black a:c_white flex p-x_3 p-y_2 a:bg_primary font_1 bg_shade-2 ">	
+	<i class="flex_grow font_3 fad fa-fw {{ modifier_class }}"></i>
+			<span class="flex_auto ">FA Duotone {{ modifier_class }}</span>
+			<span class="flex_grow w_20 self_end a:_block display_none"> #{$active-class-name} </span>
 	</li>
 </ul>
 
@@ -42,9 +50,8 @@ i.icon-toggle_bars-times:before {
 	@extend %icon-toggle-space;
 
 	content: '\f0c9';
-
 	.#{$active-class-name} &,
-	[class^='#{$active-class-name}'] {
+	.#{$active-class-name} > & {
 		content: '\f2d3';
 	}
 }
@@ -55,7 +62,7 @@ i.icon-toggle_plus-minus:before {
 	content: '\f0fe';
 
 	.#{$active-class-name} &,
-	[class^='#{$active-class-name}'] {
+	.#{$active-class-name} > & {
 		content: '\f146';
 	}
 }
@@ -63,7 +70,7 @@ i.icon-toggle_chevron-up-down:before {
 	@extend %icon-toggle-space;
 	content: '\f106';
 	.#{$active-class-name} &,
-	[class^='#{$active-class-name}'] {
+	.#{$active-class-name} > & {
 		content: '\f107';
 	}
 }
@@ -71,7 +78,7 @@ i.icon-toggle_chevron-double-up-down:before {
 	@extend %icon-toggle-space;
 	content: '\f103';
 	.#{$active-class-name} &,
-	[class^='#{$active-class-name}'] {
+	.#{$active-class-name} > & {
 		content: '\f325';
 	}
 }
@@ -80,7 +87,7 @@ i.icon-toggle_chevron-double-left-right:before {
 	@extend %icon-toggle-space;
 	content: '\f324';
 	.#{$active-class-name} &,
-	[class^='#{$active-class-name}'] {
+	.#{$active-class-name} > & {
 		content: '\f323';
 	}
 }
@@ -89,7 +96,7 @@ i.icon-toggle_caret-circle-right-down:before {
 	@extend %icon-toggle-space;
 	content: '\f32d';
 	.#{$active-class-name} &,
-	[class^='#{$active-class-name}'] {
+	.#{$active-class-name} > & {
 		content: '\f330';
 	}
 }
@@ -97,57 +104,33 @@ i.icon-toggle_arrow-circle:before {
 	@extend %icon-toggle-space;
 	content: '\f061';
 	.#{$active-class-name} &,
-	[class^='#{$active-class-name}'] {
+	.#{$active-class-name} > & {
 		content: '\f0a9';
 	}
 }
 
-/*
-Complete Toggle 
-
-This variation of the icon toggle responds to `is-complete` and not is `#{$active-class-name}`
-
-.icon-complete_check					- Toggle a check mark to show.
-.icon-complete_check-circle		- Toggle a check mark to show.
-
-Markup:
-<ul class="ul_none" data-style="{{ modifier_class }}">
-<li class="br_solid br_shade-5 p_3 br_1">
-	<div class="">FA Solid {{modifier_class}}</div>
-	<div class="p_2 font_4">
-		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_shade-4">default: <i class="fas fa-fw {{modifier_class}}"></i></span> 
-		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
-		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="fas {{modifier_class}}"></i></span></div>
-</li>
-<li class="br_solid br_shade-5 p_3 br_1">
-	<div class="">FA Regular {{modifier_class}}</div>
-	<div class="p_2 font_4">
-		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_shade-4">default: <i class="far fa-fw {{modifier_class}}"></i></span> 
-		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
-		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="far {{modifier_class}}"></i></span></div>
-</li>
-<li class="br_solid br_shade-5 p_3 br_1">
-	<div class="">FA Light {{modifier_class}}</div>
-	<div class="p_2 font_4">
-		<span class="br_radius m-x_2 p-x_3 p-y_2 bg_shade-4">default: <i class="fal fa-fw {{modifier_class}}"></i></span> 
-		<span class="m-x_4 p_4  p-y_2 br_circle bg_black c_white">vs</span>
-		<span class="is-complete br_radius m-x_2 p-x_3 p-y_2 bg_primary-4">is-complete: <i class="fal {{modifier_class}}"></i></span></div>
-</li>
-</ul>
-
-Styleguide InteractiveExtras.CompleteIcons
-*/
-i.icon-complete_check:before {
-	content: '';
-	.is-complete & {
-		@extend %icon-toggle-space;
-		content: '\f00c';
+i.icon-toggle_check-sqaure:before {
+	@extend %icon-toggle-space;
+	content: '\f0c8';
+	.#{$active-class-name} &,
+	.#{$active-class-name} > & {
+		content: '\f14a';
 	}
 }
-i.icon-complete_check-circle:before {
+i.icon-toggle_check-circle:before {
 	@extend %icon-toggle-space;
 	content: '\f111';
-	.is-complete & {
+	.#{$active-class-name} &,
+	.#{$active-class-name} > & {
 		content: '\f058';
+	}
+}
+
+i.icon-toggle_check:before {
+	@extend %icon-toggle-space;
+	content: '';
+	.#{$active-class-name} &,
+	.#{$active-class-name} > & {
+		content: '\f00c';
 	}
 }
