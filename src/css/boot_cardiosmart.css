@@ -10692,102 +10692,301 @@ The returned result of a FYHAH search.
 Markup:
 <article class="br_1 br_black-2 br_solid font_0 font_ui p_4 shadow_bevel-light">
 	<header class="br-b_1 br_secondary-5 br_solid flex m-b_3 p-b_3">
-		<h1 class="font_2 font_display m_0 flex_auto"><span class="">Mayo Clinic</span> <small class="font_n1 c_primary">2.8 miles</small></h1>
-		<div class="flex">
-			<a class="a:bg_highlight active bg_shade-5 br_2 br_solid br_white-3 c_black flex_auto h:bg_primary h:c_white h:underline-none inline-block m-r_2 p-y_2 p_4 shadow_overlap-light text_center" href="#">
-				<i class="fal fa-fw icon-toggle_check-sqaure icon-toggle_check-square"></i>
-				<span class="add alt-short-text a:none">Compare</span>
-				<span class="remove alt-short-text a:inline-block">Remove</span>
-			</a>
-			<a href="#" class="a:bg_accent bg_shade-5 br_2 br_solid br_white-3 c_black flex_auto h:bg_primary h:c_white h:underline-none inline-block m-r_2 p-y_2 p_4 shadow_overlap-light text_center">
-				<span class="add alt-short-text">Profile</span>
-				<i class="fa fa-fw icon-toggle_arrow-circle"></i>
-			</a>
-		</div>
+		<h1 class="font_2 font_display m_0 flex_auto">
+			<span class="">Mayo Clinic</span>
+			<small class="font_n1 c_primary">2.8 miles</small>
+		</h1>
 	</header>
-	<div class="flex">
-		<div class="flex_grow">
-			<address class="br-r_1 br_dotted br_secondary font_0 m-b_0 m-r_4 p-r_4">
+	<div class="flex flex_column flex_row:md">
+		<div class="br-r_1 flex_auto font_0 m-r_4:md max-w_30">
+			<address class=" m-b_0 m-r_4 p-r_4">
 				<!-- http://microformats.org/wiki/hcard -->
-				<h4 class="font_0 font_bold font_copy font_normal m-b_0 m-t_0">
-					Heart House
-				</h4>
-				<div class="font_ui font_n1">
-					<ul class="ul_none  lh_1">
-						<li class="m-b_1 m-b_2:md font_normal">
+				<ul class="ul_none lh_1 font_0">
+					<li class="m-b_1 m-b_3:md facility-address font_1">
+						<h4 class="font_bold m-b_0 m-t_0">
+							Heart House
+						</h4>
+						<div class="block">
 							<span class="street-address">2400 N. St. NW</span>
-						</li>
-						<li class="m-b_1 m-b_2:md font_normal">
+						</div>
+						<div class="block">
 							<span class="locality ">Washington</span>,
 							<span class="city-name ">
 								<abbr title="District of Colombia">DC</abbr>
 							</span>
 							<span class="postal-code">20037</span>
-						</li>
-						<li class="m-b_1 m-b_2:md font_normal">
-							<a href="mailto:resource@acc.org" class="email  link c_black text_underline  h:c_primary ">
-								<strong class="p-r_2 inline block:md inline:lg">Email:</strong>
-								<span class="inline block:md inline:lg">resource@acc.org</span></a>
-						</li>
-					    <li class="m-b_1 m-b_3:md font_normal">
-							<a tel="+12023756000" href="tel:+12023756000" class="tel link  c_black h:c_primary h:underline"><strong class="p-r_2 inline block:md inline:lg">Phone:</strong>
-								<i class="fas fa-fw fa-phone"></i><span class=" block:md inline:lg">(202) 375-6000, ext. 5603</span></a>
-						</li><li class=" m-b_1 m-b_2:md font_normal">
-							<a fax="+12023757000" href="fax:+12023757000" class="fax  link c_black h:c_primary h:underline">
-								<strong class="p-r_2 block:md inline:lg">Fax:</strong>
-								<span class="block:md inline:lg">(202) 375-7000</span>
-							</a>
-						</li><li class="m-b_1 m-b_3:md font_normal">
-							<a tel="+18002574737" href="tel:+18002534636.5603" class="tel link  c_black h:underline">
-								<strong class="p-r_2 block:md inline:lg">Toll Free:</strong><span class=" block:md inline:lg">(800) 253-4636, ext. 5603</span></a>
-                        </li>
-                    </ul>
-				</div>
+						</div>
+					</li>
+					<li class="m-b_1 m-b_2:md facility-google-map">
+						<a
+							class="block c_secondary h:c_primary h:underline"
+							href="https://google.map.com"
+							><i class="fa-fw fa-map-marker fa-pin fas"></i>Get
+							Directions</a
+						>
+					</li>
+					<li class="m-b_1 m-b_2:md facility-web-URL">
+						<a
+							class="website c_secondary h:c_primary h:underline"
+							target="_blank"
+							href="http://www.bidmc.org"
+						>
+							<i class="fas fa-fw fa-globe"></i>
+							website
+						</a>
+					</li>
+					<li class="m-b_1 m-b_2:md facility-email">
+						<a
+							href="mailto:resource@acc.org"
+							class="emailc_secondary c_secondary h:c_primary h:underline"
+							><i class="fas fa-fw fa-envelope"></i
+							><span class="text">resource@acc.org</span></a
+						>
+					</li>
+					<li class="m-b_1 m-b_3:md facility-phone">
+						<a
+							tel="+18002574737"
+							href="tel:+18002534636.5603"
+							class="tel c_secondary h:c_primary h:underline"
+						>
+							<i class="fas fa-fw fa-phone"></i
+							><span class="text">(800) 253-4636, ext. 5603</span>
+						</a>
+					</li>
+				</ul>
 			</address>
 		</div>
-		<div class="flex_auto">
+		<div class="flex_auto m-t_0:md m-t_4">
 			<div class="font_0 font_bold">
-					Cardiac Services
-					<a href="https://www.cardiosmart.org/resources/pr-glossary" target="_blank"><i class="fas fa-fw fa-question-circle"></i></a>
-                </div>
-                <ul class="font_n1 gap-x_4 grid lh_2 template-x_30 ul_none">	
+				Cardiac Services
+				<a
+					href="https://www.cardiosmart.org/resources/pr-glossary"
+					target="_blank"
+					class="c_secondary h:c_primary h:underline"
+					><i class="fas fa-fw fa-question-circle"></i
+				></a>
+			</div>
+			<ul class="font_n1 gap-x_4 grid lh_2 template-x_15 ul_none">
 				<li class="facility-service">
 					Acute Myocardial Infarction Treatment
-                </li>
-                <li class="facility-service">Atrial Fibrillation Ablation</li> <li class="facility-service">
+				</li>
+				<li class="facility-service">Atrial Fibrillation Ablation</li>
+				<li class="facility-service">
 					Cardiac Defibrillator Implantation
-                </li>
-                <li class="facility-service">Cardiac Surgery Services</li> <li class="facility-service">Carotid Artery Stenting</li> <li class="facility-service">Carotid Endarterectomy</li> <li class="facility-service">
+				</li>
+				<li class="facility-service">Cardiac Surgery Services</li>
+				<li class="facility-service">Carotid Artery Stenting</li>
+				<li class="facility-service">Carotid Endarterectomy</li>
+				<li class="facility-service">
 					Congenital Heart Defect Intervention
-                </li>
-                <li class="facility-service">
+				</li>
+				<li class="facility-service">
 					Coronary Artery Bypass Graft Surgery
-                </li>
-                <li class="facility-service">
+				</li>
+				<li class="facility-service">
 					Diagnostic Cardiac Catheterization
-                </li> <li class="facility-service">Electrophysiology Studies</li>
-                <li class="facility-service">
+				</li>
+				<li class="facility-service">Electrophysiology Studies</li>
+				<li class="facility-service">
 					Left Atrial Appendage Occlusion
-                </li>
-                <li class="facility-service">Pacemaker Implantation</li> <li class="facility-service">
+				</li>
+				<li class="facility-service">Pacemaker Implantation</li>
+				<li class="facility-service">
 					Percutaneous Coronary Intervention for Elective and
 					Emergency Cases
-                </li>
-                <li class="facility-service">
+				</li>
+				<li class="facility-service">
 					Percutaneous Peripheral Vascular Intervention
-                </li>
-                <li class="facility-service">
+				</li>
+				<li class="facility-service">
 					Transcatheter Valve Replacement
 				</li>
 			</ul>
 		</div>
 	</div>
-	<footer class="result-footer CS_row"></footer>
+	<footer
+		class="br-t_1 br_secondary-5 br_solid flex justify_between m-t_3 p-t_3 result-footer"
+	>
+		<a
+			class="a:bg_highlight a:c_black bg_shade-5 br_2 br_solid br_white-3 c_black flex_grow h:bg_primary h:c_white h:underline-none inline-block m-r_2 p-y_2 p_4 shadow_overlap-light text_center"
+			href="#"
+		>
+			<i
+				class="fal fa-fw icon-toggle_check-sqaure icon-toggle_check-square"
+			></i>
+			<span class="add alt-short-text a:none">Compare</span>
+			<span class="remove alt-short-text a:inline-block">Remove</span> </a
+		><a
+			href="#"
+			class="a:bg_accent bg_shade-5 br_2 br_solid br_white-3 c_black flex_grow h:bg_primary h:c_white h:underline-none inline-block m-r_2 p-y_2 p_4 shadow_overlap-light text_center"
+		>
+			<span class="add alt-short-text">Profile</span>
+			<i class="fa fa-fw icon-toggle_arrow-circle"></i>
+		</a>
+	</footer>
 </article>
 
 
 Weight:0
 
 Styleguide RecipesFYHAH.Result
+*/
+/*
+Profile Side Bar
+
+Description: 
+
+Markup:
+<div class="br_radius max-w_25 p_4 shadow_overlap-bold">
+	<header class="br-b_1 br_secondary-5 br_solid flex m-b_4 p-b_4">
+		<h1 class="font_3 font_display m_0">
+			<span class="">Mayo Clinic</span>
+			<small class="font_n1 c_primary">2.8 miles</small>
+		</h1>
+	</header>
+	<div class="m_auto mapouter">
+		<div
+			class="br_1 br_black-3 br_radius br_solid gmap_canvas overflow_hidden sh"
+		>
+			<iframe
+				width="368"
+				height="300"
+				id="gmap_canvas"
+				src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+				frameborder="0"
+				scrolling="no"
+				marginheight="0"
+				marginwidth="0"
+			></iframe
+			><a href="https://www.bitgeeks.net"></a>
+		</div>
+		<style>
+			.mapouter {
+				position: relative;
+				text-align: right;
+				height: 300px;
+				width: 100%;
+			}
+			.gmap_canvas {
+				overflow: hidden;
+				background: none !important;
+				height: 300px;
+				width: 100%;
+			}
+		</style>
+	</div>
+	<address class="m-t_3">
+		<!-- http://microformats.org/wiki/hcard -->
+		<ul class="ul_none lh_1 font_0">
+			<li class="m-b_1 m-b_3:md facility-address font_1">
+				<h4 class="font_bold m-b_0 m-t_0">
+					Heart House
+				</h4>
+				<div class="block">
+					<span class="street-address">2400 N. St. NW</span>
+				</div>
+				<div class="block">
+					<span class="locality ">Washington</span>,
+					<span class="city-name ">
+						<abbr title="District of Colombia">DC</abbr>
+					</span>
+					<span class="postal-code">20037</span>
+				</div>
+			</li>
+			<li class="m-b_1 m-b_2:md facility-google-map">
+				<a
+					class="block c_secondary h:c_primary h:underline"
+					href="https://google.map.com"
+					><i class="fa-fw fa-map-marker fa-pin fas"></i>Get
+					Directions</a
+				>
+			</li>
+			<li class="m-b_1 m-b_2:md facility-web-URL">
+				<a
+					class="website c_secondary h:c_primary h:underline"
+					target="_blank"
+					href="http://www.bidmc.org"
+				>
+					<i class="fas fa-fw fa-globe"></i>
+					website
+				</a>
+			</li>
+			<li class="m-b_1 m-b_2:md facility-email">
+				<a
+					href="mailto:resource@acc.org"
+					class="emailc_secondary c_secondary h:c_primary h:underline"
+					><i class="fas fa-fw fa-envelope"></i
+					><span class="text">resource@acc.org</span></a
+				>
+			</li>
+			<li class="m-b_1 m-b_3:md facility-phone">
+				<a
+					tel="+18002574737"
+					href="tel:+18002534636.5603"
+					class="tel c_secondary h:c_primary h:underline"
+				>
+					<i class="fas fa-fw fa-phone"></i
+					><span class="text">(800) 253-4636, ext. 5603</span>
+				</a>
+			</li>
+		</ul>
+	</address>
+	<div class="font_0 font_bold">
+		Cardiac Services
+		<a
+			href="https://www.cardiosmart.org/resources/pr-glossary"
+			target="_blank"
+			class="c_secondary h:c_primary h:underline"
+			><i class="fas fa-fw fa-question-circle"></i
+		></a>
+	</div>
+	<ul class="font_n1 gap-x_4  ul_none">
+		<li class="facility-service">
+			Acute Myocardial Infarction Treatment
+		</li>
+		<li class="facility-service">Atrial Fibrillation Ablation</li>
+		<li class="facility-service">
+			Cardiac Defibrillator Implantation
+		</li>
+		<li class="facility-service">Cardiac Surgery Services</li>
+		<li class="facility-service">Carotid Artery Stenting</li>
+		<li class="facility-service">Carotid Endarterectomy</li>
+		<li class="facility-service">
+			Congenital Heart Defect Intervention
+		</li>
+		<li class="facility-service">
+			Coronary Artery Bypass Graft Surgery
+		</li>
+		<li class="facility-service">
+			Diagnostic Cardiac Catheterization
+		</li>
+		<li class="facility-service">Electrophysiology Studies</li>
+		<li class="facility-service">
+			Left Atrial Appendage Occlusion
+		</li>
+		<li class="facility-service">Pacemaker Implantation</li>
+		<li class="facility-service">
+			Percutaneous Coronary Intervention for Elective and Emergency Cases
+		</li>
+		<li class="facility-service">
+			Percutaneous Peripheral Vascular Intervention
+		</li>
+		<li class="facility-service">
+			Transcatheter Valve Replacement
+		</li>
+	</ul>
+	<p class="c_primary font_italic font_n2 lh_2 m-t_3 subtle">
+		Cardiac data registries are national databases that collect information
+		on specific heart conditions or procedures performed in hospitals.
+		Quality improvement programs give hospitals the tools and resources they
+		need to improve how they deliver care.
+	</p>
+</div>
+
+
+
+Weight:0
+
+Styleguide RecipesFYHAH.Profile Identifier
 */
 /*# sourceMappingURL=maps/boot_cardiosmart.css.map */
