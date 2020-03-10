@@ -261,6 +261,12 @@ Styleguide Typography.Font.Color Transparency
 	@include loop-style(font-size, $bp-label_xlarge, '');
 }
 
+.font-size_up {
+	font-size: calc(1em * #{$ms-ratio});
+}
+.font-size_down {
+	font-size: calc(1em /#{$ms-ratio});
+}
 /*
   Text Wrap
 
