@@ -10693,7 +10693,7 @@ Markup:
 <article class="br_1 br_black-2 br_solid font_0 font_ui p_4 shadow_bevel-light">
 	<header class="br-b_1 br_secondary-5 br_solid flex m-b_3 p-b_3">
 		<h1 class="font_2 font_display m_0 flex_auto">
-			<span class="">Mayo Clinic</span>
+			<span class="">American College of Cardiology</span>
 			<small class="font_n1 c_primary">2.8 miles</small>
 		</h1>
 	</header>
@@ -10840,7 +10840,7 @@ Markup:
 <div class="br_radius max-w_25 p_4 shadow_overlap-bold">
 	<header class="br-b_1 br_secondary-5 br_solid flex m-b_4 p-b_4">
 		<h1 class="font_3 font_display m_0">
-			<span class="">Mayo Clinic</span>
+			<span class="">American College of Cardiology</span>
 			<small class="font_n1 c_primary">2.8 miles</small>
 		</h1>
 	</header>
@@ -10852,13 +10852,13 @@ Markup:
 				width="368"
 				height="300"
 				id="gmap_canvas"
-				src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+				src="https://maps.google.com/maps?q=american%20college%20of%20cardiology&t=&z=13&ie=UTF8&iwloc=&output=embed"
 				frameborder="0"
 				scrolling="no"
 				marginheight="0"
 				marginwidth="0"
 			></iframe
-			><a href="https://www.bitgeeks.net"></a>
+			>
 		</div>
 		<style>
 			.mapouter {
@@ -10988,5 +10988,158 @@ Markup:
 Weight:0
 
 Styleguide RecipesFYHAH.Profile Identifier
+*/
+/*
+Search Panel
+
+Description: Search Panel
+
+Markup:
+<fieldset id="searchpanel" class="bg_white br_radius max-w_25 p_4 shadow_overlap-bold">
+	<header class="flex font_2 justify_between search-panel-toggle">
+		<div class="display_none:md">
+			<a class="btn btn-info collapse-trigger font_0 p_2 self_center"><i class="fa icon-toggle_plus-minus"></i></a>
+		</div>
+		<h2 class="flex_auto lh_0 m_0 p-x_3 self_center">Search</h2>
+		<div class="flex_shrink">
+			<a href="#" data-bind="click: Behavior_ClearSearchValues flex_grow" class="btn btn-link self_center">
+				Clear
+				<i class="fa fa-times-circle"></i>
+			</a>
+		</div>
+	</header>
+	<section class="search-panel-content collapsable CS_col-xs-12">
+		<div class="control-group">
+			<div class="control-label">
+				<label for="HospitalName">Hospital Name</label>
+			</div>
+			<div class="controls">
+				<input id="HospitalName" type="text" value="" placeholder="Address,State, or Zip">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="control-label">
+				<label for="HospitalLocation">Location</label>
+			</div>
+			<div class="controls">
+				<input id="HospitalLocation" type="text" value="" placeholder="Address,State, or Zip">
+				<input class="display_none" data-bind="value:Latitude" id="Latitude" name="Latitude" type="text" value="">
+				<input class="display_none" data-bind="value:Longitude" id="Longitude" name="Longitude" type="text" value="">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="control-label">
+				<label class="lh_0 m-b_0">Cardiac Services
+					<a class="underline c_primary font_n1" href="https://www.cardiosmart.org/resources/pr-glossary" target="_blank">
+						<span class="display_none inline-block:md">Services Glossary</span>
+						<span class="alt-short-text display_none:md inline-block">Glossary</span>
+						<i class="fa fa-fw fa-question-circle"></i>
+					</a>
+				</label>
+				<span class="block c_accent font_n1 help-block">Select all services hospitals must perform</span>
+			</div>
+			<div class="controls">
+				<select name="ServiceId" id="ServiceId" class="selectpicker knockoutjs-selectpicker" multiple="multiple">
+					<option value="11">Acute Myocardial Infarction Treatment</option>
+					<option value="16">Atrial Fibrillation Ablation</option>
+					<option value="3">Cardiac Defibrillator Implantation</option>
+					<option value="14">Cardiac Surgery Services</option>
+					<option value="6">Carotid Artery Stenting</option>
+					<option value="7">Carotid Endarterectomy</option>
+					<option value="8">Congenital Heart Defect Intervention</option>
+					<option value="15">Coronary Artery Bypass Graft Surgery</option>
+					<option value="4">Diagnostic Cardiac Catheterization</option>
+					<option value="1">Electrophysiology Studies</option>
+					<option value="12">Left Atrial Appendage Occlusion</option>
+					<option value="2">Pacemaker Implantation</option>
+					<option value="13">Percutaneous Coronary Intervention for Acute Myocardial
+						Infarction</option>
+					<option value="5">Percutaneous Coronary Intervention for Elective and
+						Emergency Cases</option>
+					<option value="10">Percutaneous Peripheral Vascular Intervention</option>
+					<option value="9">Transcatheter Valve Replacement</option>
+				</select>
+			</div>
+		</div>
+		<div class="control-group font_n1 m-t_2">
+			<div class="control-label">
+				<label for="IsParticipatingLbl"><i id="FilterLbl">Filter search results by</i></label>
+				<label class="checkbox" id="IsParticipatingLbl">
+					<input data-bind="checked: IsParticipating, click: Behavior_SearchHospitals, css: { 'disabled-grey': !Computed_IsSearchFunctionAllowed() } " id="IsParticipating" name="IsParticipating" type="checkbox" value="true" class="">
+					Reporting Data
+				</label>
+			</div>
+		</div>
+	</section>
+	<footer class="search-panel-footer CS_col-xs-12 collapsable">
+		<a class="bg_primary-2 br_radius btn c_white float_right h:bg_primary h:shadow shadow_2" data-bind="click: Behavior_SearchHospitals, css: { 'disabled-grey': !Computed_IsSearchFunctionAllowed() }">Search
+			<i class="icon-search icon-white"></i></a>
+	</footer>
+</fieldset>
+
+Weight:0
+
+Styleguide RecipesFYHAH.Search Panel
+*/
+/*
+FYHAH Header Bar
+
+Description: Header of the single page applicaiton
+
+Markup:
+<section class="bg_white br-b_2 br_primary br_solid c_black flex">
+	<nav class="flex_auto font_1 m-b_0">
+		<ul class="flex ul_none">
+			<li class=" flex_shrink flex">
+				<a class="c_primary self_center p_3  br_black-3 br_dotted br-r_1 " href="#"><i class="fas fa-home-heart"></i></a>
+			</li>
+			<li class="m-l_3 p-l_3 br_black-3 br_dotted br-r_1 flex_shrink flex">
+				<a class="c_primary self_center p_3" href="#"><i class="fas fa-search"></i></a>
+			</li>
+			<li class="m-l_3 p-l_3 br_black-3 br_dotted br-r_1 flex_shrink flex">
+				<span class="c_primary active self_center p_3  font_bold">Profile</span>
+			</li>
+		</ul>
+	</nav>
+	<div class="flex">
+		<ul class="flex ul_none">
+			<li class="flex_grow flex active">
+				<div class="self_center a:_none">
+					<i class=" br_2 br_dashed br_radius br_black-3 fa-question fas m-r_3 p_3 "></i>
+				</div>
+				<div class="self_center display_none a:_block">
+					<i
+						class="bg_highlight br_2 br_highlight-n3 br_radius br_solid c_black fa-hospital fas m-r_3 p_3"></i>
+				</div>
+			</li>
+			<li class="flex_grow flex ">
+				<div class="self_center a:_none">
+					<i class=" br_2 br_dashed br_radius br_black-3 fa-question fas m-r_3 p_3 "></i>
+				</div>
+				<div class="self_center display_none a:_block">
+					<i
+						class="bg_highlight br_2 br_highlight-n3 br_radius br_solid c_black fa-hospital fas m-r_3 p_3"></i>
+				</div>
+			</li>
+			<li class="flex_grow flex ">
+				<div class="self_center a:_none">
+					<i class=" br_2 br_dashed br_radius br_black-3 fa-question fas m-r_3 p_3 "></i>
+				</div>
+				<div class="self_center display_none a:_block">
+					<i
+						class="bg_highlight br_2 br_highlight-n3 br_radius br_solid c_black fa-hospital fas m-r_3 p_3"></i>
+				</div>
+			</li>
+		</ul>
+		<div class="CS_col-xs-12 flex flex_auto p_3">
+			<a href="#" class="CS_col-xs-12 br_radius font_0 p-x_3 p_2 bg_shade-3 c_black-2">Compare</a>
+		</div>
+	</div>
+</section>
+
+
+Weight:0
+
+Styleguide RecipesFYHAH.Search Header
 */
 /*# sourceMappingURL=maps/boot_cardiosmart.css.map */
