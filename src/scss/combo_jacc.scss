@@ -277,7 +277,6 @@ $acc-blue: #004176;
 $white: rgb(255, 255, 255);
 $black: rgb(19, 18, 18);
 $real-black: #000;
-$jacc-orange: #f60;
 
 // Currently Un used in the design but part of bootstrap.
 $indigo: #6610f2 !default;
@@ -298,67 +297,35 @@ $gray-900: mix($white, $black, 90%);
 $theme-palette: map-merge(
 	$theme-palette,
 	(
-		primary: #004176,
-		secondary: #f60,
-		shade: #868686,
+		primary: $teal,
+		secondary: $dark-grey,
 		success: $green,
 		warning: $orange,
 		alert: $red,
 		navigation: $blue,
 		accent: $green-blue,
 		info: $alt-grey,
-		highlight: $teal,
+		highlight: $purple,
 		acc: $acc-blue
 	)
 );
-@debug 'brand JACC added theme accent ' + map-get($map: $theme-palette, $key: accent);
-@debug 'brand JACC added theme accent ' + map-get($map: $theme-palette, $key: shade);
-
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
-
-/* latin-ext */
-@font-face {
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: local('Roboto'), local('Roboto-Regular'),
-		url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
-	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: local('Roboto'), local('Roboto-Regular'),
-		url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
-		U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@debug 'brand ACC added theme accent ' + map-get($map: $theme-palette, $key: accent);
 
 $fonts: (
 	slab: (
 		name: 'Roboto Slab',
-		short-name: 'RS',
-		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,"slab",serif'
+		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"'
 	),
 	display: (
-		name: 'Roboto',
-		short-name: 'Ro',
-		stack: '"Roboto","Maven Pro","Muli","Open Sans","system",sans-serif'
+		name: 'Maven Pro',
+		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif'
 	),
 	copy: (
 		name: 'Muli',
-		short-name: 'Mu',
-		stack: '"Muli","Open Sans","system",Helvetica, Arial,sans-serif'
+		stack: '"Muli","Open Sans","system",sans-serif'
 	),
 	ui: (
 		name: 'Open Sans',
-		short-name: 'OS',
 		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
 	)
 );
@@ -367,7 +334,6 @@ $fonts: (
 $value-to-unit: map-deep-set($value-to-unit, 'font-family' 'slab', map-deep-get($fonts, 'slab', 'stack'));
 $value-to-unit: map-deep-set($value-to-unit, 'font-family' 'display', map-deep-get($fonts, 'display', 'stack'));
 $value-to-unit: map-deep-set($value-to-unit, 'font-family' 'copy', map-deep-get($fonts, 'copy', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'ui', map-deep-get($fonts, 'ui', 'stack'));
 
 // reset all the references for the fonts
 $style-definition: map-deep-set(
@@ -408,7 +374,7 @@ $h6-font-size: map-deep-get($value-to-unit, font-size, 0);
 $font-size-base: $base-font-size-rem; // Assumes the browser default, typically `16px`
 $font-size-lg: map-deep-get($value-to-unit, font-size, 2);
 $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
-/** Built With JACC Branding **//**  Default Brands    *********************************/
+/** Built With Temp Branding **//**  Default Brands    *********************************/
 /**  Colors  **/
 
 @import "config/colors";
