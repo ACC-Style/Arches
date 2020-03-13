@@ -859,7 +859,7 @@ gulp.task("construct", function() {
 	// temp branding
 	var boot_temp = base
 		.pipe(clone())
-		.pipe(rename("boot_jacc.scss"))
+		.pipe(rename("boot_temp.scss"))
 		.pipe(
 			header(
 				fs.readFileSync(
@@ -885,6 +885,7 @@ gulp.task("construct", function() {
 		boot_acc,
 		uc_acc,
 		uc_temp,
+		boot_temp,
 		boot_jacc,
 		uc_jacc,
 		zurb_cardiosmart,
