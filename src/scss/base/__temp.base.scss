@@ -1,0 +1,32 @@
+.brand-header {
+	height: 160px;
+	width: 100%;
+	background-color: aliceblue;
+	background: url('../img/temp/header.backgroundTexture.sm.png') no-repeat center top;
+}
+
+@media #{$medium-only} {
+	.brand-header {
+		height: 160px;
+		width: 100%;
+		background-color: aliceblue;
+		background: url('../img/temp/header.mainLogo.md.png') no-repeat 4% top,
+			url('../img/temp/header.date.md.png') no-repeat 98% top,
+			url('../img/temp/header.heart.md.png') no-repeat 1% top,
+			url('../img/temp/header.backgroundTexture.png') no-repeat center top;
+	}
+}
+@media #{$large-up} {
+	.brand-header {
+		height: 240px;
+		width: 100%;
+		background-color: aliceblue;
+		background: url('../img/temp/header.mainLogo.lg.png') no-repeat 4% top,
+			url('../img/temp/header.date.lg.png') no-repeat 98% top,
+			url('../img/temp/header.heart.lg.png') no-repeat 1% top,
+			url('../img/temp/header.backgroundTexture.png') no-repeat center top;
+	}
+}
+.template-x_3up {
+	grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+}
