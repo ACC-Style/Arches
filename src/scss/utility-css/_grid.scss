@@ -39,34 +39,65 @@ Weight:0
  
 Styleguide  display.Grid.Template
 */
-.template-x_40 {
-	grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
-}
-.template-x_35 {
-	grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
-}
-.template-x_30 {
-	grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-}
-.template-x_25 {
-	grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+.template-x_15 {
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
 .template-x_20 {
 	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
-.template-x_15 {
-	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+.template-x_25 {
+	grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
 }
-.template-y_40 {
-	grid-template-row: repeat(auto-fill, minmax(40rem, 1fr));
+.template-x_30 {
+	grid-template-columns: repeat(auto-fill, minmax(minmax(30rem, 1fr), 1fr));
+}
+.template-x_35 {
+	grid-template-columns: repeat(auto-fill, minmax(minmax(35rem, 1fr), 1fr));
+}
+.template-x_40 {
+	grid-template-columns: repeat(auto-fill, minmax(minmax(40rem, 1fr), 1fr));
+}
+
+
+
+
+
+.template-y_15 {
+	grid-template-row: repeat(auto-fill, minmax(15rem, 1fr));
 }
 .template-y_30 {
 	grid-template-row: repeat(auto-fill, minmax(30rem, 1fr));
 }
-.template-y_15 {
-	grid-template-row: repeat(auto-fill, minmax(15rem, 1fr));
+.template-y_40 {
+	grid-template-row: repeat(auto-fill, minmax(40rem, 1fr));
+}
+@media #{$medium-up} {
 }
 
+.span-column_2\:lg {
+	grid-column: span 1;
+}
+.span-row_2\:lg {
+	grid-row: span 1;
+}
+.span-column_3\:lg {
+	grid-column: span 1;
+}
+.span-row_3\:lg {
+	grid-row: span 1;
+}
+.span-column_2\:md {
+	grid-column: span 1;
+}
+.span-row_2\:md {
+	grid-row: span 1;
+}
+.span-column_3\:md {
+	grid-column: span 1;
+}
+.span-row_3\:md {
+	grid-row: span 1;
+}
 .span-column_1 {
 	grid-column: span 1;
 }

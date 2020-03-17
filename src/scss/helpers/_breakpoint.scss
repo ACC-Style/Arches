@@ -5,7 +5,9 @@ $medium-up: unquote('only screen and (min-width : #{map-get($breakpoints, md)})'
 $medium-only: unquote(
 	'only screen and (min-width : #{map-get($breakpoints, md)}) and (max-width : #{map-get($breakpoints, lg)})'
 );
-
+$medium-down: unquote(
+	'only screen and (max-width : #{map-get($breakpoints, lg)})'
+);
 $large-up: unquote('only screen and (min-width : #{map-get($breakpoints, lg)})');
 $large-only: unquote(
 	'only screen and (min-width : #{map-get($breakpoints, lg)}) and (max-width : #{map-get($breakpoints, xlg)})'
