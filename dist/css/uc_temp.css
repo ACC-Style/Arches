@@ -7665,34 +7665,27 @@ Styleguide  display.Grid.Template
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 
-.template-x_25 {
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+.template-x_25,.template-x_30,.template-x_35,.template-x_40 {
+  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
 }
 
-.template-x_30 {
-  grid-template-columns: repeat(auto-fill, minmax(minmax(30rem, 1fr), 1fr));
-}
+@media only screen and (min-width : 768px) {
+  .template-x_25 {
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  }
 
-.template-x_35 {
-  grid-template-columns: repeat(auto-fill, minmax(minmax(35rem, 1fr), 1fr));
-}
+  .template-x_30 {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  }
 
-.template-x_40 {
-  grid-template-columns: repeat(auto-fill, minmax(minmax(40rem, 1fr), 1fr));
-}
+  .template-x_35 {
+    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  }
 
-.template-y_15 {
-  grid-template-row: repeat(auto-fill, minmax(15rem, 1fr));
+  .template-x_40 {
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+  }
 }
-
-.template-y_30 {
-  grid-template-row: repeat(auto-fill, minmax(30rem, 1fr));
-}
-
-.template-y_40 {
-  grid-template-row: repeat(auto-fill, minmax(40rem, 1fr));
-}
-
 .span-column_2\:lg {
   -ms-grid-column-span: 1;
   grid-column: span 1;
