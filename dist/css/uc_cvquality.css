@@ -7880,11 +7880,31 @@ Styleguide  display.Grid.Template
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 
-.template-x_25,.template-x_30,.template-x_35,.template-x_40 {
-  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+.template-x_25,
+.template-x_30,
+.template-x_35,
+.template-x_40 {
+  grid-template-columns: repeat(auto-fill, 1fr);
 }
 
 @media only screen and (min-width : 768px) {
+  .template-x_25 {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+
+  .template-x_30 {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+
+  .template-x_35 {
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  }
+
+  .template-x_40 {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  }
+}
+@media only screen and (min-width : 1024px) {
   .template-x_25 {
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   }
