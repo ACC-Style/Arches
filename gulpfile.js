@@ -225,7 +225,7 @@ var buildbrand = function(base, brand, framework) {
 			construct.pipe(
 				header(
 					fs.readFileSync(
-						PATHS.SCSS + "/gulp_header/__setup.zurb.scss",
+						PATHS.SCSS + "/setup/__setup.zurb.scss",
 						"utf8"
 					),
 					{
@@ -235,87 +235,35 @@ var buildbrand = function(base, brand, framework) {
 			);
 			break;
 		case "bootstrap":
-			construct
-				.pipe(
-					header(
-						fs.readFileSync(
-							PATHS.SCSS + "/gulp_header/__setup.boot.scss",
-							"utf8"
-						),
-						{
-							pkg: pkg
-						}
-					)
+			construct.pipe(
+				header(
+					fs.readFileSync(
+						PATHS.SCSS + "/setup/__setup.boot.scss",
+						"utf8"
+					),
+					{
+						pkg: pkg
+					}
 				)
-				.pipe(
-					header(
-						fs.readFileSync(
-							PATHS.SCSS + "/config/__config.boot.scss",
-							"utf8"
-						),
-						{
-							pkg: pkg
-						}
-					)
-				);
-			break;
-		case "noframe":
-			construct
-				.pipe(
-					header(
-						fs.readFileSync(
-							PATHS.SCSS + "/gulp_header/__setup.noframe.scss",
-							"utf8"
-						),
-						{
-							pkg: pkg
-						}
-					)
-				)
-				.pipe(
-					header(
-						fs.readFileSync(
-							PATHS.SCSS + "/config/__config.base.scss",
-							"utf8"
-						),
-						{
-							pkg: pkg
-						}
-					)
-				);
+			);
 			break;
 		default:
-			construct
-				.pipe(
-					header(
-						fs.readFileSync(
-							PATHS.SCSS + "/gulp_header/__setup.none.scss",
-							"utf8"
-						),
-						{
-							pkg: pkg
-						}
-					)
+			construct.pipe(
+				header(
+					fs.readFileSync(
+						PATHS.SCSS + "/setup/__setup.none.scss",
+						"utf8"
+					),
+					{
+						pkg: pkg
+					}
 				)
-				.pipe(
-					header(
-						fs.readFileSync(
-							PATHS.SCSS + "/config/__config.base.scss",
-							"utf8"
-						),
-						{
-							pkg: pkg
-						}
-					)
-				);
+			);
 			break;
 	}
 	construct.pipe(
 		header(
-			fs.readFileSync(
-				PATHS.SCSS + "/gulp_header/__brand.base.scss",
-				"utf8"
-			),
+			fs.readFileSync(PATHS.SCSS + "/setup/__brand.base.scss", "utf8"),
 			{
 				pkg: pkg
 			}
@@ -332,7 +280,7 @@ var buildbrand = function(base, brand, framework) {
 				.pipe(
 					header(
 						fs.readFileSync(
-							PATHS.SCSS + "/gulp_header/__brand.cvquality.scss",
+							PATHS.SCSS + "/setup/__brand.cvquality.scss",
 							"utf8"
 						),
 						{
@@ -351,7 +299,7 @@ var buildbrand = function(base, brand, framework) {
 				.pipe(
 					header(
 						fs.readFileSync(
-							PATHS.SCSS + "/gulp_header/__brand.acc.scss",
+							PATHS.SCSS + "/setup/__brand.acc.scss",
 							"utf8"
 						),
 						{
@@ -370,7 +318,7 @@ var buildbrand = function(base, brand, framework) {
 				.pipe(
 					header(
 						fs.readFileSync(
-							PATHS.SCSS + "/gulp_header/__brand.temp.scss",
+							PATHS.SCSS + "/setup/__brand.temp.scss",
 							"utf8"
 						),
 						{
@@ -389,7 +337,7 @@ var buildbrand = function(base, brand, framework) {
 				.pipe(
 					header(
 						fs.readFileSync(
-							PATHS.SCSS + "/gulp_header/__brand.jacc.scss",
+							PATHS.SCSS + "/setup/__brand.jacc.scss",
 							"utf8"
 						),
 						{
@@ -408,8 +356,7 @@ var buildbrand = function(base, brand, framework) {
 				.pipe(
 					header(
 						fs.readFileSync(
-							PATHS.SCSS +
-								"/gulp_header/__brand.cardiosmart.scss",
+							PATHS.SCSS + "/setup/__brand.cardiosmart.scss",
 							"utf8"
 						),
 						{
@@ -428,7 +375,7 @@ var buildbrand = function(base, brand, framework) {
 				.pipe(
 					header(
 						fs.readFileSync(
-							PATHS.SCSS + "/gulp_header/__brand.none.scss",
+							PATHS.SCSS + "/setup/__brand.none.scss",
 							"utf8"
 						),
 						{
@@ -441,28 +388,19 @@ var buildbrand = function(base, brand, framework) {
 
 	switch (framework) {
 		case "bootstrap":
-			construct
-				.pipe(
-					header(
-						" \n/**Set Active Class for Bootstrap **/ \n $active-class-name: 'active';\n",
-						{
-							pkg: pkg
-						}
-					)
+			construct.pipe(
+				header(
+					"\n/**Set Active Class**/ \n $active-class-name: 'active';\n\n/** Utility Class Built on top of Bootstrap 4.4 **/ \n",
+					{
+						pkg: pkg
+					}
 				)
-				.pipe(
-					header(
-						" \n/** Utility Class Built on top of Bootstrap 4.4 **/ \n",
-						{
-							pkg: pkg
-						}
-					)
-				);
+			);
 			break;
 		case "zurb":
 			construct.pipe(
 				header(
-					" \n/** Utility Class Built on top of Zurb Foundation 6.5.3 **/ \n",
+					"\n/**Set Active Class**/ \n $active-class-name: 'is-active';\n\n/** Utility Class Built on top of Zurb Foundation 6.5.3 **/ \n",
 					{
 						pkg: pkg
 					}
@@ -471,9 +409,12 @@ var buildbrand = function(base, brand, framework) {
 			break;
 		case "noframe":
 			construct.pipe(
-				header(" \n/** No Framework **/ \n", {
-					pkg: pkg
-				})
+				header(
+					"\n/**Set Active Class**/ \n $active-class-name: 'active';\n\n/** No Framework **/ \n",
+					{
+						pkg: pkg
+					}
+				)
 			);
 			break;
 		default:
@@ -488,35 +429,13 @@ var buildbrand = function(base, brand, framework) {
 	return construct;
 };
 gulp.task("construct", function() {
-	var base = gulp.src(PATHS.SCSS + "/gulp_header/__globalshame.scss");
+	var base = gulp.src(PATHS.SCSS + "/setup/__globalshame.scss");
 	var baseUC = base
 		.pipe(clone())
 		.pipe(
 			header(
 				fs.readFileSync(
-					PATHS.SCSS + "/gulp_header/__utilityclasses.scss",
-					"utf8"
-				),
-				{
-					pkg: pkg
-				}
-			)
-		)
-		.pipe(
-			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/recipes/__recipes.noframe.scss",
-					"utf8"
-				),
-				{
-					pkg: pkg
-				}
-			)
-		)
-		.pipe(
-			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/components/__components.noframe.scss",
+					PATHS.SCSS + "/setup/__utilityclasses.scss",
 					"utf8"
 				),
 				{
@@ -897,10 +816,7 @@ gulp.task("construct", function() {
 	)
 		.pipe(
 			header(
-				fs.readFileSync(
-					PATHS.SCSS + "/gulp_header/__preheader.scss",
-					"utf8"
-				),
+				fs.readFileSync(PATHS.SCSS + "/setup/__preheader.scss", "utf8"),
 				{
 					pkg: pkg
 				}

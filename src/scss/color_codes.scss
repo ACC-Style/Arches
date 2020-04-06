@@ -7,15 +7,15 @@
 /**  Version: 1.1.0    *********************************/
 // Consider using https://www.purgecss.com/ to remove styles not used in the project.
 $debug-trace: false !default;
-$name-mode: "SHORT" !default; // $name-mode: "SHORT","LONG","ALL"
+$name-mode: 'SHORT' !default; // $name-mode: "SHORT","LONG","ALL"
 $ms-base: 1rem !default; // needs to be in rem's
 $colors: ();
 $grays: ();
 $theme-palette: ();
-@import "helpers/helpers";
-@import "vendor/modular-scale";
-@import "config/utility-css.vars";
-@import "helpers/breakpoint";
+@import 'helpers/helpers';
+@import 'vendor/modular-scale';
+@import 'setup/config/utility-css.vars';
+@import 'helpers/breakpoint';
 %font-awesome-pro {
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
@@ -23,27 +23,23 @@ $theme-palette: ();
 	font-variant: normal;
 	text-rendering: auto;
 	line-height: 1;
-	font-family: "Font Awesome 5 Pro";
+	font-family: 'Font Awesome 5 Pro';
 	font-weight: 900;
 }
 /** Start of BRANDINGBUILD 0 **/@debug "brand NONE added theme accent "+ map-get($map: $theme-palette, $key: accent );/** Built With Base Branding **//**  Default Brands    *********************************/
 /**  Colors  **/
 
-@import "config/colors";
+@import 'setup/config/colors';
 /**  Fonts  **/
-@import "config/fonts";
+@import 'setup/config/fonts';
 /**  Textures  **/
-@import "config/textures";
-
-
+@import 'setup/config/textures';
 
 /**  Logos  **/
-@import "config/logo";
-
-
-$font-family-sans-serif: "Muli", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+@import 'setup/config/logo';
 /**  Default Setup  Not sure what this is doing    *********************************/
 /** changing default names to be used with frameworks. **/
+@import 'setup/config/__config.base';
 /*
 
 Color Codes (CC) 
