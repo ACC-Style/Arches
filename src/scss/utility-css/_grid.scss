@@ -10,22 +10,22 @@ Weight:0
  
 Styleguide  display.Grid.Gap
 */
-@include loop-style(grid-column-gap, '', '!important');
+@include loop-style(grid-column-gap, "", "!important");
 @media #{$medium-up} {
-	@include loop-style(grid-column-gap, $bp-label_medium, '!important');
+	@include loop-style(grid-column-gap, $bp-label_medium, "!important");
 }
 
 @media #{$large-up} {
-	@include loop-style(grid-column-gap, $bp-label_large, '!important');
+	@include loop-style(grid-column-gap, $bp-label_large, "!important");
 }
 
-@include loop-style(grid-row-gap, '', '!important');
+@include loop-style(grid-row-gap, "", "!important");
 @media #{$medium-up} {
-	@include loop-style(grid-row-gap, $bp-label_medium, '!important');
+	@include loop-style(grid-row-gap, $bp-label_medium, "!important");
 }
 
 @media #{$large-up} {
-	@include loop-style(grid-row-gap, $bp-label_large, '!important');
+	@include loop-style(grid-row-gap, $bp-label_large, "!important");
 }
 /*
 Grid Column Template
@@ -45,20 +45,28 @@ Styleguide  display.Grid.Template
 .template-x_20 {
 	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
-.template-x_25 {
-	grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-}
-.template-x_30 {
-	grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-}
-.template-x_35 {
-	grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-}
+.template-x_25,
+.template-x_30,
+.template-x_35,
 .template-x_40 {
-	grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+	grid-template-columns: repeat(auto-fill, 1fr);
 }
 
 @media #{$medium-up} {
+	.template-x_25 {
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	}
+	.template-x_30 {
+		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	}
+	.template-x_35 {
+		grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+	}
+	.template-x_40 {
+		grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+	}
+}
+@media #{$large-up} {
 	.template-x_25 {
 		grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
 	}

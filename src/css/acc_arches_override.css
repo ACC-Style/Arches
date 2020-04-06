@@ -7680,10 +7680,27 @@
 #acc_arches_override .template-x_20 {
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
-#acc_arches_override .template-x_25,#acc_arches_override .template-x_30,#acc_arches_override .template-x_35,#acc_arches_override .template-x_40 {
-  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+#acc_arches_override .template-x_25,
+#acc_arches_override .template-x_30,
+#acc_arches_override .template-x_35,
+#acc_arches_override .template-x_40 {
+  grid-template-columns: repeat(auto-fill, 1fr);
 }
 @media only screen and (min-width : 768px) {
+  #acc_arches_override .template-x_25 {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+  #acc_arches_override .template-x_30 {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+  #acc_arches_override .template-x_35 {
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  }
+  #acc_arches_override .template-x_40 {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  }
+}
+@media only screen and (min-width : 1024px) {
   #acc_arches_override .template-x_25 {
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   }
