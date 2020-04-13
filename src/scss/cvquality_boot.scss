@@ -1,6 +1,7 @@
+/** Test 7 **/
 /**
  * arches - Global style system focused on utility classes
- * @version v1.1.0
+ * @version v1.2.0
  * @link https://github.com/ACC-Style/Arches/
  */
 /**  Pre Header - modular scale default break points utility    *********************************/
@@ -26,12 +27,7 @@ $theme-palette: ();
 	font-family: 'Font Awesome 5 Pro';
 	font-weight: 900;
 }
-/** Start of BRANDINGBUILD 0 **/
-/**Set Active Class**/ 
- $active-class-name: 'active';
-
-/** Utility Class Built on top of Bootstrap 4.4 **/ 
-/**  ACC Brands    *********************************/
+/** Start of BRANDINGBUILD 0 **//**  ACC Brands    *********************************/
 $teal: #0088aa;
 $green-blue: #16a385;
 $grey-secondary: #8a817f;
@@ -282,53 +278,6 @@ $font-size-sm: map-deep-get($value-to-unit, font-size, 0);
 
 /**  Logos  **/
 @import 'setup/config/logo';
-/*Bootstrap Framework Setup Files.*/
-
-/*!
- * Bootstrap v4.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
-@import '../../node_modules/bootstrap/scss/functions';
-@import 'setup/config/__config.boot';
-@import '../../node_modules/bootstrap/scss/variables';
-@import '../../node_modules/bootstrap/scss/mixins';
-@import '../../node_modules/bootstrap/scss/root';
-@import '../../node_modules/bootstrap/scss/reboot';
-@import '../../node_modules/bootstrap/scss/type';
-@import '../../node_modules/bootstrap/scss/images';
-@import '../../node_modules/bootstrap/scss/code';
-@import '../../node_modules/bootstrap/scss/grid';
-@import '../../node_modules/bootstrap/scss/tables';
-@import '../../node_modules/bootstrap/scss/forms';
-@import '../../node_modules/bootstrap/scss/buttons';
-@import '../../node_modules/bootstrap/scss/transitions';
-@import '../../node_modules/bootstrap/scss/dropdown';
-@import '../../node_modules/bootstrap/scss/button-group';
-@import '../../node_modules/bootstrap/scss/input-group';
-@import '../../node_modules/bootstrap/scss/custom-forms';
-@import '../../node_modules/bootstrap/scss/nav';
-@import '../../node_modules/bootstrap/scss/navbar';
-@import '../../node_modules/bootstrap/scss/card';
-@import '../../node_modules/bootstrap/scss/breadcrumb';
-@import '../../node_modules/bootstrap/scss/pagination';
-@import '../../node_modules/bootstrap/scss/badge';
-@import '../../node_modules/bootstrap/scss/jumbotron';
-@import '../../node_modules/bootstrap/scss/alert';
-@import '../../node_modules/bootstrap/scss/progress';
-@import '../../node_modules/bootstrap/scss/media';
-@import '../../node_modules/bootstrap/scss/list-group';
-@import '../../node_modules/bootstrap/scss/close';
-@import '../../node_modules/bootstrap/scss/toasts';
-@import '../../node_modules/bootstrap/scss/modal';
-@import '../../node_modules/bootstrap/scss/tooltip';
-@import '../../node_modules/bootstrap/scss/popover';
-@import '../../node_modules/bootstrap/scss/carousel';
-@import '../../node_modules/bootstrap/scss/spinners';
-// @import "utilities";
-// @import "print";
 h1,
 h2,
 h3 {
@@ -683,18 +632,6 @@ Styleguide HTML.Table.Scrollable
 	}
 }
 /*
-	Bootstrap Recipes
-
-	Combination of UCs and Base Components from the Bootstrap can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to the Bootstrap Components with the Utiltity Classes. 
-
-	Weight: -1
-
-Styleguide  Recipes Bootstrap.Intro
-
-*/
-
-@import "recipes/boot/_boot.basic_nav";
-/*
 	CVquality Recipes
 
 	The use of Utiltiy Class give us the ablitiy to create much of the UI needed for CV Quality without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of CV Quality.
@@ -709,3 +646,15 @@ Styleguide  Recipes Bootstrap.Intro
 @import "recipes/cvquality/_cvquality._lists";
 @import "recipes/cvquality/_cvquality._sidenav";
 @import "recipes/cvquality/_cvquality._decorators";
+/*
+	Bootstrap Recipes
+
+	Combination of UCs and Base Components from the Bootstrap can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to the Bootstrap Components with the Utiltity Classes. 
+
+	Weight: -1
+
+Styleguide  Recipes Bootstrap.Intro
+
+*/
+
+@import "recipes/boot/_boot.basic_nav";

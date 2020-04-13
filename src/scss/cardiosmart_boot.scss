@@ -1,6 +1,7 @@
+/** Test 7 **/
 /**
  * arches - Global style system focused on utility classes
- * @version v1.1.0
+ * @version v1.2.0
  * @link https://github.com/ACC-Style/Arches/
  */
 /**  Pre Header - modular scale default break points utility    *********************************/
@@ -26,12 +27,7 @@ $theme-palette: ();
 	font-family: 'Font Awesome 5 Pro';
 	font-weight: 900;
 }
-/** Start of BRANDINGBUILD 0 **/
-/**Set Active Class**/ 
- $active-class-name: 'is-active';
-
-/** Utility Class Built on top of Zurb Foundation 6.5.3 **/ 
-/**  ACC Brands    *********************************/
+/** Start of BRANDINGBUILD 0 **//**  ACC Brands    *********************************/
 $teal: #009db1;
 $dark-blue: #015697;
 $dark-grey: #676a72;
@@ -198,19 +194,12 @@ $seal: (
 
 /**  Logos  **/
 @import 'setup/config/logo';
-/**  Zurb Foundation Framework Setup Files. ***************************************/
-@import '../../node_modules/foundation-sites/scss/util/util';
-@import 'setup/config/__config.zurb';
-@import '../../node_modules/foundation-sites/scss/foundation.scss';
-@include foundation-everything();
-@import "components/zurb/table.zurb.override";
-@import "components/zurb/zurb.buttons.override.scss";
-@import "components/zurb/zurb.close-button.override";
-@import "components/zurb/zurb.tabs.override";
-@import "components/zurb/zurb.questions";
-@import "components/zurb/zurb.pagination.override";
-@import "components/zurb/zurb.breadcrumbs";
-@import "styleguide/__basic-html.zurb";
+@import "base/table.boot";
+@import "styleguide/__basic-html.boot";
+@import "components/boot/_boot.carousel.override";
+@import "components/boot/_boot.navbar.override";
+@import "components/boot/_boot.collapser.icon";
+@import 'components/cardiosmart/_cardiosmart.boot._navbar.override';
 /*
 	CardioSmart Recipes
 
@@ -254,7 +243,7 @@ $seal: (
 /*
 	CardioSmart: Related Content
 
-	There are many components that pull in lists of other objects because they are related or they are a featured associated content. 
+	There are many components that pull in lists, carousels, and featurd presenetations of other assets and or pages because they are related. 
 
 	Weight: 3500
 
@@ -297,174 +286,14 @@ $seal: (
 */
 @import 'recipes/cardiosmart/_chdDirectory.cardiosmart.elements';
 /*
-	Foundation
+	Bootstrap Recipes
 
-	Combination of UCs and Base Components from the Framework can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to Foudations Components with the Utiltity Classes. 
+	Combination of UCs and Base Components from the Bootstrap can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to the Bootstrap Components with the Utiltity Classes. 
 
-	Weight: 1000
+	Weight: -1
 
-	Styleguide  Recipes Zurb
-
-*/
-/* Styleguide recipes.zurb */
-/* Styleguide Recipes.010 */
-@import "recipes/zurb/zurb.quicklinks";
-@import "recipes/zurb/zurb.cards";
-@import "recipes/zurb/zurb.button_group";
-@import "recipes/zurb/zurb.grid_button_splash";
-@import "recipes/zurb/zurb.accordians";
-/*
-Logos
-
-Logos in the design come in 4 variations the primary logo, the condensed logo, and alte version which are the reverse of primary and reversed.  All logos are controled by the width and will maintain there aspect ratios to respond to the container they are in.  For 508 compliance please place the brand name in the logo.
-
-.logo_primary	            		-   	Primary Logo great for desktop displays best used for when the logo can be taller then 80px.
-.logo_primary-alt 	            	-   	Primary Logo reversed for dark background situations.
-.logo_condensed.max-w_15             -  	 	Smaller Mobile Friendly Logo these logos and be readable between 40px to 80px in height. 
-.logo_condensed-alt.max-w_15         -  	 	Smaller Logo Reversed.
-
-Markup:
-<div class="bg_shade-2 max-w_40"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}}"><span class="alt">{{modifier_class}}</span></div></div>
-
-Styleguide DesignBase.Logos
+Styleguide  Recipes Bootstrap.Intro
 
 */
 
-[class*='logo_'],
-[class*='seal_'] {
-	background-color: transparent;
-	background-size: contain;
-	background-position: center center;
-	background-repeat: no-repeat;
-	text-indent: -9999px;
-	overflow: hidden;
-	&:before {
-		content: '';
-		width: 1px;
-		margin-left: -1px;
-		float: left;
-		height: 0;
-	}
-	&:after {
-		content: '';
-		display: table;
-		clear: both;
-	}
-	> .alt-text:before {
-		display: none;
-	}
-}
-
-.logo_primary {
-	background-image: url(map-deep-get($logo, primary, url));
-	&:before {
-		padding-top: map-deep-get($logo, primary, aspectratio) * 100%;
-	}
-	> span.alt-text:before {
-		content: map-deep-get($logo, primary, alt);
-	}
-}
-.logo_primary-alt {
-	background-image: url(map-deep-get($logo, primary_alt, url));
-	&:before {
-		padding-top: map-deep-get($logo, primary_alt, aspectratio) * 100%;
-	}
-	> span.alt-text:before {
-		content: map-deep-get($logo, primary_alt, alt);
-	}
-}
-.logo_condensed {
-	background-image: url(map-deep-get($logo, condensed, url));
-	&:before {
-		padding-top: map-deep-get($logo, condensed, aspectratio) * 100%;
-	}
-	> span.alt-text:before {
-		content: map-deep-get($logo, condensed, alt);
-	}
-}
-.logo_condensed-alt {
-	background-image: url(map-deep-get($logo, condensed_alt, url));
-	&:before {
-		padding-top: map-deep-get($logo, condensed_alt, aspectratio) * 100%;
-	}
-	> span.alt-text:before {
-		content: map-deep-get($logo, condensed_alt, alt);
-	}
-}
-
-/*
-Seals
-
-Seals in the design come in 3 variations the default, small, and tiny.  All Seals will maintain their aspect ratios and will respond to the container, but seals have a max width.  For 508 compliance, please place the brand name in the seal.
-
-.seal_normal	            - Full size seal great for desktop displays best used for when the seal can be taller then 100px.
-.seal_small	            - Condensed size seal great for Tablet displays best used for when the seal is between 100px to 40px.
-.seal_tiny	            - Smallest of the seals best used for icons when seal is 40px and bellow
-
-
-Markup:
-<div class="bg_shade-2 max-w_1"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
-
-Styleguide DesignBase.Seals
-
-*/
-
-.seal_normal {
-	background-image: url(map-deep-get($seal, normal, url));
-	&:before {
-		padding-top: map-deep-get($seal, normal, aspectratio) * 100%;
-	}
-	> span.alt-text:before {
-		content: map-deep-get($seal, normal, alt);
-	}
-}
-.seal_small {
-	background-image: url(map-deep-get($seal, small, url));
-	max-width: 100px;
-	&:before {
-		padding-top: map-deep-get($seal, small, aspectratio) * 100%;
-	}
-	> span.alt-text:before {
-		content: map-deep-get($seal, small, alt);
-	}
-}
-.seal_tiny {
-	background-image: url(map-deep-get($seal, tiny, url));
-	max-width: 40px;
-	&:before {
-		padding-top: map-deep-get($seal, tiny, aspectratio) * 100%;
-	}
-	> span.alt-text:before {
-		content: map-deep-get($seal, tiny, alt);
-	}
-}
-
-.seal_normal-alt {
-	background-image: url(map-deep-get($seal, normal_alt, url));
-	&:before {
-		padding-top: map-deep-get($seal, normal_alt, aspectratio) * 100%;
-	}
-	> span.alt-text:before {
-		content: map-deep-get($seal, normal_alt, alt);
-	}
-}
-.seal_small-alt {
-	background-image: url(map-deep-get($seal, small_alt, url));
-	max-width: 100px;
-	&:before {
-		padding-top: map-deep-get($seal, small_alt, aspectratio) * 100%;
-	}
-	> span.alt-text:before {
-		content: map-deep-get($seal, small_alt, alt);
-	}
-}
-.seal_tiny-alt {
-	background-image: url(map-deep-get($seal, tiny_alt, url));
-	max-width: 40px;
-	&:before {
-		padding-top: map-deep-get($seal, tiny_alt, aspectratio) * 100%;
-	}
-	> span.alt-text:before {
-		content: map-deep-get($seal, tiny_alt, alt);
-	}
-}
+@import "recipes/boot/_boot.basic_nav";

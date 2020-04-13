@@ -1,19 +1,21 @@
 {
 	"name": "arches",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "Global style system focused on utility classes",
 	"main": "index.js",
+	"bootstrapVersion":"^4.4.1",
+	"foundationVersion":"^6.6.1",
 	"scripts": {
 		"index": "kss --config kss-config.json",
 		"uc": "kss --config kss-config_uc_only.json",
 		"zurb_acc": "kss --config kss-config_zurb_acc.json",
-		"uc_cardiosmart": "kss --config kss-config_uc_cardiosmart.json",
+		"boot_cardiosmart": "kss --config kss-config_boot_cardiosmart.json",
 		"boot_acc": "kss --config kss-config_boot_acc.json",
 		"boot_jacc": "kss --config kss-config_boot_jacc.json",
 		"boot_cvquality": "kss --config kss-config_boot_cvquality.json",
 		"layout_demo": "kss --config kss-config_layout_demo.json",
 		"color_codes": "kss --config kss-config_color_codes.json",
-		"_all": "kss --config kss-config.json && kss --config kss-config_uc_only.json && kss --config kss-config_zurb_acc.json  && kss --config kss-config_boot_cvquality.json && kss --config kss-config_layout_demo.json && kss --config kss-config_color_codes.json && kss --config kss-config_uc_cardiosmart.json"
+		"_all": "kss --config kss-config.json && kss --config kss-config_uc_only.json && kss --config kss-config_zurb_acc.json  && kss --config kss-config_boot_cvquality.json && kss --config kss-config_layout_demo.json && kss --config kss-config_color_codes.json && kss --config kss-config_boot_cardiosmart.json"
 	},
 	"repository": {
 		"type": "git",
@@ -32,7 +34,7 @@
 	},
 	"browserslist": [
 		"last 2 version",
-		"> 1% in US",
+		"> 2% in US",
 		"IE 11",
 		"not dead"
 	],

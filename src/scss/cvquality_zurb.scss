@@ -1,0 +1,678 @@
+/** Test 6 **/
+/**
+ * arches - Global style system focused on utility classes
+ * @version v1.2.0
+ * @link https://github.com/ACC-Style/Arches/
+ */
+/**  Pre Header - modular scale default break points utility    *********************************/
+/**  Version: 1.1.0    *********************************/
+// Consider using https://www.purgecss.com/ to remove styles not used in the project.
+$debug-trace: false !default;
+$name-mode: 'SHORT' !default; // $name-mode: "SHORT","LONG","ALL"
+$ms-base: 1rem !default; // needs to be in rem's
+$colors: ();
+$grays: ();
+$theme-palette: ();
+@import 'helpers/helpers';
+@import 'vendor/modular-scale';
+@import 'setup/config/utility-css.vars';
+@import 'helpers/breakpoint';
+%font-awesome-pro {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 900;
+}
+/** Start of BRANDINGBUILD 0 **/
+/**Set Active Class**/ 
+ $active-class-name: 'is-active';
+
+/** Utility Class Built on top of Zurb Foundation ^6.6.1  **/ 
+/**  ACC Brands    *********************************/
+$teal: #0088aa;
+$green-blue: #16a385;
+$grey-secondary: #8a817f;
+$dark-grey: #676a72;
+$alt-grey: #a3988c;
+$green: #078a2e;
+$orange: #da8210;
+$red: #dd1a1a;
+$blue: #2b58c0;
+$purple: #7742bd;
+$magenta: #c34198;
+$acc-blue: #004176;
+$white: rgb(255, 255, 255);
+$black: rgb(19, 18, 18);
+$real-black: #000;
+/**  CV Quality Colors  **/
+$orange-dark: #e87d1e;
+$orange-light: #ffc425;
+$warm-grey: #a1a0a4;
+$warm-grey-light: #d6d4d4;
+$warm-grey-dark: #817c7b;
+$off-white: #fafafa;
+$off-black: $black;
+$soft-blue: #d2e6f6;
+$soft-grey: #eceaea;
+$error-color: #990000;
+$scrub-teal: #0088aa;
+$scrub-teal-light: #05aee5;
+$scrub-teal-dark: #047294;
+$mix-teal_orange: #58b5a5;
+$mix-orange_teal: #acbd65;
+
+.c_primary-alt {
+	color: $soft-blue !important;
+}
+.h\:c_primary-alt:hover {
+	color: $soft-blue !important;
+}
+.br_primary-alt {
+	background-color: $soft-blue !important;
+}
+.bg_primary-alt {
+	background-color: $soft-blue !important;
+}
+
+.c_mix-teal-orange {
+	color: $mix-teal_orange !important;
+}
+.c_mix-orange-teal {
+	color: $mix-orange_teal !important;
+}
+
+.br_mix-teal-orange {
+	border-color: $mix-teal_orange !important;
+}
+.br_mix-orange-teal {
+	border-color: $mix-orange_teal !important;
+}
+
+.bg_mix-teal-orange {
+	background-color: $mix-teal_orange !important;
+}
+.bg_mix-orange-teal {
+	background-color: $mix-orange_teal !important;
+}
+/*
+	Background Colors Alt
+
+	These Alternate colors are single use to embelish a design. These colors <strong>DO NOT</strong> have extra modifiers.    
+
+	.bg_primary-alt				-	Primary Alt
+	.bg_mix-teal-orange			-	Mix of 60% Teal And 40% Orange 
+	.bg_mix-orange-teal			-	Mix of 60% Orange and 40% Teal 	
+
+
+	Markup:
+	<div class="{{modifier_class}} p_3 c_white">Background Color of {{modifier_class}}</div>
+
+	Styleguide Background.Color.Alt
+
+*/
+/*
+	Border Colors Alt
+
+	These Alternate colors are single use to embelish a design. These colors <strong>DO NOT</strong> have extra modifiers.    
+
+	.br_primary-alt            	- light orange
+	.br_mix-teal-orange				-	Mix of 60% Teal And 40% Orange 
+	.br_mix-orange-teal				-	Mix of 60% Orange and 40% Teal 	
+
+
+	Markup:
+	<div class="{{modifier_class}} br_solid br_4">Border Color of {{modifier_class}}</div>
+
+	Styleguide Border.Color.Alt
+
+*/
+
+/*
+
+CVqualtiy Full Pallete 
+
+Credit Types in the ACC have a specific color coding.
+
+$orange-dark   			  -   #e87d1e;  	Orange Dark   	
+$orange-light   		  -   #ffc425;  	Orange Light   
+$warm-grey   			    -   #a1a0a4;  	Warm Grey   	
+$warm-grey-light   		-   #d6d4d4;  	Warm Grey Light  
+$warm-grey-dark   		-  #6f6b6f;  	Warm Grey Dark   
+$off-white   			    -   #fafafa;  	Off White   	
+$off-black   			    -  #{$black};  	Off Black   	
+$soft-blue   			    -   #a4cded;  	Soft Blue   	
+$soft-grey   			    -   #eceaea;  	Soft Grey   	
+$error-color   			  -  #990000;  	Error Color   	
+$scrub-teal   			  -  #0088aa;  	Scrub  Teal   	
+$scrub-teal-light   	-  #05aee5;  	Scrub Teal Light 
+$scrub-teal-dark   		-  #047294;  	Scrub Teal Dark  
+$mix-teal_orange   		-  #58B5A5;  	Mix of 60% Teal And 40% Orange  
+$mix-orange_teal   		-  #ACBD65;  	Mix of 60% Orange and 40% Teal  
+
+Weight: 1
+
+Styleguide DesignBase.Colors.Full Pallate
+
+*/
+
+$theme-palette: map-merge(
+	$theme-palette,
+	(
+		primary: $teal,
+		secondary: $orange-dark,
+		shade: $grey-secondary,
+		success: $green,
+		warning: mix($orange-light, $orange-dark),
+		alert: $error-color,
+		navigation: $blue,
+		accent: $orange-light,
+		info: $alt-grey,
+		highlight: $scrub-teal-light,
+		acc: $acc-blue
+	)
+);
+@debug 'brand CVQuality theme accent is ' + map-get($map: $theme-palette, $key: accent);
+
+$primary: $scrub-teal;
+$secondary: $warm-grey-dark;
+$success: $green;
+$info: $alt-grey;
+$warning: $orange-light;
+$danger: $error-color;
+$light: $warm-grey-light;
+$dark: $warm-grey-dark;
+
+$fonts: (
+	slab: (
+		name: 'Roboto Slab',
+		short-name: 'RS',
+		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,"slab",serif'
+	),
+	display: (
+		name: 'Maven Pro',
+		short-name: 'MP',
+		stack: '"Maven Pro",Verdana,Helvetica,sans-serif;'
+	),
+	copy: (
+		name: 'Lato',
+		short-name: 'Lt',
+		stack: '"Lato","Open Sans","system-ui",sans-serif'
+	),
+	ui: (
+		name: 'Lato',
+		short-name: 'Lt',
+		stack: '"Lato","Open Sans","system-ui",sans-serif'
+	)
+);
+
+// Reset Values of Utlity-css.vars.scss
+$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'slab', map-deep-get($fonts, 'slab', 'stack'));
+$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'display', map-deep-get($fonts, 'display', 'stack'));
+$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'copy', map-deep-get($fonts, 'copy', 'stack'));
+$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'ui', map-deep-get($fonts, 'ui', 'stack'));
+
+// reset all the references for the fonts
+$style-definition: map-deep-set(
+	$style-definition,
+	'font-family' 'unit' 'slab',
+	unquote(map-deep-get($value-to-unit, 'font-family', 'slab'))
+);
+$style-definition: map-deep-set(
+	$style-definition,
+	'font-family' 'unit' 'display',
+	unquote(map-deep-get($value-to-unit, 'font-family', 'display'))
+);
+$style-definition: map-deep-set(
+	$style-definition,
+	'font-family' 'unit' 'copy',
+	unquote(map-deep-get($value-to-unit, 'font-family', 'copy'))
+);
+$style-definition: map-deep-set(
+	$style-definition,
+	'font-family' 'unit' 'ui',
+	unquote(map-deep-get($value-to-unit, 'font-family', 'ui'))
+);
+
+$global-radus-on: false;
+$global-border-radius: 5px;
+$global-border-round: 25px;
+$basicSizeMultiplier: 1rem;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1200px,
+	xxl: 1400px
+);
+
+$container-max-widths: (
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 1350px
+);
+
+$tooltip-bg: $dark;
+
+$h1-font-size: map-deep-get($value-to-unit, font-size, 7);
+$h2-font-size: map-deep-get($value-to-unit, font-size, 5);
+$h3-font-size: map-deep-get($value-to-unit, font-size, 3);
+$h4-font-size: map-deep-get($value-to-unit, font-size, 2);
+$h5-font-size: map-deep-get($value-to-unit, font-size, 1);
+$h6-font-size: map-deep-get($value-to-unit, font-size, 0);
+
+$font-size-base: $base-font-size-rem; // Assumes the browser default, typically `16px`
+$font-size-lg: map-deep-get($value-to-unit, font-size, 2);
+$font-size-sm: map-deep-get($value-to-unit, font-size, 0);
+
+@import 'setup/config/cvquality/cvquality.gradients';
+/** Built With CVQuality Branding **//**  Default Brands    *********************************/
+/**  Colors  **/
+
+@import 'setup/config/colors';
+/**  Fonts  **/
+@import 'setup/config/fonts';
+/**  Textures  **/
+@import 'setup/config/textures';
+
+/**  Logos  **/
+@import 'setup/config/logo';
+/**  Zurb Foundation Framework Setup Files. ***************************************/
+@import '../../node_modules/foundation-sites/scss/util/util';
+@import 'setup/config/__config.zurb';
+@import '../../node_modules/foundation-sites/scss/foundation.scss';
+@include foundation-everything();
+h1,
+h2,
+h3 {
+	color: map-get($theme-palette, accent);
+}
+
+/*
+Scrollable Table
+
+Sometimes you have a table that will need a scrable comparison. 
+
+Markup:
+<div class="table-scrollable-container">
+<div class="instructions c_shade"> <i class="fa fa-long-arrow-left"></i> Scroll For Software Companies  <i class="fa fa-long-arrow-right"></i> </div>
+    <table class="overflow_hidden relative table-scrollable flex flex_row">
+        <thead class="b_0 bg_shade-5 br-r_1 br_primary-1 br_solid flex_shrink float_left l_0 relative:lg relative:md shadow_3 t_0 w_40">
+            <tr class=""flex flex_column>
+                <th>Certified NCDR Software Vendor</th>
+                <th>IMPACT Registry</th>
+                <th>ACTION Registry</th>
+                <th>PVI Registry</th>
+                <th>CathPCI Registry</th>
+                <th>ICD Registry</th>
+                <th>AFib Registry</th>
+            </tr>
+        </thead>
+        <tbody class="flex_auto float_right overflow_scroll scrollbar-mini w_60">
+            <tr>
+                <td><a href="#157" class="parent-cell">ARMUS Corporation</a></td>
+                <td>Certified 04/21/2017</td>
+                <td>Certified 12/23/14</td>
+                <td>Certified October 18, 2017
+                </td>
+                <td>Certified - Interoperable with ACTION v2 07/14/10</td>
+                <td>Certified 08/05/2016</td>
+                <td>Certified 08/05/2016</td>
+            </tr>
+            <tr>
+                <td><a href="#101" class="parent-cell">Axis Clinical Software, Inc.</a></td>
+                <td>Certified 08/24/2016</td>
+                <td>Interoperable with CathPCI and ICD v4 01/13/15</td>
+                <td>Certified 11/07/2014</td>
+                <td>Certified Interoperable with ACTION v2 10/28/11 and ICD v2 04/13/12
+                    <br><b>*Metric License </b></td>
+                <td>Certified 05/27/16
+                    <br><b>*Metric License </b></td>
+                <td>Certified 07/29/2016</td>
+            </tr>
+            <tr>
+                <td><a href="#127" class="parent-cell">BayaTree, LLC</a></td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 07/12/2017</td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 08/18/2009</td>
+                <td>Certified 05/24/16</td>
+                <td>Certified 09/09/2016</td>
+            </tr>
+            <tr>
+                <td><a href="#179" class="parent-cell">CardioAccess, Inc.</a></td>
+                <td>Certified 06/03/2016</td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#110" class="parent-cell">CardioPulse</a></td>
+                <td>&nbsp;
+                </td>
+                <td>Interoperable with CathPCI v4 and ICD v2 04/10/15</td>
+                <td>&nbsp;
+                </td>
+                <td>Interoperable with ICD v2 and ACTION v2 9/6/11</td>
+                <td>Certified 09/08/2016</td>
+                <td>Certified 10/18/2017</td>
+            </tr>
+            <tr>
+                <td><a href="#103" class="parent-cell">Cedaron Medical, Inc.</a></td>
+                <td>Certified 01/15/2016</td>
+                <td>Interoperable with CathPCI and ICD v4 11/24/14
+                    <br><b>*Metric License </b></td>
+                <td>Certified 06/03/2014
+                    <br><b>*Metric License </b></td>
+                <td>Certified Interoperable with ACTION v2 05/04/10
+                    <br><b>*Metric License </b></td>
+                <td>Certified 05/25/16
+                    <br><b>*Metric License </b></td>
+                <td>Certified 07/13/2016</td>
+            </tr>
+            <tr>
+                <td><a href="#140" class="parent-cell">Epic</a></td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 06/09/2009</td>
+                <td>Certified 04/28/2016</td>
+                <td>Certified 04/12/2017</td>
+            </tr>
+            <tr>
+                <td><a href="#205" class="parent-cell">Flexible Informatics</a></td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 07/13/2017</td>
+                <td>Certified 07/25/2017</td>
+            </tr>
+            <tr>
+                <td><a href="#105" class="parent-cell">GE Healthcare</a></td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 03/06/2009</td>
+                <td>Certified 07/07/16</td>
+                <td>Certified 07/12/2016</td>
+            </tr>
+            <tr>
+                <td><a href="#200" class="parent-cell">Health Level</a></td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>Certified v4.4 12/07/2016</td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#108" class="parent-cell">heartbase</a></td>
+                <td>&nbsp;
+                </td>
+                <td>Interoperable with CathPCI and ICD 05/01/15</td>
+                <td>Certified 06/18/2014</td>
+                <td>Interoperable with ACTION v2 and ICD v2 03/29/13
+                    <br><b>*Metric License </b></td>
+                <td>Certified 06/08/16</td>
+                <td>Certified 08/03/2016</td>
+            </tr>
+            <tr>
+                <td><a href="#118" class="parent-cell">Juniper Consulting Group</a></td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 06/22/2009</td>
+                <td>Certified 05/24/16</td>
+                <td>Certified 11/10/2016</td>
+            </tr>
+            <tr>
+                <td><a href="#111" class="parent-cell">LUMEDX</a></td>
+                <td>Certified 03/17/2016
+                    <br><b>*Metric License </b></td>
+                <td>Interoperable with CathPCI and ICD v4 02/05/15</td>
+                <td>Certified 05/11/2015</td>
+                <td>Interoperable with ACTION v2</td>
+                <td>Certified 08/10/16
+                    <br><b>*Metric License </b></td>
+                <td>Certified 12/22/2016</td>
+            </tr>
+            <tr>
+                <td><a href="#183" class="parent-cell">Navion Healthcare Solutions</a></td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 01/23/15
+                    <br><b>*Metric License </b></td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 04/01/2013
+                    <br><b>*Metric License </b></td>
+                <td>Certified 08/09/16
+                    <br><b>*Metric License </b></td>
+                <td>Certified 04/19/2017</td>
+            </tr>
+            <tr>
+                <td><a href="#199" class="parent-cell">Q-Centrix</a></td>
+                <td>&nbsp;
+                </td>
+                <td>Certified v2.4 05/17/2016
+                    <br><b>*Metric License </b></td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 04/28/16
+                    <br><b>*Metric License </b></td>
+                <td>Certified 11/22/2016</td>
+                <td>Certified 10/12/2017</td>
+            </tr>
+            <tr>
+                <td><a href="#138" class="parent-cell">Quantros, Inc.</a></td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 09/30/2009</td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#153" class="parent-cell">Quintiles</a></td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 03/10/15</td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#176" class="parent-cell">Scientific Software Solutions, Inc.</a></td>
+                <td>Certified 02/05/2016</td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#174" class="parent-cell">SoftLink International Inc.</a></td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>&nbsp;
+                </td>
+                <td>Certified 05/02/2012</td>
+                <td>Certified 05/26/2016</td>
+                <td>Certified 05/26/2016</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+Styleguide HTML.Table.Scrollable
+*/
+
+.table-scrollable-container {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	table {
+	}
+	thead,
+	tbody {
+	}
+	thead {
+		tr {
+		}
+		th {
+			height: 7rem;
+			&:nth-child(2n + 2) {
+			}
+		}
+	}
+	tbody {
+		white-space: nowrap;
+		tr {
+			white-space: normal;
+		}
+		tr + tr {
+		}
+		td {
+			height: 7rem;
+			&:nth-child(2n + 2) {
+			}
+		}
+	}
+	th,
+	td {
+	}
+	th {
+	}
+	.instructions {
+		width: 100%;
+		text-align: center;
+		display: block;
+		padding: 0.25rem 1rem;
+		font-size: ms(-1);
+		.fa {
+			margin: 0 0.25rem;
+		}
+	}
+}
+.table-scrollable {
+	.parent-cell {
+		font-size: ms(1);
+
+		&:after {
+		}
+	}
+}
+@import "components/zurb/table.zurb.override";
+@import "components/zurb/zurb.buttons.override.scss";
+@import "components/zurb/zurb.close-button.override";
+@import "components/zurb/zurb.tabs.override";
+@import "components/zurb/zurb.questions";
+@import "components/zurb/zurb.pagination.override";
+@import "components/zurb/zurb.breadcrumbs";
+@import "styleguide/__basic-html.zurb";
+@import "components/cvquality/cvquality.boot._navbar.override";
+@import "components/cvquality/cvquality.boot._card.override";
+@import "components/cvquality/cvquality.jumbotron";
+@import "components/cvquality/cvquality.triangle";
+@import "components/cvquality/cvquality.sitefinity.editor-decorator";
+.btn-primary {
+	@extend .br_0 !optional;
+	@extend .br_radius !optional;
+	@extend .gradient_teal !optional;
+	&:hover {
+		@extend .gradient_teal-reverse !optional;
+	}
+}
+.btn-shade {
+	@extend .br_0 !optional;
+	@extend .br_radius !optional;
+	@extend .gradient_grey !optional;
+	&:hover {
+		@extend .gradient_grey-reverse !optional;
+	}
+}
+/*
+	CVquality Recipes
+
+	The use of Utiltiy Class give us the ablitiy to create much of the UI needed for CV Quality without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of CV Quality.
+
+	Weight: 3000
+
+	Styleguide Recipes CVQualtiy
+
+*/
+@import "recipes/cvquality/_cvquality._footer";
+@import "recipes/cvquality/_cvquality._cards";
+@import "recipes/cvquality/_cvquality._lists";
+@import "recipes/cvquality/_cvquality._sidenav";
+@import "recipes/cvquality/_cvquality._decorators";
+/*
+	Foundation
+
+	Combination of UCs and Base Components from the Framework can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to Foudations Components with the Utiltity Classes. 
+
+	Weight: 1000
+
+	Styleguide  Recipes Zurb
+
+*/
+/* Styleguide recipes.zurb */
+/* Styleguide Recipes.010 */
+@import "recipes/zurb/zurb.quicklinks";
+@import "recipes/zurb/zurb.cards";
+@import "recipes/zurb/zurb.button_group";
+@import "recipes/zurb/zurb.grid_button_splash";
+@import "recipes/zurb/zurb.accordians";

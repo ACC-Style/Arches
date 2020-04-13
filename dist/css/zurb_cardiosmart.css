@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
  * arches - Global style system focused on utility classes
- * @version v1.1.0
+ * @version v1.2.0
  * @link https://github.com/ACC-Style/Arches/
  */
 /**  Pre Header - modular scale default break points utility    *********************************/
@@ -18,7 +18,7 @@ Gets a color value that fits into the set color patterns for usage in new css.
 */
 /** Start of BRANDINGBUILD 0 **/
 /**Set Active Class**/
-/** Utility Class Built on top of Zurb Foundation 6.5.3 **/
+/** Utility Class Built on top of Zurb Foundation ^6.6.1  **/
 /**  ACC Brands    *********************************/
 /** Built With CardioSmart Branding **/
 /**  Default Brands    *********************************/
@@ -11033,167 +11033,4 @@ Styleguide  Recipes Zurb.User Card
     Styleguide  Recipes Zurb.Accordians
 
 */
-/*
-Logos
-
-Logos in the design come in 4 variations the primary logo, the condensed logo, and alte version which are the reverse of primary and reversed.  All logos are controled by the width and will maintain there aspect ratios to respond to the container they are in.  For 508 compliance please place the brand name in the logo.
-
-.logo_primary	            		-   	Primary Logo great for desktop displays best used for when the logo can be taller then 80px.
-.logo_primary-alt 	            	-   	Primary Logo reversed for dark background situations.
-.logo_condensed.max-w_15             -  	 	Smaller Mobile Friendly Logo these logos and be readable between 40px to 80px in height. 
-.logo_condensed-alt.max-w_15         -  	 	Smaller Logo Reversed.
-
-Markup:
-<div class="bg_shade-2 max-w_40"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}}"><span class="alt">{{modifier_class}}</span></div></div>
-
-Styleguide DesignBase.Logos
-
-*/
-[class*=logo_],
-[class*=seal_] {
-  overflow: hidden;
-  background-color: transparent;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  text-indent: -9999px;
-}
-[class*=logo_]:before,
-[class*=seal_]:before {
-  width: 1px;
-  height: 0;
-  margin-left: -1px;
-  float: left;
-  content: "";
-}
-[class*=logo_]:after,
-[class*=seal_]:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-[class*=logo_] > .alt-text:before,
-[class*=seal_] > .alt-text:before {
-  display: none;
-}
-
-.logo_primary {
-  background-image: url("../img/cardiosmart/cardiosmart_primaryLogo.svg");
-}
-.logo_primary:before {
-  padding-top: 33.3333333333%;
-}
-.logo_primary > span.alt-text:before {
-  content: "Logo of the CardioSmart";
-}
-
-.logo_primary-alt {
-  background-image: url("../img/cardiosmart/cardiosmart_primaryLogo-alt.svg");
-}
-.logo_primary-alt:before {
-  padding-top: 33.3333333333%;
-}
-.logo_primary-alt > span.alt-text:before {
-  content: "Logo of the CardioSmart";
-}
-
-.logo_condensed {
-  background-image: url("../img/cardiosmart/cardiosmart_mobileLogo.svg");
-}
-.logo_condensed:before {
-  padding-top: 16.6666666667%;
-}
-.logo_condensed > span.alt-text:before {
-  content: "Logo of the CardioSmart";
-}
-
-.logo_condensed-alt {
-  background-image: url("../img/cardiosmart/cardiosmart_mobileLogo-alt.svg");
-}
-.logo_condensed-alt:before {
-  padding-top: 16.6666666667%;
-}
-.logo_condensed-alt > span.alt-text:before {
-  content: "Logo of the CardioSmart";
-}
-
-/*
-Seals
-
-Seals in the design come in 3 variations the default, small, and tiny.  All Seals will maintain their aspect ratios and will respond to the container, but seals have a max width.  For 508 compliance, please place the brand name in the seal.
-
-.seal_normal	            - Full size seal great for desktop displays best used for when the seal can be taller then 100px.
-.seal_small	            - Condensed size seal great for Tablet displays best used for when the seal is between 100px to 40px.
-.seal_tiny	            - Smallest of the seals best used for icons when seal is 40px and bellow
-
-
-Markup:
-<div class="bg_shade-2 max-w_1"  data-style="{{ modifier_class }}" ><div class="{{modifier_class}} m_auto"><span class="alt">{{modifier_class}}</span></div></div>
-
-Styleguide DesignBase.Seals
-
-*/
-.seal_normal {
-  background-image: url("../img/cardiosmart/cardiosmart_seal.svg");
-}
-.seal_normal:before {
-  padding-top: 100%;
-}
-.seal_normal > span.alt-text:before {
-  content: "Seal of the CardioSmart";
-}
-
-.seal_small {
-  max-width: 100px;
-  background-image: url("../img/cardiosmart/cardiosmart_sealCondensed.svg");
-}
-.seal_small:before {
-  padding-top: 100%;
-}
-.seal_small > span.alt-text:before {
-  content: "Seal of the CardioSmart";
-}
-
-.seal_tiny {
-  max-width: 40px;
-  background-image: url("../img/cardiosmart/cardiosmart_sealCondensed-alt.svg");
-}
-.seal_tiny:before {
-  padding-top: 100%;
-}
-.seal_tiny > span.alt-text:before {
-  content: "Seal of the CardioSmart";
-}
-
-.seal_normal-alt {
-  background-image: url("../img/cardiosmart/cardiosmart_seal-reverse.svg");
-}
-.seal_normal-alt:before {
-  padding-top: 100%;
-}
-.seal_normal-alt > span.alt-text:before {
-  content: "Seal of the CardioSmart";
-}
-
-.seal_small-alt {
-  max-width: 100px;
-  background-image: url("../img/cardiosmart/cardiosmart_sealCondensed-reverse.svg");
-}
-.seal_small-alt:before {
-  padding-top: 100%;
-}
-.seal_small-alt > span.alt-text:before {
-  content: "Seal of the CardioSmart";
-}
-
-.seal_tiny-alt {
-  max-width: 40px;
-  background-image: url("../img/cardiosmart/cardiosmart_sealCondensed-alt-reverse.svg");
-}
-.seal_tiny-alt:before {
-  padding-top: 100%;
-}
-.seal_tiny-alt > span.alt-text:before {
-  content: "Seal of the CardioSmart";
-}
 /*# sourceMappingURL=maps/zurb_cardiosmart.css.map */

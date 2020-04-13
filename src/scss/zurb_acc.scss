@@ -1,6 +1,6 @@
 /**
  * arches - Global style system focused on utility classes
- * @version v1.1.0
+ * @version v1.2.0
  * @link https://github.com/ACC-Style/Arches/
  */
 /**  Pre Header - modular scale default break points utility    *********************************/
@@ -30,7 +30,7 @@ $theme-palette: ();
 /**Set Active Class**/ 
  $active-class-name: 'is-active';
 
-/** Utility Class Built on top of Zurb Foundation 6.5.3 **/ 
+/** Utility Class Built on top of Zurb Foundation ^6.6.1  **/ 
 /**  ACC Brands    *********************************/
 $teal: #198dae;
 $green-blue: #16a385;
@@ -167,6 +167,19 @@ $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
 @import "components/zurb/zurb.pagination.override";
 @import "components/zurb/zurb.breadcrumbs";
 @import "styleguide/__basic-html.zurb";
+@import "components/acc/_acc.boot._navbar.override";
+/*
+	ACC.org Recipes
+
+	The use of Utiltiy Class give us the ablitiy to create much of the UI needed for ACC.org without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of ACC.org
+
+	Weight: 2000
+
+	Styleguide Recipes ACC
+
+*/
+@import "recipes/acc/_acc._footer";
+
 /*
 	Foundation
 
