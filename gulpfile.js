@@ -254,11 +254,18 @@ var constructUCStyleSheet = function(brand) {
 	return gulp
 		.src(PATHS.SCSS + "/setup/__globalshame_uc.scss")
 		.pipe(clone())
-		.pipe(clone())
 		.pipe(rename(brand + "_uc.scss"))
 		.pipe(headerFromFile("/setup/__utilityclasses.scss"))
 		.pipe(headerFromFile("/components/__components.base.scss"))
 		.pipe(headerFromFile("/recipes/__recipes.base.scss"))
+		.pipe(header("/** Base UC File **/"));
+};
+var constructColorStyleSheet = function (brand) {
+	return gulp
+		.src(PATHS.SCSS + "/setup/__globalshame_uc.scss")
+		.pipe(clone())
+		.pipe(rename( "color-code_"+brand+ ".scss"))
+		.pipe(headerFromFile("/setup/config/_colors."+brand+".scss"))
 		.pipe(header("/** Base UC File **/"));
 };
 gulp.task("fontawesome", function() {
@@ -440,7 +447,7 @@ gulp.task("watch", function() {
 
 gulp.task("styleguide", function() {
 	return run(
-		"npm run index && npm run zurb_acc && npm run boot_acc && npm run boot_jacc && npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run uc_cardiosmart"
+		"npm run index && npm run zurb_acc && npm run boot_acc && npm run boot_jacc && npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run boot_cardiosmart"
 	).exec();
 });
 
@@ -630,17 +637,19 @@ gulp.task(
 		function() {
 			var brand = "color";
 			var framework = "codes";
-			var base = gulp.src(PATHS.SCSS + "/setup/__globalshame_uc.scss")
-				.pipe(clone())
-				.pipe(headerFromFile("/styleguide/_color_codes.scss"))
-				.pipe(rename("color-codes_styleguide.scss"));
+			var base = constructColorStyleSheet("bases");
+			base.pipe(headerFromFile("/styleguide/_color_codes.scss"));
 			base = buildbrand(base, brand, framework);
-			var credits = gulp.src(PATHS.SCSS + "/setup/config/_colors.credits.scss")
-				.pipe(clone())
-				.pipe(rename("color-codes_credits.scss"));
-			credits = buildbrand(base, brand, framework);
-			merge(base,credits)		
-				.pipe(header("\n"))
+			var credits = constructColorStyleSheet("credits");
+			credits = buildbrand(credits, brand, framework);
+			var LOE_COR = constructColorStyleSheet("LOE_COR");
+			LOE_COR = buildbrand( LOE_COR, brand, framework);
+			var pathway = constructColorStyleSheet("pathway");
+			pathway = buildbrand(pathway, brand, framework);
+			var social = constructColorStyleSheet("social");
+			social = buildbrand( social, brand, framework);
+			merge(base, credits, social,pathway, LOE_COR)
+				.pipe(header("/*** COLOR CODES 2 **/\n"))
 				.pipe(gulp.dest(PATHS.SCSS));
 			return runSass(brand);
 		},

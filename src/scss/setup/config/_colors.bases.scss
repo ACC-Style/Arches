@@ -1,0 +1,5 @@
+@each $color-name, $color in $CreditColors {
+    @include color-loop(background-color, $color-name, $color);
+    @include color-loop(color, $color-name, $color);
+    @include color-loop(border-color, $color-name, $color);
+}
