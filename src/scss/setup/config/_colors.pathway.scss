@@ -1,0 +1,6 @@
+@each $color-name, $color in $PathwayColors {
+  $color-name-alt: $color-name;
+  @include color-loop(background-color, $color-name-alt, $color);
+  @include color-loop(color, $color-name-alt, $color);
+  @include color-loop(border-color, $color-name-alt, $color);
+}

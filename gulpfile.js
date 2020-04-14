@@ -29,7 +29,7 @@ var banner = [
 	" * @version v<%= pkg.version %>",
 	" * @link <%= pkg.homepage %>",
 	" */",
-	"",
+	""
 ].join("\n");
 
 var SOURCE = {
@@ -42,7 +42,7 @@ var SOURCE = {
 	FONTS: "/fonts",
 	IMG: "/img/Exports",
 	ICONS: "/icons",
-	MD: "./markdown",
+	MD: "./markdown"
 };
 var PATHS = {
 	CSS: SOURCE.SRC + SOURCE.CSS,
@@ -57,7 +57,7 @@ var PATHS = {
 	ALLICONS: SOURCE.SRC + SOURCE.ICONS + "/**/*.scss",
 	IMAGES: SOURCE.SRC + SOURCE.IMAGES,
 	ALLIMAGES: SOURCE.SRC + SOURCE.IMAGES + "/**/*",
-	MARKDOWN: SOURCE.MD + "/partials/",
+	MARKDOWN: SOURCE.MD + "/partials/"
 };
 var BUILDOPTIONS = ["none", "uc", "zurb", "boot"];
 var BRANDVARIATIONS = ["acc", "jacc", "cardiosmart", "cvquality"];
@@ -70,12 +70,12 @@ gulp.task("style", function() {
 		//postcssNormalize( /* pluginOptions */ ),
 		pixrem(),
 		cssDeclarationSorter({
-			order: "smacss",
+			order: "smacss"
 		}),
 		autoprefixer({
-			grid: "autoplace",
+			grid: "autoplace"
 		}),
-		mergeRules({}),
+		mergeRules({})
 	];
 	var css = gulp
 		.src(PATHS.ALLSCSS)
@@ -98,17 +98,17 @@ gulp.task("style", function() {
 		.pipe(gulp.dest(SOURCE.SRC + SOURCE.CSS));
 });
 
-function runSass(brand) {
+var runSass = function(brand) {
 	var plugins = [
 		//postcssNormalize( /* pluginOptions */ ),
 		pixrem(),
 		cssDeclarationSorter({
-			order: "smacss",
+			order: "smacss"
 		}),
 		autoprefixer({
-			grid: "autoplace",
+			grid: "autoplace"
 		}),
-		mergeRules({}),
+		mergeRules({})
 	];
 	var css = gulp
 		.src(PATHS.SCSS + "/**/*" + brand + "*")
@@ -127,44 +127,7 @@ function runSass(brand) {
 	return merge(css, min, gz)
 		.pipe(sourcemaps.write("/maps"))
 		.pipe(gulp.dest(SOURCE.SRC + SOURCE.CSS));
-}
-
-gulp.task("fontawesome", function() {
-	console.log("Gulp Font Awesome Tasks");
-	console.log("Gulp: Going to the store node_modules to pick up some fonts.");
-	return gulp
-		.src(["css/**/*", "webfonts/**/*"], {
-			cwd: "./node_modules/@fortawesome/fontawesome-pro/",
-			cwdbase: true,
-		})
-		.pipe(gulp.dest(SOURCE.DIST + "/icons"));
-});
-gulp.task("clean-dist", function() {
-	return gulp.src(SOURCE.DIST, { read: false }).pipe(clean());
-});
-gulp.task("clean-docs", function() {
-	return gulp.src(SOURCE.DOCS, { read: false }).pipe(clean());
-});
-gulp.task("dist", function() {
-	console.log("Gulp Dist Package");
-	console.log(
-		"Gulp: Gosh my back is tired. Moving boxes from Assets to the dist"
-	);
-	return gulp
-		.src(["css/*", "fonts/*", "js/**/*", "img/**/*", "icons/**/*"], {
-			cwd: "./src",
-			cwdbase: true,
-		})
-		.pipe(gulp.dest(SOURCE.DIST + "/"));
-});
-gulp.task("copy-to-styleguide", function() {
-	console.log("Gulp Copy Dist Package to Docs");
-	console.log(
-		"Gulp: Gosh my back is tired. Moving boxes from Assets to the styleguide"
-	);
-	return gulp.src("./dist/**/*").pipe(gulp.dest(SOURCE.DOCS));
-});
-
+};
 var markdownbuild = function(base, label) {
 	var construct = base
 		.pipe(clone())
@@ -176,37 +139,8 @@ var markdownbuild = function(base, label) {
 		.pipe(header("<div class='" + label + "_nav'>"));
 	return construct;
 };
-gulp.task("markdown", function() {
-	var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
-	//markdownbuild(base,name,content,tag)
-	var home = markdownbuild(base, "home");
-	var cvqualtiy_boot = markdownbuild(base, "cvquality_boot");
-	var acc_zurb = markdownbuild(base, "acc_zurb");
-	var cardiosmart_zurb = markdownbuild(base, "cardiosmart_zurb");
-	var cardiosmart_boot = markdownbuild(base, "cardiosmart_boot");
-	var acc_boot = markdownbuild(base, "acc_boot");
-	var temp_boot = markdownbuild(base, "temp_boot");
-	var jacc_boot = markdownbuild(base, "jacc_boot");
-	var layoutdemo = markdownbuild(base, "layoutdemo");
-	var colorcodes = markdownbuild(base, "colorcodes");
-	return merge(
-		home,
-		cvqualtiy_boot,
-		acc_boot,
-		jacc_boot,
-		temp_boot,
-		acc_zurb,
-		cardiosmart_zurb,
-		cardiosmart_boot,
-		layoutdemo,
-		colorcodes
-	)
-		.pipe(header(fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md")))
-		.pipe(gulp.dest(SOURCE.MD));
-});
 var buildbrand = function(base, brand, framework = null) {
 	var construct = base.pipe(clone());
-	var i = 0;
 	switch (framework) {
 		case "zurb":
 			construct.pipe(headerFromFile("/setup/__setup.zurb.scss"));
@@ -222,7 +156,7 @@ var buildbrand = function(base, brand, framework = null) {
 		header(
 			fs.readFileSync(PATHS.SCSS + "/setup/__brand.base.scss", "utf8"),
 			{
-				pkg: pkg,
+				pkg: pkg
 			}
 		)
 	);
@@ -258,7 +192,7 @@ var buildbrand = function(base, brand, framework = null) {
 					header(
 						"/** Built With Base Branding <%= pkg.version %> **/",
 						{
-							pkg: pkg,
+							pkg: pkg
 						}
 					)
 				)
@@ -271,7 +205,7 @@ var buildbrand = function(base, brand, framework = null) {
 				header(
 					"\n/**Set Active Class**/ \n $active-class-name: 'active';\n\n/** Utility Class Built on top of Bootstrap <%= pkg.bootstrapVersion %> **/ \n",
 					{
-						pkg: pkg,
+						pkg: pkg
 					}
 				)
 			);
@@ -281,36 +215,32 @@ var buildbrand = function(base, brand, framework = null) {
 				header(
 					"\n/**Set Active Class**/ \n $active-class-name: 'is-active';\n\n/** Utility Class Built on top of Zurb Foundation <%= pkg.foundationVersion %>  **/ \n",
 					{
-						pkg: pkg,
+						pkg: pkg
 					}
 				)
 			);
 			break;
-		case "noframe":
+		default:
 			construct.pipe(
 				header(
 					"\n/**Set Active Class**/ \n $active-class-name: 'active';\n\n/** No Framework **/ \n"
 				)
 			);
 			break;
-		default:
-			break;
 	}
-	construct.pipe(header("/** Start of BRANDINGBUILD " + i + " **/"));
-	++i;
 	construct
 		.pipe(headerFromFile("/setup/__preheader.scss"))
 		.pipe(header(banner, { pkg: pkg }));
 	return construct;
 };
-function headerFromFile(stringPath) {
+var headerFromFile = function(stringPath) {
 	return header(fs.readFileSync(PATHS.SCSS + stringPath, "utf8"), {
-		pkg: pkg,
+		pkg: pkg
 	});
-}
-function constructFrameworkStyleSheet(brand, framework) {
+};
+var constructFrameworkStyleSheet = function(brand, framework) {
 	var base = gulp
-		.src(PATHS.SCSS + "/setup/__globalshame.scss")
+		.src(PATHS.SCSS + "/setup/__globalshame_framework.scss")
 		.pipe(clone())
 		.pipe(rename(brand + "_" + framework + ".scss"))
 		.pipe(headerFromFile("/recipes/__recipes." + framework + ".scss"))
@@ -319,10 +249,10 @@ function constructFrameworkStyleSheet(brand, framework) {
 		.pipe(headerFromFile("/components/__components." + framework + ".scss"))
 		.pipe(headerFromFile("/base/__base." + brand + ".scss"));
 	return base;
-}
-function constructUCStyleSheet(brand) {
+};
+var constructUCStyleSheet = function(brand) {
 	return gulp
-		.src(PATHS.SCSS + "/setup/__globalshame.scss")
+		.src(PATHS.SCSS + "/setup/__globalshame_uc.scss")
 		.pipe(clone())
 		.pipe(clone())
 		.pipe(rename(brand + "_uc.scss"))
@@ -330,7 +260,71 @@ function constructUCStyleSheet(brand) {
 		.pipe(headerFromFile("/components/__components.base.scss"))
 		.pipe(headerFromFile("/recipes/__recipes.base.scss"))
 		.pipe(header("/** Base UC File **/"));
-}
+};
+gulp.task("fontawesome", function() {
+	console.log("Gulp Font Awesome Tasks");
+	console.log("Gulp: Going to the store node_modules to pick up some fonts.");
+	return gulp
+		.src(["css/**/*", "webfonts/**/*"], {
+			cwd: "./node_modules/@fortawesome/fontawesome-pro/",
+			cwdbase: true
+		})
+		.pipe(gulp.dest(SOURCE.DIST + "/icons"));
+});
+gulp.task("clean-dist", function() {
+	return gulp.src(SOURCE.DIST, { read: false }).pipe(clean());
+});
+gulp.task("clean-docs", function() {
+	return gulp.src(SOURCE.DOCS, { read: false }).pipe(clean());
+});
+gulp.task("dist", function() {
+	console.log("Gulp Dist Package");
+	console.log(
+		"Gulp: Gosh my back is tired. Moving boxes from Assets to the dist"
+	);
+	return gulp
+		.src(["css/*", "fonts/*", "js/**/*", "img/**/*", "icons/**/*"], {
+			cwd: "./src",
+			cwdbase: true
+		})
+		.pipe(gulp.dest(SOURCE.DIST + "/"));
+});
+gulp.task("copy-to-styleguide", function() {
+	console.log("Gulp Copy Dist Package to Docs");
+	console.log(
+		"Gulp: Gosh my back is tired. Moving boxes from Assets to the styleguide"
+	);
+	return gulp.src("./dist/**/*").pipe(gulp.dest(SOURCE.DOCS));
+});
+
+gulp.task("markdown", function() {
+	var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
+	//markdownbuild(base,name,content,tag)
+	var home = markdownbuild(base, "home");
+	var cvqualtiy_boot = markdownbuild(base, "cvquality_boot");
+	var acc_zurb = markdownbuild(base, "acc_zurb");
+	var cardiosmart_zurb = markdownbuild(base, "cardiosmart_zurb");
+	var cardiosmart_boot = markdownbuild(base, "cardiosmart_boot");
+	var acc_boot = markdownbuild(base, "acc_boot");
+	var temp_boot = markdownbuild(base, "temp_boot");
+	var jacc_boot = markdownbuild(base, "jacc_boot");
+	var layoutdemo = markdownbuild(base, "layoutdemo");
+	var colorcodes = markdownbuild(base, "colorcodes");
+	return merge(
+		home,
+		cvqualtiy_boot,
+		acc_boot,
+		jacc_boot,
+		temp_boot,
+		acc_zurb,
+		cardiosmart_zurb,
+		cardiosmart_boot,
+		layoutdemo,
+		colorcodes
+	)
+		.pipe(header(fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md")))
+		.pipe(gulp.dest(SOURCE.MD));
+});
 
 gulp.task("construct", function() {
 	var base = gulp.src(PATHS.SCSS + "/setup/__globalshame.scss");
@@ -594,7 +588,7 @@ gulp.task(
 			var base_zurb = constructFrameworkStyleSheet(brand, framework_zurb);
 			base_zurb = buildbrand(base_zurb, brand, framework_zurb);
 			merge(base_boot, base_zurb, uc)
-				.pipe(header("/** Test 7 **/\n"))
+				.pipe(header("\n"))
 				.pipe(gulp.dest(PATHS.SCSS));
 			return runSass(brand);
 		},
@@ -630,5 +624,48 @@ gulp.task(
 	)
 );
 
+gulp.task(
+	"build-colors",
+	gulp.series(
+		function() {
+			var brand = "color";
+			var framework = "codes";
+			var base = gulp.src(PATHS.SCSS + "/setup/__globalshame_uc.scss")
+				.pipe(clone())
+				.pipe(headerFromFile("/styleguide/_color_codes.scss"))
+				.pipe(rename("color-codes_styleguide.scss"));
+			base = buildbrand(base, brand, framework);
+			var credits = gulp.src(PATHS.SCSS + "/setup/config/_colors.credits.scss")
+				.pipe(clone())
+				.pipe(rename("color-codes_credits.scss"));
+			credits = buildbrand(base, brand, framework);
+			merge(base,credits)		
+				.pipe(header("\n"))
+				.pipe(gulp.dest(PATHS.SCSS));
+			return runSass(brand);
+		},
+		"dist",
+		"copy-to-styleguide",
+		function() {
+			var brand = "color";
+			var framework = "codes";
+			var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
+			var base = markdownbuild(base, brand + "_" + framework);
+			return merge(base)
+				.pipe(
+					header(
+						fs.readFileSync(
+							PATHS.MARKDOWN + "markdown_preheader.md",
+							"utf8"
+						)
+					)
+				)
+				.pipe(gulp.dest(SOURCE.MD));
+		},
+		function() {
+			return run("npm run color_codes").exec();
+		}
+	)
+);
 gulp.task("md", gulp.series("markdown", "styleguide"));
 gulp.task("default", gulp.series("build", "watch"));

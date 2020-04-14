@@ -40,8 +40,8 @@ Styleguide Pathway Colors
 */
 
 @each $color-name, $color in $PathwayColors {
-	$color-name-alt: $color-name;
-	/*
+  $color-name-alt: $color-name;
+  /*
 
 "#{$color-name-alt }" Decorator Classes 
 
@@ -115,8 +115,8 @@ Styleguide COR Colors
 
  */
 @each $color-name, $color in $COR {
-	$color-name-alt: "cor-" + $color-name;
-	/*
+  $color-name-alt: 'cor-' + $color-name;
+  /*
 
 "#{$color-name-alt }" Decorator Classes 
 
@@ -188,8 +188,8 @@ Weight: 2020
 Styleguide LOE Colors
  */
 @each $color-name, $color in $LOE {
-	$color-name-alt: "loe-" + $color-name;
-	/*
+  $color-name-alt: 'loe-' + $color-name;
+  /*
 
 "#{$color-name-alt }" Decorator Classes 
 
@@ -270,8 +270,8 @@ Styleguide Credit Colors
 */
 
 @each $color-name, $color in $CreditColors {
-	$color-name-alt: $color-name;
-	/*
+  $color-name-alt: $color-name;
+  /*
 
 "#{$color-name-alt }" Decorator Classes 
 
@@ -345,26 +345,17 @@ Styleguide SocialColors
 */
 
 @each $color-name, $color in $SocialColors {
-	.c_#{$color-name} {
-		color: $color !important;
-	}
-	.br_#{$color-name} {
-		border-color: $color !important;
-	}
-	.bg_#{$color-name} {
-		background-color: $color !important;
-	}
-	$icon-name: $color-name;
-	@if ($color-name == "apple-store") {
-		$icon-name: "apple";
-	}
-	@if ($color-name == "facebook") {
-		$icon-name: "facebook-square";
-	}
-	@if ($color-name == "twitter") {
-		$icon-name: "twitter-square";
-	}
-	/*
+  $icon-name: $color-name;
+  @if ($color-name == 'apple-store') {
+    $icon-name: 'apple';
+  }
+  @if ($color-name == 'facebook') {
+    $icon-name: 'facebook-square';
+  }
+  @if ($color-name == 'twitter') {
+    $icon-name: 'twitter-square';
+  }
+  /*
 
 "#{$color-name}" Decorator Classes 
 
