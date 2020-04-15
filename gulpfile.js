@@ -139,13 +139,13 @@ var markdownbuild = function(base, label) {
 		.pipe(header("<div class='" + label + "_nav'>"));
 	return construct;
 };
-var buildbrand = function(base, brand, framework = null) {
-	var construct = base.pipe(clone());
+var buildbrand = function(base, brand, framework) {
+	var construct = base;
 	switch (framework) {
 		case "zurb":
 			construct.pipe(headerFromFile("/setup/__setup.zurb.scss"));
 			break;
-		case "bootstrap":
+		case "boot":
 			construct.pipe(headerFromFile("/setup/__setup.boot.scss"));
 			break;
 		default:
@@ -171,11 +171,6 @@ var buildbrand = function(base, brand, framework = null) {
 				.pipe(header("/** Built With ACC Branding **/"))
 				.pipe(headerFromFile("/setup/__brand.acc.scss"));
 			break;
-		case "temp":
-			construct
-				.pipe(header("/** Built With Temp Branding **/"))
-				.pipe(headerFromFile("/setup/__brand.temp.scss"));
-			break;
 		case "jacc":
 			construct
 				.pipe(header("/** Built With JACC Branding **/"))
@@ -185,6 +180,11 @@ var buildbrand = function(base, brand, framework = null) {
 			construct
 				.pipe(header("/** Built With CardioSmart Branding **/"))
 				.pipe(headerFromFile("/setup/__brand.cardiosmart.scss"));
+			break;
+		case "temp":
+			construct
+				.pipe(header("/** Built With Temp Branding **/"))
+				.pipe(headerFromFile("/setup/__brand.temp.scss"));
 			break;
 		default:
 			construct
@@ -200,7 +200,7 @@ var buildbrand = function(base, brand, framework = null) {
 			break;
 	}
 	switch (framework) {
-		case "bootstrap":
+		case "boot":
 			construct.pipe(
 				header(
 					"\n/**Set Active Class**/ \n $active-class-name: 'active';\n\n/** Utility Class Built on top of Bootstrap <%= pkg.bootstrapVersion %> **/ \n",
@@ -260,12 +260,12 @@ var constructUCStyleSheet = function(brand) {
 		.pipe(headerFromFile("/recipes/__recipes.base.scss"))
 		.pipe(header("/** Base UC File **/"));
 };
-var constructColorStyleSheet = function (brand) {
+var constructColorStyleSheet = function(brand) {
 	return gulp
 		.src(PATHS.SCSS + "/setup/__globalshame_uc.scss")
 		.pipe(clone())
-		.pipe(rename( "color-code_"+brand+ ".scss"))
-		.pipe(headerFromFile("/setup/config/_colors."+brand+".scss"))
+		.pipe(rename("color-code_" + brand + ".scss"))
+		.pipe(headerFromFile("/setup/config/_colors." + brand + ".scss"))
 		.pipe(header("/** Base UC File **/"));
 };
 gulp.task("fontawesome", function() {
@@ -366,7 +366,7 @@ gulp.task("construct", function() {
 		.pipe(headerFromFile("/components/__components.acc.scss"))
 		.pipe(headerFromFile("/components/__components.boot.scss"))
 		.pipe(headerFromFile("/base/__base.acc.scss"));
-	boot_acc = buildbrand(boot_acc, "acc", "bootstrap");
+	boot_acc = buildbrand(boot_acc, "acc", "boot");
 	var zurb_cardiosmart = base
 		.pipe(clone())
 		.pipe(rename("zurb_cardiosmart.scss"))
@@ -384,7 +384,7 @@ gulp.task("construct", function() {
 		.pipe(headerFromFile("/components/__components.cardiossmart.scss"))
 		.pipe(headerFromFile("/components/__components.boot.scss"))
 		.pipe(headerFromFile("/base/__base.cardiosmart.scss"));
-	boot_cardiosmart = buildbrand(boot_cardiosmart, "cardiosmart", "bootstrap");
+	boot_cardiosmart = buildbrand(boot_cardiosmart, "cardiosmart", "boot");
 	var boot_cvquality = base
 		.pipe(clone())
 		.pipe(rename("boot_cvquality.scss"))
@@ -393,7 +393,7 @@ gulp.task("construct", function() {
 		.pipe(headerFromFile("/components/__components.cvquality.scss"))
 		.pipe(headerFromFile("/components/__components.boot.scss"))
 		.pipe(headerFromFile("/base/__base.cvquality.scss"));
-	boot_cvquality = buildbrand(boot_cvquality, "cvquality", "bootstrap");
+	boot_cvquality = buildbrand(boot_cvquality, "cvquality", "boot");
 	//jacc bootstrap
 	var boot_jacc = base
 		.pipe(clone())
@@ -403,14 +403,14 @@ gulp.task("construct", function() {
 		.pipe(headerFromFile("/components/__components.jacc.scss"))
 		.pipe(headerFromFile("/components/__components.boot.scss"))
 		.pipe(headerFromFile("/base/__base.jacc.scss"));
-	boot_jacc = buildbrand(boot_jacc, "temp", "bootstrap");
+	boot_jacc = buildbrand(boot_jacc, "temp", "boot");
 	// temp branding
 	var boot_temp = base
 		.pipe(clone())
 		.pipe(rename("boot_temp.scss"))
 		.pipe(headerFromFile("/components/__components.boot.scss"))
 		.pipe(headerFromFile("/base/__base.temp.scss"));
-	boot_temp = buildbrand(boot_temp, "temp", "bootstrap");
+	boot_temp = buildbrand(boot_temp, "temp", "boot");
 	return merge(
 		zurb_acc,
 		boot_acc,
@@ -643,12 +643,12 @@ gulp.task(
 			var credits = constructColorStyleSheet("credits");
 			credits = buildbrand(credits, brand, framework);
 			var LOE_COR = constructColorStyleSheet("LOE_COR");
-			LOE_COR = buildbrand( LOE_COR, brand, framework);
+			LOE_COR = buildbrand(LOE_COR, brand, framework);
 			var pathway = constructColorStyleSheet("pathway");
 			pathway = buildbrand(pathway, brand, framework);
 			var social = constructColorStyleSheet("social");
-			social = buildbrand( social, brand, framework);
-			merge(base, credits, social,pathway, LOE_COR)
+			social = buildbrand(social, brand, framework);
+			merge(base, credits, social, pathway, LOE_COR)
 				.pipe(header("/*** COLOR CODES 2 **/\n"))
 				.pipe(gulp.dest(PATHS.SCSS));
 			return runSass(brand);
@@ -676,5 +676,41 @@ gulp.task(
 		}
 	)
 );
+
+gulp.task(
+	"build-layout_demo",
+	gulp.series(
+		function() {
+			return gulp
+				.src(PATHS.SCSS + "/layouts/_layouts_demo.scss")
+				.pipe(rename("layout_demo.scss"))
+				.pipe(header("/** Layouts Demo Test 1 **/\n"))
+				.pipe(sass().on("error", sass.logError))
+				.pipe(gulp.dest(PATHS.CSS));
+		},
+		"dist",
+		"copy-to-styleguide",
+		function() {
+			var brand = "layout";
+			var framework = "demos";
+			var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
+			var base = markdownbuild(base, brand + "_" + framework);
+			return merge(base)
+				.pipe(
+					header(
+						fs.readFileSync(
+							PATHS.MARKDOWN + "markdown_preheader.md",
+							"utf8"
+						)
+					)
+				)
+				.pipe(gulp.dest(SOURCE.MD));
+		},
+		function() {
+			return run("npm run layout_demo").exec();
+		}
+	)
+);
+
 gulp.task("md", gulp.series("markdown", "styleguide"));
 gulp.task("default", gulp.series("build", "watch"));
