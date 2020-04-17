@@ -3413,6 +3413,203 @@
   	Styleguide counters.markers
 
   */
+  /*** COLOR CODES 2 **/
+  /**
+   * arches - Global style system focused on utility classes
+   * @version v1.2.0
+   * @link https://github.com/ACC-Style/Arches/
+   */
+  /**  Pre Header - modular scale default break points utility    *********************************/
+  /**  Version: 1.1.0    *********************************/
+  /*  
+  get-themecolor()
+
+  Gets a color value that fits into the set color patterns for usage in new css.
+
+   $key - The color name to be modified [primary,secondary,etc...]
+   $modifier   - The color shift you desire default is 0 but you can pass in [-5,-4,...0,1...4,5]. 
+
+   Styleguide: mixins.get-themecolor
+  */
+  /**Set Active Class**/
+  /** No Framework **/
+  /** Built With Base Branding 1.2.0 **/
+  /**  Default Brands    *********************************/
+  /**  Colors  **/
+  /*
+
+  ACC's Blue
+
+  $acc-blue            -  #004176; acc
+
+  Styleguide DesignBase.Colors.ACC
+  */
+  /*
+
+  Theme Colors 
+
+  Colors are based off of the ACC Scrub Colors.
+
+  map-get($theme-palette, primary)              -  #198dae; primary
+  map-get($theme-palette, secondary)            -  #676a72; secondary
+  map-get($theme-palette, shade)           		-  #898989; shade
+  map-get($theme-palette, accent)               -  #c34198;  accent
+  map-get($theme-palette, info)                 -  #a3988c; info
+  map-get($theme-palette, highlight)            -  #7742bd; highlight
+
+  Styleguide DesignBase.Colors
+   */
+  /*
+
+  Action Colors  
+
+  Actionable colors used to respond to user inputs and messaging.
+
+  map-get($theme-palette, alert)                -  #dd1a1a; alert
+  map-get($theme-palette, warning)              -  #da8210; warning
+  map-get($theme-palette, success)              -  #078a2e;  success
+  map-get($theme-palette, navigation)           -  #2b58c0; navigation
+
+  Styleguide DesignBase.Colors.Actions
+  */
+  /*
+
+  Color Coding  
+
+  Color Coding is used in specific products and concepts to illustrate cohesion and collections. All of these color codes are used universally through out the college and have an assoicated meaning. All of these colors are just used for reference and have no associated decorator classes.  You must include the the associated color-code_x.css have access to utlity classes that will color using the bellow colors. 
+
+  Styleguide DesignBase.Colors.ColorCoding
+
+   */
+  /*
+
+  COR Colors  
+
+  (COR) Class of Recomendation is a color collect used in Guideline recomendations.
+
+  $cor-green                 	- #6fc284; I
+  $cor-yellow              	- #ffd44f; IIA
+  $cor-yellow-orange          - #faa74b; IIA
+  $cor-orange               	- #f15d4c;III and III-NoHarm
+  $cor-red               		- #ed1c00; III-harm
+
+  Weight: 10
+
+  Styleguide DesignBase.Colors.ColorCoding.COR
+
+   */
+  /*
+
+  LOE Colors  
+
+  (LOE) level of Evedence is a color collect used in Guideline recomendations.
+
+  $loe-dark-blue                 	- #3e6fb7;LOE A
+  $loe-mid-blue              		- #659cd3;LOE B-R
+  $loe-light-blue                	- #a1c1e6;LOE B-NR
+  $loe-pale-blue                	- #b5d5e5; LOE C
+
+  Weight: 10
+
+  Styleguide DesignBase.Colors.ColorCoding.LOE
+
+   */
+  /*
+
+  Credit Type Color Coding  
+
+  Credit Types in the ACC have a specific color coding.
+
+  $credit-CME         	-  #00a15b; CME: Continuing Medical Education   
+  $credit-ABP         	-  #007A5B; ABP: American Board of Pediatrics   
+  $credit-COP         	-  #775891; COP: Certificate of Participation   
+  $credit-CE         		-  #a8a8a8; CE: Continuing Education   
+  $credit-MOCII         	-  #9a1267; MOCII: ABIM MOC Part II   
+  $credit-MOCIV         	-  #D3248D; MOCIV: ABIM MOC Part IV   
+  $credit-CNE         	-  #198dae; CNE: Continuing Nursing Education  
+  $credit-CNErx         	-  #52549E; CNErx: Continuing Nursing Education Pharmaceutical   
+  $credit-ECME         	-  #D16528; ECME: External Continuing Medical Education   
+  $credit-CPE         	-  #992E2E; CPE: Continuing Pharamacy Education  
+  $credit-ATCEU         	-  #775744; ATCEU: Athletic Trainer Continuing Education Unit   
+  $credit-AAPA         	-  #E8C536; AAPA: American Academy of Physician Assistants (AAPA) Category 1 CME Credit     
+
+  Weight: 0
+
+  Styleguide DesignBase.Colors.ColorCoding.Credits
+
+  */
+  /*
+
+  Clinical Pathway Colors  
+
+  Each of the clinical pathways has a distinctive color.  These colors are used to give a distinct theme to our clinical apps, marketing, pdf's and tools.
+
+  $pathway-invasive-cardiology 							- #c8b02f;  Invasive Cardiology Angiography and Intervention
+  $pathway-congenital-heart-disease 						- #fdb918;  Congenital Heart Disease
+  $pathway-noninvasive-cardiology 						- #947b33;  Noninvasive Cardiology
+  $pathway-ecg-stress-test 								- #d9691f;  Standard ECG, Stress Test
+  $pathway-vascular-medicine 								- #ae171c;  Vascular Medicine
+  $pathway-pulmonary-hypertension 						- #d60e7e;  Pulmonary Hypertension and Venous Thromboembolic Disease
+  $pathway-prevention 									- #a01d51;  Prevention
+  $pathway-heart-failure 									- #410d49;  Heart Failure and Cardiomyopathies
+  $pathway-valvular-heart-disease 						- #4f4190;  Valvular Heart Disease
+  $pathway-arrthythmias-EP 								- #005b37;  Arrthythmias and Clinical EP
+  $pathway-preicardial 									- #0079ad;  Preicardial Disease
+  $pathway-acute-coronary-syndromes 						- #009974;  Acute Coronary Syndromes
+  $pathway-stable-ischemnic-heart-disease 				- #0f3e65;  Stable Ischemnic Heart Disease
+  $pathway-special 										- #00b6f1;  Special
+
+  Weight: -1
+
+  Styleguide DesignBase.Colors.ColorCoding.Pathways
+
+  */
+  /*
+
+  Social Network Colors  
+
+  Each of the social networks has a distinctive color.  These colors are used to give a distinct theme to the social nav that is in different locations.
+
+  $twitter            -   #00aced;  twitter     
+  $facebook           -   #3b5998;  facebook    
+  $linkedin           -   #007bb6;  linkedin    
+  $apple-store        -   #ea4cc0;  apple-store 
+  $google-play        -   #689f38;  google-play 
+  $youtube            -   #bb0000;  youtube     
+
+
+  Weight: 100
+
+  Styleguide DesignBase.Colors.Social Networks
+
+  */
+  /**  Fonts  **/
+  /* latin-ext */
+  /* latin */
+  /* Muli */
+  /*Muli */
+  /* Define the "system" font family */
+  /**  Textures  **/
+  /*
+  	Textures
+
+  	All textures in the Arches design are a subtle variation of transparent.   Allowing for colors to bleed through from behind.  Different textures have intentions or are reserved for certain usagaes. 
+
+  	.texture_light                       		- Light textures is reserved for the base of a page where it can gve a soft area for text or cards to live on top of. 
+  	.texture_medium            					- medium texture are used for area that are hidden away.  Collapsable navs, areas, or sidebars ususaly use the medium texture.
+  	.texture_dust            					- Dust is the most transparent texture allowing for the color of the background to show through the most.  This is used for the painted tops of cards, or score bars.
+  	.texture_dark              					- This texture predominatly used on the footer. Its rich black will alway requrie reversed text and buttons to be readable.  
+  	.texture_cross            					- A mostly transparent cross texture used for alternating rows of content when a little extra texture is needed.
+  	.texture_disabled              				- This texture is used to paint disabled buttons and ui items giving it a greyed and X'ed out appearand. 
+
+  	Markup:
+  	<div class="{{modifier_class}} p_5 border-c_black-8 border-width_1 border_solid text_center bg_primary-4">{{modifier_class}} with a light primary color background</div>
+
+  	Styleguide DesignBase.Textures
+
+   */
+  /**  Logos  **/
+  /** Base UC File **/
 }
 #acc_arches_override .icon-after:after, #acc_arches_override a.link[target=_blank]:after, #acc_arches_override a.link[href^=http]:after, #acc_arches_override a.link[href^=https]:after, #acc_arches_override .icon-before:before, #acc_arches_override a.link:before {
   -webkit-font-smoothing: antialiased;
@@ -12186,5 +12383,1244 @@
   line-height: 0;
   text-align: center;
   vertical-align: top;
+}
+#acc_arches_override .icon-before:before, #acc_arches_override .icon-after:after, #acc_arches_override a.link:before, #acc_arches_override a.link[target=_blank]:after, #acc_arches_override a.link[href^=http]:after, #acc_arches_override a.link[href^=https]:after {
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 1;
+  text-rendering: auto;
+}
+@font-face {
+  #acc_arches_override {
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/robotoslab/v10/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYWRjRdE.woff2) format("woff2");
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 400;
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    src: url(https://fonts.gstatic.com/s/robotoslab/v10/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rj.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    src: local("Muli Regular"), local("Muli-Regular"), url(https://fonts.gstatic.com/s/muli/v11/7Auwp_0qiz-afTLGLQ.woff2) format("woff2");
+    font-family: "Muli";
+    unicode-range: U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    src: local("Muli ExtraBold"), local("Muli-ExtraBold"), url(https://fonts.gstatic.com/s/muli/v11/7Au_p_0qiz-adZXgOCX2zw.woff2) format("woff2");
+    font-weight: 800;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+    font-family: system;
+    font-weight: 300;
+  }
+}
+@font-face {
+}
+@font-face {
+}
+@font-face {
+}
+@font-face {
+}
+#acc_arches_override html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-line-break: after-white-space;
+  -webkit-locale: "en";
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  line-break: white-space;
+}
+#acc_arches_override div[class*=texture_] {
+  background-attachment: local;
+  background-origin: border-box;
+  background-position: top right;
+  background-repeat: repeat;
+}
+#acc_arches_override .bg_CME,#acc_arches_override .bg_CME-0 {
+  background-color: #00a15b !important;
+}
+#acc_arches_override .bg_CME-1 {
+  background-color: #26af74 !important;
+}
+#acc_arches_override .bg_CME-2 {
+  background-color: #5ec498 !important;
+}
+#acc_arches_override .bg_CME-3 {
+  background-color: #99d9bd !important;
+}
+#acc_arches_override .bg_CME-4 {
+  background-color: #c7eadb !important;
+}
+#acc_arches_override .bg_CME-5 {
+  background-color: #e6f6ef !important;
+}
+#acc_arches_override .bg_CME-n1 {
+  background-color: #009152 !important;
+}
+#acc_arches_override .bg_CME-n2 {
+  background-color: #007944 !important;
+}
+#acc_arches_override .bg_CME-n3 {
+  background-color: #005932 !important;
+}
+#acc_arches_override .bg_CME-n4 {
+  background-color: #004024 !important;
+}
+#acc_arches_override .bg_CME-n5 {
+  background-color: #002817 !important;
+}
+#acc_arches_override .c_CME,#acc_arches_override .c_CME-0 {
+  color: #00a15b !important;
+}
+#acc_arches_override .c_CME-1 {
+  color: #26af74 !important;
+}
+#acc_arches_override .c_CME-2 {
+  color: #5ec498 !important;
+}
+#acc_arches_override .c_CME-3 {
+  color: #99d9bd !important;
+}
+#acc_arches_override .c_CME-4 {
+  color: #c7eadb !important;
+}
+#acc_arches_override .c_CME-5 {
+  color: #e6f6ef !important;
+}
+#acc_arches_override .c_CME-n1 {
+  color: #009152 !important;
+}
+#acc_arches_override .c_CME-n2 {
+  color: #007944 !important;
+}
+#acc_arches_override .c_CME-n3 {
+  color: #005932 !important;
+}
+#acc_arches_override .c_CME-n4 {
+  color: #004024 !important;
+}
+#acc_arches_override .c_CME-n5 {
+  color: #002817 !important;
+}
+#acc_arches_override .br_CME,#acc_arches_override .br_CME-0 {
+  border-color: #00a15b !important;
+}
+#acc_arches_override .br_CME-1 {
+  border-color: #26af74 !important;
+}
+#acc_arches_override .br_CME-2 {
+  border-color: #5ec498 !important;
+}
+#acc_arches_override .br_CME-3 {
+  border-color: #99d9bd !important;
+}
+#acc_arches_override .br_CME-4 {
+  border-color: #c7eadb !important;
+}
+#acc_arches_override .br_CME-5 {
+  border-color: #e6f6ef !important;
+}
+#acc_arches_override .br_CME-n1 {
+  border-color: #009152 !important;
+}
+#acc_arches_override .br_CME-n2 {
+  border-color: #007944 !important;
+}
+#acc_arches_override .br_CME-n3 {
+  border-color: #005932 !important;
+}
+#acc_arches_override .br_CME-n4 {
+  border-color: #004024 !important;
+}
+#acc_arches_override .br_CME-n5 {
+  border-color: #002817 !important;
+}
+#acc_arches_override .bg_ABP,#acc_arches_override .bg_ABP-0 {
+  background-color: #007a5b !important;
+}
+#acc_arches_override .bg_ABP-1 {
+  background-color: #268e74 !important;
+}
+#acc_arches_override .bg_ABP-2 {
+  background-color: #5eab98 !important;
+}
+#acc_arches_override .bg_ABP-3 {
+  background-color: #99cabd !important;
+}
+#acc_arches_override .bg_ABP-4 {
+  background-color: #c7e2db !important;
+}
+#acc_arches_override .bg_ABP-5 {
+  background-color: #e6f2ef !important;
+}
+#acc_arches_override .bg_ABP-n1 {
+  background-color: #006e52 !important;
+}
+#acc_arches_override .bg_ABP-n2 {
+  background-color: #005c44 !important;
+}
+#acc_arches_override .bg_ABP-n3 {
+  background-color: #004332 !important;
+}
+#acc_arches_override .bg_ABP-n4 {
+  background-color: #003124 !important;
+}
+#acc_arches_override .bg_ABP-n5 {
+  background-color: #001f17 !important;
+}
+#acc_arches_override .c_ABP,#acc_arches_override .c_ABP-0 {
+  color: #007a5b !important;
+}
+#acc_arches_override .c_ABP-1 {
+  color: #268e74 !important;
+}
+#acc_arches_override .c_ABP-2 {
+  color: #5eab98 !important;
+}
+#acc_arches_override .c_ABP-3 {
+  color: #99cabd !important;
+}
+#acc_arches_override .c_ABP-4 {
+  color: #c7e2db !important;
+}
+#acc_arches_override .c_ABP-5 {
+  color: #e6f2ef !important;
+}
+#acc_arches_override .c_ABP-n1 {
+  color: #006e52 !important;
+}
+#acc_arches_override .c_ABP-n2 {
+  color: #005c44 !important;
+}
+#acc_arches_override .c_ABP-n3 {
+  color: #004332 !important;
+}
+#acc_arches_override .c_ABP-n4 {
+  color: #003124 !important;
+}
+#acc_arches_override .c_ABP-n5 {
+  color: #001f17 !important;
+}
+#acc_arches_override .br_ABP,#acc_arches_override .br_ABP-0 {
+  border-color: #007a5b !important;
+}
+#acc_arches_override .br_ABP-1 {
+  border-color: #268e74 !important;
+}
+#acc_arches_override .br_ABP-2 {
+  border-color: #5eab98 !important;
+}
+#acc_arches_override .br_ABP-3 {
+  border-color: #99cabd !important;
+}
+#acc_arches_override .br_ABP-4 {
+  border-color: #c7e2db !important;
+}
+#acc_arches_override .br_ABP-5 {
+  border-color: #e6f2ef !important;
+}
+#acc_arches_override .br_ABP-n1 {
+  border-color: #006e52 !important;
+}
+#acc_arches_override .br_ABP-n2 {
+  border-color: #005c44 !important;
+}
+#acc_arches_override .br_ABP-n3 {
+  border-color: #004332 !important;
+}
+#acc_arches_override .br_ABP-n4 {
+  border-color: #003124 !important;
+}
+#acc_arches_override .br_ABP-n5 {
+  border-color: #001f17 !important;
+}
+#acc_arches_override .bg_COP,#acc_arches_override .bg_COP-0 {
+  background-color: #775891 !important;
+}
+#acc_arches_override .bg_COP-1 {
+  background-color: #8b71a2 !important;
+}
+#acc_arches_override .bg_COP-2 {
+  background-color: #a996ba !important;
+}
+#acc_arches_override .bg_COP-3 {
+  background-color: #c9bcd3 !important;
+}
+#acc_arches_override .bg_COP-4 {
+  background-color: #e1dae7 !important;
+}
+#acc_arches_override .bg_COP-5 {
+  background-color: #f1eef4 !important;
+}
+#acc_arches_override .bg_COP-n1 {
+  background-color: #6b4f83 !important;
+}
+#acc_arches_override .bg_COP-n2 {
+  background-color: #59426d !important;
+}
+#acc_arches_override .bg_COP-n3 {
+  background-color: #413050 !important;
+}
+#acc_arches_override .bg_COP-n4 {
+  background-color: #30233a !important;
+}
+#acc_arches_override .bg_COP-n5 {
+  background-color: #1e1624 !important;
+}
+#acc_arches_override .c_COP,#acc_arches_override .c_COP-0 {
+  color: #775891 !important;
+}
+#acc_arches_override .c_COP-1 {
+  color: #8b71a2 !important;
+}
+#acc_arches_override .c_COP-2 {
+  color: #a996ba !important;
+}
+#acc_arches_override .c_COP-3 {
+  color: #c9bcd3 !important;
+}
+#acc_arches_override .c_COP-4 {
+  color: #e1dae7 !important;
+}
+#acc_arches_override .c_COP-5 {
+  color: #f1eef4 !important;
+}
+#acc_arches_override .c_COP-n1 {
+  color: #6b4f83 !important;
+}
+#acc_arches_override .c_COP-n2 {
+  color: #59426d !important;
+}
+#acc_arches_override .c_COP-n3 {
+  color: #413050 !important;
+}
+#acc_arches_override .c_COP-n4 {
+  color: #30233a !important;
+}
+#acc_arches_override .c_COP-n5 {
+  color: #1e1624 !important;
+}
+#acc_arches_override .br_COP,#acc_arches_override .br_COP-0 {
+  border-color: #775891 !important;
+}
+#acc_arches_override .br_COP-1 {
+  border-color: #8b71a2 !important;
+}
+#acc_arches_override .br_COP-2 {
+  border-color: #a996ba !important;
+}
+#acc_arches_override .br_COP-3 {
+  border-color: #c9bcd3 !important;
+}
+#acc_arches_override .br_COP-4 {
+  border-color: #e1dae7 !important;
+}
+#acc_arches_override .br_COP-5 {
+  border-color: #f1eef4 !important;
+}
+#acc_arches_override .br_COP-n1 {
+  border-color: #6b4f83 !important;
+}
+#acc_arches_override .br_COP-n2 {
+  border-color: #59426d !important;
+}
+#acc_arches_override .br_COP-n3 {
+  border-color: #413050 !important;
+}
+#acc_arches_override .br_COP-n4 {
+  border-color: #30233a !important;
+}
+#acc_arches_override .br_COP-n5 {
+  border-color: #1e1624 !important;
+}
+#acc_arches_override .bg_CE,#acc_arches_override .bg_CE-0 {
+  background-color: #a8a8a8 !important;
+}
+#acc_arches_override .bg_CE-1 {
+  background-color: #b5b5b5 !important;
+}
+#acc_arches_override .bg_CE-2 {
+  background-color: #c8c8c8 !important;
+}
+#acc_arches_override .bg_CE-3 {
+  background-color: gainsboro !important;
+}
+#acc_arches_override .bg_CE-4 {
+  background-color: #ececec !important;
+}
+#acc_arches_override .bg_CE-5 {
+  background-color: #f6f6f6 !important;
+}
+#acc_arches_override .bg_CE-n1 {
+  background-color: #979797 !important;
+}
+#acc_arches_override .bg_CE-n2 {
+  background-color: #7e7e7e !important;
+}
+#acc_arches_override .bg_CE-n3 {
+  background-color: #5c5c5c !important;
+}
+#acc_arches_override .bg_CE-n4 {
+  background-color: #434343 !important;
+}
+#acc_arches_override .bg_CE-n5 {
+  background-color: #2a2a2a !important;
+}
+#acc_arches_override .c_CE,#acc_arches_override .c_CE-0 {
+  color: #a8a8a8 !important;
+}
+#acc_arches_override .c_CE-1 {
+  color: #b5b5b5 !important;
+}
+#acc_arches_override .c_CE-2 {
+  color: #c8c8c8 !important;
+}
+#acc_arches_override .c_CE-3 {
+  color: gainsboro !important;
+}
+#acc_arches_override .c_CE-4 {
+  color: #ececec !important;
+}
+#acc_arches_override .c_CE-5 {
+  color: #f6f6f6 !important;
+}
+#acc_arches_override .c_CE-n1 {
+  color: #979797 !important;
+}
+#acc_arches_override .c_CE-n2 {
+  color: #7e7e7e !important;
+}
+#acc_arches_override .c_CE-n3 {
+  color: #5c5c5c !important;
+}
+#acc_arches_override .c_CE-n4 {
+  color: #434343 !important;
+}
+#acc_arches_override .c_CE-n5 {
+  color: #2a2a2a !important;
+}
+#acc_arches_override .br_CE,#acc_arches_override .br_CE-0 {
+  border-color: #a8a8a8 !important;
+}
+#acc_arches_override .br_CE-1 {
+  border-color: #b5b5b5 !important;
+}
+#acc_arches_override .br_CE-2 {
+  border-color: #c8c8c8 !important;
+}
+#acc_arches_override .br_CE-3 {
+  border-color: gainsboro !important;
+}
+#acc_arches_override .br_CE-4 {
+  border-color: #ececec !important;
+}
+#acc_arches_override .br_CE-5 {
+  border-color: #f6f6f6 !important;
+}
+#acc_arches_override .br_CE-n1 {
+  border-color: #979797 !important;
+}
+#acc_arches_override .br_CE-n2 {
+  border-color: #7e7e7e !important;
+}
+#acc_arches_override .br_CE-n3 {
+  border-color: #5c5c5c !important;
+}
+#acc_arches_override .br_CE-n4 {
+  border-color: #434343 !important;
+}
+#acc_arches_override .br_CE-n5 {
+  border-color: #2a2a2a !important;
+}
+#acc_arches_override .bg_MOCII,#acc_arches_override .bg_MOCII-0 {
+  background-color: #9a1267 !important;
+}
+#acc_arches_override .bg_MOCII-1 {
+  background-color: #a9367e !important;
+}
+#acc_arches_override .bg_MOCII-2 {
+  background-color: #bf6a9f !important;
+}
+#acc_arches_override .bg_MOCII-3 {
+  background-color: #d7a0c2 !important;
+}
+#acc_arches_override .bg_MOCII-4 {
+  background-color: #e9cbde !important;
+}
+#acc_arches_override .bg_MOCII-5 {
+  background-color: #f5e7f0 !important;
+}
+#acc_arches_override .bg_MOCII-n1 {
+  background-color: #8b105d !important;
+}
+#acc_arches_override .bg_MOCII-n2 {
+  background-color: #740e4d !important;
+}
+#acc_arches_override .bg_MOCII-n3 {
+  background-color: #550a39 !important;
+}
+#acc_arches_override .bg_MOCII-n4 {
+  background-color: #3e0729 !important;
+}
+#acc_arches_override .bg_MOCII-n5 {
+  background-color: #27051a !important;
+}
+#acc_arches_override .c_MOCII,#acc_arches_override .c_MOCII-0 {
+  color: #9a1267 !important;
+}
+#acc_arches_override .c_MOCII-1 {
+  color: #a9367e !important;
+}
+#acc_arches_override .c_MOCII-2 {
+  color: #bf6a9f !important;
+}
+#acc_arches_override .c_MOCII-3 {
+  color: #d7a0c2 !important;
+}
+#acc_arches_override .c_MOCII-4 {
+  color: #e9cbde !important;
+}
+#acc_arches_override .c_MOCII-5 {
+  color: #f5e7f0 !important;
+}
+#acc_arches_override .c_MOCII-n1 {
+  color: #8b105d !important;
+}
+#acc_arches_override .c_MOCII-n2 {
+  color: #740e4d !important;
+}
+#acc_arches_override .c_MOCII-n3 {
+  color: #550a39 !important;
+}
+#acc_arches_override .c_MOCII-n4 {
+  color: #3e0729 !important;
+}
+#acc_arches_override .c_MOCII-n5 {
+  color: #27051a !important;
+}
+#acc_arches_override .br_MOCII,#acc_arches_override .br_MOCII-0 {
+  border-color: #9a1267 !important;
+}
+#acc_arches_override .br_MOCII-1 {
+  border-color: #a9367e !important;
+}
+#acc_arches_override .br_MOCII-2 {
+  border-color: #bf6a9f !important;
+}
+#acc_arches_override .br_MOCII-3 {
+  border-color: #d7a0c2 !important;
+}
+#acc_arches_override .br_MOCII-4 {
+  border-color: #e9cbde !important;
+}
+#acc_arches_override .br_MOCII-5 {
+  border-color: #f5e7f0 !important;
+}
+#acc_arches_override .br_MOCII-n1 {
+  border-color: #8b105d !important;
+}
+#acc_arches_override .br_MOCII-n2 {
+  border-color: #740e4d !important;
+}
+#acc_arches_override .br_MOCII-n3 {
+  border-color: #550a39 !important;
+}
+#acc_arches_override .br_MOCII-n4 {
+  border-color: #3e0729 !important;
+}
+#acc_arches_override .br_MOCII-n5 {
+  border-color: #27051a !important;
+}
+#acc_arches_override .bg_MOCIV,#acc_arches_override .bg_MOCIV-0 {
+  background-color: #d3248d !important;
+}
+#acc_arches_override .bg_MOCIV-1 {
+  background-color: #da459e !important;
+}
+#acc_arches_override .bg_MOCIV-2 {
+  background-color: #e375b7 !important;
+}
+#acc_arches_override .bg_MOCIV-3 {
+  background-color: #eda7d1 !important;
+}
+#acc_arches_override .bg_MOCIV-4 {
+  background-color: #f5cfe6 !important;
+}
+#acc_arches_override .bg_MOCIV-5 {
+  background-color: #fbe9f4 !important;
+}
+#acc_arches_override .bg_MOCIV-n1 {
+  background-color: #be207f !important;
+}
+#acc_arches_override .bg_MOCIV-n2 {
+  background-color: #9e1b6a !important;
+}
+#acc_arches_override .bg_MOCIV-n3 {
+  background-color: #74144e !important;
+}
+#acc_arches_override .bg_MOCIV-n4 {
+  background-color: #540e38 !important;
+}
+#acc_arches_override .bg_MOCIV-n5 {
+  background-color: #350923 !important;
+}
+#acc_arches_override .c_MOCIV,#acc_arches_override .c_MOCIV-0 {
+  color: #d3248d !important;
+}
+#acc_arches_override .c_MOCIV-1 {
+  color: #da459e !important;
+}
+#acc_arches_override .c_MOCIV-2 {
+  color: #e375b7 !important;
+}
+#acc_arches_override .c_MOCIV-3 {
+  color: #eda7d1 !important;
+}
+#acc_arches_override .c_MOCIV-4 {
+  color: #f5cfe6 !important;
+}
+#acc_arches_override .c_MOCIV-5 {
+  color: #fbe9f4 !important;
+}
+#acc_arches_override .c_MOCIV-n1 {
+  color: #be207f !important;
+}
+#acc_arches_override .c_MOCIV-n2 {
+  color: #9e1b6a !important;
+}
+#acc_arches_override .c_MOCIV-n3 {
+  color: #74144e !important;
+}
+#acc_arches_override .c_MOCIV-n4 {
+  color: #540e38 !important;
+}
+#acc_arches_override .c_MOCIV-n5 {
+  color: #350923 !important;
+}
+#acc_arches_override .br_MOCIV,#acc_arches_override .br_MOCIV-0 {
+  border-color: #d3248d !important;
+}
+#acc_arches_override .br_MOCIV-1 {
+  border-color: #da459e !important;
+}
+#acc_arches_override .br_MOCIV-2 {
+  border-color: #e375b7 !important;
+}
+#acc_arches_override .br_MOCIV-3 {
+  border-color: #eda7d1 !important;
+}
+#acc_arches_override .br_MOCIV-4 {
+  border-color: #f5cfe6 !important;
+}
+#acc_arches_override .br_MOCIV-5 {
+  border-color: #fbe9f4 !important;
+}
+#acc_arches_override .br_MOCIV-n1 {
+  border-color: #be207f !important;
+}
+#acc_arches_override .br_MOCIV-n2 {
+  border-color: #9e1b6a !important;
+}
+#acc_arches_override .br_MOCIV-n3 {
+  border-color: #74144e !important;
+}
+#acc_arches_override .br_MOCIV-n4 {
+  border-color: #540e38 !important;
+}
+#acc_arches_override .br_MOCIV-n5 {
+  border-color: #350923 !important;
+}
+#acc_arches_override .bg_CNE,#acc_arches_override .bg_CNE-0 {
+  background-color: #198dae !important;
+}
+#acc_arches_override .bg_CNE-1 {
+  background-color: #3c9eba !important;
+}
+#acc_arches_override .bg_CNE-2 {
+  background-color: #6eb7cc !important;
+}
+#acc_arches_override .bg_CNE-3 {
+  background-color: #a3d1df !important;
+}
+#acc_arches_override .bg_CNE-4 {
+  background-color: #cce6ed !important;
+}
+#acc_arches_override .bg_CNE-5 {
+  background-color: #e8f4f7 !important;
+}
+#acc_arches_override .bg_CNE-n1 {
+  background-color: #177f9d !important;
+}
+#acc_arches_override .bg_CNE-n2 {
+  background-color: #136a83 !important;
+}
+#acc_arches_override .bg_CNE-n3 {
+  background-color: #0e4e60 !important;
+}
+#acc_arches_override .bg_CNE-n4 {
+  background-color: #0a3846 !important;
+}
+#acc_arches_override .bg_CNE-n5 {
+  background-color: #06232c !important;
+}
+#acc_arches_override .c_CNE,#acc_arches_override .c_CNE-0 {
+  color: #198dae !important;
+}
+#acc_arches_override .c_CNE-1 {
+  color: #3c9eba !important;
+}
+#acc_arches_override .c_CNE-2 {
+  color: #6eb7cc !important;
+}
+#acc_arches_override .c_CNE-3 {
+  color: #a3d1df !important;
+}
+#acc_arches_override .c_CNE-4 {
+  color: #cce6ed !important;
+}
+#acc_arches_override .c_CNE-5 {
+  color: #e8f4f7 !important;
+}
+#acc_arches_override .c_CNE-n1 {
+  color: #177f9d !important;
+}
+#acc_arches_override .c_CNE-n2 {
+  color: #136a83 !important;
+}
+#acc_arches_override .c_CNE-n3 {
+  color: #0e4e60 !important;
+}
+#acc_arches_override .c_CNE-n4 {
+  color: #0a3846 !important;
+}
+#acc_arches_override .c_CNE-n5 {
+  color: #06232c !important;
+}
+#acc_arches_override .br_CNE,#acc_arches_override .br_CNE-0 {
+  border-color: #198dae !important;
+}
+#acc_arches_override .br_CNE-1 {
+  border-color: #3c9eba !important;
+}
+#acc_arches_override .br_CNE-2 {
+  border-color: #6eb7cc !important;
+}
+#acc_arches_override .br_CNE-3 {
+  border-color: #a3d1df !important;
+}
+#acc_arches_override .br_CNE-4 {
+  border-color: #cce6ed !important;
+}
+#acc_arches_override .br_CNE-5 {
+  border-color: #e8f4f7 !important;
+}
+#acc_arches_override .br_CNE-n1 {
+  border-color: #177f9d !important;
+}
+#acc_arches_override .br_CNE-n2 {
+  border-color: #136a83 !important;
+}
+#acc_arches_override .br_CNE-n3 {
+  border-color: #0e4e60 !important;
+}
+#acc_arches_override .br_CNE-n4 {
+  border-color: #0a3846 !important;
+}
+#acc_arches_override .br_CNE-n5 {
+  border-color: #06232c !important;
+}
+#acc_arches_override .bg_CNErx,#acc_arches_override .bg_CNErx-0 {
+  background-color: #52549e !important;
+}
+#acc_arches_override .bg_CNErx-1 {
+  background-color: #6c6ead !important;
+}
+#acc_arches_override .bg_CNErx-2 {
+  background-color: #9293c2 !important;
+}
+#acc_arches_override .bg_CNErx-3 {
+  background-color: #babbd8 !important;
+}
+#acc_arches_override .bg_CNErx-4 {
+  background-color: #d9d9ea !important;
+}
+#acc_arches_override .bg_CNErx-5 {
+  background-color: #eeeef5 !important;
+}
+#acc_arches_override .bg_CNErx-n1 {
+  background-color: #4a4c8e !important;
+}
+#acc_arches_override .bg_CNErx-n2 {
+  background-color: #3e3f77 !important;
+}
+#acc_arches_override .bg_CNErx-n3 {
+  background-color: #2d2e57 !important;
+}
+#acc_arches_override .bg_CNErx-n4 {
+  background-color: #21223f !important;
+}
+#acc_arches_override .bg_CNErx-n5 {
+  background-color: #151528 !important;
+}
+#acc_arches_override .c_CNErx,#acc_arches_override .c_CNErx-0 {
+  color: #52549e !important;
+}
+#acc_arches_override .c_CNErx-1 {
+  color: #6c6ead !important;
+}
+#acc_arches_override .c_CNErx-2 {
+  color: #9293c2 !important;
+}
+#acc_arches_override .c_CNErx-3 {
+  color: #babbd8 !important;
+}
+#acc_arches_override .c_CNErx-4 {
+  color: #d9d9ea !important;
+}
+#acc_arches_override .c_CNErx-5 {
+  color: #eeeef5 !important;
+}
+#acc_arches_override .c_CNErx-n1 {
+  color: #4a4c8e !important;
+}
+#acc_arches_override .c_CNErx-n2 {
+  color: #3e3f77 !important;
+}
+#acc_arches_override .c_CNErx-n3 {
+  color: #2d2e57 !important;
+}
+#acc_arches_override .c_CNErx-n4 {
+  color: #21223f !important;
+}
+#acc_arches_override .c_CNErx-n5 {
+  color: #151528 !important;
+}
+#acc_arches_override .br_CNErx,#acc_arches_override .br_CNErx-0 {
+  border-color: #52549e !important;
+}
+#acc_arches_override .br_CNErx-1 {
+  border-color: #6c6ead !important;
+}
+#acc_arches_override .br_CNErx-2 {
+  border-color: #9293c2 !important;
+}
+#acc_arches_override .br_CNErx-3 {
+  border-color: #babbd8 !important;
+}
+#acc_arches_override .br_CNErx-4 {
+  border-color: #d9d9ea !important;
+}
+#acc_arches_override .br_CNErx-5 {
+  border-color: #eeeef5 !important;
+}
+#acc_arches_override .br_CNErx-n1 {
+  border-color: #4a4c8e !important;
+}
+#acc_arches_override .br_CNErx-n2 {
+  border-color: #3e3f77 !important;
+}
+#acc_arches_override .br_CNErx-n3 {
+  border-color: #2d2e57 !important;
+}
+#acc_arches_override .br_CNErx-n4 {
+  border-color: #21223f !important;
+}
+#acc_arches_override .br_CNErx-n5 {
+  border-color: #151528 !important;
+}
+#acc_arches_override .bg_ECME,#acc_arches_override .bg_ECME-0 {
+  background-color: #d16528 !important;
+}
+#acc_arches_override .bg_ECME-1 {
+  background-color: #d87c48 !important;
+}
+#acc_arches_override .bg_ECME-2 {
+  background-color: #e29e78 !important;
+}
+#acc_arches_override .bg_ECME-3 {
+  background-color: #edc1a9 !important;
+}
+#acc_arches_override .bg_ECME-4 {
+  background-color: #f5ddd0 !important;
+}
+#acc_arches_override .bg_ECME-5 {
+  background-color: #faf0ea !important;
+}
+#acc_arches_override .bg_ECME-n1 {
+  background-color: #bc5b24 !important;
+}
+#acc_arches_override .bg_ECME-n2 {
+  background-color: #9d4c1e !important;
+}
+#acc_arches_override .bg_ECME-n3 {
+  background-color: #733816 !important;
+}
+#acc_arches_override .bg_ECME-n4 {
+  background-color: #542810 !important;
+}
+#acc_arches_override .bg_ECME-n5 {
+  background-color: #34190a !important;
+}
+#acc_arches_override .c_ECME,#acc_arches_override .c_ECME-0 {
+  color: #d16528 !important;
+}
+#acc_arches_override .c_ECME-1 {
+  color: #d87c48 !important;
+}
+#acc_arches_override .c_ECME-2 {
+  color: #e29e78 !important;
+}
+#acc_arches_override .c_ECME-3 {
+  color: #edc1a9 !important;
+}
+#acc_arches_override .c_ECME-4 {
+  color: #f5ddd0 !important;
+}
+#acc_arches_override .c_ECME-5 {
+  color: #faf0ea !important;
+}
+#acc_arches_override .c_ECME-n1 {
+  color: #bc5b24 !important;
+}
+#acc_arches_override .c_ECME-n2 {
+  color: #9d4c1e !important;
+}
+#acc_arches_override .c_ECME-n3 {
+  color: #733816 !important;
+}
+#acc_arches_override .c_ECME-n4 {
+  color: #542810 !important;
+}
+#acc_arches_override .c_ECME-n5 {
+  color: #34190a !important;
+}
+#acc_arches_override .br_ECME,#acc_arches_override .br_ECME-0 {
+  border-color: #d16528 !important;
+}
+#acc_arches_override .br_ECME-1 {
+  border-color: #d87c48 !important;
+}
+#acc_arches_override .br_ECME-2 {
+  border-color: #e29e78 !important;
+}
+#acc_arches_override .br_ECME-3 {
+  border-color: #edc1a9 !important;
+}
+#acc_arches_override .br_ECME-4 {
+  border-color: #f5ddd0 !important;
+}
+#acc_arches_override .br_ECME-5 {
+  border-color: #faf0ea !important;
+}
+#acc_arches_override .br_ECME-n1 {
+  border-color: #bc5b24 !important;
+}
+#acc_arches_override .br_ECME-n2 {
+  border-color: #9d4c1e !important;
+}
+#acc_arches_override .br_ECME-n3 {
+  border-color: #733816 !important;
+}
+#acc_arches_override .br_ECME-n4 {
+  border-color: #542810 !important;
+}
+#acc_arches_override .br_ECME-n5 {
+  border-color: #34190a !important;
+}
+#acc_arches_override .bg_CPE,#acc_arches_override .bg_CPE-0 {
+  background-color: #992e2e !important;
+}
+#acc_arches_override .bg_CPE-1 {
+  background-color: #a84d4d !important;
+}
+#acc_arches_override .bg_CPE-2 {
+  background-color: #bf7b7b !important;
+}
+#acc_arches_override .bg_CPE-3 {
+  background-color: #d6abab !important;
+}
+#acc_arches_override .bg_CPE-4 {
+  background-color: #e9d1d1 !important;
+}
+#acc_arches_override .bg_CPE-5 {
+  background-color: #f5eaea !important;
+}
+#acc_arches_override .bg_CPE-n1 {
+  background-color: #8a2929 !important;
+}
+#acc_arches_override .bg_CPE-n2 {
+  background-color: #732323 !important;
+}
+#acc_arches_override .bg_CPE-n3 {
+  background-color: #541919 !important;
+}
+#acc_arches_override .bg_CPE-n4 {
+  background-color: #3d1212 !important;
+}
+#acc_arches_override .bg_CPE-n5 {
+  background-color: #260c0c !important;
+}
+#acc_arches_override .c_CPE,#acc_arches_override .c_CPE-0 {
+  color: #992e2e !important;
+}
+#acc_arches_override .c_CPE-1 {
+  color: #a84d4d !important;
+}
+#acc_arches_override .c_CPE-2 {
+  color: #bf7b7b !important;
+}
+#acc_arches_override .c_CPE-3 {
+  color: #d6abab !important;
+}
+#acc_arches_override .c_CPE-4 {
+  color: #e9d1d1 !important;
+}
+#acc_arches_override .c_CPE-5 {
+  color: #f5eaea !important;
+}
+#acc_arches_override .c_CPE-n1 {
+  color: #8a2929 !important;
+}
+#acc_arches_override .c_CPE-n2 {
+  color: #732323 !important;
+}
+#acc_arches_override .c_CPE-n3 {
+  color: #541919 !important;
+}
+#acc_arches_override .c_CPE-n4 {
+  color: #3d1212 !important;
+}
+#acc_arches_override .c_CPE-n5 {
+  color: #260c0c !important;
+}
+#acc_arches_override .br_CPE,#acc_arches_override .br_CPE-0 {
+  border-color: #992e2e !important;
+}
+#acc_arches_override .br_CPE-1 {
+  border-color: #a84d4d !important;
+}
+#acc_arches_override .br_CPE-2 {
+  border-color: #bf7b7b !important;
+}
+#acc_arches_override .br_CPE-3 {
+  border-color: #d6abab !important;
+}
+#acc_arches_override .br_CPE-4 {
+  border-color: #e9d1d1 !important;
+}
+#acc_arches_override .br_CPE-5 {
+  border-color: #f5eaea !important;
+}
+#acc_arches_override .br_CPE-n1 {
+  border-color: #8a2929 !important;
+}
+#acc_arches_override .br_CPE-n2 {
+  border-color: #732323 !important;
+}
+#acc_arches_override .br_CPE-n3 {
+  border-color: #541919 !important;
+}
+#acc_arches_override .br_CPE-n4 {
+  border-color: #3d1212 !important;
+}
+#acc_arches_override .br_CPE-n5 {
+  border-color: #260c0c !important;
+}
+#acc_arches_override .bg_ATCEU,#acc_arches_override .bg_ATCEU-0 {
+  background-color: #775744 !important;
+}
+#acc_arches_override .bg_ATCEU-1 {
+  background-color: #8b7060 !important;
+}
+#acc_arches_override .bg_ATCEU-2 {
+  background-color: #a99589 !important;
+}
+#acc_arches_override .bg_ATCEU-3 {
+  background-color: #c9bcb4 !important;
+}
+#acc_arches_override .bg_ATCEU-4 {
+  background-color: #e1dad6 !important;
+}
+#acc_arches_override .bg_ATCEU-5 {
+  background-color: #f1eeec !important;
+}
+#acc_arches_override .bg_ATCEU-n1 {
+  background-color: #6b4e3d !important;
+}
+#acc_arches_override .bg_ATCEU-n2 {
+  background-color: #594133 !important;
+}
+#acc_arches_override .bg_ATCEU-n3 {
+  background-color: #413025 !important;
+}
+#acc_arches_override .bg_ATCEU-n4 {
+  background-color: #30231b !important;
+}
+#acc_arches_override .bg_ATCEU-n5 {
+  background-color: #1e1611 !important;
+}
+#acc_arches_override .c_ATCEU,#acc_arches_override .c_ATCEU-0 {
+  color: #775744 !important;
+}
+#acc_arches_override .c_ATCEU-1 {
+  color: #8b7060 !important;
+}
+#acc_arches_override .c_ATCEU-2 {
+  color: #a99589 !important;
+}
+#acc_arches_override .c_ATCEU-3 {
+  color: #c9bcb4 !important;
+}
+#acc_arches_override .c_ATCEU-4 {
+  color: #e1dad6 !important;
+}
+#acc_arches_override .c_ATCEU-5 {
+  color: #f1eeec !important;
+}
+#acc_arches_override .c_ATCEU-n1 {
+  color: #6b4e3d !important;
+}
+#acc_arches_override .c_ATCEU-n2 {
+  color: #594133 !important;
+}
+#acc_arches_override .c_ATCEU-n3 {
+  color: #413025 !important;
+}
+#acc_arches_override .c_ATCEU-n4 {
+  color: #30231b !important;
+}
+#acc_arches_override .c_ATCEU-n5 {
+  color: #1e1611 !important;
+}
+#acc_arches_override .br_ATCEU,#acc_arches_override .br_ATCEU-0 {
+  border-color: #775744 !important;
+}
+#acc_arches_override .br_ATCEU-1 {
+  border-color: #8b7060 !important;
+}
+#acc_arches_override .br_ATCEU-2 {
+  border-color: #a99589 !important;
+}
+#acc_arches_override .br_ATCEU-3 {
+  border-color: #c9bcb4 !important;
+}
+#acc_arches_override .br_ATCEU-4 {
+  border-color: #e1dad6 !important;
+}
+#acc_arches_override .br_ATCEU-5 {
+  border-color: #f1eeec !important;
+}
+#acc_arches_override .br_ATCEU-n1 {
+  border-color: #6b4e3d !important;
+}
+#acc_arches_override .br_ATCEU-n2 {
+  border-color: #594133 !important;
+}
+#acc_arches_override .br_ATCEU-n3 {
+  border-color: #413025 !important;
+}
+#acc_arches_override .br_ATCEU-n4 {
+  border-color: #30231b !important;
+}
+#acc_arches_override .br_ATCEU-n5 {
+  border-color: #1e1611 !important;
+}
+#acc_arches_override .bg_AAPA,#acc_arches_override .bg_AAPA-0 {
+  background-color: #e8c536 !important;
+}
+#acc_arches_override .bg_AAPA-1 {
+  background-color: #ebce54 !important;
+}
+#acc_arches_override .bg_AAPA-2 {
+  background-color: #f1da80 !important;
+}
+#acc_arches_override .bg_AAPA-3 {
+  background-color: #f6e8af !important;
+}
+#acc_arches_override .bg_AAPA-4 {
+  background-color: #faf2d3 !important;
+}
+#acc_arches_override .bg_AAPA-5 {
+  background-color: #fdf9eb !important;
+}
+#acc_arches_override .bg_AAPA-n1 {
+  background-color: #d1b131 !important;
+}
+#acc_arches_override .bg_AAPA-n2 {
+  background-color: #ae9429 !important;
+}
+#acc_arches_override .bg_AAPA-n3 {
+  background-color: #806c1e !important;
+}
+#acc_arches_override .bg_AAPA-n4 {
+  background-color: #5d4f16 !important;
+}
+#acc_arches_override .bg_AAPA-n5 {
+  background-color: #3a310e !important;
+}
+#acc_arches_override .c_AAPA,#acc_arches_override .c_AAPA-0 {
+  color: #e8c536 !important;
+}
+#acc_arches_override .c_AAPA-1 {
+  color: #ebce54 !important;
+}
+#acc_arches_override .c_AAPA-2 {
+  color: #f1da80 !important;
+}
+#acc_arches_override .c_AAPA-3 {
+  color: #f6e8af !important;
+}
+#acc_arches_override .c_AAPA-4 {
+  color: #faf2d3 !important;
+}
+#acc_arches_override .c_AAPA-5 {
+  color: #fdf9eb !important;
+}
+#acc_arches_override .c_AAPA-n1 {
+  color: #d1b131 !important;
+}
+#acc_arches_override .c_AAPA-n2 {
+  color: #ae9429 !important;
+}
+#acc_arches_override .c_AAPA-n3 {
+  color: #806c1e !important;
+}
+#acc_arches_override .c_AAPA-n4 {
+  color: #5d4f16 !important;
+}
+#acc_arches_override .c_AAPA-n5 {
+  color: #3a310e !important;
+}
+#acc_arches_override .br_AAPA,#acc_arches_override .br_AAPA-0 {
+  border-color: #e8c536 !important;
+}
+#acc_arches_override .br_AAPA-1 {
+  border-color: #ebce54 !important;
+}
+#acc_arches_override .br_AAPA-2 {
+  border-color: #f1da80 !important;
+}
+#acc_arches_override .br_AAPA-3 {
+  border-color: #f6e8af !important;
+}
+#acc_arches_override .br_AAPA-4 {
+  border-color: #faf2d3 !important;
+}
+#acc_arches_override .br_AAPA-5 {
+  border-color: #fdf9eb !important;
+}
+#acc_arches_override .br_AAPA-n1 {
+  border-color: #d1b131 !important;
+}
+#acc_arches_override .br_AAPA-n2 {
+  border-color: #ae9429 !important;
+}
+#acc_arches_override .br_AAPA-n3 {
+  border-color: #806c1e !important;
+}
+#acc_arches_override .br_AAPA-n4 {
+  border-color: #5d4f16 !important;
+}
+#acc_arches_override .br_AAPA-n5 {
+  border-color: #3a310e !important;
 }
 /*# sourceMappingURL=maps/acc_arches_override.css.map */
