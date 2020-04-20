@@ -160,44 +160,24 @@ var buildbrand = function(base, brand, framework) {
 			}
 		)
 	);
-	switch (brand) {
-		case "cvquality":
-			construct
-				.pipe(header("/** Built With CVQuality Branding **/"))
-				.pipe(headerFromFile("/setup/__brand.cvquality.scss"));
-			break;
-		case "acc":
-			construct
-				.pipe(header("/** Built With ACC Branding **/"))
-				.pipe(headerFromFile("/setup/__brand.acc.scss"));
-			break;
-		case "jacc":
-			construct
-				.pipe(header("/** Built With JACC Branding **/"))
-				.pipe(headerFromFile("/setup/__brand.jacc.scss"));
-			break;
-		case "cardiosmart":
-			construct
-				.pipe(header("/** Built With CardioSmart Branding **/"))
-				.pipe(headerFromFile("/setup/__brand.cardiosmart.scss"));
-			break;
-		case "temp":
-			construct
-				.pipe(header("/** Built With Temp Branding **/"))
-				.pipe(headerFromFile("/setup/__brand.temp.scss"));
-			break;
-		default:
-			construct
-				.pipe(
-					header(
-						"/** Built With Base Branding <%= pkg.version %> **/",
-						{
-							pkg: pkg
-						}
-					)
-				)
-				.pipe(headerFromFile("/setup/__brand.none.scss"));
-			break;
+
+	if (brand == "color") {
+		construct
+			.pipe(
+				header("/** Built With Base Branding <%= pkg.version %> **/", {
+					pkg: pkg
+				})
+			)
+			.pipe(headerFromFile("/setup/__brand.none.scss"));
+	} else {
+		construct
+			.pipe(header("/** Built With " + brand + " Branding **/"))
+			.pipe(headerFromFile("/setup/__brand." + brand + ".scss"))
+			.pipe(
+				header("/** Built With Base Branding <%= pkg.version %> **/", {
+					pkg: pkg
+				})
+			);
 	}
 	switch (framework) {
 		case "boot":
@@ -654,6 +634,9 @@ gulp.task(
 		},
 		function() {
 			return run("npm run boot_acc").exec();
+		},
+		function () {
+			return run("npm run zurb_acc").exec();
 		}
 	)
 );
@@ -740,7 +723,9 @@ gulp.task(
 );
 
 gulp.task("md", gulp.series("markdown", "styleguide"));
-gulp.task("default",gulp.series(
+gulp.task(
+	"default",
+	gulp.series(
 		"build-acc",
 		"build-cvquality",
 		"build-cardiosmart",
@@ -748,6 +733,5 @@ gulp.task("default",gulp.series(
 		"build-virtual",
 		"build-colors",
 		"build-layout_demo"
-
 	)
 );
