@@ -1,0 +1,251 @@
+/** Test 7 **/
+/**
+ * arches - Global style system focused on utility classes
+ * @version v1.2.0
+ * @link https://github.com/ACC-Style/Arches/
+ */
+/**  Pre Header - modular scale default break points utility    *********************************/
+/**  Version: 1.1.0    *********************************/
+// Consider using https://www.purgecss.com/ to remove styles not used in the project.
+$debug-trace: false !default;
+$name-mode: 'SHORT' !default; // $name-mode: "SHORT","LONG","ALL"
+$ms-base: 1rem !default; // needs to be in rem's
+$colors: ();
+$grays: ();
+$theme-palette: ();
+@import 'helpers/helpers';
+@import 'vendor/modular-scale';
+@import 'setup/config/utility-css.vars';
+@import 'helpers/breakpoint';
+%font-awesome-pro {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 900;
+}
+
+/**Set Active Class**/ 
+ $active-class-name: 'active';
+
+/** Utility Class Built on top of Bootstrap ^4.4.1 **/ 
+@debug "brand NONE added theme accent "+ map-get($map: $theme-palette, $key: accent );/** Built With Base Branding 1.2.0 **//**  Default Brands    *********************************/
+/**  Colors  **/
+
+@import 'setup/config/colors';
+/**  Fonts  **/
+@import 'setup/config/fonts';
+/**  Textures  **/
+@import 'setup/config/textures';
+
+/**  Logos  **/
+@import 'setup/config/logo';
+/*Bootstrap Framework Setup Files.*/
+
+/*!
+ * Bootstrap v4.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import '../../node_modules/bootstrap/scss/functions';
+@import 'setup/config/__config.boot';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/root';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/images';
+@import '../../node_modules/bootstrap/scss/code';
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/tables';
+@import '../../node_modules/bootstrap/scss/forms';
+@import '../../node_modules/bootstrap/scss/buttons';
+@import '../../node_modules/bootstrap/scss/transitions';
+@import '../../node_modules/bootstrap/scss/dropdown';
+@import '../../node_modules/bootstrap/scss/button-group';
+@import '../../node_modules/bootstrap/scss/input-group';
+@import '../../node_modules/bootstrap/scss/custom-forms';
+@import '../../node_modules/bootstrap/scss/nav';
+@import '../../node_modules/bootstrap/scss/navbar';
+@import '../../node_modules/bootstrap/scss/card';
+@import '../../node_modules/bootstrap/scss/breadcrumb';
+@import '../../node_modules/bootstrap/scss/pagination';
+@import '../../node_modules/bootstrap/scss/badge';
+@import '../../node_modules/bootstrap/scss/jumbotron';
+@import '../../node_modules/bootstrap/scss/alert';
+@import '../../node_modules/bootstrap/scss/progress';
+@import '../../node_modules/bootstrap/scss/media';
+@import '../../node_modules/bootstrap/scss/list-group';
+@import '../../node_modules/bootstrap/scss/close';
+@import '../../node_modules/bootstrap/scss/toasts';
+@import '../../node_modules/bootstrap/scss/modal';
+@import '../../node_modules/bootstrap/scss/tooltip';
+@import '../../node_modules/bootstrap/scss/popover';
+@import '../../node_modules/bootstrap/scss/carousel';
+@import '../../node_modules/bootstrap/scss/spinners';
+// @import "utilities";
+// @import "print";
+.brand-header {
+    height: 160px;
+    width: 100%;
+    background-color: aliceblue;
+    background: url('../img/temp/header.backgroundTexture.sm.png') no-repeat center top;
+}
+
+.video-header {
+    height: 100px;
+    width: 100%;
+}
+@media #{$medium-up} {
+    .brand-header {
+        height: 160px;
+        width: 100%;
+        background-color: aliceblue;
+        background: url('../img/temp/header.mainLogo.md.png') no-repeat 4% top,
+            url('../img/temp/header.date.md.png') no-repeat 98% top,
+            url('../img/temp/header.heart.md.png') no-repeat 1% top,
+            url('../img/temp/header.backgroundTexture.png') no-repeat center top;
+    }
+    .video-header {
+        height: 140px;
+    }
+}
+@media #{$xlarge-up} {
+    .brand-header {
+        height: 240px;
+        width: 100%;
+        background-color: aliceblue;
+        background: url('../img/temp/header.mainLogo.lg.png') no-repeat 4% top,
+            url('../img/temp/header.date.lg.png') no-repeat 98% top,
+            url('../img/temp/header.heart.lg.png') no-repeat 1% top,
+            url('../img/temp/header.backgroundTexture.png') no-repeat center top;
+    }
+    .video-header {
+        height: 160px;
+    }
+}
+.template-x_3up {
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+}
+
+.Education_video {
+    background: url('../img/temp/videoGroup/education.video.png');
+}
+
+.Education_video-nolabel {
+    background: url('../img/temp/videoGroup/education.noLabelVideo.png');
+}
+
+.education_header {
+    background: url('../img/temp/videoGroup/education.label.png') right center no-repeat,
+        url('../img/temp/videoGroup/education.headerGraphic.png') left top no-repeat;
+    background-size: contain, cover;
+}
+
+.HotTopic_video {
+    background: url('../img/temp/videoGroup/hotTopic.video.png');
+}
+
+.HotTopic_video-nolabel {
+    background: url('../img/temp/videoGroup/hotTopic.noLabelVideo.png');
+}
+
+.hotTopic_header {
+    background: url('../img/temp/videoGroup/hotTopic.label.png') right center no-repeat,
+        url('../img/temp/videoGroup/hotTopic.headerGraphic.png') left top no-repeat;
+    background-size: contain, cover;
+}
+
+.Global_video {
+    background: url('../img/temp/videoGroup/global.video.png');
+}
+
+.Global_video-nolabel {
+    background: url('../img/temp/videoGroup/global.noLabelVideo.png');
+}
+
+.global_header {
+    background: url('../img/temp/videoGroup/global.label.png') right center no-repeat,
+        url('../img/temp/videoGroup/global.headerGraphic.png') left top no-repeat;
+    background-size: contain, cover;
+}
+
+.Anchor_video {
+    background: url('../img/temp/videoGroup/anchor.video.png');
+}
+
+.Anchor_video-nolabel {
+    background: url('../img/temp/videoGroup/anchor.noLabelVideo.png');
+}
+
+.anchor_header {
+    background: url('../img/temp/videoGroup/anchor.label.png') right center no-repeat,
+        url('../img/temp/videoGroup/anchor.headerGraphic.png') left top no-repeat;
+    background-size: contain, cover;
+}
+
+.Fuster_video {
+    background: url('../img/temp/videoGroup/fuster.video.png');
+}
+
+.Fuster_video-nolabel {
+    background: url('../img/temp/videoGroup/fuster.noLabelVideo.png');
+}
+
+.fuster_header {
+    background: url('../img/temp/videoGroup/fuster.label.png') right center no-repeat,
+        url('../img/temp/videoGroup/fuster.headerGraphic.png') left top no-repeat;
+    background-size: contain, cover;
+}
+
+.locked_graphic {
+    filter: grayscale(1) opacity(0.5) brightness(1.1);
+}
+
+.Fuster_video {
+    background: url('../img/temp/videoGroup/convocation.video.png');
+}
+
+.Convocation_video {
+    background: url('../img/temp/videoGroup/convocation.video.png');
+}
+@import "base/table.boot";
+@import "styleguide/__basic-html.boot";
+@import "components/boot/_boot.carousel.override";
+@import "components/boot/_boot.navbar.override";
+@import "components/boot/_boot.collapser.icon";
+@import 'components/virtual/virtual.boot._navbar.override';
+/*
+	Foundation
+
+	Combination of UCs and Base Components from the Framework can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to Foudations Components with the Utiltity Classes. 
+
+	Weight: 1000
+
+	Styleguide  Recipes Zurb
+
+*/
+/* Styleguide recipes.zurb */
+/* Styleguide Recipes.010 */
+@import 'recipes/zurb/zurb.quicklinks';
+@import 'recipes/zurb/zurb.cards';
+@import 'recipes/zurb/zurb.button_group';
+@import 'recipes/zurb/zurb.grid_button_splash';
+@import 'recipes/zurb/zurb.accordians';
+/*
+	Bootstrap Recipes
+
+	Combination of UCs and Base Components from the Bootstrap can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to the Bootstrap Components with the Utiltity Classes. 
+
+	Weight: -1
+
+Styleguide  Recipes Bootstrap.Intro
+
+*/
+
+@import "recipes/boot/_boot.basic_nav";

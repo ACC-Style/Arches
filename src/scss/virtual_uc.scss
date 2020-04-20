@@ -1,0 +1,81 @@
+/** Test 7 **/
+/**
+ * arches - Global style system focused on utility classes
+ * @version v1.2.0
+ * @link https://github.com/ACC-Style/Arches/
+ */
+/**  Pre Header - modular scale default break points utility    *********************************/
+/**  Version: 1.1.0    *********************************/
+// Consider using https://www.purgecss.com/ to remove styles not used in the project.
+$debug-trace: false !default;
+$name-mode: 'SHORT' !default; // $name-mode: "SHORT","LONG","ALL"
+$ms-base: 1rem !default; // needs to be in rem's
+$colors: ();
+$grays: ();
+$theme-palette: ();
+@import 'helpers/helpers';
+@import 'vendor/modular-scale';
+@import 'setup/config/utility-css.vars';
+@import 'helpers/breakpoint';
+%font-awesome-pro {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 900;
+}
+
+/**Set Active Class**/ 
+ $active-class-name: 'active';
+
+/** No Framework **/ 
+@debug "brand NONE added theme accent "+ map-get($map: $theme-palette, $key: accent );/** Built With Base Branding 1.2.0 **//**  Default Brands    *********************************/
+/**  Colors  **/
+
+@import 'setup/config/colors';
+/**  Fonts  **/
+@import 'setup/config/fonts';
+/**  Textures  **/
+@import 'setup/config/textures';
+
+/**  Logos  **/
+@import 'setup/config/logo';
+/** Base UC File **//*
+	Recipes
+
+	Combination of UCs can make complex and rich UI elements.  Here is a collection of curated UI that can be used in projects by just following these patterns.
+
+	Weight: 900
+
+	Styleguide Recipes
+
+*/
+
+/* Nav Recipes.00x */
+@import "recipes/base/mobile-nav";
+
+/* Nav Recipes.04x */
+@import "recipes/base/web-footer";
+
+/* Nav Recipes.04x */
+@import "recipes/base/quicklinks";
+
+/* content Recipes.100 */
+@import "recipes/base/ordered-cards.scss";
+
+/* content Recipes.250 */
+@import "recipes/base/GLSEARCH-search-result";
+// ACC Design Alterations
+@import "base/base";
+@import "components/logo";
+
+@import "components/interactive-extras";
+
+@import "styleguide/styleguide";
+@import "styleguide/__basic-html.base";
+@import "containers/containers";
+/**  Utility Classes    *********************************/
+@import "utility-css/utility-css";

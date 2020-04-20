@@ -3,8 +3,8 @@
 	"version": "1.2.0",
 	"description": "Global style system focused on utility classes",
 	"main": "index.js",
-	"bootstrapVersion":"^4.4.1",
-	"foundationVersion":"^6.6.1",
+	"bootstrapVersion": "^4.4.1",
+	"foundationVersion": "^6.6.1",
 	"scripts": {
 		"index": "kss --config kss-config.json",
 		"uc": "kss --config kss-config_uc_only.json",
@@ -13,9 +13,10 @@
 		"boot_acc": "kss --config kss-config_boot_acc.json",
 		"boot_jacc": "kss --config kss-config_boot_jacc.json",
 		"boot_cvquality": "kss --config kss-config_boot_cvquality.json",
+		"boot_virtual": "kss --config kss-config_boot_virtual.json",
 		"layout_demo": "kss --config kss-config_layout_demo.json",
 		"color_codes": "kss --config kss-config_color_codes.json",
-		"_all": "kss --config kss-config.json && kss --config kss-config_uc_only.json && kss --config kss-config_zurb_acc.json  && kss --config kss-config_boot_cvquality.json && kss --config kss-config_layout_demo.json && kss --config kss-config_color_codes.json && kss --config kss-config_boot_cardiosmart.json"
+		"_all": "kss --config kss-config.json && kss --config kss-config_uc_only.json && kss --config kss-config_zurb_acc.json  && kss --config kss-config_boot_cvquality.json && kss --config kss-config_layout_demo.json && kss --config kss-config_color_codes.json && kss --config kss-config_boot_cardiosmart.json && kss --config kss-config_zurb_virtual.json "
 	},
 	"repository": {
 		"type": "git",
@@ -50,12 +51,12 @@
 	},
 	"homepage": "https://github.com/ACC-Style/Arches/",
 	"devDependencies": {
-		"@fortawesome/fontawesome-pro": "^5.12.0",
-		"autoprefixer": "^9.7.4",
+		"@fortawesome/fontawesome-pro": "^5.13.0",
+		"autoprefixer": "^9.7.6",
 		"bootstrap": "^4.4.1",
 		"css-declaration-sorter": "^4.0.1",
 		"cssnano": "^4.1.10",
-		"foundation-sites": "^6.6.1",
+		"foundation-sites": "^6.6.3",
 		"fs": "0.0.1-security",
 		"gulp": "^4.0.2",
 		"gulp-clean": "^0.4.0",
@@ -68,15 +69,15 @@
 		"gulp-rename": "^1.4.0",
 		"gulp-run": "^1.7.1",
 		"gulp-sourcemaps": "^2.6.5",
-		"jquery": "^3.4.1",
-		"kss": "^3.0.0-beta.25",
+		"jquery": "^3.5.0",
+		"kss": "^3.0.1",
 		"merge-stream": "^2.0.0",
 		"michelangelo": "^0.8.0",
 		"npm-run": "^5.0.1",
 		"pixrem": "^5.0.0",
 		"popper.js": "^1.16.1",
 		"postcss-normalize": "^8.0.1",
-		"what-input": "^5.2.6"
+		"what-input": "^5.2.7"
 	},
 	"dependencies": {
 		"clean-css": "^4.2.3",
@@ -87,11 +88,11 @@
 		"lodash": ">=4.17.13",
 		"lodash.template": ">=4.5.0",
 		"mime": ">=1.4.1",
-		"mocha": "^6.2.2",
-		"npm": "^6.13.4",
+		"mocha": "^6.2.3",
+		"npm": "^6.14.4",
 		"postcss-discard-duplicates": "^4.0.2",
 		"postcss-merge-rules": "^4.0.3",
-		"request": ">=2.68.0",
+		"request": "^2.88.2",
 		"tunnel-agent": ">=0.6.0"
 	}
 }

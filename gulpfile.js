@@ -452,18 +452,6 @@ gulp.task("styleguide", function() {
 });
 
 gulp.task(
-	"build",
-	gulp.series(
-		"construct",
-		"concat",
-		"style",
-		"dist",
-		"copy-to-styleguide",
-		"markdown",
-		"styleguide"
-	)
-);
-gulp.task(
 	"build-cvquality",
 	gulp.series(
 		function() {
@@ -752,4 +740,14 @@ gulp.task(
 );
 
 gulp.task("md", gulp.series("markdown", "styleguide"));
-gulp.task("default", gulp.series("build", "watch"));
+gulp.task("default",gulp.series(
+		"build-acc",
+		"build-cvquality",
+		"build-cardiosmart",
+		"build-jacc",
+		"build-virtual",
+		"build-colors",
+		"build-layout_demo"
+
+	)
+);

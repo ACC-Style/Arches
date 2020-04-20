@@ -27,10 +27,10 @@ $theme-palette: ();
 	font-weight: 900;
 }
 /** Start of BRANDINGBUILD 0 **/
-/**Set Active Class**/ 
- $active-class-name: 'is-active';
+/**Set Active Class**/
+$active-class-name: 'is-active';
 
-/** Utility Class Built on top of Zurb Foundation ^6.6.1  **/ 
+/** Utility Class Built on top of Zurb Foundation ^6.6.1  **/
 /**  ACC Brands    *********************************/
 $teal: #198dae;
 $green-blue: #16a385;
@@ -75,28 +75,27 @@ $theme-palette: map-merge(
 		accent: $green-blue,
 		info: $alt-grey,
 		highlight: $purple,
-		acc: $acc-blue
+		acc: $acc-blue,
 	)
 );
-@debug 'brand ACC added theme accent ' + map-get($map: $theme-palette, $key: accent);
 
 $fonts: (
 	slab: (
 		name: 'Roboto Slab',
-		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"'
+		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
 	),
 	display: (
 		name: 'Maven Pro',
-		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif'
+		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif',
 	),
 	copy: (
 		name: 'Muli',
-		stack: '"Muli","Open Sans","system",sans-serif'
+		stack: '"Muli","Open Sans","system",sans-serif',
 	),
 	ui: (
 		name: 'Open Sans',
-		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-	)
+		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+	),
 );
 
 // Reset Values of Utlity-css.vars.scss
@@ -143,7 +142,7 @@ $h6-font-size: map-deep-get($value-to-unit, font-size, 0);
 $font-size-base: $base-font-size-rem; // Assumes the browser default, typically `16px`
 $font-size-lg: map-deep-get($value-to-unit, font-size, 2);
 $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
-/** Built With ACC Branding **//**  Default Brands    *********************************/
+/** Built With ACC Branding **/ /**  Default Brands    *********************************/
 /**  Colors  **/
 
 @import 'setup/config/colors';
@@ -159,15 +158,15 @@ $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
 @import 'setup/config/__config.zurb';
 @import '../../node_modules/foundation-sites/scss/foundation.scss';
 @include foundation-everything();
-@import "components/zurb/table.zurb.override";
-@import "components/zurb/zurb.buttons.override.scss";
-@import "components/zurb/zurb.close-button.override";
-@import "components/zurb/zurb.tabs.override";
-@import "components/zurb/zurb.questions";
-@import "components/zurb/zurb.pagination.override";
-@import "components/zurb/zurb.breadcrumbs";
-@import "styleguide/__basic-html.zurb";
-@import "components/acc/_acc.boot._navbar.override";
+@import 'components/zurb/table.zurb.override';
+@import 'components/zurb/zurb.buttons.override.scss';
+@import 'components/zurb/zurb.close-button.override';
+@import 'components/zurb/zurb.tabs.override';
+@import 'components/zurb/zurb.questions';
+@import 'components/zurb/zurb.pagination.override';
+@import 'components/zurb/zurb.breadcrumbs';
+@import 'styleguide/__basic-html.zurb';
+@import 'components/acc/_acc.boot._navbar.override';
 /*
 	ACC.org Recipes
 
@@ -178,7 +177,7 @@ $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
 	Styleguide Recipes ACC
 
 */
-@import "recipes/acc/_acc._footer";
+@import 'recipes/acc/_acc._footer';
 
 /*
 	Foundation
@@ -192,8 +191,8 @@ $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
 */
 /* Styleguide recipes.zurb */
 /* Styleguide Recipes.010 */
-@import "recipes/zurb/zurb.quicklinks";
-@import "recipes/zurb/zurb.cards";
-@import "recipes/zurb/zurb.button_group";
-@import "recipes/zurb/zurb.grid_button_splash";
-@import "recipes/zurb/zurb.accordians";
+@import 'recipes/zurb/zurb.quicklinks';
+@import 'recipes/zurb/zurb.cards';
+@import 'recipes/zurb/zurb.button_group';
+@import 'recipes/zurb/zurb.grid_button_splash';
+@import 'recipes/zurb/zurb.accordians';

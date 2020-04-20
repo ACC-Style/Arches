@@ -54,3 +54,16 @@
          }
        )
      );
+
+     
+## create new kss-config file
+  * Base File: "kss-config_boot_[new project].json"
+    * Alter all path pionts in the docuemnt. 
+    * "title"
+    * "mask"
+    * "destination"
+    * "homepage"
+    * "css"
+    * "site_nav"
+
+## create new script in package.json
