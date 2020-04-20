@@ -312,108 +312,6 @@ gulp.task("markdown", function() {
 		.pipe(header(fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md")))
 		.pipe(gulp.dest(SOURCE.MD));
 });
-
-gulp.task("construct", function() {
-	var base = gulp.src(PATHS.SCSS + "/setup/__globalshame.scss");
-	var baseUC = constructUCStyleSheet();
-	var uc_temp = buildbrand(baseUC, "temp", "").pipe(rename("uc_temp.scss"));
-	var uc_acc = buildbrand(baseUC, "acc", "").pipe(rename("uc_acc.scss"));
-	var uc_jacc = buildbrand(baseUC, "jacc", "").pipe(rename("uc_jacc.scss"));
-	var uc_cardiosmart = buildbrand(baseUC, "cardiosmart", "").pipe(
-		rename("uc_cardiosmart.scss")
-	);
-	var uc_cvquality = buildbrand(baseUC, "cvquality", "").pipe(
-		rename("uc_cvquality.scss")
-	);
-	var colors = base
-		.pipe(clone())
-		.pipe(headerFromFile("/styleguide/_color-codes.scss"));
-	colors = buildbrand(colors, "", "").pipe(rename("color_codes.scss"));
-	var zurb_acc = base
-		.pipe(clone())
-		.pipe(rename("zurb_acc.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.zurb.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.acc.scss"))
-		.pipe(headerFromFile("/components/__components.acc.scss"))
-		.pipe(headerFromFile("/components/__components.zurb.scss"))
-		.pipe(headerFromFile("/base/__base.acc.scss"));
-	zurb_acc = buildbrand(zurb_acc, "acc", "zurb");
-	var boot_acc = base
-		.pipe(clone())
-		.pipe(rename("boot_acc.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.acc.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.boot.scss"))
-		.pipe(headerFromFile("/components/__components.acc.scss"))
-		.pipe(headerFromFile("/components/__components.boot.scss"))
-		.pipe(headerFromFile("/base/__base.acc.scss"));
-	boot_acc = buildbrand(boot_acc, "acc", "boot");
-	var zurb_cardiosmart = base
-		.pipe(clone())
-		.pipe(rename("zurb_cardiosmart.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.zurb.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.cardiosmart.scss"))
-		.pipe(headerFromFile("/components/__components.cardiossmart.scss"))
-		.pipe(headerFromFile("/components/__components.zurb.scss"))
-		.pipe(headerFromFile("/base/__base.cardiosmart.scss"));
-	zurb_cardiosmart = buildbrand(zurb_cardiosmart, "cardiosmart", "zurb");
-	var boot_cardiosmart = base
-		.pipe(clone())
-		.pipe(rename("boot_cardiosmart.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.cardiosmart.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.boot.scss"))
-		.pipe(headerFromFile("/components/__components.cardiossmart.scss"))
-		.pipe(headerFromFile("/components/__components.boot.scss"))
-		.pipe(headerFromFile("/base/__base.cardiosmart.scss"));
-	boot_cardiosmart = buildbrand(boot_cardiosmart, "cardiosmart", "boot");
-	var boot_cvquality = base
-		.pipe(clone())
-		.pipe(rename("boot_cvquality.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.cvquality.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.boot.scss"))
-		.pipe(headerFromFile("/components/__components.cvquality.scss"))
-		.pipe(headerFromFile("/components/__components.boot.scss"))
-		.pipe(headerFromFile("/base/__base.cvquality.scss"));
-	boot_cvquality = buildbrand(boot_cvquality, "cvquality", "boot");
-	//jacc bootstrap
-	var boot_jacc = base
-		.pipe(clone())
-		.pipe(rename("boot_jacc.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.jacc.scss"))
-		.pipe(headerFromFile("/recipes/__recipes.boot.scss"))
-		.pipe(headerFromFile("/components/__components.jacc.scss"))
-		.pipe(headerFromFile("/components/__components.boot.scss"))
-		.pipe(headerFromFile("/base/__base.jacc.scss"));
-	boot_jacc = buildbrand(boot_jacc, "temp", "boot");
-	// temp branding
-	var boot_temp = base
-		.pipe(clone())
-		.pipe(rename("boot_temp.scss"))
-		.pipe(headerFromFile("/components/__components.boot.scss"))
-		.pipe(headerFromFile("/base/__base.temp.scss"));
-	boot_temp = buildbrand(boot_temp, "temp", "boot");
-	return merge(
-		zurb_acc,
-		boot_acc,
-		uc_acc,
-		uc_temp,
-		boot_temp,
-		boot_jacc,
-		uc_jacc,
-		zurb_cardiosmart,
-		boot_cardiosmart,
-		uc_cardiosmart,
-		uc_cvquality,
-		boot_cvquality,
-		colors
-	).pipe(gulp.dest(PATHS.SCSS));
-});
-gulp.task("concat", function() {
-	var uc = gulp.src(PATHS.SCSS + "/uc_jacc.scss");
-	var boot = gulp.src(PATHS.SCSS + "/boot_jacc.scss");
-	return merge(uc, boot)
-		.pipe(concat("combo_jacc.scss"))
-		.pipe(gulp.dest(PATHS.SCSS));
-});
 gulp.task("watch", function() {
 	console.log("Gulp Watch Tasks");
 	console.log(
@@ -430,7 +328,13 @@ gulp.task("styleguide", function() {
 		"npm run index && npm run zurb_acc && npm run boot_acc && npm run boot_jacc && npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run boot_cardiosmart"
 	).exec();
 });
-
+var concatCSS = function(brand,framework) {
+	var uc = gulp.src(PATHS.CSS + "/"+brand+"_uc.css");
+	var boot = gulp.src(PATHS.CSS + "/"+brand+"_"+framework+".css");
+	return merge(uc, boot)
+		.pipe(concat(""+brand+"_"+framework+"_combo.css"))
+		.pipe(gulp.dest(PATHS.CSS));
+};
 gulp.task(
 	"build-cvquality",
 	gulp.series(
@@ -445,6 +349,9 @@ gulp.task(
 				.pipe(header("/** Test 7 **/\n"))
 				.pipe(gulp.dest(PATHS.SCSS));
 			return runSass(brand);
+		},
+		function() {
+			return concatCSS("cvquality", "boot");
 		},
 		"dist",
 		"copy-to-styleguide",
@@ -485,6 +392,9 @@ gulp.task(
 				.pipe(gulp.dest(PATHS.SCSS));
 			return runSass(brand);
 		},
+		function() {
+			return concatCSS("cardiosmart", "boot");
+		},
 		"dist",
 		"copy-to-styleguide",
 		function() {
@@ -524,6 +434,9 @@ gulp.task(
 				.pipe(gulp.dest(PATHS.SCSS));
 			return runSass(brand);
 		},
+		function() {
+			return concatCSS("jacc", "boot");
+		},
 		"dist",
 		"copy-to-styleguide",
 		function() {
@@ -542,7 +455,6 @@ gulp.task(
 				)
 				.pipe(gulp.dest(SOURCE.MD));
 		},
-		"concat",
 		function() {
 			return run("npm run boot_jacc").exec();
 		}
@@ -563,6 +475,8 @@ gulp.task(
 				.pipe(header("/** Test 7 **/\n"))
 				.pipe(gulp.dest(PATHS.SCSS));
 			return runSass(brand);
+		},function() {
+			return concatCSS("virtual", "boot");
 		},
 		"dist",
 		"copy-to-styleguide",
@@ -605,6 +519,10 @@ gulp.task(
 				.pipe(header("\n"))
 				.pipe(gulp.dest(PATHS.SCSS));
 			return runSass(brand);
+		},function() {
+			return concatCSS("acc", "boot");
+		},function() {
+			return concatCSS("acc", "zurb");
 		},
 		"dist",
 		"copy-to-styleguide",

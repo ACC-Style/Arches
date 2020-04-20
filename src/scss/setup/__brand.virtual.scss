@@ -14,11 +14,15 @@ $white: rgb(255, 255, 255);
 $black: rgb(19, 18, 18);
 $real-black: #000;
 
+// COLORS
+$cyan: #007dc2;
+$sea-green: #108273;
+$orange-highlihgt: #d46f41;
+$golden: #df971f;
 // Currently Un used in the design but part of bootstrap.
 $indigo: #6610f2 !default;
 $pink: #e83e8c !default;
 $yellow: #ffc107 !default;
-$cyan: #17a2b8 !default;
 
 $gray-100: mix($white, $black, 10%);
 $gray-200: mix($white, $black, 20%);
@@ -33,19 +37,18 @@ $gray-900: mix($white, $black, 90%);
 $theme-palette: map-merge(
     $theme-palette,
     (
-        primary: $teal,
-        secondary: $dark-grey,
+        primary: $acc-blue,
+        secondary: $cyan,
         success: $green,
         warning: $orange,
         alert: $red,
         navigation: $blue,
-        accent: $green-blue,
-        info: $alt-grey,
-        highlight: $purple,
+        accent: $sea-green,
+        info: $golden,
+        highlight: $orange-highlihgt,
         acc: $acc-blue,
     )
 );
-
 
 $fonts: (
     slab: (
@@ -53,8 +56,8 @@ $fonts: (
         stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
     ),
     display: (
-        name: 'Maven Pro',
-        stack: '"Maven Pro","Muli","Open Sans","system",sans-serif',
+        name: 'Libre Franklin',
+        stack: '"Libre Franklin","Muli","Open Sans","system",sans-serif',
     ),
     copy: (
         name: 'Muli',
