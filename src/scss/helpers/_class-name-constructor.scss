@@ -1,58 +1,51 @@
-@function class-name-constructor($key, $unit, $breakpoint: "", $state: "") {
-	$names: "";
+@function class-name-constructor($key, $unit, $breakpoint: '', $state: '') {
+	$names: '';
 	$short-name: get-css-shortname($key);
 	$long-name: get-css-longname($key);
-	$unit: "" !default;
-	$unit-seperator: "";
-	$state-long-name: "";
-	$state-short-name: "";
-	$state-psudo: "";
+	$unit: '' !default;
+	$unit-seperator: '';
+	$state-long-name: '';
+	$state-short-name: '';
+	$state-psudo: '';
 
-	@if ($state == "hover") {
-		$state-long-name: get-css-longname(hover);
+	@if ($state == 'hover') {
 		$state-short-name: get-css-shortname(hover);
-		$state-psudo: ":hover";
+		$state-psudo: ':hover';
 	}
-	@if ($state == "visited") {
-		$state-long-name: get-css-longname(visited);
+	@if ($state == 'visited') {
 		$state-short-name: get-css-shortname(visited);
-		$state-psudo: ":visited";
+		$state-psudo: ':visited';
 	}
-	@if ($state == "active") {
-		$state-long-name: get-css-longname(active);
+	@if ($state == 'active') {
 		$state-short-name: get-css-shortname(active);
-		$state-psudo: ":active";
+		$state-psudo: ':active';
 	}
-	@if ($state == "is-active") {
-		$state-long-name: get-css-longname(is-active);
-		$state-short-name: get-css-shortname(is-active);
+	@if ($state == 'is-active') {
+		$state-short-name: '#{$active-class-name}>.a\\3A ';
 	}
-	@if ($state == "is-active-self") {
-		$state-long-name: get-css-longname(is-active-self);
-		$state-short-name: get-css-shortname(is-active-self);
+	@if ($state == 'is-active-self') {
+		$state-short-name: '#{$active-class-name}.a\\3A ';
 	}
-	@if ($state != "") {
+	@if ($state != '') {
 		$short-name: str-insert(
 			$string: $short-name,
 			$insert: $state-short-name,
-			$index: 2
+			$index: 2,
 		);
 		$long-name: str-insert(
 			$string: $long-name,
 			$insert: $state-long-name,
-			$index: 2
+			$index: 2,
 		);
 	}
-	@if ($unit != "") {
-		$unit-seperator: "_";
+	@if ($unit != '') {
+		$unit-seperator: '_';
 	}
-	@if ($name-mode == "ALL") {
+	@if ($name-mode == 'ALL') {
 		$names: #{$long-name}#{$unit-seperator}#{$unit}#{$breakpoint}#{$state-psudo},
 			#{$short-name}#{$unit-seperator}#{$unit}#{$breakpoint}#{$state-psudo};
-	} @else if ($name-mode == "LONG") {
-		$names: #{$long-name}#{$unit-seperator}#{$unit}#{$breakpoint}#{$state-psudo};
-	} @else if ($name-mode == "SHORT") {
-		@if ($short-name == ".") {
+	} @else if ($name-mode == 'SHORT') {
+		@if ($short-name == '.') {
 			$names: #{$short-name}#{$unit}#{$breakpoint}#{$state-psudo};
 		} @else {
 			$names: #{$short-name}#{$unit-seperator}#{$unit}#{$breakpoint}#{$state-psudo};

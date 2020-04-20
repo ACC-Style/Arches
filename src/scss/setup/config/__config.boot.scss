@@ -4,9 +4,6 @@
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 // Set the active state for this framework
-$active-class-name: 'active';
-$style-definition: map-deep-set($style-definition, 'is-active' 'short-name', '#{$active-class-name}>.a\\3A ');
-$style-definition: map-deep-set($style-definition, 'is-active-self' 'short-name', '#{$active-class-name}.a\\3A ');
 // Color system
 
 $white: #fff !default;
@@ -33,7 +30,7 @@ $grays: map-merge(
 		'600': $gray-600,
 		'700': $gray-700,
 		'800': $gray-800,
-		'900': $gray-900
+		'900': $gray-900,
 	),
 	$grays
 );
@@ -65,7 +62,7 @@ $colors: map-merge(
 		'cyan': $cyan,
 		'white': $white,
 		'gray': $gray-600,
-		'gray-dark': $gray-800
+		'gray-dark': $gray-800,
 	),
 	$colors
 );
@@ -90,7 +87,7 @@ $theme-colors: map-merge(
 		'warning': map-get($theme-palette, warning),
 		'danger': map-get($theme-palette, alert),
 		'light': $light,
-		'dark': $dark
+		'dark': $dark,
 	),
 	$theme-colors
 );
@@ -139,7 +136,7 @@ $spacers: map-merge(
 		2: map-deep-get($value-to-unit, size, 2),
 		3: map-deep-get($value-to-unit, size, 3),
 		4: map-deep-get($value-to-unit, size, 4),
-		5: map-deep-get($value-to-unit, size, 5)
+		5: map-deep-get($value-to-unit, size, 5),
 	),
 	$spacers
 );
@@ -153,7 +150,7 @@ $sizes: map-merge(
 		50: 50%,
 		75: 75%,
 		100: 100%,
-		auto: auto
+		auto: auto,
 	),
 	$sizes
 );
@@ -192,7 +189,7 @@ $grid-breakpoints: (
 	sm: map-get($breakpoints, sm),
 	md: map-get($breakpoints, md),
 	lg: map-get($breakpoints, lg),
-	xl: map-get($breakpoints, xl)
+	xl: map-get($breakpoints, xl),
 );
 
 // Grid containers
@@ -203,7 +200,7 @@ $container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1140px
+	xl: 1140px,
 );
 
 // Grid columns
@@ -646,7 +643,7 @@ $custom-file-box-shadow: $input-box-shadow !default;
 $custom-file-button-color: $custom-file-color !default;
 $custom-file-button-bg: $input-group-addon-bg !default;
 $custom-file-text: (
-	en: 'Browse'
+	en: 'Browse',
 ) !default;
 
 // Form validation
@@ -675,12 +672,12 @@ $form-validation-states: map-merge(
 	(
 		'valid': (
 			'color': $form-feedback-valid-color,
-			'icon': $form-feedback-icon-valid
+			'icon': $form-feedback-icon-valid,
 		),
 		'invalid': (
 			'color': $form-feedback-invalid-color,
-			'icon': $form-feedback-icon-invalid
-		)
+			'icon': $form-feedback-icon-invalid,
+		),
 	),
 	$form-validation-states
 );
