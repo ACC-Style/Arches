@@ -582,6 +582,45 @@ gulp.task(
 );
 
 gulp.task(
+	"build-virtual",
+	gulp.series(
+		function() {
+			var brand = "virtual";
+			var framework = "boot";
+			var uc = constructUCStyleSheet(brand);
+			uc = buildbrand(uc, brand, "");
+			var base = constructFrameworkStyleSheet(brand, framework);
+			base = buildbrand(base, brand, framework);
+			merge(base, uc)
+				.pipe(header("/** Test 7 **/\n"))
+				.pipe(gulp.dest(PATHS.SCSS));
+			return runSass(brand);
+		},
+		"dist",
+		"copy-to-styleguide",
+		function() {
+			var brand = "virtual";
+			var framework = "boot";
+			var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
+			var base = markdownbuild(base, brand + "_" + framework);
+			return merge(base)
+				.pipe(
+					header(
+						fs.readFileSync(
+							PATHS.MARKDOWN + "markdown_preheader.md",
+							"utf8"
+						)
+					)
+				)
+				.pipe(gulp.dest(SOURCE.MD));
+		},
+		function() {
+			return run("npm run boot_virtual").exec();
+		}
+	)
+);
+
+gulp.task(
 	"build-acc",
 	gulp.series(
 		function() {
