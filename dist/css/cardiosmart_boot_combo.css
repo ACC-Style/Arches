@@ -17,7 +17,11 @@ Gets a color value that fits into the set color patterns for usage in new css.
 
  Styleguide: mixins.get-themecolor
 */
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http]:after, a.link[href^=https]:after, .icon-before:before, a.link:before {
+.icon-after:after, a.link[target=_blank]:after, a.link[href^=http]:after, a.link[href^=https]:after,
+a.link-light[target=_blank]:after,
+a.link-light[href^=http]:after,
+a.link-light[href^=https]:after, .icon-before:before, a.link:before,
+a.link-light:before {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-family: "Font Awesome 5 Pro";
@@ -641,12 +645,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Maven Pro, Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: "Maven Pro","Muli","Open Sans","system",sans-serif;
+  font-weight: 300;
 }
 
 h6 {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h1,
@@ -661,7 +665,7 @@ h6 {
 }
 
 p {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 p,ul,
@@ -670,7 +674,7 @@ ol {
 }
 
 body {
-  font-family: Muli, Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;
+  font-family: "Muli","Open Sans","system",sans-serif;
   font-size: 16px;
   font-size: 1rem;
 }
@@ -724,7 +728,7 @@ form {
 }
 
 label {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 label,input,
@@ -935,7 +939,7 @@ td {
 }
 
 thead {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 tfoot,
@@ -1252,58 +1256,106 @@ Links with the `.link` will auto decorate with an icon of the corresponding file
 
 
 Markup:
+<div class="p_4">
  <a class="link" href="abc.pdf">A link that is a Pdf Document</a><br/>
  <a class="link" href="abc.doc">A link that is a Word Document</a><br/>
  <a class="link" href="https://www.abc.ppt">An External link that is a Power Point Document</a><br/>
  <a class="link" href="tel:1-555-555-5555">1-555-555-5555</a><br/>
  <a class="link" href="mailto:test@abc.org">test@abc.org</a><br/>
- <a class="link" href="xyz.zip">A link that is a Zip Document</a><br/>
+ <a class="link" href="xyz.zip">A link that is a Zip Document</a><br/></div>
+<div class="bg_shade-n3 p_4">
+ <a class="link-light" href="abc.pdf">A link that is a Pdf Document</a><br/>
+ <a class="link-light" href="abc.doc">A link that is a Word Document</a><br/>
+ <a class="link-light" href="https://www.abc.ppt">An External link that is a Power Point Document</a><br/>
+ <a class="link-light" href="tel:1-555-555-5555">1-555-555-5555</a><br/>
+ <a class="link-light" href="mailto:test@abc.org">test@abc.org</a><br/>
+ <a class="link-light" href="xyz.zip">A link that is a Zip Document</a><br/>
+</div>
 
  Styleguide InteractiveExtras.Links
  */
-.icon-before:before, a.link:before {
+.icon-before:before, a.link:before,
+a.link-light:before {
   width: 1.28571429em;
-  margin-right: 0.5em;
+  margin-right: 4px;
+  margin-right: 0.25rem;
   text-align: center;
 }
 
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http]:after, a.link[href^=https]:after {
+.icon-after:after, a.link[target=_blank]:after, a.link[href^=http]:after, a.link[href^=https]:after,
+a.link-light[target=_blank]:after,
+a.link-light[href^=http]:after,
+a.link-light[href^=https]:after {
   width: 1.28571429em;
-  margin-left: 0.5em;
+  margin-left: 4px;
+  margin-left: 0.25rem;
   text-align: center;
 }
 
-a.link[href$=".pdf"]:before {
+.link {
+  color: #5a2d04;
+}
+.link:hover {
+  color: black;
+}
+
+.link-light {
+  color: #f6851d;
+}
+.link-light:hover {
+  color: #fbc595;
+}
+
+a.link[href$=".pdf"]:before,
+a.link-light[href$=".pdf"]:before {
   content: "";
 }
-a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before {
+a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before,
+a.link-light[href$=".doc"]:before,
+a.link-light[href$=".docx"]:before,
+a.link-light[href$=".txt"]:before {
   content: "";
 }
-a.link[href$=".zip"]:before {
+a.link[href$=".zip"]:before,
+a.link-light[href$=".zip"]:before {
   content: "";
 }
-a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before {
+a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before,
+a.link-light[href*=".ppt"]:before,
+a.link-light[href*=".pptx"]:before {
   content: "";
 }
-a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before {
+a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before,
+a.link-light[href$=".csv"]:before,
+a.link-light[href$=".xls"]:before,
+a.link-light[href$=".xlsx"]:before {
   content: "";
 }
-a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before {
+a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
+a.link-light[href$=".mp4"]:before,
+a.link-light[href$=".mov"]:before {
   content: "";
 }
-a.link[target=_blank]:after, a.link[href^=http]:after, a.link[href^=https]:after {
+a.link[target=_blank]:after, a.link[href^=http]:after, a.link[href^=https]:after,
+a.link-light[target=_blank]:after,
+a.link-light[href^=http]:after,
+a.link-light[href^=https]:after {
   content: "";
 }
-a.link[href^="mailto:"]:before {
+a.link[href^="mailto:"]:before,
+a.link-light[href^="mailto:"]:before {
   content: "";
 }
-a.link[href^="tel:"]:before {
+a.link[href^="tel:"]:before,
+a.link-light[href^="tel:"]:before {
   content: "";
 }
-a.link[href^="fax:"]:before {
+a.link[href^="fax:"]:before,
+a.link-light[href^="fax:"]:before {
   content: "";
 }
-a.link:hover {
+a.link:hover,
+a.link-light:hover {
   text-decoration: underline;
 }
 
@@ -1603,31 +1655,31 @@ Styleguide InteractiveExtras.Scrollbar
 */
 /* Let's get this party started */
 .scrollbar-mini::-webkit-scrollbar {
-  width: 4px;
-  width: 0.25rem;
-  height: 5.6px;
-  height: 0.35rem;
+  width: 6.4px;
+  width: 0.4rem;
+  height: 6.4px;
+  height: 0.4rem;
 }
 
 /* Track */
 .scrollbar-mini::-webkit-scrollbar-track {
-  background-color: rgba(0, 34, 60, 0.1);
+  background-color: rgba(55, 55, 55, 0.1);
   box-shadow: inset 1px 1px 4px 0.5px rgba(0, 0, 0, 0.2);
 }
 
 /* Handle */
 .scrollbar-mini::-webkit-scrollbar-thumb {
   border-radius: 1rem;
-  background: #014980;
+  background: #bf5f08;
   box-shadow: inset 1px 1px 4px 0.5px rgba(0, 0, 0, 0.2);
 }
 
 .scrollbar-mini::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(1, 73, 128, 0.1);
+  background: rgba(191, 95, 8, 0.1);
 }
 
 .scrollbar-mini::-webkit-scrollbar-track:window-inactive {
-  background: rgba(0, 34, 60, 0.1);
+  background: rgba(55, 55, 55, 0.1);
 }
 
 /*
@@ -2211,217 +2263,46 @@ The breakdown of the names for UCs follow a structured patter for easy muscle me
 
  Styleguide UC.Anatomy
 */
-/* No styleguide reference. */
 /*
 Short Hand 
 
-<h2>List of CSS Styles matched to the Utility Class Name</h2>
-The breakdown of the names for UCs follow a structured patter for easy muscle memory learning. 
+## List of CSS Styles matched to the Utility Class Name
 
-<table class="font_ui w_100">
-<thead class="font_1">
-<tr>
-<th>Style</th>
-<th>Short Name</th>
-<th>CSS</th>
-<th>Long Nmae</th>
-</tr>
-</thead>
-<tbody class="font_0">
-<tr>
-<td>margin</td>
-<td>'.m'</td>
-<td>'margin'</td>
-<td>'.margin'</td>
-</tr>
-<tr>
-<td>margin-top</td>
-<td>'.m-t'</td>
-<td>'margin-top'</td>
-<td>'.margin-top'</td>
-</tr>
-<tr>
-<td>margin-bottom</td>
-<td>'.m-b'</td>
-<td>'margin-bottom'</td>
-<td>'.margin-bottom'</td>
-</tr>
-<tr>
-<td>margin-left</td>
-<td>'.m-l'</td>
-<td>'margin-left'</td>
-<td>'.margin-left'</td>
-</tr>
-<tr>
-<td>margin-right</td>
-<td>'.m-r'</td>
-<td>'margin-right'</td>
-<td>'.margin-right'</td>
-</tr>
-<tr>
-<td>overflow</td>
-<td>'.overflow'</td>
-<td>'overflow'</td>
-<td>'.overflow'</td>
-</tr>
-<tr>
-<td>padding</td>
-<td>'.p'</td>
-<td>'padding'</td>
-<td>'.padding'</td>
-</tr>
-<tr>
-<td>padding-top</td>
-<td>'.p-t'</td>
-<td>'padding-top'</td>
-<td>'.padding-top'</td>
-</tr>
-<tr>
-<td>padding-bottom</td>
-<td>'.p-b'</td>
-<td>'padding-bottom'</td>
-<td>'.padding-bottom'</td>
-</tr>
-<tr>
-<td>padding-left</td>
-<td>'.p-l'</td>
-<td>'padding-left'</td>
-<td>'.padding-left'</td>
-</tr>
-<tr>
-<td>padding-right</td>
-<td>'.p-r'</td>
-<td>'padding-right'</td>
-<td>'.padding-right'</td>
-</tr>
-<tr>
-<td>line-height</td>
-<td>'.lh'</td>
-<td>'line-height'</td>
-<td>'.line-height'</td>
-</tr>
-<tr>
-<td>font-size</td>
-<td>'.font'</td>
-<td>'font-size'</td>
-<td>'.font-size'</td>
-</tr>
-<tr>
-<td>font-family</td>
-<td>'.font'</td>
-<td>'font-family'</td>
-<td>'.font-family'</td>
-</tr>
-<tr>
-<td>font-weight</td>
-<td>'.font'</td>
-<td>'font-weight'</td>
-<td>'.font-weight'</td>
-</tr>
-<tr>
-<td>font-style</td>
-<td>'.font'</td>
-<td>'font-style'</td>
-<td>'.font-style'</td>
-</tr>
-<tr>
-<td>color</td>
-<td>'.c'</td>
-<td>'color'</td>
-<td>'.color'</td>
-</tr>
-<tr>
-<td>background-color</td>
-<td>'.bg'</td>
-<td>'background-color'</td>
-<td>'.back'</td>
-</tr>
-<tr>
-<td>border-color</td>
-<td>'.br'</td>
-<td>'border-color'</td>
-<td>'.border'</td>
-</tr>
-<tr>
-<td>border-radius</td>
-<td>'.br'</td>
-<td>'border-radius'</td>
-<td>'.border-radius'</td>
-</tr>
-<tr>
-<td>border-top-right-radius</td>
-<td>'.br-tr'</td>
-<td>'border-top-right-radius'</td>
-<td>'.border-top-right-radius'</td>
-</tr>
-<tr>
-<td>border-top-left-radius</td>
-<td>'.br-tl'</td>
-<td>'border-top-left-radius'</td>
-<td>'.border-top-left-radius'</td>
-</tr>
-<tr>
-<td>border-bottom-right-radius</td>
-<td>'.br-br'</td>
-<td>'border-bottom-right-radius'</td>
-<td>'.border-bottom-right-radius'</td>
-</tr>
-<tr>
-<td>border-bottom-left-radius</td>
-<td>'.br-bl'</td>
-<td>'border-bottom-left-radius'</td>
-<td>'.border-bottom-left-radius'</td>
-</tr>
-<tr>
-<td>border-width</td>
-<td>'.br'</td>
-<td>'border-width'</td>
-<td>'.border-width'</td>
-</tr>
-<tr>
-<td>border-top-width</td>
-<td>'.br-t'</td>
-<td>'border-top-width'</td>
-<td>'.border-top-width'</td>
-</tr>
-<tr>
-<td>border-right-width</td>
-<td>'.br-r'</td>
-<td>'border-right-width'</td>
-<td>'.border-right-width'</td>
-</tr>
-<tr>
-<td>border-left-width</td>
-<td>'.br-l'</td>
-<td>'border-left-width'</td>
-<td>'.border-left-width'</td>
-</tr>
-<tr>
-<td>border-bottom-width</td>
-<td>'.br-b'</td>
-<td>'border-bottom-width'</td>
-<td>'.border-bottom-width'</td>
-</tr>
-<tr>
-<td>width</td>
-<td>'.w'</td>
-<td>'width'</td>
-<td>'.width'</td>
-</tr>
-<tr>
-<td>display</td>
-<td>'.d'</td>
-<td>'display'</td>
-<td>'.display'</td>
-</tr>
-<tr>
-<td>max-width</td>
-<td>'.max-w'</td>
-<td>'max-width'</td>
-<td>'.max-width'</td>
-</tr>
-</tbody>
-</table>
+The breakdown of the names for UCs follow a structured patter for easy muscle memory learning. 
+| Style                      | Short Name  | CSS                          |
+| -------------------------- | ----------- | ---------------------------- |
+| margin                     | '.m'        | 'margin'                     |
+| margin-top                 | '.m-t'      | 'margin-top'                 |
+| margin-bottom              | '.m-b'      | 'margin-bottom'              |
+| margin-left                | '.m-l'      | 'margin-left'                |
+| margin-right               | '.m-r'      | 'margin-right'               |
+| overflow                   | '.overflow' | 'overflow'                   |
+| padding                    | '.p'        | 'padding'                    |
+| padding-top                | '.p-t'      | 'padding-top'                |
+| padding-bottom             | '.p-b'      | 'padding-bottom'             |
+| padding-left               | '.p-l'      | 'padding-left'               |
+| padding-right              | '.p-r'      | 'padding-right'              |
+| line-height                | '.lh'       | 'line-height'                |
+| font-size                  | '.font'     | 'font-size'                  |
+| font-family                | '.font'     | 'font-family'                |
+| font-weight                | '.font'     | 'font-weight'                |
+| font-style                 | '.font'     | 'font-style'                 |
+| color                      | '.c'        | 'color'                      |
+| background-color           | '.bg'       | 'background-color'           |
+| border-color               | '.br'       | 'border-color'               |
+| border-radius              | '.br'       | 'border-radius'              |
+| border-top-right-radius    | '.br-tr'    | 'border-top-right-radius'    |
+| border-top-left-radius     | '.br-tl'    | 'border-top-left-radius'     |
+| border-bottom-right-radius | '.br-br'    | 'border-bottom-right-radius' |
+| border-bottom-left-radius  | '.br-bl'    | 'border-bottom-left-radius'  |
+| border-width               | '.br'       | 'border-width'               |
+| border-top-width           | '.br-t'     | 'border-top-width'           |
+| border-right-width         | '.br-r'     | 'border-right-width'         |
+| border-left-width          | '.br-l'     | 'border-left-width'          |
+| border-bottom-width        | '.br-b'     | 'border-bottom-width'        |
+| width                      | '.w'        | 'width'                      |
+| display                    | '.d'        | 'display'                    |
+| max-width                  | '.max-w'    | 'max-width'                  |
 
  Styleguide UC.Shorthand
 */
@@ -3209,11 +3090,15 @@ Styleguide Typography.Font.Color Transparency
 }
 
 .font_regular {
-  font-weight: 400 !important;
+  font-weight: 300 !important;
+}
+
+.font_medium {
+  font-weight: 500 !important;
 }
 
 .font_bold {
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
 
 .font_xbold {
@@ -21269,16 +21154,32 @@ Markup:
 			</ul>
 			<ul class="ul_none flex_auto p-r_4">
 				<li>
-					<button type="button" class="btn btn-shade btn-sm">
-						shade
+					<button type="button" class="btn btn-secondary btn-sm">
+						secondary
 					</button>
 				</li>
 				<li>
-					<button type="button" class="btn btn-shade">shade</button>
+					<button type="button" class="btn btn-secondary">secondary</button>
 				</li>
 				<li>
-					<button type="button" class="btn btn-shade btn-lg">
-						shade
+					<button type="button" class="btn btn-secondary btn-lg">
+						secondary
+					</button>
+				</li>
+				<li><button type="button" class="btn btn-link">Link</button></li>
+			</ul>
+			<ul class="ul_none flex_auto p-r_4">
+				<li>
+					<button type="button" class="btn btn-accent btn-sm">
+						accent
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-accent">accent</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-accent btn-lg">
+						accent
 					</button>
 				</li>
 				<li><button type="button" class="btn btn-link">Link</button></li>
@@ -21290,13 +21191,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-shade">1</button>
-			<button type="button" class="btn btn-shade">2</button>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-shade dropdown-toggle"
+					class="btn btn-secondary dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -21314,13 +21215,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-shade">1</button>
-			<button type="button" class="btn btn-shade">2</button>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-shade dropdown-toggle"
+					class="btn btn-secondary dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -21338,13 +21239,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-shade">1</button>
-			<button type="button" class="btn btn-shade">2</button>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-shade dropdown-toggle"
+					class="btn btn-secondary dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -21398,7 +21299,7 @@ Markup:
 		<div class="btn-toolbar" role="toolbar">
 			<div class="btn-group">
 				<button
-					class="btn btn-shade btn-lg dropdown-toggle"
+					class="btn btn-secondary btn-lg dropdown-toggle"
 					type="button"
 					data-toggle="dropdown"
 					aria-haspopup="true"
@@ -21415,12 +21316,12 @@ Markup:
 				</div>
 			</div>
 			<div class="btn-group ml-2">
-				<button type="button" class="btn btn-lg btn-shade">
+				<button type="button" class="btn btn-lg btn-secondary">
 					Large split button
 				</button>
 				<button
 					type="button"
-					class="btn btn-lg btn-shade dropdown-toggle dropdown-toggle-split"
+					class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -21742,6 +21643,60 @@ Weight:10000
 Styleguide  Recipes Bootstrap.KitchenSink
 */
 /*
+Buttons
+
+Basic Buttons
+
+default		            - Medium buttons (default)
+.btn-primary	            - Primary Class Button (default)
+.btn-secondary 	            - Second Class Button
+.btn-accent             - Button for call out acctions
+.btn-success                - Success State.
+.btn-danger                  - Alert State.
+.btn-warning	            - Warning State
+.clear		            - All button states can become hollow
+.radius		            - Give the button softer corners
+.shadow.clear		    - Give a button a shadow
+.btn-sm		            - Small buttons
+.btn-lg		            - Large buttons
+.disabled	            - Disabled buttons
+
+Markup:
+<a class="btn btn-primary {{modifier_class}}" href="#">{{modifier_class}} button</a>
+
+ Styleguide Recipes Bootstrap.Button
+*/
+.btn {
+  font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.btn.clear {
+  border-color: transparent;
+  background-color: transparent;
+  color: #5a2d04;
+}
+.btn.clear:hover {
+  color: black;
+}
+
+.btn-accent {
+  background-color: #bf5f08;
+}
+.btn-accent:hover {
+  background-color: #5a2d04;
+}
+
+.btn.shadow {
+  box-shadow: 1.5px 1.5px 6px 0.75px rgba(0, 0, 0, 0.4);
+}
+
+.btn.shadow:hover {
+  box-shadow: 0.5px 0.5px 2px 0.25px rgba(0, 0, 0, 0.1);
+}
+
+/*
 Carousel ALT
 
 A slide-show component for cycling through groups of images and text.
@@ -22019,7 +21974,7 @@ Styleguide  Recipes Bootstrap.Carousel
   }
 }
 .navbar {
-  font-family: Roboto Slab, Times New Roman, Lucida Bright, Georgia, serif;
+  font-family: "Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab";
 }
 
 .dropdown-menu {
@@ -25770,5 +25725,43 @@ Markup:
 
 Styleguide  Recipes Bootstrap.Tabs
 
+*/
+/*
+Simple Tabs Dark
+
+
+Reverse Colored Tabs for when on dark background
+
+Markup:
+<div class="m-y_4 bg_acc p_4" id="nav_jump">
+    <nav class="bg_black-2 c_white br_3 br_radius br_solid br_white-5 font_0 font_bold font_ui p-x_0 p-x_4:md shadow_overlap-light">
+        <ul class="flex_column flex_row:md ul_none nav">
+    <li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item active">
+        <a class="a:bg_accent h:underline-none text-shadow_black-1 br-b_3 br_white-0 br_solid white h:bg_secondary h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4 active" href="/on-demand/acc-videos#nav_jump" target="_self">
+            ACC Videos
+        </a>
+    </li>
+    <li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item ">
+        <a class="a:bg_accent h:underline-none text-shadow_black-1 br-b_3 br_white-0 br_solid white h:bg_secondary h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4 " href="/on-demand/Slides#nav_jump" target="_self">
+            ACC Slides
+        </a>
+    </li>
+    <li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item ">
+        <a class="a:bg_accent h:underline-none text-shadow_black-1 br-b_3 br_white-0 br_solid white h:bg_secondary h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4 " href="/on-demand/industry-theater#nav_jump" target="_self">
+            Industry-Expert Theater
+        </a>
+    </li>
+    <li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item ">
+        <a class="a:bg_accent h:underline-none text-shadow_black-1 br-b_3 br_white-0 br_solid white h:bg_secondary h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4 " href="/on-demand/industry-stage#nav_jump" target="_self">
+            Industry Innovation Stage
+        </a>
+    </li>
+        </ul>
+    </nav>
+</div>
+
+Weight:0
+
+Styleguide  Recipes Bootstrap.Tabs Dark
 */
 /*# sourceMappingURL=maps/cardiosmart_boot.css.map */

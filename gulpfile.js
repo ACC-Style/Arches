@@ -512,7 +512,7 @@ gulp.task(
 gulp.task(
 	"build-acc",
 	gulp.series(
-		function() {
+		function buildCSS() {
 			var brand = "acc";
 			var framework_boot = "boot";
 			var framework_zurb = "zurb";
@@ -526,14 +526,14 @@ gulp.task(
 				.pipe(header("\n"))
 				.pipe(gulp.dest(PATHS.SCSS));
 			return runSass(brand);
-		},function() {
+		},function CONCAT_Boot() {
 			return concatCSS("acc", "boot");
-		},function() {
+		},function CONCAT_zurb() {
 			return concatCSS("acc", "zurb");
 		},
 		"dist",
 		"copy-to-styleguide",
-		function() {
+		function Markdow() {
 			var brand = "acc";
 			var framework_boot = "boot";
 			var base_boot = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
@@ -557,10 +557,10 @@ gulp.task(
 				)
 				.pipe(gulp.dest(SOURCE.MD));
 		},
-		function() {
+		function runBootStyleguide() {
 			return run("npm run boot_acc").exec();
 		},
-		function () {
+		function runZurbStyleguide() {
 			return run("npm run zurb_acc").exec();
 		}
 	)

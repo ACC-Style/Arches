@@ -6738,16 +6738,32 @@ Markup:
 			</ul>
 			<ul class="ul_none flex_auto p-r_4">
 				<li>
-					<button type="button" class="btn btn-shade btn-sm">
-						shade
+					<button type="button" class="btn btn-secondary btn-sm">
+						secondary
 					</button>
 				</li>
 				<li>
-					<button type="button" class="btn btn-shade">shade</button>
+					<button type="button" class="btn btn-secondary">secondary</button>
 				</li>
 				<li>
-					<button type="button" class="btn btn-shade btn-lg">
-						shade
+					<button type="button" class="btn btn-secondary btn-lg">
+						secondary
+					</button>
+				</li>
+				<li><button type="button" class="btn btn-link">Link</button></li>
+			</ul>
+			<ul class="ul_none flex_auto p-r_4">
+				<li>
+					<button type="button" class="btn btn-accent btn-sm">
+						accent
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-accent">accent</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-accent btn-lg">
+						accent
 					</button>
 				</li>
 				<li><button type="button" class="btn btn-link">Link</button></li>
@@ -6759,13 +6775,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-shade">1</button>
-			<button type="button" class="btn btn-shade">2</button>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-shade dropdown-toggle"
+					class="btn btn-secondary dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -6783,13 +6799,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-shade">1</button>
-			<button type="button" class="btn btn-shade">2</button>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-shade dropdown-toggle"
+					class="btn btn-secondary dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -6807,13 +6823,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-shade">1</button>
-			<button type="button" class="btn btn-shade">2</button>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-shade dropdown-toggle"
+					class="btn btn-secondary dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -6867,7 +6883,7 @@ Markup:
 		<div class="btn-toolbar" role="toolbar">
 			<div class="btn-group">
 				<button
-					class="btn btn-shade btn-lg dropdown-toggle"
+					class="btn btn-secondary btn-lg dropdown-toggle"
 					type="button"
 					data-toggle="dropdown"
 					aria-haspopup="true"
@@ -6884,12 +6900,12 @@ Markup:
 				</div>
 			</div>
 			<div class="btn-group ml-2">
-				<button type="button" class="btn btn-lg btn-shade">
+				<button type="button" class="btn btn-lg btn-secondary">
 					Large split button
 				</button>
 				<button
 					type="button"
-					class="btn btn-lg btn-shade dropdown-toggle dropdown-toggle-split"
+					class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -7211,6 +7227,60 @@ Weight:10000
 Styleguide  Recipes Bootstrap.KitchenSink
 */
 /*
+Buttons
+
+Basic Buttons
+
+default		            - Medium buttons (default)
+.btn-primary	            - Primary Class Button (default)
+.btn-secondary 	            - Second Class Button
+.btn-accent             - Button for call out acctions
+.btn-success                - Success State.
+.btn-danger                  - Alert State.
+.btn-warning	            - Warning State
+.clear		            - All button states can become hollow
+.radius		            - Give the button softer corners
+.shadow.clear		    - Give a button a shadow
+.btn-sm		            - Small buttons
+.btn-lg		            - Large buttons
+.disabled	            - Disabled buttons
+
+Markup:
+<a class="btn btn-primary {{modifier_class}}" href="#">{{modifier_class}} button</a>
+
+ Styleguide Recipes Bootstrap.Button
+*/
+.btn {
+  font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.btn.clear {
+  border-color: transparent;
+  background-color: transparent;
+  color: #004660;
+}
+.btn.clear:hover {
+  color: black;
+}
+
+.btn-accent {
+  background-color: #0094cb;
+}
+.btn-accent:hover {
+  background-color: #004660;
+}
+
+.btn.shadow {
+  box-shadow: 1.5px 1.5px 6px 0.75px rgba(0, 0, 0, 0.4);
+}
+
+.btn.shadow:hover {
+  box-shadow: 0.5px 0.5px 2px 0.25px rgba(0, 0, 0, 0.1);
+}
+
+/*
 Carousel ALT
 
 A slide-show component for cycling through groups of images and text.
@@ -7488,7 +7558,7 @@ Styleguide  Recipes Bootstrap.Carousel
   }
 }
 .navbar {
-  font-family: Roboto Slab, Times New Roman, Lucida Bright, Georgia, serif;
+  font-family: "Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab";
 }
 
 .dropdown-menu {

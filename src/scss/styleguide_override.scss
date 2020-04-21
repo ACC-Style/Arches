@@ -57,7 +57,7 @@ $theme-palette: map-merge(
 		accent: $green-blue,
 		info: $alt-grey,
 		highlight: $purple,
-		acc: $acc-blue
+		acc: $acc-blue,
 	),
 	$theme-palette
 );
@@ -72,7 +72,7 @@ $grays: map-merge(
 		'600': $gray-600,
 		'700': $gray-700,
 		'800': $gray-800,
-		'900': $gray-900
+		'900': $gray-900,
 	),
 	$grays
 );
@@ -90,7 +90,7 @@ $colors: map-merge(
 		'cyan': $cyan,
 		'white': $white,
 		'gray': $gray-600,
-		'gray-dark': $gray-800
+		'gray-dark': $gray-800,
 	),
 	$colors
 );
@@ -98,20 +98,20 @@ $colors: map-merge(
 $fonts: (
 	slab: (
 		name: 'Roboto Slab',
-		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"'
+		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
 	),
 	display: (
 		name: 'Maven Pro',
-		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif'
+		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif',
 	),
 	copy: (
 		name: 'Muli',
-		stack: '"Muli","Open Sans","system",sans-serif'
+		stack: '"Muli","Open Sans","system",sans-serif',
 	),
 	ui: (
 		name: 'Open Sans',
-		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-	)
+		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+	),
 );
 
 // Reset Values of Utlity-css.vars.scss
@@ -211,23 +211,6 @@ pre code.hljs {
 	th,
 	td {
 		padding: $padding_2 $padding_3;
-	}
-}
-
-.home_nav #home_nav,
-.boot_acc #boot_acc,
-.boot_cvquality #boot_cvquality,
-.uc_cardiosmart #uc_cardiosmart,
-.boot_cardiosmart #boot_cardiosmart,
-.zurb_cardiosmart #zurb_cardiosmart,
-.zurb_acc #zurb_acc,
-.uconly_acc #uconly_acc,
-.color_codes #color_codes,
-.layout_demo #layout_demo {
-	background-color: map-get($theme-palette, accent) !important;
-	&:hover {
-		background-color: mix(map-get($theme-palette, accent), black) !important;
-		color: $white !important;
 	}
 }
 

@@ -62,7 +62,7 @@ $theme-palette: map-merge(
 		accent: $orange,
 		info: $alt-grey,
 		highlight: $yellow,
-		acc: $acc-blue
+		acc: $acc-blue,
 	)
 );
 
@@ -73,20 +73,20 @@ $style-definition: map-deep-set($style-definition, 'is-active-self' 'short-name'
 $fonts: (
 	slab: (
 		name: 'Roboto Slab',
-		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"'
+		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
 	),
 	display: (
 		name: 'Maven Pro',
-		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif'
+		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif',
 	),
 	copy: (
 		name: 'Muli',
-		stack: '"Muli","Open Sans","system",sans-serif'
+		stack: '"Muli","Open Sans","system",sans-serif',
 	),
 	ui: (
 		name: 'Open Sans',
-		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-	)
+		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+	),
 );
 
 // Reset Values of Utlity-css.vars.scss
@@ -116,6 +116,12 @@ $style-definition: map-deep-set(
 	unquote(map-deep-get($value-to-unit, 'font-family', 'ui'))
 );
 
+$font_display: get-css-size(font-family, display);
+$font_slab: get-css-size(font-family, slab);
+$font_ui: get-css-size(font-family, ui);
+$font_copy: get-css-size(font-family, copy);
+$font_mono: get-css-size(font-family, mono);
+
 $global-radus-on: false;
 $global-border-radius: 6px;
 $value-to-unit: map-deep-set($value-to-unit, 'radius' 'radius', $global-border-radius);
@@ -138,56 +144,59 @@ $logo: (
 	primary: (
 		url: '../img/cardiosmart/cardiosmart_primaryLogo.svg',
 		alt: 'Logo of the CardioSmart',
-		aspectratio: 1/3
+		aspectratio: 1/3,
 	),
 	primary_alt: (
 		url: '../img/cardiosmart/cardiosmart_primaryLogo-alt.svg',
 		alt: 'Logo of the CardioSmart',
-		aspectratio: 1/3
+		aspectratio: 1/3,
 	),
 	condensed: (
 		url: '../img/cardiosmart/cardiosmart_mobileLogo.svg',
 		alt: 'Logo of the CardioSmart',
-		aspectratio: 1/6
+		aspectratio: 1/6,
 	),
 	condensed_alt: (
 		url: '../img/cardiosmart/cardiosmart_mobileLogo-alt.svg',
 		alt: 'Logo of the CardioSmart',
-		aspectratio: 1/6
-	)
+		aspectratio: 1/6,
+	),
 );
 $seal: (
 	normal: (
 		url: '../img/cardiosmart/cardiosmart_seal.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1/1
+		aspectratio: 1/1,
 	),
 	small: (
 		url: '../img/cardiosmart/cardiosmart_sealCondensed.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1/1
+		aspectratio: 1/1,
 	),
 	tiny: (
 		url: '../img/cardiosmart/cardiosmart_sealCondensed-alt.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1/1
+		aspectratio: 1/1,
 	),
 	normal_alt: (
 		url: '../img/cardiosmart/cardiosmart_seal-reverse.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1/1
+		aspectratio: 1/1,
 	),
 	small_alt: (
 		url: '../img/cardiosmart/cardiosmart_sealCondensed-reverse.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1/1
+		aspectratio: 1/1,
 	),
 	tiny_alt: (
 		url: '../img/cardiosmart/cardiosmart_sealCondensed-alt-reverse.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1/1
-	)
+		aspectratio: 1/1,
+	),
 );
+
+$link-color-dark: get-themecolor(accent, -3);
+$link-color-light: get-themecolor(accent, 1);
 /** Built With cardiosmart Branding **//**  Default Brands    *********************************/
 /**  Colors  **/
 
@@ -199,6 +208,9 @@ $seal: (
 
 /**  Logos  **/
 @import 'setup/config/logo';
+
+$link-color-dark: get-themecolor(accent, -3);
+$link-color-light: get-themecolor(accent, 1);
 /** Base UC File **//*
 	Recipes
 

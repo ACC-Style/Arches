@@ -43,6 +43,9 @@ $theme-palette: ();
 
 /**  Logos  **/
 @import 'setup/config/logo';
+
+$link-color-dark: get-themecolor(accent, -3);
+$link-color-light: get-themecolor(accent, 1);
 /** Base UC File **/@each $color-name, $color in $SocialColors {
     .c_#{$color-name} {
         color: $color !important;

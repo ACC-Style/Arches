@@ -6624,16 +6624,32 @@ Markup:
 			</ul>
 			<ul class="ul_none flex_auto p-r_4">
 				<li>
-					<button type="button" class="btn btn-shade btn-sm">
-						shade
+					<button type="button" class="btn btn-secondary btn-sm">
+						secondary
 					</button>
 				</li>
 				<li>
-					<button type="button" class="btn btn-shade">shade</button>
+					<button type="button" class="btn btn-secondary">secondary</button>
 				</li>
 				<li>
-					<button type="button" class="btn btn-shade btn-lg">
-						shade
+					<button type="button" class="btn btn-secondary btn-lg">
+						secondary
+					</button>
+				</li>
+				<li><button type="button" class="btn btn-link">Link</button></li>
+			</ul>
+			<ul class="ul_none flex_auto p-r_4">
+				<li>
+					<button type="button" class="btn btn-accent btn-sm">
+						accent
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-accent">accent</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-accent btn-lg">
+						accent
 					</button>
 				</li>
 				<li><button type="button" class="btn btn-link">Link</button></li>
@@ -6645,13 +6661,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-shade">1</button>
-			<button type="button" class="btn btn-shade">2</button>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-shade dropdown-toggle"
+					class="btn btn-secondary dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -6669,13 +6685,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-shade">1</button>
-			<button type="button" class="btn btn-shade">2</button>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-shade dropdown-toggle"
+					class="btn btn-secondary dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -6693,13 +6709,13 @@ Markup:
 			role="group"
 			aria-label="Button group with nested dropdown"
 		>
-			<button type="button" class="btn btn-shade">1</button>
-			<button type="button" class="btn btn-shade">2</button>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
 			<div class="btn-group" role="group">
 				<button
 					id="btnGroupDrop1"
 					type="button"
-					class="btn btn-shade dropdown-toggle"
+					class="btn btn-secondary dropdown-toggle"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -6753,7 +6769,7 @@ Markup:
 		<div class="btn-toolbar" role="toolbar">
 			<div class="btn-group">
 				<button
-					class="btn btn-shade btn-lg dropdown-toggle"
+					class="btn btn-secondary btn-lg dropdown-toggle"
 					type="button"
 					data-toggle="dropdown"
 					aria-haspopup="true"
@@ -6770,12 +6786,12 @@ Markup:
 				</div>
 			</div>
 			<div class="btn-group ml-2">
-				<button type="button" class="btn btn-lg btn-shade">
+				<button type="button" class="btn btn-lg btn-secondary">
 					Large split button
 				</button>
 				<button
 					type="button"
-					class="btn btn-lg btn-shade dropdown-toggle dropdown-toggle-split"
+					class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split"
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false"
@@ -7097,6 +7113,60 @@ Weight:10000
 Styleguide  Recipes Bootstrap.KitchenSink
 */
 /*
+Buttons
+
+Basic Buttons
+
+default		            - Medium buttons (default)
+.btn-primary	            - Primary Class Button (default)
+.btn-secondary 	            - Second Class Button
+.btn-accent             - Button for call out acctions
+.btn-success                - Success State.
+.btn-danger                  - Alert State.
+.btn-warning	            - Warning State
+.clear		            - All button states can become hollow
+.radius		            - Give the button softer corners
+.shadow.clear		    - Give a button a shadow
+.btn-sm		            - Small buttons
+.btn-lg		            - Large buttons
+.disabled	            - Disabled buttons
+
+Markup:
+<a class="btn btn-primary {{modifier_class}}" href="#">{{modifier_class}} button</a>
+
+ Styleguide Recipes Bootstrap.Button
+*/
+.btn {
+  font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.btn.clear {
+  border-color: transparent;
+  background-color: transparent;
+  color: #5a2d04;
+}
+.btn.clear:hover {
+  color: black;
+}
+
+.btn-accent {
+  background-color: #bf5f08;
+}
+.btn-accent:hover {
+  background-color: #5a2d04;
+}
+
+.btn.shadow {
+  box-shadow: 1.5px 1.5px 6px 0.75px rgba(0, 0, 0, 0.4);
+}
+
+.btn.shadow:hover {
+  box-shadow: 0.5px 0.5px 2px 0.25px rgba(0, 0, 0, 0.1);
+}
+
+/*
 Carousel ALT
 
 A slide-show component for cycling through groups of images and text.
@@ -7374,7 +7444,7 @@ Styleguide  Recipes Bootstrap.Carousel
   }
 }
 .navbar {
-  font-family: Roboto Slab, Times New Roman, Lucida Bright, Georgia, serif;
+  font-family: "Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab";
 }
 
 .dropdown-menu {
@@ -11125,5 +11195,43 @@ Markup:
 
 Styleguide  Recipes Bootstrap.Tabs
 
+*/
+/*
+Simple Tabs Dark
+
+
+Reverse Colored Tabs for when on dark background
+
+Markup:
+<div class="m-y_4 bg_acc p_4" id="nav_jump">
+    <nav class="bg_black-2 c_white br_3 br_radius br_solid br_white-5 font_0 font_bold font_ui p-x_0 p-x_4:md shadow_overlap-light">
+        <ul class="flex_column flex_row:md ul_none nav">
+    <li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item active">
+        <a class="a:bg_accent h:underline-none text-shadow_black-1 br-b_3 br_white-0 br_solid white h:bg_secondary h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4 active" href="/on-demand/acc-videos#nav_jump" target="_self">
+            ACC Videos
+        </a>
+    </li>
+    <li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item ">
+        <a class="a:bg_accent h:underline-none text-shadow_black-1 br-b_3 br_white-0 br_solid white h:bg_secondary h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4 " href="/on-demand/Slides#nav_jump" target="_self">
+            ACC Slides
+        </a>
+    </li>
+    <li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item ">
+        <a class="a:bg_accent h:underline-none text-shadow_black-1 br-b_3 br_white-0 br_solid white h:bg_secondary h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4 " href="/on-demand/industry-theater#nav_jump" target="_self">
+            Industry-Expert Theater
+        </a>
+    </li>
+    <li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item ">
+        <a class="a:bg_accent h:underline-none text-shadow_black-1 br-b_3 br_white-0 br_solid white h:bg_secondary h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4 " href="/on-demand/industry-stage#nav_jump" target="_self">
+            Industry Innovation Stage
+        </a>
+    </li>
+        </ul>
+    </nav>
+</div>
+
+Weight:0
+
+Styleguide  Recipes Bootstrap.Tabs Dark
 */
 /*# sourceMappingURL=maps/cardiosmart_boot.css.map */

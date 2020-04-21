@@ -16,76 +16,99 @@ Links with the `.link` will auto decorate with an icon of the corresponding file
 
 
 Markup:
+<div class="p_4">
  <a class="link" href="abc.pdf">A link that is a Pdf Document</a><br/>
  <a class="link" href="abc.doc">A link that is a Word Document</a><br/>
  <a class="link" href="https://www.abc.ppt">An External link that is a Power Point Document</a><br/>
  <a class="link" href="tel:1-555-555-5555">1-555-555-5555</a><br/>
  <a class="link" href="mailto:test@abc.org">test@abc.org</a><br/>
- <a class="link" href="xyz.zip">A link that is a Zip Document</a><br/>
+ <a class="link" href="xyz.zip">A link that is a Zip Document</a><br/></div>
+<div class="bg_shade-n3 p_4">
+ <a class="link-light" href="abc.pdf">A link that is a Pdf Document</a><br/>
+ <a class="link-light" href="abc.doc">A link that is a Word Document</a><br/>
+ <a class="link-light" href="https://www.abc.ppt">An External link that is a Power Point Document</a><br/>
+ <a class="link-light" href="tel:1-555-555-5555">1-555-555-5555</a><br/>
+ <a class="link-light" href="mailto:test@abc.org">test@abc.org</a><br/>
+ <a class="link-light" href="xyz.zip">A link that is a Zip Document</a><br/>
+</div>
 
  Styleguide InteractiveExtras.Links
  */
 
 .icon-before:before {
 	@extend %font-awesome-pro !optional;
-	margin-right: 0.5em;
+	margin-right: $margin_2;
 	width: 1.28571429em;
 	text-align: center;
 }
 .icon-after:after {
 	@extend %font-awesome-pro !optional;
-	margin-left: 0.5em;
+	margin-left: $margin_2;
 	width: 1.28571429em;
 	text-align: center;
 }
+.link {
+	color: $link-color-dark;
+	&:hover {
+		color: darken($link-color-dark, 60%);
+	}
+}
 
-a.link {
+.link-light {
+	color: $link-color-light;
+	&:hover {
+		color: lighten($link-color-dark, 60%);
+	}
+}
+
+a.link,
+a.link-light {
 	@extend .icon-before;
-	&[href$=".pdf"]:before {
-		content: "\f1c1";
+	&[href$='.pdf']:before {
+		content: '\f1c1';
 	}
-	&[href$=".doc"]:before,
-	&[href$=".docx"]:before,
-	&[href$=".txt"]:before {
-		content: "\f1c2";
-	}
-
-	&[href$=".zip"]:before {
-		content: "\f1c6";
+	&[href$='.doc']:before,
+	&[href$='.docx']:before,
+	&[href$='.txt']:before {
+		content: '\f1c2';
 	}
 
-	&[href*=".ppt"]:before,
-	&[href*=".pptx"]:before {
-		content: "\f685";
-	}
-	&[href$=".csv"]:before,
-	&[href$=".xls"]:before,
-	&[href$=".xlsx"]:before {
-		content: "\f0ce";
+	&[href$='.zip']:before {
+		content: '\f1c6';
 	}
 
-	&[href$=".mp4"]:before,
-	&[href$=".mov"]:before {
-		content: "\f03d";
+	&[href*='.ppt']:before,
+	&[href*='.pptx']:before {
+		content: '\f685';
+	}
+	&[href$='.csv']:before,
+	&[href$='.xls']:before,
+	&[href$='.xlsx']:before {
+		content: '\f0ce';
 	}
 
-	&[target="_blank"]:after,
-	&[href^="http"]:after,
-	&[href^="https"]:after {
+	&[href$='.mp4']:before,
+	&[href$='.mov']:before {
+		content: '\f03d';
+	}
+
+	&[target='_blank']:after,
+	&[href^='http']:after,
+	&[href^='https']:after {
 		@extend .icon-after;
-		content: "\f14c";
+		content: '\f14c';
 	}
 
-	&[href^="mailto:"]:before {
-		content: "\f1fa";
+	&[href^='mailto:']:before {
+		content: '\f1fa';
 	}
 
-	&[href^="tel:"]:before {
-		content: "\f095";
+	&[href^='tel:']:before {
+		content: '\f095';
 	}
 
-	&[href^="fax:"]:before {
-		content: "\f1ac";
+	&[href^='fax:']:before {
+		content: '\f1ac';
 	}
 
 	&:hover {

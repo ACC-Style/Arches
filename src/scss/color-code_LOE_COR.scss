@@ -43,6 +43,9 @@ $theme-palette: ();
 
 /**  Logos  **/
 @import 'setup/config/logo';
+
+$link-color-dark: get-themecolor(accent, -3);
+$link-color-light: get-themecolor(accent, 1);
 /** Base UC File **/@each $color-name, $color in $COR {
     $color-name-alt: 'cor-' + $color-name;
     @include color-loop(background-color, $color-name-alt, $color);

@@ -172,7 +172,7 @@ $theme-palette: map-merge(
 		accent: $orange-light,
 		info: $alt-grey,
 		highlight: $scrub-teal-light,
-		acc: $acc-blue
+		acc: $acc-blue,
 	)
 );
 
@@ -189,23 +189,23 @@ $fonts: (
 	slab: (
 		name: 'Roboto Slab',
 		short-name: 'RS',
-		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,"slab",serif'
+		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,"slab",serif',
 	),
 	display: (
 		name: 'Maven Pro',
 		short-name: 'MP',
-		stack: '"Maven Pro",Verdana,Helvetica,sans-serif;'
+		stack: '"Maven Pro",Verdana,Helvetica,sans-serif;',
 	),
 	copy: (
 		name: 'Lato',
 		short-name: 'Lt',
-		stack: '"Lato","Open Sans","system-ui",sans-serif'
+		stack: '"Lato","Open Sans","system-ui",sans-serif',
 	),
 	ui: (
 		name: 'Lato',
 		short-name: 'Lt',
-		stack: '"Lato","Open Sans","system-ui",sans-serif'
-	)
+		stack: '"Lato","Open Sans","system-ui",sans-serif',
+	),
 );
 
 // Reset Values of Utlity-css.vars.scss
@@ -236,6 +236,12 @@ $style-definition: map-deep-set(
 	unquote(map-deep-get($value-to-unit, 'font-family', 'ui'))
 );
 
+$font_display: get-css-size(font-family, display);
+$font_slab: get-css-size(font-family, slab);
+$font_ui: get-css-size(font-family, ui);
+$font_copy: get-css-size(font-family, copy);
+$font_mono: get-css-size(font-family, mono);
+
 $global-radus-on: false;
 $global-border-radius: 5px;
 $global-border-round: 25px;
@@ -247,14 +253,14 @@ $grid-breakpoints: (
 	md: 768px,
 	lg: 1024px,
 	xl: 1200px,
-	xxl: 1400px
+	xxl: 1400px,
 );
 
 $container-max-widths: (
 	md: 720px,
 	lg: 960px,
 	xl: 1140px,
-	xxl: 1350px
+	xxl: 1350px,
 );
 
 $tooltip-bg: $dark;
@@ -270,6 +276,9 @@ $font-size-base: $base-font-size-rem; // Assumes the browser default, typically 
 $font-size-lg: map-deep-get($value-to-unit, font-size, 2);
 $font-size-sm: map-deep-get($value-to-unit, font-size, 0);
 
+$link-color-dark: get-themecolor(accent, -3);
+$link-color-light: get-themecolor(accent, 1);
+
 @import 'setup/config/cvquality/cvquality.gradients';
 /** Built With cvquality Branding **//**  Default Brands    *********************************/
 /**  Colors  **/
@@ -282,6 +291,9 @@ $font-size-sm: map-deep-get($value-to-unit, font-size, 0);
 
 /**  Logos  **/
 @import 'setup/config/logo';
+
+$link-color-dark: get-themecolor(accent, -3);
+$link-color-light: get-themecolor(accent, 1);
 /** Base UC File **//*
 	Recipes
 

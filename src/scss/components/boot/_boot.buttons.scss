@@ -1,0 +1,53 @@
+/*
+Buttons
+
+Basic Buttons
+
+default		            - Medium buttons (default)
+.btn-primary	            - Primary Class Button (default)
+.btn-secondary 	            - Second Class Button
+.btn-accent             - Button for call out acctions
+.btn-success                - Success State.
+.btn-danger                  - Alert State.
+.btn-warning	            - Warning State
+.clear		            - All button states can become hollow
+.radius		            - Give the button softer corners
+.shadow.clear		    - Give a button a shadow
+.btn-sm		            - Small buttons
+.btn-lg		            - Large buttons
+.disabled	            - Disabled buttons
+
+Markup:
+<a class="btn btn-primary {{modifier_class}}" href="#">{{modifier_class}} button</a>
+
+ Styleguide Recipes Bootstrap.Button
+*/
+.btn {
+	white-space: nowrap;
+	font-family: $font_ui;
+	font-weight: $font_medium;
+}
+
+.btn.clear {
+	color: $link-color-dark;
+	background-color: transparent;
+	border-color: transparent;
+	&:hover {
+		color: darken($link-color-dark, 60%);
+	}
+}
+
+.btn-accent {
+	background-color: get-themecolor('accent', -1);
+	&:hover {
+		background-color: get-themecolor('accent', -3);
+	}
+}
+
+.btn.shadow {
+	box-shadow: make-shadow(3, 'drop', #000, 0.4);
+}
+
+.btn.shadow:hover {
+	box-shadow: make-shadow(1, 'drop', #000, 0.1);
+}

@@ -25,13 +25,13 @@ $breakpoints: (
 	md: 768px,
 	lg: 1024px,
 	xl: 1200px,
-	xxl: 1440px
+	xxl: 1440px,
 );
 $container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1140px
+	xl: 1140px,
 );
 
 $global-border-radius: 1rem/3 !default;
@@ -55,7 +55,7 @@ $value-to-unit: (
 		2: 0.25 * $basicSizeMultiplier,
 		3: 0.5 * $basicSizeMultiplier,
 		4: 1 * $basicSizeMultiplier,
-		5: 2 * $basicSizeMultiplier
+		5: 2 * $basicSizeMultiplier,
 	),
 	size-ui: (
 		0: 0,
@@ -63,7 +63,7 @@ $value-to-unit: (
 		2: 0.375 * $basicSizeMultiplier,
 		3: 0.5 * $basicSizeMultiplier,
 		4: 0.75 * $basicSizeMultiplier,
-		5: 1 * $basicSizeMultiplier
+		5: 1 * $basicSizeMultiplier,
 	),
 	sizeAlt: (
 		100: 100%,
@@ -79,7 +79,7 @@ $value-to-unit: (
 		2: 0.25 * $basicSizeMultiplier,
 		3: 0.5 * $basicSizeMultiplier,
 		4: 1 * $basicSizeMultiplier,
-		5: 2 * $basicSizeMultiplier
+		5: 2 * $basicSizeMultiplier,
 	),
 	size-positive: (
 		0: 0,
@@ -87,7 +87,7 @@ $value-to-unit: (
 		2: 0.25 * $basicSizeMultiplier,
 		3: 0.5 * $basicSizeMultiplier,
 		4: 1 * $basicSizeMultiplier,
-		5: 2 * $basicSizeMultiplier
+		5: 2 * $basicSizeMultiplier,
 	),
 	unitless: (
 		0: 0,
@@ -100,7 +100,7 @@ $value-to-unit: (
 		2: 2,
 		3: 3,
 		4: 4,
-		5: 5
+		5: 5,
 	),
 	unitless-positive: (
 		0: 0,
@@ -108,7 +108,7 @@ $value-to-unit: (
 		2: 2,
 		3: 3,
 		4: 4,
-		5: 5
+		5: 5,
 	),
 	line-height: (
 		0: 1,
@@ -116,7 +116,7 @@ $value-to-unit: (
 		2: $lineheight-tight,
 		3: $lineheight-normal,
 		4: $lineheight-loose,
-		5: $lineheight-airy
+		5: $lineheight-airy,
 	),
 	opacity: (
 		0: 0,
@@ -129,7 +129,7 @@ $value-to-unit: (
 		7: 0.75,
 		8: 0.9,
 		9: 0.975,
-		none: 1
+		none: 1,
 	),
 	percent-10: (
 		0: 0%,
@@ -142,7 +142,7 @@ $value-to-unit: (
 		7: 75%,
 		8: 88%,
 		9: 95%,
-		none: 100%
+		none: 100%,
 	),
 	percent-positive: (
 		0: 0%,
@@ -150,14 +150,14 @@ $value-to-unit: (
 		2: 37%,
 		3: 60%,
 		4: 78%,
-		5: 90%
+		5: 90%,
 	),
 	percent-negative: (
 		n1: 10%,
 		n2: 25%,
 		n3: 45%,
 		n4: 60%,
-		n5: 75%
+		n5: 75%,
 	),
 	width-percent: (
 		auto: auto,
@@ -171,7 +171,7 @@ $value-to-unit: (
 		70: 70%,
 		80: 80%,
 		90: 90%,
-		100: 100%
+		100: 100%,
 	),
 	height-viewport: (
 		auto: auto,
@@ -186,7 +186,7 @@ $value-to-unit: (
 		80: 80vh,
 		90: 90vh,
 		100: 100vh,
-		unset: unset
+		unset: unset,
 	),
 	percent: (
 		0: 0%,
@@ -199,19 +199,19 @@ $value-to-unit: (
 		n2: -25%,
 		n3: -45%,
 		n4: -58%,
-		n5: -75%
+		n5: -75%,
 	),
 	radius: (
 		square: 0px,
 		radius: $global-border-radius,
 		round: $global-border-round,
-		circle: 100%
+		circle: 100%,
 	),
 	float: (
 		unset: unset,
 		none: none,
 		left: left,
-		right: right
+		right: right,
 	),
 	text-align: (
 		unset: unset,
@@ -219,26 +219,27 @@ $value-to-unit: (
 		left: left,
 		right: right,
 		start: start,
-		end: end
+		end: end,
 	),
 	background-position: (
 		left: left center,
 		right: right center,
 		top: center top,
 		bottom: center bottom,
-		center: center center
+		center: center center,
 	),
 	border-style: (
 		none: none,
 		solid: solid,
 		dashed: dashed,
-		dotted: dotted
+		dotted: dotted,
 	),
 	font-weight: (
 		light: 100,
-		regular: 400,
-		bold: 600,
-		xbold: 900
+		regular: 300,
+		medium: 500,
+		bold: 700,
+		xbold: 900,
 	),
 	font-size: (
 		0: strip-unit(ms(0)) * 1rem,
@@ -256,7 +257,7 @@ $value-to-unit: (
 		n2: strip-unit(ms(-2)) * 1rem,
 		n3: strip-unit(ms(-3)) * 1rem,
 		n4: strip-unit(ms(-4)) * 1rem,
-		n5: strip-unit(ms(-5)) * 1rem
+		n5: strip-unit(ms(-5)) * 1rem,
 	),
 	font-size-golden: (
 		0: ms-calc(0, $ms-base, $golden),
@@ -264,7 +265,7 @@ $value-to-unit: (
 		2: ms-calc(2, $ms-base, $golden),
 		3: ms-calc(3, $ms-base, $golden),
 		4: ms-calc(4, $ms-base, $golden),
-		5: ms-calc(5, $ms-base, $golden)
+		5: ms-calc(5, $ms-base, $golden),
 	),
 	display: (
 		display_none: none,
@@ -276,11 +277,11 @@ $value-to-unit: (
 		table-row: table-row,
 		flex: flex,
 		flex-inline: flex-inline,
-		grid: grid
+		grid: grid,
 	),
 	hover: (
 		dark: -30%,
-		light: 30%
+		light: 30%,
 	),
 	transition: (
 		0: all 0s,
@@ -288,14 +289,14 @@ $value-to-unit: (
 		2: all 0.2s,
 		3: all 0.35s,
 		4: all 0.5s,
-		5: all 1s
+		5: all 1s,
 	),
 	ease: (
 		linear: linear,
 		out-in: ease,
 		in: ease-in,
 		out: ease-out,
-		in-out: ease-in-out
+		in-out: ease-in-out,
 	),
 	transform-origin: (
 		tl: left top,
@@ -306,7 +307,7 @@ $value-to-unit: (
 		t: center top,
 		b: center bottom,
 		r: right center,
-		l: left center
+		l: left center,
 	),
 	scale: (
 		X-0: scaleX(0),
@@ -314,11 +315,11 @@ $value-to-unit: (
 		Y-0: scaleY(0),
 		Y-100: scaleY(1),
 		0: scale(0, 0),
-		100: scale(1, 1)
+		100: scale(1, 1),
 	),
 	active: (
 		dark: 100%,
-		light: 100%
+		light: 100%,
 	),
 	border-width: (
 		0: 0px,
@@ -326,7 +327,7 @@ $value-to-unit: (
 		2: 3px,
 		3: 0.25rem,
 		4: 0.5rem,
-		5: 1rem
+		5: 1rem,
 	),
 	font-family: (
 		slab: #{'Roboto Slab',
@@ -362,7 +363,7 @@ $value-to-unit: (
 		Consolas,
 		'Liberation Mono',
 		'Courier New',
-		monospace}
+		monospace},
 	),
 	grid: (
 		1: 1/12 * 100%,
@@ -376,7 +377,7 @@ $value-to-unit: (
 		9: 3/4 * 100%,
 		10: 5/6 * 100%,
 		11: 11/12 * 100%,
-		12: 1 * 100%
+		12: 1 * 100%,
 	),
 	max-width: (
 		0: 0,
@@ -398,7 +399,7 @@ $value-to-unit: (
 		80: 80rem,
 		85: 85rem,
 		90: 90rem,
-		95: 95rem
+		95: 95rem,
 	),
 	position: (
 		initial: initial,
@@ -407,7 +408,7 @@ $value-to-unit: (
 		absolute: absolute,
 		fixed: fixed,
 		sticky: sticky,
-		unset: unset
+		unset: unset,
 	),
 	list-type: (
 		none: none,
@@ -415,14 +416,14 @@ $value-to-unit: (
 		circle: circle,
 		square: square,
 		lowercase: lower-alpha,
-		uppercase: upper-alpha
+		uppercase: upper-alpha,
 	),
 	text-shadow: (
 		none: 0px 0px 0px rgba(0, 0, 0, 0),
 		white-1: 2px 2px 2px rgba(255, 255, 255, 0.25),
 		black-1: 2px 2px 2px rgba(0, 0, 0, 0.25),
 		white-n1: -1px -1px 2px rgba(255, 255, 255, 0.5),
-		black-n1: -1px -1px 2px rgba(0, 0, 0, 0.5)
+		black-n1: -1px -1px 2px rgba(0, 0, 0, 0.5),
 	),
 	text-indent: (
 		0: 0,
@@ -431,7 +432,7 @@ $value-to-unit: (
 		n3: -3 * $base-font-size,
 		1: 1 * $base-font-size,
 		2: 2 * $base-font-size,
-		3: 3 * $base-font-size
+		3: 3 * $base-font-size,
 	),
 	z-index: (
 		0: -1,
@@ -439,7 +440,7 @@ $value-to-unit: (
 		2: 100,
 		3: 1000,
 		4: 5000,
-		5: 9999
+		5: 9999,
 	),
 	shadow: (
 		0: make-shadow(3, 'drop', #000, 0.4),
@@ -452,7 +453,7 @@ $value-to-unit: (
 		n2: make-shadow(2, 'inset', #000, 0.2),
 		n3: make-shadow(3, 'inset', #000, 0.3),
 		n4: make-shadow(3.5, 'inset', #000, 0.5),
-		n5: make-shadow(4, 'inset', #000, 0.65)
+		n5: make-shadow(4, 'inset', #000, 0.65),
 	),
 	rich-shadow: (
 		emboss-light:
@@ -464,602 +465,602 @@ $value-to-unit: (
 		bevel-bold:
 			'-7px -7px 14px rgba(255,255,255, 0.28), -1px -1.7px 5.8px rgba(255,255,255, 0.75), 3px 2.5px 7.5px rgba(0, 0, 0, 0.52), 3px 12.4px 23.1px rgba(0, 0, 0, 0.31), 1px 29px 63px rgba(0, 0, 0, 0.07)',
 		overlap-light: '0 1px 10px hsla(0, 0%, 0%, 0.06),0 2px 4px rgba(0,0,0,.5),1px 5px 5px rgba(0,0,0,.01)',
-		overlap-bold: '-1px 2px 4px rgba(0,0,0,.35),1px 3px 4px rgba(0,0,0,.35),1px 4px 6px rgba(0,0,0,.25)'
-	)
+		overlap-bold: '-1px 2px 4px rgba(0,0,0,.35),1px 3px 4px rgba(0,0,0,.35),1px 4px 6px rgba(0,0,0,.25)',
+	),
 );
 
 $style-definition: (
 	background-color: (
 		short-name: '.bg',
 		css-style: (
-			'background-color'
+			'background-color',
 		),
 		long-name: '.back',
-		unit: map-get($value-to-unit, 'percent')
+		unit: map-get($value-to-unit, 'percent'),
 	),
 	background-position: (
 		short-name: '.bg',
 		css-style: (
-			'background-position'
+			'background-position',
 		),
 		long-name: '.back',
-		unit: map-get($value-to-unit, 'background-position')
+		unit: map-get($value-to-unit, 'background-position'),
 	),
 	border-color: (
 		short-name: '.br',
 		css-style: (
-			'border-color'
+			'border-color',
 		),
 		long-name: '.border',
-		unit: map-get($value-to-unit, 'percent')
+		unit: map-get($value-to-unit, 'percent'),
 	),
 	border-style: (
 		short-name: '.br',
 		css-style: (
-			'border-style'
+			'border-style',
 		),
 		long-name: '.border',
-		unit: map-get($value-to-unit, 'border-style')
+		unit: map-get($value-to-unit, 'border-style'),
 	),
 	border-width: (
 		short-name: '.br',
 		css-style: (
-			'border-width'
+			'border-width',
 		),
 		long-name: '.border-width',
 		unit: map-get($value-to-unit, border-width),
-		alt: 'none'
+		alt: 'none',
 	),
 	border-top-width: (
 		short-name: '.br-t',
 		css-style: (
-			'border-top-width'
+			'border-top-width',
 		),
 		long-name: '.border-top-width',
 		unit: map-get($value-to-unit, border-width),
-		alt: 'none'
+		alt: 'none',
 	),
 	border-right-width: (
 		short-name: '.br-r',
 		css-style: (
-			'border-right-width'
+			'border-right-width',
 		),
 		long-name: '.border-right-width',
 		unit: map-get($value-to-unit, border-width),
-		alt: 'none'
+		alt: 'none',
 	),
 	border-left-width: (
 		short-name: '.br-l',
 		css-style: (
-			'border-left-width'
+			'border-left-width',
 		),
 		long-name: '.border-left-width',
 		unit: map-get($value-to-unit, border-width),
-		alt: 'none'
+		alt: 'none',
 	),
 	border-bottom-width: (
 		short-name: '.br-b',
 		css-style: (
-			'border-bottom-width'
+			'border-bottom-width',
 		),
 		long-name: '.border-bottom-width',
 		unit: map-get($value-to-unit, border-width),
-		alt: 'none'
+		alt: 'none',
 	),
 	border-radius: (
 		short-name: '.br',
 		css-style: (
-			'border-radius'
+			'border-radius',
 		),
 		long-name: '.radius',
-		unit: map-get($value-to-unit, 'radius')
+		unit: map-get($value-to-unit, 'radius'),
 	),
 	border-top-right-radius: (
 		short-name: '.br-tr',
 		css-style: (
-			'border-top-right-radius'
+			'border-top-right-radius',
 		),
 		long-name: '.border-top-right-radius',
-		unit: map-get($value-to-unit, 'radius')
+		unit: map-get($value-to-unit, 'radius'),
 	),
 	border-top-left-radius: (
 		short-name: '.br-tl',
 		css-style: (
-			'border-top-left-radius'
+			'border-top-left-radius',
 		),
 		long-name: '.border-top-left-radius',
-		unit: map-get($value-to-unit, 'radius')
+		unit: map-get($value-to-unit, 'radius'),
 	),
 	border-bottom-right-radius: (
 		short-name: '.br-br',
 		css-style: (
-			'border-bottom-right-radius'
+			'border-bottom-right-radius',
 		),
 		long-name: '.border-bottom-right-radius',
-		unit: map-get($value-to-unit, 'radius')
+		unit: map-get($value-to-unit, 'radius'),
 	),
 	border-bottom-left-radius: (
 		short-name: '.br-bl',
 		css-style: (
-			'border-bottom-left-radius'
+			'border-bottom-left-radius',
 		),
 		long-name: '.border-bottom-left-radius',
-		unit: map-get($value-to-unit, 'radius')
+		unit: map-get($value-to-unit, 'radius'),
 	),
 	box-shadow: (
 		short-name: '.shadow',
 		css-style: (
-			'box-shadow'
+			'box-shadow',
 		),
 		long-name: '.box-shadow',
 		unit: map-get($value-to-unit, 'shadow'),
-		alt: 'none'
+		alt: 'none',
 	),
 	rich-shadow: (
 		short-name: '.shadow',
 		css-style: (
-			'box-shadow'
+			'box-shadow',
 		),
 		long-name: '.rich-shadow',
 		unit: map-get($value-to-unit, 'rich-shadow'),
-		alt: 'none'
+		alt: 'none',
 	),
 	display: (
 		short-name: '.',
 		css-style: (
-			'display'
+			'display',
 		),
 		long-name: '.display',
 		unit: map-get($value-to-unit, 'display'),
-		alt: 'none'
+		alt: 'none',
 	),
 	text-align: (
 		short-name: '.text',
 		css-style: (
-			'text-align'
+			'text-align',
 		),
 		long-name: '.text-align',
 		unit: map-get($value-to-unit, 'text-align'),
-		alt: 'none'
+		alt: 'none',
 	),
 	color: (
 		short-name: '.c',
 		css-style: (
-			'color'
+			'color',
 		),
 		long-name: '.color',
-		unit: map-get($value-to-unit, 'percent')
+		unit: map-get($value-to-unit, 'percent'),
 	),
 	float: (
 		short-name: '.float',
 		css-style: (
-			'float'
+			'float',
 		),
 		long-name: '.float',
-		unit: map-get($value-to-unit, 'float')
+		unit: map-get($value-to-unit, 'float'),
 	),
 	font-family: (
 		short-name: '.font',
 		css-style: (
-			'font-family'
+			'font-family',
 		),
 		long-name: '.font-family',
-		unit: map-get($value-to-unit, 'font-family')
+		unit: map-get($value-to-unit, 'font-family'),
 	),
 	font-size: (
 		short-name: '.font',
 		css-style: (
-			'font-size'
+			'font-size',
 		),
 		long-name: '.font-size',
-		unit: map-get($value-to-unit, 'font-size')
+		unit: map-get($value-to-unit, 'font-size'),
 	),
 	font-weight: (
 		short-name: '.font',
 		css-style: (
-			'font-weight'
+			'font-weight',
 		),
 		long-name: '.font-weight',
-		unit: map-get($value-to-unit, 'font-weight')
+		unit: map-get($value-to-unit, 'font-weight'),
 	),
 	golden: (
 		short-name: '.font-golden',
 		css-style: (
-			'font-size'
+			'font-size',
 		),
 		long-name: '.font-size-golden',
-		unit: map-get($value-to-unit, 'font-size-golden')
+		unit: map-get($value-to-unit, 'font-size-golden'),
 	),
 	hover: (
 		short-name: 'h\\3A ',
 		css-style: (
-			'background-color'
+			'background-color',
 		),
 		long-name: 'hover\\3A ',
-		unit: map-get($value-to-unit, 'hover')
+		unit: map-get($value-to-unit, 'hover'),
 	),
 	is-active: (
 		short-name: '#{$active-class-name}>.a\\3A ',
 		css-style: (
-			'background-color'
+			'background-color',
 		),
 		long-name: '#{$active-class-name}>.#{$active-class-name}\\3A ',
-		unit: map-get($value-to-unit, 'active')
+		unit: map-get($value-to-unit, 'active'),
 	),
 	is-active-self: (
 		short-name: '#{$active-class-name}.a\\3A ',
 		css-style: (
-			'background-color'
+			'background-color',
 		),
 		long-name: '#{$active-class-name}.#{$active-class-name}\\3A ',
-		unit: map-get($value-to-unit, 'active')
+		unit: map-get($value-to-unit, 'active'),
 	),
 	active: (
 		short-name: 'a\\3A ',
 		css-style: (
-			'background-color'
+			'background-color',
 		),
 		long-name: 'active\:a ',
-		unit: map-get($value-to-unit, 'active')
+		unit: map-get($value-to-unit, 'active'),
 	),
 	visited: (
 		short-name: 'v\\3A ',
 		css-style: (
-			'background-color'
+			'background-color',
 		),
 		long-name: 'visited\\3A ',
-		unit: map-get($value-to-unit, 'visited')
+		unit: map-get($value-to-unit, 'visited'),
 	),
 	hover-bg: (
 		short-name: '.h\\3A bg',
 		css-style: (
-			'background-color'
+			'background-color',
 		),
 		long-name: '.hover\\3A back',
-		unit: map-get($value-to-unit, 'hover')
+		unit: map-get($value-to-unit, 'hover'),
 	),
 	hover-text: (
 		short-name: '.h\\3A c',
 		css-style: (
-			'color'
+			'color',
 		),
 		long-name: '.hover\\3A color',
 		unit: map-get($value-to-unit, 'hover'),
-		alt: 'none'
+		alt: 'none',
 	),
 	bottom: (
 		short-name: '.b',
 		css-style: (
-			'bottom'
+			'bottom',
 		),
 		long-name: '.bottom',
-		unit: map-get($value-to-unit, 'sizeAlt')
+		unit: map-get($value-to-unit, 'sizeAlt'),
 	),
 	left: (
 		short-name: '.l',
 		css-style: (
-			'left'
+			'left',
 		),
 		long-name: '.left',
-		unit: map-get($value-to-unit, 'sizeAlt')
+		unit: map-get($value-to-unit, 'sizeAlt'),
 	),
 	list-type: (
 		short-name: '.ul',
 		css-style: (
-			'list-style-type'
+			'list-style-type',
 		),
 		long-name: '.list',
-		unit: map-get($value-to-unit, 'list-type')
+		unit: map-get($value-to-unit, 'list-type'),
 	),
 	margin: (
 		short-name: '.m',
 		css-style: (
-			'margin'
+			'margin',
 		),
 		long-name: '.margin',
-		unit: map-get($value-to-unit, 'size')
+		unit: map-get($value-to-unit, 'size'),
 	),
 	margin-horizontal: (
 		short-name: '.m-x',
 		css-style: (
 			'margin-right',
-			'margin-left'
+			'margin-left',
 		),
 		long-name: '.margin-x',
-		unit: map-get($value-to-unit, 'size')
+		unit: map-get($value-to-unit, 'size'),
 	),
 	margin-vertical: (
 		short-name: '.m-y',
 		css-style: (
 			'margin-top',
-			'margin-bottom'
+			'margin-bottom',
 		),
 		long-name: '.margin-y',
-		unit: map-get($value-to-unit, 'size')
+		unit: map-get($value-to-unit, 'size'),
 	),
 	margin-top: (
 		short-name: '.m-t',
 		css-style: (
-			'margin-top'
+			'margin-top',
 		),
 		long-name: '.margin-top',
-		unit: map-get($value-to-unit, 'size')
+		unit: map-get($value-to-unit, 'size'),
 	),
 	margin-bottom: (
 		short-name: '.m-b',
 		css-style: (
-			'margin-bottom'
+			'margin-bottom',
 		),
 		long-name: '.margin-bottom',
-		unit: map-get($value-to-unit, 'size')
+		unit: map-get($value-to-unit, 'size'),
 	),
 	margin-left: (
 		short-name: '.m-l',
 		css-style: (
-			'margin-left'
+			'margin-left',
 		),
 		long-name: '.margin-left',
-		unit: map-get($value-to-unit, 'size')
+		unit: map-get($value-to-unit, 'size'),
 	),
 	margin-right: (
 		short-name: '.m-r',
 		css-style: (
-			'margin-right'
+			'margin-right',
 		),
 		long-name: '.margin-right',
-		unit: map-get($value-to-unit, 'size')
+		unit: map-get($value-to-unit, 'size'),
 	),
 	grid-column-gap: (
 		short-name: '.gap-x',
 		css-style: (
-			'grid-column-gap'
+			'grid-column-gap',
 		),
 		long-name: '.grid-column-gap',
-		unit: map-get($value-to-unit, 'size-positive')
+		unit: map-get($value-to-unit, 'size-positive'),
 	),
 	grid-row-gap: (
 		short-name: '.gap-y',
 		css-style: (
-			'grid-row-gap'
+			'grid-row-gap',
 		),
 		long-name: '.grid-row-gap',
-		unit: map-get($value-to-unit, 'size-positive')
+		unit: map-get($value-to-unit, 'size-positive'),
 	),
 	padding: (
 		short-name: '.p',
 		css-style: (
-			'padding'
+			'padding',
 		),
 		long-name: '.padding',
-		unit: map-get($value-to-unit, 'size-positive')
+		unit: map-get($value-to-unit, 'size-positive'),
 	),
 	padding-horizontal: (
 		short-name: '.p-x',
 		css-style: (
 			'padding-left',
-			'padding-right'
+			'padding-right',
 		),
 		long-name: '.padding-x',
-		unit: map-get($value-to-unit, 'size-positive')
+		unit: map-get($value-to-unit, 'size-positive'),
 	),
 	padding-vertical: (
 		short-name: '.p-y',
 		css-style: (
 			'padding-bottom',
-			'padding-top'
+			'padding-top',
 		),
 		long-name: '.padding-y',
-		unit: map-get($value-to-unit, 'size-positive')
+		unit: map-get($value-to-unit, 'size-positive'),
 	),
 	padding-top: (
 		short-name: '.p-t',
 		css-style: (
-			'padding-top'
+			'padding-top',
 		),
 		long-name: '.padding-top',
-		unit: map-get($value-to-unit, 'size-positive')
+		unit: map-get($value-to-unit, 'size-positive'),
 	),
 	padding-bottom: (
 		short-name: '.p-b',
 		css-style: (
-			'padding-bottom'
+			'padding-bottom',
 		),
 		long-name: '.padding-bottom',
-		unit: map-get($value-to-unit, 'size-positive')
+		unit: map-get($value-to-unit, 'size-positive'),
 	),
 	padding-left: (
 		short-name: '.p-l',
 		css-style: (
-			'padding-left'
+			'padding-left',
 		),
 		long-name: '.padding-left',
-		unit: map-get($value-to-unit, 'size-positive')
+		unit: map-get($value-to-unit, 'size-positive'),
 	),
 	padding-right: (
 		short-name: '.p-r',
 		css-style: (
-			'padding-right'
+			'padding-right',
 		),
 		long-name: '.padding-right',
-		unit: map-get($value-to-unit, 'size-positive')
+		unit: map-get($value-to-unit, 'size-positive'),
 	),
 	line-height: (
 		short-name: '.lh',
 		css-style: (
-			'line-height'
+			'line-height',
 		),
 		long-name: '.line-height',
-		unit: map-get($value-to-unit, 'line-height')
+		unit: map-get($value-to-unit, 'line-height'),
 	),
 	opacity: (
 		short-name: '.opacity',
 		css-style: (
-			'opacity'
+			'opacity',
 		),
 		long-name: '.opacity',
 		unit: map-get($value-to-unit, 'opacity'),
-		alt: 'none'
+		alt: 'none',
 	),
 	position: (
 		short-name: '.',
 		css-style: (
-			'position'
+			'position',
 		),
 		long-name: '.position',
 		unit: map-get($value-to-unit, 'position'),
-		alt: 'none'
+		alt: 'none',
 	),
 	background-transparent: (
 		short-name: '.bg',
 		css-style: (
-			'background-color'
+			'background-color',
 		),
 		long-name: '.back',
 		unit: map-get($value-to-unit, 'opacity'),
-		alt: 'none'
+		alt: 'none',
 	),
 	border-transparent: (
 		short-name: '.br',
 		css-style: (
-			'border-color'
+			'border-color',
 		),
 		long-name: '.border',
 		unit: map-get($value-to-unit, 'opacity'),
-		alt: 'none'
+		alt: 'none',
 	),
 	color-transparent: (
 		short-name: '.c',
 		css-style: (
-			'color'
+			'color',
 		),
 		long-name: '.color',
 		unit: map-get($value-to-unit, 'opacity'),
-		alt: 'none'
+		alt: 'none',
 	),
 	right: (
 		short-name: '.r',
 		css-style: (
-			'right'
+			'right',
 		),
 		long-name: '.right',
-		unit: map-get($value-to-unit, 'sizeAlt')
+		unit: map-get($value-to-unit, 'sizeAlt'),
 	),
 	top: (
 		short-name: '.t',
 		css-style: (
-			'top'
+			'top',
 		),
 		long-name: '.top',
-		unit: map-get($value-to-unit, 'sizeAlt')
+		unit: map-get($value-to-unit, 'sizeAlt'),
 	),
 	text-indent: (
 		short-name: '.text-indent',
 		css-style: (
-			'text-indent'
+			'text-indent',
 		),
 		long-name: '.text-indent',
 		unit: map-get($value-to-unit, 'text-indent'),
-		alt: 'none'
+		alt: 'none',
 	),
 	text-shadow: (
 		short-name: '.text-shadow',
 		css-style: (
-			'text-shadow'
+			'text-shadow',
 		),
 		long-name: '.text-shadow',
 		unit: map-get($value-to-unit, 'text-shadow'),
-		alt: 'none'
+		alt: 'none',
 	),
 	transition: (
 		short-name: '.transition',
 		css-style: (
-			'transition'
+			'transition',
 		),
 		long-name: '.transition',
 		unit: map-get($value-to-unit, 'transition'),
-		alt: 'none'
+		alt: 'none',
 	),
 	ease: (
 		short-name: '.ease',
 		css-style: (
-			'transition-timing-function'
+			'transition-timing-function',
 		),
 		long-name: '.ease',
 		unit: map-get($value-to-unit, 'ease'),
-		alt: 'none'
+		alt: 'none',
 	),
 	transform-origin: (
 		short-name: '.origin',
 		css-style: (
-			'transform-origin'
+			'transform-origin',
 		),
 		long-name: '.transform-origin',
 		unit: map-get($value-to-unit, 'transform-origin'),
-		alt: 'none'
+		alt: 'none',
 	),
 	scale: (
 		short-name: '.scale',
 		css-style: (
-			'transform'
+			'transform',
 		),
 		long-name: '.scale',
 		unit: map-get($value-to-unit, 'scale'),
-		alt: 'none'
+		alt: 'none',
 	),
 	grid-width: (
 		short-name: '.w-grid',
 		css-style: (
-			'width'
+			'width',
 		),
 		long-name: '.grid-width',
 		unit: map-get($value-to-unit, grid),
-		alt: 'none'
+		alt: 'none',
 	),
 	height-viewport: (
 		short-name: '.h',
 		css-style: (
-			'height'
+			'height',
 		),
 		long-name: '.height-viewport',
 		unit: map-get($value-to-unit, height-viewport),
-		alt: 'none'
+		alt: 'none',
 	),
 	min-height: (
 		short-name: '.min-h',
 		css-style: (
-			'min-height'
+			'min-height',
 		),
 		long-name: '.min-height',
 		unit: map-get($value-to-unit, height-viewport),
-		alt: 'none'
+		alt: 'none',
 	),
 	width: (
 		short-name: '.w',
 		css-style: (
-			'width'
+			'width',
 		),
 		long-name: '.width',
 		unit: map-get($value-to-unit, width-percent),
-		alt: 'none'
+		alt: 'none',
 	),
 	max-width: (
 		short-name: '.max-w',
 		css-style: (
-			'max-width'
+			'max-width',
 		),
 		long-name: '.max-width',
 		unit: map-get($value-to-unit, max-width),
-		alt: 'none'
+		alt: 'none',
 	),
 	z-index: (
 		short-name: '.z',
 		css-style: (
-			'z-index'
+			'z-index',
 		),
 		long-name: '.z-index',
 		unit: map-get($value-to-unit, z-index),
-		alt: 'none'
-	)
+		alt: 'none',
+	),
 );
 
 $margin_0: get-css-size(margin, 0);
@@ -1106,6 +1107,7 @@ $font_n3: get-css-size(font-size, n3);
 $font_n4: get-css-size(font-size, n4);
 $font_n5: get-css-size(font-size, n5);
 $font_bold: get-css-size(font-weight, bold);
+$font_medium: get-css-size(font-weight, medium);
 $font_xbold: get-css-size(font-weight, xbold);
 $font_light: get-css-size(font-weight, light);
 $font_regular: get-css-size(font-weight, regular);
