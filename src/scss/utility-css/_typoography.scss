@@ -12,13 +12,13 @@ $white: rgb(246, 246, 246) !default;
 $black: rgb(19, 18, 18) !default;
 
 .font_unset {
-	font-style: unset;
-	font-weight: unset;
-	font-size: unset;
-	text-decoration: unset;
-	text-align: unset;
-	text-transform: unset;
-	white-space: unset;
+  font-style: unset;
+  font-weight: unset;
+  font-size: unset;
+  text-decoration: unset;
+  text-align: unset;
+  text-transform: unset;
+  white-space: unset;
 }
 
 /*
@@ -60,11 +60,11 @@ $black: rgb(19, 18, 18) !default;
   Styleguide Typography.Font.Style
  */
 .font_normal {
-	font-style: normal !important;
+  font-style: normal !important;
 }
 
 .font_italic {
-	font-style: italic !important;
+  font-style: italic !important;
 }
 
 /*
@@ -91,7 +91,7 @@ Styleguide Typography.Font.Color
  */
 
 @each $color-name, $hex-value in $theme-palette {
-	@include color-loop(color, $color-name, $hex-value);
+  @include color-loop(color, $color-name, $hex-value);
 }
 
 /*
@@ -167,18 +167,18 @@ Styleguide Typography.Font.Color Transparency
  */
 
 .c_white {
-	color: $white !important;
+  color: $white !important;
 }
 
 .c_black {
-	color: $black !important;
+  color: $black !important;
 }
 
 @include loop-transparent(color-transparent, 'black', '', '!important', false);
 @include loop-transparent(color-transparent, 'white', '', '!important', false);
 
 .c_inherit {
-	color: inherit;
+  color: inherit;
 }
 
 /*
@@ -187,7 +187,8 @@ Styleguide Typography.Font.Color Transparency
   You can change the features of the text with some simple use classes.
 
   .font_light            -  Light, 100
-  .font_regular          -  Regular, 400           
+  .font_regular          -  Regular, 300   
+  .font_medium           -  Medium, 500         
   .font_bold             -  Bold, 700 
   .font_xbold            -  Extra Bold, 900
 
@@ -250,22 +251,22 @@ Styleguide Typography.Font.Color Transparency
 @include loop-style(font-size);
 
 @media #{$medium-up} {
-	@include loop-style(font-size, $bp-label_medium, '');
+  @include loop-style(font-size, $bp-label_medium, '');
 }
 
 @media #{$large-up} {
-	@include loop-style(font-size, $bp-label_large, '');
+  @include loop-style(font-size, $bp-label_large, '');
 }
 
 @media #{$xlarge-up} {
-	@include loop-style(font-size, $bp-label_xlarge, '');
+  @include loop-style(font-size, $bp-label_xlarge, '');
 }
 
 .font-size_up {
-	font-size: calc(1em * #{$ms-ratio});
+  font-size: calc(1em * #{$ms-ratio});
 }
 .font-size_down {
-	font-size: calc(1em /#{$ms-ratio});
+  font-size: calc(1em /#{$ms-ratio});
 }
 /*
   Text Wrap
@@ -285,46 +286,46 @@ Styleguide Typography.Font.Color Transparency
  */
 
 .wrap {
-	white-space: normal;
+  white-space: normal;
 }
 
 .pre-wrap {
-	white-space: pre-wrap;
-	letter-spacing: -0.01em;
+  white-space: pre-wrap;
+  letter-spacing: -0.01em;
 }
 
 .nowrap {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 @media #{$medium-up} {
-	.wrap\:md {
-		white-space: normal;
-	}
+  .wrap\:md {
+    white-space: normal;
+  }
 
-	.pre-wrap\:md {
-		white-space: pre-wrap;
-		letter-spacing: -0.01em;
-	}
+  .pre-wrap\:md {
+    white-space: pre-wrap;
+    letter-spacing: -0.01em;
+  }
 
-	.nowrap\:md {
-		white-space: nowrap;
-	}
+  .nowrap\:md {
+    white-space: nowrap;
+  }
 }
 
 @media #{$large-up} {
-	.wrap\:lg {
-		white-space: normal;
-	}
+  .wrap\:lg {
+    white-space: normal;
+  }
 
-	.pre-wrap\:lg {
-		white-space: pre-wrap;
-		letter-spacing: -0.01em;
-	}
+  .pre-wrap\:lg {
+    white-space: pre-wrap;
+    letter-spacing: -0.01em;
+  }
 
-	.nowrap\:lg {
-		white-space: nowrap;
-	}
+  .nowrap\:lg {
+    white-space: nowrap;
+  }
 }
 
 /*
@@ -348,34 +349,34 @@ Styleguide Typography.Font.Color Transparency
 
  */
 .lowercase {
-	text-transform: lowercase;
+  text-transform: lowercase;
 }
 
 .uppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 .capitalize {
-	text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .underline {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .dotted {
-	text-decoration: dotted;
+  text-decoration: dotted;
 }
 
 .double {
-	text-decoration: double;
+  text-decoration: double;
 }
 
 .dashed {
-	text-decoration: dashed;
+  text-decoration: dashed;
 }
 
 .undecorated {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /*
@@ -460,11 +461,11 @@ Styleguide Typography.Text.Indent
  */
 @include loop-style(text-align, '', '!important');
 @media #{$medium-up} {
-	@include loop-style(text-align, $bp-label_medium, '!important');
+  @include loop-style(text-align, $bp-label_medium, '!important');
 }
 
 @media #{$large-up} {
-	@include loop-style(text-align, $bp-label_large, '!important');
+  @include loop-style(text-align, $bp-label_large, '!important');
 }
 
 /*
@@ -492,7 +493,7 @@ Styleguide Typography.Text.Indent
  */
 // list with no decoration shouldn't have a padding
 .ul_none {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 @include loop-style(list-type, '', '!important');

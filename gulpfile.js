@@ -464,26 +464,18 @@ gulp.task(
 gulp.task(
 	"build-virtual",
 	gulp.series(
-		function() {
+		function SCSS() {
 			var brand = "virtual";
 			var framework = "boot";
 			var base = constructFrameworkStyleSheet(brand, framework);
 			base = buildbrand(base, brand, framework);
-			merge(base)
-				.pipe(header("/** Test 7 **/\n"))
-				.pipe(gulp.dest(PATHS.SCSS));
-			return runSass(brand);
-		},
-		function() {
-			var brand = "virtual";
 			var uc = constructUCStyleSheet(brand);
 			uc = buildbrand(uc, brand, "");
-			merge(uc)
+			return merge(base,uc)
 				.pipe(header("/** Test 7 **/\n"))
 				.pipe(gulp.dest(PATHS.SCSS));
-			return runSass(brand);
 		},
-		function() {
+		function MD() {
 			var brand = "virtual";
 			var framework = "boot";
 			var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
@@ -498,12 +490,16 @@ gulp.task(
 					)
 				)
 				.pipe(gulp.dest(SOURCE.MD));
-		},function() {
+		},
+		function CSS() {
+			return runSass("virtual");
+		},
+		function Concat() {
 			return concatCSS("virtual", "boot");
 		},
 		"dist",
 		"copy-to-styleguide",
-		function() {
+		function styleguide() {
 			return run("npm run boot_virtual").exec();
 		}
 	)
