@@ -56,42 +56,7 @@
 
 // custom code.
 ( function () {
-  $( '.arches_site-nav' ).addClass( function () {
-    var path = "";
-    if ( window.location.href.split( '/' ).indexOf( 'Arches' ) != -1 ) {
-      path = window.location.href.split( '/' )[ window.location.href.split( '/' ).indexOf( 'Arches' ) + 1 ];
-
-    } else {
-      path = window.location.href.split( '/' )[ 3 ];
-    }
-    switch ( path ) {
-      case "uconly_acc":
-        path = "uconly_acc";
-        break;
-      case "boot_acc":
-        path = "boot_acc";
-        break;
-      case "boot_cvquality":
-        path = "boot_cvquality";
-        break;
-      case "zurb_acc":
-        path = "zurb_acc";
-        break;
-      case "color_codes":
-        path = "color_codes";
-        break;
-      case "layout_demo":
-        path = "layout_demo";
-        break;
-      case "uc_cardiosmart":
-        path = "uc_cardiosmart";
-        break;
-      default:
-        path = "home_nav";
-        break;
-    }
-    return path;
-  } );
+ 
 
   // navigation.
   $( '.kss-header__hamburger-trigger' ).on( 'click', function ( e ) {
