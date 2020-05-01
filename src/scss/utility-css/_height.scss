@@ -2,17 +2,17 @@
 	height: unset;
 }
 
-@include loop-style(height-viewport, "", "");
-@include loop-style(min-height, "", "");
+@include loop-style(height-viewport, '', '');
+@include loop-style(min-height, '', '');
 
 @media #{$medium-up} {
-	@include loop-style(height-viewport, $bp-label_medium, "");
-	@include loop-style(min-height, $bp-label_medium, "");
+	@include loop-style(height-viewport, $bp-label_medium, '');
+	@include loop-style(min-height, $bp-label_medium, '');
 }
 
 @media #{$large-up} {
-	@include loop-style(height-viewport, $bp-label_large, "");
-	@include loop-style(min-height, $bp-label_large, "");
+	@include loop-style(height-viewport, $bp-label_large, '');
+	@include loop-style(min-height, $bp-label_large, '');
 }
 
 /*
@@ -23,25 +23,94 @@ It is rare to use height but at times it is useful to set a matching set of card
 
 Markup:
 <div class="flex p_4 bg_primary-4">
-<div class="flex_auto br_solid br_white br_1 bg_primary h_auto">.h_auto</div> 
-<div class="flex_auto br_solid br_white br_1 bg_primary h_0">.h_0</div>    
-<div class="flex_auto br_solid br_white br_1 bg_primary h_10">.h_10</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_20">.h_20</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_30">.h_30</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_40">.h_40</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_50">.h_50</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_60">.h_60</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_70">.h_70</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_80">.h_80</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_90">.h_90</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_100">.h_100</div>  
-<div class="flex_auto br_solid br_white br_1 bg_primary h_60 h_unset:lg">.h_60.h_unset:lg</div>
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_auto">.h_auto</div> 
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_0">.h_0</div>    
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_10">.h_10</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_20">.h_20</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_30">.h_30</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_40">.h_40</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_50">.h_50</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_60">.h_60</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_70">.h_70</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_80">.h_80</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_90">.h_90</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_100">.h_100</div>  
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_60 h_unset:lg">.h_60.h_unset:lg</div>
 </div>
 
   Weight: 107
 
   Styleguide Height
  
+ */
+/*
+UC: Height LH
+
+<table>
+	<thead>
+		<tr>
+			<th>Classes</th>
+			<th>Effect</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>.h_0lh</td>
+			<td>height: 1em</td>
+		</tr>
+		<tr>
+			<td>.h_1lh</td>
+			<td>height: 1.25em</td>
+		</tr>
+		<tr>
+			<td>.h_2lh</td>
+			<td>height: 1.45em</td>
+		</tr>
+		<tr>
+			<td>.h_3lh</td>
+			<td>height: 1.65em</td>
+		</tr>
+        <tr>
+            <td>.h_4lh</td>
+            <td>height: 1.75em</td>
+        </tr>
+                <tr>
+                    <td>.h_5lh</td>
+                    <td>height: 2em</td>
+                </tr>
+	</tbody>
+</table>
+
+Markup:
+<div class="flex flex_column font_1">
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_0lh lh_0">font_1 text with h_0lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_1lh lh_1">font_1 text with h_1lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_2lh lh_2">font_1 text with h_2lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_3lh lh_3">font_1 text with h_3lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_4lh lh_4">font_1 text with h_4lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_5lh lh_5">font_1 text with h_5lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+</div>
+<div class="flex flex_column font_2">
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_0lh lh_0">font_2 text with h_0lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_1lh lh_1">font_2 text with h_1lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_2lh lh_2">font_2 text with h_2lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_3lh lh_3">font_2 text with h_3lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_4lh lh_4">font_2 text with h_4lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_5lh lh_5">font_2 text with h_5lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+</div>
+<div class="flex flex_column font_3">
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_0lh lh_0">font_3 text with h_0lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_1lh lh_1">font_3 text with h_1lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_2lh lh_2">font_3 text with h_2lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_3lh lh_3">font_3 text with h_3lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_4lh lh_4">font_3 text with h_4lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_5lh lh_5">font_3 text with h_5lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+</div>
+
+Weight: 107
+
+Styleguide Height.lh
+
  */
 /*
 Min Height
@@ -52,19 +121,19 @@ Min heights can be very useful in interactions and keeping a consistent dimensio
 
 Markup:
 <div class="flex p_4 bg_primary-4">
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_auto">.min-h_auto</div> 
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_0">.min-h_0</div>    
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_10">.min-h_10</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_20">.min-h_20</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_30">.min-h_30</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_40">.min-h_40</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_50">.min-h_50</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_60">.min-h_60</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_70">.min-h_70</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_80">.min-h_80</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_90">.min-h_90</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_100">.min-h_100</div>  
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_60 min-h_unset:lg">.min-h_60.min-h_unset:lg</div>
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_auto">.min-h_auto</div> 
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_0">.min-h_0</div>    
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_10">.min-h_10</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_20">.min-h_20</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_30">.min-h_30</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_40">.min-h_40</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_50">.min-h_50</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_60">.min-h_60</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_70">.min-h_70</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_80">.min-h_80</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_90">.min-h_90</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_100">.min-h_100</div>  
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_60 min-h_unset:lg">.min-h_60.min-h_unset:lg</div>
 </div>
 
   Weight: 107
