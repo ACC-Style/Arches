@@ -37,16 +37,10 @@ Markup:
 
 Styleguide InteractiveExtras.Placeholder Aspect Ratio
 */
-.lorem-loader {
-	opacity: 0.5;
-}
-
 div[class*='aspect_'],
 .lorem-loader {
 	width: 100%;
 	overflow: hidden;
-	text-indent: -9999px;
-
 	&:before {
 		content: '';
 		width: 1px;
@@ -60,28 +54,28 @@ div[class*='aspect_'],
 		clear: both;
 	}
 }
-.aspect_2x1 {
+.aspect_2x1:before {
 	padding-top: 2/1 * 100%;
 }
-.aspect_1x1 {
+.aspect_1x1:before {
 	padding-top: 1/1 * 100%;
 }
-.aspect_1x2 {
+.aspect_1x2:before {
 	padding-top: 1/2 * 100%;
 }
-.aspect_4x3 {
+.aspect_4x3:before {
 	padding-top: 3/4 * 100%;
 }
-.aspect_3x2 {
+.aspect_3x2:before {
 	padding-top: 2/3 * 100%;
 }
-.aspect_16x9 {
+.aspect_16x9:before {
 	padding-top: 9/16 * 100%;
 }
-.aspect_21x9 {
+.aspect_21x9:before {
 	padding-top: 9/21 * 100%;
 }
-.aspect_4x1 {
+.aspect_4x1:before {
 	padding-top: 1/4 * 100%;
 }
 .lorem-loader {

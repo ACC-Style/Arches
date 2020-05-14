@@ -1150,15 +1150,10 @@ Markup:
 
 Styleguide InteractiveExtras.Placeholder Aspect Ratio
 */
-.lorem-loader {
-  opacity: 0.5;
-}
-
 div[class*=aspect_],
 .lorem-loader {
   width: 100%;
   overflow: hidden;
-  text-indent: -9999px;
 }
 div[class*=aspect_]:before,
 .lorem-loader:before {
@@ -1175,35 +1170,35 @@ div[class*=aspect_]:after,
   content: "";
 }
 
-.aspect_2x1 {
+.aspect_2x1:before {
   padding-top: 200%;
 }
 
-.aspect_1x1 {
+.aspect_1x1:before {
   padding-top: 100%;
 }
 
-.aspect_1x2 {
+.aspect_1x2:before {
   padding-top: 50%;
 }
 
-.aspect_4x3 {
+.aspect_4x3:before {
   padding-top: 75%;
 }
 
-.aspect_3x2 {
+.aspect_3x2:before {
   padding-top: 66.6666666667%;
 }
 
-.aspect_16x9 {
+.aspect_16x9:before {
   padding-top: 56.25%;
 }
 
-.aspect_21x9 {
+.aspect_21x9:before {
   padding-top: 42.8571428571%;
 }
 
-.aspect_4x1 {
+.aspect_4x1:before {
   padding-top: 25%;
 }
 
@@ -7800,19 +7795,24 @@ Weight:0
 Styleguide  display.Grid.Template
 */
 .template-x_15 {
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fill, 50%);
 }
 
-.template-x_20,.template-x_25,
+.template-x_20,
+.template-x_25,
 .template-x_30,
 .template-x_35,
 .template-x_40 {
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, 100%);
 }
 
 @media only screen and (min-width : 768px) {
 
-  .template-x_25,.template-x_30 {
+  .template-x_20,.template-x_25 {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 0.5fr));
+  }
+
+  .template-x_30 {
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   }
 
@@ -7826,11 +7826,11 @@ Styleguide  display.Grid.Template
 }
 @media only screen and (min-width : 1024px) {
   .template-x_25 {
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 0.333fr));
   }
 
   .template-x_30 {
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 0.5fr));
   }
 
   .template-x_35 {

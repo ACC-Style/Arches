@@ -681,7 +681,7 @@ h5,
 h6 {
   margin: 16px 0 8px;
   margin: 1rem 0 0.5rem;
-  line-height: 1.45;
+  line-height: 1.65;
 }
 
 p {
@@ -690,7 +690,7 @@ p {
 
 p,ul,
 ol {
-  line-height: 1.75;
+  line-height: 2.1;
 }
 
 body {
@@ -794,7 +794,7 @@ textarea {
   padding: 0.25rem 0.5rem;
   border-width: thin;
   border-color: rgba(19, 18, 18, 0.25);
-  line-height: 1.25;
+  line-height: 1.35;
 }
 
 [type=date],
@@ -1170,15 +1170,10 @@ Markup:
 
 Styleguide InteractiveExtras.Placeholder Aspect Ratio
 */
-.lorem-loader {
-  opacity: 0.5;
-}
-
 div[class*=aspect_],
 .lorem-loader {
   width: 100%;
   overflow: hidden;
-  text-indent: -9999px;
 }
 div[class*=aspect_]:before,
 .lorem-loader:before {
@@ -1195,35 +1190,35 @@ div[class*=aspect_]:after,
   content: "";
 }
 
-.aspect_2x1 {
+.aspect_2x1:before {
   padding-top: 200%;
 }
 
-.aspect_1x1 {
+.aspect_1x1:before {
   padding-top: 100%;
 }
 
-.aspect_1x2 {
+.aspect_1x2:before {
   padding-top: 50%;
 }
 
-.aspect_4x3 {
+.aspect_4x3:before {
   padding-top: 75%;
 }
 
-.aspect_3x2 {
+.aspect_3x2:before {
   padding-top: 66.6666666667%;
 }
 
-.aspect_16x9 {
+.aspect_16x9:before {
   padding-top: 56.25%;
 }
 
-.aspect_21x9 {
+.aspect_21x9:before {
   padding-top: 42.8571428571%;
 }
 
-.aspect_4x1 {
+.aspect_4x1:before {
   padding-top: 25%;
 }
 
@@ -3665,19 +3660,19 @@ Styleguide Typography.Text.Indent
 }
 
 .lh_1 {
-  line-height: 1.25 !important;
+  line-height: 1.35 !important;
 }
 
 .lh_2 {
-  line-height: 1.45 !important;
-}
-
-.lh_3 {
   line-height: 1.65 !important;
 }
 
+.lh_3 {
+  line-height: 1.85 !important;
+}
+
 .lh_4 {
-  line-height: 1.75 !important;
+  line-height: 2.1 !important;
 }
 
 .lh_5 {
@@ -3865,10 +3860,6 @@ Markup:
 Styleguide Spacing.Margin
 
  */
-.m_auto {
-  margin: 0 auto;
-}
-
 .m_0 {
   margin: 0  !important;
 }
@@ -7067,7 +7058,7 @@ Styleguide display.z-index
   /* 1 */
 }
 
-.flex_expand {
+.flex_grow {
   flex: 1 0 auto;
   min-width: 0;
   /* 1 */
@@ -8064,41 +8055,61 @@ Styleguide Width
 */
 /* No styleguide reference. */
 /*
-10% Width 
+Width 
 
-Control the width either with 12 x grid messurments or by 10% increments.
-
-.w_10 - Grid Width of 10% out of 100% 
-.w_50 - Grid Width of 50% out of 100%
-.w_70 - Grid Width of 70% out of 100% 
-.w_90 - Grid Width of 90% out of 100%
-
-
-Markup:
-<div class=" br_solid br_transparent bg_alert-5 p_5">
-	<div class="bg_white text-left {{modifier_class}}">{{modifier_class}} </div>
+Control the width percents.  
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> [modifier class] <div class="bg_primary p-y_2 text-left [modifier class] m-t_3"> &nbsp; </div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_auto <div class="bg_primary p-y_2 text-left w_auto m-t_3"> &nbsp; </div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_0 <div class="bg_primary p-y_2 text-left w_0 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_5 <div class="bg_primary p-y_2 text-left w_5 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_10 <div class="bg_primary p-y_2 text-left w_10 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_15 <div class="bg_primary p-y_2 text-left w_15 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_20 <div class="bg_primary p-y_2 text-left w_20 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_25 <div class="bg_primary p-y_2 text-left w_25 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_30 <div class="bg_primary p-y_2 text-left w_30 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_35 <div class="bg_primary p-y_2 text-left w_35 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_40 <div class="bg_primary p-y_2 text-left w_40 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_45 <div class="bg_primary p-y_2 text-left w_45 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_50 <div class="bg_primary p-y_2 text-left w_50 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_55 <div class="bg_primary p-y_2 text-left w_55 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_60 <div class="bg_primary p-y_2 text-left w_60 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_65 <div class="bg_primary p-y_2 text-left w_65 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_70 <div class="bg_primary p-y_2 text-left w_70 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_75 <div class="bg_primary p-y_2 text-left w_75 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_80 <div class="bg_primary p-y_2 text-left w_80 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_85 <div class="bg_primary p-y_2 text-left w_85 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_90 <div class="bg_primary p-y_2 text-left w_90 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_95 <div class="bg_primary p-y_2 text-left w_95 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_100 <div class="bg_primary p-y_2 text-left w_100 m-t_3">&nbsp;</div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_1-third <div class="bg_primary p-y_2 text-left w_1-third m-t_3"> &nbsp; </div>
+</div>
+<div class=" br_solid br_black-1 br_1 bg_highlight-5 p-y_3"> w_2-thirds <div class="bg_primary p-y_2 text-left w_2-thirds m-t_3"> &nbsp; </div>
 </div>
 
-Styleguide Width.Tens
-
- */
-/*
-Grid Width 
-
-Control the width either with 12 x grid messurments or by 10% increments.
-
-.w-grid_2 - Grid Width of 2 columns of 12 columns  
-.w-grid_6 - Grid Width of 6 columns of 12 columns 
-.w-grid_8 - Grid Width of 8 columns of 12 columns  
-.w-grid_9 - Grid Width of 9 columns of 12 columns 
-
-
-Markup:
-<div class=" br_solid br_transparent bg_alert-5 p_5">
-	<div class="bg_white text-left {{modifier_class}}">{{modifier_class}} </div>
-</div>
-
-Styleguide Width.Grid
+Styleguide Width
 
  */
 .w_auto {
@@ -8109,92 +8120,92 @@ Styleguide Width.Grid
   width: 0% !important;
 }
 
+.w_5 {
+  width: 5% !important;
+}
+
 .w_10 {
   width: 10% !important;
+}
+
+.w_15 {
+  width: 15% !important;
 }
 
 .w_20 {
   width: 20% !important;
 }
 
+.w_25 {
+  width: 25% !important;
+}
+
 .w_30 {
   width: 30% !important;
+}
+
+.w_35 {
+  width: 35% !important;
 }
 
 .w_40 {
   width: 40% !important;
 }
 
+.w_45 {
+  width: 45% !important;
+}
+
 .w_50 {
   width: 50% !important;
+}
+
+.w_55 {
+  width: 55% !important;
 }
 
 .w_60 {
   width: 60% !important;
 }
 
+.w_65 {
+  width: 65% !important;
+}
+
 .w_70 {
   width: 70% !important;
+}
+
+.w_75 {
+  width: 75% !important;
 }
 
 .w_80 {
   width: 80% !important;
 }
 
+.w_85 {
+  width: 85% !important;
+}
+
 .w_90 {
   width: 90% !important;
+}
+
+.w_95 {
+  width: 95% !important;
 }
 
 .w_100 {
   width: 100% !important;
 }
 
-.w-grid_1 {
-  width: 8.3333333333% !important;
+.w_1-third {
+  width: 33% !important;
 }
 
-.w-grid_2 {
-  width: 16.6666666667% !important;
-}
-
-.w-grid_3 {
-  width: 25% !important;
-}
-
-.w-grid_4 {
-  width: 33.3333333333% !important;
-}
-
-.w-grid_5 {
-  width: 41.6666666667% !important;
-}
-
-.w-grid_6 {
-  width: 50% !important;
-}
-
-.w-grid_7 {
-  width: 58.3333333333% !important;
-}
-
-.w-grid_8 {
-  width: 66.6666666667% !important;
-}
-
-.w-grid_9 {
-  width: 75% !important;
-}
-
-.w-grid_10 {
-  width: 83.3333333333% !important;
-}
-
-.w-grid_11 {
-  width: 91.6666666667% !important;
-}
-
-.w-grid_12 {
-  width: 100% !important;
+.w_2-thirds {
+  width: 66% !important;
 }
 
 .max-w_0 {
@@ -8305,92 +8316,92 @@ Styleguide Width.Grid
     width: 0% !important;
   }
 
+  .w_5\:md {
+    width: 5% !important;
+  }
+
   .w_10\:md {
     width: 10% !important;
+  }
+
+  .w_15\:md {
+    width: 15% !important;
   }
 
   .w_20\:md {
     width: 20% !important;
   }
 
+  .w_25\:md {
+    width: 25% !important;
+  }
+
   .w_30\:md {
     width: 30% !important;
+  }
+
+  .w_35\:md {
+    width: 35% !important;
   }
 
   .w_40\:md {
     width: 40% !important;
   }
 
+  .w_45\:md {
+    width: 45% !important;
+  }
+
   .w_50\:md {
     width: 50% !important;
+  }
+
+  .w_55\:md {
+    width: 55% !important;
   }
 
   .w_60\:md {
     width: 60% !important;
   }
 
+  .w_65\:md {
+    width: 65% !important;
+  }
+
   .w_70\:md {
     width: 70% !important;
+  }
+
+  .w_75\:md {
+    width: 75% !important;
   }
 
   .w_80\:md {
     width: 80% !important;
   }
 
+  .w_85\:md {
+    width: 85% !important;
+  }
+
   .w_90\:md {
     width: 90% !important;
+  }
+
+  .w_95\:md {
+    width: 95% !important;
   }
 
   .w_100\:md {
     width: 100% !important;
   }
 
-  .w-grid_1\:md {
-    width: 8.3333333333% !important;
+  .w_1-third\:md {
+    width: 33% !important;
   }
 
-  .w-grid_2\:md {
-    width: 16.6666666667% !important;
-  }
-
-  .w-grid_3\:md {
-    width: 25% !important;
-  }
-
-  .w-grid_4\:md {
-    width: 33.3333333333% !important;
-  }
-
-  .w-grid_5\:md {
-    width: 41.6666666667% !important;
-  }
-
-  .w-grid_6\:md {
-    width: 50% !important;
-  }
-
-  .w-grid_7\:md {
-    width: 58.3333333333% !important;
-  }
-
-  .w-grid_8\:md {
-    width: 66.6666666667% !important;
-  }
-
-  .w-grid_9\:md {
-    width: 75% !important;
-  }
-
-  .w-grid_10\:md {
-    width: 83.3333333333% !important;
-  }
-
-  .w-grid_11\:md {
-    width: 91.6666666667% !important;
-  }
-
-  .w-grid_12\:md {
-    width: 100% !important;
+  .w_2-thirds\:md {
+    width: 66% !important;
   }
 
   .max-w_0\:md {
@@ -8482,92 +8493,92 @@ Styleguide Width.Grid
     width: 0% !important;
   }
 
+  .w_5\:lg {
+    width: 5% !important;
+  }
+
   .w_10\:lg {
     width: 10% !important;
+  }
+
+  .w_15\:lg {
+    width: 15% !important;
   }
 
   .w_20\:lg {
     width: 20% !important;
   }
 
+  .w_25\:lg {
+    width: 25% !important;
+  }
+
   .w_30\:lg {
     width: 30% !important;
+  }
+
+  .w_35\:lg {
+    width: 35% !important;
   }
 
   .w_40\:lg {
     width: 40% !important;
   }
 
+  .w_45\:lg {
+    width: 45% !important;
+  }
+
   .w_50\:lg {
     width: 50% !important;
+  }
+
+  .w_55\:lg {
+    width: 55% !important;
   }
 
   .w_60\:lg {
     width: 60% !important;
   }
 
+  .w_65\:lg {
+    width: 65% !important;
+  }
+
   .w_70\:lg {
     width: 70% !important;
+  }
+
+  .w_75\:lg {
+    width: 75% !important;
   }
 
   .w_80\:lg {
     width: 80% !important;
   }
 
+  .w_85\:lg {
+    width: 85% !important;
+  }
+
   .w_90\:lg {
     width: 90% !important;
+  }
+
+  .w_95\:lg {
+    width: 95% !important;
   }
 
   .w_100\:lg {
     width: 100% !important;
   }
 
-  .w-grid_1\:lg {
-    width: 8.3333333333% !important;
+  .w_1-third\:lg {
+    width: 33% !important;
   }
 
-  .w-grid_2\:lg {
-    width: 16.6666666667% !important;
-  }
-
-  .w-grid_3\:lg {
-    width: 25% !important;
-  }
-
-  .w-grid_4\:lg {
-    width: 33.3333333333% !important;
-  }
-
-  .w-grid_5\:lg {
-    width: 41.6666666667% !important;
-  }
-
-  .w-grid_6\:lg {
-    width: 50% !important;
-  }
-
-  .w-grid_7\:lg {
-    width: 58.3333333333% !important;
-  }
-
-  .w-grid_8\:lg {
-    width: 66.6666666667% !important;
-  }
-
-  .w-grid_9\:lg {
-    width: 75% !important;
-  }
-
-  .w-grid_10\:lg {
-    width: 83.3333333333% !important;
-  }
-
-  .w-grid_11\:lg {
-    width: 91.6666666667% !important;
-  }
-
-  .w-grid_12\:lg {
-    width: 100% !important;
+  .w_2-thirds\:lg {
+    width: 66% !important;
   }
 
   .max-w_0\:lg {
@@ -8735,6 +8746,30 @@ Styleguide Width.MaxWidth
   height: unset;
 }
 
+.h_0lh {
+  height: 1em;
+}
+
+.h_1lh {
+  height: 1.25em;
+}
+
+.h_2lh {
+  height: 1.45em;
+}
+
+.h_3lh {
+  height: 1.65em;
+}
+
+.h_4lh {
+  height: 1.75em;
+}
+
+.h_5lh {
+  height: 2.5em;
+}
+
 .min-h_auto {
   min-height: auto;
 }
@@ -8785,6 +8820,30 @@ Styleguide Width.MaxWidth
 
 .min-h_unset {
   min-height: unset;
+}
+
+.min-h_0lh {
+  min-height: 1em;
+}
+
+.min-h_1lh {
+  min-height: 1.25em;
+}
+
+.min-h_2lh {
+  min-height: 1.45em;
+}
+
+.min-h_3lh {
+  min-height: 1.65em;
+}
+
+.min-h_4lh {
+  min-height: 1.75em;
+}
+
+.min-h_5lh {
+  min-height: 2.5em;
 }
 
 @media only screen and (min-width : 768px) {
@@ -8840,6 +8899,30 @@ Styleguide Width.MaxWidth
     height: unset;
   }
 
+  .h_0lh\:md {
+    height: 1em;
+  }
+
+  .h_1lh\:md {
+    height: 1.25em;
+  }
+
+  .h_2lh\:md {
+    height: 1.45em;
+  }
+
+  .h_3lh\:md {
+    height: 1.65em;
+  }
+
+  .h_4lh\:md {
+    height: 1.75em;
+  }
+
+  .h_5lh\:md {
+    height: 2.5em;
+  }
+
   .min-h_auto\:md {
     min-height: auto;
   }
@@ -8890,6 +8973,30 @@ Styleguide Width.MaxWidth
 
   .min-h_unset\:md {
     min-height: unset;
+  }
+
+  .min-h_0lh\:md {
+    min-height: 1em;
+  }
+
+  .min-h_1lh\:md {
+    min-height: 1.25em;
+  }
+
+  .min-h_2lh\:md {
+    min-height: 1.45em;
+  }
+
+  .min-h_3lh\:md {
+    min-height: 1.65em;
+  }
+
+  .min-h_4lh\:md {
+    min-height: 1.75em;
+  }
+
+  .min-h_5lh\:md {
+    min-height: 2.5em;
   }
 }
 @media only screen and (min-width : 1024px) {
@@ -8945,6 +9052,30 @@ Styleguide Width.MaxWidth
     height: unset;
   }
 
+  .h_0lh\:lg {
+    height: 1em;
+  }
+
+  .h_1lh\:lg {
+    height: 1.25em;
+  }
+
+  .h_2lh\:lg {
+    height: 1.45em;
+  }
+
+  .h_3lh\:lg {
+    height: 1.65em;
+  }
+
+  .h_4lh\:lg {
+    height: 1.75em;
+  }
+
+  .h_5lh\:lg {
+    height: 2.5em;
+  }
+
   .min-h_auto\:lg {
     min-height: auto;
   }
@@ -8996,6 +9127,30 @@ Styleguide Width.MaxWidth
   .min-h_unset\:lg {
     min-height: unset;
   }
+
+  .min-h_0lh\:lg {
+    min-height: 1em;
+  }
+
+  .min-h_1lh\:lg {
+    min-height: 1.25em;
+  }
+
+  .min-h_2lh\:lg {
+    min-height: 1.45em;
+  }
+
+  .min-h_3lh\:lg {
+    min-height: 1.65em;
+  }
+
+  .min-h_4lh\:lg {
+    min-height: 1.75em;
+  }
+
+  .min-h_5lh\:lg {
+    min-height: 2.5em;
+  }
 }
 /*
 UC: Height
@@ -9005,24 +9160,93 @@ It is rare to use height but at times it is useful to set a matching set of card
 
 Markup:
 <div class="flex p_4 bg_primary-4">
-<div class="flex_auto br_solid br_white br_1 bg_primary h_auto">.h_auto</div> 
-<div class="flex_auto br_solid br_white br_1 bg_primary h_0">.h_0</div>    
-<div class="flex_auto br_solid br_white br_1 bg_primary h_10">.h_10</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_20">.h_20</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_30">.h_30</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_40">.h_40</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_50">.h_50</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_60">.h_60</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_70">.h_70</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_80">.h_80</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_90">.h_90</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary h_100">.h_100</div>  
-<div class="flex_auto br_solid br_white br_1 bg_primary h_60 h_unset:lg">.h_60.h_unset:lg</div>
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_auto">.h_auto</div> 
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_0">.h_0</div>    
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_10">.h_10</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_20">.h_20</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_30">.h_30</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_40">.h_40</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_50">.h_50</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_60">.h_60</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_70">.h_70</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_80">.h_80</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_90">.h_90</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_100">.h_100</div>  
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_60 h_unset:lg">.h_60.h_unset:lg</div>
 </div>
 
   Weight: 107
 
   Styleguide Height
+
+ */
+/*
+UC: Height LH
+
+<table>
+	<thead>
+		<tr>
+			<th>Classes</th>
+			<th>Effect</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>.h_0lh</td>
+			<td>height: 1em</td>
+		</tr>
+		<tr>
+			<td>.h_1lh</td>
+			<td>height: 1.25em</td>
+		</tr>
+		<tr>
+			<td>.h_2lh</td>
+			<td>height: 1.45em</td>
+		</tr>
+		<tr>
+			<td>.h_3lh</td>
+			<td>height: 1.65em</td>
+		</tr>
+        <tr>
+            <td>.h_4lh</td>
+            <td>height: 1.75em</td>
+        </tr>
+                <tr>
+                    <td>.h_5lh</td>
+                    <td>height: 2em</td>
+                </tr>
+	</tbody>
+</table>
+
+Markup:
+<div class="flex flex_column font_1">
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_0lh lh_0">font_1 text with h_0lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_1lh lh_1">font_1 text with h_1lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_2lh lh_2">font_1 text with h_2lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_3lh lh_3">font_1 text with h_3lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_4lh lh_4">font_1 text with h_4lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_5lh lh_5">font_1 text with h_5lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+</div>
+<div class="flex flex_column font_2">
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_0lh lh_0">font_2 text with h_0lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_1lh lh_1">font_2 text with h_1lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_2lh lh_2">font_2 text with h_2lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_3lh lh_3">font_2 text with h_3lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_4lh lh_4">font_2 text with h_4lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_5lh lh_5">font_2 text with h_5lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+</div>
+<div class="flex flex_column font_3">
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_0lh lh_0">font_3 text with h_0lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_1lh lh_1">font_3 text with h_1lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_2lh lh_2">font_3 text with h_2lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_3lh lh_3">font_3 text with h_3lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_4lh lh_4">font_3 text with h_4lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+	<div class="flex_auto br_solid br_white-8 br_1 bg_primary-4 p-x_3 h_5lh lh_5">font_3 text with h_5lh <span class="font-size_down vertical-alighn-middle">smaller text</span></div> 
+</div>
+
+Weight: 107
+
+Styleguide Height.lh
 
  */
 /*
@@ -9034,19 +9258,19 @@ Min heights can be very useful in interactions and keeping a consistent dimensio
 
 Markup:
 <div class="flex p_4 bg_primary-4">
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_auto">.min-h_auto</div> 
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_0">.min-h_0</div>    
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_10">.min-h_10</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_20">.min-h_20</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_30">.min-h_30</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_40">.min-h_40</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_50">.min-h_50</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_60">.min-h_60</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_70">.min-h_70</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_80">.min-h_80</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_90">.min-h_90</div>   
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_100">.min-h_100</div>  
-<div class="flex_auto br_solid br_white br_1 bg_primary min-h_60 min-h_unset:lg">.min-h_60.min-h_unset:lg</div>
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_auto">.min-h_auto</div> 
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_0">.min-h_0</div>    
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_10">.min-h_10</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_20">.min-h_20</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_30">.min-h_30</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_40">.min-h_40</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_50">.min-h_50</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_60">.min-h_60</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_70">.min-h_70</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_80">.min-h_80</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_90">.min-h_90</div>   
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_100">.min-h_100</div>  
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary min-h_60 min-h_unset:lg">.min-h_60.min-h_unset:lg</div>
 </div>
 
   Weight: 107
@@ -14706,6 +14930,169 @@ Styleguide Animation.ease
 
 .origin_l {
   transform-origin: left center;
+}
+
+/*
+UC: Blend
+
+Giving greater Manipulation of colors with the use of blending modes. 
+
+Weight: 150
+
+Styleguide Blend
+
+
+*/
+.bg-blend_normal {
+  background-blend-mode: normal;
+}
+
+.bg-blend_multiply {
+  background-blend-mode: multiply;
+}
+
+.bg-blend_screen {
+  background-blend-mode: screen;
+}
+
+.bg-blend_overlay {
+  background-blend-mode: overlay;
+}
+
+.bg-blend_darken {
+  background-blend-mode: darken;
+}
+
+.bg-blend_lighten {
+  background-blend-mode: lighten;
+}
+
+.bg-blend_color-dodge {
+  background-blend-mode: color-dodge;
+}
+
+.bg-blend_color-burn {
+  background-blend-mode: color-burn;
+}
+
+.bg-blend_hard-light {
+  background-blend-mode: hard-light;
+}
+
+.bg-blend_soft-light {
+  background-blend-mode: soft-light;
+}
+
+.bg-blend_difference {
+  background-blend-mode: difference;
+}
+
+.bg-blend_exclusion {
+  background-blend-mode: exclusion;
+}
+
+.bg-blend_hue {
+  background-blend-mode: hue;
+}
+
+.bg-blend_saturation {
+  background-blend-mode: saturation;
+}
+
+.bg-blend_color {
+  background-blend-mode: color;
+}
+
+.bg-blend_luminosity {
+  background-blend-mode: luminosity;
+}
+
+.bg-blend_initial {
+  background-blend-mode: initial;
+}
+
+.bg-blend_inherit {
+  background-blend-mode: inherit;
+}
+
+.bg-blend_unset {
+  background-blend-mode: unset;
+}
+
+.font-blend_normal {
+  mix-blend-mode: normal;
+}
+
+.font-blend_multiply {
+  mix-blend-mode: multiply;
+}
+
+.font-blend_screen {
+  mix-blend-mode: screen;
+}
+
+.font-blend_overlay {
+  mix-blend-mode: overlay;
+}
+
+.font-blend_darken {
+  mix-blend-mode: darken;
+}
+
+.font-blend_lighten {
+  mix-blend-mode: lighten;
+}
+
+.font-blend_color-dodge {
+  mix-blend-mode: color-dodge;
+}
+
+.font-blend_color-burn {
+  mix-blend-mode: color-burn;
+}
+
+.font-blend_hard-light {
+  mix-blend-mode: hard-light;
+}
+
+.font-blend_soft-light {
+  mix-blend-mode: soft-light;
+}
+
+.font-blend_difference {
+  mix-blend-mode: difference;
+}
+
+.font-blend_exclusion {
+  mix-blend-mode: exclusion;
+}
+
+.font-blend_hue {
+  mix-blend-mode: hue;
+}
+
+.font-blend_saturation {
+  mix-blend-mode: saturation;
+}
+
+.font-blend_color {
+  mix-blend-mode: color;
+}
+
+.font-blend_luminosity {
+  mix-blend-mode: luminosity;
+}
+
+.font-blend_initial {
+  mix-blend-mode: initial;
+}
+
+.font-blend_inherit {
+  mix-blend-mode: inherit;
+}
+
+.font-blend_unset {
+  mix-blend-mode: unset;
 }
 
 /*

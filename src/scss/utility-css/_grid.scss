@@ -40,21 +40,23 @@ Weight:0
 Styleguide  display.Grid.Template
 */
 .template-x_15 {
-	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	grid-template-columns: repeat(auto-fill,50%);
 }
-.template-x_20 {
-	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-}
+
+.template-x_20,
 .template-x_25,
 .template-x_30,
 .template-x_35,
 .template-x_40 {
-	grid-template-columns: repeat(auto-fill,minmax(20rem, 1fr));
+	grid-template-columns: repeat(auto-fill,100%);
 }
 
 @media #{$medium-up} {
+	.template-x_20 {
+	grid-template-columns: repeat(auto-fill, minmax(20rem, .5fr));
+}
 	.template-x_25 {
-		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(20rem, .5fr));
 	}
 	.template-x_30 {
 		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
@@ -68,10 +70,10 @@ Styleguide  display.Grid.Template
 }
 @media #{$large-up} {
 	.template-x_25 {
-		grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(25rem, .333fr));
 	}
 	.template-x_30 {
-		grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(30rem, .5fr));
 	}
 	.template-x_35 {
 		grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
