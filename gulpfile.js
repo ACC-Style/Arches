@@ -60,7 +60,7 @@ var PATHS = {
 	MARKDOWN: SOURCE.MD + "/partials/"
 };
 var BUILDOPTIONS = ["none", "uc", "zurb", "boot"];
-var BRANDVARIATIONS = ["acc", "jacc", "cardiosmart", "cvquality"];
+var BRANDVARIATIONS = ["acc", "journal", "cardiosmart", "cvquality"];
 
 // Style Tasks
 gulp.task("style", function() {
@@ -294,14 +294,14 @@ gulp.task("markdown", function() {
 	var cardiosmart_boot = markdownbuild(base, "cardiosmart_boot");
 	var acc_boot = markdownbuild(base, "acc_boot");
 	var temp_boot = markdownbuild(base, "temp_boot");
-	var jacc_boot = markdownbuild(base, "jacc_boot");
+	var journal_boot = markdownbuild(base, "journal_boot");
 	var layoutdemo = markdownbuild(base, "layoutdemo");
 	var colorcodes = markdownbuild(base, "colorcodes");
 	return merge(
 		home,
 		cvqualtiy_boot,
 		acc_boot,
-		jacc_boot,
+		journal_boot,
 		temp_boot,
 		acc_zurb,
 		cardiosmart_zurb,
@@ -325,7 +325,7 @@ gulp.task("watch", function() {
 
 gulp.task("styleguide", function() {
 	return run(
-		"npm run index && npm run zurb_acc && npm run boot_acc && npm run boot_jacc && npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run boot_cardiosmart"
+		"npm run index && npm run zurb_acc && npm run boot_acc && npm run boot_journal && npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run boot_cardiosmart"
 	).exec();
 });
 var concatCSS = function(brand,framework) {
@@ -420,10 +420,10 @@ gulp.task(
 );
 
 gulp.task(
-	"build-jacc",
+	"build-journal",
 	gulp.series(
-		function() {
-			var brand = "jacc";
+		function SCSS() {
+			var brand = "journal";
 			var framework = "boot";
 			var uc = constructUCStyleSheet(brand);
 			uc = buildbrand(uc, brand, "");
@@ -434,13 +434,8 @@ gulp.task(
 				.pipe(gulp.dest(PATHS.SCSS));
 			return runSass(brand);
 		},
-		function() {
-			return concatCSS("jacc", "boot");
-		},
-		"dist",
-		"copy-to-styleguide",
-		function() {
-			var brand = "jacc";
+		function MD() {
+			var brand = "journal";
 			var framework = "boot";
 			var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
 			var base = markdownbuild(base, brand + "_" + framework);
@@ -455,8 +450,16 @@ gulp.task(
 				)
 				.pipe(gulp.dest(SOURCE.MD));
 		},
+		function CSS() {
+			return runSass("journal");
+		},
+		function Concat() {
+			return concatCSS("journal", "boot");
+		},
+		"dist",
+		"copy-to-styleguide",
 		function() {
-			return run("npm run boot_jacc").exec();
+			return run("npm run boot_journal").exec();
 		}
 	)
 );
@@ -650,7 +653,7 @@ gulp.task(
 		"build-acc",
 		"build-cvquality",
 		"build-cardiosmart",
-		"build-jacc",
+		"build-journal",
 		"build-virtual",
 		"build-colors",
 		"build-layout_demo"
