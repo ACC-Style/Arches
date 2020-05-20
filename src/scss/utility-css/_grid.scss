@@ -1,14 +1,24 @@
 /*
+Grid
+ 
+A great way to manipulating a repeating grid is to use the new CSS 3 grid layouts. 
+ 
+
+Styleguide  UC.display.Grid
+*/
+
+/*
 Grid Gap
  
-Description: Grid Docs
+Description: Grid Gap
  
 Markup:
+<div></div>
 
  
 Weight:0
  
-Styleguide  display.Grid.Gap
+Styleguide  UC.display.Grid.Gap
 */
 @include loop-style(grid-column-gap, "", "!important");
 @media #{$medium-up} {
@@ -30,14 +40,21 @@ Styleguide  display.Grid.Gap
 /*
 Grid Column Template
  
-Description: Grid Docs
+Description: Grid Template
+
+.template-x_20		-  grid layouts that are responsive and hold a certian size when able.
+.template-x_25		-  grid layouts that are responsive and hold a certian size when able.
+.template-x_30		-  grid layouts that are responsive and hold a certian size when able.
+.template-x_35		-  grid layouts that are responsive and hold a certian size when able.
+.template-x_40		-  grid layouts that are responsive and hold a certian size when able.
  
 Markup:
+<div></div>
 
  
 Weight:0
  
-Styleguide  display.Grid.Template
+Styleguide  UC.display.Grid.Template
 */
 .template-x_15 {
 	grid-template-columns: repeat(auto-fill,50%);
