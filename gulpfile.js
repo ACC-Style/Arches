@@ -509,6 +509,50 @@ gulp.task(
 );
 
 gulp.task(
+	"build-covid",
+	gulp.series(
+		function SCSS() {
+			var brand = "covid";
+			var framework = "boot";
+			var base = constructFrameworkStyleSheet(brand, framework);
+			base = buildbrand(base, brand, framework);
+			var uc = constructUCStyleSheet(brand);
+			uc = buildbrand(uc, brand, "");
+			return merge(base,uc)
+				.pipe(header("/** Test 7 **/\n"))
+				.pipe(gulp.dest(PATHS.SCSS));
+		},
+		function MD() {
+			var brand = "covid";
+			var framework = "boot";
+			var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
+			var base = markdownbuild(base, brand + "_" + framework);
+			return merge(base)
+				.pipe(
+					header(
+						fs.readFileSync(
+							PATHS.MARKDOWN + "markdown_preheader.md",
+							"utf8"
+						)
+					)
+				)
+				.pipe(gulp.dest(SOURCE.MD));
+		},
+		function CSS() {
+			return runSass("covid");
+		},
+		function Concat() {
+			return concatCSS("covid", "boot");
+		},
+		"dist",
+		"copy-to-styleguide",
+		function styleguide() {
+			return run("npm run boot_covid").exec();
+		}
+	)
+);
+
+gulp.task(
 	"build-acc",
 	gulp.series(
 		function buildCSS() {
