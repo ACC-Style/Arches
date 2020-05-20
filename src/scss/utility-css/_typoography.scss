@@ -1,11 +1,11 @@
 /*
-UC: Typography
+Typography
 
 Control size, weight, decoration, white-space, and overflow with these utility classes 
 
 Weight: 110
 
-Styleguide Typography
+Styleguide UC.Typography
 */
 /* No styleguide reference. */
 $white: rgb(246, 246, 246) !default;
@@ -38,7 +38,7 @@ $black: rgb(19, 18, 18) !default;
     <div class="uppercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
   </div>
 
-  Styleguide Typography.Font.Family
+  Styleguide UC.Typography.Font.Family
  */
 
 @include loop-style(font-family);
@@ -57,7 +57,7 @@ $black: rgb(19, 18, 18) !default;
     <div class="uppercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
   </div>
 
-  Styleguide Typography.Font.Style
+  Styleguide UC.Typography.Font.Style
  */
 .font_normal {
   font-style: normal !important;
@@ -87,7 +87,7 @@ Markup:
 </div>
 
 
-Styleguide Typography.Font.Color
+Styleguide UC.Typography.Font.Color
  */
 
 @each $color-name, $hex-value in $theme-palette {
@@ -163,7 +163,7 @@ Markup:
 </div>
 
 
-Styleguide Typography.Font.Color Transparency
+Styleguide UC.Typography.Font.Color Transparency
  */
 
 .c_white {
@@ -198,7 +198,7 @@ Styleguide Typography.Font.Color Transparency
     <div class="uppercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
   </div>
 
-  Styleguide Typography.Weight
+  Styleguide UC.Typography.Weight
  */
 @include loop-style(font-weight, '', '!important');
 // .font_light {
@@ -245,7 +245,7 @@ Styleguide Typography.Font.Color Transparency
     <div class="uppercase pre-wrap">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
   </div>
 
-  Styleguide Typography.Font.Size
+  Styleguide UC.Typography.Font.Size
  */
 
 @include loop-style(font-size);
@@ -282,7 +282,7 @@ Styleguide Typography.Font.Color Transparency
     Quae sapiente reprehenderit explicabo esse consequatur error fugiat. Voluptas odit ipsam architecto quae perspiciatis nostrum autem at. Ut veritatis molestiae distinctio autem repudiandae voluptatem voluptatibus aspernatur.
   </div>
 
-  Styleguide Typography.Text.Wrap
+  Styleguide UC.Typography.Text.Wrap
  */
 
 .wrap {
@@ -345,7 +345,7 @@ Styleguide Typography.Font.Color Transparency
 	Markup:
 	<div class="{{modifier_class}} p_3 br_solid font_bold br_black-1 br_1 bg bg_primary c_white">text has a decoration of {{modifier_class}} <a>I am a link also decorated</a></div>
 
-	Styleguide Typography.Text.Decoration
+	Styleguide UC.Typography.Text.Decoration
 
  */
 .lowercase {
@@ -394,7 +394,7 @@ Styleguide Typography.Font.Color Transparency
 	Markup:
 	<div class="{{modifier_class}} p_3 br_solid font_bold br_black-1 br_1 bg bg_primary c_white">text has shadow of {{modifier_class}}</div>
 
-	Styleguide Typography.Text.Shadow
+	Styleguide UC.Typography.Text.Shadow
 
  */
 
@@ -415,7 +415,7 @@ Markup:
 <p class="text-indent_3">text that has an indent magnitude of 3 </p>
 </div>
 
-Styleguide Typography.Text.Indent
+Styleguide UC.Typography.Text.Indent
 
  */
 
@@ -439,7 +439,7 @@ Styleguide Typography.Text.Indent
     <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 
-  Styleguide Typography.Text.LineHeight
+  Styleguide UC.Typography.Text.LineHeight
  */
 @include loop-style(line-height, '', '!important');
 /*
@@ -457,7 +457,7 @@ Styleguide Typography.Text.Indent
     <p class="{{modifier_class}} lh_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 
-  Styleguide Typography.Text.Alignment
+  Styleguide UC.Typography.Text.Alignment
  */
 @include loop-style(text-align, '', '!important');
 @media #{$medium-up} {
@@ -489,7 +489,7 @@ Styleguide Typography.Text.Indent
     </ul>
   </div>
 
-  Styleguide Typography.list
+  Styleguide UC.Typography.list
  */
 // list with no decoration shouldn't have a padding
 .ul_none {
