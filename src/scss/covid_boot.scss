@@ -239,11 +239,6 @@ Styleguide Virtual Recipes.Header
     background-color: #002d5b;
     background: url('../img/covid20/header.backgroundTexture.sm.png') no-repeat center top;
 }
-
-.video-header {
-    height: 100px;
-    width: 100%;
-}
 @media #{$medium-up} {
     .brand-header {
         height: 160px;
@@ -253,9 +248,6 @@ Styleguide Virtual Recipes.Header
             url('../img/covid20/header.secondary.md.png') no-repeat 98% top,
             url('../img/covid20/header.img.md.png') no-repeat 27% top,
             url('../img/covid20/header.backgroundTexture.png') no-repeat right top;
-    }
-    .video-header {
-        height: 140px;
     }
 }
 @media #{$xlarge-up} {
@@ -268,89 +260,9 @@ Styleguide Virtual Recipes.Header
             url('../img/covid20/header.img.lg.png') no-repeat 14% top,
             url('../img/covid20/header.backgroundTexture.png') no-repeat right top;
     }
-    .video-header {
-        height: 160px;
-    }
 }
 
 
-.Education_video {
-    background: url('../img/covid20/videoGroup/education.video.png');
-}
-
-.Education_video-nolabel {
-    background: url('../img/covid20/videoGroup/education.noLabelVideo.png');
-}
-
-.education_header {
-    background: url('../img/covid20/videoGroup/education.label.png') right center no-repeat,
-        url('../img/covid20/videoGroup/education.headerGraphic.png') left top no-repeat;
-    background-size: contain, cover;
-}
-
-.HotTopic_video {
-    background: url('../img/covid20/videoGroup/hotTopic.video.png');
-}
-
-.HotTopic_video-nolabel {
-    background: url('../img/covid20/videoGroup/hotTopic.noLabelVideo.png');
-}
-
-.hotTopic_header {
-    background: url('../img/covid20/videoGroup/hotTopic.label.png') right center no-repeat,
-        url('../img/covid20/videoGroup/hotTopic.headerGraphic.png') left top no-repeat;
-    background-size: contain, cover;
-}
-
-.Global_video {
-    background: url('../img/covid20/videoGroup/global.video.png');
-}
-
-.Global_video-nolabel {
-    background: url('../img/covid20/videoGroup/global.noLabelVideo.png');
-}
-
-.global_header {
-    background: url('../img/covid20/videoGroup/global.label.png') right center no-repeat,
-        url('../img/covid20/videoGroup/global.headerGraphic.png') left top no-repeat;
-    background-size: contain, cover;
-}
-
-.Anchor_video {
-    background: url('../img/covid20/videoGroup/anchor.video.png');
-}
-
-.Anchor_video-nolabel {
-    background: url('../img/covid20/videoGroup/anchor.noLabelVideo.png');
-}
-
-.anchor_header {
-    background: url('../img/covid20/videoGroup/anchor.label.png') right center no-repeat,
-        url('../img/covid20/videoGroup/anchor.headerGraphic.png') left top no-repeat;
-    background-size: contain, cover;
-}
-
-.Fuster_video {
-    background: url('../img/covid20/videoGroup/fuster.video.png');
-}
-
-.Fuster_video-nolabel {
-    background: url('../img/covid20/videoGroup/fuster.noLabelVideo.png');
-}
-
-.fuster_header {
-    background: url('../img/covid20/videoGroup/fuster.label.png') right center no-repeat,
-        url('../img/covid20/videoGroup/fuster.headerGraphic.png') left top no-repeat;
-    background-size: contain, cover;
-}
-
-.locked_graphic {
-    filter: grayscale(1) opacity(0.5) brightness(1.1);
-}
-
-.Fuster_video {
-    background: url('../img/covid20/videoGroup/convocation.video.png');
-}
 
 @import 'base/table.boot';
 @import 'styleguide/__basic-html.boot';
@@ -358,8 +270,10 @@ Styleguide Virtual Recipes.Header
 @import 'components/boot/_boot.carousel.override';
 @import 'components/boot/_boot.navbar.override';
 @import 'components/boot/_boot.collapser.icon';
+@import 'components/virtual/virtual.locked_graphic';
+@import 'components/virtual/virtual.texture_ondemand';
 @import 'components/virtual/virtual.boot._navbar.override';
-@import 'components/virtual/_virtual.sitefinity.editor-decorator';
+@import 'components/sitefinity/_sitefinity.editor-decorator';
 /*
 On Demand
  
@@ -369,13 +283,7 @@ Weight:0
  
 Styleguide Virtual Recipes.OnDemand
 */
-.texture_ondemand{
-        background-image: url('../img/virtual/slidebackground.png');
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: center;
 
-}
 
 @import 'recipes/virtual/_virtual.ondemand-light';
 @import 'recipes/virtual/_virtual.ondemand-dark';

@@ -5977,21 +5977,12 @@ Styleguide Virtual Recipes.Header
   background-color: #002d5b;
 }
 
-.video-header {
-  width: 100%;
-  height: 100px;
-}
-
 @media only screen and (min-width : 768px) {
   .brand-header {
     width: 100%;
     height: 160px;
     background: url("../img/covid20/header.mainLogo.md.png") no-repeat 2% center, url("../img/covid20/header.secondary.md.png") no-repeat 98% top, url("../img/covid20/header.img.md.png") no-repeat 27% top, url("../img/covid20/header.backgroundTexture.png") no-repeat right top;
     background-color: #002d5b;
-  }
-
-  .video-header {
-    height: 140px;
   }
 }
 @media only screen and (min-width : 1200px) {
@@ -6001,85 +5992,7 @@ Styleguide Virtual Recipes.Header
     background: url("../img/covid20/header.mainLogo.lg.png") no-repeat 2% center, url("../img/covid20/header.secondary.lg.png") no-repeat 98% top, url("../img/covid20/header.img.lg.png") no-repeat 14% top, url("../img/covid20/header.backgroundTexture.png") no-repeat right top;
     background-color: #002d5b;
   }
-
-  .video-header {
-    height: 160px;
-  }
 }
-.Education_video {
-  background: url("../img/covid20/videoGroup/education.video.png");
-}
-
-.Education_video-nolabel {
-  background: url("../img/covid20/videoGroup/education.noLabelVideo.png");
-}
-
-.education_header {
-  background: url("../img/covid20/videoGroup/education.label.png") right center no-repeat, url("../img/covid20/videoGroup/education.headerGraphic.png") left top no-repeat;
-  background-size: contain, cover;
-}
-
-.HotTopic_video {
-  background: url("../img/covid20/videoGroup/hotTopic.video.png");
-}
-
-.HotTopic_video-nolabel {
-  background: url("../img/covid20/videoGroup/hotTopic.noLabelVideo.png");
-}
-
-.hotTopic_header {
-  background: url("../img/covid20/videoGroup/hotTopic.label.png") right center no-repeat, url("../img/covid20/videoGroup/hotTopic.headerGraphic.png") left top no-repeat;
-  background-size: contain, cover;
-}
-
-.Global_video {
-  background: url("../img/covid20/videoGroup/global.video.png");
-}
-
-.Global_video-nolabel {
-  background: url("../img/covid20/videoGroup/global.noLabelVideo.png");
-}
-
-.global_header {
-  background: url("../img/covid20/videoGroup/global.label.png") right center no-repeat, url("../img/covid20/videoGroup/global.headerGraphic.png") left top no-repeat;
-  background-size: contain, cover;
-}
-
-.Anchor_video {
-  background: url("../img/covid20/videoGroup/anchor.video.png");
-}
-
-.Anchor_video-nolabel {
-  background: url("../img/covid20/videoGroup/anchor.noLabelVideo.png");
-}
-
-.anchor_header {
-  background: url("../img/covid20/videoGroup/anchor.label.png") right center no-repeat, url("../img/covid20/videoGroup/anchor.headerGraphic.png") left top no-repeat;
-  background-size: contain, cover;
-}
-
-.Fuster_video {
-  background: url("../img/covid20/videoGroup/fuster.video.png");
-}
-
-.Fuster_video-nolabel {
-  background: url("../img/covid20/videoGroup/fuster.noLabelVideo.png");
-}
-
-.fuster_header {
-  background: url("../img/covid20/videoGroup/fuster.label.png") right center no-repeat, url("../img/covid20/videoGroup/fuster.headerGraphic.png") left top no-repeat;
-  background-size: contain, cover;
-}
-
-.locked_graphic {
-  -webkit-filter: grayscale(1) opacity(0.5) brightness(1.1);
-          filter: grayscale(1) opacity(0.5) brightness(1.1);
-}
-
-.Fuster_video {
-  background: url("../img/covid20/videoGroup/convocation.video.png");
-}
-
 .table td,
 .table th {
   text-align: left;
@@ -8246,6 +8159,201 @@ Styleguide Recipes.Branded Nav.Dropdowns.Alt Content
 }
 
 /*
+Locking Graphics
+
+Showing assets before they are interactable is needed  
+
+Markup:
+<div class="p_4 bg_shade-n4 grid template-x_20 gap-x_5 gap-y_4">
+<article class="c_white m-b_4 m-b_5:md m-t_0:md m-t_4 m-t_5:lg">
+    <div class="br_1 br_radius br_solid br_white-2 flex flex_column flex_column:lg flex_row:md font_ui h:bg_black-3 m-x_n2 relative">
+        <div class="display_none:lg flex_none justify_center p-l_4:md p-y_3" style="width: 4rem;">
+            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width: 3rem;">
+                <div class="aspect_1x1 bg-blend_mulitiply bg-blend_multiply bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_white-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
+                        <i class="absolute c_white-9 fa-presentation fas flex_auto font_2 self_center text_center w_100"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block:lg display_none m-t_n5 m-x_5 p-x_5">
+            <div class="m-t_n5 m_auto m_auto:md self_center text_center">
+                <div class="aspect_21x9 bg-blend_mulitiply bg-blend_multiply bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_white-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
+                        <i class="absolute c_white-9 fa-presentation fas flex_auto font_5 self_center text_center w_100"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c_primary-5 flex_auto font_0 font_display font_regular p-b_0 p-b_4:md p-l_0:lg p-l_4:md">
+            <div class="lh_2 m-t_2 p_3 relative p-y_2"> <a href="https://acc.mediasite.com/mediasite/Play/b0d6b0f045624569828072d2f2eefdc41d" class="expanded-click-area h:undecorated">101. Coronary Artery Disease - Challenges in 2020: Cardiovascular Update For the Clinician I -- A Symposium by Valentin Fuster, MD, PhD, MACC</a></div>
+        </div>
+    </div>
+    <div class="c_white flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
+        <div class="flex_shrink block  text_left p-r_4 m-r_4 ">
+            <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+        </div>
+        <div class="flex_grow uppercase text_right">
+            <ul class="m-t_n2 ul_none">
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CME br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CNE br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_COP br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop </li>
+            </ul>
+        </div>
+    </div>
+</article>
+<article class="locked_graphic c_white m-b_4 m-b_5:md m-t_0:md m-t_4 m-t_5:lg">
+    <div class="br_1 br_radius br_solid br_white-2 flex flex_column flex_column:lg flex_row:md font_ui h:bg_black-3 m-x_n2 relative">
+        <div class="display_none:lg flex_none justify_center p-l_4:md p-y_3" style="width: 4rem;">
+            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width: 3rem;">
+                <div class="aspect_1x1 bg-blend_mulitiply bg-blend_multiply bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_white-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
+                        <i class="absolute c_white-9 fa-presentation fas flex_auto font_2 self_center text_center w_100"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block:lg display_none m-t_n5 m-x_5 p-x_5">
+            <div class="m-t_n5 m_auto m_auto:md self_center text_center">
+                <div class="aspect_21x9 bg-blend_mulitiply bg-blend_multiply bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_white-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
+                        <i class="absolute c_white-9 fa-presentation fas flex_auto font_5 self_center text_center w_100"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c_primary-5 flex_auto font_0 font_display font_regular p-b_0 p-b_4:md p-l_0:lg p-l_4:md">
+            <div class="lh_2 m-t_2 p_3 relative p-y_2"> <a href="https://acc.mediasite.com/mediasite/Play/b0d6b0f045624569828072d2f2eefdc41d" class="expanded-click-area h:undecorated">101. Coronary Artery Disease - Challenges in 2020: Cardiovascular Update For the Clinician I -- A Symposium by Valentin Fuster, MD, PhD, MACC</a></div>
+        </div>
+    </div>
+    <div class="c_white flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
+        <div class="flex_shrink block  text_left p-r_4 m-r_4 ">
+            <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+        </div>
+        <div class="flex_grow uppercase text_right">
+            <ul class="m-t_n2 ul_none">
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CME br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CNE br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_COP br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop </li>
+            </ul>
+        </div>
+    </div>
+</article>
+</div>
+<div class="p_4 bg_shade-n4">
+<article class="c_white m-b_4 m-b_5:md m-t_0:md m-t_4 m-t_5:lg ">
+    <div class="br_1 br_radius br_solid br_white-2 flex flex_column flex_row:md font_ui h:bg_black-3 m-x_n2 relative">
+        <div class="flex_none justify_center p-l_4:md p-y_3" style="width: 4rem;">
+            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width: 3rem;">
+                <div class="aspect_1x1 bg-blend_mulitiply bg-blend_multiply bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_white-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
+                        <i class="absolute c_white-9 fa-book-open fas flex_auto font_2 self_center text_center w_100"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c_primary-5 flex_auto font_0 font_display font_regular p-b_4 p-b_3:md p-l_4:md">
+            <div class="lh_2 m-t_2 p_3 relative p-y_2"> <a href="https://acc.mediasite.com/mediasite/Play/b0d6b0f045624569828072d2f2eefdc41d" class="expanded-click-area h:undecorated">101. Coronary Artery Disease - Challenges in 2020: Cardiovascular Update For the Clinician I -- A Symposium by Valentin Fuster, MD, PhD, MACC</a></div>
+        </div>
+    </div>
+    <div class="c_white flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
+        <div class="flex_shrink block font_bold text_left p-r_3 m-r_3 br-r_1 br_white-3 br_solid">
+            <a href="#modal-disclosures" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures">Article</a>
+        </div>
+        <div class="flex_shrink block font_italic  text_left">
+            <span class="block uppercase">Published: June 15, 2020</span>
+        </div>
+        <div class="flex_grow uppercase text_right">
+            <ul class="m-t_n2 ul_none">
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CME br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CNE br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_COP br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop </li>
+            </ul>
+        </div>
+    </div>
+</article>
+<article class="locked_graphic c_white m-b_4 m-b_5:md m-t_0:md m-t_4 m-t_5:lg ">
+    <div class="br_1 br_radius br_solid br_white-2 flex flex_column flex_row:md font_ui h:bg_black-3 m-x_n2 relative">
+        <div class="flex_none justify_center p-l_4:md p-y_3" style="width: 4rem;">
+            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width: 3rem;">
+                <div class="aspect_1x1 bg-blend_mulitiply bg-blend_multiply bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_white-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
+                        <i class="absolute c_white-9 fa-book-open fas flex_auto font_2 self_center text_center w_100"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c_primary-5 flex_auto font_0 font_display font_regular p-b_4 p-b_3:md p-l_4:md">
+            <div class="lh_2 m-t_2 p_3 relative p-y_2"> <a href="https://acc.mediasite.com/mediasite/Play/b0d6b0f045624569828072d2f2eefdc41d" class="expanded-click-area h:undecorated">101. Coronary Artery Disease - Challenges in 2020: Cardiovascular Update For the Clinician I -- A Symposium by Valentin Fuster, MD, PhD, MACC</a></div>
+        </div>
+    </div>
+    <div class="c_white flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
+        <div class="flex_shrink block font_bold text_left p-r_3 m-r_3 br-r_1 br_white-3 br_solid">
+            <a href="#modal-disclosures" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures">Article</a>
+        </div>
+        <div class="flex_shrink block font_italic  text_left">
+            <span class="block uppercase">Published: June 15, 2020</span>
+        </div>
+        <div class="flex_grow uppercase text_right">
+            <ul class="m-t_n2 ul_none">
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CME br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CNE br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_COP br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop </li>
+            </ul>
+        </div>
+    </div>
+</article>
+</div>
+
+
+Weight:0
+
+Styleguide Virtual Recipes.Locked Graphic
+*/
+.locked_graphic {
+  -webkit-filter: grayscale(1) contrast(0.5) brightness(1.1) opacity(0.7);
+          filter: grayscale(1) contrast(0.5) brightness(1.1) opacity(0.7);
+}
+
+.locked_graphic, .locked_graphic *, .locked_graphic *:hover {
+  cursor: not-allowed;
+}
+
+.locked_graphic *[class*=" h:"] {
+  background: transparent !important;
+  text-decoration: none !important;
+  opacity: 1;
+}
+
+.locked_graphic:hover i:before {
+  content: "" !important;
+}
+
+@media (hover: none) {
+  .locked_graphic i:before {
+    content: "" !important;
+  }
+}
+.texture_ondemand {
+  background-image: url("../img/virtual/slidebackground.png");
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+/*
 Header Nav
 
 The header nav for the website. 
@@ -8345,7 +8453,14 @@ Markup:
             <li class="nav-item"><a class="nav-link">Getting Started</a></li>
             <li class="nav-item"><a class="nav-link">Login</a></li>
         </ul>
-     </div>
+	 </div>
+	<div class="sfEditor-show">
+		<div class="bg-blend_mulitiply bg-blend_multiply bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_black-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb" style="width:300px;height:200px;">
+			<div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
+				<span class=" c_white-9  flex_auto font_5 self_center text_center w_100">Ad Placeholder</span>
+			</div>
+		</div>
+	</div>
  </div>
 
  Weight: 10000
@@ -8364,6 +8479,15 @@ Styleguide Sitefinity.Decorator
   position: relative;
   font-size: 12px;
   text-align: center;
+}
+
+.sfEditor-show {
+  display: none;
+}
+
+.sfPageEditor .sfEditor-show {
+  display: block !important;
+  opacity: 0.5;
 }
 
 .sfPageEditor .visible-anonymous-block img,
@@ -8396,13 +8520,6 @@ Weight:0
 
 Styleguide Virtual Recipes.OnDemand
 */
-.texture_ondemand {
-  background-image: url("../img/virtual/slidebackground.png");
-  background-position-x: center;
-  background-position-y: center;
-  background-repeat: no-repeat;
-}
-
 /*
 Video Block (Light) 
 

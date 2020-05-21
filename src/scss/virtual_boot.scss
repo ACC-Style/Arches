@@ -72,14 +72,14 @@ $theme-palette: map-merge(
     $theme-palette,
     (
         primary: $acc-blue,
-        secondary: #8f2782,
+        secondary: $cyan,
         success: $green,
         warning: $orange,
         alert: $red,
         navigation: $blue,
         accent: $bright-cyan,
         info: $info-color,
-        highlight: #febf13,
+        highlight: $highlight-color,
         acc: $acc-blue,
     )
 );
@@ -237,10 +237,7 @@ Styleguide Virtual Recipes.Header
     background: url('../img/virtual/header.backgroundTexture.sm.png') no-repeat center top;
 }
 
-.video-header {
-    height: 100px;
-    width: 100%;
-}
+
 @media #{$medium-up} {
     .brand-header {
         height: 160px;
@@ -251,9 +248,7 @@ Styleguide Virtual Recipes.Header
             url('../img/virtual/header.img.md.png') no-repeat 27% top,
             url('../img/virtual/header.backgroundTexture.png') no-repeat right top;
     }
-    .video-header {
-        height: 140px;
-    }
+
 }
 @media #{$xlarge-up} {
     .brand-header {
@@ -265,104 +260,16 @@ Styleguide Virtual Recipes.Header
             url('../img/virtual/header.img.lg.png') no-repeat 14% top,
             url('../img/virtual/header.backgroundTexture.png') no-repeat right top;
     }
-    .video-header {
-        height: 160px;
-    }
-}
-.template-x_3up {
-    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-}
-
-.Education_video {
-    background: url('../img/virtual/videoGroup/education.video.png');
-}
-
-.Education_video-nolabel {
-    background: url('../img/virtual/videoGroup/education.noLabelVideo.png');
-}
-
-.education_header {
-    background: url('../img/virtual/videoGroup/education.label.png') right center no-repeat,
-        url('../img/virtual/videoGroup/education.headerGraphic.png') left top no-repeat;
-    background-size: contain, cover;
-}
-
-.HotTopic_video {
-    background: url('../img/virtual/videoGroup/hotTopic.video.png');
-}
-
-.HotTopic_video-nolabel {
-    background: url('../img/virtual/videoGroup/hotTopic.noLabelVideo.png');
-}
-
-.hotTopic_header {
-    background: url('../img/virtual/videoGroup/hotTopic.label.png') right center no-repeat,
-        url('../img/virtual/videoGroup/hotTopic.headerGraphic.png') left top no-repeat;
-    background-size: contain, cover;
-}
-
-.Global_video {
-    background: url('../img/virtual/videoGroup/global.video.png');
-}
-
-.Global_video-nolabel {
-    background: url('../img/virtual/videoGroup/global.noLabelVideo.png');
-}
-
-.global_header {
-    background: url('../img/virtual/videoGroup/global.label.png') right center no-repeat,
-        url('../img/virtual/videoGroup/global.headerGraphic.png') left top no-repeat;
-    background-size: contain, cover;
-}
-
-.Anchor_video {
-    background: url('../img/virtual/videoGroup/anchor.video.png');
-}
-
-.Anchor_video-nolabel {
-    background: url('../img/virtual/videoGroup/anchor.noLabelVideo.png');
-}
-
-.anchor_header {
-    background: url('../img/virtual/videoGroup/anchor.label.png') right center no-repeat,
-        url('../img/virtual/videoGroup/anchor.headerGraphic.png') left top no-repeat;
-    background-size: contain, cover;
-}
-
-.Fuster_video {
-    background: url('../img/virtual/videoGroup/fuster.video.png');
-}
-
-.Fuster_video-nolabel {
-    background: url('../img/virtual/videoGroup/fuster.noLabelVideo.png');
-}
-
-.fuster_header {
-    background: url('../img/virtual/videoGroup/fuster.label.png') right center no-repeat,
-        url('../img/virtual/videoGroup/fuster.headerGraphic.png') left top no-repeat;
-    background-size: contain, cover;
-}
-
-.locked_graphic {
-    filter: grayscale(1) opacity(0.5) brightness(1.1);
-}
-
-.Fuster_video {
-    background: url('../img/virtual/videoGroup/convocation.video.png');
-}
-
-.Convocation_video {
-    background: url('../img/virtual/videoGroup/convocation.video.png');
-}
-@import 'base/table.boot';
+}@import 'base/table.boot';
 @import 'styleguide/__basic-html.boot';
 @import 'components/boot/_boot.buttons';
 @import 'components/boot/_boot.carousel.override';
 @import 'components/boot/_boot.navbar.override';
 @import 'components/boot/_boot.collapser.icon';
+@import 'components/virtual/virtual.locked_graphic';
+@import 'components/virtual/virtual.texture_ondemand';
 @import 'components/virtual/virtual.boot._navbar.override';
-@import 'components/virtual/_virtual.sitefinity.editor-decorator';
-/*
+@import 'components/sitefinity/_sitefinity.editor-decorator';/*
 On Demand
  
 Description: All videos and presentations after a publication is in the On Demand Area. 
