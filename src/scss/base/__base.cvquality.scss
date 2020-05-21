@@ -3,7 +3,22 @@ h2,
 h3 {
 	color: map-get($theme-palette, accent);
 }
-
+.btn-primary {
+	@extend .br_0 !optional;
+	@extend .br_radius !optional;
+	@extend .gradient_teal !optional;
+	&:hover {
+		@extend .gradient_teal-reverse !optional;
+	}
+}
+.btn-shade {
+	@extend .br_0 !optional;
+	@extend .br_radius !optional;
+	@extend .gradient_grey !optional;
+	&:hover {
+		@extend .gradient_grey-reverse !optional;
+	}
+}
 /*
 Scrollable Table
 

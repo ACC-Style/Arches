@@ -118,7 +118,10 @@
         if ( isHexadecimal || isRGB ) {
           $( this ).parent().addClass( 'kss-colors-container' );
           $( this ).addClass( 'kss-color' ).css( 'background', colorCode );
-          $( this ).find( '.kss-parameters__description' ).html( colorContent );
+          $(this).find('.kss-parameters__description').html(colorContent);
+          $(this).find('.kss-parameters__description').addClass(
+            'absolute b_2 l_2 p_3 r_2 w_auto bg_white-7'
+          )
         }
       } );
     }
