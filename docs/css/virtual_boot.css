@@ -5965,6 +5965,36 @@ This is a templated banner that uses as the central branding of a conference pro
 
 Markup:
 <div class="brand-header"></div>
+<style>
+.brand-header {
+    height: 160px;
+    width: 100%;
+    background-color: #002d5b;
+    background: url('../img/AH20/header.backgroundTexture.sm.png') no-repeat center top;
+}
+@media only screen and (min-width : 768px) {
+    .brand-header {
+        height: 160px;
+        width: 100%;
+        background-color: #002d5b;
+        background: url('../img/AH20/header.mainLogo.md.png') no-repeat left center,
+            url('../img/AH20/header.secondary.md.png') no-repeat right top,
+            url('../img/AH20/header.img.md.png') no-repeat 27% top,
+            url('../img/AH20/header.backgroundTexture.png') no-repeat left top;
+    }
+}
+@media only screen and (min-width : 1200px) {
+    .brand-header {
+        height: 240px;
+        width: 100%;
+         background-color: #002d5b;
+        background: url('../img/AH20/header.mainLogo.lg.png') no-repeat left center,
+            url('../img/AH20/header.secondary.lg.png') no-repeat right top,
+            url('../img/AH20/header.img.lg.png') no-repeat 14% top,
+            url('../img/AH20/header.backgroundTexture.png') no-repeat left top;
+    }
+}
+</style>
 
 Weight:-100
 
@@ -5981,15 +6011,16 @@ Styleguide Virtual Recipes.Header
   .brand-header {
     width: 100%;
     height: 160px;
-    background: url("../img/virtual/header.mainLogo.md.png") no-repeat 2% center, url("../img/virtual/header.secondary.md.png") no-repeat 98% top, url("../img/virtual/header.img.md.png") no-repeat 27% top, url("../img/virtual/header.backgroundTexture.png") no-repeat right top;
+    background: url("../img/virtual/header.mainLogo.md.png") no-repeat left center, url("../img/virtual/header.secondary.md.png") no-repeat right top, url("../img/virtual/header.img.md.png") no-repeat 27% top, url("../img/virtual/header.backgroundTexture.png") no-repeat left top;
     background-color: #002d5b;
+    background-size: contain, contain, contain, cover;
   }
 }
 @media only screen and (min-width : 1200px) {
   .brand-header {
     width: 100%;
     height: 240px;
-    background: url("../img/virtual/header.mainLogo.lg.png") no-repeat 2% center, url("../img/virtual/header.secondary.lg.png") no-repeat 98% top, url("../img/virtual/header.img.lg.png") no-repeat 14% top, url("../img/virtual/header.backgroundTexture.png") no-repeat right top;
+    background: url("../img/virtual/header.mainLogo.lg.png") no-repeat left center, url("../img/virtual/header.secondary.lg.png") no-repeat right top, url("../img/virtual/header.img.lg.png") no-repeat 14% top, url("../img/virtual/header.backgroundTexture.png") no-repeat left top;
     background-color: #002d5b;
   }
 }
@@ -8159,6 +8190,75 @@ Styleguide Recipes.Branded Nav.Dropdowns.Alt Content
 }
 
 /*
+Lobby Header
+
+This is the banner that uses as the umbrella brand of the conferneces. 
+
+Markup:
+<div class="lobby-header"></div>
+
+Weight:-100
+
+Styleguide Virtual Recipes.Header.lobby
+
+*/
+/*
+Umbrella Navigation
+
+This is the banner that uses as the umbrella brand of the conferneces. 
+
+Markup:
+<div class="umbrella-nav flex c_white p_3">
+    <span class="flex_auto float_right font_1 font_display font_xbold h_2lh inline-block lh_2 p-l_3 p-y_2">VIRTUAL EDUCATION</span>
+    <div class="flex">
+        <div class="flex_auto font_0 font_bold h_2lh p-y_2 uppercase vertical-align_middle">Change Conferneces</div>
+        <div class="flex_auto p-x_3">
+            <select name="" id="" class="bg_primary br_radius br_white-5 flex_auto m-l_auto">
+                <option value="">Athletic Heart</option>
+                <option value="">ACC 20</option>
+                <option value="">Covid</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+Weight:-100
+
+Styleguide Virtual Recipes.Conference Navigation
+
+*/
+.umbrella-nav {
+  width: 100%;
+  background: url("../img/virtual/lobby/jumpNav.backgroundTexture.png") no-repeat center top;
+  background-color: #002d5b;
+  background-size: cover;
+}
+
+.lobby-header {
+  width: 100%;
+  height: 100px;
+  background: url("../img/virtual/lobby/header.backgroundTexture.sm.png") no-repeat center top;
+  background-color: #002d5b;
+}
+
+@media only screen and (min-width : 768px) {
+  .lobby-header {
+    width: 100%;
+    height: 125px;
+    background: url("../img/virtual/lobby/header.mainLogo.md.png") no-repeat left top, url("../img/virtual/lobby/header.secondary.md.png") no-repeat right top, url("../img/virtual/lobby/header.img.md.png") no-repeat 27% top, url("../img/virtual/lobby/header.backgroundTexture.png") no-repeat right top;
+    background-color: #002d5b;
+    background-size: contain, contain, contain, cover;
+  }
+}
+@media only screen and (min-width : 1200px) {
+  .lobby-header {
+    width: 100%;
+    height: 160px;
+    background: url("../img/virtual/lobby/header.mainLogo.lg.png") no-repeat left top, url("../img/virtual/lobby/header.secondary.lg.png") no-repeat right top, url("../img/virtual/lobby/header.img.lg.png") no-repeat 14% top, url("../img/virtual/lobby/header.backgroundTexture.png") no-repeat right top;
+    background-color: #002d5b;
+  }
+}
+/*
 Locking Graphics
 
 Showing assets before they are interactable is needed  
@@ -8419,7 +8519,7 @@ Markup:
                 </a>
             </li>
             <li class="nav-item flex_auto">
-                <a class="bg_highlight-n1 a:bg_highlight-n3 nav-link font_medium h:bg_highlight-n3 c_black h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/engage" target="_self">
+                <a class="bg_highlight a:bg_highlight-n3 nav-link font_medium h:bg_highlight-n3 c_black h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/engage" target="_self">
                     Login
                 </a>
             </li>

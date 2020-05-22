@@ -143,7 +143,7 @@
                         </p>
                     <a class="kss-section__permalink" href="#kssref-virtual-recipes-header">
                         <h2 class="kss-section__item kss-section__item--depth-2">
-                            <span class="kss-section__ref">7.1</span>
+                            <span class="kss-section__ref">7.2</span>
                             <span class="kss-section__name">Branded Header</span>
                         </h2>
                     </a>
@@ -155,13 +155,73 @@
                         <h1 class="kss-modifiers__heading">Example 
                         </h1>
                         <div class="kss-modifiers__example">
-                            <div class=""><div class="brand-header"></div></div>
+                            <div class=""><div class="brand-header"></div>
+<style>
+.brand-header {
+    height: 160px;
+    width: 100%;
+    background-color: #002d5b;
+    background: url('../img/AH20/header.backgroundTexture.sm.png') no-repeat center top;
+}
+@media only screen and (min-width : 768px) {
+    .brand-header {
+        height: 160px;
+        width: 100%;
+        background-color: #002d5b;
+        background: url('../img/AH20/header.mainLogo.md.png') no-repeat left center,
+            url('../img/AH20/header.secondary.md.png') no-repeat right top,
+            url('../img/AH20/header.img.md.png') no-repeat 27% top,
+            url('../img/AH20/header.backgroundTexture.png') no-repeat left top;
+    }
+}
+@media only screen and (min-width : 1200px) {
+    .brand-header {
+        height: 240px;
+        width: 100%;
+         background-color: #002d5b;
+        background: url('../img/AH20/header.mainLogo.lg.png') no-repeat left center,
+            url('../img/AH20/header.secondary.lg.png') no-repeat right top,
+            url('../img/AH20/header.img.lg.png') no-repeat 14% top,
+            url('../img/AH20/header.backgroundTexture.png') no-repeat left top;
+    }
+}
+</style></div>
                         </div>
                     </article>
                         <article class="kss-section__markup overflow_scroll scrollbar-mini" style="
                                         max-height: 30vh;
                                     ">
-                            <pre><code class="language-markup">&lt;div class&#x3D;&quot;brand-header&quot;&gt;&lt;/div&gt;</code></pre>
+                            <pre><code class="language-markup">&lt;div class&#x3D;&quot;brand-header&quot;&gt;&lt;/div&gt;
+&lt;style&gt;
+.brand-header {
+    height: 160px;
+    width: 100%;
+    background-color: #002d5b;
+    background: url(&#x27;../img/AH20/header.backgroundTexture.sm.png&#x27;) no-repeat center top;
+}
+@media only screen and (min-width : 768px) {
+    .brand-header {
+        height: 160px;
+        width: 100%;
+        background-color: #002d5b;
+        background: url(&#x27;../img/AH20/header.mainLogo.md.png&#x27;) no-repeat left center,
+            url(&#x27;../img/AH20/header.secondary.md.png&#x27;) no-repeat right top,
+            url(&#x27;../img/AH20/header.img.md.png&#x27;) no-repeat 27% top,
+            url(&#x27;../img/AH20/header.backgroundTexture.png&#x27;) no-repeat left top;
+    }
+}
+@media only screen and (min-width : 1200px) {
+    .brand-header {
+        height: 240px;
+        width: 100%;
+         background-color: #002d5b;
+        background: url(&#x27;../img/AH20/header.mainLogo.lg.png&#x27;) no-repeat left center,
+            url(&#x27;../img/AH20/header.secondary.lg.png&#x27;) no-repeat right top,
+            url(&#x27;../img/AH20/header.img.lg.png&#x27;) no-repeat 14% top,
+            url(&#x27;../img/AH20/header.backgroundTexture.png&#x27;) no-repeat left top;
+    }
+}
+&lt;/style&gt;</code></pre>
                         </article>
                     </header>
     </section>
