@@ -226,31 +226,22 @@ Markup:
 <div class="brand-header"></div>
 <style>
 .brand-header {
-    height: 160px;
-    width: 100%;
-    background-color: #002d5b;
-    background: url('../img/AH20/header.backgroundTexture.sm.png') no-repeat center top;
+     background-image: url('../img/AH20/header.backgroundTexture.sm.png');
 }
 @media #{$medium-up} {
     .brand-header {
-        height: 160px;
-        width: 100%;
-        background-color: #002d5b;
-        background: url('../img/AH20/header.mainLogo.md.png') no-repeat left center,
-            url('../img/AH20/header.secondary.md.png') no-repeat right top,
-            url('../img/AH20/header.img.md.png') no-repeat 27% top,
-            url('../img/AH20/header.backgroundTexture.png') no-repeat left top;
+        background-image: url('../img/AH20/header.mainLogo.md.png'),
+            url('../img/AH20/header.secondary.md.png'),
+            url('../img/AH20/header.img.md.png'),
+            url('../img/AH20/header.backgroundTexture.png');
     }
 }
 @media #{$xlarge-up} {
     .brand-header {
-        height: 240px;
-        width: 100%;
-         background-color: #002d5b;
-        background: url('../img/AH20/header.mainLogo.lg.png') no-repeat left center,
-            url('../img/AH20/header.secondary.lg.png') no-repeat right top,
-            url('../img/AH20/header.img.lg.png') no-repeat 14% top,
-            url('../img/AH20/header.backgroundTexture.png') no-repeat left top;
+        background-image: url('../img/AH20/header.mainLogo.lg.png'),
+            url('../img/AH20/header.secondary.lg.png'),
+            url('../img/AH20/header.img.lg.png'),
+            url('../img/AH20/header.backgroundTexture.png');
     }
 }
 </style>
@@ -264,7 +255,9 @@ Styleguide Virtual Recipes.Header
     height: 160px;
     width: 100%;
     background-color: #002d5b;
-    background: url('../img/virtual/header.backgroundTexture.sm.png') no-repeat center top;
+    background-image: url('../img/virtual/header.backgroundTexture.sm.png');
+    background-repeat: no-repeat;
+    background-position:center top;
 }
 
 
@@ -272,12 +265,14 @@ Styleguide Virtual Recipes.Header
     .brand-header {
         height: 160px;
         width: 100%;
-        background-color: #002d5b;
-        background: url('../img/virtual/header.mainLogo.md.png') no-repeat left center,
-            url('../img/virtual/header.secondary.md.png') no-repeat right top,
-            url('../img/virtual/header.img.md.png') no-repeat 27% top,
-            url('../img/virtual/header.backgroundTexture.png') no-repeat left top;
-              background-size: contain,contain,contain,cover;
+        background-image: url('../img/virtual/header.mainLogo.md.png'),
+            url('../img/virtual/header.secondary.md.png'),
+            url('../img/virtual/header.img.md.png'),
+            url('../img/virtual/header.backgroundTexture.png');
+        background-size: contain,contain,contain,cover;
+        background-position: left center, right center,27% center, center center;
+        background-size: contain,contain,contain,cover;
+        background-repeat: no-repeat;
     }
 
 }
@@ -285,11 +280,12 @@ Styleguide Virtual Recipes.Header
     .brand-header {
         height: 240px;
         width: 100%;
-         background-color: #002d5b;
-        background: url('../img/virtual/header.mainLogo.lg.png') no-repeat left center,
-            url('../img/virtual/header.secondary.lg.png') no-repeat right top,
-            url('../img/virtual/header.img.lg.png') no-repeat 14% top,
-            url('../img/virtual/header.backgroundTexture.png') no-repeat left top;
+        background-image: url('../img/virtual/header.mainLogo.lg.png'),
+            url('../img/virtual/header.secondary.lg.png'),
+            url('../img/virtual/header.img.lg.png'),
+            url('../img/virtual/header.backgroundTexture.png');
+        background-position: left center, right center,14% center, center center;
+        
     }
 }@import 'base/table.boot';
 @import 'styleguide/__basic-html.boot';
