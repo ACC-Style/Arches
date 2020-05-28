@@ -380,24 +380,18 @@ gulp.task(
 gulp.task(
 	"build-cardiosmart",
 	gulp.series(
-		function() {
+		function SCSS() {
 			var brand = "cardiosmart";
 			var framework = "boot";
-			var uc = constructUCStyleSheet(brand);
-			uc = buildbrand(uc, brand, "");
 			var base = constructFrameworkStyleSheet(brand, framework);
 			base = buildbrand(base, brand, framework);
-			merge(base, uc)
+			var uc = constructUCStyleSheet(brand);
+			uc = buildbrand(uc, brand, "");
+			return merge(base,uc)
 				.pipe(header("/** Test 7 **/\n"))
 				.pipe(gulp.dest(PATHS.SCSS));
-			return runSass(brand);
 		},
-		function() {
-			return concatCSS("cardiosmart", "boot");
-		},
-		"dist",
-		"copy-to-styleguide",
-		function() {
+		function MD() {
 			var brand = "cardiosmart";
 			var framework = "boot";
 			var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
@@ -413,7 +407,15 @@ gulp.task(
 				)
 				.pipe(gulp.dest(SOURCE.MD));
 		},
-		function() {
+		function CSS() {
+			return runSass("cardiosmart");
+		},
+		function Concat() {
+			return concatCSS("cardiosmart", "boot");
+		},
+		"dist",
+		"copy-to-styleguide",
+		function styleguide() {
 			return run("npm run boot_cardiosmart").exec();
 		}
 	)
