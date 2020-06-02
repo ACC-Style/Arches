@@ -8160,106 +8160,6 @@ Styleguide Recipes.Branded Nav.Dropdowns.Alt Content
 }
 
 /*
-Lobby Header
-
-This is the banner that uses as the umbrella brand of the conferneces. 
-
-Markup:
-<div class="lobby-header"></div>
-
-Weight:-100
-
-Styleguide Virtual Recipes.Lobby.Header
-
-*/
-/*
-Umbrella Navigation
-
-This is the banner that uses as the umbrella brand of the conferneces. 
-
-Markup:
-<div class="umbrella-nav flex c_white p_3">
-    <span class="flex_auto float_right font_1 font_display font_xbold h_2lh inline-block lh_2 p-l_3 p-y_2">VIRTUAL EDUCATION</span>
-    <div class="flex">
-        <div class="flex_auto font_0 font_bold h_2lh p-y_2 uppercase vertical-align_middle">Change Conferneces</div>
-        <div class="flex_auto p-x_3">
-            <select name="" id="" class="bg_primary br_radius br_white-5 flex_auto m-l_auto">
-                <option value="">Athletic Heart</option>
-                <option value="">ACC 20</option>
-                <option value="">Covid</option>
-            </select>
-        </div>
-    </div>
-</div>
-
-Weight:-100
-
-Styleguide Virtual Recipes.Conference Navigation
-
-*/
-/*
-Conference Teaser
-
-This container holds the brand of the conferneces with some high level information. 
-
-Markup:
-<div class="conf br_shade br_1 br_solid p_4 m-b_4 br_radius relative">
-    <h1 class="font_display font_bold">
-        <a class="expanded-click-area">Confernce Name</a> 
-    </h1>
-    <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eligendi itaque cumque veniam iusto unde quae blanditiis provident sed sunt nobis, porro accusantium, dolorem dolor dolore commodi, eum aliquam sapiente.</p>
-    <div class="c_secondary">LIVE: June 20, 2020 -- ONDEMAND: June 21 - DEC 31, 2020</div>
-    <div class="absolute b_4 r_4">
-        <div class="flex_grow uppercase text_right">
-            <ul class="m-t_n2 ul_none">
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CME br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CNE br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_COP br_1 br_white-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-Weight:-100
-
-Styleguide Virtual Recipes.Lobby.Conference Teaser
-
-*/
-.umbrella-nav {
-  width: 100%;
-  background: url("../img/virtual/lobby/jumpNav.backgroundTexture.png") no-repeat center top;
-  background-color: #002d5b;
-  background-size: cover;
-}
-
-.lobby-header {
-  width: 100%;
-  height: 100px;
-  background: url("../img/virtual/lobby/header.backgroundTexture.sm.png") no-repeat center top;
-  background-color: #002d5b;
-}
-
-@media only screen and (min-width : 768px) {
-  .lobby-header {
-    width: 100%;
-    height: 125px;
-    background: url("../img/virtual/lobby/header.mainLogo.md.png") no-repeat left top, url("../img/virtual/lobby/header.secondary.md.png") no-repeat right top, url("../img/virtual/lobby/header.img.md.png") no-repeat 27% top, url("../img/virtual/lobby/header.backgroundTexture.png") no-repeat right top;
-    background-color: #002d5b;
-    background-size: contain, contain, contain, cover;
-  }
-}
-@media only screen and (min-width : 1200px) {
-  .lobby-header {
-    width: 100%;
-    height: 160px;
-    background: url("../img/virtual/lobby/header.mainLogo.lg.png") no-repeat left top, url("../img/virtual/lobby/header.secondary.lg.png") no-repeat right top, url("../img/virtual/lobby/header.img.lg.png") no-repeat 14% top, url("../img/virtual/lobby/header.backgroundTexture.png") no-repeat right top;
-    background-color: #002d5b;
-  }
-}
-/*
 Locking Graphics
 
 Showing assets before they are interactable is needed  
@@ -8419,7 +8319,7 @@ Markup:
 </div>
 
 
-Weight:0
+Weight:1000
 
 Styleguide Virtual Recipes.Locked Graphic
 */
@@ -9156,7 +9056,7 @@ Live Videos
 
 Description: All videos and presentations presented to be in a live more impactful way.  
 
-Weight:0
+Weight:1
 
 Styleguide Virtual Recipes.Live Video
 */
@@ -9254,37 +9154,38 @@ Live Video Horizontal
 Description: 
 
 Markup:
-<div class=""><div class="max-w_70">
-<article class="c_black flex">
-    <div class="block:lg flex_grow max-w_30 p-x_5:md w_50">
-        <div class="m_auto m_auto:md self_center text_center">
-            <div class="track3_video bg_cover bg_no-repeat aspect_3x2 bg_black br_1 br_radius br_solid br_black-3 flex_shrink relative shadow_3 text_center thumb">
-                <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
-                    <i class="absolute c_white-9 fa-play-circle text-shadow_black-1 fas flex_auto font_10:md font_5 opacity_9 self_center text_center w_100"></i>
+    <article class="c_black flex flex_column flex_row:md">
+        <div class="block:lg flex_grow max-w_30:md p-x_5:md w_100 w_50:md m_auto m_0:md">
+            <div class="m_auto m_auto:md self_center text_center">
+                <div class="track3_video bg_cover bg_no-repeat aspect_3x2 bg_black br_1 br_radius br_solid br_black-3 flex_shrink relative shadow_3 text_center thumb">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
+                        <i class="absolute c_white-9 fa-play-circle text-shadow_black-1 fas flex_auto font_10:md font_5 opacity_9 self_center text_center w_100"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="c_primary-n4 flex_auto font_2 font_display font_regular">
-        <div class="lh_2 m-t_2 p-y_2 p_3 relative"> <a href="https://acc.mediasite.com/mediasite/Play/b0d6b0f045624569828072d2f2eefdc41d" class="expanded-click-area">101. Coronary Artery Disease - Challenges in 2020: Cardiovascular Update For the Clinician I -- A Symposium by Valentin Fuster, MD, PhD, MACC</a></div>
-    <div class="br-t_1 br_dotted br_black-3 c_black flex flex_wrap justify_between m-t_2 p-t_2">
+        <div class="c_primary-n4 flex_auto font_1 font_2:md font_display font_regular">
+            <div class="lh_2 m-t_2 p-y_2 p_3 relative"> <a href="https://acc.mediasite.com/mediasite/Play/b0d6b0f045624569828072d2f2eefdc41d" class="expanded-click-area">101. Coronary Artery Disease - Challenges in 2020: Cardiovascular Update For the Clinician I -- A Symposium by Valentin Fuster, MD, PhD, MACC</a></div>
+            <div class="br-t_1 br_dotted br_black-3 c_black flex flex_wrap justify_between m-t_2 p-t_2">
                 <div class="flex_shrink block font_n2  text_left p-r_4 m-r_4 ">
-            <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+                    <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+                </div>
+                <div class="flex_grow uppercase text_right">
+                    <ul class="m-t_n2 ul_none">
+                        <li class="inline-block lh_0 p-l_3 font_n2">
+                            <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme </li>
+                        <li class="inline-block lh_0 p-l_3 font_n2">
+                            <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne </li>
+                        <li class="inline-block lh_0 p-l_3 font_n2">
+                            <span class="bg_COP br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="flex_grow uppercase text_right">
-            <ul class="m-t_n2 ul_none">
-                <li class="inline-block lh_0 p-l_3 font_n2">
-                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme </li>
-                <li class="inline-block lh_0 p-l_3 font_n2">
-                    <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne </li>
-                <li class="inline-block lh_0 p-l_3 font_n2">
-                    <span class="bg_COP br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop </li>
-            </ul>
-        </div>
-    </div></div>
+    </article>
 
-</article>
-</div></div>
+MarkupWrapperClasses:
+max-w_70
 
 
 Weight:10
