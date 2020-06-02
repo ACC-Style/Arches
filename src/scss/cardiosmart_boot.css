@@ -9083,6 +9083,88 @@ Styleguide Recipes.Branded Nav.Dropdowns.Alt Content
 }
 
 /*
+Editor Container Decorator
+
+Editor Decorators are only visible in the Sitefinity Editor
+
+Markup:
+<div class="sfPageEditor">
+     <div class="visible-authenticated-block">
+        <ul class="nav-pills nav">
+            <li class="nav-item active"><a class="nav-link">Profile</a></li>
+            <li class="nav-item"><a class="nav-link">Settings</a></li>
+            <li class="nav-item"><a class="nav-link">Logout</a></li>
+        </ul>
+     </div>
+     <div class="visible-anonymous-block">
+        <ul class="nav-pills nav">
+            <li class="nav-item active"><a class="nav-link">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link">Getting Started</a></li>
+            <li class="nav-item"><a class="nav-link">Login</a></li>
+        </ul>
+	 </div>
+	<div class="sfEditor-show">
+		<div class="bg-blend_mulitiply bg-blend_multiply bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_black-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb" style="width:300px;height:200px;">
+			<div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
+				<span class=" c_white-9  flex_auto font_5 self_center text_center w_100">Ad Placeholder</span>
+			</div>
+		</div>
+	</div>
+ </div>
+
+ Weight: 10000
+
+Styleguide Sitefinity.Decorator
+*/
+.sfPageEditor .visible-authenticated-block, .sfPageEditor .visible-anonymous-block {
+  display: block !important;
+  opacity: 0.75;
+  border: 2px dotted transparent;
+  margin: 5px;
+}
+
+.sfPageEditor .visible-authenticated-block:after, .sfPageEditor .visible-authenticated-block:before, .sfPageEditor .visible-anonymous-block:after, .sfPageEditor .visible-anonymous-block:before {
+  display: block;
+  position: relative;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sfEditor-show {
+  display: none;
+}
+
+.sfPageEditor .sfEditor-show {
+  display: block !important;
+  opacity: .5;
+}
+
+.sfPageEditor .visible-anonymous-block img,
+.sfPageEditor .visible-authenticated-block img {
+  display: none;
+}
+
+.sfPageEditor .visible-authenticated-block {
+  border-color: #58b5a5;
+  background-color: #eef8f6;
+}
+
+.sfPageEditor .visible-authenticated-block:after, .sfPageEditor .visible-authenticated-block:before {
+  content: "AUTHENTICATED CONTENT - REMBER TO CHANGE PERMISIONS OF CONTENT IN AREA - Permision/Role/Authenticated";
+  color: #047294;
+}
+
+.sfPageEditor .visible-anonymous-block {
+  border-color: #ffc425;
+  background-color: #fff9e9;
+}
+
+.sfPageEditor .visible-anonymous-block:after, .sfPageEditor .visible-anonymous-block:before {
+  content: "ANONYMOUS CONTENT - REMBER TO CHANGE PERMISIONS OF CONTENT IN AREA - Permision/Role/Anonymous";
+  color: #e87d1e;
+}
+
+/*
 	CardioSmart Recipes
 
 	The use of Utiltiy Class give us the ablitiy to create much of the UI needed for CardioSmart without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of CardioSmart.
@@ -9952,7 +10034,7 @@ Description: Text that needs a little extra something when it is quoted.
  
 Markup:
 <blockquote class="flex relative font_display">
-    <div class="bg_highlight bg_hightlight c_highlight-5 flex_grow font_2 p_2"><i class="fas fa-quote-left fa-fw"></i></div>
+    <div class="bg_highlight bg_hightlight c_highlight-5 flex_none font_2 p_2"><i class="fas fa-quote-left fa-fw"></i></div>
     <div class="a:_block c_black flex_auto font_0 p-l_4">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         Numquam consequuntur delectus vero. Ratione fugit totam
@@ -10676,7 +10758,7 @@ Markup:
 <div class="flex_auto p-x_3">
    <div class="bg_ecg-n1 br_radius h:bg_primary relative min-h_10 shadow_overlap-light c_white " style="">
       <div class="flex flex_row self_stretch" style="min-height: 11rem;">
-         <div class="bg_black-2 flex flex_column flex_grow justify_around p_4 shadow_n1 text_center">
+         <div class="bg_black-2 flex flex_column flex_none justify_around p_4 shadow_n1 text_center">
                <div class="flex_shrink lh_1 self_center">
                   <i class="fa-file-medical-alt fad font_8 m-b_2 fa-fw"></i>
                   <div class="c_white-5 font_n3  text_center">
@@ -10702,7 +10784,7 @@ Markup:
    <div class="flex_auto p-x_3">
       <div class="bg_congenital-n1 br_radius h:bg_primary relative min-h_10 shadow_overlap-light c_white " style="">
       <div class="flex flex_row self_stretch" style="min-height: 11rem;">
-         <div class="bg_black-2 flex flex_column flex_grow justify_around p_4 shadow_n1 text_center">
+         <div class="bg_black-2 flex flex_column flex_none justify_around p_4 shadow_n1 text_center">
                <div class="flex_shrink lh_1 self_center">
                   <i class="fa-file-chart-pie fad font_8 m-b_2 fa-fw"></i>
                   <div class="c_white-5 font_n3  text_center">
@@ -10729,7 +10811,7 @@ Markup:
    <div class="flex_auto p-x_3">
       <div class="bg_prevention br_radius h:bg_primary relative min-h_10 shadow_overlap-light c_white " style="">
       <div class="flex flex_row self_stretch" style="min-height: 11rem;">
-         <div class="bg_black-2 flex flex_column flex_grow justify_around p_4 shadow_n1 text_center">
+         <div class="bg_black-2 flex flex_column flex_none justify_around p_4 shadow_n1 text_center">
                <div class="flex_shrink lh_1 self_center">
                   <i class="fa-comments-alt fad font_8 m-b_2 fa-fw"></i>
                   <div class="c_white-5 font_n3  text_center">
@@ -10785,7 +10867,7 @@ Description: New Items on the site use the colors of the pathways to enrich the 
 Markup:
 <div class="{{modifier_class}} br_radius h:bg_primary relative min-h_10 shadow_overlap-light c_white" style="">
 	<div class="flex flex_row self_stretch" style="min-height: 11rem;">
-        <div class="bg_black-2 flex flex_column flex_grow justify_around p_4 shadow_n1 text_center">
+        <div class="bg_black-2 flex flex_column flex_none justify_around p_4 shadow_n1 text_center">
             <div class="flex_shrink lh_1 self_center">
                 <i class="fa-calculator fad font_8 m-b_2 fa-fw"></i>
                 <div class="c_white-5 font_n3  text_center">
@@ -10847,7 +10929,7 @@ Description: New Items on the site use the colors of the pathways to enrich the 
 Markup:
 <div class="bg_ecg-n1 br_radius h:bg_primary relative min-h_10 shadow_overlap-light max-w_30 c_white " style="">
 	<div class="flex flex_row self_stretch" style="min-height: 11rem;">
-        <div class="bg_black-2 flex flex_column flex_grow justify_around p_4 shadow_n1 text_center">
+        <div class="bg_black-2 flex flex_column flex_none justify_around p_4 shadow_n1 text_center">
             <div class="flex_shrink lh_1 self_center">
                 <i class="{{modifier_class}} fad font_8 m-b_2 fa-fw"></i>
                 <div class="c_white-5 font_n3  text_center">
@@ -11042,7 +11124,7 @@ Markup:
    </h2>
    <ul class="font_0:lg font_n1 lh_2 ul_none">
       <li class="flex flex_row-reverse p_2 h:bg_secondary-5 relative">
-         <div class="flex flex_column flex_grow justify_around">
+         <div class="flex flex_column flex_none justify_around">
             <div class="bg_black-2 font_1 p_2 p-x_3 br_radius">
                <i class="fas fa-arrow-alt-to-right p-y_2 inline-block fa-fw c_black-7"
                   data-attr="tool-type"></i>
@@ -11055,7 +11137,7 @@ Markup:
          </div>
       </li>
       <li class="flex flex_row-reverse p_2 h:bg_secondary-5 relative br-t_1 br_dotted br_secondary-4">
-         <div class="flex flex_column flex_grow justify_around">
+         <div class="flex flex_column flex_none justify_around">
             <div class="bg_black-2 font_1 p_2 p-x_3 br_radius">
                <i class="fas fa-arrow-alt-to-right p-y_2 inline-block fa-fw c_black-7"
                   data-attr="tool-type"></i>
@@ -11069,7 +11151,7 @@ Markup:
          </div>
       </li>
       <li class="flex flex_row-reverse p_2 h:bg_secondary-5 relative br-t_1 br_dotted br_secondary-4">
-         <div class="flex flex_column flex_grow justify_around">
+         <div class="flex flex_column flex_none justify_around">
             <div class="bg_black-2 font_1 p_2 p-x_3 br_radius">
                <i class="fas fa-arrow-alt-to-right p-y_2 inline-block fa-fw c_black-7"
                   data-attr="tool-type"></i>
@@ -11102,7 +11184,7 @@ Markup:
    </h2>
    <ul class="font_0:lg font_n1 lh_2 ul_none">
       <li class="flex p_2 h:bg_secondary-5 relative">
-         <div class="flex flex_column flex_grow justify_around">
+         <div class="flex flex_column flex_none justify_around">
             <div class="bg_black-2 font_1 p_2 p-x_3 br_radius">
                <i class="fas fa-file p-y_2 inline-block fa-fw c_black-7" data-attr="tool-type"></i>
             </div>
@@ -11115,7 +11197,7 @@ Markup:
          </div>
       </li>
       <li class="flex p_2 h:bg_secondary-5 relative br-t_1 br_dotted br_secondary-4">
-         <div class="flex flex_column flex_grow justify_around">
+         <div class="flex flex_column flex_none justify_around">
             <div class="bg_black-2 font_1 p_2 p-x_3 br_radius">
                <i class="fas fa-prescription-bottle-alt p-y_2 inline-block fa-fw c_black-7"
                   data-attr="tool-type"></i>
@@ -11150,7 +11232,7 @@ Markup:
    </h2>
    <ul class="font_0:lg font_n1 lh_2 ul_none">
       <li class="flex p_2 h:bg_secondary-5 relative">
-         <div class="flex flex_column flex_grow justify_around">
+         <div class="flex flex_column flex_none justify_around">
             <div class="bg_black-2 font_1 p_2 p-x_3 br_radius">
                <i class="fas fa-user-md-chat p-y_2 inline-block fa-fw c_black-7" data-attr="tool-type"></i>
             </div>
@@ -11162,7 +11244,7 @@ Markup:
          </div>
       </li>
       <li class="flex p_2 h:bg_secondary-5 relative br-t_1 br_dotted br_secondary-4">
-         <div class="flex flex_column flex_grow justify_around">
+         <div class="flex flex_column flex_none justify_around">
             <div class="bg_black-2 font_1 p_2 p-x_3 br_radius">
                <i class="fas fa-user-md-chat p-y_2 inline-block fa-fw c_black-7"
                   data-attr="tool-type"></i>
@@ -11266,10 +11348,10 @@ Markup:
 <article class="br_1 br_black-2 br_solid font_0 font_ui p_4 shadow_overlap-light m-b_4">
     <header class="flex justify_between">
         <h1 class="font_2 font_display m_0 flex_auto"><span>Trudeo</span>
-        </h1> <a class="bg_shade-5 br_2 br_solid br_white-3 c_black flex_shrink h:bg_primary h:c_white h:underline-none inline-block m-r_2   text_center flex shadow_overlap-light br_radius"><span class="lh_0 flex_auto add alt-short-text a:_none p-y_3 p-x_3 p-r_4">Add To Compare</span> <span class="flex_grow p-y_3 p-x_3 text_center br_radius a:bg_accent-n1 flex"><i class="fas a:c_white c_shade-3 fa-fw icon-toggle_check-sqaure icon-toggle_check-square self_center"></i></span></a>
+        </h1> <a class="bg_shade-5 br_2 br_solid br_white-3 c_black flex_shrink h:bg_primary h:c_white h:underline-none inline-block m-r_2   text_center flex shadow_overlap-light br_radius"><span class="lh_0 flex_auto add alt-short-text a:_none p-y_3 p-x_3 p-r_4">Add To Compare</span> <span class="flex_none p-y_3 p-x_3 text_center br_radius a:bg_accent-n1 flex"><i class="fas a:c_white c_shade-3 fa-fw icon-toggle_check-sqaure icon-toggle_check-square self_center"></i></span></a>
     </header>
     <div class="flex flex_column flex_row:md">
-        <div class="br-r_1 flex_grow font_0 m-r_4:md w_30:md w_20:lg max-w_30">
+        <div class="br-r_1 flex_none font_0 m-r_4:md w_30:md w_20:lg max-w_30">
             <address class="m-t_3">
                 <ul class="ul_none lh_1 font_0">
                     <li class="m-b_1 m-b_3:md facility-address font_1">
@@ -11294,7 +11376,7 @@ Markup:
             </ul>
         </div>
     </div>
-    <footer class="br-t_1 br_secondary-5 br_solid flex justify_between m-t_3 p-t_3 result-footer flex_row-reverse"><a class="a:bg_accent bg_shade-5 br_2 br_solid br_white-3 c_black flex_grow h:bg_primary h:c_white h:underline-none inline-block m-r_2 p-y_2 p_4 shadow_overlap-light text_center br_radius"><span class="add alt-short-text">Profile</span> <i class="fa fa-fw icon-toggle_arrow-circle"></i></a></footer>
+    <footer class="br-t_1 br_secondary-5 br_solid flex justify_between m-t_3 p-t_3 result-footer flex_row-reverse"><a class="a:bg_accent bg_shade-5 br_2 br_solid br_white-3 c_black flex_none h:bg_primary h:c_white h:underline-none inline-block m-r_2 p-y_2 p_4 shadow_overlap-light text_center br_radius"><span class="add alt-short-text">Profile</span> <i class="fa fa-fw icon-toggle_arrow-circle"></i></a></footer>
 </article>
  
 Weight:-1
@@ -11352,7 +11434,7 @@ Markup:
 		</div>
 		<h2 class="flex_auto lh_0 m_0 p-x_3 self_center">Search</h2>
 		<div class="flex_shrink">
-			<a href="#" data-bind="click: Behavior_ClearSearchValues flex_grow" class="btn btn-link self_center">
+			<a href="#" data-bind="click: Behavior_ClearSearchValues flex_none" class="btn btn-link self_center">
 				Clear
 				<i class="fa fa-times-circle"></i>
 			</a>
@@ -11453,7 +11535,7 @@ Markup:
 	</nav>
 	<div class="flex">
 		<ul class="flex ul_none">
-			<li class="flex_grow flex active">
+			<li class="flex_none flex active">
 				<div class="self_center a:_none">
 					<i class=" br_2 br_dashed br_radius br_black-3 fa-question fas m-r_3 p_3 "></i>
 				</div>
@@ -11462,7 +11544,7 @@ Markup:
 						class="bg_highlight br_2 br_highlight-n3 br_radius br_solid c_black fa-hospital fas m-r_3 p_3"></i>
 				</div>
 			</li>
-			<li class="flex_grow flex ">
+			<li class="flex_none flex ">
 				<div class="self_center a:_none">
 					<i class=" br_2 br_dashed br_radius br_black-3 fa-question fas m-r_3 p_3 "></i>
 				</div>
@@ -11471,7 +11553,7 @@ Markup:
 						class="bg_highlight br_2 br_highlight-n3 br_radius br_solid c_black fa-hospital fas m-r_3 p_3"></i>
 				</div>
 			</li>
-			<li class="flex_grow flex ">
+			<li class="flex_none flex ">
 				<div class="self_center a:_none">
 					<i class=" br_2 br_dashed br_radius br_black-3 fa-question fas m-r_3 p_3 "></i>
 				</div>
@@ -11500,7 +11582,7 @@ Description: Opening table of participation.
 Markup:
 <section  class="bg_white font_ui">
     <header data-attr="accordion-header" class="br_black-3 br_solid br_1 bg_black-1 flex is-active">
-        <div class="flex_grow flex column justify_center font-size_up p-x_3 p-x_4:md bg_primary-4 br_black-3 br_solid br-r_1 "><i class="fas fa-fw icon-toggle_plus-minus flex_auto self_center a:c_primary-n4 c_primary-n1 is-active"></i></div>
+        <div class="flex_none flex column justify_center font-size_up p-x_3 p-x_4:md bg_primary-4 br_black-3 br_solid br-r_1 "><i class="fas fa-fw icon-toggle_plus-minus flex_auto self_center a:c_primary-n4 c_primary-n1 is-active"></i></div>
         <div class="flex_auto  p-y_3 p-x_2 p-l_3">
             <h2  class="font_display m_0 lh_2 font_2">Registry and Quality Program Participation.</h2>
         </div>
@@ -11569,7 +11651,7 @@ Description: Opening table of participation.
 Markup:
 <section   class="bg_white font_ui">
     <header  data-attr="accordion-header" class="br_black-3 br_solid br_1 bg_black-1 flex is-active">
-        <div  class="flex_grow flex column justify_center font-size_up p-x_3 p-x_4:md bg_primary-4 br_black-3 br_solid br-r_1 "><i  class="fas fa-fw icon-toggle_plus-minus flex_auto self_center a:c_primary-n4 c_primary-n1 is-active"></i></div>
+        <div  class="flex_none flex column justify_center font-size_up p-x_3 p-x_4:md bg_primary-4 br_black-3 br_solid br-r_1 "><i  class="fas fa-fw icon-toggle_plus-minus flex_auto self_center a:c_primary-n4 c_primary-n1 is-active"></i></div>
         <div  class="flex_auto  p-y_3 p-x_2 p-l_3">
             <h2   class="font_display m_0 font_2 lh_1">NCDR METRIC 1</h2>
         </div>
@@ -11649,7 +11731,7 @@ Markup:
             <h1 class="font_2 font_display m_0 flex_auto m-y_0">Ahmanson – UCLA Adult Congenital Heart Disease Center</h1>
         </header>
         <div class="flex flex_column flex_row:md  p_4 p-t_0 p-b_4">
-            <div class="br-r_1 flex_grow font_0 m-r_4:md w_20:lg ">
+            <div class="br-r_1 flex_none font_0 m-r_4:md w_20:lg ">
                 <h3 class="c_primary font_1">Main Office</h3>
                 <address class="m-t_3">
                     <ul class="ul_none lh_1 font_0">
@@ -11699,7 +11781,7 @@ Markup:
         </div>
         <section class="bg_white font_ui">
             <header data-attr="accordion-header" class="br_black-3 br_solid br_1 bg_black-1 flex font_n1">
-                <div class="flex_grow flex column justify_center font-size_up p-x_3 p-x_3:md bg_primary-4 br_black-3 br_solid br-r_1">
+                <div class="flex_none flex column justify_center font-size_up p-x_3 p-x_3:md bg_primary-4 br_black-3 br_solid br-r_1">
                     <i class="fas fa-fw icon-toggle_plus-minus flex_auto self_center a:c_primary-n4 c_primary-n1"></i>
                 </div>
                 <div class="flex_auto  p-y_3 p-x_2 p-l_3">More Information</div>
@@ -11713,7 +11795,7 @@ Markup:
                             <span class="font_italic opacity_8 block font-size_down c_secondary">Job Title That is Longer then Normal</span>
                         </div>
                         <address class="m-t_3 flex flex_column flex_row:md">
-                            <ul class="ul_none lh_1 font_0 flex_grow p-r_5">
+                            <ul class="ul_none lh_1 font_0 flex_none p-r_5">
                                 <li class="m-b_1 m-b_3:md facility-address">
                                     <div class="block"><span class="street-address">8994 Morning Pass</span></div>
                                     <div class="block"><span class="street-address"></span></div>
@@ -11734,7 +11816,7 @@ Markup:
                             <span class="font_italic opacity_8 block font-size_down c_secondary">Job Title That is Longer then Normal</span>
                         </div>
                         <address class="m-t_3 flex flex_column flex_row:md">
-                            <ul class="ul_none lh_1 font_0 flex_grow p-r_5">
+                            <ul class="ul_none lh_1 font_0 flex_none p-r_5">
                                 <li class="m-b_1 m-b_3:md facility-address">
                                     <div class="block"><span class="street-address">8994 Morning Pass</span></div>
                                     <div class="block"><span class="street-address"></span></div>
@@ -11755,7 +11837,7 @@ Markup:
                             <span class="font_italic opacity_8 block font-size_down c_secondary">Job Title That is Longer then Normal</span>
                         </div>
                         <address class="m-t_3 flex flex_column flex_row:md">
-                            <ul class="ul_none lh_1 font_0 flex_grow p-r_5">
+                            <ul class="ul_none lh_1 font_0 flex_none p-r_5">
                                 <li class="m-b_1 m-b_3:md facility-address">
                                     <div class="block"><span class="street-address">8994 Morning Pass</span></div>
                                     <div class="block"><span class="street-address"></span></div>
@@ -11779,7 +11861,7 @@ Markup:
                         <div class="font_0">
                             <span class="font_bold block">Hospital Names</span> </div>
                         <address class="m-t_3 flex flex_column flex_row:md">
-                            <ul class="ul_none lh_1 font_0 flex_grow p-r_5">
+                            <ul class="ul_none lh_1 font_0 flex_none p-r_5">
                                 <li class="m-b_1 m-b_3:md facility-address">
                                     <div class="block"><span class="street-address">8994 Morning Pass</span></div>
                                     <div class="block"><span class="street-address"></span></div>
@@ -11798,7 +11880,7 @@ Markup:
                         <div class="font_0">
                             <span class="font_bold block">Hospital Names</span> </div>
                         <address class="m-t_3 flex flex_column flex_row:md">
-                            <ul class="ul_none lh_1 font_0 flex_grow p-r_5">
+                            <ul class="ul_none lh_1 font_0 flex_none p-r_5">
                                 <li class="m-b_1 m-b_3:md facility-address">
                                     <div class="block"><span class="street-address">8994 Morning Pass</span></div>
                                     <div class="block"><span class="street-address"></span></div>
@@ -11818,7 +11900,7 @@ Markup:
                             <span class="font_bold block">Hospital Names</span>
                         </div>
                         <address class="m-t_3 flex flex_column flex_row:md">
-                            <ul class="ul_none lh_1 font_0 flex_grow p-r_5">
+                            <ul class="ul_none lh_1 font_0 flex_none p-r_5">
                                 <li class="m-b_1 m-b_3:md facility-address">
                                     <div class="block"><span class="street-address">8994 Morning Pass</span></div>
                                     <div class="block"><span class="street-address"></span></div>
