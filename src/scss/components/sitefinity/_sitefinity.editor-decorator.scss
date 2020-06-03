@@ -57,22 +57,22 @@ Styleguide Sitefinity.Decorator
 	}
 	.visible-authenticated-block {
 		@extend %editor-visible;
-		border-color: #58b5a5;
-		background-color: #eef8f6;
+		border-color: get-themecolor(accent,2);
+		background-color:get-themecolor(accent,5);
 		&:after,
 		&:before {
-			content: "AUTHENTICATED CONTENT - REMBER TO CHANGE PERMISIONS OF CONTENT IN AREA - Permision/Role/Authenticated";
+			content: "AUTHENTICATED CONTENT -  Permision/Role/Authenticated";
 			color: #047294;
 			@extend %editor-visible-message;
 		}
 	}
 	.visible-anonymous-block {
 		@extend %editor-visible;
-		border-color: #ffc425;
-		background-color: #fff9e9;
+		border-color: get-themecolor(highlight,2);
+		background-color:get-themecolor(highlight,5);
 		&:after,
 		&:before {
-			content: "ANONYMOUS CONTENT - REMBER TO CHANGE PERMISIONS OF CONTENT IN AREA - Permision/Role/Anonymous";
+			content: "ANONYMOUS CONTENT - Permision/Role/Anonymous";
 			color: #e87d1e;
 			@extend %editor-visible-message;
 		}

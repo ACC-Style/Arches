@@ -8206,31 +8206,6 @@ Styleguide Virtual Recipes.Lobby.Header
 
 */
 /*
-Umbrella Navigation
-
-This is the banner that uses as the umbrella brand of the conferneces. 
-
-Markup:
-<div class="umbrella-nav flex c_white p_3">
-    <span class="flex_auto float_right font_1 font_display font_xbold h_2lh inline-block lh_2 p-l_3 p-y_2">VIRTUAL EDUCATION</span>
-    <div class="flex">
-        <div class="flex_auto font_0 font_bold h_2lh p-y_2 uppercase vertical-align_middle">Change Conferneces</div>
-        <div class="flex_auto p-x_3">
-            <select name="" id="" class="bg_primary br_radius br_white-5 flex_auto m-l_auto">
-                <option value="">Athletic Heart</option>
-                <option value="">ACC 20</option>
-                <option value="">Covid</option>
-            </select>
-        </div>
-    </div>
-</div>
-
-Weight:-100
-
-Styleguide Virtual Recipes.Conference Navigation
-
-*/
-/*
 Conference Teaser
 
 This container holds the brand of the conferneces with some high level information. 
@@ -8436,13 +8411,6 @@ Styleguide Virtual Recipes.Lobby.Cards.AH20
   }
 }
 
-.umbrella-nav {
-  width: 100%;
-  background: url("../img/virtual/lobby/jumpNav.backgroundTexture.png") no-repeat center top;
-  background-color: #002d5b;
-  background-size: cover;
-}
-
 .lobby-header {
   width: 100%;
   height: 100px;
@@ -8467,6 +8435,42 @@ Styleguide Virtual Recipes.Lobby.Cards.AH20
     background-color: #002d5b;
   }
 }
+/*
+Umbrella Navigation
+
+This is the banner that uses as the umbrella brand of the conferneces. 
+
+Markup:
+<div class="c_white flex flex_wrap p_4 p_3:md umbrella_nav">
+    <div class="flex_auto float_right font_1 font_display font_xbold  inline-block lh_2 p-l_3:md p-y_2"> VIRTUAL EDUCATION <div class="font_light font_n1 lh_0">Welcome Josh G.</div>
+    </div>
+    <div class="flex flex_auto m-l_auto m-t_3 m-t_0:md w_100 w_auto:md">
+        <div class="flex_grow p-x_3:md">
+            <div class="font_bold font_n2 h_2lh m-b_2 text_right:md uppercase vertical-align_middle">Change Conferneces</div>
+            <div class="">
+                <select name="" id="" class="bg_primary br_radius br_white-5 flex_auto w_100">
+                    <option value="">Athletic Heart</option>
+                    <option value="">ACC 20</option>
+                    <option value="">Covid</option>
+                </select>
+            </div>
+        </div>
+        <button class="absolute bg_highlight br_radius btn btn-primary c_black flex_shrink font_bold h:bg_highlight-n3 h:c_white lh_2 m-l_0 r_0:md r_4 relative:md t_0:md t_4"> <span class="display_none inline:md">Login</span><i class="fa-sign-out-alt fas p-l_2"></i> </button>
+    </div>
+</div>
+
+Weight:-100
+
+Styleguide Virtual Recipes.Conference Navigation
+
+*/
+.umbrella_nav {
+  width: 100%;
+  background: url("../img/virtual/lobby/jumpNav.backgroundTexture.png") no-repeat center top;
+  background-color: #002d5b;
+  background-size: cover;
+}
+
 /*
 Locking Graphics
 
@@ -9184,20 +9188,20 @@ Styleguide Sitefinity.Decorator
   display: none;
 }
 .sfPageEditor .visible-authenticated-block {
-  border-color: #58b5a5;
-  background-color: #eef8f6;
+  border-color: #54d1ff;
+  background-color: #e4f8ff;
 }
 .sfPageEditor .visible-authenticated-block:after, .sfPageEditor .visible-authenticated-block:before {
   color: #047294;
-  content: "AUTHENTICATED CONTENT - REMBER TO CHANGE PERMISIONS OF CONTENT IN AREA - Permision/Role/Authenticated";
+  content: "AUTHENTICATED CONTENT -  Permision/Role/Authenticated";
 }
 .sfPageEditor .visible-anonymous-block {
-  border-color: #ffc425;
-  background-color: #fff9e9;
+  border-color: #ffcd5c;
+  background-color: #fff7e5;
 }
 .sfPageEditor .visible-anonymous-block:after, .sfPageEditor .visible-anonymous-block:before {
   color: #e87d1e;
-  content: "ANONYMOUS CONTENT - REMBER TO CHANGE PERMISIONS OF CONTENT IN AREA - Permision/Role/Anonymous";
+  content: "ANONYMOUS CONTENT - Permision/Role/Anonymous";
 }
 
 /*
