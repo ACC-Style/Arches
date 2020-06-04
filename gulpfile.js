@@ -224,8 +224,6 @@ var constructFrameworkStyleSheet = function(brand, framework) {
 		.pipe(clone())
 		.pipe(rename(brand + "_" + framework + ".scss"))
 		.pipe(headerFromFile("/recipes/__recipes." + framework + ".scss"))
-		.pipe(headerFromFile("/recipes/__recipes." + brand + ".scss"))
-		.pipe(headerFromFile("/components/__components." + brand + ".scss"))
 		.pipe(headerFromFile("/components/__components." + framework + ".scss"))
 		.pipe(headerFromFile("/base/__base." + brand + ".scss"));
 	return base;
@@ -236,7 +234,9 @@ var constructUCStyleSheet = function(brand) {
 		.pipe(clone())
 		.pipe(rename(brand + "_uc.scss"))
 		.pipe(headerFromFile("/setup/__utilityclasses.scss"))
+		.pipe(headerFromFile("/components/__components." + brand + ".scss"))
 		.pipe(headerFromFile("/components/__components.base.scss"))
+		.pipe(headerFromFile("/recipes/__recipes." + brand + ".scss"))
 		.pipe(headerFromFile("/recipes/__recipes.base.scss"))
 		.pipe(header("/** Base UC File **/"));
 };
