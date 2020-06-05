@@ -139,7 +139,7 @@
             <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
                     <header class="bg_white kss-section kss-section--depth-2 shadow_1" id="kssref-designbase-seals">
                 <article class="kss-section__content">
-                        <p class="kss-section__source">Source: <span>dist/css/virtual_boot_combo.css</span>, line <span>9402</span>
+                        <p class="kss-section__source">Source: <span>dist/css/virtual_boot_combo.css</span>, line <span>1699</span>
                         </p>
                     <a class="kss-section__permalink" href="#kssref-designbase-seals">
                         <h2 class="kss-section__item kss-section__item--depth-2">
@@ -160,45 +160,69 @@
 	<span class="alt">[modifier class]</span>
 </div></div>
                         </div>
+                        <div class="	bg_shade-2 max-w_40">
                             <article class="kss-modifiers__modifier">
                                 <h2 class="kss-modifiers__name">.seal_normal</h2>
                                 <p class="kss-modifiers__description">Full size seal great for desktop displays best used for when the seal can be taller then 100px.</p>
                                 <div class="kss-modifiers__example">
-                                    <div class=""><div class="seal_normal m_auto" data-style="seal_normal">
+                                    <div class="seal_normal m_auto" data-style="seal_normal">
 	<span class="alt">seal_normal</span>
-</div></div></div>
+</div></div>
                             </article>
                             <article class="kss-modifiers__modifier">
                                 <h2 class="kss-modifiers__name">.seal_small</h2>
                                 <p class="kss-modifiers__description">Condensed size seal great for Tablet displays best used for when the seal is between 100px to 40px.</p>
                                 <div class="kss-modifiers__example">
-                                    <div class=""><div class="seal_small m_auto" data-style="seal_small">
+                                    <div class="seal_small m_auto" data-style="seal_small">
 	<span class="alt">seal_small</span>
-</div></div></div>
+</div></div>
                             </article>
                             <article class="kss-modifiers__modifier">
                                 <h2 class="kss-modifiers__name">.seal_tiny</h2>
                                 <p class="kss-modifiers__description">Smallest of the seals best used for icons when seal is 40px and bellow</p>
                                 <div class="kss-modifiers__example">
-                                    <div class=""><div class="seal_tiny m_auto" data-style="seal_tiny">
+                                    <div class="seal_tiny m_auto" data-style="seal_tiny">
 	<span class="alt">seal_tiny</span>
-</div></div></div>
+</div></div>
                             </article>
+                        </div>
                     </article>
-                        <article class="kss-section__markup overflow_scroll scrollbar-mini" style="
-                                        max-height: 30vh;
-                                    ">
-                            <pre><code class="language-markup">&lt;div class&#x3D;&quot;[modifier class] m_auto&quot; data-style&#x3D;&quot;[modifier class]&quot;&gt;
+                        <section class="relative">
+                            <article class="kss-section__markup overflow_scroll scrollbar-mini" style="max-height: 30vh;">
+                                <pre><code class="language-markup"  id="input-designbase-seals" value='&lt;div class&#x3D;&quot;[modifier class] m_auto&quot; data-style&#x3D;&quot;[modifier class]&quot;&gt;
+	&lt;span class&#x3D;&quot;alt&quot;&gt;[modifier class]&lt;/span&gt;
+&lt;/div&gt;'>&lt;div class&#x3D;&quot;[modifier class] m_auto&quot; data-style&#x3D;&quot;[modifier class]&quot;&gt;
 	&lt;span class&#x3D;&quot;alt&quot;&gt;[modifier class]&lt;/span&gt;
 &lt;/div&gt;</code></pre>
-                        </article>
+                            </article>
+                            <input class="display_none text-input html-code-input" type="text" name="" id="input-designbase-seals" value='&lt;div class&#x3D;&quot;[modifier class] m_auto&quot; data-style&#x3D;&quot;[modifier class]&quot;&gt;
+	&lt;span class&#x3D;&quot;alt&quot;&gt;[modifier class]&lt;/span&gt;
+&lt;/div&gt;'>
+                            <a class="absolute bg_shade-3 br_1 br_black-3 br_radius br_solid font_medium h:bg_shade-1 m-r_3 p-x_4 p-y_3 r_3 shadow_overlap-light t_3" onclick="copyToClipboard( '#input-designbase-seals',event )"><i class="far fa-copy"></i> Copy</a>
+                        </section>
                     </header>
     </section>
+    
     <!-- /documentation. -->
     <!-- scripts. -->
     <script src="kss-assets/vendor/jquery.js"></script>
     <script src="kss-assets/vendor/prism.js"></script>
     <script src="kss-assets/js/kss.js"></script>
+    <script>
+        function CopyText(id,event) {
+            event.preventDefault();
+            var $htmlCodeInput =  document.getElementById(id);
+            /* Select the text field */
+            $htmlCodeInput.select();
+            $htmlCodeInput.setSelectionRange(0, 99999); /*For mobile devices*/
+            $("body").append($htmlCodeInput);
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+            /* Alert the copied text */
+            alert("Copied the text: " + $htmlCodeInput.value);
+        };
+    </script>
     <script src="../js/bootstrap/bootstrap.js"></script>
 <script src="../js/toggleActive.js"></script>
 
