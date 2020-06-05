@@ -119,21 +119,25 @@
                         <div class="kss-modifiers__example">
                             <div class="{{markupwrapperclasses}}">{{{ markup }}}</div>
                         </div>
+                        <div class="{{markupwrapperclasses}}">
                         {{#each modifiers}}
                             <article class="kss-modifiers__modifier">
                                 <h2 class="kss-modifiers__name">{{ name }}</h2>
                                 <p class="kss-modifiers__description">{{{ description }}}</p>
                                 <div class="kss-modifiers__example">
-                                    <div class="{{markupwrapperclasses}}">{{{ markup }}}</div></div>
+                                    {{{ markup }}}</div>
                             </article>
                         {{/each}}
+                        </div>
                     </article>
                     {{#if example}}
-                        <article class="kss-section__markup overflow_scroll scrollbar-mini" style="
-                                        max-height: 30vh;
-                                    ">
-                            <pre><code class="language-markup">{{ markup }}</code></pre>
-                        </article>
+                        <section class="relative">
+                            <article class="kss-section__markup overflow_scroll scrollbar-mini" style="max-height: 30vh;">
+                                <pre><code class="language-markup"  id="input-{{ referenceURI }}" value='{{ markup }}'>{{ markup }}</code></pre>
+                            </article>
+                            <input class="display_none text-input html-code-input" type="text" name="" id="input-{{ referenceURI }}" value='{{ markup }}'>
+                            <a class="absolute bg_shade-3 br_1 br_black-3 br_radius br_solid font_medium h:bg_shade-1 m-r_3 p-x_4 p-y_3 r_3 shadow_overlap-light t_3" onclick="copyToClipboard( '#input-{{ referenceURI }}',event )"><i class="far fa-copy"></i> Copy</a>
+                        </section>
                     {{/if}}
                 {{/if}}
                 {{#if @first}}
@@ -144,11 +148,27 @@
     {{/each}}
     {{/if}}
     </section>
+    
     <!-- /documentation. -->
     <!-- scripts. -->
     <script src="kss-assets/vendor/jquery.js"></script>
     <script src="kss-assets/vendor/prism.js"></script>
     <script src="kss-assets/js/kss.js"></script>
+    <script>
+        function CopyText(id,event) {
+            event.preventDefault();
+            var $htmlCodeInput =  document.getElementById(id);
+            /* Select the text field */
+            $htmlCodeInput.select();
+            $htmlCodeInput.setSelectionRange(0, 99999); /*For mobile devices*/
+            $("body").append($htmlCodeInput);
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+            /* Alert the copied text */
+            alert("Copied the text: " + $htmlCodeInput.value);
+        };
+    </script>
     {{{ scripts }}}
     <!-- /scripts. -->
 </body>

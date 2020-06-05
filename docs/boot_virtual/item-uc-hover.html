@@ -139,7 +139,7 @@
             <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
                     <header class="bg_white kss-section kss-section--depth-2 shadow_1" id="kssref-uc-hover">
                 <article class="kss-section__content">
-                        <p class="kss-section__source">Source: <span>dist/css/virtual_boot_combo.css</span>, line <span>20825</span>
+                        <p class="kss-section__source">Source: <span>dist/css/virtual_boot_combo.css</span>, line <span>13094</span>
                         </p>
                     <a class="kss-section__permalink" href="#kssref-uc-hover">
                         <h2 class="kss-section__item kss-section__item--depth-2">
@@ -153,11 +153,27 @@
                 </article>
                     </header>
     </section>
+    
     <!-- /documentation. -->
     <!-- scripts. -->
     <script src="kss-assets/vendor/jquery.js"></script>
     <script src="kss-assets/vendor/prism.js"></script>
     <script src="kss-assets/js/kss.js"></script>
+    <script>
+        function CopyText(id,event) {
+            event.preventDefault();
+            var $htmlCodeInput =  document.getElementById(id);
+            /* Select the text field */
+            $htmlCodeInput.select();
+            $htmlCodeInput.setSelectionRange(0, 99999); /*For mobile devices*/
+            $("body").append($htmlCodeInput);
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+            /* Alert the copied text */
+            alert("Copied the text: " + $htmlCodeInput.value);
+        };
+    </script>
     <script src="../js/bootstrap/bootstrap.js"></script>
 <script src="../js/toggleActive.js"></script>
 

@@ -2974,13 +2974,11 @@ Markup:
     padding-top: 25%;
     background-color: #722569;
      background-image: url(/Assets/img/virtual/lobby/COVID20/logo.sm.png), url(/Assets/img/virtual/lobby/COVID20/background.sm.png);
-    background-image: url(../img/virtual/lobby/COVID20/logo.sm.png), url(../img/virtual/lobby/COVID20/background.sm.png);
 }
 @media only screen and (min-width : 768px) {
 #cvcovid {
     padding-top: calc(70px + 1.5rem);
     background-image: url(/Assets/img/virtual/lobby/COVID20/logo.lg.png), url(/Assets/img/virtual/lobby/COVID20/secondaryLogo.lg.png), url(/Assets/img/virtual/lobby/COVID20/img.lg.png), url(/Assets/img/virtual/lobby/COVID20/background.lg.png);
-    background-image: url(../img/virtual/lobby/COVID20/logo.lg.png), url(../img/virtual/lobby/COVID20/secondaryLogo.lg.png), url(../img/virtual/lobby/COVID20/img.lg.png), url(../img/virtual/lobby/COVID20/background.lg.png);
     background-position: 21px 21px, calc(100% - 1rem) 1rem, top right, top center;
     };
 }
@@ -3028,13 +3026,11 @@ Markup:
     padding-top: 38%;
     background-color: #002d5b;
     background-image: url(/Assets/img/virtual/lobby/AH20/logo.sm.png), url(/Assets/img/virtual/lobby/AH20/background.sm.png);
-    background-image: url(../img/virtual/lobby/AH20/logo.sm.png), url(../img/virtual/lobby/AH20/background.sm.png);
 }
 @media only screen and (min-width : 768px) {
 #AH20 {
     padding-top: calc(127px + 1.5rem);
     background-image: url(/Assets/img/virtual/lobby/AH20/logo.lg.png), url(/Assets/img/virtual/lobby/AH20/secondaryLogo.lg.png), url(/Assets/img/virtual/lobby/AH20/img.lg.png), url(/Assets/img/virtual/lobby/AH20/background.lg.png);
-    background-image: url(../img/virtual/lobby/AH20/logo.lg.png), url(../img/virtual/lobby/AH20/secondaryLogo.lg.png), url(../img/virtual/lobby/AH20/img.lg.png), url(../img/virtual/lobby/AH20/background.lg.png);
     background-position: -3px 11px, calc(100% - 1rem) 1rem, top right, top center;
     };
 }
@@ -8324,7 +8320,7 @@ Markup:
 	<div class="bg_primary-5 text_center {{modifier_class}}">Position Absolute {{modifier_class}}</div>
 </div>
 
-Styleguide UC.Spacing.Location
+Styleguide UC.Spacing.Float
 
  */
 /*
@@ -8332,22 +8328,13 @@ Clear
 
 <div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Quickly alter the position type and location of an object with 'absolute' and 'top'
 
-unset  		- unset positioned block 
-inital  		- inital positioned block 
-inherit  		- inherit positioned block 
-relative  		- relative positioned block 
-absolute   		- absolute positioned block
-fixed   			- fixed positioned block 
-sticky   		- sticky positioned block
+clear_fix  			- unset positioned block 
+clear_left  		- inital positioned block 
+clear_right  		- inherit positioned block 
+clear_both  		- relative positioned block 
 
 
-
-Markup:
-<div class="br_solid br_transparent bg_accent-3 relative p_5" style="height:200px;">
-	<div class="bg_primary-5 text_center {{modifier_class}}">Position {{modifier_class}}</div>
-</div>
-
-Styleguide UC.Spacing.Position
+Styleguide UC.Spacing.Clear
 
  */
 .clear_fix:after {
@@ -10965,28 +10952,38 @@ Markup:
 
  */
 /*
-	Shadows
+Shadows
 
-	Shadows can be easily added to container .shadow_{{modifier_class}}  
+Shadows can be easily added to container .shadow_{{modifier_class}}.   You can add simple or rich shadows depending on the level of depth and details of the shadow needed for the UI.   
 
-	.shadow_n5			- inset shadow
-	.shadow_n4			- inset shadow
-	.shadow_n3			- inset shadow
-	.shadow_n2			- inset shadow
-	.shadow_n1			- inset shadow
-	.shadow_0		- no shadow
-	.shadow_1		- box shadow
-	.shadow_2		- box shadow
-	.shadow_3		- box shadow
-	.shadow_4		- box shadow
-	.shadow_5		- box shadow
+.shadow_n5			- inset shadow
+.shadow_n4			- inset shadow
+.shadow_n3			- inset shadow
+.shadow_n2			- inset shadow
+.shadow_n1			- inset shadow
+.shadow_0		- no shadow
+.shadow_1		- box shadow
+.shadow_2		- box shadow
+.shadow_3		- box shadow
+.shadow_4		- box shadow
+.shadow_5		- box shadow
+.shadow_bevel-light				- Rich Shadow bevel-light
+.shadow_bevel-bold				- Rich Shadow bevel-bold
+.shadow_overlap-light			- Rich Shadow overlap-light
+.shadow_overlap-bold				- Rich Shadow overlap-bold
+.shadow_emboss-light				- Rich Shadow emboss-light
+.shadow_emboss-bold				- Rich Shadow emboss-bold
 
-	Markup:
-	<div class="{{modifier_class}} p_3 br_solid br_black-1 br_1 c_whtie">container has shadow of {{modifier_class}}</div>
+Markup:
+<div class="{{modifier_class}} bg-blend_overlay bg_primary-5 br_round lh_1 m_0 m_5:md p_4 p_5 text_center texture_light flex flex_column"><span class="flex_auto self_center">{{modifier_class}}</span></div>
 
-	Weight: 100
 
-	Styleguide UC.Background.Shadows.Basic
+MarkupWrapperClasses:
+	font_2 font_medium grid p-x_4 p-y_5 template-x_30 texture_light
+
+Weight: 151
+
+Styleguide UC.Shadows
 
  */
 .shadow_0 {
@@ -11033,33 +11030,8 @@ Markup:
   box-shadow: inset 2px 2px 8px 1px rgba(0, 0, 0, 0.65);
 }
 
-/*
-	Rich Shadows
-
-	Rich Shadows are multi layered showdows that add depth and finer quality of shadows for large UI elements .shadow_{{modifier_class}}  
-
-	.shadow_bevel-light				- bevel-light
-	.shadow_bevel-bold				- bevel-bold
-	.shadow_overlap-light			- overlap-light
-	.shadow_overlap-bold			- overlap-bold
-	.shadow_emboss-light			- emboss-light
-	.shadow_emboss-bold				- emboss-bold
-
-
-	Markup:
-	<div class="texture_dust bg_primary_4 p_5"><div class="{{modifier_class}} br_1 br_black-1 br_shade-2 br_solid bg_shade-5 m_5 p_5">container has shadow of {{modifier_class}}</div></div>
-
-	Weight: 100
-
-	Styleguide UC.Background.Shadows.Rich
-
- */
-.shadow_emboss-light {
-  box-shadow: -2px -2px 4px hsla(0, 0%, 82.4%, 0.05),-2px -2px 3px hsla(0, 0%, 46.7%, 0.07),1px 2.5px 4.5px rgba(0, 0, 0, 0.4),0 6.4px 12.1px rgba(0, 0, 0, 0.14),0 16px 19px rgba(0,0,0,.07);
-}
-
-.shadow_emboss-bold {
-  box-shadow: -2px -2px 4px inset rgba(255, 255, 255, 0.7), -5px -4px 6px inset rgba(255,255,255,.4), -2px 0.5px 5.5px inset rgba(0, 0, 0, .3), 1px 2.5px 5.5px inset rgba(0, 0, 0, .4), 1px 2.4px 8.1px inset rgba(0, 0, 0, 0.041), 3px 6.4px 13.1px inset rgba(0, 0, 0, 0.041);
+.shadow_emboss-light,.shadow_emboss-bold {
+  box-shadow: -4px -4px 4px inset rgba(255, 255, 255, 0.5), -4px -4px 6px inset rgba(255,255,255,.2), -2px 0.5px 5.5px inset rgba(0, 0, 0, .3), 1px 2.5px 5.5px inset rgba(0, 0, 0, .4), 2.4px 2.4px 10px inset rgba(0, 0, 0, 0.1), 6px 6px 13.1px inset rgba(0, 0, 0, 0.041);
 }
 
 .shadow_bevel-light {
@@ -11067,15 +11039,15 @@ Markup:
 }
 
 .shadow_bevel-bold {
-  box-shadow: -7px -7px 14px rgba(255,255,255, 0.28), -1px -1.7px 5.8px rgba(255,255,255, 0.75), 3px 2.5px 7.5px rgba(0, 0, 0, 0.52), 3px 12.4px 23.1px rgba(0, 0, 0, 0.31), 1px 29px 63px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px -2px 4px hsla(0, 0%, 82.4%, 0.05), -2px -2px 3px hsla(0, 0%, 46.7%, 0.07), 1px 2.5px 4.5px rgba(0, 0, 0, 0.4), 0 6.4px 12.1px rgba(0, 0, 0, 0.14), 0 16px 19px rgba(0,0,0,.07);
 }
 
 .shadow_overlap-light {
-  box-shadow: 0 1px 10px hsla(0, 0%, 0%, 0.06),0 2px 4px rgba(0,0,0,.5),1px 5px 5px rgba(0,0,0,.01);
+  box-shadow: 0 1px 10px hsla(0, 0%, 0%, 0.05), 0 2px 4px rgba(0,0,0,.3), 1px 5px 5px rgba(0,0,0,.01);
 }
 
 .shadow_overlap-bold {
-  box-shadow: -1px 2px 4px rgba(0,0,0,.35),1px 3px 4px rgba(0,0,0,.35),1px 4px 6px rgba(0,0,0,.25);
+  box-shadow: -1px -2px 4px rgba(0,0,0,.08), 0 1px 10px hsla(0, 0%, 0%, 0.06), 0 3px 4px rgba(0,0,0,.5), 1px 5px 5px rgba(0,0,0,.03);
 }
 
 /*
@@ -16527,7 +16499,7 @@ Markup:
   <div class="scale_{{modifier_class}} w-10 p-y_3 p-x_4 font_bold font_2 font_slab text_center br_1 br_solid br_shade-4">This is content that will be scaled.</div>
 </div>
 
-Styleguide UC.Animation.ease
+Styleguide UC.Animation.scale
 
  */
 .scale_X-0 {
