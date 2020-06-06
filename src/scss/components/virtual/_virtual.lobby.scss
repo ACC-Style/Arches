@@ -21,8 +21,6 @@ Styleguide Virtual Recipes.Lobby.Header
 
 */
 
-
-
 /*
 Conference Teaser
  
@@ -57,7 +55,6 @@ Weight:100
 Styleguide Virtual Recipes.Lobby.Cards
 
 */
-
 
 /*
 ACC/WCC 20 Conference CARD
@@ -94,13 +91,11 @@ Markup:
 #acc20 {
     padding-top: 38%;
     background-color: #f4c74c;
-    background-image: url(/Assets/img/virtual/lobby/ACC20/logo.sm.png), url(/Assets/img/virtual/lobby/ACC20/background.sm.png);
     background-image: url(../img/virtual/lobby/ACC20/logo.sm.png), url(../img/virtual/lobby/ACC20/background.sm.png);
 }
 @media only screen and (min-width : 768px) {
 #acc20 {
     padding-top: calc(150px + 1.5rem);
-    background-image: url(/Assets/img/virtual/lobby/ACC20/logo.lg.png), url(/Assets/img/virtual/lobby/ACC20/secondaryLogo.lg.png), url(/Assets/img/virtual/lobby/ACC20/img.lg.png), url(/Assets/img/virtual/lobby/ACC20/background.lg.png);
         background-image: url(../img/virtual/lobby/ACC20/logo.lg.png), url(../img/virtual/lobby/ACC20/secondaryLogo.lg.png), url(../img/virtual/lobby/ACC20/img.lg.png), url(../img/virtual/lobby/ACC20/background.lg.png);
     background-position: 4px 16px, calc(100% - 1rem) 13px, top right, top center;
     };
@@ -140,12 +135,12 @@ Markup:
 #cvcovid {
     padding-top: 25%;
     background-color: #722569;
-     background-image: url(/Assets/img/virtual/lobby/COVID20/logo.sm.png), url(/Assets/img/virtual/lobby/COVID20/background.sm.png);
+     background-image: url(../img/virtual/lobby/COVID20/logo.sm.png), url(../img/virtual/lobby/COVID20/background.sm.png);
 }
 @media only screen and (min-width : 768px) {
 #cvcovid {
     padding-top: calc(70px + 1.5rem);
-    background-image: url(/Assets/img/virtual/lobby/COVID20/logo.lg.png), url(/Assets/img/virtual/lobby/COVID20/secondaryLogo.lg.png), url(/Assets/img/virtual/lobby/COVID20/img.lg.png), url(/Assets/img/virtual/lobby/COVID20/background.lg.png);
+    background-image: url(../img/virtual/lobby/COVID20/logo.lg.png), url(../img/virtual/lobby/COVID20/secondaryLogo.lg.png), url(../img/virtual/lobby/COVID20/img.lg.png), url(../img/virtual/lobby/COVID20/background.lg.png);
     background-position: 21px 21px, calc(100% - 1rem) 1rem, top right, top center;
     };
 }
@@ -192,12 +187,12 @@ Markup:
 #AH20 {
     padding-top: 38%;
     background-color: #002d5b;
-    background-image: url(/Assets/img/virtual/lobby/AH20/logo.sm.png), url(/Assets/img/virtual/lobby/AH20/background.sm.png);
+    background-image: url(../img/virtual/lobby/AH20/logo.sm.png), url(../img/virtual/lobby/AH20/background.sm.png);
 }
 @media only screen and (min-width : 768px) {
 #AH20 {
     padding-top: calc(127px + 1.5rem);
-    background-image: url(/Assets/img/virtual/lobby/AH20/logo.lg.png), url(/Assets/img/virtual/lobby/AH20/secondaryLogo.lg.png), url(/Assets/img/virtual/lobby/AH20/img.lg.png), url(/Assets/img/virtual/lobby/AH20/background.lg.png);
+    background-image: url(../img/virtual/lobby/AH20/logo.lg.png), url(../img/virtual/lobby/AH20/secondaryLogo.lg.png), url(../img/virtual/lobby/AH20/img.lg.png), url(../img/virtual/lobby/AH20/background.lg.png);
     background-position: -3px 11px, calc(100% - 1rem) 1rem, top right, top center;
     };
 }
@@ -209,37 +204,29 @@ Weight:150
 Styleguide Virtual Recipes.Lobby.Cards.AH20
 
 */
-.conference_teaser{
-
-    padding-top:35%;//aspect ratio of the image with width being 100%
+.conference_teaser {
+    padding-top: 35%; //aspect ratio of the image with width being 100%
     max-width: 480px;
     padding-bottom: 1rem;
-    background-color:#002d5b;
-    background-image: 
-        url(../img/virtual/lobby/VIRTUAL/logo.sm.png),
-        url(../img/virtual/lobby/VIRTUAL/background.sm.png);
-    background-position: top center,top center;
-    background-repeat: no-repeat,repeat-y;
-    background-size: contain,contain;
-
-    
+    background-color: #002d5b;
+    background-image: url(../img/virtual/lobby/VIRTUAL/logo.sm.png), url(../img/virtual/lobby/VIRTUAL/background.sm.png);
+    background-position: top center, top center;
+    background-repeat: no-repeat, repeat-y;
+    background-size: contain, contain;
     @media #{$medium-up} {
-    $logo-height: 120px;
-    padding-top: calc(#{$logo-height} + 1.5rem); 
-    padding-bottom: 4rem;
-    max-width: 1024px; 
-    max-height:350px;
-         background-image: 
-        url(../img/virtual/lobby/VIRTUAL/logo.lg.png),
-        url(../img/virtual/lobby/VIRTUAL/secondaryLogo.lg.png),
-        url(../img/virtual/lobby/VIRTUAL/img.lg.png),
-        url(../img/virtual/lobby/VIRTUAL/background.lh.png);
-    background-position: 16px 16px, calc(100% - 1rem) 1rem, top right, top center;
-    background-repeat: no-repeat,no-repeat,no-repeat,repeat;
-    background-size: auto,auto,contain,auto;
+        $logo-height: 120px;
+        padding-top: calc(#{$logo-height} + 1.5rem);
+        padding-bottom: 4rem;
+        max-width: 1024px;
+        max-height: 350px;
+        background-image: url(../img/virtual/lobby/VIRTUAL/logo.lg.png),
+            url(../img/virtual/lobby/VIRTUAL/secondaryLogo.lg.png), url(../img/virtual/lobby/VIRTUAL/img.lg.png),
+            url(../img/virtual/lobby/VIRTUAL/background.lh.png);
+        background-position: 16px 16px, calc(100% - 1rem) 1rem, top right, top center;
+        background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+        background-size: auto, auto, contain, auto;
     }
 }
-
 
 .lobby-header {
     height: 100px;
@@ -256,9 +243,8 @@ Styleguide Virtual Recipes.Lobby.Cards.AH20
             url('../img/virtual/lobby/header.secondary.md.png') no-repeat right top,
             url('../img/virtual/lobby/header.img.md.png') no-repeat 27% top,
             url('../img/virtual/lobby/header.backgroundTexture.png') no-repeat right top;
-        background-size: contain,contain,contain,cover;
+        background-size: contain, contain, contain, cover;
     }
-
 }
 @media #{$xlarge-up} {
     .lobby-header {
