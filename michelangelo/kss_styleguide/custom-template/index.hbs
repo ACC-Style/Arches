@@ -119,6 +119,7 @@
                         <div class="kss-modifiers__example">
                             <div class="{{markupwrapperclasses}}">{{{ markup }}}</div>
                         </div>
+                            {{#if modifiers}}
                         <div class="{{markupwrapperclasses}}">
                         {{#each modifiers}}
                             <article class="kss-modifiers__modifier">
@@ -129,6 +130,7 @@
                             </article>
                         {{/each}}
                         </div>
+                        {{/if}}
                     </article>
                     {{#if example}}
                         <section class="relative">
