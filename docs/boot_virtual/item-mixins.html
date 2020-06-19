@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../icons/css/light.css"/>
 <link rel="stylesheet" href="../css/styleguide_override.css"/>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab&display=swap"/>
-<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;700;900&display=swap"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;500;700;900&display=swap"/>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Maven+Pro&display=swap"/>
 <link rel="stylesheet" href="../css/color-code_social.css"/>
 <link rel="stylesheet" href="../css/color-code_credits.css"/>
@@ -162,11 +162,27 @@
                 </article>
                     </header>
     </section>
+    
     <!-- /documentation. -->
     <!-- scripts. -->
     <script src="kss-assets/vendor/jquery.js"></script>
     <script src="kss-assets/vendor/prism.js"></script>
     <script src="kss-assets/js/kss.js"></script>
+    <script>
+        function CopyText(id,event) {
+            event.preventDefault();
+            var $htmlCodeInput =  document.getElementById(id);
+            /* Select the text field */
+            $htmlCodeInput.select();
+            $htmlCodeInput.setSelectionRange(0, 99999); /*For mobile devices*/
+            $("body").append($htmlCodeInput);
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+            /* Alert the copied text */
+            alert("Copied the text: " + $htmlCodeInput.value);
+        };
+    </script>
     <script src="../js/bootstrap/bootstrap.js"></script>
 <script src="../js/toggleActive.js"></script>
 

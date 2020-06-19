@@ -89,50 +89,44 @@
                     </a>
                 </li>
                 <li class="kss-nav__item ">
-                    <a class=" c_white h:bg_black-2 a:bg_accent a:c_white flex flex_row flex_nowrap h:undecorated" href="section-covid-recipes.html">
-                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">3</span>
-                        <span class="kss-nav__name flex_auto  overflow_ellipsis">Covid Recipes</span>
-                    </a>
-                </li>
-                <li class="kss-nav__item ">
                     <a class=" c_white h:bg_black-2 a:bg_accent a:c_white flex flex_row flex_nowrap h:undecorated" href="section-interactiveextras.html">
-                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">4</span>
+                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">3</span>
                         <span class="kss-nav__name flex_auto  overflow_ellipsis">Interactive Extras</span>
                     </a>
                 </li>
                 <li class="kss-nav__item ">
                     <a class=" c_white h:bg_black-2 a:bg_accent a:c_white flex flex_row flex_nowrap h:undecorated" href="section-mixins.html">
-                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">5</span>
+                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">4</span>
                         <span class="kss-nav__name flex_auto  overflow_ellipsis">mixins</span>
                     </a>
                 </li>
                 <li class="kss-nav__item ">
                     <a class=" c_white h:bg_black-2 a:bg_accent a:c_white flex flex_row flex_nowrap h:undecorated" href="section-recipes-bootstrap.html">
-                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">6</span>
+                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">5</span>
                         <span class="kss-nav__name flex_auto  overflow_ellipsis">Bootstrap</span>
                     </a>
                 </li>
                 <li class="kss-nav__item ">
                     <a class=" c_white h:bg_black-2 a:bg_accent a:c_white flex flex_row flex_nowrap h:undecorated" href="section-sitefinity.html">
-                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">7</span>
+                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">6</span>
                         <span class="kss-nav__name flex_auto  overflow_ellipsis">Sitefinity</span>
                     </a>
                 </li>
                 <li class="kss-nav__item ">
                     <a class=" c_white h:bg_black-2 a:bg_accent a:c_white flex flex_row flex_nowrap h:undecorated" href="section-virtual-recipes.html">
-                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">8</span>
+                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">7</span>
                         <span class="kss-nav__name flex_auto  overflow_ellipsis">Virtual Recipes</span>
                     </a>
                 </li>
                 <li class="kss-nav__item ">
                     <a class=" c_white h:bg_black-2 a:bg_accent a:c_white flex flex_row flex_nowrap h:undecorated" href="section-uc.html">
-                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">9</span>
+                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">8</span>
                         <span class="kss-nav__name flex_auto  overflow_ellipsis">Utility Classes</span>
                     </a>
                 </li>
                 <li class="kss-nav__item ">
                     <a class=" c_white h:bg_black-2 a:bg_accent a:c_white flex flex_row flex_nowrap h:undecorated" href="section-recipes.html">
-                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">10</span>
+                        <span class="kss-nav__ref flex_shrink p-r_4 font_bold w_10">9</span>
                         <span class="kss-nav__name flex_auto  overflow_ellipsis">Recipes</span>
                     </a>
                 </li>
@@ -146,18 +140,34 @@
                 <article class="kss-section__content">
                     <a class="kss-section__permalink" href="#kssref-virtual-recipes-ondemand-journals">
                         <h3 class="kss-section__item kss-section__item--depth-3">
-                            <span class="kss-section__ref">8.7.2</span>
+                            <span class="kss-section__ref">7.8.2</span>
                             <span class="kss-section__name">Virtual Recipes.OnDemand.Journals</span>
                         </h3>
                     </a>
                 </article>
                     </header>
     </section>
+    
     <!-- /documentation. -->
     <!-- scripts. -->
     <script src="kss-assets/vendor/jquery.js"></script>
     <script src="kss-assets/vendor/prism.js"></script>
     <script src="kss-assets/js/kss.js"></script>
+    <script>
+        function CopyText(id,event) {
+            event.preventDefault();
+            var $htmlCodeInput =  document.getElementById(id);
+            /* Select the text field */
+            $htmlCodeInput.select();
+            $htmlCodeInput.setSelectionRange(0, 99999); /*For mobile devices*/
+            $("body").append($htmlCodeInput);
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+            /* Alert the copied text */
+            alert("Copied the text: " + $htmlCodeInput.value);
+        };
+    </script>
     <script src="../js/bootstrap/bootstrap.js"></script>
 <script src="../js/toggleActive.js"></script>
 

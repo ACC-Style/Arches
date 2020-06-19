@@ -27,6 +27,9 @@ Styleguide UC.Background
   Markup:
   <div class="{{modifier_class}} p_3 c_white">Background Color of {{modifier_class}}</div>
  
+  MarkupWrapperClasses:
+  grid template-x_30
+
   Styleguide UC.Background.Color
  
  */
@@ -49,21 +52,23 @@ bg_acc                    - background color modified light to dark
 
 
 Markup:
-<div class="flex bg_shade-5 p_2">
-  <div class="bg_white flex_auto text_center p_2 p-y_5 ">white</div>
-  <div class="{{modifier_class}}-5 flex_auto text_center  p_2 p-y_5">5</div>
-  <div class="{{modifier_class}}-4 flex_auto text_center  p_2 p-y_5">4</div>
-  <div class="{{modifier_class}}-3 flex_auto text_center  p_2 p-y_5">3</div>
-  <div class="{{modifier_class}}-2 flex_auto text_center  p_2 p-y_5">2</div>
-  <div class="{{modifier_class}}-1 flex_auto text_center  c_white p_2 p-y_5">1</div>
-  <div class="{{modifier_class}}-0 flex_auto text_center  c_white p_2 p-y_5">0</div>
-  <div class="{{modifier_class}}-n1 flex_auto text_center  c_white p_2 p-y_5">n1</div>
-  <div class="{{modifier_class}}-n2 flex_auto text_center  c_white p_2 p-y_5">n2</div>
-  <div class="{{modifier_class}}-n3 flex_auto text_center  c_white p_2 p-y_5">n3</div>
-  <div class="{{modifier_class}}-n4 flex_auto text_center  c_white p_2 p-y_5">n4</div>
-  <div class="{{modifier_class}}-n5 flex_auto text_center  c_white p_2 p-y_5">n5</div>
-  <div class="bg_black flex_auto text_center  c_white p_2 p-y_5">black</div>
-</div>
+<div class="bg_white flex_auto text_center p_2 p-y_5 ">white</div>
+<div class="{{modifier_class}}-5 flex_auto text_center  p_2 p-y_5">5</div>
+<div class="{{modifier_class}}-4 flex_auto text_center  p_2 p-y_5">4</div>
+<div class="{{modifier_class}}-3 flex_auto text_center  p_2 p-y_5">3</div>
+<div class="{{modifier_class}}-2 flex_auto text_center  p_2 p-y_5">2</div>
+<div class="{{modifier_class}}-1 flex_auto text_center  c_white p_2 p-y_5">1</div>
+<div class="{{modifier_class}}-0 flex_auto text_center  c_white p_2 p-y_5">0</div>
+<div class="{{modifier_class}}-n1 flex_auto text_center  c_white p_2 p-y_5">n1</div>
+<div class="{{modifier_class}}-n2 flex_auto text_center  c_white p_2 p-y_5">n2</div>
+<div class="{{modifier_class}}-n3 flex_auto text_center  c_white p_2 p-y_5">n3</div>
+<div class="{{modifier_class}}-n4 flex_auto text_center  c_white p_2 p-y_5">n4</div>
+<div class="{{modifier_class}}-n5 flex_auto text_center  c_white p_2 p-y_5">n5</div>
+<div class="bg_black flex_auto text_center  c_white p_2 p-y_5">black</div>
+
+
+MarkupWrapperClasss:
+flex bg_shade-5 p_2 texture_light
 
 Styleguide UC.Background.Color.Shades
  
@@ -102,19 +107,21 @@ Styleguide UC.Background.Color.Shades
   white              - background color of white modified with alphas
 
   Markup:
-  <div class="flex p_4 bg_primary">
-    <div class="bg_{{modifier_class}}-0 flex_auto text_center c_white  p_2 p-y_5">{{modifier_class}}-0</div>
-    <div class="bg_{{modifier_class}}-1 flex_auto text_center c_white  p_2 p-y_5">{{modifier_class}}-1</div>
-    <div class="bg_{{modifier_class}}-2 flex_auto text_center c_white  p_2 p-y_5">{{modifier_class}}-2</div>
-    <div class="bg_{{modifier_class}}-3 flex_auto text_center c_white  p_2 p-y_5">{{modifier_class}}-3</div>
-    <div class="bg_{{modifier_class}}-4 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-4</div>
-    <div class="bg_{{modifier_class}}-5 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-5</div>
-    <div class="bg_{{modifier_class}}-6 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-6</div>
-    <div class="bg_{{modifier_class}}-7 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-7</div>
-    <div class="bg_{{modifier_class}}-8 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-8</div>
-    <div class="bg_{{modifier_class}}-9 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-9</div>
-    <div class="bg_{{modifier_class}} flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}</div>
-  </div>
+  <div class="bg_{{modifier_class}}-0 flex_auto text_center c_white  p_2 p-y_5">{{modifier_class}}-0</div>
+  <div class="bg_{{modifier_class}}-1 flex_auto text_center c_white  p_2 p-y_5">{{modifier_class}}-1</div>
+  <div class="bg_{{modifier_class}}-2 flex_auto text_center c_white  p_2 p-y_5">{{modifier_class}}-2</div>
+  <div class="bg_{{modifier_class}}-3 flex_auto text_center c_white  p_2 p-y_5">{{modifier_class}}-3</div>
+  <div class="bg_{{modifier_class}}-4 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-4</div>
+  <div class="bg_{{modifier_class}}-5 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-5</div>
+  <div class="bg_{{modifier_class}}-6 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-6</div>
+  <div class="bg_{{modifier_class}}-7 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-7</div>
+  <div class="bg_{{modifier_class}}-8 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-8</div>
+  <div class="bg_{{modifier_class}}-9 flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}-9</div>
+  <div class="bg_{{modifier_class}} flex_auto text_center c_white p_2 p-y_5">{{modifier_class}}</div>
+
+
+  MarkupWrapperClasses:
+  flex p_4 bg_primary
 
   Styleguide UC.Background.Color.With Alphas
  
@@ -132,7 +139,10 @@ For many images you will need top place background images in to a cardnial locat
 .bg_center           - cardnial center center
 
 Markup:
-   <div class="bg_shade-2 max-w_40 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div></div>
+<div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div>
+
+MarkupWrapperClasses:
+bg_shade-2 max-w_40 br_solid br_primary br_1
 
 Styleguide UC.Background.Image Positon
 
@@ -151,7 +161,10 @@ For many images you will need top place background images in to a cardnial locat
 
 
 Markup:
-   <div class="bg_shade-2 max-w_40 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;"><span class="alt">{{modifier_class}}</span></div></div>
+<div class="{{modifier_class}} seal_tiny" style="height:200px;max-width: unset;"><span class="alt">{{modifier_class}}</span></div>
+
+MarkupWrapperClasses:
+bg_shade-2 max-w_40 br_solid br_primary br_1
 
 Styleguide UC.Background.Size
 
@@ -180,9 +193,13 @@ repeating a background image is easy.
 .bg_repeat-y              - repeat-y
 .bg_repeat-space          - repeat-space
 
-
 Markup:
-   <div class="bg_shade-2 max-w_40 br_solid br_primary br_1"><div class="{{modifier_class}} seal_tiny bg_auto" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div></div>
+<div class="{{modifier_class}} seal_tiny bg_auto" style="height:200px;max-width: unset;background-size: 100px;"><span class="alt">{{modifier_class}}</span></div>
+
+MarkupWrapperClasses:
+bg_shade-2 max-w_40 br_solid br_primary br_1
+
+
 
 Styleguide UC.Background.Image Repeat
 

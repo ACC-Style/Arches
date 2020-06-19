@@ -1,49 +1,37 @@
 /*
-	Shadows
+Shadows
 
-	Shadows can be easily added to container .shadow_{{modifier_class}}  
+Shadows can be easily added to container .shadow_{{modifier_class}}.   You can add simple or rich shadows depending on the level of depth and details of the shadow needed for the UI.   
 
-	#{class-name-constructor(box-shadow,n5)}			- inset shadow
-	#{class-name-constructor(box-shadow,n4)}			- inset shadow
-	#{class-name-constructor(box-shadow,n3)}			- inset shadow
-	#{class-name-constructor(box-shadow,n2)}			- inset shadow
-	#{class-name-constructor(box-shadow,n1)}			- inset shadow
-	#{class-name-constructor(box-shadow,0)}		- no shadow
-	#{class-name-constructor(box-shadow,1)}		- box shadow
-	#{class-name-constructor(box-shadow,2)}		- box shadow
-	#{class-name-constructor(box-shadow,3)}		- box shadow
-	#{class-name-constructor(box-shadow,4)}		- box shadow
-	#{class-name-constructor(box-shadow,5)}		- box shadow
+#{class-name-constructor(box-shadow,n5)}			- inset shadow
+#{class-name-constructor(box-shadow,n4)}			- inset shadow
+#{class-name-constructor(box-shadow,n3)}			- inset shadow
+#{class-name-constructor(box-shadow,n2)}			- inset shadow
+#{class-name-constructor(box-shadow,n1)}			- inset shadow
+#{class-name-constructor(box-shadow,0)}		- no shadow
+#{class-name-constructor(box-shadow,1)}		- box shadow
+#{class-name-constructor(box-shadow,2)}		- box shadow
+#{class-name-constructor(box-shadow,3)}		- box shadow
+#{class-name-constructor(box-shadow,4)}		- box shadow
+#{class-name-constructor(box-shadow,5)}		- box shadow
+#{class-name-constructor(rich-shadow,bevel-light)}				- Rich Shadow bevel-light
+#{class-name-constructor(rich-shadow,bevel-bold)}				- Rich Shadow bevel-bold
+#{class-name-constructor(rich-shadow,overlap-light)}			- Rich Shadow overlap-light
+#{class-name-constructor(rich-shadow,overlap-bold)}				- Rich Shadow overlap-bold
+#{class-name-constructor(rich-shadow,emboss-light)}				- Rich Shadow emboss-light
+#{class-name-constructor(rich-shadow,emboss-bold)}				- Rich Shadow emboss-bold
 
-	Markup:
-	<div class="{{modifier_class}} p_3 br_solid br_black-1 br_1 c_whtie">container has shadow of {{modifier_class}}</div>
+Markup:
+<div class="{{modifier_class}} bg-blend_overlay bg_primary-5 br_round lh_1 m_0 m_5:md p_4 p_5 text_center texture_light flex flex_column"><span class="flex_auto self_center">{{modifier_class}}</span></div>
 
-	Weight: 100
 
-	Styleguide UC.Background.Shadows.Basic
+MarkupWrapperClasses:
+	font_2 font_medium grid p-x_4 p-y_5 template-x_30 texture_light
+
+Weight: 151
+
+Styleguide UC.Shadows
  
  */
 @include loop-style(box-shadow);
-
-/*
-	Rich Shadows
-
-	Rich Shadows are multi layered showdows that add depth and finer quality of shadows for large UI elements .shadow_{{modifier_class}}  
-
-	#{class-name-constructor(rich-shadow,bevel-light)}				- bevel-light
-	#{class-name-constructor(rich-shadow,bevel-bold)}				- bevel-bold
-	#{class-name-constructor(rich-shadow,overlap-light)}			- overlap-light
-	#{class-name-constructor(rich-shadow,overlap-bold)}			- overlap-bold
-	#{class-name-constructor(rich-shadow,emboss-light)}			- emboss-light
-	#{class-name-constructor(rich-shadow,emboss-bold)}				- emboss-bold
-	
-
-	Markup:
-	<div class="texture_dust bg_primary_4 p_5"><div class="{{modifier_class}} br_1 br_black-1 br_shade-2 br_solid bg_shade-5 m_5 p_5">container has shadow of {{modifier_class}}</div></div>
-
-	Weight: 100
-
-	Styleguide UC.Background.Shadows.Rich
- 
- */
 @include loop-style(rich-shadow);

@@ -115,14 +115,14 @@ $value-to-unit: map-deep-set($value-to-unit, 'font-weight' ,  (
 		bold: 700,
 		xbold: 900,
     ));
-   $style-definition: map-deep-set($style-definition, 'font-weight' 'unit' ,  (
+$style-definition: map-deep-set($style-definition, 'font-weight' 'unit' ,  (
 		light: 100,
 		regular: 400,
 		medium: 500,
 		bold: 700,
 		xbold: 900,
 	));
-@debug map-deep-get($value-to-unit,'font-weight');
+
 // reset all the references for the fonts
 $style-definition: map-deep-set(
     $style-definition,
@@ -175,7 +175,6 @@ $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
 $link-color-dark: get-themecolor(accent, -2);
 $link-color-light: get-themecolor(accent, 2);
 
-@debug  get-css-size(font-weight, regular);
 $font_bold: get-css-size(font-weight, bold);
 $font_medium: get-css-size(font-weight, medium);
 $font_xbold: get-css-size(font-weight, xbold);
@@ -234,7 +233,7 @@ Styleguide Virtual Recipes.OnDemand
 @import 'recipes/virtual/_virtual.ondemand-light';
 @import 'recipes/virtual/_virtual.ondemand-dark';
 @import 'recipes/virtual/_virtual.live';
-// ACC Design Alterations
+@import 'recipes/virtual/virtual.external-resource';// ACC Design Alterations
 @import "base/base";
 @import "components/logo";
 

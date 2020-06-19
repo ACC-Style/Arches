@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../icons/css/light.css"/>
 <link rel="stylesheet" href="../css/styleguide_override.css"/>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab&display=swap"/>
-<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;700;900&display=swap"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;500;700;900&display=swap"/>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Maven+Pro&display=swap"/>
 <link rel="stylesheet" href="../css/color-code_social.css"/>
 <link rel="stylesheet" href="../css/color-code_credits.css"/>
@@ -139,7 +139,7 @@
             <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
                     <header class="bg_white kss-section kss-section--depth-3 shadow_1" id="kssref-recipes-footer-cite">
                 <article class="kss-section__content">
-                        <p class="kss-section__source">Source: <span>dist/css/virtual_boot_combo.css</span>, line <span>10273</span>
+                        <p class="kss-section__source">Source: <span>dist/css/virtual_boot_combo.css</span>, line <span>7879</span>
                         </p>
                     <a class="kss-section__permalink" href="#kssref-recipes-footer-cite">
                         <h3 class="kss-section__item kss-section__item--depth-3">
@@ -160,20 +160,42 @@
     </div></div>
                         </div>
                     </article>
-                        <article class="kss-section__markup overflow_scroll scrollbar-mini" style="
-                                        max-height: 30vh;
-                                    ">
-                            <pre><code class="language-markup">    &lt;div class&#x3D;&quot;texture_light bg_shade-1 p_4&quot;&gt;
+                        <section class="relative">
+                            <article class="kss-section__markup overflow_scroll scrollbar-mini" style="max-height: 30vh;">
+                                <pre><code class="language-markup"  id="input-recipes-footer-cite" value='    &lt;div class&#x3D;&quot;texture_light bg_shade-1 p_4&quot;&gt;
+        &lt;cite class&#x3D;&quot;c_shade-1 font_italic font_bold font_n2 p_2 lh_2&quot;&gt;&amp;copy; 2015 American College of Cardiology&lt;/cite&gt;
+    &lt;/div&gt;'>    &lt;div class&#x3D;&quot;texture_light bg_shade-1 p_4&quot;&gt;
         &lt;cite class&#x3D;&quot;c_shade-1 font_italic font_bold font_n2 p_2 lh_2&quot;&gt;&amp;copy; 2015 American College of Cardiology&lt;/cite&gt;
     &lt;/div&gt;</code></pre>
-                        </article>
+                            </article>
+                            <input class="display_none text-input html-code-input" type="text" name="" id="input-recipes-footer-cite" value='    &lt;div class&#x3D;&quot;texture_light bg_shade-1 p_4&quot;&gt;
+        &lt;cite class&#x3D;&quot;c_shade-1 font_italic font_bold font_n2 p_2 lh_2&quot;&gt;&amp;copy; 2015 American College of Cardiology&lt;/cite&gt;
+    &lt;/div&gt;'>
+                            <a class="absolute bg_shade-3 br_1 br_black-3 br_radius br_solid font_medium h:bg_shade-1 m-r_3 p-x_4 p-y_3 r_3 shadow_overlap-light t_3" onclick="copyToClipboard( '#input-recipes-footer-cite',event )"><i class="far fa-copy"></i> Copy</a>
+                        </section>
                     </header>
     </section>
+    
     <!-- /documentation. -->
     <!-- scripts. -->
     <script src="kss-assets/vendor/jquery.js"></script>
     <script src="kss-assets/vendor/prism.js"></script>
     <script src="kss-assets/js/kss.js"></script>
+    <script>
+        function CopyText(id,event) {
+            event.preventDefault();
+            var $htmlCodeInput =  document.getElementById(id);
+            /* Select the text field */
+            $htmlCodeInput.select();
+            $htmlCodeInput.setSelectionRange(0, 99999); /*For mobile devices*/
+            $("body").append($htmlCodeInput);
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+            /* Alert the copied text */
+            alert("Copied the text: " + $htmlCodeInput.value);
+        };
+    </script>
     <script src="../js/bootstrap/bootstrap.js"></script>
 <script src="../js/toggleActive.js"></script>
 

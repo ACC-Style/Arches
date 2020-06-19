@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../icons/css/light.css"/>
 <link rel="stylesheet" href="../css/styleguide_override.css"/>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab&display=swap"/>
-<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;700;900&display=swap"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;500;700;900&display=swap"/>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Maven+Pro&display=swap"/>
 <link rel="stylesheet" href="../css/color-code_social.css"/>
 <link rel="stylesheet" href="../css/color-code_credits.css"/>
@@ -116,7 +116,13 @@
                                     <li class="kss-nav__item bg_black-2 p-y_2">
                                         <a class="c_white-8 h:c_white flex flex_row h:undecorated flex_nowrap" href="section-sitefinity.html#kssref-sitefinity-decorator">
                                             <span class="kss-nav__ref flex_shrink p-r_1 font_bold">6.1</span>
-                                            <span class="kss-nav__name flex_auto overflow_ellipsis">Editor Container Decorator</span>
+                                            <span class="kss-nav__name flex_auto overflow_ellipsis">Sitefinity.Decorator</span>
+                                        </a>
+                                    </li>
+                                    <li class="kss-nav__item kss-nav__item--grandchild bg_black-4 p-y_1">
+                                        <a class="c_white-8 h:c_white flex flex_row h:undecorated flex_nowrap" href="section-sitefinity.html#kssref-sitefinity-decorator-authenticated">
+                                            <span class="kss-nav__ref flex_shrink p-r_1 font_bold">6.1.1</span>
+                                            <span class="kss-nav__name flex_auto overflow_ellipsis">Backend Content Decorators</span>
                                         </a>
                                     </li>
                             </ul>
@@ -156,11 +162,27 @@
                 </article>
                     </header>
     </section>
+    
     <!-- /documentation. -->
     <!-- scripts. -->
     <script src="kss-assets/vendor/jquery.js"></script>
     <script src="kss-assets/vendor/prism.js"></script>
     <script src="kss-assets/js/kss.js"></script>
+    <script>
+        function CopyText(id,event) {
+            event.preventDefault();
+            var $htmlCodeInput =  document.getElementById(id);
+            /* Select the text field */
+            $htmlCodeInput.select();
+            $htmlCodeInput.setSelectionRange(0, 99999); /*For mobile devices*/
+            $("body").append($htmlCodeInput);
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+            /* Alert the copied text */
+            alert("Copied the text: " + $htmlCodeInput.value);
+        };
+    </script>
     <script src="../js/bootstrap/bootstrap.js"></script>
 <script src="../js/toggleActive.js"></script>
 
