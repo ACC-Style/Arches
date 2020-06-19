@@ -8561,7 +8561,7 @@ Markup:
     </div>
     <div class="br-t_1 br_dotted br_black-3 c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
         <div class="flex_shrink block text_left p-r_4 m-r_4 ">
-            <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+            <a href="#modal-extra" class="block h:undecorated uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
         </div>
         <div class="flex_grow uppercase text_right">
             <ul class="m-t_n2 ul_none">
@@ -10521,13 +10521,13 @@ Showing assets before they are interactable is needed
 Markup:
 <div class="p_4 grid template-x_20 gap-x_5 gap-y_4">
 <div>{{> "Virtual Recipes.Live Video" modifier_class=""}}</div>
-<div class="lockec_graphic">{{> "Virtual Recipes.Live Video" modifier_class=""}}</div>
+<div class="locked_graphic">{{> "Virtual Recipes.Live Video" modifier_class=""}}</div></div>
 <div class="p_4 grid template-x_20 gap-x_5 gap-y_4">
 <div>{{> "Virtual Recipes.OnDemand.Video" modifier_class=""}}</div>
-<div class="lockec_graphic">{{> "Virtual Recipes.OnDemand.Video" modifier_class=""}}</div>
+<div class="locked_graphic">{{> "Virtual Recipes.OnDemand.Video" modifier_class=""}}</div>
 </div>
 <div>{{> "Virtual Recipes.OnDemand.Journals" modifier_class=""}}</div>
-<div class="lockec_graphic">{{> "Virtual Recipes.OnDemand.Journals" modifier_class=""}}</div>
+<div class="locked_graphic">{{> "Virtual Recipes.OnDemand.Journals" modifier_class=""}}</div>
 
 
 MarkupWrapperClasses:
@@ -10547,7 +10547,7 @@ Styleguide Virtual Recipes.Locked Graphic
   cursor: not-allowed;
 }
 
-.locked_graphic *[class*=" h:"] {
+.locked_graphic *[class*=" h:"], .locked_graphic *[class*=" h:"]:hover {
   background: transparent !important;
   text-decoration: none !important;
   opacity: 1 !important;
