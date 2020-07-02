@@ -288,33 +288,63 @@ Branded Header ACC21
 This is a templated banner that uses as the central branding of a conference product. 
  
 Markup:
-
 <div id="acc21" class="brand-header"></div><br>
-    <style>
+<style>
+    #acc21.brand-header {
+        background-image: url('../img/acc21/header.backgroundTexture.sm.png');
+    }
+    @media only screen and (min-width: 768px) {
         #acc21.brand-header {
-            background-image: url('../img/acc21/header.backgroundTexture.sm.png');
+            background-image: url('../img/acc21/header.mainLogo.md.png'), url('../img/acc21/header.secondary.md.png'), url('../img/acc21/header.img.md.png'), url('../img/acc21/header.backgroundTexture.png');
+            background-position: 0, 100%, -1%, 0%;
+            background-size: contain, contain, contain, 100% 100%;
         }
-        
-        @media only screen and (min-width: 768px) {
-            #acc21.brand-header {
-                background-image: url('../img/acc21/header.mainLogo.md.png'), url('../img/acc21/header.secondary.md.png'), url('../img/acc21/header.img.md.png'), url('../img/acc21/header.backgroundTexture.png');
-                background-position: 0, 100%, -1%, 0%;
-                background-size: contain, contain, contain, 100% 100%;
-            }
+    }
+    @media only screen and (min-width: 1200px) {
+        #acc21.brand-header {
+            background-image: url('../img/acc21/header.mainLogo.lg.png'), url('../img/acc21/header.secondary.lg.png'), url('../img/acc21/header.img.lg.png'), url('../img/acc21/header.backgroundTexture.png');
+            background-position: 0, 100%, -1%, 0%;
+            background-size: contain, contain, contain, 100% 100%;
         }
-        
-        @media only screen and (min-width: 1200px) {
-            #acc21.brand-header {
-                background-image: url('../img/acc21/header.mainLogo.lg.png'), url('../img/acc21/header.secondary.lg.png'), url('../img/acc21/header.img.lg.png'), url('../img/acc21/header.backgroundTexture.png');
-                background-position: 0, 100%, -1%, 0%;
-                background-size: contain, contain, contain, 100% 100%;
-            }
-        }
-    </style>
+    }
+</style>
 
-    Weight:-105
+Weight:-105
  
-Styleguide Virtual Recipes.Header
+Styleguide Virtual Recipes.HeaderACC21
+*/
+
+
+/*
+Branded Header ACC21 ALT
+ 
+This is a templated banner that uses as the central branding of a conference product. 
+ 
+Markup:
+<div id="acc21-alt" class="brand-header"></div><br>
+<style>
+    #acc21-alt.brand-header {
+        background-image: url('../img/acc21-alt/header.backgroundTexture.sm.png');
+    }
+    @media only screen and (min-width: 768px) {
+        #acc21-alt.brand-header {
+            background-image: url('../img/acc21-alt/header.mainLogo.md.png'), url('../img/acc21-alt/header.secondary.md.png'), url('../img/acc21-alt/header.img.md.png'), url('../img/acc21-alt/header.backgroundTexture.png');
+            background-position: 0, 100%, -1%, 0%;
+            background-size: contain, contain, contain, 100% 100%;
+        }
+    }
+    @media only screen and (min-width: 1200px) {
+        #acc21-alt.brand-header {
+            background-image: url('../img/acc21-alt/header.mainLogo.lg.png'), url('../img/acc21-alt/header.secondary.lg.png'), url('../img/acc21-alt/header.img.lg.png'), url('../img/acc21-alt/header.backgroundTexture.png');
+            background-position: 0, 100%, -1%, 0%;
+            background-size: contain, contain, contain, 100% 100%;
+        }
+    }
+</style>
+
+Weight:-105
+ 
+Styleguide Virtual Recipes.HeaderACC21ALT
 */@import 'base/table.boot';
 @import 'styleguide/__basic-html.boot';
 @import 'components/boot/_boot.buttons';
