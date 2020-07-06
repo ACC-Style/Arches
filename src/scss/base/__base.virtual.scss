@@ -5,29 +5,8 @@ This is a templated banner that uses as the central branding of a conference pro
  
 Markup:
 <div class="brand-header"></div>
-<style>
-.brand-header {
-     background-image: url('../img/AH20/header.backgroundTexture.sm.png');
-}
-@media #{$medium-up} {
-    .brand-header {
-        background-image: url('../img/AH20/header.mainLogo.md.png'),
-            url('../img/AH20/header.secondary.md.png'),
-            url('../img/AH20/header.img.md.png'),
-            url('../img/AH20/header.backgroundTexture.png');
-    }
-}
-@media #{$xlarge-up} {
-    .brand-header {
-        background-image: url('../img/AH20/header.mainLogo.lg.png'),
-            url('../img/AH20/header.secondary.lg.png'),
-            url('../img/AH20/header.img.lg.png'),
-            url('../img/AH20/header.backgroundTexture.png');
-    }
-}
-</style>
  
-Weight:-100
+Weight: -1100
  
 Styleguide Virtual Recipes.Header
 */
@@ -63,67 +42,42 @@ Styleguide Virtual Recipes.Header
 }
 
 
-/*
-Branded Header ACC21
- 
-This is a templated banner that uses as the central branding of a conference product. 
- 
-Markup:
-<div id="acc21" class="brand-header"></div><br>
-<style>
-    #acc21.brand-header {
-        background-image: url('../img/acc21/header.backgroundTexture.sm.png');
-    }
-    @media only screen and (min-width: 768px) {
-        #acc21.brand-header {
-            background-image: url('../img/acc21/header.mainLogo.md.png'), url('../img/acc21/header.secondary.md.png'), url('../img/acc21/header.img.md.png'), url('../img/acc21/header.backgroundTexture.png');
-            background-position: 0, 100%, -1%, 0%;
-            background-size: contain, contain, contain, 100% 100%;
-        }
-    }
-    @media only screen and (min-width: 1200px) {
-        #acc21.brand-header {
-            background-image: url('../img/acc21/header.mainLogo.lg.png'), url('../img/acc21/header.secondary.lg.png'), url('../img/acc21/header.img.lg.png'), url('../img/acc21/header.backgroundTexture.png');
-            background-position: 0, 100%, -1%, 0%;
-            background-size: contain, contain, contain, 100% 100%;
-        }
-    }
-</style>
-
-Weight:-105
- 
-Styleguide Virtual Recipes.HeaderACC21
-*/
 
 
 /*
-Branded Header ACC21 ALT
+Branded Header Overrides
  
 This is a templated banner that uses as the central branding of a conference product. 
+
+acc21   - Annual Scientific Session 2021
+ah20    - Care of the Athletic Heart
+ada20   - ADA/Siegfried Conf
  
 Markup:
-<div id="acc21-alt" class="brand-header"></div><br>
+<div id="{{modifier_class}}" class="brand-header"></div><br>
 <style>
-    #acc21-alt.brand-header {
-        background-image: url('../img/acc21-alt/header.backgroundTexture.sm.png');
+ #{"#"+"{{modifier_class}}"}.brand-header {
+     background-image: url('../img/{{modifier_class}}/header.backgroundTexture.sm.png');
+}
+@media #{$medium-up} {
+    #{"#"+"{{modifier_class}}"}.brand-header {
+        background-image: url('../img/{{modifier_class}}/header.mainLogo.md.png'),
+            url('../img/{{modifier_class}}/header.secondary.md.png'),
+            url('../img/{{modifier_class}}/header.img.md.png'),
+            url('../img/{{modifier_class}}/header.backgroundTexture.png');
     }
-    @media only screen and (min-width: 768px) {
-        #acc21-alt.brand-header {
-            background-image: url('../img/acc21-alt/header.mainLogo.md.png'), url('../img/acc21-alt/header.secondary.md.png'), url('../img/acc21-alt/header.img.md.png'), url('../img/acc21-alt/header.backgroundTexture.png');
-            background-position: 0, 100%, -1%, 0%;
-            background-size: contain, contain, contain, 100% 100%;
-        }
+}
+@media #{$xlarge-up} {
+     #{"#"+"{{modifier_class}}"}.brand-header {
+        background-image: url('../img/{{modifier_class}}/header.mainLogo.lg.png'),
+            url('../img/{{modifier_class}}/header.secondary.lg.png'),
+            url('../img/{{modifier_class}}/header.img.lg.png'),
+            url('../img/{{modifier_class}}/header.backgroundTexture.png');
     }
-    @media only screen and (min-width: 1200px) {
-        #acc21-alt.brand-header {
-            background-image: url('../img/acc21-alt/header.mainLogo.lg.png'), url('../img/acc21-alt/header.secondary.lg.png'), url('../img/acc21-alt/header.img.lg.png'), url('../img/acc21-alt/header.backgroundTexture.png');
-            background-position: 0, 100%, -1%, 0%;
-            background-size: contain, contain, contain, 100% 100%;
-        }
-    }
+}
 </style>
 
-Weight:-105
+Weight: 0
  
-Styleguide Virtual Recipes.HeaderACC21ALT
+Styleguide Virtual Recipes.Header.Overrides
 */
