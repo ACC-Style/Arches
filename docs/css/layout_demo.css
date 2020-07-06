@@ -1,0 +1,610 @@
+@charset "UTF-8";
+/** Layouts Demo Test 1 **/
+/*
+Credited Product
+
+Coveo result of a product that can be bought, and has credits.
+
+Markup:
+<div id="page" class="bg_acc-4 overflow_clip texture_medium w_100">
+	<div id="coveo-products" class="bg_white m_auto max-w_30 p-y_1 p-y_5 shadow_3 texture_light">
+		<article class="font_ui p_3 shadow_1 m-x_3 m-t_4 lh_1 bg_white">
+			<header class="br-t_3 br_acc br_solid m-t_n3 m-x_n3 p-b_0 p_3">
+				<h1 class="br-b_1 br_primary br_solid font_1 font_display font_regular lh_2 m-b_2 p-x_3 p-y_2 title">
+					<a href="https://learn.acc.org/Public/Catalog/Details.aspx?id=AWHF9hHUa2x%2fpUkVmcYU8Q%3d%3d&amp;returnurl=%2fUsers%2fUserOnlineCourse.aspx%3fLearningActivityID%3dAWHF9hHUa2x%252fpUkVmcYU8Q%253d%253d" class=" undecorated c_acc">Large Artery Stiffness in Health and Disease: JACC State-of-the-Art Review (JACC
+						September 2019-1)</a>
+				</h1>
+			</header>
+			<section class="excerpt font_0 lh_2 p-x_3 p-y_2">
+				We provide an overview of key physiologic and biophysical principles related to arterial
+				stiffness, the impact of aortic stiffening on target organs, noninvasive methods for the
+				measurement of arterial stiffness, mechanisms leading to aortic stiffeni
+			</section>
+			<aside class="p-x_3 p-t_3 font_n1 c_seondary-1 flex flex_row">
+				<div class="flex_auto">
+					<ul class="educational-details ul_none flex flex_row">
+						<li class="published-date font_bold flex_shrink">Aug 26, 2019</li>
+						<li class="esitmated-length flex_shrink m-l_4">
+							<span class="font_bold">Duration:</span> 2 <span class="unit">hrs</span>
+						</li>
+					</ul>
+					<ul class="authors ul_none flex flex_row m-t_2">
+						<li class="">
+							<a class="undecorated h:underline c_primary" href="/membership/person?id=73B605A1-7BA1-444A-8C2E-3A6915658B7C">Mahmoud Houmsse, MD, FACC</a>
+						</li>
+						<li class="m-l_2 p-l_2 br-l_1 br_solid br_shade">
+							<a class="undecorated h:underline c_primary" href="/membership/person?id=274592CF-C5AF-487F-944B-54C8935B7E21">Stephen F. Schaal, MD, FACC</a>
+						</li>
+					</ul>
+				</div>
+				<div class="flex_auto">
+					<ul class="ul_none flex flex_row-reverse flex_shrink inline-block credits flex font_n2 font_bold p-t_3">
+						<li class="credit m-l_n2 m-r_2 p-y_2 p-x_4 bg_CME-4 c_black br_round inline-block flex flex_row w_auto m-l_2">
+							<div class="amount flex_shrink p-r_2">1</div>
+							<div class="label flex_shrink">CME</div>
+						</li>
+						<li class="credit m-r_2 p-y_2 p-x_4 bg_COP-4 c_black br_round inline-block flex flex_row w_auto m-l_2">
+							<div class="amount flex_shrink p-r_2">1</div>
+							<div class="label flex_shrink">COP</div>
+						</li>
+						<li class="credit m-r_2 p-y_2 p-x_4 bg_ECME-4 c_black br_round inline-block flex flex_row w_auto m-l_2">
+							<div class="amount flex_shrink p-r_2">1</div>
+							<div class="label flex_shrink">ECME</div>
+						</li>
+						<li class="credit m-r_2 p-y_2 p-x_4 bg_MOCII-4 c_black br_round inline-block flex flex_row w_auto m-l_2">
+							<div class="amount flex_shrink p-r_2">1</div>
+							<div class="label flex_shrink">MOC</div>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<footer class="texture_light bg_acc-5 p_3 p-y_2 m_n3 m-t_3 flex flex_nowrap">
+				<div class="flex_auto inline-block lh_2 p-x_3 w_70">
+					<ul class="clinical-topics ul_none font_n2 c_shade-1 flex flex_row flex_wrap m-t_2">
+						<li class="font_bold c_shade m-r_2">Clinical Topics:</li>
+						<li>
+							<a class="c_shade-1 undecorated h:underline" href="/clinical-topics/vascular-medicine">Vascular Medicine</a>
+						</li>
+						<li>
+							<a class="c_shade-1 undecorated h:underline" href="/clinical-topics/noninvasive-imaging">Noninvasive Imaging</a>
+						</li>
+					</ul>
+					<ul class="keywords ul_none font_n2 c_shade-1 flex flex_row flex_wrap m-t_2">
+						<li class="font_bold c_shade m-r_2">Keywords:</li>
+						<li>Diagnostic Imaging</li>
+						<li>Bundle-Branch Block</li>
+						<li>Electrocardiography</li>
+						<li>Coronary Artery Bypass</li>
+						<li>Constriction</li>
+						<li>Myocardial Infarction</li>
+						<li>Pathologic</li>
+						<li>Chest Pain</li>
+						<li>Depression</li>
+					</ul>
+				</div>
+				<div class="flex_auto inline-block w_30 text_right">
+					<a href="" class="br_radius  bg_primary h:bg_primary-n2 c_white p-y_3 title font_2 undecorated text_center p-x_5 m-r_2 m-y_3 inline-block"><span class="font_bold">$200</span><span class="font_0 block nowrap"><i class="fas fa-cart-plus m-r_2"></i>Add to Cart</span></a>
+				</div>
+			</footer>
+		</article>
+	</div>
+</div>
+
+Styleguide ACC.Credit Product
+
+*/
+/*
+ACC ORG Member
+
+Member Pages 
+
+Markup:
+<div class="bg_primary-3">
+	<div class="main-content-inner max-w_65 m_auto bg_white shadow_4 font_ui font_0" role="main">
+		<img
+			class="w_100 p_4"
+			alt="Benefits of ACC Membership"
+			src="https://author.acc.org/~/media/Non-Clinical/Images/Membership/New/F19411_MbrPgsHdrs_v3-MEMBEN.jpg?la=en"
+		/>
+		<div class="p-b_2 p_4">
+			<div class="row m_4 p_4 br_radius bg_primary c_white">
+				<div class="col-9">
+					<h2>Join Us</h2>
+					<p>
+						When you become a member of the American College of Cardiology, you join a global community of
+						cardiovascular professionals driven to transform cardiovascular care and improve heart health.
+						You also get access to benefits and resources designed to help you accomplish that mission.
+					</p>
+				</div>
+				<div class="col-3">
+					<a href="https://memberapp.acc.org/" class="bg_white br_radius btn btn-block btn-lg c_primary font_bold h:bg_white-3 h:c_white m-t_5 transition_1 p-x_5 p-y_4">Join Now</a>
+					<ul class="c_white-6 font_n2 lh_2 m-r_3 clear_both m-t_3 text_right ul_none">
+						<li>Already a member</li>
+						<li>Access your profile</li>
+						<li>Renew your membership</li>
+						<li>Personalize your Acc.org</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="br-t_1 br_dotted br_primary m-t_4 m-x_4 p-b_3 p-t_4 p-x_4">
+			<div class="p-x_4 row">
+				<div class="col-sm-12 m-b_2 m-x_n4">
+					<h2>Benefits</h2>
+				</div>
+				<div class="col-sm-6 font_1">
+					<p class="p-l_5 m-l_3 text-indent_n1">
+						<i class="fas font_2 fa-newspaper" aria-hidden="true"></i>
+						&nbsp;Multiplatform access to the entire family of <em>JACC</em> Journals
+					</p>
+					<p class="p-l_5 m-l_3 text-indent_n1">
+						<i class="fas font_2 fa-calendar" aria-hidden="true"></i>
+						&nbsp;Discounts on live meetings – including the Annual Scientific Session – and educational
+						products
+					</p>
+				</div>
+				<div class="col-sm-6 font_1">
+					<p class="p-l_5 m-l_3 text-indent_n1">
+						<i class="fas font_2 fa-certificate" aria-hidden="true"></i>
+						&nbsp;Free CME/CE and MOC
+					</p>
+					<p class="p-l_5 m-l_3 text-indent_n1">
+						<i class="fab fa-connectdevelop"></i>
+						&nbsp;Connect with over 52,000 CV professionals in 21+ specialty Member Sections
+					</p>
+				</div>
+				<div class="col-sm-12">
+					<a class="bg_shade-4 block br_radius btn btn-small h:bg_shade-n2 h:c_white m-t_3 m_auto transition_0 w_40">Explore All Benefits</a>
+				</div>
+			</div>
+		</div>
+		<div class="br-t_1 br_dotted br_primary m-t_4 m-x_4 p-t_4 p-x_4">
+			<div class="flex">
+				<div class="w_70 flex_auto">
+					<h2 class="">Become a Member</h2>
+					<p class="">
+						Find your member type
+					</p>
+				</div>
+				<div class="flex_auto self_center vertical-align_middle">
+					<a href="https://memberapp.acc.org/" class="btn br_radius btn-primary btn-lg btn-block">Join Now</a>
+				</div>
+			</div>
+		</div>
+		<div class="br-t_1 br_dotted br_primary m-t_4 m-x_4 p_4 ">
+			<div class="row p-x_3 p-y_4 br_radius bg_black-1">
+				<div class="col-sm-4">
+					<h3 class="font_1 font_display font_bold c_acc">Fellow of the ACC</h3>
+				</div>
+				<div class="col-sm-8">
+					<p>
+						Academic and Clinical Cardiologists (US and International), Fellows Completing Training.
+						<a href="" class="underline c_primary nowrap block"
+							>Learn More <i class="far font_0 fa-chevron-double-right"></i
+						></a>
+					</p>
+				</div>
+			</div>
+			<div class="row p-x_3 p-y_4 br_radius">
+				<div class="col-sm-4">
+					<h3 class="font_1 font_display font_bold c_acc">Associate of the ACC / Cardiovascular (CV) Team</h3>
+				</div>
+				<div class="col-sm-8">
+					<p>
+						Advanced Practice Nurses, PAs, Clinical Pharmacists, Registered Nurses, CV Technologists,
+						Cardiac Rehabilitation Professionals, Genetic Counselors.
+						<a href="" class="underline c_primary nowrap block"
+							>Learn More <i class="far font_0 fa-chevron-double-right"></i
+						></a>
+					</p>
+				</div>
+			</div>
+			<div class="row p-x_3 p-y_4 br_radius bg_black-1">
+				<div class="col-sm-4">
+					<h3 class="font_1 font_display font_bold c_acc">Cardiovascular Administrator</h3>
+				</div>
+				<div class="col-sm-8">
+					<p>
+						Service Line Administrators, Practice Managers, Executives.
+						<a href="" class="underline c_primary nowrap block"
+							>Learn More <i class="far font_0 fa-chevron-double-right"></i
+						></a>
+					</p>
+				</div>
+			</div>
+			<div class="row p-x_3 p-y_4 br_radius">
+				<div class="col-sm-4">
+					<h3 class="font_1 font_display font_bold c_acc">
+						Trainees and Students (Complimentary Membership)
+					</h3>
+				</div>
+				<div class="col-sm-8">
+					<p>
+						Fellows in Training, Medical Residents, CV Team Students, Medical Students
+						<a href="" class="underline c_primary nowrap block"
+							>Learn More <i class="far font_0 fa-chevron-double-right"></i
+						></a>
+					</p>
+				</div>
+			</div>
+			<div class="row p-x_3 p-y_4 br_radius bg_black-1">
+				<div class="col-sm-4">
+					<h3 class="font_1 font_display font_bold c_acc">International</h3>
+				</div>
+				<div class="col-sm-8">
+					<p>
+						CV Professionals Practicing Outside the US and Canada.
+						<a href="" class="underline c_primary nowrap block"
+							>Learn More <i class="far font_0 fa-chevron-double-right"></i
+						></a>
+					</p>
+				</div>
+			</div>
+			<div class="row p-x_3 p-y_4 br_radius">
+				<div class="col-sm-4">
+					<h3 class="font_1 font_display font_bold c_acc">Affiliate</h3>
+				</div>
+				<div class="col-sm-8">
+					<p>
+						Training Program Administrators, Geriatricians, Health IT Managers, EMS Professionals, CV
+						Veterinarians.
+						<a href="" class="underline c_primary nowrap block"
+							>Learn More <i class="far font_0 fa-chevron-double-right"></i
+						></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+Styleguide ACC.Member Marketing
+
+*/
+/*
+
+Ebiz Multi Due Payment
+
+A quick mock up of the multi-due payment screen.
+
+Markup:
+<div class="flex:md h_100 texture_light" style=" min-height: 100vh;">
+	<div class="flex_auto relative">
+		<div class="bg_shade-2 clearfix p_5">
+			<h1 class="c_white font_2 font_display font_regular m_0">
+				<input type="checkbox" checked="" class="m-b_4" /><span class="flex_auto">
+					I would like to have a copy of each "thank you for paying statement".
+				</span>
+			</h1>
+			<div class="flex max-w_10">
+				<input type="email" class="flex_auto m_0" /><button
+					class="button flex_auto lh_2 p-x_4 p_3 bg_primary br_0 br_none br-tr_radius br-br_radius button c_white font_2 h:bg_primary-n2 m-r_3 display_none p-x_4 p-y_2"
+				>
+					update
+				</button>
+			</div>
+		</div>
+		<div class="shadow_1 br_radius bg_white m_4 p_5 text_center font_copy">
+			<h1 class="c_black font_3 font_display font_regular m_0">
+				Find the Member you would like to pay for by searching by the ACC member ID
+			</h1>
+			<a href="" class="underline c-primary font_n1">Where do I locate the member ID</a>
+			<div class="m-t_4 flex ">
+				<input type="text" class=" flex_auto font_2 font_ui p-x_3 p-y_2" />
+				<button class="bg_primary  br_0 br_none button c_white font_2 p-x_4 p-y_2">
+					Search
+				</button>
+			</div>
+			<div
+				class="bg_alert-5 bg_white br_1 br_alert-n1 br_radius br_solid font_copy m-t_4 p-t_3 p_3 shadow_1 text_center"
+			>
+				<div class="c_alert-n2 font_3 font_slab m_2 p-t_0 p_3 text_center">
+					No Member Found
+				</div>
+				<h1 class="c_black font_2 font_display font_regular m_2">
+					Please Confirm Mebmer ID Number and Try Again.
+				</h1>
+			</div>
+		</div>
+		<div class="shadow_1 br_radius bg_white m_4 p_5 text_center font_copy">
+			<div class="shadow_n1 br_radius bg_primary-4 m_3 p_3 text_center font_4 font_slab">
+				Members Full Name. MD. FACC
+			</div>
+			<h1 class="c_black font_3 font_display font_regular m_2">
+				Is this the member you want to pay for.
+			</h1>
+			<div class="m-t_4 flex max-w_40 m_auto">
+				<button
+					class="button flex_auto bg_primary h:bg_primary-n2 br_0 br_none font_3 p-x_4 p-y_2  br_radius c_white m-r_3"
+				>
+					Yes
+				</button>
+				<button
+					class="button flex_auto bg_shade-3 h:bg_shade-1 br_0 br_none font_3 p-x_4 p-y_2 br_radius  m-r_3 c_black"
+				>
+					No
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="bg_white br-l_1 br_0 br_shade-2 br_solid flex_shrink w_20:md w_30:lg">
+		<h2 class="font_2 font_display font_regular p-x_4 m-b_0">
+			Payment History
+		</h2>
+		<section class="m-x_3 p-x_3 p-y_4">
+			<ul class="m-t_0 ul_none">
+				<li class="br-b_1 br-t_1 br_primary br_solid font_n1 font_ui m-y_2 p-y_2">
+					Paid <span class="c_primary font_bold"> Today</span>
+				</li>
+				<li class="br_2 br_radius br_solid br_success-2 m-y_3 p_3">
+					<div
+						class="bg_success-1 br_3 br_success-0 c_white font_2 m-b_3 m-t_n3 m-x_n3 m_2 p-x_4 p_2 text_center"
+					>
+						Thank Your For Payment
+					</div>
+					<div class="font_1 flex c_shade font_display">
+						<div class="flex_auto">Full Name</div>
+						<div class="flex_shrink c_primary font_bold font_n1">$750.00</div>
+					</div>
+					<div class="font_n1 font_ui c_shade-1">
+						<strong class="font_bold">Paid On:</strong>
+						<span class="font_italic c_primary font_bold">Today</span>|<strong class="font_bold"
+							>ACC ID:</strong
+						>
+						<span class="font_italic">000141421</span>
+					</div>
+				</li>
+				<li class="br_dotted br-b_1 br_shade-5 p-b_3">
+					<div class="font_1 flex c_shade font_display">
+						<div class="flex_auto">Full Name</div>
+						<div class="flex_shrink c_primary font_bold font_n1">$750.00</div>
+					</div>
+					<div class="font_n1 font_ui c_shade-1">
+						<strong class="font_bold">Paid On:</strong>
+						<span class="font_italic c_primary font_bold">Today</span>|<strong class="font_bold"
+							>ACC ID:</strong
+						>
+						<span class="font_italic">000141421</span>
+					</div>
+				</li>
+				<li class="br_dotted br-b_1 br_shade-5 p-b_3">
+					<div class="font_1 flex c_shade font_display">
+						<div class="flex_auto">Full Name</div>
+						<div class="flex_shrink c_primary font_bold font_n1">$750.00</div>
+					</div>
+					<div class="font_n1 font_ui c_shade-1">
+						<strong class="font_bold">Paid On:</strong>
+						<span class="font_italic c_primary font_bold">Today</span>|<strong class="font_bold"
+							>ACC ID:</strong
+						>
+						<span class="font_italic">000141421</span>
+					</div>
+				</li>
+				<li class="br_dotted br-b_1 br_shade-5 p-b_3">
+					<div class="font_1 flex c_shade font_display">
+						<div class="flex_auto">Full Name</div>
+						<div class="flex_shrink c_primary font_bold font_n1">$750.00</div>
+					</div>
+					<div class="font_n1 font_ui c_shade-1">
+						<strong class="font_bold">Paid On:</strong>
+						<span class="font_italic c_primary font_bold">Today</span>|<strong class="font_bold"
+							>ACC ID:</strong
+						>
+						<span class="font_italic">000141421</span>
+					</div>
+				</li>
+				<li class="br-b_1 br-t_1 br_shade-3 br_solid c_shade-n1 font_n1 font_ui m-y_2 p-y_2">
+					Paid <span class="c_primary font_bold">June 21, 2019</span>
+				</li>
+				<li class="br_dotted br-b_1 br_shade-5 p-b_3">
+					<div class="font_1 flex c_shade font_display">
+						<div class="flex_auto">Full Name</div>
+						<div class="flex_shrink c_primary font_bold font_n1">$750.00</div>
+					</div>
+					<div class="font_n1 font_ui c_shade-1">
+						<strong class="font_bold">Paid On:</strong>
+						<span class="font_italic">June 21, 2019</span>|<strong class="font_bold">ACC ID:</strong>
+						<span class="font_italic">000141421</span>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</div>
+</div>
+
+styleguide: Ebiz.MultiPay
+
+*/
+/*
+
+Curated Educational Collection Page
+
+A quick mock up of education's curated collection.
+
+Markup:
+<div class="bg_shade-5 p-y_4">
+	<div class="bg_white br-bl_radius br-br_radius br_radius m-t_4 m_auto max-w_65 p-b_0 p-x_5 p-y_4 shadow_2 wrapper_container" >
+		<div class="p_4 p-x_5">
+		</div>
+		<div class="p_4 br-b_1 br_dotted br_shade-4">
+			<div class="font_4 font_slab c_acc text_left m-b_3 m-t_4">
+				Practical Solutions for LDL-C Reduction:An Education Curriculum
+			</div>
+			<div class="font_1 font_copy text_left">
+				These educational resources are crafted to help clinicians enrolled in the TRANSFORM LDL-C Risk
+				Initiative to understand nonstatin therapy options and equip clinical teams to overcome barriers to
+				deliver them to patients.
+			</div>
+		</div>
+		<div class="flex font_0 font_ui">
+			<div class="w_50 p_4 flex_auto">
+				<h2 class="font_display font_2 c_acc">Educational Path to Transforming LDL-C</h2>
+				<ul class="ul_none  br-t_2 br-b_2 br_solid br_primary-2">
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_primary-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i
+						><a
+							title="Follow the Science: Refining Risk Assessment in ASCVD"
+							href="http://learn.acc.org/url/product/FTSRefiningRiskAssessment"
+							target="_blank"
+							rel="noopener"
+							class="p-x_3 wrap undecorated block flex_auto c_black-8"
+							>Follow the Science: Refining Risk Assessment in ASCVD</a
+						>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_primary-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i
+						><a
+							class="p-x_3 wrap undecorated block flex_auto c_black-8"
+							title="Transforming LDL-C Risk: Role of Non-statin Therapies"
+							href="http://learn.acc.org/url/product/ROLEOFNONSTATINTHERAPIES"
+							target="_blank"
+							rel="noopener"
+							>Transforming LDL-C Risk: Role of Non-statin Therapies</a
+						>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_primary-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i
+						><a
+							class="p-x_3 wrap undecorated block flex_auto c_black-8"
+							title="Practical Tips for Prior Authorizations: A Discussion with the Experts"
+							href="http://learn.acc.org/url/product/PRACTICALTIPSPRIORAUTH"
+							target="_blank"
+							rel="noopener"
+							>Practical Tips for Prior Authorizations: A Discussion with the Experts</a
+						>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_shade-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i>
+						<div class="p-x_3 wrap undecorated block flex_auto c_black-6">
+							Coming Soon: Online Course: PCSK9 Inhibitors: The Who, What and Wow!
+						</div>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_shade-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i>
+						<div class="p-x_3 wrap undecorated block flex_auto c_black-6">
+							Coming Soon: MOD Capture of Clinical Curriculum from Washington, DC Event (title TBD)
+						</div>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_shade-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i>
+						<div class="p-x_3 wrap undecorated block flex_auto c_black-6">
+							Coming Soon: MOD of QI Champion Curriculum from Washington, DC Event (title TBD)
+						</div>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_primary-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i>
+						<div class="p-x_3 wrap undecorated block flex_auto c_black-6">
+							Coming Soon: An Interactive Infographic on Patient Risk Assessment and Identification for
+							Intensification of LDL-C Therapies
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="w_50 p_4 flex_auto">
+				<h2 class="font_display font_2 c_acc">
+					2018 Guideline on the Management of Blood Cholesterol: Practical Applications
+				</h2>
+				<ul class="ul_none  br-t_2 br-b_2 br_solid br_primary-2">
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_primary-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i
+						><a
+							title="Follow the Science: Refining Risk Assessment in ASCVD"
+							href="http://learn.acc.org/url/product/FTSRefiningRiskAssessment"
+							target="_blank"
+							rel="noopener"
+							class="p-x_3 wrap undecorated block flex_auto c_black-8"
+							>Follow the Science: Refining Risk Assessment in ASCVD</a
+						>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_primary-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i
+						><a
+							class="p-x_3 wrap undecorated block flex_auto c_black-8"
+							title="Transforming LDL-C Risk: Role of Non-statin Therapies"
+							href="http://learn.acc.org/url/product/ROLEOFNONSTATINTHERAPIES"
+							target="_blank"
+							rel="noopener"
+							>Transforming LDL-C Risk: Role of Non-statin Therapies</a
+						>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_primary-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i
+						><a
+							class="p-x_3 wrap undecorated block flex_auto c_black-8"
+							title="Practical Tips for Prior Authorizations: A Discussion with the Experts"
+							href="http://learn.acc.org/url/product/PRACTICALTIPSPRIORAUTH"
+							target="_blank"
+							rel="noopener"
+							>Practical Tips for Prior Authorizations: A Discussion with the Experts</a
+						>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_shade-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i>
+						<div class="p-x_3 wrap undecorated block flex_auto c_black-6">
+							Coming Soon: Online Course: PCSK9 Inhibitors: The Who, What and Wow!
+						</div>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_shade-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i>
+						<div class="p-x_3 wrap undecorated block flex_auto c_black-6">
+							Coming Soon: MOD Capture of Clinical Curriculum from Washington, DC Event (title TBD)
+						</div>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_shade-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i>
+						<div class="p-x_3 wrap undecorated block flex_auto c_black-6">
+							Coming Soon: MOD of QI Champion Curriculum from Washington, DC Event (title TBD)
+						</div>
+					</li>
+					<li class="p-y_3 br-t_1 br_solid br_shade-4 flex relative h:bg_primary-5">
+						<i class="fas p_2 p-l_4 font_3 fa-video flex_grow"></i>
+						<div class="p-x_3 wrap undecorated block flex_auto c_black-6">
+							Coming Soon: An Interactive Infographic on Patient Risk Assessment and Identification for
+							Intensification of LDL-C Therapies
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bg_acc c_white font_display m-b_0 m-x_n5 p_5">
+	<strong>We are grateful to these distinguished Members of the American College of Cardiology who contributed to this
+		collection.</strong>
+	<ul class="flex flex_wrap ul_none">
+		<li class="flex_auto m-y_4 p-r_5 w_50" style="
+    box-sizing: border-box;
+">
+			<strong class="block font_bold">Pamela B. Morris, MD, FACC, FAHA, FASPC, FNLA (Chair)</strong>
+			<span class="block">Director, Seinsheimer Cardiovascular Health Program</span>
+			<span class="block">Co-Director, Women's Heart Care</span>
+			<span class="block font_italic">Medical University of South Carolina</span>
+		</li>
+		<li class="flex_auto m-y_4 w_50">
+			<strong class="block font_bold">Kim K. Birtcher, PharmD, MS, AACC, FNLA</strong>
+			<span class="block">Clinical Professor</span>
+			<span class="block font_italic">University of Houston College of Pharmacy</span>
+		</li>
+		<li class="flex_auto m-y_4 w_50">
+			<strong class="block font_bold">Roger S. Blumenthal, MD, FACC</strong>
+			<span class="block">Director, Ciccarone div for the Prevention of Cardiovascular Disease</span>
+			<span class="block font_italic">Johns Hopkins Hospital</span>
+		</li>
+		<li class="flex_auto m-y_4 w_50">
+			<strong class="block font_bold">Carl E. Orringer, MD, FACC</strong>
+			<span class="block">Associate Professor of Medicine</span>
+			<span class="block">Director, Preventive Cardiovascular Medicine Cardiovascular Division</span>
+			<span class="block font_italic">University of Miami Miller School of Medicine</span>
+		</li>
+	</ul>
+</div>
+		<div class="bg_shade-n1 br-bl_radius br-br_radius c_white font_display m--y_0 m-x_n5 m-y_0 p_5">
+			This initiative is a part of multi-project series developed by the ACC using data analytics, ACC clinical
+			algorithms, and the PINNACLE Registry to focus and TRANSFORM the delivery of care for patients.<br /><br />TRANSFORM
+			LDL-C Risk is funded by Sanofi and Regeneron in partnership with the American College of Cardiology.
+		</div>
+	</div>
+</div>
+
+
+styleguide: ACC.Curated Collection
+*/
