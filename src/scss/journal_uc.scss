@@ -210,20 +210,40 @@ $link-color-light: get-themecolor(accent, 1);
 
 */
 
+
 /* Nav Recipes.00x */
+
 @import "recipes/base/mobile-nav";
 
 /* Nav Recipes.04x */
+
 @import "recipes/base/web-footer";
 
 /* Nav Recipes.04x */
+
 @import "recipes/base/quicklinks";
 
+/* Nav Recipes.04x */
+
+@import "recipes/base/advertisement";
+
 /* content Recipes.100 */
-@import "recipes/base/ordered-cards.scss";
+
+@import "recipes/base/ordered-cards";
 
 /* content Recipes.250 */
-@import "recipes/base/GLSEARCH-search-result";
+
+@import "recipes/base/GLSEARCH-search-result";/*
+	ACC.org Recipes
+
+	The use of Utiltiy Class give us the ablitiy to create much of the UI needed for ACC.org without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of ACC.org
+
+	Weight: 2000
+
+	Styleguide Recipes ACC
+
+*/
+@import 'recipes/journal/_journal._footer';
 // ACC Design Alterations
 @import "base/base";
 @import "components/logo";
@@ -233,5 +253,6 @@ $link-color-light: get-themecolor(accent, 1);
 @import "styleguide/styleguide";
 @import "styleguide/__basic-html.base";
 @import "containers/containers";
+@import 'components/journal/_journal.boot._navbar.override';
 /**  Utility Classes    *********************************/
 @import "utility-css/utility-css";
