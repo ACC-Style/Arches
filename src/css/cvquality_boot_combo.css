@@ -17,13 +17,7 @@ Gets a color value that fits into the set color patterns for usage in new css.
 
  Styleguide: mixins.get-themecolor
 */
-.card.testimonial .blockquote p:before, .card.testimonial .blockquote p:after,
-.card.testimonial .blockquote-cite:before,
-.card.testimonial .blockquote-cite:after,
-.card.product .blockquote p:before,
-.card.product .blockquote p:after,
-.card.product .blockquote-cite:before,
-.card.product .blockquote-cite:after, .carousel-alt.chevron-on .carousel-indicators li.active:before {
+.carousel-alt.chevron-on .carousel-indicators li.active:before {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-family: "Font Awesome 5 Pro";
@@ -473,6 +467,7 @@ samp {
 }
 
 pre {
+  -ms-overflow-style: scrollbar;
   margin-top: 0;
   margin-bottom: 16px;
   margin-bottom: 1rem;
@@ -550,6 +545,10 @@ select {
   text-transform: none;
 }
 
+[role=button] {
+  cursor: pointer;
+}
+
 select {
   word-wrap: normal;
 }
@@ -580,13 +579,6 @@ input[type=radio],
 input[type=checkbox] {
   box-sizing: border-box;
   padding: 0;
-}
-
-input[type=date],
-input[type=time],
-input[type=datetime-local],
-input[type=month] {
-  -webkit-appearance: listbox;
 }
 
 textarea {
@@ -785,71 +777,6 @@ mark,
   content: "— ";
 }
 
-.img-fluid,.img-thumbnail {
-  max-width: 100%;
-  height: auto;
-}
-
-.img-thumbnail {
-  padding: 4px;
-  padding: 0.25rem;
-  border: 1px solid #5a5959;
-  background-color: white;
-}
-
-.figure {
-  display: inline-block;
-}
-
-.figure-img {
-  margin-bottom: 8px;
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-.figure-caption {
-  color: #a1a0a0;
-  font-size: 90%;
-}
-
-code {
-  word-wrap: break-word;
-  color: #e83e8c;
-  font-size: 87.5%;
-}
-a > code {
-  color: inherit;
-}
-
-kbd {
-  padding: 3.2px 6.4px;
-  padding: 0.2rem 0.4rem;
-  background-color: #e7e7e7;
-  color: white;
-  font-size: 87.5%;
-}
-kbd kbd {
-  padding: 0;
-  font-size: 100%;
-  font-weight: 700;
-}
-
-pre {
-  display: block;
-  color: #e7e7e7;
-  font-size: 87.5%;
-}
-pre code {
-  color: inherit;
-  font-size: inherit;
-  word-break: normal;
-}
-
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll;
-}
-
 .container {
   width: 100%;
   margin-right: auto;
@@ -938,6 +865,7 @@ pre code {
 .col {
   flex-basis: 0;
   flex-grow: 1;
+  min-width: 0;
   max-width: 100%;
 }
 
@@ -1145,6 +1073,7 @@ pre code {
   .col-sm {
     flex-basis: 0;
     flex-grow: 1;
+    min-width: 0;
     max-width: 100%;
   }
 
@@ -1356,6 +1285,7 @@ pre code {
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
+    min-width: 0;
     max-width: 100%;
   }
 
@@ -1567,6 +1497,7 @@ pre code {
   .col-lg {
     flex-basis: 0;
     flex-grow: 1;
+    min-width: 0;
     max-width: 100%;
   }
 
@@ -1778,6 +1709,7 @@ pre code {
   .col-xl {
     flex-basis: 0;
     flex-grow: 1;
+    min-width: 0;
     max-width: 100%;
   }
 
@@ -2296,10 +2228,6 @@ pre code {
   box-shadow: 0 0 0 0.2rem rgba(0, 136, 170, 0.25);
   color: #b8b8b8;
 }
-.form-control::-webkit-input-placeholder {
-  color: #a1a0a0;
-  opacity: 1;
-}
 .form-control::-moz-placeholder {
   color: #a1a0a0;
   opacity: 1;
@@ -2315,6 +2243,15 @@ pre code {
 .form-control:disabled, .form-control[readonly] {
   background-color: #424141;
   opacity: 1;
+}
+
+input[type=date].form-control,
+input[type=time].form-control,
+input[type=datetime-local].form-control,
+input[type=month].form-control {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 select.form-control:focus::-ms-value {
@@ -2707,7 +2644,6 @@ select.form-control[size], select.form-control[multiple],textarea.form-control {
   line-height: 1.5;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2729,6 +2665,9 @@ select.form-control[size], select.form-control[multiple],textarea.form-control {
 }
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
+}
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
 }
 a.btn.disabled,
 fieldset:disabled a.btn {
@@ -3158,10 +3097,8 @@ fieldset:disabled a.btn {
 }
 .btn-link:hover {
   color: #005f77;
-  text-decoration: underline;
 }
-.btn-link:focus, .btn-link.focus {
-  box-shadow: none;
+.btn-link:hover,.btn-link:focus, .btn-link.focus {
   text-decoration: underline;
 }
 .btn-link:disabled, .btn-link.disabled {
@@ -3563,7 +3500,8 @@ input[type=button].btn-block {
 .input-group > .custom-select,
 .input-group > .custom-file {
   position: relative;
-  flex: 1 1 0%;
+  flex: 1 1 auto;
+  width: 1%;
   min-width: 0;
   margin-bottom: 0;
 }
@@ -4501,7 +4439,7 @@ input[type=button].btn-block {
   color: rgba(19, 18, 18, 0.5);
 }
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(19, 18, 18, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%2819, 18, 18, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar-light .navbar-text {
   color: rgba(19, 18, 18, 0.5);
@@ -4549,6 +4487,17 @@ input[type=button].btn-block {
   margin-right: 0;
   margin-left: 0;
 }
+.card > .list-group {
+  border-top: inherit;
+  border-bottom: inherit;
+}
+.card > .list-group:first-child {
+  border-top-width: 0;
+}
+.card > .list-group:last-child {
+  border-bottom-width: 0;
+}
+
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
@@ -4691,7 +4640,6 @@ input[type=button].btn-block {
 }
 
 .breadcrumb {
-  display: flex;
   flex-wrap: wrap;
   margin-bottom: 16px;
   margin-bottom: 1rem;
@@ -4701,6 +4649,9 @@ input[type=button].btn-block {
   list-style: none;
 }
 
+.breadcrumb,.breadcrumb-item {
+  display: flex;
+}
 .breadcrumb-item + .breadcrumb-item {
   padding-left: 8px;
   padding-left: 0.5rem;
@@ -4781,144 +4732,6 @@ input[type=button].btn-block {
   font-size: 1rem;
   line-height: 1.5;
 }
-.badge {
-  display: inline-block;
-  padding: 0.25em 0.4em;
-  font-size: 75%;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  vertical-align: baseline;
-  white-space: nowrap;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-@media (prefers-reduced-motion: reduce) {
-  .badge {
-    transition: none;
-  }
-}
-a.badge:hover, a.badge:focus {
-  text-decoration: none;
-}
-
-.badge:empty {
-  display: none;
-}
-
-.btn .badge {
-  position: relative;
-  top: -1px;
-}
-
-.badge-pill {
-  padding-right: 0.6em;
-  padding-left: 0.6em;
-}
-
-.badge-primary {
-  background-color: #0088aa;
-  color: white;
-}
-a.badge-primary:hover, a.badge-primary:focus {
-  background-color: #005f77;
-  color: white;
-}
-a.badge-primary:focus, a.badge-primary.focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 136, 170, 0.5);
-}
-
-.badge-secondary {
-  background-color: #e87d1e;
-  color: white;
-}
-a.badge-secondary:hover, a.badge-secondary:focus {
-  background-color: #bf6414;
-  color: white;
-}
-a.badge-secondary:focus, a.badge-secondary.focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(232, 125, 30, 0.5);
-}
-
-.badge-success {
-  background-color: #078a2e;
-  color: white;
-}
-a.badge-success:hover, a.badge-success:focus {
-  background-color: #05591e;
-  color: white;
-}
-a.badge-success:focus, a.badge-success.focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(7, 138, 46, 0.5);
-}
-
-.badge-info {
-  background-color: #a3988c;
-  color: #e7e7e7;
-}
-a.badge-info:hover, a.badge-info:focus {
-  background-color: #8c7f70;
-  color: #e7e7e7;
-}
-a.badge-info:focus, a.badge-info.focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(163, 152, 140, 0.5);
-}
-
-.badge-warning {
-  background-color: #f4a122;
-  color: #e7e7e7;
-}
-a.badge-warning:hover, a.badge-warning:focus {
-  background-color: #d8870b;
-  color: #e7e7e7;
-}
-a.badge-warning:focus, a.badge-warning.focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(244, 161, 34, 0.5);
-}
-
-.badge-danger {
-  background-color: #990000;
-  color: white;
-}
-a.badge-danger:hover, a.badge-danger:focus {
-  background-color: #660000;
-  color: white;
-}
-a.badge-danger:focus, a.badge-danger.focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(153, 0, 0, 0.5);
-}
-
-.badge-light {
-  background-color: #d6d4d4;
-  color: #e7e7e7;
-}
-a.badge-light:hover, a.badge-light:focus {
-  background-color: #bdbaba;
-  color: #e7e7e7;
-}
-a.badge-light:focus, a.badge-light.focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(214, 212, 212, 0.5);
-}
-
-.badge-dark {
-  background-color: #817c7b;
-  color: white;
-}
-a.badge-dark:hover, a.badge-dark:focus {
-  background-color: #676362;
-  color: white;
-}
-a.badge-dark:focus, a.badge-dark.focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(129, 124, 123, 0.5);
-}
-
 .jumbotron {
   margin-bottom: 32px;
   margin-bottom: 2rem;
@@ -4935,132 +4748,6 @@ a.badge-dark:focus, a.badge-dark.focus {
 .jumbotron-fluid {
   padding-right: 0;
   padding-left: 0;
-}
-
-.alert {
-  position: relative;
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
-  padding: 12px 20px;
-  padding: 0.75rem 1.25rem;
-  border: 1px solid transparent;
-}
-
-.alert-heading {
-  color: inherit;
-}
-
-.alert-link {
-  font-weight: 700;
-}
-
-.alert-dismissible {
-  padding-right: 64px;
-  padding-right: 4rem;
-}
-.alert-dismissible .close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 12px 20px;
-  padding: 0.75rem 1.25rem;
-  color: inherit;
-}
-
-.alert-primary {
-  border-color: #e6f3f7;
-  background-color: white;
-  color: #0b414f;
-}
-.alert-primary hr {
-  border-top-color: #d3eaf1;
-}
-.alert-primary .alert-link {
-  color: #051c22;
-}
-
-.alert-secondary {
-  border-color: #fdf2e9;
-  background-color: white;
-  color: #683d17;
-}
-.alert-secondary hr {
-  border-top-color: #fbe4d2;
-}
-.alert-secondary .alert-link {
-  color: #3e250e;
-}
-
-.alert-success {
-  border-color: #e6f3ea;
-  background-color: white;
-  color: #0e421d;
-}
-.alert-success hr {
-  border-top-color: #d5ebdc;
-}
-.alert-success .alert-link {
-  color: #05180b;
-}
-
-.alert-info {
-  border-color: #f6f5f4;
-  background-color: white;
-  color: #4d4843;
-}
-.alert-info hr {
-  border-top-color: #ebe8e6;
-}
-.alert-info .alert-link {
-  color: #322f2b;
-}
-
-.alert-warning {
-  border-color: #fef6e9;
-  background-color: white;
-  color: #6d4b18;
-}
-.alert-warning hr {
-  border-top-color: #fdecd1;
-}
-.alert-warning .alert-link {
-  color: #432e0f;
-}
-
-.alert-danger {
-  border-color: #f5e6e6;
-  background-color: white;
-  color: #490b0b;
-}
-.alert-danger hr {
-  border-top-color: #eed4d4;
-}
-.alert-danger .alert-link {
-  color: #1d0404;
-}
-
-.alert-light {
-  border-color: #fbfbfb;
-  background-color: white;
-  color: #616060;
-}
-.alert-light hr {
-  border-top-color: #eeeeee;
-}
-.alert-light .alert-link {
-  color: #474747;
-}
-
-.alert-dark {
-  border-color: #f2f2f2;
-  background-color: white;
-  color: #3f3c3c;
-}
-.alert-dark hr {
-  border-top-color: #e5e5e5;
-}
-.alert-dark .alert-link {
-  color: #252323;
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -5086,6 +4773,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   background-color: #424141;
   font-size: 12px;
   font-size: 0.75rem;
+  line-height: 0;
 }
 
 .progress,.progress-bar {
@@ -5124,267 +4812,6 @@ a.badge-dark:focus, a.badge-dark.focus {
   }
 }
 
-.media {
-  display: flex;
-  align-items: flex-start;
-}
-
-.media-body {
-  flex: 1;
-}
-
-.list-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.list-group-item-action {
-  width: 100%;
-  color: #b8b8b8;
-  text-align: inherit;
-}
-.list-group-item-action:hover, .list-group-item-action:focus {
-  z-index: 1;
-  background-color: #2b2a2a;
-  color: #b8b8b8;
-  text-decoration: none;
-}
-.list-group-item-action:active {
-  background-color: #424141;
-  color: #000;
-}
-
-.list-group-item {
-  display: block;
-  position: relative;
-  padding: 12px 20px;
-  padding: 0.75rem 1.25rem;
-  border: 1px solid rgba(19, 18, 18, 0.125);
-  background-color: white;
-}
-.list-group-item.disabled, .list-group-item:disabled {
-  background-color: white;
-  color: #a1a0a0;
-  pointer-events: none;
-}
-.list-group-item.active {
-  z-index: 2;
-  border-color: #0088aa;
-  background-color: #0088aa;
-  color: white;
-}
-.list-group-item + .list-group-item {
-  border-top-width: 0;
-}
-.list-group-item + .list-group-item.active {
-  margin-top: -1px;
-  border-top-width: 1px;
-}
-
-.list-group-horizontal {
-  flex-direction: row;
-}
-.list-group-horizontal .list-group-item.active {
-  margin-top: 0;
-}
-.list-group-horizontal .list-group-item + .list-group-item {
-  border-top-width: 1px;
-  border-left-width: 0;
-}
-.list-group-horizontal .list-group-item + .list-group-item.active {
-  margin-left: -1px;
-  border-left-width: 1px;
-}
-
-@media (min-width: 480px) {
-  .list-group-horizontal-sm {
-    flex-direction: row;
-  }
-  .list-group-horizontal-sm .list-group-item.active {
-    margin-top: 0;
-  }
-  .list-group-horizontal-sm .list-group-item + .list-group-item {
-    border-top-width: 1px;
-    border-left-width: 0;
-  }
-  .list-group-horizontal-sm .list-group-item + .list-group-item.active {
-    margin-left: -1px;
-    border-left-width: 1px;
-  }
-}
-@media (min-width: 768px) {
-  .list-group-horizontal-md {
-    flex-direction: row;
-  }
-  .list-group-horizontal-md .list-group-item.active {
-    margin-top: 0;
-  }
-  .list-group-horizontal-md .list-group-item + .list-group-item {
-    border-top-width: 1px;
-    border-left-width: 0;
-  }
-  .list-group-horizontal-md .list-group-item + .list-group-item.active {
-    margin-left: -1px;
-    border-left-width: 1px;
-  }
-}
-@media (min-width: 1024px) {
-  .list-group-horizontal-lg {
-    flex-direction: row;
-  }
-  .list-group-horizontal-lg .list-group-item.active {
-    margin-top: 0;
-  }
-  .list-group-horizontal-lg .list-group-item + .list-group-item {
-    border-top-width: 1px;
-    border-left-width: 0;
-  }
-  .list-group-horizontal-lg .list-group-item + .list-group-item.active {
-    margin-left: -1px;
-    border-left-width: 1px;
-  }
-}
-@media (min-width: 1200px) {
-  .list-group-horizontal-xl {
-    flex-direction: row;
-  }
-  .list-group-horizontal-xl .list-group-item.active {
-    margin-top: 0;
-  }
-  .list-group-horizontal-xl .list-group-item + .list-group-item {
-    border-top-width: 1px;
-    border-left-width: 0;
-  }
-  .list-group-horizontal-xl .list-group-item + .list-group-item.active {
-    margin-left: -1px;
-    border-left-width: 1px;
-  }
-}
-.list-group-flush .list-group-item {
-  border-right-width: 0;
-  border-left-width: 0;
-}
-.list-group-flush .list-group-item:first-child {
-  border-top-width: 0;
-}
-.list-group-flush:last-child .list-group-item:last-child {
-  border-bottom-width: 0;
-}
-
-.list-group-item-primary {
-  background-color: #e6f3f7;
-  color: #0b414f;
-}
-.list-group-item-primary.list-group-item-action:hover, .list-group-item-primary.list-group-item-action:focus {
-  background-color: #d3eaf1;
-  color: #0b414f;
-}
-.list-group-item-primary.list-group-item-action.active {
-  border-color: #0b414f;
-  background-color: #0b414f;
-  color: white;
-}
-
-.list-group-item-secondary {
-  background-color: #fdf2e9;
-  color: #683d17;
-}
-.list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
-  background-color: #fbe4d2;
-  color: #683d17;
-}
-.list-group-item-secondary.list-group-item-action.active {
-  border-color: #683d17;
-  background-color: #683d17;
-  color: white;
-}
-
-.list-group-item-success {
-  background-color: #e6f3ea;
-  color: #0e421d;
-}
-.list-group-item-success.list-group-item-action:hover, .list-group-item-success.list-group-item-action:focus {
-  background-color: #d5ebdc;
-  color: #0e421d;
-}
-.list-group-item-success.list-group-item-action.active {
-  border-color: #0e421d;
-  background-color: #0e421d;
-  color: white;
-}
-
-.list-group-item-info {
-  background-color: #f6f5f4;
-  color: #4d4843;
-}
-.list-group-item-info.list-group-item-action:hover, .list-group-item-info.list-group-item-action:focus {
-  background-color: #ebe8e6;
-  color: #4d4843;
-}
-.list-group-item-info.list-group-item-action.active {
-  border-color: #4d4843;
-  background-color: #4d4843;
-  color: white;
-}
-
-.list-group-item-warning {
-  background-color: #fef6e9;
-  color: #6d4b18;
-}
-.list-group-item-warning.list-group-item-action:hover, .list-group-item-warning.list-group-item-action:focus {
-  background-color: #fdecd1;
-  color: #6d4b18;
-}
-.list-group-item-warning.list-group-item-action.active {
-  border-color: #6d4b18;
-  background-color: #6d4b18;
-  color: white;
-}
-
-.list-group-item-danger {
-  background-color: #f5e6e6;
-  color: #490b0b;
-}
-.list-group-item-danger.list-group-item-action:hover, .list-group-item-danger.list-group-item-action:focus {
-  background-color: #eed4d4;
-  color: #490b0b;
-}
-.list-group-item-danger.list-group-item-action.active {
-  border-color: #490b0b;
-  background-color: #490b0b;
-  color: white;
-}
-
-.list-group-item-light {
-  background-color: #fbfbfb;
-  color: #616060;
-}
-.list-group-item-light.list-group-item-action:hover, .list-group-item-light.list-group-item-action:focus {
-  background-color: #eeeeee;
-  color: #616060;
-}
-.list-group-item-light.list-group-item-action.active {
-  border-color: #616060;
-  background-color: #616060;
-  color: white;
-}
-
-.list-group-item-dark {
-  background-color: #f2f2f2;
-  color: #3f3c3c;
-}
-.list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-  background-color: #e5e5e5;
-  color: #3f3c3c;
-}
-.list-group-item-dark.list-group-item-action.active {
-  border-color: #3f3c3c;
-  background-color: #3f3c3c;
-  color: white;
-}
-
 .close {
   float: right;
   color: #131212;
@@ -5404,9 +4831,6 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 button.close {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -5414,49 +4838,6 @@ button.close {
 
 a.close.disabled {
   pointer-events: none;
-}
-
-.toast {
-  max-width: 350px;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  background-clip: padding-box;
-  background-color: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 0.25rem 0.75rem rgba(19, 18, 18, 0.1);
-  font-size: 14px;
-  font-size: 0.875rem;
-  opacity: 0;
-}
-.toast:not(:last-child) {
-  margin-bottom: 12px;
-  margin-bottom: 0.75rem;
-}
-.toast.showing,.toast.show {
-  opacity: 1;
-}
-.toast.show {
-  display: block;
-}
-.toast.hide {
-  display: none;
-}
-
-.toast-header {
-  display: flex;
-  align-items: center;
-  padding: 4px 12px;
-  padding: 0.25rem 0.75rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  background-clip: padding-box;
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #a1a0a0;
-}
-
-.toast-body {
-  padding: 12px;
-  padding: 0.75rem;
 }
 
 .modal-open {
@@ -5526,6 +4907,9 @@ a.close.disabled {
 .modal-dialog-centered::before {
   display: block;
   height: calc(100vh - 1rem);
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   content: "";
 }
 .modal-dialog-centered.modal-dialog-scrollable {
@@ -5635,6 +5019,9 @@ a.close.disabled {
   }
   .modal-dialog-centered::before {
     height: calc(100vh - 3.5rem);
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
   }
 
   .modal-sm {
@@ -6153,6 +5540,7 @@ a.close.disabled {
     transform: scale(0);
   }
   50% {
+    transform: none;
     opacity: 1;
   }
 }
@@ -6162,6 +5550,7 @@ a.close.disabled {
     transform: scale(0);
   }
   50% {
+    transform: none;
     opacity: 1;
   }
 }
@@ -8655,1390 +8044,6 @@ Styleguide Recipes.Branded Nav.Dropdowns.Alt Content
   content: "";
 }
 
-.nav-link {
-  padding-right: 4px;
-  padding-right: 0.25rem;
-  padding-left: 4px;
-  padding-left: 0.25rem;
-}
-
-.navbar-primary .dropdown-toggle:after {
-  display: none;
-}
-
-@media only screen and (min-width : 480px) {
-  .navbar-expand-sm .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-}
-@media only screen and (min-width : 768px) {
-  .navbar-expand-md .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-}
-@media only screen and (min-width : 1024px) {
-  .navbar-expand-lg .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-}
-
-.dropdown-item {
-  color: #007491;
-}
-.dropdown-item:hover {
-  color: white;
-}
-
-/* 
-
-Primary Nav 
-
-The Header Nav of ACC.org 
-
-Markup:
-<div class="flex relative br_solid br_0 br-t_3 br_accent-alt">
-	<nav class="bg_shade-2 flex_auto font_0 font_1:lg font_display navbar navbar-dark navbar-expand-lg navbar-primary p-x_0 uppercase">
-		<button class="br_white-2 flex is-active_toggle-function m-l_3 m-l_n2 m-y_2 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed" type="button" data-toggle="collapse" data-target="#navbarLoginContent" aria-controls="navbarLoginContent" aria-expanded="false" aria-label="Toggle navigation">
-			<i class="a:c_acc-2 c_white fas flex_shrink font_0 icon-toggle_bars-times self_center"></i><span class="a:c_acc-2 c_white flex_auto self_center">&nbsp;Menu</span>
-		</button>
-		<div class="navbar-collapse collapse" id="navbarLoginContent" style="">
-			<ul class="expand expanded flex flex_column flex_row:lg nav text_center:lg text_left w_100">
-				<li class="nav-item flex_shrink">
-					<a class="active c_white h:bg_shade nav-link p-x_4 p-x_5:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources"><i class="fas fa-home"></i><span class="display_none:lg p-x_3">Home</span></a>
-				</li>
-				<li class="nav-item flex_auto dropdown">
-					<a class="c_white dropdown-toggle h:bg_shade is-active_toggle-function nav-link p-x_4" href="/NCDR-Home" target="_self" data-delay="300" data-close-others="false" id="clinicalTopicsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far faw icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Clinical Topics</a>
-					<div class="absolute:lg br_1 br_none br_shade-3 br_solid:lg c_white dropdown-menu font_bold l_0 m-t_0 m-x_0 m-x_0:lg p_0 r_0 relative w_100" aria-labelledby="clinicalTopicsDropdown">
-						<ul class="bg_shade-5 font_0 font_bold lh_1 ul_none">
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/about-ncdr" target="_self">About NCDR</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/registries" target="_self">Registries</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/data-collection" target="_self">Data Collection</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/reports" target="_self">Reports</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/quality-payment-program" target="_self">Quality Payment Program</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/research" target="_self">Research</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/analytics" target="_self">Analytics</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/annual-conference" target="_self">ACC Quality Summit</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/ncdr-learning-center" target="_self">NCDR Learning Center</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/transform-ldl-c-risk" target="_self">TRANSFORM LDL C Risk</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/participant-directory" target="_self">Participant Directory</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/acc-public-reporting" target="_self">ACC Public Reporting</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/clinical-quality-coach" target="_self">NCDR Clinical Quality Coach Practice Dashboard</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="https://www.ncdr.com/webncdr/Login?ReturnUrl=/webncdr/home/registry-selection" target="_self">Registry Participant Login</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/join-a-registry" target="_self">Join a Registry</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="nav-item flex_auto">
-					<a class="nav-link active h:bg_shade c_white p-x_4" href="#">deserunt</a>
-				</li>
-				<li class="nav-item flex_auto">
-					<a class="nav-link h:bg_shade c_white p-x_4" href="#">sit dolor commodo</a>
-				</li>
-				<li class="nav-item flex_auto">
-					<a class="nav-link h:bg_shade c_white p-x_4" href="#">adipisicing</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<nav class="absolute flex_shrink font_0 font_1:lg gradient_teal navbar navbar-dark navbar-expand p-b_1 p_0 r_0 relative:lg">
-		<ul class="navbar-nav">
-			<li class="dropdown h:gradient_teal-reverse nav-item show">
-				<a class="block is-active_toggle-function nav-link p-x_5:lg" id="myACCDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="far icon-toggle_chevron-up-down"></i> Sign In</a>
-				<div class="br_none br_solid:lg dropdown-menu dropdown-menu-right font_0 m-t_n1 p_0 r_0 show" aria-labelledby="navbarDropdown">
-					<ul class="ul_none">
-						<li class="nav-item">
-							<a class="dropdown-item nav-link bg_accent h:bg_accent-n2 c_white flex" href="#">
-								<span class="flex_auto inline-block p-l_2 p-r_4 uppercase">CV Quality </span>
-								<span class="c_white-7 flex-shrink font_n1 p-x_3 self_center">Log Out <i class="fas fa-sign-out"></i></span></a>
-						</li>
-						<li class="nav-item">
-							<a class="dropdown-item nav-link flex bg_primary-n1 h:bg_primary-n3 c_white" href="#"><span class="flex_auto inline-block p-l_2 p-r_4 uppercase">Accreditation</span>
-								<span class="c_white-7 flex-shrink font_n1 p-x_3 self_center">Log In <i class="fas fa-sign-in"></i></span></a>
-						</li>
-						<li class="nav-item">
-							<a class="dropdown-item nav-link flex bg_primary-n1 h:bg_primary-n3 c_white" href="#"><span class="flex_auto inline-block p-l_2 p-r_4 uppercase">NCDR</span>
-								<span class="c_white-7 flex-shrink font_n1 p-x_3 self_center">Log In <i class="fas fa-sign-in"></i></span></a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="br-l_1 br_solid br_white-3 h:gradient_teal-reverse nav-item">
-				<a class=" nav-link" href="#" title="Sign Out of all Systems"><i class="fas fa-sign-out-alt"></i></a>
-			</li>
-		</ul>
-	</nav>
-</div>
-
-Weight: -100 
-
-Styleguide Recipes CVQualtiy.Navs.Primary
-
-*/
-.card.testimonial,
-.card.product {
-  margin-top: 0;
-  padding: 0;
-  border-width: 1px;
-  border-style: solid;
-}
-@media only screen and (min-width : 768px) {
-  .card.testimonial,
-.card.product {
-    margin-top: 100px;
-  }
-}
-.card.testimonial .card-header,
-.card.product .card-header {
-  margin-bottom: 75px;
-}
-@media only screen and (min-width : 768px) {
-  .card.testimonial .card-header,
-.card.product .card-header {
-    margin-bottom: 0;
-  }
-}
-.card.testimonial .card-img,
-.card.product .card-img {
-  width: 100px;
-  height: 100px;
-  margin: 20px auto -50px;
-}
-@media only screen and (min-width : 768px) {
-  .card.testimonial .card-img,
-.card.product .card-img {
-    width: 200px;
-    height: 200px;
-    margin: -100px auto 20px;
-  }
-}
-.card.testimonial .card-body,
-.card.product .card-body {
-  position: relative;
-  padding: 10px 1em 1em;
-}
-.card.testimonial .blockquote,
-.card.product .blockquote {
-  position: relative;
-  text-align: center;
-}
-.card.testimonial .blockquote p,
-.card.testimonial .blockquote-cite,
-.card.product .blockquote p,
-.card.product .blockquote-cite {
-  display: block;
-}
-.card.testimonial .blockquote p,
-.card.product .blockquote p {
-  font-size: 1.2em;
-}
-.card.testimonial .blockquote p:before, .card.testimonial .blockquote p:after,
-.card.product .blockquote p:before,
-.card.product .blockquote p:after {
-  color: #ffc425;
-}
-.card.testimonial .blockquote p:before,
-.card.product .blockquote p:before {
-  margin-right: 0.5em;
-  content: "";
-}
-.card.testimonial .blockquote p:after,
-.card.product .blockquote p:after {
-  margin-left: 0.5em;
-  content: "";
-}
-.card.testimonial .blockquote-cite,
-.card.product .blockquote-cite {
-  position: relative;
-  right: 0;
-  color: #b5b0ae;
-  font-size: 1em;
-}
-.card.testimonial .blockquote-cite:after,
-.card.product .blockquote-cite:after {
-  margin-left: 0.5em;
-  content: "";
-}
-
-/**
-* Horizontal Testimonial are compact containers for Testimonial Data Type 
-*
-* @molecule Testimonial Card (.horizontal)
-* @section Card > Testimonial
-* @flag contained
-* @markup
-*  <div class="card testimonial horizontal">
-*    <header class="card-header">
-*       <img class="card-img  img-thumbnail" src="@{image:200:200}"/>
-*    </header>
-*    <div class="card-body">
-*      <article class="blockquote">
-*        <p>@{lipsum:15:words}</p>
-*        <cite class="blockquote-cite">Someone famous</cite>
-*      </article>
-*    </div>
-*  </div>
-*
-*/
-@media only screen and (min-width : 768px) {
-  .card.testimonial.horizontal,
-.card.product {
-    display: block;
-    display: flex;
-    flex-direction: row;
-    margin-top: 0;
-  }
-  .card.testimonial.horizontal .card-header,
-.card.testimonial.horizontal .card-body,
-.card.product .card-header,
-.card.product .card-body {
-    flex: 0 1 auto;
-    width: unset;
-    margin: 0;
-    padding: 10px;
-    float: none;
-    vertical-align: middle;
-  }
-  .card.testimonial.horizontal .card-img,
-.card.product .card-img {
-    width: 125px;
-    height: 125px;
-    margin: 10px;
-  }
-  .card.testimonial.horizontal .card-header,
-.card.product .card-header {
-    min-width: 160px;
-  }
-  .card.testimonial.horizontal .card-body,
-.card.product .card-body {
-    text-align: left;
-  }
-  .card.testimonial.horizontal .card-body .blockquote-cite,
-.card.product .card-body .blockquote-cite {
-    float: none;
-  }
-  .card.testimonial.horizontal .blockquote,
-.card.product .blockquote {
-    text-align: left;
-  }
-  .card.testimonial.horizontal .blockquote-cite,
-.card.product .blockquote-cite {
-    display: block;
-    text-align: right;
-  }
-}
-
-.card.testimonial.horizontal.undecorated,
-.card.testimonial.undecorated {
-  margin-top: 0;
-}
-.card.testimonial.horizontal.undecorated .card-header,
-.card.testimonial.undecorated .card-header {
-  display: none !important;
-}
-
-.card.testimonial.vertical-spacing {
-  margin-bottom: 120px;
-}
-
-/*
-Webinar
-
-Graphic areas that hold a snippet of a webinar.
-| Classes          | Effect                       |
-| ---------------- | ---------------------------- |
-| .ep-webinar      | Changes the product graphic. |
-| .afib-webinar    | Changes the product graphic. |
-| .cathlab-webinar | Changes the product graphic. |
-| .cpc-webinar     | Changes the product graphic. |
-| .fsed-webinar    | Changes the product graphic. |
-| .hf-webinar      | Changes the product graphic. |
-
-
-
-.ep-webinar      	- 	 Changes the product graphic.
-.afib-webinar    	- 	 Changes the product graphic.
-.cathlab-webinar 	- 	 Changes the product graphic.
-.cpc-webinar     	- 	 Changes the product graphic.
-.fsed-webinar    	- 	 Changes the product graphic.
-.hf-webinar      	- 	 Changes the product graphic.
-
-Markup:
-<div class="bg_shade-5 br_4 br_none br_radius br_shade-4 br_solid card flex_row:md shadow_3"  data-style="{{ modifier_class }}" >
-    <div class="bg_black-1 card-header br_0 flex_shrink">
-        <div class="bg_white br_2 br_shade-3 br_solid {{modifier_class}} m-b_3 p_2 webinar"></div>
-		<div class="action">
-			<a class="btn btn-block btn-primary c_white">View Webinar <i class="fa fa-play-circle" aria-hidden="true"></i></a>
-		</div>
-    </div>
-    <div class="card-body flex_auto">
-        <div class="title">
-        	<a>labore ad nisi velit labore commodo nisi tempor occaecat fugiat anim commodo</a>
-        </div>
-        <div class="view-time"><strong>View Time:</strong>&nbsp;<span>71 minutes</span></div>
-    </div>
-</div>
-
-
- Styleguide Recipes CVQualtiy.Cards.Webinar
-
-*/
-/*
-Webinar Buttons
-
-Graphic areas that hold a snippet of a webinar.
-| Style Combo | Effect                                                             | Classes                                      |
-| ----------- | ------------------------------------------------------------------ | -------------------------------------------- |
-| primary     | Alters the button style to a btn-primary instead of just a link.   | btn-primary c_white                          |
-| shade   | Alters the button style to a btn-shade instead of just a link. | btn-shade c_white                        |
-| success     | Alters the button style to a btn-success instead of just a link.   | bg_success h:bg_success-n2 br_radius c_white |
-
-
-
-.btn-primary.c_white                            -  Alters the button style to a btn-primary instead of just a link.  
-.btn-shade.c_white                          -  Alters the button style to a btn-shade instead of just a link.
-.bg_success.h:bg_success-n2.br_radius.c_white   -  Alters the button style to a btn-success instead of just a link.  
-
-Markup:
-<div class="bg_shade-5 br_4 br_none br_radius br_shade-4 br_solid card flex_row:md shadow_3"  data-style="{{ modifier_class }}" >
-    <div class="bg_black-1 card-header  br_0 flex_shrink">
-        <div class="bg_white br_2 br_shade-3 br_solid ep-webinar m-b_3 p_2 webinar"></div>
-		<div class="action">
-			<a class="btn btn-block {{modifier_class}}">View Webinar <i class="fa fa-play-circle" aria-hidden="true"></i></a>
-		</div>
-    </div>
-    <div class="card-body flex_auto">
-        <div class="title">
-        	<a>labore ad nisi velit labore commodo nisi tempor occaecat fugiat anim commodo</a>
-        </div>
-        <div class="view-time"><strong>View Time:</strong>&nbsp;<span>71 minutes</span></div>
-    </div>
-</div>
-
-
- Styleguide Recipes CVQualtiy.Cards.Webinar Buttons
-
-*/
-.webinar {
-  width: 100%;
-  height: 140px;
-  background-image: url(../img/cvquality/webinar/webinar-thumbnail.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.webinar.ep-webinar {
-  background-image: url(../img/cvquality/webinar/ep-webinar-thumbnail.jpg);
-}
-.webinar.afib-webinar {
-  background-image: url(../img/cvquality/webinar/afib-webinar-thumbnail.jpg);
-}
-.webinar.cathlab-webinar {
-  background-image: url(../img/cvquality/webinar/cathlab-webinar-thumbnail.jpg);
-}
-.webinar.cpc-webinar {
-  background-image: url(../img/cvquality/webinar/cpc-webinar-thumbnail.jpg);
-}
-.webinar.fsed-webinar {
-  background-image: url(../img/cvquality/webinar/fsed-webinar-thumbnail.jpg);
-}
-.webinar.hf-webinar {
-  background-image: url(../img/cvquality/webinar/hf-webinar-thumbnail.jpg);
-}
-
-/*
-Jumbotron
-
-Jumbotron are hero content areas. Larger marketing text with a colored backgrounds to grab the user or mark the page as important. By default Jumbotron is dark text on a light grey background the UC's add some predefined colored backgrounds allow for modificaiton of the area. The backgrounds were generated by this online generator https://qrohlf.com/trianglify-generator/.
-| Class        | Effect                                               |
-| ------------ | ---------------------------------------------------- |
-| .orange-blue | orange to blue background                            |
-| .orange-grey | orange to grey background                            |
-| .blue-grey   | blue to grey background                              |
-| .soft        | softens the edges of the triangles in the background |
-| .blur        | blurs the back to a smooth gradient                  |
-
-.orange-blue 		      - 	orange to blue background
-.orange-grey 		      - 	orange to grey background
-.blue-grey 			      - 	blue to grey background
-.soft				      - 	softens the edges of the triangles in the background 
-.blur.blue-grey 	      - 	blurs the back to a smooth gradient
-
- Markup:
-<div class="jumbotron relative overflow_hidden br_round {{modifier_class}}">
-   <div class="container p-x_4 max-w_60 w_auto m_auto">
-         <h1 class="c_black font_10:lg font_6 font_8:md">I am a Jumbotron!</h1>
-         <p class="font_1 font_1:md font_3:lg">Doloribus omnis facere voluptatibus beatae.</p>
-         <div><a class="br_radius btn btn-primary gradient_teal h:gradient_teal-reverse" href="#" role="button">Learn more</a></div>
-   </div>
-</div>
-
-Weight: 50
-
-Styleguide Recipes CVQualtiy.Containers.Jumbotron
-
-*/
-.jumbotron:before {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  display: block;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: url("../img/cvquality/pattern-grey.png") no-repeat center center;
-  background-size: cover;
-  content: "";
-}
-.jumbotron.orange-blue:before {
-  background-image: url("../img/cvquality/pattern-orange-blue.png");
-}
-.jumbotron.orange-grey:before {
-  background-image: url("../img/cvquality/pattern-orange-grey.png");
-}
-.jumbotron.blue-grey:before {
-  background-image: url("../img/cvquality/pattern-blue-grey.png");
-}
-.jumbotron.soft:before {
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  top: -3px;
-  right: -3px;
-  bottom: -3px;
-  left: -3px;
-  filter: blur(3px);
-}
-.jumbotron.blur:before {
-  -webkit-filter: blur(25px);
-  -moz-filter: blur(25px);
-  -o-filter: blur(25px);
-  -ms-filter: blur(25px);
-  top: -25px;
-  right: -25px;
-  bottom: -25px;
-  left: -25px;
-  filter: blur(25px);
-}
-.jumbotron .container {
-  z-index: 3;
-}
-
-/*
-Triangles
-
-Colored Triangles are used through out the cvquality design.  To add triangle that adhears to the side of a container and takes on the color of the border color of the container. 
-
-.triangle_left   -  left placed triangle.
-.triangle_right   -  right placed triangle.
-.triangle_bottom   -  bottom placed triangle.
-.triangle_top   -  top placed triangle.
-
-Markup:
-<div class="bg_shade-5 br_1 br_accent br_radius card highlighted shadow_1 ">
- <div class="{{modifier_class}} br_accent"><h2 class="bg_tansparent br-b_0 c_accent c_shade-n4 card-header font_1 font_2:md font_bold font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Highlighted Card</h2>
-  <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
-    <p>Repudiandae adipisci illum omnis et suscipit at amet ex. Error magni laborum autem et rerum porro asperiores sunt. Et veritatis rerum voluptas hic eum sint. Ipsa labore eos autem cupiditate ut molestiae sit fugiat. Rerum sit dolorem veritatis est quia nesciunt tenetur ut. Animi earum illo sed incidunt fuga.</p>
-  </div>
-   <div class="bg_tansparent br-t_0 card-footer p-t_0 p-x_3 p-x_3:md p-x_4:lg"> <a href="#" class="btn btn-block btn-primary font_0:md font_n1">Action</a></div></div>
-</div>
-
-Styleguide Recipes CVQualtiy.Decorator.Triangles
-*/
-*[class*=triangle] {
-  position: relative;
-}
-
-*[class*=triangle]::before {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  content: "";
-}
-
-.triangle_left::before,
-.triangle_right::before {
-  top: 50%;
-  margin-top: -0.5em;
-}
-
-.triangle_top::before,
-.triangle_bottom::before {
-  left: 50%;
-  margin-left: -0.5em;
-}
-
-.triangle_left {
-  margin-left: 0.75em;
-}
-
-.triangle_right {
-  margin-right: 0.75em;
-}
-
-.triangle_top {
-  margin-top: 0.75em;
-}
-
-.triangle_bottom {
-  margin-bottom: 0.75em;
-}
-
-.triangle_left::before {
-  left: -0.75em;
-  border-width: 0.5em 0 0.5em 0.75em;
-  border-top-color: #0000;
-  border-right-color: #0000;
-  border-bottom-color: #0000;
-  border-left-color: inherit;
-}
-
-.triangle_right::before {
-  right: -0.75em;
-  border-width: 0.5em 0.75em 0.5em 0;
-  border-top-color: #0000;
-  border-right-color: inherit;
-  border-bottom-color: #0000;
-  border-left-color: #0000;
-}
-
-.triangle_top::before {
-  top: -0.75em;
-  border-width: 0.75em 0.5em 0 0.5em;
-  border-top-color: inherit;
-  border-right-color: #0000;
-  border-bottom-color: #0000;
-  border-left-color: #0000;
-}
-
-.triangle_bottom::before {
-  bottom: -0.75em;
-  border-width: 0 0.5em 0.75em 0.5em;
-  border-top-color: #0000;
-  border-right-color: #0000;
-  border-bottom-color: inherit;
-  border-left-color: #0000;
-}
-
-/*
-Editor Container Decorator
-
-Editor Decorators are only visible in the Sitefinity Editor
-
-Markup:
-<div class="sfPageEditor">
-     <div class="visible-authenticated-block">
-        <ul class="nav-pills nav">
-            <li class="nav-item active"><a class="nav-link">Profile</a></li>
-            <li class="nav-item"><a class="nav-link">Settings</a></li>
-            <li class="nav-item"><a class="nav-link">Logout</a></li>
-        </ul>
-     </div>
-     <div class="visible-anonymous-block">
-        <ul class="nav-pills nav">
-            <li class="nav-item active"><a class="nav-link">FAQ</a></li>
-            <li class="nav-item"><a class="nav-link">Getting Started</a></li>
-            <li class="nav-item"><a class="nav-link">Login</a></li>
-        </ul>
-	 </div>
-	<div class="sfEditor-show">
-		<div class="aspect_21x9 bg-blend_mulitiply bg-blend_multiply bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_black-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
-			<div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
-				<span class=" c_white-9  flex_auto font_5 self_center text_center w_100">Ad Placeholder</span>
-			</div>
-		</div>
-	</div>
- </div>
-
- Weight: 10000
-
-Styleguide Sitefinity.Decorator
-*/
-.sfPageEditor .visible-anonymous-block, .sfPageEditor .visible-authenticated-block {
-  display: block !important;
-  margin: 5px;
-  border: 2px dotted transparent;
-  opacity: 0.75;
-}
-
-.sfPageEditor .visible-anonymous-block:after, .sfPageEditor .visible-anonymous-block:before, .sfPageEditor .visible-authenticated-block:after, .sfPageEditor .visible-authenticated-block:before {
-  display: block;
-  position: relative;
-  font-size: 12px;
-  text-align: center;
-}
-
-.sfEditor-show {
-  display: none;
-}
-
-.sfPageEditor .sfEditor-show {
-  display: block !important;
-  opacity: 0.5;
-}
-
-.sfPageEditor .visible-anonymous-block img,
-.sfPageEditor .visible-authenticated-block img {
-  display: none;
-}
-.sfPageEditor .visible-authenticated-block {
-  border-color: #58b5a5;
-  background-color: #eef8f6;
-}
-.sfPageEditor .visible-authenticated-block:after, .sfPageEditor .visible-authenticated-block:before {
-  color: #047294;
-  content: "AUTHENTICATED CONTENT - REMBER TO CHANGE PERMISIONS OF CONTENT IN AREA - Permision/Role/Authenticated";
-}
-.sfPageEditor .visible-anonymous-block {
-  border-color: #ffc425;
-  background-color: #fff9e9;
-}
-.sfPageEditor .visible-anonymous-block:after, .sfPageEditor .visible-anonymous-block:before {
-  color: #e87d1e;
-  content: "ANONYMOUS CONTENT - REMBER TO CHANGE PERMISIONS OF CONTENT IN AREA - Permision/Role/Anonymous";
-}
-
-/*
-	CVquality Recipes
-
-	The use of Utiltiy Class give us the ablitiy to create much of the UI needed for CV Quality without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of CV Quality.
-
-	Weight: 3000
-
-	Styleguide Recipes CVQualtiy
-
-*/
-/*
-Footer
-
-The Footer of CVQuality.org 
-
-Markup:
-<div id="footer-wrap" class="">
-	<!-- ********************************** breadcrumbs ********************************** -->
-	<div id="breadcrumbs" class="br-b_3 br-t_1 br_0 br_accent br_solid br_t_3 breadcrumbs-container c_shade font_0 font_ui p-x_4 p_3">
-		<b class="breadcrumbs-title">YOU ARE HERE: </b>
-		Home
-	</div>
-	<!-- This is the inner footer that we cache -->
-	<div id="footer" role="contentinfo" class="bg_shade-2 flex flex_column flex_inline flex_row:md flex_wrap p-x_3 p-y_0:lg p-y_4 w_100">
-		<div class="br-l_1 br_so br_solid:lg br_white-3 flex_auto font_ui m-l_4:lg m-y_4:lg order-1 p-l_3:md p-l_4:lg p-y_4:md p-x_0 p-x_3 p-y_4:lg w-grid_2:lg w-grid_6:md">
-			<h2 class="br-b_1 br_dotted:md br_dotted:lg br_white-6 c_shade-n4 font_0:md font_1 font_ui font_bold m-b_0:md m-b_2 m-b_2:lg m-t_4:md p-b_3 table-cell vertical-align_bottom w_10" style="height: 4rem;">
-				Quality Improvement for Institutions:
-			</h2>
-			<ul class="font_n1:lg font_0 font_ui m-b_4 p-t_2 ul_none">
-				<li class="text-indent_n1 p-l_4 p-l_r">
-					<a class="nav-link c_white h:underline p-y_0" href="/home" id="msFooter_rptQii_hypLnk_0" target="_top">
-						Home
-					</a>
-				</li>
-				<li class="text-indent_n1 p-l_4 p-l_r">
-					<a class="nav-link c_white h:underline p-y_0" href="/About-QII" id="msFooter_rptQii_hypLnk_1" target="_top">
-						About
-					</a>
-				</li>
-				<li class="text-indent_n1 p-l_4 p-l_r">
-					<a class="nav-link c_white h:underline p-y_0" href="/Get-Started" id="msFooter_rptQii_hypLnk_2" target="_top">
-						Get Started
-					</a>
-				</li>
-				<li class="text-indent_n1 p-l_4 p-l_r">
-					<a class="nav-link c_white h:underline p-y_0" href="/News" id="msFooter_rptQii_hypLnk_3" target="_top">
-						News
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="br-r_1 br_0 br_solid:lg br_white-3 flex_auto font_ui m-r_4:lg m-y_4:lg order-1 p-r_4:lg p-x_3 p-y_4:md w-grid_2:lg w-grid_6:md">
-			<h2 class="br-b_1 br_dotted:md br_dotted:lg font_1 br_white-6 c_shade-n5 font_0:md font_ui font_bold m-b_0 m-b_2:lg m-t_4:md nowrap p-b_3 table-cell vertical-align_bottom w_10" style="height: 4rem;">Offerings:</h2>
-			<ul class="font_n1:lg font_0 font_ui m-b_4 p-t_2 ul_none">
-				<li class="nav-item text-indent_n1 p-l_4 p-l_r">
-					<a class="nav-link c_white h:underline p-y_0" href="/NCDR-Home" id="msFooter_rptOfferings_hypLnk_0" target="_top">
-						NCDR
-					</a>
-				</li>
-				<li class="nav-item text-indent_n1 p-l_4 p-l_r">
-					<a class="nav-link c_white h:underline p-y_0" href="/Initiatives" id="msFooter_rptOfferings_hypLnk_1" target="_top">
-						Initiatives
-					</a>
-				</li>
-				<li class="nav-item text-indent_n1 p-l_4 p-l_r">
-					<a class="nav-link c_white h:underline p-y_0" href="/qi-communications-kit" id="msFooter_rptOfferings_hypLnk_2" target="_top">
-						QI Participation Kit
-					</a>
-				</li>
-				<li class="nav-item text-indent_n1 p-l_4 p-l_r">
-					<a class="nav-link c_white h:underline p-y_0" href="/Clinical-Toolkits" id="msFooter_rptOfferings_hypLnk_3" target="_top">
-						Clinical Toolkits
-					</a>
-				</li>
-				<li class="nav-item text-indent_n1 p-l_4 p-l_r">
-					<a class="nav-link c_white h:underline p-y_0" href="/accreditation" target="_self">
-						Accreditation
-					</a>
-				</li>
-			</ul>
-		</div>
-		<!-- column 4 -->
-		<div class="flex_auto order_0:md order_last p-x_3 p-y_4:lg relative w-grid:12:md w-grid_12 w-grid_3:lg">
-			<div class="bg_left block display_none:md logo_condensed seal_primary" style="height: 80px;">
-				<span class="alt">logo_condensed-alt max-w_20</span>
-			</div>
-<div class="bg_left block:md display_none logo_primary" style="height: 100px;">
-				<span class="alt">logo_condensed-alt max-w_20</span>
-			</div>
-			<section class="address c_shade-n4 p-l_0:md p-y_0:md p-y_3">
-				<address>
-					<!-- http://microformats.org/wiki/hcard -->
-					<h4 class="m-b_0 font_bold m-b_2:md font_copy font_normal font_1:md font_2 m-t_4:md">
-						Heart House
-					</h4>
-					<div class="flex flex_column flex_row:md font_n1 lh_1 font_ui">
-						<ul class="flex_auto p-r_4 ul_none w_10:md w_50:lg">
-							<li class="m-b_1 m-b_2:md font_normal">
-								<span class="street-address">2400 N. St. NW</span>
-							</li>
-							<li class="m-b_1 m-b_2:md font_normal">
-								<span class="locality ">Washington</span>,
-								<span class="city-name ">
-									<abbr title="District of Colombia">DC</abbr>
-								</span>
-								<span class="postal-code">20037</span>
-							</li>
-							<li class="m-b_1 m-b_2:md font_normal">
-								<a href="mailto:resource@acc.org" class="email c_shade-n4 h:c_shade-n5 h:underline">
-									<strong class="p-r_2">Email:</strong>
-									<span class="">resource@acc.org</span></a>
-							</li>
-						</ul>
-						<ul class="flex_auto p-l_0:lg p-l_4:md ul_none w_50:lg w_50:md">
-							<li class="m-b_1 m-b_2:md font_normal">
-								<a tel="+12023756000" href="tel:+12023756000" class="tel c_shade-n4 h:c_shade-n5 h:underline">
-									<strong class="p-r_2">Phone:</strong><span class="">(202) 375-6000, ext. 5603</span></a>
-							</li>
-							<li class="m-b_1 m-b_2:md font_normal">
-								<a tel="+18002574737" href="tel:+18002534636.5603" class="tel c_shade-n4 h:c_shade-n5 h:underline">
-									<strong class="p-r_2">Toll Free:</strong><span class="">(800) 253-4636, ext. 5603</span></a>
-							</li>
-							<li class="m-b_1 m-b_2:md font_normal">
-								<a fax="+12023757000" href="fax:+12023757000" class="fax c_shade-n4 h:c_shade-n5 h:underline">
-									<strong class="p-r_2">Fax:</strong>
-									<span class="">(202) 375-7000</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</address>
-			</section>
-		</div>
-		<div class="flex_auto order-10 order_last p-x_3 p-y_4:lg relative w-grid_3:lg w-grid_6:md">
-			<section class="acc-websites m-y_3">
-				<nav class="font_ui w_100 font_0"><h3 class="br-b_1 br_dotted br_white-4 c_shade-n4 font_0 font_ui font_bold m-b_2 p-b_3 w_100">Improving Cardiovascular Care</h3>
-					<ul class="lh_4 ul_none">
-						<li class="">
-							<a target="_blank" class="block c_shade-5 h:bg_black-2 h:c_white flex" href="http://www.acc.org">
-								<span class="flex_auto m-l_2">Acc</span>
-								<i class="fa-external-link-square fas flex_shrink  p-r_3 self_center"></i>
-							</a>
-						</li>
-						<li class="">
-							<a target="_blank" class="c_shade-5 block h:bg_black-2 h:c_white flex" href="https://cvquality.acc.org/Accreditation?">
-								<span class="flex_auto m-l_2 self_center">Accreditation Services</span>
-								<i class=" fa-external-link-square fas flex_shrink p-r_3 self_center"></i>
-							</a>
-						</li>
-						<li class="">
-							<a target="_blank" class="c_shade-5 block h:bg_black-2 h:c_white flex" href="http://www.ncdr.com">
-								<span class="flex_auto inline-block m-l_2 self_center">NCDR</span>
-								<i class=" fa-external-link-square fas flex_shrink p-r_3 self_center"></i>
-							</a>
-						</li>
-						<li class="">
-							<a target="_blank" class="c_shade-5 block h:bg_black-2 h:c_white flex" href="http://www.cardiosmart.org">
-								<span class="flex_auto inline-block m-l_2 self_center">CardioSmart</span>
-								<i class=" fa-external-link-square fas flex_shrink p-r_3 self_center"></i>
-							</a>
-						</li>
-						<li class="">
-							<a target="_blank" class="c_shade-5 block h:bg_black-2 h:c_white flex" href="http://www.onlinejacc.org/">
-								<span class="flex_auto inline-block m-l_2 self_center">JACC</span>
-								<i class=" fa-external-link-square fas flex_shrink p-r_3 self_center"></i>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</section>
-			<section class="b_4 l_0 m-t_4 p-t_5 r_0 social">
-				<ul class="flex social-bar ul_none c_white h:c_white m_0">
-					<li class="flex_auto m-r_2">
-						<a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-twitter-square"></i></a>
-					</li>
-					<li class="flex_auto m-r_2">
-						<a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-facebook-square"></i></a>
-					</li>
-					<li class="flex_auto m-r_2">
-						<a href="https://www.linkedin.com/company/american-college-of-cardiology/" target="_blank" class="linkedin social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-linkedin"></i></a>
-					</li>
-					<li class="flex_auto m-r_2">
-						<a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-youtube"></i></a>
-					</li>
-					<li class="flex_auto m-r_2">
-						<a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="google-play social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-google-play"></i></a>
-					</li>
-					<li class="flex_auto m-r_2">
-						<a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button block m-b_0 p_3 c_white text_center opacity_7 h:opacity"><i class="fab fa-apple"></i></a>
-					</li>
-				</ul>
-			</section>
-		</div>
-	</div>
-	<!-- / footer -->
-	<div id="subfooter" class="bg_shade-n1 br-b_2 br_0 br_accent-n1 br_solid c_white font_n1 p-x_4 p-y_4">
-		<ul class="block footer-bottom-links ul_none">
-			<li class="inline p_2">
-				<a href="//www.acc.org/footer-pages/media-center" class="c_white-6 h:c_white">Media Center</a>
-			</li>
-			<li class="inline p_2">
-				<a href="//www.acc.org/footer-pages/quick-start-guide" class="c_white-6 h:c_white">ACC.org Quick Start Guide</a>
-			</li>
-			<li class="inline p_2">
-				<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/advertising-and-sponsorship-policy">Advertising &amp; Sponsorship Policy</a>
-			</li>
-			<li class="inline p_2">
-				<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/clinical-content-disclaimer">Clinical Content Disclaimer</a>
-			</li>
-			<li class="inline p_2">
-				<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/editorial-board">Editorial Board</a>
-			</li>
-			<li class="inline p_2">
-				<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/privacy-policy">Privacy Policy</a>
-			</li>
-			<li class="inline p_2">
-				<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/registered-user-agreement">Registered User Agreement</a>
-			</li>
-			<li class="inline p_2">
-				<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/terms-and-conditions">Terms of Service</a>
-			</li>
-			<li class="inline p_2">
-				<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/cookie-policy">Cookie Policy</a>
-			</li>
-			<li class="inline p_2">
-				<a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/member-hub-terms-of-use">Member Hub Terms of Use</a>
-			</li>
-			<li class="inline p_2">
-				<a class="c_white-6 h:c_white" href="//www.acc.org/sitemap-acc.xml">Site Map</a>
-			</li>
-		</ul>
-		<!-- /footer-bottom-links -->
-		<p class="c_white-5 font_italic font_n2 legal m-b_2 m-t_3">
-			© 2019 American College of Cardiology Foundation. All rights reserved.
-		</p>
-	</div>
-	<!-- /subfooter -->
-</div>
-
-Weight: -50
-
-Styleguide Recipes CVQualtiy.Navs.Footer
-
-*/
-/*
-Cards
-
-Basic Cards
-
-Markup:
-<div class="card">
- <h3 class="card-header">Basic Card</h3>
-  <div class="card-body">
-    <p>cupidatat eu dolor dolor aliquip aliqua velit esse magna culpa qui fugiat ad culpa consectetur sint tempor elit dolor eu anim nisi quis consectetur laborum laboris proident consectetur mollit esse</p>
-  </div>
-   <div class="card-footer"> <a href="#" class="btn btn-primary btn-block">Action</a></div>
-</div>
-
-Styleguide Recipes CVQualtiy.Cards
-*/
-/*
-Highlighted Card
-
-Highlighted Cards are stylized cards with a soft blue background and changes all header sizes and text to a bit larger. These cards are used as hero area or for extra interest.
-
-
-Markup:
-<div class="bg_primary-5 br_primary-4 br_radius card highlighted">
- <h2 class="bg_tansparent br-b_0 c_accent c_shade-n4 card-header font_1 font_2:md font_3:lg p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Highlighted Card</h2>
-  <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
-    <p>Repudiandae adipisci illum omnis et suscipit at amet ex. Error magni laborum autem et rerum porro asperiores sunt. Et veritatis rerum voluptas hic eum sint. Ipsa labore eos autem cupiditate ut molestiae sit fugiat. Rerum sit dolorem veritatis est quia nesciunt tenetur ut. Animi earum illo sed incidunt fuga.</p>
-  </div>
-   <div class="bg_tansparent br-t_0 card-footer p-t_0 p-x_3 p-x_3:md p-x_4:lg"> <a href="#" class="btn btn-block btn-primary font_0:md font_n1">Action</a></div>
-</div>
-
-Styleguide Recipes CVQualtiy.Cards.Highlight
-*/
-/*
-Card Positions
-
-Placing cards inside of content areas is needed within the design.  Placing some utility classes will acomplish this with a responsive toggle. 
-| Style Combo       | Effect                                          | Classes                                                   |
-| ----------------- | ----------------------------------------------- | --------------------------------------------------------- |
-| position-right-lg | floats the card when the veiwport is large up.  | max-w_20 clear_right\:lg float_right\:lg w_20:lg           |
-| position-right-md | floats the card when the veiwport is medium up. | max-w_20 clear_right\:md float_right\:md w_40\:md w_20\:lg |
-| position-right-sm | floats the card when the veiwport is small up.  | max-w_20 clear_right float_right w_50 w_40\:md w_20\:lg    |
-| position-left-lg  | floats the card when the veiwport is small up.  | max-w_20 clear_left\:lg float_left\:lg w_20:lg             |
-| position-left-md  | floats the card when the veiwport is medium up. | max-w_20 clear_left\:md float_left\:md w_40\:md w_20\:lg   |
-| position-left-sm  | floats the card when the veiwport is large up.  | max-w_20 clear_left float_left w_50 w_40\:md w_20\:lg      |
-
-
-Markup:
-<div class="bg_primary-alt br_1 br_primary-4 br_radius card highlighted shadow_1 max-w_20 clear_right float_right w_50 w_40\:md w_20\:lg ">
- <h2 class="bg_tansparent br-b_0 c_accent c_shade-n4 card-header font_1 font_2:md font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Positioned Small Right</h2>
-  <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
-  <p class=" font_n2"> Container Classes:max-w_1 clear_right float_right w_50 w_40:md w_20:lg</p>  
-  <p>Repudiandae adipisci illum omnis et suscipit at amet ex. Error magni laborum autem et rerum porro asperiores sunt. Et veritatis rerum voluptas hic eum sint. Ipsa labore eos autem cupiditate ut molestiae sit fugiat. Rerum sit dolorem veritatis est quia nesciunt tenetur ut. Animi earum illo sed incidunt fuga.</p>
-  </div>
-   <div class="bg_tansparent br-t_0 card-footer p-t_0 p-x_3 p-x_3:md p-x_4:lg"> <a href="#" class="btn btn-block btn-primary font_0:md font_n1">Action</a></div>
-</div>
-
-Styleguide Recipes CVQualtiy.Cards.Positon
-*/
-/*
-Info Card
-
-Info Cards are stylized cards with a warm grey background and changes all headers to bold.  These cards are side notes to the main content
-
-Markup:
-<div class="bg_shade-4 br_radius card info shadow_n1 br_0">
- <h2 class="bg_tansparent br-b_0 c_shade-n4 card-header font_1 font_2:md font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg">Info Card</h2>
-  <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
-    <p>aliqua mollit consectetur labore ipsum velit officia nulla anim magna est id elit irure qui dolor exercitation incididunt exercitation proident anim officia veniam reprehenderit laboris incididunt irure enim amet esse</p>
-  </div>
-   <div class="bg_tansparent br-t_0 card-footer p-t_0 p-x_3 p-x_3:md p-x_4:lg"> <a href="#" class="btn btn-block btn-primary font_0:md font_n1">Action</a></div>
-</div>
-
-Styleguide Recipes CVQualtiy.Cards.Info
-*/
-/*
-Notice Card
-
-Notice Cards are side notes usually associated with an action button.
-
-Markup:
-<div class="bg_primary-alt br_1  br_shade-4 card info text_center">
- <h2 class="bg_tansparent br-b_0 br_shade-4 c_primary-n2 card-header font_1 font_2:md font_3:lg font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg triangle_left">Notice Card</h2>
-  <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
-    <p>aliqua mollit consectetur labore ipsum velit officia nulla anim magna est id elit irure qui dolor exercitation incididunt exercitation proident anim officia veniam reprehenderit laboris incididunt irure enim amet esse</p>
-  </div>
-   <div class="bg_tansparent br-t_0 card-footer p-t_0 p-x_3 p-x_3:md p-x_4:lg"> <a href="#" class="btn btn-block btn-primary font_0:md font_n1">Action</a></div>
-</div>
-
-Styleguide Recipes CVQualtiy.Cards.Notice
-*/
-/*
-Notice Card Alt
-
-Notice Cards are side notes usually associated with an action button.
-
-Markup:
-<div class="bg_shade-4 br_0   card info text_center">
- <h2 class="bg_tansparent br-b_0 br_accent-alt c_accent card-header font_1 font_2:md font_3:lg font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg triangle_left">Notice Card</h2>
-  <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
-    <p>aliqua mollit consectetur labore ipsum velit officia nulla anim magna est id elit irure qui dolor exercitation incididunt exercitation proident anim officia veniam reprehenderit laboris incididunt irure enim amet esse</p>
-  </div>
-   <div class="bg_tansparent br-t_0 card-footer p-t_0 p-x_3 p-x_3:md p-x_4:lg"> <a href="#" class="btn btn-block btn-shade font_0:md font_n1">Action</a></div>
-</div>
-
-Styleguide Recipes CVQualtiy.Cards.Notice Alt
-*/
-/*
-Address Card
-
-Decorated address card for accreditation
-
-Markup:
-<div class="bg_shade-5 p_3 p_4:md">
-	<address class="m-b_3 m-x_2 vcard">
-		<h4 class="c_accent font_1 font_bold font_ui m-b_2 m-t_3">Questions About Accreditation?</h4>
-		<div class="contact font_n1">
-			<ul class="ul_none">
-				<li><a href="mailto:" class="c_shade-n3 email link">non@.org</a></li>
-				<li><a href="tel:" class="c_shade-n3 link tel">55-555-55555</a></li>
-				<li><a href="fax:" class="c_shade-n3 fax link">55-444-55555</a></li>
-			</ul>
-		</div>
-		<h4 class="c_accent font_1 font_bold font_ui m-b_2 m-t_3">Office Hours:</h4>
-		<div class="font_n1 openning-hours">
-			<ul class="ul_none">
-				<li><span class="time">8:00am - 4pm EST</span><br /></li>
-				<li><span class="days">Monday - Firday</span></li>
-				<li>
-					<a href="blank.pdf" class="block c_shade-n3 link"
-						>Holiday Schedule &nbsp;<i class="fa-calendar far"></i
-					></a>
-				</li>
-			</ul>
-		</div>
-		<h4 class="c_accent font_1 font_bold font_ui m-b_2 m-t_3">Mailing &amp; Shipping</h4>
-		<span class=".org"></span>
-		<ul class="ul_none adr">
-			<li class="street-address">2400 N St. NW</li>
-			<li>
-				<span class="locality">Washington</span>,
-				<span class="country-name"><abbr title="District of Colombia">DC</abbr></span>
-				<span class="postal-code display_none">20006</span>
-			</li>
-		</ul>
-		<nav class="nav-social-button mono-grey">
-			<h4 class="c_accent font_1 font_bold font_ui m-b_2 m-t_3">Follow Us</h4>
-			<ul class="flex m_0 social-bar ul_none">
-				<li class="flex_shrink m-r_1">
-					<a
-						href="https://twitter.com/accintouch"
-						target="_blank"
-						class="bg_shade-1 block br-bl_radius br-tl_radius c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0 twitter"
-						><i class="fab fa-twitter-square"></i
-					></a>
-				</li>
-				<li class="flex_shrink m-r_1">
-					<a
-						href="https://www.facebook.com/AmericanCollegeofCardiology"
-						target="_blank"
-						class="facebook c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
-						><i class="fab fa-facebook-square"></i
-					></a>
-				</li>
-				<li class="flex_shrink m-r_1">
-					<a
-						href="https://www.linkedin.com/company/american-college-of-cardiology/"
-						target="_blank"
-						class="linkedin c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
-						><i class="fab fa-linkedin"></i
-					></a>
-				</li>
-				<li class="flex_shrink m-r_1">
-					<a
-						href="http://www.youtube.com/user/ACCinTouch"
-						target="_blank"
-						class="youtube c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
-						><i class="fab fa-youtube"></i
-					></a>
-				</li>
-				<li class="flex_shrink m-r_1">
-					<a
-						href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US"
-						target="_blank"
-						class="google-play c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
-						><i class="fab fa-google-play"></i
-					></a>
-				</li>
-				<li class="flex_shrink m-r_1">
-					<a
-						href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps"
-						target="_blank"
-						class="apple-store bg_shade-1 block br-br_radius br-tr_radius c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
-						><i class="fab fa-apple"></i
-					></a>
-				</li>
-			</ul>
-		</nav>
-	</address>
-</div>
-
-Styleguide Recipes CVQualtiy.Cards.Address
-*/
-/* 
-Score Card
-
-The Score Box Generic is currently used on the Assessments Page. These repeated boxes are used to show the score with each section of the assessment.
-
-
-Markup:
-<div class="bg_shade-5 box p-x_3 p-y_2 score">
-     <h3>veniam quis veniam enim</h3>
-     <div class="flex results-points">
-         <span class="flex_auto points-possible"><span class="points-breakdown">(0 of 96 possible points)</span></span>
-         <span class="c_accent flex_shrink font_2 points-total">0</span>
-     </div>
-</div>
-<div class="m-t_3 overall-score">
-    <span class="c_accent float_right font_n1 your-score-label">Your Score</span>
-    <div class="br-t_2 br_shade br_solid clear_both flex results-points">
-        <span class="br-b_1 br_accent br_dashed flex_auto p-t_4 points-possible">
-               <span class="c_accent font_2 font_bold font_ui m-b_n4 p_3 title">Overall Score</span> <span class="c_shade-1 font_italic points-breakdown">(0 of 96 possible points)</span>
-        </span>
-        <span class="bg_accent br_shade c_white flex_shrink font_1 p_3 points-total triangle_top">
-            0%
-        </span>
-    </div>
-</div>
-
-Styleguide Recipes CVQualtiy.Cards.Score Card
-*/
-/* 
-Date
-
-Style a date marker
-
-
-Markup:
-<div class="br_3 br_primary br_solid event-date flex flex_column font_display lh_1 p-x_2 text_center">
-  <span class="month font_2">May</span>
-  <span class="day font_3 font_bold">12</span>
-  <span class="bg_primary c_white-9 font_0 font_1 font_bold m-b_n2 m-x_n2 year">2018</span>
-</div>
-
-Styleguide Recipes CVQualtiy.Cards.Date
-*/
-/* 
-Date
-
-Style a date marker
-
-Markup:
-<div class="br_shade-2 card event">
-    <div class="bg_shade-4 br-l_1 br-t_1 br_solid br_white-5 card-header flex">
-            <div class="flex_shrink"><div class="bg_white br_3 br_primary br_solid event-date flex flex_column font_display lh_1 p-x_2 text_center">
-  <span class="month font_2">May</span>
-  <span class="day font_3 font_bold">12</span>
-  <span class="bg_primary c_white-9 font_0 font_1 font_bold m-b_n2 m-x_n2 year">2018</span>
-    </div></div>
-            <div class="event-details flex_grow lh_1 p-l_4">
-                <div class="c_accent-n1 font_2 m-b_2 title">voluptate anim consequat tempor adipisicing aliquip non do</div>
-                <div class="c_primary font_0 font_bold location-title m-b_2">Grand Hayatt</div>
-                <div class="c_shade-n4 font_n1 location">Cincinnati, OH </div>
-                <span class="font_italic font_n2 full-date p-r_3">May 12, 2018</span><span class="time font_italic font_n2 p-r_3"><span class="begin">8:00AM</span> - <span class="end">2:00PM</span> <span class="timezone">(EST)</span></span>
-            </div>
-    </div>
-    <div class="card-body font_0 p-x_3 p-x_4:md p-y_3 p-y_4:md">
-        <p>Eu dolore ullamco laboris veniam commodo pariatur pariatur proident ea. Esse in in nisi non eiusmod consequat pariatur officia mollit incididunt qui consectetur est. Ex aute non amet elit. Voluptate commodo minim sit Lorem occaecat sit aute reprehenderit. Dolore pariatur cupidatat velit anim enim veniam mollit aute fugiat magna do. Culpa non veniam non officia exercitation laborum dolor irure exercitation tempor adipisicing tempor elit nulla.</p>
-    </div>
-    <div class="bg_shade-5 c_shade-1 card-footer font_n1 text_center"><strong>Add to Calendar: </strong><a href="#" class="link">Outlook</a> | <a href="#" class="link">Google</a> | <a href="#" class="link">iCal</a></div>
-    <div class="bg_shade-5 br-t_0 card-footer p-t_0"><a href="#" class="bg_accent br_radius btn btn-accent btn-block c_white font_bold h:bg_accent-n2 h:shadow shadow_2">Register</a></div></div>
-
-    Styleguide Recipes CVQualtiy.Cards.Date Event
-*/
-/*
-Testimonial Card
-
-Graphic areas that hold testimonials.
-
-Markup:
-<div class="card testimonial">
-	<header class="card-header bg_primary-alt br_primary-3 br_solid br_1">
-		<img
-			class="card-img br_raund img-thumbnail"
-			src="https://unsplash.it/200/200?random=0.08080712330559026"
-		/>
-	</header>
-	<div class="card-body">
-		<article class="blockquote">
-			<p>cillum tempor aliquip amet commodo aute qui veniam Lorem cillum sunt laboris consectetur nisi cillum</p>
-			<cite class="blockquote-cite">Someone famous</cite>
-		</article>
-	</div>
-</div>
-
- Styleguide Recipes CVQualtiy.Cards.Testimonials
-
-*/
-/*
-Product Card
-
-Graphic areas that hold a snippet of a product.
-
-Markup:
-<div class="card product">
-  <header class="card-header bg_shade-3">
-     <img class="card-img" src="https://cvquality.acc.org/images/default-source/accreditation/afbutton.jpg?sfvrsn=f32980bf_2" alt="">
-  </header>
-  <div class="card-body">
-    <article>
-     <h2 class="m-0">incididunt est culpa</h2>
-      <p>aliqua adipisicing sint exercitation nostrud pariatur amet ut est fugiat excepteur ad elit mollit cillum</p>
-      <a class="btn btn-primary" href="#">Link To Product &nbsp; <i class="fa fa-external-link-square"></i></a>
-    </article>
-  </div>
-</div>
-
-
- Styleguide Recipes CVQualtiy.Cards.Products
-
-*/
-/*
-List
-
-CVquatlity has some lists through out the design that go beyond basic lists. Below are collection of them and where they can be found. 
-
-
- Styleguide Recipes CVQualtiy.Lists
-*/
-/*
-Map Result List
-
-Result lists is the list view of all of the pins on the map
-
-
-Markup:
-<ul class="bg_shade-2 font_ui result-list ul_none">
-      <li class="address bg_shade-4 br-r_4 br_solid br_white-0 h:bg_shade-n2 h:br_accent h:c_accent-alt p_2 p_3:md p_4:lg relative transition_1">
-         <div class="c_primary-n2 expanded-click-area font_1 h:c_white name">proident ad velit sit</div>
-         <div class="address-line">sunt magna ea exercitation</div>
-         <div class="address-line">nisi qui culpa labore</div>
-      </li>
-      <li class="address bg_shade-4 br-r_4 br_solid br_white-0 h:bg_shade-n2 h:br_accent h:c_accent-alt m-t_1 p_2 p_3:md p_4:lg relative transition_1">
-         <div class="c_primary-n2 expanded-click-area font_1 h:c_white name">proident ad velit sit</div>
-         <div class="address-line">sunt magna ea exercitation</div>
-         <div class="address-line">nisi qui culpa labore</div>
-      </li>
-</ul>
-
- Styleguide Recipes CVQualtiy.Lists.Map
-*/
-/*
-Side Nav
-
-Side Nav DOM
-
-Markup:
-<nav class="hidden-print nav-sub max-w-25"><ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav"><li data-nav="parent" class="nav-item parent"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation" target="_self"><i class="fa fa-holder toggle"></i>About Accreditation</a><ul data-nav="child" class="flex_column font_n1 nav text-indent_2 bg_shade-4"><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/benefits-of-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Benefits of Accreditation</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/steps-to-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Pathway to Accreditation</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/testimonials-and-success-stories" target="_self"><i class="fa fa-holder toggle"></i>Testimonials and Success Stories</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/value-of-process-improvement" target="_self"><i class="fa fa-holder toggle"></i>Value of Process Improvement</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/faqs" target="_self"><i class="fa fa-holder toggle"></i>FAQs</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/accreditation-for-systems" target="_self"><i class="fa fa-holder toggle"></i>System-Wide Accreditation</a></li></ul></li><li data-nav="parent" class="is-active nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/services" target="_self"><i class="fa fa-holder toggle"></i>Products and Services</a><ul data-nav="child" class="bg_shade-4 flex_column font_n1 nav text-indent_1"><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/CCL" target="_self"><i class="fa fa-holder toggle"></i>Cardiac Cath Lab Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/CCL/OnDemandCathLabwebianrs" target="_self">On-Demand Cath Lab Webinars</a></li><li class="nav-item"><a class="nav-link nav-link c_shade-n4 p-y_2" href="/accreditation/services/CCL/CCLBenefits" target="_self">Cardiac Cath Lab Features Benefits</a></li><li class="nav-item"><a class="nav-link nav-link c_shade-n4 p-y_2" href="/accreditation/services/CCL/cardiac-cath-lab-accreditation-training" target="_self">Cardiac Cath Lab Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="nav-link c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/cpcwebinars" target="_self"><i class="fa fa-holder toggle"></i>On-Demand Chest Pain Center Webinars</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCDesignations" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Designations</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCBenefits" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Features Benefits</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCsupplementalED" target="_self"><i class="fa fa-holder toggle"></i>Supplemental Education</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCGuidelines" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Guidelines</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCArticles" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Articles Abstracts</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCPublications" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Pubs</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCQuestions" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center FAQs</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/chest-pain-center-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/EP" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/EP/register-for-webinar" target="_self"><i class="fa fa-holder toggle"></i>On-Demand EP Webinars</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/EP/EPBenefits" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Features Benefits</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/EP/electrophysiology-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/HF" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/hfwebinars" target="_self"><i class="fa fa-holder toggle"></i>On-Demand Heart Failure Webinars</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFBenefits" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Features Benefits</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/supplementalED" target="_self"><i class="fa fa-holder toggle"></i>Supplemental Education</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFGuidelines" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Guidelines</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFArticles" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Articles and Abstracts</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFPublications" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Publications</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFQuestions" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure FAQs</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/heart-failure-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/TCV" target="_self"><i class="fa fa-holder toggle"></i>Transcatheter Valve Certification</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/TCV/TCV-certification-training" target="_self"><i class="fa fa-holder toggle"></i>Transcatheter Valve Certification Training</a></li></ul></li><li class="nav-item"><a class="h:bg_black-1 c_shade-n3 nav-link p-y_2" href="/accreditation/services/C4Certification" target="_self"><i class="fa fa-holder toggle"></i>C4 Certification</a></li></ul></li><li class="nav-item"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/heartcare-center-recognition-program" target="_self"><i class="fa fa-holder toggle"></i>HeartCARE Center Recognition Program</a></li><li class="nav-item"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/acc-quality-summit-2020" target="_self"><i class="fa fa-holder toggle"></i>ACC Quality Summit</a></li><li class="nav-item active current"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/brand" target="_self"><i class="fa fa-holder toggle"></i>Promote Your Achievement</a></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/quality-initiative-proposal" target="_self"><i class="fa fa-holder toggle"></i>Quality Initiative Proposal</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-link c_shade-n4 p-y_2"><a class="nav-link" href="/accreditation/quality-initiative-proposal/2018-recipients" target="_self"><i class="fa fa-holder toggle"></i>2018 Recipients</a></li></ul></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/advocacy" target="_self"><i class="fa fa-holder toggle"></i>Advocate Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link" href="/accreditation/advocacy/Community-Education" target="_self"><i class="fa fa-holder toggle"></i>Community Education &amp; EHAC</a></li><li class="nav-item"><a class="nav-link" href="/accreditation/advocacy/helpful-links" target="_self"><i class="fa fa-holder toggle"></i>Helpful Links</a></li></ul></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/about-us" target="_self"><i class="fa fa-holder toggle"></i>About Us</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_2"><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/about-us/awards" target="_self">Awards</a><ul class="nav flex_column bg_black-1"><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/awards/process-improvement-pioneer-award" target="_self"><i class="fa fa-holder toggle"></i>Process Improvement Pioneer Award</a></li><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/awards/bahr-award-of-excellence" target="_self"><i class="fa fa-holder toggle"></i>Bahr Award of Excellence</a></li></ul></li><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/staff-directory" target="_self"><i class="fa fa-holder toggle"></i>Staff Directory</a></li></ul></li><li class="nav-item"><a class="nav-link" href="/accreditation/map" target="_self"><i class="fa fa-holder toggle"></i>Accreditation Map</a></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/news-and-events" target="_self"><i class="fa fa-holder toggle"></i>News and Events</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link" href="/accreditation/news-and-events/upcoming-events" target="_self"><i class="fa fa-holder toggle"></i>Upcoming Events</a></li></ul></li></ul></nav>
-
-
-Styleguide Recipes CVQualtiy.Navs.SideNav
-*/
-/*
-Side Nav Parent
-
-Decoration classes with UC's to make the nav look like the primary level.
-
-Markup:
-<nav class="hidden-print nav-sub max-w-25">
-	<ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
-		<li data-nav="parent" class="nav-item parent">
-			<a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
-				Link with children
-			</a>
-		</li>
-		<li  class="nav-item">
-			<a class="a:c_accent c_shade-n3 h:bg_white-4 nav-link p-y_2" target="_self">
-				Link without children
-			</a>
-		</li>
-		<li data-nav="parent" class="nav-item parent active">
-			<a class="a:c_accent c_shade-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
-				Link that is active
-			</a>
-		</li>
-	</ul>
-</nav>
-
-Weight: 1
-
-Styleguide Recipes CVQualtiy.Navs.Primary Level
-*/
-/*
-Side Nav Child
-
-Decoration classes with UC's to make the nav look like the child of the primary level.
-
-Markup:
-<nav class="hidden-print nav-sub max-w-25">
-	<ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
-		<li data-nav="parent" class="nav-item parent">
-			<a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
-				Parent Link
-			</a>
-			<ul class="flex_column font_n1 nav text-indent_2 bg_shade-4">
-				<li data-nav="parent" class="nav-item parent">
-					<a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" target="_self">
-						Link with children
-					</a>
-				</li>
-				<li  class="nav-item">
-					<a class="a:c_accent c_shade-n3 h:bg_white-4 nav-link p-y_2" target="_self">
-						Link without children
-					</a>
-				</li>
-				<li data-nav="parent" class="nav-item parent active">
-					<a class="a:c_accent c_shade-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
-						Link that is active
-					</a>
-				</li>
-			</ul>
-		</li>
-	</ul>
-</nav>
-
-Weight: 2
-
-Styleguide Recipes CVQualtiy.Navs.Child Level
-*/
-/*
-Side Nav Gran Child
-
-Decoration classes with UC's to make the nav look like the child of the primary level.
-
-Markup:
-<nav class="hidden-print nav-sub max-w-25">
-	<ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
-		<li data-nav="parent" class="nav-item parent">
-			<a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" target="_self">
-				Link with children
-			</a>
-		</li>
-		<li  class="nav-item">
-			<a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" target="_self">
-				Link without children
-			</a>
-		</li>
-		<li data-nav="parent" class="nav-item parent active">
-			<a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" target="_self">
-				Link that is active
-			</a>
-		</li>
-	</ul>
-</nav>
-
-Weight: 3
-
-Styleguide Recipes CVQualtiy.Navs.Grand Child Level
-*/
-/*
-Decorators
-
-The Cvquality design employs a collection of unique decorators that are either accomplished by styles added on top of Arches or are collections of Utility Classes to make the effect. Bellow are the list of standardized decorators in the design. 
-
-
-Styleguide Recipes CVQualtiy.Decorator
-*/
-/*
-Dividers
-
-There are many dividers in the design. Bellow are the types and how to create them. 
-| Style Combo     | Effect                                                            | Classes                       |
-| --------------- | ----------------------------------------------------------------- | ----------------------------- |
-| item-divider    | dividing items from eachother like between paragraphs.            | br_shade-4 br_dashed br_1 |
-| group-divider   | A mid weight divider to show the differnce between grouped items. | br_accent br_dotted br_1      |
-| section-divider | A strong division between Secotions of a page                     | br_primary br_solid br_2      |
-| spacer          | No decoration but adds space between objects                      | br_0                          |
-
-
-
-Markup:
-<hr class="divider br_0 br-b_1 br_dotted br_accent">
-<p>Est veniam anim duis ex irure occaecat velit voluptate. Exercitation incididunt ea esse duis voluptate esse veniam est officia id voluptate. In labore cupidatat do nulla anim labore. Esse ipsum velit sunt eu eiusmod fugiat sit culpa. Qui occaecat adipisicing minim minim minim ipsum esse ut id adipisicing duis duis. Esse esse ut amet ullamco. Est excepteur sunt laboris anim.</p>
-<hr class="divider br_0 br-b_1 br_dashed br_shade-4">
-<strong>There is a spacer between the two sentences</strong>
-<p>Cupidatat id incididunt tempor magna consectetur laboris cillum laborum. Enim non reprehenderit eiusmod nisi velit veniam ea eiusmod esse aute proident. Laborum pariatur consequat cillum est officia exercitation esse et consectetur ea ad sint. Sunt esse do cupidatat laborum. Deserunt occaecat id tempor consectetur velit pariatur nulla fugiat sit laboris ipsum.</p>
-<hr class="br_none"/>
-<p>Est veniam anim duis ex irure occaecat velit voluptate. Exercitation incididunt ea esse duis voluptate esse veniam est officia id voluptate. In labore cupidatat do nulla anim labore. Esse ipsum velit sunt eu eiusmod fugiat sit culpa. Qui occaecat adipisicing minim minim minim ipsum esse ut id adipisicing duis duis. Esse esse ut amet ullamco. Est excepteur sunt laboris anim.</p>
-<hr class=" br_0 br-b_1 br_primary br_solid">
-<p>Est veniam anim duis ex irure occaecat velit voluptate. Exercitation incididunt ea esse duis voluptate esse veniam est officia id voluptate. In labore cupidatat do nulla anim labore. Esse ipsum velit sunt eu eiusmod fugiat sit culpa. Qui occaecat adipisicing minim minim minim ipsum esse ut id adipisicing duis duis. Esse esse ut amet ullamco. Est excepteur sunt laboris anim.</p>
-
-Styleguide Recipes CVQualtiy.Decorator.Dividers
-*/
 /*
 	Bootstrap Recipes
 
