@@ -1,5 +1,4 @@
 $acc-blue: #004176 !default;
-
 $teal: #198dae !default;
 $green-blue: #24ccae !default;
 $dark-grey: #676a72 !default;
@@ -10,16 +9,13 @@ $red: #dd1a1a !default;
 $blue: #2b58c0 !default;
 $purple: #976ad2 !default;
 $magenta: #c34198 !default;
-
 $white: rgb(255, 255, 255) !default;
 $black: rgb(19, 18, 18) !default;
-
 // Currently Un used in the design but part of bootstrap.
 $indigo: #6610f2 !default;
 $pink: #e83e8c !default;
 $yellow: #ffc107 !default;
 $cyan: #17a2b8 !default;
-
 $gray-100: mix($white, $black, 10%) !default;
 $gray-200: mix($white, $black, 20%) !default;
 $gray-300: mix($white, $black, 30%) !default;
@@ -30,94 +26,25 @@ $gray-700: mix($white, $black, 70%) !default;
 $gray-800: mix($white, $black, 80%) !default;
 $gray-900: mix($white, $black, 90%) !default;
 $grays: () !default;
-$grays: map-merge(
-	(
-		'100': $gray-100,
-		'200': $gray-200,
-		'300': $gray-300,
-		'400': $gray-400,
-		'500': $gray-500,
-		'600': $gray-600,
-		'700': $gray-700,
-		'800': $gray-800,
-		'900': $gray-900,
-	),
-	$grays
-);
+$grays: map-merge( ( '100': $gray-100, '200': $gray-200, '300': $gray-300, '400': $gray-400, '500': $gray-500, '600': $gray-600, '700': $gray-700, '800': $gray-800, '900': $gray-900, ), $grays);
 $colors: () !default;
-$colors: map-merge(
-	(
-		'blue': $blue,
-		'indigo': $indigo,
-		'purple': $purple,
-		'pink': $pink,
-		'red': $red,
-		'orange': $orange,
-		'yellow': $yellow,
-		'green': $green,
-		'teal': $teal,
-		'cyan': $cyan,
-		'white': $white,
-		'gray': $gray-600,
-		'gray-dark': $gray-800,
-	),
-	$colors
-);
+$colors: map-merge( ( 'blue': $blue, 'indigo': $indigo, 'purple': $purple, 'pink': $pink, 'red': $red, 'orange': $orange, 'yellow': $yellow, 'green': $green, 'teal': $teal, 'cyan': $cyan, 'white': $white, 'gray': $gray-600, 'gray-dark': $gray-800, ), $colors);
 $theme-palette: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$theme-palette: map-merge(
-	(
-		primary: $teal,
-		secondary: $dark-grey,
-		success: $green,
-		shade: $gray-500,
-		warning: $orange,
-		alert: $red,
-		navigation: $blue,
-		accent: $magenta,
-		info: $alt-grey,
-		highlight: $purple,
-		acc: $acc-blue,
-	),
-	$theme-palette
-);
-
+$theme-palette: map-merge( ( primary: $teal, secondary: $dark-grey, success: $green, shade: $gray-500, warning: $orange, alert: $red, navigation: $blue, accent: $magenta, info: $alt-grey, highlight: $purple, acc: $acc-blue, ), $theme-palette);
 $cor-green: #6fc284;
 $cor-yellow: #ffd44f;
 $cor-yellow-orange: #faa74b;
 $cor-orange: #f15d4c;
 $cor-red: #ed1c00;
-
 $COR: () !default;
-
-$COR: map-merge(
-	(
-		I: $cor-green,
-		IIA: $cor-yellow,
-		IIB: $cor-yellow-orange,
-		III: $cor-orange,
-		III-NOBENIFIT: $cor-orange,
-		III-HARM: $cor-red,
-	),
-	$COR
-);
-
+$COR: map-merge( ( I: $cor-green, IIA: $cor-yellow, IIB: $cor-yellow-orange, III: $cor-orange, III-NOBENIFIT: $cor-orange, III-HARM: $cor-red, ), $COR);
 $loe-dark-blue: rgb(62, 111, 183);
 $loe-mid-blue: rgb(101, 156, 211);
 $loe-light-blue: rgb(161, 193, 230);
 $loe-pale-blue: rgb(181, 213, 229);
 $LOE: () !default;
-$LOE: map-merge(
-	(
-		A: $loe-dark-blue,
-		B-NR: $loe-mid-blue,
-		B-BR: $loe-light-blue,
-		C-LD: $loe-pale-blue,
-		C-EO: $loe-pale-blue,
-	),
-	$LOE
-);
-
+$LOE: map-merge( ( A: $loe-dark-blue, B-NR: $loe-mid-blue, B-BR: $loe-light-blue, C-LD: $loe-pale-blue, C-EO: $loe-pale-blue, ), $LOE);
 $credit-CME: #00a15b;
 $credit-ABP: #007a5b;
 $credit-COP: #775891;
@@ -130,26 +57,8 @@ $credit-ECME: #d16528;
 $credit-CPE: #992e2e;
 $credit-ATCEU: #775744;
 $credit-AAPA: #e8c536;
-
 $CreditColors: () !default;
-$CreditColors: map-merge(
-	(
-		CME: $credit-CME,
-		ABP: $credit-ABP,
-		COP: $credit-COP,
-		CE: $credit-CE,
-		MOCII: $credit-MOCII,
-		MOCIV: $credit-MOCIV,
-		CNE: $credit-CNE,
-		CNErx: $credit-CNErx,
-		ECME: $credit-ECME,
-		CPE: $credit-CPE,
-		ATCEU: $credit-ATCEU,
-		AAPA: $credit-AAPA,
-	),
-	$CreditColors
-);
-
+$CreditColors: map-merge( ( CME: $credit-CME, ABP: $credit-ABP, COP: $credit-COP, CE: $credit-CE, MOCII: $credit-MOCII, MOCIV: $credit-MOCIV, CNE: $credit-CNE, CNErx: $credit-CNErx, ECME: $credit-ECME, CPE: $credit-CPE, ATCEU: $credit-ATCEU, AAPA: $credit-AAPA, ), $CreditColors);
 $pathway-invasive-cardiology: #c8b02f;
 $pathway-congenital-heart-disease: #fdb918;
 $pathway-noninvasive-cardiology: #947b33;
@@ -164,28 +73,9 @@ $pathway-preicardial: #0079ad;
 $pathway-acute-coronary-syndromes: #009974;
 $pathway-stable-ischemnic-heart-disease: #0f3e65;
 $pathway-special: #00b6f1;
-
+$pathway-pandemic: #8e2582;
 $PathwayColors: () !default;
-$PathwayColors: map-merge(
-	(
-		invasive: $pathway-invasive-cardiology,
-		congenital: $pathway-congenital-heart-disease,
-		noninvasive: $pathway-noninvasive-cardiology,
-		ecg: $pathway-ecg-stress-test,
-		vascular: $pathway-vascular-medicine,
-		pulmonary: $pathway-pulmonary-hypertension,
-		prevention: $pathway-prevention,
-		hf: $pathway-heart-failure,
-		valvular: $pathway-valvular-heart-disease,
-		arrthythmias: $pathway-arrthythmias-EP,
-		preicardial: $pathway-preicardial,
-		acute: $pathway-acute-coronary-syndromes,
-		ischemnic: $pathway-stable-ischemnic-heart-disease,
-		special: $pathway-special,
-	),
-	$PathwayColors
-);
-
+$PathwayColors: map-merge( ( invasive: $pathway-invasive-cardiology, congenital: $pathway-congenital-heart-disease, noninvasive: $pathway-noninvasive-cardiology, ecg: $pathway-ecg-stress-test, vascular: $pathway-vascular-medicine, pulmonary: $pathway-pulmonary-hypertension, prevention: $pathway-prevention, hf: $pathway-heart-failure, valvular: $pathway-valvular-heart-disease, arrthythmias: $pathway-arrthythmias-EP, preicardial: $pathway-preicardial, acute: $pathway-acute-coronary-syndromes, ischemnic: $pathway-stable-ischemnic-heart-disease, special: $pathway-special, pandemic:$pathway-pandemic), $PathwayColors);
 $twitter: #00aced;
 $facebook: #3b5998;
 $linkedin: #0077b5;
@@ -193,18 +83,5 @@ $apple-store: #ea4cc0;
 $google-play: #ef6c00;
 $youtube: #bb0000;
 $instagram: #8134af;
-
 $Social-Colors: () !default;
-
-$SocialColors: map-merge(
-	(
-		twitter: $twitter,
-		facebook: $facebook,
-		linkedin: $linkedin,
-		apple-store: $apple-store,
-		google-play: $google-play,
-		youtube: $youtube,
-		instagram: $instagram,
-	),
-	$Social-Colors
-);
+$SocialColors: map-merge( ( twitter: $twitter, facebook: $facebook, linkedin: $linkedin, apple-store: $apple-store, google-play: $google-play, youtube: $youtube, instagram: $instagram, ), $Social-Colors);
