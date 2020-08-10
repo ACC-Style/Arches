@@ -989,7 +989,7 @@ h4,
 h5,
 h6 {
   font-family: "Maven Pro","Muli","Open Sans","system",sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h6 {
@@ -1008,7 +1008,6 @@ h6 {
 }
 
 p {
-  font-weight: 300;
   line-height: 1.65;
 }
 
@@ -1053,11 +1052,6 @@ h1 {
   margin: 1rem 0;
   font-size: 39.813px;
   font-size: 2.48832rem;
-}
-
-a,
-a:hover {
-  color: unset;
 }
 
 kbd,
@@ -1745,7 +1739,7 @@ Styleguide InteractiveExtras.Expanded Click Area
   background-color: #9acd322e;
 }
 
-i.icon-toggle_check:before, i.icon-toggle_check-circle:before, i.icon-toggle_check-sqaure:before, i.icon-toggle_arrow-circle:before, i.icon-toggle_caret-circle-right-down:before, i.icon-toggle_chevron-double-left-right:before, i.icon-toggle_chevron-double-up-down:before, i.icon-toggle_chevron-up-down:before, i.icon-toggle_plus-minus:before, i.icon-toggle_bars-times:before {
+.icon-toggle_check:before, .icon-toggle_check-circle:before, .icon-toggle_check-sqaure:before, .icon-toggle_arrow-circle:before, .icon-toggle_caret-circle-right-down:before, .icon-toggle_chevron-double-left-right:before, .icon-toggle_chevron-double-up-down:before, .icon-toggle_chevron-up-down:before, .icon-toggle_plus-minus:before, .icon-toggle_bars-times:before {
   margin: 0 4px;
   margin: 0 0.25rem;
 }
@@ -1793,73 +1787,73 @@ Markup:
 
 Styleguide InteractiveExtras.ToggleIcons
 */
-i.icon-toggle_bars-times:before {
+.icon-toggle_bars-times:before {
   content: "";
 }
-.active i.icon-toggle_bars-times:before, .active > i.icon-toggle_bars-times:before {
+.active .icon-toggle_bars-times:before, .active > .icon-toggle_bars-times:before {
   content: "";
 }
 
-i.icon-toggle_plus-minus:before {
+.icon-toggle_plus-minus:before {
   content: "";
 }
-.active i.icon-toggle_plus-minus:before, .active > i.icon-toggle_plus-minus:before {
+.active .icon-toggle_plus-minus:before, .active > .icon-toggle_plus-minus:before {
   content: "";
 }
 
-i.icon-toggle_chevron-up-down:before {
+.icon-toggle_chevron-up-down:before {
   content: "";
 }
-.active i.icon-toggle_chevron-up-down:before, .active > i.icon-toggle_chevron-up-down:before {
+.active .icon-toggle_chevron-up-down:before, .active > .icon-toggle_chevron-up-down:before {
   content: "";
 }
 
-i.icon-toggle_chevron-double-up-down:before {
+.icon-toggle_chevron-double-up-down:before {
   content: "";
 }
-.active i.icon-toggle_chevron-double-up-down:before, .active > i.icon-toggle_chevron-double-up-down:before {
+.active .icon-toggle_chevron-double-up-down:before, .active > .icon-toggle_chevron-double-up-down:before {
   content: "";
 }
 
-i.icon-toggle_chevron-double-left-right:before {
+.icon-toggle_chevron-double-left-right:before {
   content: "";
 }
-.active i.icon-toggle_chevron-double-left-right:before, .active > i.icon-toggle_chevron-double-left-right:before {
+.active .icon-toggle_chevron-double-left-right:before, .active > .icon-toggle_chevron-double-left-right:before {
   content: "";
 }
 
-i.icon-toggle_caret-circle-right-down:before {
+.icon-toggle_caret-circle-right-down:before {
   content: "";
 }
-.active i.icon-toggle_caret-circle-right-down:before, .active > i.icon-toggle_caret-circle-right-down:before {
+.active .icon-toggle_caret-circle-right-down:before, .active > .icon-toggle_caret-circle-right-down:before {
   content: "";
 }
 
-i.icon-toggle_arrow-circle:before {
+.icon-toggle_arrow-circle:before {
   content: "";
 }
-.active i.icon-toggle_arrow-circle:before, .active > i.icon-toggle_arrow-circle:before {
+.active .icon-toggle_arrow-circle:before, .active > .icon-toggle_arrow-circle:before {
   content: "";
 }
 
-i.icon-toggle_check-sqaure:before {
+.icon-toggle_check-sqaure:before {
   content: "";
 }
-.active i.icon-toggle_check-sqaure:before, .active > i.icon-toggle_check-sqaure:before {
+.active .icon-toggle_check-sqaure:before, .active > .icon-toggle_check-sqaure:before {
   content: "";
 }
 
-i.icon-toggle_check-circle:before {
+.icon-toggle_check-circle:before {
   content: "";
 }
-.active i.icon-toggle_check-circle:before, .active > i.icon-toggle_check-circle:before {
+.active .icon-toggle_check-circle:before, .active > .icon-toggle_check-circle:before {
   content: "";
 }
 
-i.icon-toggle_check:before {
+.icon-toggle_check:before {
   content: "";
 }
-.active i.icon-toggle_check:before, .active > i.icon-toggle_check:before {
+.active .icon-toggle_check:before, .active > .icon-toggle_check:before {
   content: "";
 }
 
@@ -4110,7 +4104,7 @@ Styleguide UC.Typography.Font.Color Transparency
 }
 
 .font_regular {
-  font-weight: 300 !important;
+  font-weight: 400 !important;
 }
 
 .font_medium {
@@ -4493,6 +4487,68 @@ Styleguide UC.Typography.Font.Color Transparency
 
   .nowrap\:lg {
     white-space: nowrap;
+  }
+}
+.wb_break-all {
+  word-break: break-all;
+}
+
+.wb_word-break {
+  word-break: word-break;
+}
+
+.wb_keep-all {
+  word-break: keep-all;
+}
+
+.wb_normal {
+  word-break: normal;
+}
+
+.wb_unset {
+  word-break: unset;
+}
+
+@media only screen and (min-width : 1024px) {
+  .wb_break-all {
+    word-break: break-all;
+  }
+
+  .wb_word-break {
+    word-break: word-break;
+  }
+
+  .wb_keep-all {
+    word-break: keep-all;
+  }
+
+  .wb_normal {
+    word-break: normal;
+  }
+
+  .wb_unset {
+    word-break: unset;
+  }
+}
+@media only screen and (min-width : 1024px) {
+  .wb_break-all {
+    word-break: break-all;
+  }
+
+  .wb_word-break {
+    word-break: word-break;
+  }
+
+  .wb_keep-all {
+    word-break: keep-all;
+  }
+
+  .wb_normal {
+    word-break: normal;
+  }
+
+  .wb_unset {
+    word-break: unset;
   }
 }
 /*
