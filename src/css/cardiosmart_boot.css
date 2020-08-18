@@ -17,6 +17,16 @@ Gets a color value that fits into the set color patterns for usage in new css.
 
  Styleguide: mixins.get-themecolor
 */
+/*  
+util-style()
+
+Gets utilty style and prints it.
+
+ $key - The name of the css class
+ $modifier   - the size of the style needed. 
+
+ Styleguide: mixins.utlity-style
+*/
 .carousel-alt.chevron-on .carousel-indicators li.active:before {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -5337,6 +5347,13 @@ a.close.disabled {
   color: #2d1702;
 }
 
+@media only screen and (min-width : 1024px) {
+  body {
+    background-attachment: fixed;
+    background-color: #cad3d0;
+    background-image: url("../assets/img/cardiosmart/background-rectangle.jpg");
+  }
+}
 .table td,
 .table th {
   text-align: left;

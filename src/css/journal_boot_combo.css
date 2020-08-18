@@ -17,6 +17,16 @@ Gets a color value that fits into the set color patterns for usage in new css.
 
  Styleguide: mixins.get-themecolor
 */
+/*  
+util-style()
+
+Gets utilty style and prints it.
+
+ $key - The name of the css class
+ $modifier   - the size of the style needed. 
+
+ Styleguide: mixins.utlity-style
+*/
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 .icon-after:after, a.link[target=_blank]:after, a.link[href^=http]:after, a.link[href^=https]:after,
@@ -811,7 +821,7 @@ h4,
 h5,
 h6 {
   font-family: "Roboto","Maven Pro","Muli","Open Sans","system",sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h6 {
@@ -830,7 +840,6 @@ h6 {
 }
 
 p {
-  font-weight: 300;
   line-height: 1.65;
 }
 
@@ -875,11 +884,6 @@ h1 {
   margin: 1rem 0;
   font-size: 39.813px;
   font-size: 2.48832rem;
-}
-
-a,
-a:hover {
-  color: unset;
 }
 
 kbd,
@@ -1567,7 +1571,7 @@ Styleguide InteractiveExtras.Expanded Click Area
   background-color: #9acd322e;
 }
 
-i.icon-toggle_check:before, i.icon-toggle_check-circle:before, i.icon-toggle_check-sqaure:before, i.icon-toggle_arrow-circle:before, i.icon-toggle_caret-circle-right-down:before, i.icon-toggle_chevron-double-left-right:before, i.icon-toggle_chevron-double-up-down:before, i.icon-toggle_chevron-up-down:before, i.icon-toggle_plus-minus:before, i.icon-toggle_bars-times:before {
+.icon-toggle_check:before, .icon-toggle_check-circle:before, .icon-toggle_check-sqaure:before, .icon-toggle_arrow-circle:before, .icon-toggle_caret-circle-right-down:before, .icon-toggle_chevron-double-left-right:before, .icon-toggle_chevron-double-up-down:before, .icon-toggle_chevron-up-down:before, .icon-toggle_plus-minus:before, .icon-toggle_bars-times:before {
   margin: 0 4px;
   margin: 0 0.25rem;
 }
@@ -1615,73 +1619,73 @@ Markup:
 
 Styleguide InteractiveExtras.ToggleIcons
 */
-i.icon-toggle_bars-times:before {
+.icon-toggle_bars-times:before {
   content: "";
 }
-.active i.icon-toggle_bars-times:before, .active > i.icon-toggle_bars-times:before {
+.active .icon-toggle_bars-times:before, .active > .icon-toggle_bars-times:before {
   content: "";
 }
 
-i.icon-toggle_plus-minus:before {
+.icon-toggle_plus-minus:before {
   content: "";
 }
-.active i.icon-toggle_plus-minus:before, .active > i.icon-toggle_plus-minus:before {
+.active .icon-toggle_plus-minus:before, .active > .icon-toggle_plus-minus:before {
   content: "";
 }
 
-i.icon-toggle_chevron-up-down:before {
+.icon-toggle_chevron-up-down:before {
   content: "";
 }
-.active i.icon-toggle_chevron-up-down:before, .active > i.icon-toggle_chevron-up-down:before {
+.active .icon-toggle_chevron-up-down:before, .active > .icon-toggle_chevron-up-down:before {
   content: "";
 }
 
-i.icon-toggle_chevron-double-up-down:before {
+.icon-toggle_chevron-double-up-down:before {
   content: "";
 }
-.active i.icon-toggle_chevron-double-up-down:before, .active > i.icon-toggle_chevron-double-up-down:before {
+.active .icon-toggle_chevron-double-up-down:before, .active > .icon-toggle_chevron-double-up-down:before {
   content: "";
 }
 
-i.icon-toggle_chevron-double-left-right:before {
+.icon-toggle_chevron-double-left-right:before {
   content: "";
 }
-.active i.icon-toggle_chevron-double-left-right:before, .active > i.icon-toggle_chevron-double-left-right:before {
+.active .icon-toggle_chevron-double-left-right:before, .active > .icon-toggle_chevron-double-left-right:before {
   content: "";
 }
 
-i.icon-toggle_caret-circle-right-down:before {
+.icon-toggle_caret-circle-right-down:before {
   content: "";
 }
-.active i.icon-toggle_caret-circle-right-down:before, .active > i.icon-toggle_caret-circle-right-down:before {
+.active .icon-toggle_caret-circle-right-down:before, .active > .icon-toggle_caret-circle-right-down:before {
   content: "";
 }
 
-i.icon-toggle_arrow-circle:before {
+.icon-toggle_arrow-circle:before {
   content: "";
 }
-.active i.icon-toggle_arrow-circle:before, .active > i.icon-toggle_arrow-circle:before {
+.active .icon-toggle_arrow-circle:before, .active > .icon-toggle_arrow-circle:before {
   content: "";
 }
 
-i.icon-toggle_check-sqaure:before {
+.icon-toggle_check-sqaure:before {
   content: "";
 }
-.active i.icon-toggle_check-sqaure:before, .active > i.icon-toggle_check-sqaure:before {
+.active .icon-toggle_check-sqaure:before, .active > .icon-toggle_check-sqaure:before {
   content: "";
 }
 
-i.icon-toggle_check-circle:before {
+.icon-toggle_check-circle:before {
   content: "";
 }
-.active i.icon-toggle_check-circle:before, .active > i.icon-toggle_check-circle:before {
+.active .icon-toggle_check-circle:before, .active > .icon-toggle_check-circle:before {
   content: "";
 }
 
-i.icon-toggle_check:before {
+.icon-toggle_check:before {
   content: "";
 }
-.active i.icon-toggle_check:before, .active > i.icon-toggle_check:before {
+.active .icon-toggle_check:before, .active > .icon-toggle_check:before {
   content: "";
 }
 
@@ -4813,7 +4817,7 @@ Styleguide UC.Typography.Font.Color Transparency
 }
 
 .font_regular {
-  font-weight: 300 !important;
+  font-weight: 400 !important;
 }
 
 .font_medium {
@@ -5196,6 +5200,68 @@ Styleguide UC.Typography.Font.Color Transparency
 
   .nowrap\:lg {
     white-space: nowrap;
+  }
+}
+.wb_break-all {
+  word-break: break-all;
+}
+
+.wb_word-break {
+  word-break: word-break;
+}
+
+.wb_keep-all {
+  word-break: keep-all;
+}
+
+.wb_normal {
+  word-break: normal;
+}
+
+.wb_unset {
+  word-break: unset;
+}
+
+@media only screen and (min-width : 1024px) {
+  .wb_break-all {
+    word-break: break-all;
+  }
+
+  .wb_word-break {
+    word-break: word-break;
+  }
+
+  .wb_keep-all {
+    word-break: keep-all;
+  }
+
+  .wb_normal {
+    word-break: normal;
+  }
+
+  .wb_unset {
+    word-break: unset;
+  }
+}
+@media only screen and (min-width : 1024px) {
+  .wb_break-all {
+    word-break: break-all;
+  }
+
+  .wb_word-break {
+    word-break: word-break;
+  }
+
+  .wb_keep-all {
+    word-break: keep-all;
+  }
+
+  .wb_normal {
+    word-break: normal;
+  }
+
+  .wb_unset {
+    word-break: unset;
   }
 }
 /*
@@ -11073,7 +11139,7 @@ Styleguide UC.Shadows
 }
 
 .shadow_emboss-light,.shadow_emboss-bold {
-  box-shadow: -4px -4px 4px inset rgba(255, 255, 255, 0.5), -4px -4px 6px inset rgba(255,255,255,.2), -2px 0.5px 5.5px inset rgba(0, 0, 0, .3), 1px 2.5px 5.5px inset rgba(0, 0, 0, .4), 2.4px 2.4px 10px inset rgba(0, 0, 0, 0.1), 6px 6px 13.1px inset rgba(0, 0, 0, 0.041);
+  box-shadow: -4px -4px 4px inset rgba(255, 255, 255, 0.5), -4px -4px 6px inset rgba(255,255,255,.2), -2px 0.5px 5.5px inset rgba(0, 0, 0, 0.3), 1px 2.5px 5.5px inset rgba(0, 0, 0, 0.4), 2.4px 2.4px 10px inset rgba(0, 0, 0, 0.1), 6px 6px 13.1px inset rgba(0, 0, 0, 0.041);
 }
 
 .shadow_bevel-light {
@@ -17036,6 +17102,16 @@ Gets a color value that fits into the set color patterns for usage in new css.
 
  Styleguide: mixins.get-themecolor
 */
+/*  
+util-style()
+
+Gets utilty style and prints it.
+
+ $key - The name of the css class
+ $modifier   - the size of the style needed. 
+
+ Styleguide: mixins.utlity-style
+*/
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 .carousel-alt.chevron-on .carousel-indicators li.active:before {
@@ -17287,7 +17363,6 @@ samp {
 }
 
 pre {
-  -ms-overflow-style: scrollbar;
   margin-top: 0;
   margin-bottom: 16px;
   margin-bottom: 1rem;
@@ -17365,10 +17440,6 @@ select {
   text-transform: none;
 }
 
-[role=button] {
-  cursor: pointer;
-}
-
 select {
   word-wrap: normal;
 }
@@ -17399,6 +17470,13 @@ input[type=radio],
 input[type=checkbox] {
   box-sizing: border-box;
   padding: 0;
+}
+
+input[type=date],
+input[type=time],
+input[type=datetime-local],
+input[type=month] {
+  -webkit-appearance: listbox;
 }
 
 textarea {
@@ -17685,7 +17763,6 @@ mark,
 .col {
   flex-basis: 0;
   flex-grow: 1;
-  min-width: 0;
   max-width: 100%;
 }
 
@@ -17893,7 +17970,6 @@ mark,
   .col-sm {
     flex-basis: 0;
     flex-grow: 1;
-    min-width: 0;
     max-width: 100%;
   }
 
@@ -18105,7 +18181,6 @@ mark,
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
-    min-width: 0;
     max-width: 100%;
   }
 
@@ -18317,7 +18392,6 @@ mark,
   .col-lg {
     flex-basis: 0;
     flex-grow: 1;
-    min-width: 0;
     max-width: 100%;
   }
 
@@ -18529,7 +18603,6 @@ mark,
   .col-xl {
     flex-basis: 0;
     flex-grow: 1;
-    min-width: 0;
     max-width: 100%;
   }
 
@@ -19048,11 +19121,19 @@ mark,
   box-shadow: 0 0 0 0.2rem rgba(0, 65, 118, 0.25);
   color: #b8b8b8;
 }
+.form-control::-webkit-input-placeholder {
+  color: #a1a0a0;
+  opacity: 1;
+}
 .form-control::-moz-placeholder {
   color: #a1a0a0;
   opacity: 1;
 }
 .form-control:-ms-input-placeholder {
+  color: #a1a0a0;
+  opacity: 1;
+}
+.form-control::-ms-input-placeholder {
   color: #a1a0a0;
   opacity: 1;
 }
@@ -19063,15 +19144,6 @@ mark,
 .form-control:disabled, .form-control[readonly] {
   background-color: #424141;
   opacity: 1;
-}
-
-input[type=date].form-control,
-input[type=time].form-control,
-input[type=datetime-local].form-control,
-input[type=month].form-control {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 select.form-control:focus::-ms-value {
@@ -19464,6 +19536,7 @@ select.form-control[size], select.form-control[multiple],textarea.form-control {
   line-height: 1.5;
   text-align: center;
   vertical-align: middle;
+  cursor: pointer;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -19485,9 +19558,6 @@ select.form-control[size], select.form-control[multiple],textarea.form-control {
 }
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
-}
-.btn:not(:disabled):not(.disabled) {
-  cursor: pointer;
 }
 a.btn.disabled,
 fieldset:disabled a.btn {
@@ -19917,8 +19987,10 @@ fieldset:disabled a.btn {
 }
 .btn-link:hover {
   color: #002e53;
+  text-decoration: underline;
 }
-.btn-link:hover,.btn-link:focus, .btn-link.focus {
+.btn-link:focus, .btn-link.focus {
+  box-shadow: none;
   text-decoration: underline;
 }
 .btn-link:disabled, .btn-link.disabled {
@@ -20320,8 +20392,7 @@ input[type=button].btn-block {
 .input-group > .custom-select,
 .input-group > .custom-file {
   position: relative;
-  flex: 1 1 auto;
-  width: 1%;
+  flex: 1 1 0%;
   min-width: 0;
   margin-bottom: 0;
 }
@@ -21259,7 +21330,7 @@ input[type=button].btn-block {
   color: rgba(19, 18, 18, 0.5);
 }
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%2819, 18, 18, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(19, 18, 18, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar-light .navbar-text {
   color: rgba(19, 18, 18, 0.5);
@@ -21307,17 +21378,6 @@ input[type=button].btn-block {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group {
-  border-top: inherit;
-  border-bottom: inherit;
-}
-.card > .list-group:first-child {
-  border-top-width: 0;
-}
-.card > .list-group:last-child {
-  border-bottom-width: 0;
-}
-
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
@@ -21460,6 +21520,7 @@ input[type=button].btn-block {
 }
 
 .breadcrumb {
+  display: flex;
   flex-wrap: wrap;
   margin-bottom: 16px;
   margin-bottom: 1rem;
@@ -21469,9 +21530,6 @@ input[type=button].btn-block {
   list-style: none;
 }
 
-.breadcrumb,.breadcrumb-item {
-  display: flex;
-}
 .breadcrumb-item + .breadcrumb-item {
   padding-left: 8px;
   padding-left: 0.5rem;
@@ -21593,7 +21651,6 @@ input[type=button].btn-block {
   background-color: #424141;
   font-size: 12px;
   font-size: 0.75rem;
-  line-height: 0;
 }
 
 .progress,.progress-bar {
@@ -21651,6 +21708,9 @@ input[type=button].btn-block {
 }
 
 button.close {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -21727,9 +21787,6 @@ a.close.disabled {
 .modal-dialog-centered::before {
   display: block;
   height: calc(100vh - 1rem);
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
   content: "";
 }
 .modal-dialog-centered.modal-dialog-scrollable {
@@ -21839,9 +21896,6 @@ a.close.disabled {
   }
   .modal-dialog-centered::before {
     height: calc(100vh - 3.5rem);
-    height: -webkit-min-content;
-    height: -moz-min-content;
-    height: min-content;
   }
 
   .modal-sm {
@@ -22357,7 +22411,6 @@ a.close.disabled {
     transform: scale(0);
   }
   50% {
-    transform: none;
     opacity: 1;
   }
 }
@@ -22367,7 +22420,6 @@ a.close.disabled {
     transform: scale(0);
   }
   50% {
-    transform: none;
     opacity: 1;
   }
 }
