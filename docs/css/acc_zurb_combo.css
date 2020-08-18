@@ -16420,9 +16420,9 @@ div[class*=texture_] {
 * Foundation for Sites Settings END
  */
 /**
- * Foundation for Sites by ZURB
- * Version 6.6.1
- * foundation.zurb.com
+ * Foundation for Sites
+ * Version 6.6.3
+ * https://get.foundation
  * Licensed under MIT Open Source
  */
 @media print, screen and (min-width: 40em) {
@@ -16760,19 +16760,11 @@ input[type=search] {
   box-sizing: border-box;
 }
 
-::-webkit-input-placeholder {
-  color: #cacaca;
-}
-
 ::-moz-placeholder {
   color: #cacaca;
 }
 
 :-ms-input-placeholder {
-  color: #cacaca;
-}
-
-::-ms-input-placeholder {
   color: #cacaca;
 }
 
@@ -16992,16 +16984,10 @@ select:not([multiple]) {
   border-color: #dd1a1a;
   background-color: #fce8e8;
 }
-.is-invalid-input:not(:focus)::-webkit-input-placeholder {
-  color: #dd1a1a;
-}
 .is-invalid-input:not(:focus)::-moz-placeholder {
   color: #dd1a1a;
 }
 .is-invalid-input:not(:focus):-ms-input-placeholder {
-  color: #dd1a1a;
-}
-.is-invalid-input:not(:focus)::-ms-input-placeholder {
   color: #dd1a1a;
 }
 .is-invalid-input:not(:focus)::placeholder {
@@ -19990,7 +19976,8 @@ a.button:hover, a.button:focus {
 
 .button-group {
   display: flex;
-  flex-wrap: nowrap;
+  flex-grow: 1;
+  flex-wrap: wrap;
   align-items: stretch;
   margin-bottom: 16px;
   margin-bottom: 1rem;
@@ -20003,6 +19990,9 @@ a.button:hover, a.button:focus {
 }
 .button-group::after {
   clear: both;
+}
+.button-group::before, .button-group::after {
+  display: none;
 }
 .button-group .button {
   flex: 0 0 auto;
@@ -20033,6 +20023,7 @@ a.button:hover, a.button:focus {
 }
 .button-group.expanded .button {
   flex: 1 1 0px;
+  margin-right: 0;
 }
 .button-group.primary .button, .button-group.primary .button.disabled, .button-group.primary .button[disabled], .button-group.primary .button.disabled:hover, .button-group.primary .button[disabled]:hover, .button-group.primary .button.disabled:focus, .button-group.primary .button[disabled]:focus {
   background-color: #198dae;
@@ -20315,6 +20306,7 @@ a.button:hover, a.button:focus {
 }
 .button-group.stacked.expanded .button, .button-group.stacked-for-small.expanded .button, .button-group.stacked-for-medium.expanded .button {
   flex: 1 1 0px;
+  margin-right: 0;
 }
 @media print, screen and (min-width: 40em) {
   .button-group.stacked-for-small .button {
