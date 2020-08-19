@@ -238,7 +238,7 @@ gulp.task("fontawesome", function() {
             cwd: "./node_modules/@fortawesome/fontawesome-pro/",
             cwdbase: true,
         })
-        .pipe(gulp.dest(SOURCE.DIST + "/icons"));
+        .pipe(gulp.dest(SOURCE.SRC + "/icons"));
 });
 gulp.task("clean-dist", function() {
     return gulp.src(SOURCE.DIST, { read: false }).pipe(clean());

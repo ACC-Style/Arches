@@ -1,13 +1,27 @@
 @each $color-name, $color in $COR {
     $color-name-alt: 'cor-' + $color-name;
-    @include color-loop(background-color, $color-name-alt, $color);
-    @include color-loop(color, $color-name-alt, $color);
-    @include color-loop(border-color, $color-name-alt, $color);
+    .c_#{$color-name-alt} {
+        color: $color !important;
+    }
+    .br_#{$color-name-alt} {
+        border-color: $color !important;
+    }
+    .bg_#{$color-name-alt},
+    .#{$color-name-alt} {
+        background-color: $color !important;
+    }
 }
 
 @each $color-name, $color in $LOE {
     $color-name-alt: 'loe-' + $color-name;
-    @include color-loop(background-color, $color-name-alt, $color);
-    @include color-loop(color, $color-name-alt, $color);
-    @include color-loop(border-color, $color-name-alt, $color);
+    .c_#{$color-name-alt} {
+        color: $color !important;
+    }
+    .br_#{$color-name-alt} {
+        border-color: $color !important;
+    }
+    .bg_#{$color-name-alt},
+    .#{$color-name-alt} {
+        background-color: $color !important;
+    }
 }
