@@ -469,11 +469,11 @@ gulp.task(
 gulp.task(
     "build-colors",
     gulp.series(
-        function() {
+        function BuildSCSS() {
             var brand = "color";
             var framework = "codes";
             var base = constructColorStyleSheet("bases");
-            base.pipe(headerFromFile("/styleguide/_color_codes.scss"));
+            base.pipe(headerFromFile("/styleguide/_color-codes.scss"));
             base = buildbrand(base, brand, framework);
             var credits = constructColorStyleSheet("credits");
             credits = buildbrand(credits, brand, framework);
@@ -483,25 +483,20 @@ gulp.task(
             pathway = buildbrand(pathway, brand, framework);
             var social = constructColorStyleSheet("social");
             social = buildbrand(social, brand, framework);
-            merge(base, credits, social, pathway, LOE_COR)
-                .pipe(header("/*** COLOR CODES 2 **/\n"))
+            var registry = constructColorStyleSheet("registry");
+			registry = buildbrand(registry, brand, framework);
+            return merge(base, credits, social, pathway, LOE_COR, registry)
+                .pipe(header("/*** COLOR CODES 3 **/\n"))
                 .pipe(gulp.dest(PATHS.SCSS));
-            return runSass(brand);
+            
+        },
+                function CSS() {
+            return runSass("color-code");
         },
         "copy-to-dist",
         "copy-to-styleguide",
-        function() {
-            var brand = "color";
-            var framework = "codes";
-            var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
-            base = markdownbuild(base, brand + "_" + framework);
-            return merge(base)
-                .pipe(
-                    header(
-                        fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md", "utf8")
-                    )
-                )
-                .pipe(gulp.dest(SOURCE.MD));
+        function Markdown() {
+            return constructMarkdown("color", "codes");
         },
         function() {
             return run("npm run color_codes").exec();

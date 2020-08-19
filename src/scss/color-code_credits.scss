@@ -1,4 +1,4 @@
-/*** COLOR CODES 2 **/
+/*** COLOR CODES 3 **/
 /**
  * arches - Global style system focused on utility classes
  * @version v1.2.0
@@ -47,7 +47,8 @@ $theme-palette: ();
 $link-color-dark: get-themecolor(accent, -3);
 $link-color-light: get-themecolor(accent, 1);
 /** Base UC File **/@each $color-name, $color in $CreditColors {
-  @include color-loop(background-color, $color-name, $color);
-  @include color-loop(color, $color-name, $color);
-  @include color-loop(border-color, $color-name, $color);
+    $color-name-alt: $color-name;
+    @include color-loop(background-color, $color-name-alt, $color);
+    @include color-loop(color, $color-name-alt, $color);
+    @include color-loop(border-color, $color-name-alt, $color);
 }
