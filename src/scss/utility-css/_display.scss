@@ -9,24 +9,13 @@ Styleguide UC.display
 
 */
 /* No styleguide reference. */
+
+
+	
 /*
 	Display
 
-	quickly alter the padding of an object 
-
-	.block              		- the element is the a block
-	.inline              	- the element is now inline
-	.inline-block           - the element is now inline-block
-	.table-cell             - the element is now table-cell
-	.flex-inline            - the element is now flex-inline
-	.display_none             		- the element is now display none
-
-	Markup:
-	<div class="bg_primary-5 text_center {{modifier_class}}">Content</div>
-
-		
-	MarkupWrapperClasses:
-	br_solid br_transparent bg_alert-3  text_center
+	<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div> Alter the display of an object to create more complicated UI and Layouts. #{modifierClassTable(display,"")}  
 
 	Styleguide UC.display.type
 
@@ -44,14 +33,12 @@ Styleguide UC.display
 /*
 Z Index
 
-Alter the Z Index of objects to help deal with objects that are out of normal z-index flow.
+Alter the Z Index of objects to help deal with objects that are out of normal z-index flow.  #{modifierClassTable(z-index,"")}  
 
-#{ class-name-constructor(z-index,0)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,0)}
-#{ class-name-constructor(z-index,1)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,1)}
-#{ class-name-constructor(z-index,2)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,2)}
-#{ class-name-constructor(z-index,3)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,3)}
-#{ class-name-constructor(z-index,4)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,4)}
-#{ class-name-constructor(z-index,5)}           -   	sets objects z-index to #{ map-deep-get($style-definition,z-index,unit,5)}
+.z_0   -  z-index: -1
+.z_1   -  z-index: 1
+.z_3   -  z-index: 1000
+.z_5   -  z-index: 9999
 
 Markup:
 <div class="bg_alert-3 block br_solid br_transparent relative text_center" style=" height: 15rem; width: 100%;">
@@ -61,7 +48,8 @@ Markup:
 
 Styleguide UC.display.z-index
 
- */
+*/
+@include loop-style(z-index);
 
 .vertical-align_top {
 	vertical-align: top;
@@ -81,19 +69,12 @@ Styleguide UC.display.z-index
 
 	quickly alter the verticle alignment of the child. Cation the vertical only works on valid combinations. 
 
-	.vertical-align_top              		- the child is aligned to the top
-	.vertical-align_middle              	- the child is aligned to the top
-	.vertical-align_bottom            		- the child is aligned to the top
-	.vertical-align_baseline          		- the child is aligned to the top
-
-
-	Markup:
-	<div class="{{modifier_class}}">
-		<div class="bg_primary-5 text_center inline-block ">{{modifier_class}}</div>
-	</div>
+	.vertical-align_top              		- the child is aligned to the Top
+	.vertical-align_middle              	- the child is aligned to the Middle
+	.vertical-align_bottom            		- the child is aligned to the Bottom
+	.vertical-align_baseline          		- the child is aligned to the Baseline
 
 	Styleguide UC.display.vertical alignment
 
  */
 
-@include loop-style(z-index);

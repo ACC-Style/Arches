@@ -1,0 +1,16 @@
+@function modifierClassList($property, $string) {
+	$comment: "";
+	@each $key, $value in map-deep-get($style-definition,$property,unit){ 
+	$comment:	#{$comment} + " #{ class-name-constructor($property,$key)} 	- #{$string} #{ map-deep-get($style-definition,$property,css-style)}: #{ map-deep-get($style-definition,$property,unit,$key)} \a ";
+	}
+	@return $comment;
+}
+//@debug modifierClassList(grid-row-gap, "set");
+@function modifierClassTable($property, $string) {
+	$table: "<table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody>";
+	@each $key, $value in map-deep-get($style-definition,$property,unit){ 
+	$table:	#{$table} + "<tr><td class='c_primary-n2'> #{ class-name-constructor($property,$key)}</td><td class='text_right'> #{ map-deep-get($style-definition,$property,css-style)} :</td><td> #{ map-deep-get($style-definition,$property,unit,$key)} </td></tr> ";
+   }
+   $table:	#{$table} + "</tbody></table>";
+	@return $table;
+}

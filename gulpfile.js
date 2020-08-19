@@ -300,6 +300,9 @@ gulp.task("styleguide", function() {
 // 	"virtual",
 // 	"covid",
 // ];
+gulp.task("quick", gulp.series(function(){
+    return runSass("acc");
+}))
 gulp.task(
     "build-cvquality",
     gulp.series(

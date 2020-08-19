@@ -21,12 +21,6 @@
 .flex > * {
 	box-sizing: border-box;
 }
-.flex {
-	display: flex;
-}
-.flex_inline {
-	display: inline-flex;
-}
 /* 1. Fix for Chrome 44 bug.
  * https://code.google.com/p/chromium/issues/detail?id=506893 */
 .flex_auto {
@@ -184,12 +178,6 @@
 }
 
 @media #{$medium-up} {
-	.flex#{$bp-label_medium} {
-		display: flex;
-	}
-	.flex_inline#{$bp-label_medium} {
-		display: inline-flex;
-	}
 	.flex_auto#{$bp-label_medium} {
 		flex: 1 1 auto;
 		min-width: 0; /* 1 */
@@ -333,12 +321,7 @@
 }
 
 @media #{$large-up} {
-	.flex#{$bp-label_large} {
-		display: flex;
-	}
-	.flex_inline#{$bp-label_large} {
-		display: inline-flex;
-	}
+
 	.flex_auto#{$bp-label_large} {
 		flex: 1 1 auto;
 		min-width: 0; /* 1 */

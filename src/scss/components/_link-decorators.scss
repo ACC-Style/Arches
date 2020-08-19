@@ -62,7 +62,8 @@ Markup:
 }
 
 a.link,
-a.link-light {
+a.link-light,
+.typography a {
 	@extend .icon-before;
 	&[href$='.pdf']:before {
 		content: '\f1c1';
@@ -93,8 +94,8 @@ a.link-light {
 	}
 
 	&[target='_blank']:after,
-	&[href^='http']:after,
-	&[href^='https']:after {
+	&[href^='http'][target='_blank']:after,
+	&[href^='https'][target='_blank']:after {
 		@extend .icon-after;
 		content: '\f14c';
 	}
