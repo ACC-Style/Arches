@@ -47,72 +47,97 @@ Markup:
 	width: 1.28571429em;
 	text-align: center;
 }
-.link {
+
+.link, .reading-typography a{
 	color: $link-color-dark;
 	&:hover {
-		color: darken($link-color-dark, 60%);
+		color: darken($link-color-dark, 30%);
 	}
 }
 
 .link-light {
 	color: $link-color-light;
 	&:hover {
-		color: lighten($link-color-dark, 60%);
+		color: lighten($link-color-light, 30%);
 	}
 }
 
 a.link,
 a.link-light,
-.typography a {
-	@extend .icon-before;
-	&[href$='.pdf']:before {
-		content: '\f1c1';
-	}
-	&[href$='.doc']:before,
-	&[href$='.docx']:before,
-	&[href$='.txt']:before {
-		content: '\f1c2';
-	}
-
-	&[href$='.zip']:before {
-		content: '\f1c6';
-	}
-
-	&[href*='.ppt']:before,
-	&[href*='.pptx']:before {
-		content: '\f685';
-	}
-	&[href$='.csv']:before,
-	&[href$='.xls']:before,
-	&[href$='.xlsx']:before {
-		content: '\f0ce';
-	}
-
-	&[href$='.mp4']:before,
-	&[href$='.mov']:before {
-		content: '\f03d';
-	}
-
-	&[target='_blank']:after,
-	&[href^='http'][target='_blank']:after,
-	&[href^='https'][target='_blank']:after {
-		@extend .icon-after;
-		content: '\f14c';
-	}
-
-	&[href^='mailto:']:before {
-		content: '\f1fa';
-	}
-
-	&[href^='tel:']:before {
-		content: '\f095';
-	}
-
-	&[href^='fax:']:before {
-		content: '\f1ac';
-	}
-
+.reading-typography a {
+	// all links do this
 	&:hover {
 		text-decoration: underline;
 	}
+	// Content Types show Icons in Front
+	&[href$=".pdf"]:before,
+	&[href$=".doc"]:before,
+	&[href$=".docx"]:before,
+	&[href$=".txt"]:before,
+	&[href$=".zip"]:before,
+	&[href*=".ppt"]:before,
+	&[href*=".pptx"]:before,
+	&[href$=".csv"]:before,
+	&[href$=".xls"]:before,
+	&[href$=".xlsx"]:before,
+	&[href$=".mp4"]:before,
+	&[href$=".mov"]:before  {
+		@extend .icon-before;
+	}
+	&[href$=".pdf"]:before {
+		content: "\f1c1";
+	}
+	&[href$=".doc"]:before,
+	&[href$=".docx"]:before,
+	&[href$=".txt"]:before {
+		content: "\f1c2";
+	}
+
+	&[href$=".zip"]:before {
+		content: "\f1c6";
+	}
+
+	&[href*=".ppt"]:before,
+	&[href*=".pptx"]:before {
+		content: "\f685";
+	}
+	&[href$=".csv"]:before,
+	&[href$=".xls"]:before,
+	&[href$=".xlsx"]:before {
+		content: "\f0ce";
+	}
+
+	&[href$=".mp4"]:before,
+	&[href$=".mov"]:before {
+		content: "\f03d";
+	}
+
+	// Actions of the links go after
+	&[target="_blank"]:after,
+	&[href^="http"][target="_blank"]:after,
+	&[href^="https"][target="_blank"]:after,
+	&[href^="mailto:"]:after,
+	&[href^="tel:"]:after{
+		@extend .icon-after;
+	}
+
+	&[target="_blank"]:after,
+	&[href^="http"][target="_blank"]:after,
+	&[href^="https"][target="_blank"]:after {
+		content: "\f14c";
+	}
+
+	&[href^="mailto:"]:after {
+		content: "\f1fa";
+	}
+
+	&[href^="tel:"]:after {
+		content: "\f095";
+	}
+
+	&[href^="fax:"]:after {
+		content: "\f1ac";
+	}
+
+
 }

@@ -1,10 +1,10 @@
 $grid-column-count: 12;
 $optimal-characters: 65;
-$lineheight-crushed: 1.35;
-$lineheight-tight: 1.65;
-$lineheight-normal: 1.85;
-$lineheight-loose: 2.1;
-$lineheight-airy: 2.5;
+$lineheight-crushed: 1.1 !default;
+$lineheight-tight: 1.35 !default;
+$lineheight-normal: 1.6 !default;
+$lineheight-loose: 1.5 !default;
+$lineheight-airy: 2.5 !default;
 $baseline-modifier: 1.5;
 $active-class-name: "is-active" !default;
 $ms-base: 1em;
@@ -55,14 +55,6 @@ $value-to-unit: (
 		auto: auto,
 		unset: unset,
 	),
-	size-ui: (
-		0: 0,
-		1: 0.25 * $basicSizeMultiplier,
-		2: 0.375 * $basicSizeMultiplier,
-		3: 0.5 * $basicSizeMultiplier,
-		4: 0.75 * $basicSizeMultiplier,
-		5: 1 * $basicSizeMultiplier,
-	),
 	sizeAlt: (
 		100: 100%,
 		auto: auto,
@@ -86,7 +78,6 @@ $value-to-unit: (
 		3: 0.5 * $basicSizeMultiplier,
 		4: 1 * $basicSizeMultiplier,
 		5: 2 * $basicSizeMultiplier,
-		auto: auto,
 	),
 	unitless: (
 		0: 0,
@@ -862,7 +853,7 @@ $style-definition: (
 			"grid-column-gap",
 		),
 		long-name: ".grid-column-gap",
-		unit: map-get($value-to-unit, "size-ui"),
+		unit: map-get($value-to-unit, "size-positive"),
 	),
 	grid-row-gap: (
 		short-name: ".gap-y",
@@ -870,7 +861,7 @@ $style-definition: (
 			"grid-row-gap",
 		),
 		long-name: ".grid-row-gap",
-		unit: map-get($value-to-unit, "size-ui"),
+		unit: map-get($value-to-unit, "size-positive"),
 	),
 	padding: (
 		short-name: ".p",

@@ -13,23 +13,22 @@ Styleguide UC.Spacing
 /*
 Margin
 
-<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Margin classes are mobile first with postfix modifier for `:md`and `:lg` variations for responsive sizing. Margins that use the short codes of all margin, auto, x margins, and y margin are overriden by specific side margins.  #{modifierClassTable(margin,"")}	
+<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Margin classes are mobile first with postfix modifier for `:md`and `:lg` variations for responsive sizing. Margins that use the short codes of all margin, auto, x margins, and y margin are overriden by specific side margins. 			
 
-.m_0     	 -  margin: 0 
-.m_n5 	 -  margin:	 -2rem
-.m_n2 	 -  margin:	 -0.25rem
-.m_4  	 -  margin: 1rem
-.m-l_n5       	 -  margin-left:	 -2rem
-.m-l_1        	 -  margin-left: 1px
-.m-l_2        	 -  margin-left: 0.25rem
-.m-l_3        	 -  margin-left: 0.5rem
-.m-l_auto     	 -  margin-left: auto
-.m-l_unset    	 -  margin-left: unset
-.m-y_0   	 -  margin-top, margin-bottom: 0
+m_0     	 		-  margin: 0 
+m_n5 	 			-  margin:	 -2rem
+m_n2 	 			-  margin:	 -0.25rem
+m_4  	 			-  margin: 1rem
+m-l_n5       	-  margin-left:	 -2rem
+m-l_1        	-  margin-left: 1px
+m-l_2        	-  margin-left: 0.25rem
+m-l_3        	-  margin-left: 0.5rem
+m-x_auto     	-  margin-left, margin-right: auto
+m-y_3   	 		-  margin-top, margin-bottom: 0.5rem
 
 Markup:
 <div class="bg_warning-3 d-block br_1 br_solid">
-	<div class="{{modifier_class}} p_2 bg_primary text_center c_white cell auto opacity_5 d-block">Container With Margins</div>
+	<div class="{{modifier_class}} p_2 bg_primary text_center c_white cell auto opacity_5 d-block max-w_30">Object  With Margins Inside Container</div>
 </div>
 
 Styleguide UC.Spacing.Margin
@@ -64,17 +63,18 @@ Styleguide UC.Spacing.Margin
 	@include loop-style(margin-right, $bp-label_large, ' !important');
 }
 
+@debug modifierClassList(padding, "");
 /*
 Padding
 
-<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Quickly alter the padding of an object.
+<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Quickly alter the padding of an object. #{modifierClassTable(	padding ,"", true )}
 
-.p_0             	 - All paddings set to 0
-.p_1             	 - All paddings set to 1px
-.p_2             	 - All paddings set to 1/4 of global padding
-.p_3             	 - All paddings set to 1/2 of global padding
-.p_4             	 - All paddings set to global padding
-.p_5             	 - All paddings set to 2x of global padding 
+.p_0      	-  padding: 0 
+.p_1   				-  padding: 1px
+.p_2   -  padding: 0.25rem
+.p_3   -  padding: 0.5rem
+.p_4   -  padding: 1rem
+.p_5   -  padding: 2rem
 .p-x_5             	 - left and right paddings set to 2x of global padding 
 .p-y_5             	 - top and bottom paddings set to 2x of global padding 
 .p-t_4          	- Top padding set to global padding

@@ -300,9 +300,16 @@ gulp.task("styleguide", function() {
 // 	"virtual",
 // 	"covid",
 // ];
-gulp.task("quick", gulp.series(function(){
+gulp.task("quick", gulp.series(
+    function(){
     return runSass("acc");
-}))
+    },
+        "copy-to-dist",
+        function() {
+            return run("npm run boot_acc").exec();
+        }
+
+))
 gulp.task(
     "build-cvquality",
     gulp.series(

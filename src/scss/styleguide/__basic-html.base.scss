@@ -10,15 +10,13 @@ Styleguide HTML
 */
 /*
 
-Typography
+Reading Typography
 
-Basic Typography with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
+Reading typography is a container class to opt into an override of the basic typography from arches. Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves reading typography lacking. Most ways typogrpahy content is added to a site is devoid of hooks to add styles to an element so work around that restriction and to unified styling across reading experiances the "reading-typography" class is used on the parrent container.  Please note that the reading typography can still look a bit different look depending on the brand or the framework.  
 
-<section class="max-w_65">
-<h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
-elit Lorem ipsum dolor sit amet consectetuer adipiscing 
-elit Lorem ipsum dolor sit amet consectetuer adipiscing 
-elit</h1>
+<section class="max-w_65 reading-typography">
+<h1>Reading Typography: <small>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit.</small></h1>
 <h2>Aenean commodo ligula eget dolor aenean massa</h2>
 <h3>Cum sociis natoque penatibus et magnis dis 
 parturient montes nascetur ridiculus mus</h3>
@@ -39,5 +37,37 @@ ultricies nec, pellentesque eu, pretium quis, sem.</p>
 Weight: -9
 
 Styleguide HTML.Typography
+
+*/
+
+/*
+
+Basic Typography
+
+Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves the reading of content text lacking. The overriding styles that are applied to Basic typography is a consistent font treatment (font sizing, font family, and font-weight) and what comes from the baseline frameworks that build the brand.  
+
+<section class="max-w_65">
+<h1>Basic Typography: <small>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit.</small></h1>
+<h2>Aenean commodo ligula eget dolor aenean massa</h2>
+<h3>Cum sociis natoque penatibus et magnis dis 
+parturient montes nascetur ridiculus mus</h3>
+<h4>Donec quam felis ultricies nec pellentesque eu 
+pretium quis sem nlla consequat massa quis enim</h4>
+<h5>Donec pede justo fringilla vel aliquet nec vulputate 
+eget arcu</h5>
+<h6>In enim justo rhoncus ut imperdiet a venenatis vitae 
+justo</h6>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit. Aenean commodo ligula eget dolor. Aenean massa. 
+Cum sociis natoque penatibus et magnis dis parturient 
+montes, nascetur ridiculus mus. Donec quam felis, 
+ultricies nec, pellentesque eu, pretium quis, sem.</p>
+<article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article>
+</section>
+
+Weight: -9
+
+Styleguide HTML.Unstyled
 
 */
