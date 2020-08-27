@@ -91,18 +91,24 @@
                                     <li class="kss-nav__item bg_black-2 p-y_2">
                                         <a class="c_white-8 h:c_white flex flex_row h:undecorated flex_nowrap" href="section-html.html#kssref-html-typography">
                                             <span class="kss-nav__ref flex_shrink p-r_1 font_bold">2.1</span>
-                                            <span class="kss-nav__name flex_auto overflow_ellipsis">Typography</span>
+                                            <span class="kss-nav__name flex_auto overflow_ellipsis">Reading Typography</span>
+                                        </a>
+                                    </li>
+                                    <li class="kss-nav__item bg_black-2 p-y_2">
+                                        <a class="c_white-8 h:c_white flex flex_row h:undecorated flex_nowrap" href="section-html.html#kssref-html-unstyled">
+                                            <span class="kss-nav__ref flex_shrink p-r_1 font_bold">2.2</span>
+                                            <span class="kss-nav__name flex_auto overflow_ellipsis">Basic Typography</span>
                                         </a>
                                     </li>
                                     <li class="kss-nav__item bg_black-2 p-y_2">
                                         <a class="c_white-8 h:c_white flex flex_row h:undecorated flex_nowrap" href="section-html.html#kssref-html-basictable">
-                                            <span class="kss-nav__ref flex_shrink p-r_1 font_bold">2.2</span>
+                                            <span class="kss-nav__ref flex_shrink p-r_1 font_bold">2.3</span>
                                             <span class="kss-nav__name flex_auto overflow_ellipsis">Table</span>
                                         </a>
                                     </li>
                                     <li class="kss-nav__item bg_black-2 p-y_2">
                                         <a class="c_white-8 h:c_white flex flex_row h:undecorated flex_nowrap" href="section-html.html#kssref-html-inputs">
-                                            <span class="kss-nav__ref flex_shrink p-r_1 font_bold">2.3</span>
+                                            <span class="kss-nav__ref flex_shrink p-r_1 font_bold">2.4</span>
                                             <span class="kss-nav__name flex_auto overflow_ellipsis">Basic Inputs</span>
                                         </a>
                                     </li>
@@ -158,7 +164,7 @@
             <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
                     <header class="bg_white kss-section kss-section--depth-1 shadow_1" id="kssref-html">
                 <article class="kss-section__content">
-                        <p class="kss-section__source">Source: <span>dist/css/journal_boot_combo.css</span>, line <span>9999</span>
+                        <p class="kss-section__source">Source: <span>dist/css/journal_boot_combo.css</span>, line <span>2333</span>
                         </p>
                     <a class="kss-section__permalink" href="#kssref-html">
                         <h1 class="kss-section__item kss-section__item--depth-1">
@@ -173,21 +179,52 @@
                     </header>
                         <section class="kss-section bg_white kss-section--depth-2 shadow_1" id="kssref-html-typography">
                 <article class="kss-section__content">
-                        <p class="kss-section__source">Source: <span>dist/css/journal_boot_combo.css</span>, line <span>10009</span>
+                        <p class="kss-section__source">Source: <span>dist/css/journal_boot_combo.css</span>, line <span>2343</span>
                         </p>
                     <a class="kss-section__permalink" href="#kssref-html-typography">
                         <h2 class="kss-section__item kss-section__item--depth-2">
                             <span class="kss-section__ref">2.1</span>
-                            <span class="kss-section__name">Typography</span>
+                            <span class="kss-section__name">Reading Typography</span>
                         </h2>
                     </a>
                         <div class="kss-section__description">
-                            <p>Basic Typography with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.</p>
+                            <p>Reading typography is a container class to opt into an override of the basic typography from arches. Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves reading typography lacking. Most ways typogrpahy content is added to a site is devoid of hooks to add styles to an element so work around that restriction and to unified styling across reading experiances the &quot;reading-typography&quot; class is used on the parrent container.  Please note that the reading typography can still look a bit different look depending on the brand or the framework.</p>
+<section class="max-w_65 reading-typography">
+<h1>Reading Typography: <small>Lorem ipsum dolor sit amet, consectetuer adipiscing
+elit.</small></h1>
+<h2>Aenean commodo ligula eget dolor aenean massa</h2>
+<h3>Cum sociis natoque penatibus et magnis dis
+parturient montes nascetur ridiculus mus</h3>
+<h4>Donec quam felis ultricies nec pellentesque eu
+pretium quis sem nlla consequat massa quis enim</h4>
+<h5>Donec pede justo fringilla vel aliquet nec vulputate
+eget arcu</h5>
+<h6>In enim justo rhoncus ut imperdiet a venenatis vitae
+justo</h6>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+elit. Aenean commodo ligula eget dolor. Aenean massa.
+Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Donec quam felis,
+ultricies nec, pellentesque eu, pretium quis, sem.</p>
+<article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article>
+</section></div>
+                </article>
+    </section>
+                        <section class="kss-section bg_white kss-section--depth-2 shadow_1" id="kssref-html-unstyled">
+                <article class="kss-section__content">
+                        <p class="kss-section__source">Source: <span>dist/css/journal_boot_combo.css</span>, line <span>2374</span>
+                        </p>
+                    <a class="kss-section__permalink" href="#kssref-html-unstyled">
+                        <h2 class="kss-section__item kss-section__item--depth-2">
+                            <span class="kss-section__ref">2.2</span>
+                            <span class="kss-section__name">Basic Typography</span>
+                        </h2>
+                    </a>
+                        <div class="kss-section__description">
+                            <p>Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves the reading of content text lacking. The overriding styles that are applied to Basic typography is a consistent font treatment (font sizing, font family, and font-weight) and what comes from the baseline frameworks that build the brand.</p>
 <section class="max-w_65">
-<h1>Lorem ipsum dolor sit amet consectetuer adipiscing
-elit Lorem ipsum dolor sit amet consectetuer adipiscing
-elit Lorem ipsum dolor sit amet consectetuer adipiscing
-elit</h1>
+<h1>Basic Typography: <small>Lorem ipsum dolor sit amet, consectetuer adipiscing
+elit.</small></h1>
 <h2>Aenean commodo ligula eget dolor aenean massa</h2>
 <h3>Cum sociis natoque penatibus et magnis dis
 parturient montes nascetur ridiculus mus</h3>
@@ -208,11 +245,11 @@ ultricies nec, pellentesque eu, pretium quis, sem.</p>
     </section>
                         <section class="kss-section bg_white kss-section--depth-2 shadow_1" id="kssref-html-basictable">
                 <article class="kss-section__content">
-                        <p class="kss-section__source">Source: <span>dist/css/journal_boot_combo.css</span>, line <span>8786</span>
+                        <p class="kss-section__source">Source: <span>dist/css/journal_boot_combo.css</span>, line <span>1094</span>
                         </p>
                     <a class="kss-section__permalink" href="#kssref-html-basictable">
                         <h2 class="kss-section__item kss-section__item--depth-2">
-                            <span class="kss-section__ref">2.2</span>
+                            <span class="kss-section__ref">2.3</span>
                             <span class="kss-section__name">Table</span>
                         </h2>
                     </a>
@@ -223,11 +260,11 @@ ultricies nec, pellentesque eu, pretium quis, sem.</p>
     </section>
                         <section class="kss-section bg_white kss-section--depth-2 shadow_1" id="kssref-html-inputs">
                 <article class="kss-section__content">
-                        <p class="kss-section__source">Source: <span>dist/css/journal_boot_combo.css</span>, line <span>8711</span>
+                        <p class="kss-section__source">Source: <span>dist/css/journal_boot_combo.css</span>, line <span>1019</span>
                         </p>
                     <a class="kss-section__permalink" href="#kssref-html-inputs">
                         <h2 class="kss-section__item kss-section__item--depth-2">
-                            <span class="kss-section__ref">2.3</span>
+                            <span class="kss-section__ref">2.4</span>
                             <span class="kss-section__name">Basic Inputs</span>
                         </h2>
                     </a>

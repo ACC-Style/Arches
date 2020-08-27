@@ -26,15 +26,41 @@ Gets utilty style and prints it.
 
  Styleguide: mixins.utlity-style
 */
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after,
+.icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
-.typography a[target=_blank]:after,
-.typography a[href^=http][target=_blank]:after,
-.typography a[href^=https][target=_blank]:after, .icon-before:before, a.link:before,
-a.link-light:before,
-.typography a:before {
+a.link-light[href^="mailto:"]:after,
+a.link-light[href^="tel:"]:after,
+.reading-typography a[target=_blank]:after,
+.reading-typography a[href^=http][target=_blank]:after,
+.reading-typography a[href^=https][target=_blank]:after,
+.reading-typography a[href^="mailto:"]:after,
+.reading-typography a[href^="tel:"]:after, .icon-before:before, a.link[href$=".pdf"]:before, a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before, a.link[href$=".zip"]:before, a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before, a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before, a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
+a.link-light[href$=".pdf"]:before,
+a.link-light[href$=".doc"]:before,
+a.link-light[href$=".docx"]:before,
+a.link-light[href$=".txt"]:before,
+a.link-light[href$=".zip"]:before,
+a.link-light[href*=".ppt"]:before,
+a.link-light[href*=".pptx"]:before,
+a.link-light[href$=".csv"]:before,
+a.link-light[href$=".xls"]:before,
+a.link-light[href$=".xlsx"]:before,
+a.link-light[href$=".mp4"]:before,
+a.link-light[href$=".mov"]:before,
+.reading-typography a[href$=".pdf"]:before,
+.reading-typography a[href$=".doc"]:before,
+.reading-typography a[href$=".docx"]:before,
+.reading-typography a[href$=".txt"]:before,
+.reading-typography a[href$=".zip"]:before,
+.reading-typography a[href*=".ppt"]:before,
+.reading-typography a[href*=".pptx"]:before,
+.reading-typography a[href$=".csv"]:before,
+.reading-typography a[href$=".xls"]:before,
+.reading-typography a[href$=".xlsx"]:before,
+.reading-typography a[href$=".mp4"]:before,
+.reading-typography a[href$=".mov"]:before {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-family: "Font Awesome 5 Pro";
@@ -996,6 +1022,12 @@ Weight: -1
 Styleguide Recipes.Footer.Complete
 
 */
+body {
+  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
 h1,
 h2,
 h3,
@@ -1010,35 +1042,13 @@ h6 {
   font-weight: 700;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 16px 0 8px;
-  margin: 1rem 0 0.5rem;
-  line-height: 1.65;
-}
-
 p {
-  line-height: 1.65;
+  line-height: 1.35;
 }
 
 ul,
 ol {
-  line-height: 2.1;
-}
-
-body {
-  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-}
-
-p + p {
-  margin-top: 8px;
-  margin-top: 0.5rem;
+  line-height: 1.5;
 }
 
 h6,h5 {
@@ -1062,8 +1072,6 @@ h2 {
 }
 
 h1 {
-  margin: 16px 0;
-  margin: 1rem 0;
   font-size: 39.813px;
   font-size: 2.48832rem;
 }
@@ -1126,7 +1134,7 @@ textarea {
   padding: 0.25rem 0.5rem;
   border-width: thin;
   border-color: rgba(19, 18, 18, 0.25);
-  line-height: 1.35;
+  line-height: 1.1;
 }
 
 [type=date],
@@ -1631,32 +1639,58 @@ Markup:
 
  Styleguide InteractiveExtras.Links
  */
-.icon-before:before, a.link:before,
-a.link-light:before,
-.typography a:before {
+.icon-before:before, a.link[href$=".pdf"]:before, a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before, a.link[href$=".zip"]:before, a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before, a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before, a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
+a.link-light[href$=".pdf"]:before,
+a.link-light[href$=".doc"]:before,
+a.link-light[href$=".docx"]:before,
+a.link-light[href$=".txt"]:before,
+a.link-light[href$=".zip"]:before,
+a.link-light[href*=".ppt"]:before,
+a.link-light[href*=".pptx"]:before,
+a.link-light[href$=".csv"]:before,
+a.link-light[href$=".xls"]:before,
+a.link-light[href$=".xlsx"]:before,
+a.link-light[href$=".mp4"]:before,
+a.link-light[href$=".mov"]:before,
+.reading-typography a[href$=".pdf"]:before,
+.reading-typography a[href$=".doc"]:before,
+.reading-typography a[href$=".docx"]:before,
+.reading-typography a[href$=".txt"]:before,
+.reading-typography a[href$=".zip"]:before,
+.reading-typography a[href*=".ppt"]:before,
+.reading-typography a[href*=".pptx"]:before,
+.reading-typography a[href$=".csv"]:before,
+.reading-typography a[href$=".xls"]:before,
+.reading-typography a[href$=".xlsx"]:before,
+.reading-typography a[href$=".mp4"]:before,
+.reading-typography a[href$=".mov"]:before {
   width: 1.28571429em;
   margin-right: 4px;
   margin-right: 0.25rem;
   text-align: center;
 }
 
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after,
+.icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
-.typography a[target=_blank]:after,
-.typography a[href^=http][target=_blank]:after,
-.typography a[href^=https][target=_blank]:after {
+a.link-light[href^="mailto:"]:after,
+a.link-light[href^="tel:"]:after,
+.reading-typography a[target=_blank]:after,
+.reading-typography a[href^=http][target=_blank]:after,
+.reading-typography a[href^=https][target=_blank]:after,
+.reading-typography a[href^="mailto:"]:after,
+.reading-typography a[href^="tel:"]:after {
   width: 1.28571429em;
   margin-left: 4px;
   margin-left: 0.25rem;
   text-align: center;
 }
 
-.link {
+.link, .reading-typography a {
   color: #094135;
 }
-.link:hover {
+.link:hover, .reading-typography a:hover {
   color: black;
 }
 
@@ -1664,79 +1698,79 @@ a.link-light[href^=https][target=_blank]:after,
   color: #1ccea8;
 }
 .link-light:hover {
-  color: #8cf0da;
+  color: #92f0dc;
 }
 
+a.link:hover,
+a.link-light:hover,
+.reading-typography a:hover {
+  text-decoration: underline;
+}
 a.link[href$=".pdf"]:before,
 a.link-light[href$=".pdf"]:before,
-.typography a[href$=".pdf"]:before {
+.reading-typography a[href$=".pdf"]:before {
   content: "";
 }
 a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before,
 a.link-light[href$=".doc"]:before,
 a.link-light[href$=".docx"]:before,
 a.link-light[href$=".txt"]:before,
-.typography a[href$=".doc"]:before,
-.typography a[href$=".docx"]:before,
-.typography a[href$=".txt"]:before {
+.reading-typography a[href$=".doc"]:before,
+.reading-typography a[href$=".docx"]:before,
+.reading-typography a[href$=".txt"]:before {
   content: "";
 }
 a.link[href$=".zip"]:before,
 a.link-light[href$=".zip"]:before,
-.typography a[href$=".zip"]:before {
+.reading-typography a[href$=".zip"]:before {
   content: "";
 }
 a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
-.typography a[href*=".ppt"]:before,
-.typography a[href*=".pptx"]:before {
+.reading-typography a[href*=".ppt"]:before,
+.reading-typography a[href*=".pptx"]:before {
   content: "";
 }
 a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before,
 a.link-light[href$=".csv"]:before,
 a.link-light[href$=".xls"]:before,
 a.link-light[href$=".xlsx"]:before,
-.typography a[href$=".csv"]:before,
-.typography a[href$=".xls"]:before,
-.typography a[href$=".xlsx"]:before {
+.reading-typography a[href$=".csv"]:before,
+.reading-typography a[href$=".xls"]:before,
+.reading-typography a[href$=".xlsx"]:before {
   content: "";
 }
 a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
 a.link-light[href$=".mp4"]:before,
 a.link-light[href$=".mov"]:before,
-.typography a[href$=".mp4"]:before,
-.typography a[href$=".mov"]:before {
+.reading-typography a[href$=".mp4"]:before,
+.reading-typography a[href$=".mov"]:before {
   content: "";
 }
 a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
-.typography a[target=_blank]:after,
-.typography a[href^=http][target=_blank]:after,
-.typography a[href^=https][target=_blank]:after {
+.reading-typography a[target=_blank]:after,
+.reading-typography a[href^=http][target=_blank]:after,
+.reading-typography a[href^=https][target=_blank]:after {
   content: "";
 }
-a.link[href^="mailto:"]:before,
-a.link-light[href^="mailto:"]:before,
-.typography a[href^="mailto:"]:before {
+a.link[href^="mailto:"]:after,
+a.link-light[href^="mailto:"]:after,
+.reading-typography a[href^="mailto:"]:after {
   content: "";
 }
-a.link[href^="tel:"]:before,
-a.link-light[href^="tel:"]:before,
-.typography a[href^="tel:"]:before {
+a.link[href^="tel:"]:after,
+a.link-light[href^="tel:"]:after,
+.reading-typography a[href^="tel:"]:after {
   content: "";
 }
-a.link[href^="fax:"]:before,
-a.link-light[href^="fax:"]:before,
-.typography a[href^="fax:"]:before {
+a.link[href^="fax:"]:after,
+a.link-light[href^="fax:"]:after,
+.reading-typography a[href^="fax:"]:after {
   content: "";
-}
-a.link:hover,
-a.link-light:hover,
-.typography a:hover {
-  text-decoration: underline;
 }
 
 /*
@@ -2486,15 +2520,13 @@ Styleguide HTML
 */
 /*
 
-Typography
+Reading Typography
 
-Basic Typography with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
+Reading typography is a container class to opt into an override of the basic typography from arches. Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves reading typography lacking. Most ways typogrpahy content is added to a site is devoid of hooks to add styles to an element so work around that restriction and to unified styling across reading experiances the "reading-typography" class is used on the parrent container.  Please note that the reading typography can still look a bit different look depending on the brand or the framework.  
 
-<section class="max-w_65">
-<h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
-elit Lorem ipsum dolor sit amet consectetuer adipiscing 
-elit Lorem ipsum dolor sit amet consectetuer adipiscing 
-elit</h1>
+<section class="max-w_65 reading-typography">
+<h1>Reading Typography: <small>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit.</small></h1>
 <h2>Aenean commodo ligula eget dolor aenean massa</h2>
 <h3>Cum sociis natoque penatibus et magnis dis 
 parturient montes nascetur ridiculus mus</h3>
@@ -2515,6 +2547,37 @@ ultricies nec, pellentesque eu, pretium quis, sem.</p>
 Weight: -9
 
 Styleguide HTML.Typography
+
+*/
+/*
+
+Basic Typography
+
+Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves the reading of content text lacking. The overriding styles that are applied to Basic typography is a consistent font treatment (font sizing, font family, and font-weight) and what comes from the baseline frameworks that build the brand.  
+
+<section class="max-w_65">
+<h1>Basic Typography: <small>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit.</small></h1>
+<h2>Aenean commodo ligula eget dolor aenean massa</h2>
+<h3>Cum sociis natoque penatibus et magnis dis 
+parturient montes nascetur ridiculus mus</h3>
+<h4>Donec quam felis ultricies nec pellentesque eu 
+pretium quis sem nlla consequat massa quis enim</h4>
+<h5>Donec pede justo fringilla vel aliquet nec vulputate 
+eget arcu</h5>
+<h6>In enim justo rhoncus ut imperdiet a venenatis vitae 
+justo</h6>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit. Aenean commodo ligula eget dolor. Aenean massa. 
+Cum sociis natoque penatibus et magnis dis parturient 
+montes, nascetur ridiculus mus. Donec quam felis, 
+ultricies nec, pellentesque eu, pretium quis, sem.</p>
+<article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article>
+</section>
+
+Weight: -9
+
+Styleguide HTML.Unstyled
 
 */
 .container,
@@ -3356,6 +3419,24 @@ The breakdown of the names for UCs follow a structured patter for easy muscle me
 
  Styleguide UC.Shorthand
 */
+.reading-typography h1,
+.reading-typography h2,
+.reading-typography h3,
+.reading-typography h4,
+.reading-typography h5,
+.reading-typography h6 {
+  margin: 16px 0 8px;
+  margin: 1rem 0 0.5rem;
+}
+.reading-typography ul,
+.reading-typography ol {
+  line-height: 1.5;
+}
+.reading-typography p + p {
+  margin-top: 8px;
+  margin-top: 0.5rem;
+}
+
 /*
 Typography
 
@@ -4753,19 +4834,19 @@ Styleguide UC.Typography.Text.Indent
 }
 
 .lh_1 {
-  line-height: 1.35 !important;
+  line-height: 1.1 !important;
 }
 
 .lh_2 {
-  line-height: 1.65 !important;
+  line-height: 1.35 !important;
 }
 
 .lh_3 {
-  line-height: 1.85 !important;
+  line-height: 1.6 !important;
 }
 
 .lh_4 {
-  line-height: 2.1 !important;
+  line-height: 1.5 !important;
 }
 
 .lh_5 {
@@ -4925,7 +5006,7 @@ Styleguide UC.Spacing
 /*
 Margin
 
-<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Margin classes are mobile first with postfix modifier for `:md`and `:lg` variations for responsive sizing. Margins that use the short codes of all margin, auto, x margins, and y margin are overriden by specific side margins.  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th>responsive modifiers</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .m_0</td><td class=''>.m_0:md, .m_0:lg</td><td class='text_right'> margin :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .m_n5</td><td class=''>.m_n5:md, .m_n5:lg</td><td class='text_right'> margin :</td><td> -2rem </td></tr> <tr><td class='c_primary-n2'> .m_n4</td><td class=''>.m_n4:md, .m_n4:lg</td><td class='text_right'> margin :</td><td> -1rem </td></tr> <tr><td class='c_primary-n2'> .m_n3</td><td class=''>.m_n3:md, .m_n3:lg</td><td class='text_right'> margin :</td><td> -0.5rem </td></tr> <tr><td class='c_primary-n2'> .m_n2</td><td class=''>.m_n2:md, .m_n2:lg</td><td class='text_right'> margin :</td><td> -0.25rem </td></tr> <tr><td class='c_primary-n2'> .m_n1</td><td class=''>.m_n1:md, .m_n1:lg</td><td class='text_right'> margin :</td><td> -1px </td></tr> <tr><td class='c_primary-n2'> .m_1</td><td class=''>.m_1:md, .m_1:lg</td><td class='text_right'> margin :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .m_2</td><td class=''>.m_2:md, .m_2:lg</td><td class='text_right'> margin :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .m_3</td><td class=''>.m_3:md, .m_3:lg</td><td class='text_right'> margin :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .m_4</td><td class=''>.m_4:md, .m_4:lg</td><td class='text_right'> margin :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .m_5</td><td class=''>.m_5:md, .m_5:lg</td><td class='text_right'> margin :</td><td> 2rem </td></tr> <tr><td class='c_primary-n2'> .m_auto</td><td class=''>.m_auto:md, .m_auto:lg</td><td class='text_right'> margin :</td><td> auto </td></tr> <tr><td class='c_primary-n2'> .m_unset</td><td class=''>.m_unset:md, .m_unset:lg</td><td class='text_right'> margin :</td><td> unset </td></tr> </tbody></table>	
+<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Margin classes are mobile first with postfix modifier for `:md`and `:lg` variations for responsive sizing. Margins that use the short codes of all margin, auto, x margins, and y margin are overriden by specific side margins. 			
 
 m_0     	 		-  margin: 0 
 m_n5 	 			-  margin:	 -2rem
@@ -6193,14 +6274,14 @@ Styleguide UC.Spacing.Margin
 /*
 Padding
 
-<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Quickly alter the padding of an object.
+<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Quickly alter the padding of an object. <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th>responsive modifiers</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .p_0</td><td class=''>.p_0:md, .p_0:lg</td><td class='text_right'> padding :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .p_1</td><td class=''>.p_1:md, .p_1:lg</td><td class='text_right'> padding :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .p_2</td><td class=''>.p_2:md, .p_2:lg</td><td class='text_right'> padding :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .p_3</td><td class=''>.p_3:md, .p_3:lg</td><td class='text_right'> padding :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .p_4</td><td class=''>.p_4:md, .p_4:lg</td><td class='text_right'> padding :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .p_5</td><td class=''>.p_5:md, .p_5:lg</td><td class='text_right'> padding :</td><td> 2rem </td></tr> </tbody></table>
 
-.p_0             	 - All paddings set to 0
-.p_1             	 - All paddings set to 1px
-.p_2             	 - All paddings set to 1/4 of global padding
-.p_3             	 - All paddings set to 1/2 of global padding
-.p_4             	 - All paddings set to global padding
-.p_5             	 - All paddings set to 2x of global padding 
+.p_0      	-  padding: 0 
+.p_1   				-  padding: 1px
+.p_2   -  padding: 0.25rem
+.p_3   -  padding: 0.5rem
+.p_4   -  padding: 1rem
+.p_5   -  padding: 2rem
 .p-x_5             	 - left and right paddings set to 2x of global padding 
 .p-y_5             	 - top and bottom paddings set to 2x of global padding 
 .p-t_4          	- Top padding set to global padding
@@ -6244,10 +6325,6 @@ Styleguide UC.Spacing.Padding
   padding: 2rem  !important;
 }
 
-.p_auto {
-  padding: auto  !important;
-}
-
 .p-y_0 {
   padding-top: 0  !important;
   padding-bottom: 0  !important;
@@ -6284,11 +6361,6 @@ Styleguide UC.Spacing.Padding
   padding-top: 2rem  !important;
   padding-bottom: 32px  !important;
   padding-bottom: 2rem  !important;
-}
-
-.p-y_auto {
-  padding-top: auto  !important;
-  padding-bottom: auto  !important;
 }
 
 .p-x_0 {
@@ -6329,11 +6401,6 @@ Styleguide UC.Spacing.Padding
   padding-left: 2rem  !important;
 }
 
-.p-x_auto {
-  padding-right: auto  !important;
-  padding-left: auto  !important;
-}
-
 .p-t_0 {
   padding-top: 0  !important;
 }
@@ -6360,10 +6427,6 @@ Styleguide UC.Spacing.Padding
 .p-t_5 {
   padding-top: 32px  !important;
   padding-top: 2rem  !important;
-}
-
-.p-t_auto {
-  padding-top: auto  !important;
 }
 
 .p-b_0 {
@@ -6394,10 +6457,6 @@ Styleguide UC.Spacing.Padding
   padding-bottom: 2rem  !important;
 }
 
-.p-b_auto {
-  padding-bottom: auto  !important;
-}
-
 .p-l_0 {
   padding-left: 0  !important;
 }
@@ -6424,10 +6483,6 @@ Styleguide UC.Spacing.Padding
 .p-l_5 {
   padding-left: 32px  !important;
   padding-left: 2rem  !important;
-}
-
-.p-l_auto {
-  padding-left: auto  !important;
 }
 
 .p-r_0 {
@@ -6458,10 +6513,6 @@ Styleguide UC.Spacing.Padding
   padding-right: 2rem  !important;
 }
 
-.p-r_auto {
-  padding-right: auto  !important;
-}
-
 @media only screen and (min-width : 768px) {
   .p_0\:md {
     padding: 0  !important;
@@ -6485,10 +6536,6 @@ Styleguide UC.Spacing.Padding
 
   .p_5\:md {
     padding: 2rem  !important;
-  }
-
-  .p_auto\:md {
-    padding: auto  !important;
   }
 
   .p-y_0\:md {
@@ -6521,11 +6568,6 @@ Styleguide UC.Spacing.Padding
     padding-bottom: 2rem  !important;
   }
 
-  .p-y_auto\:md {
-    padding-top: auto  !important;
-    padding-bottom: auto  !important;
-  }
-
   .p-x_0\:md {
     padding-right: 0  !important;
     padding-left: 0  !important;
@@ -6556,11 +6598,6 @@ Styleguide UC.Spacing.Padding
     padding-left: 2rem  !important;
   }
 
-  .p-x_auto\:md {
-    padding-right: auto  !important;
-    padding-left: auto  !important;
-  }
-
   .p-t_0\:md {
     padding-top: 0  !important;
   }
@@ -6583,10 +6620,6 @@ Styleguide UC.Spacing.Padding
 
   .p-t_5\:md {
     padding-top: 2rem  !important;
-  }
-
-  .p-t_auto\:md {
-    padding-top: auto  !important;
   }
 
   .p-b_0\:md {
@@ -6613,10 +6646,6 @@ Styleguide UC.Spacing.Padding
     padding-bottom: 2rem  !important;
   }
 
-  .p-b_auto\:md {
-    padding-bottom: auto  !important;
-  }
-
   .p-l_0\:md {
     padding-left: 0  !important;
   }
@@ -6639,10 +6668,6 @@ Styleguide UC.Spacing.Padding
 
   .p-l_5\:md {
     padding-left: 2rem  !important;
-  }
-
-  .p-l_auto\:md {
-    padding-left: auto  !important;
   }
 
   .p-r_0\:md {
@@ -6668,10 +6693,6 @@ Styleguide UC.Spacing.Padding
   .p-r_5\:md {
     padding-right: 2rem  !important;
   }
-
-  .p-r_auto\:md {
-    padding-right: auto  !important;
-  }
 }
 @media only screen and (min-width : 1024px) {
   .p_0\:lg {
@@ -6696,10 +6717,6 @@ Styleguide UC.Spacing.Padding
 
   .p_5\:lg {
     padding: 2rem  !important;
-  }
-
-  .p_auto\:lg {
-    padding: auto  !important;
   }
 
   .p-y_0\:lg {
@@ -6732,11 +6749,6 @@ Styleguide UC.Spacing.Padding
     padding-bottom: 2rem  !important;
   }
 
-  .p-y_auto\:lg {
-    padding-top: auto  !important;
-    padding-bottom: auto  !important;
-  }
-
   .p-x_0\:lg {
     padding-right: 0  !important;
     padding-left: 0  !important;
@@ -6767,11 +6779,6 @@ Styleguide UC.Spacing.Padding
     padding-left: 2rem  !important;
   }
 
-  .p-x_auto\:lg {
-    padding-right: auto  !important;
-    padding-left: auto  !important;
-  }
-
   .p-t_0\:lg {
     padding-top: 0  !important;
   }
@@ -6794,10 +6801,6 @@ Styleguide UC.Spacing.Padding
 
   .p-t_5\:lg {
     padding-top: 2rem  !important;
-  }
-
-  .p-t_auto\:lg {
-    padding-top: auto  !important;
   }
 
   .p-b_0\:lg {
@@ -6824,10 +6827,6 @@ Styleguide UC.Spacing.Padding
     padding-bottom: 2rem  !important;
   }
 
-  .p-b_auto\:lg {
-    padding-bottom: auto  !important;
-  }
-
   .p-l_0\:lg {
     padding-left: 0  !important;
   }
@@ -6852,10 +6851,6 @@ Styleguide UC.Spacing.Padding
     padding-left: 2rem  !important;
   }
 
-  .p-l_auto\:lg {
-    padding-left: auto  !important;
-  }
-
   .p-r_0\:lg {
     padding-right: 0  !important;
   }
@@ -6878,10 +6873,6 @@ Styleguide UC.Spacing.Padding
 
   .p-r_5\:lg {
     padding-right: 2rem  !important;
-  }
-
-  .p-r_auto\:lg {
-    padding-right: auto  !important;
   }
 }
 /*
@@ -8664,7 +8655,7 @@ Styleguide  UC.display.Grid
 /*
 Grid Gap
 
-Description: Grid Gap  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-x_0</td><td class='text_right'> grid-column-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-x_1</td><td class='text_right'> grid-column-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_2</td><td class='text_right'> grid-column-gap :</td><td> 0.375rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_3</td><td class='text_right'> grid-column-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_4</td><td class='text_right'> grid-column-gap :</td><td> 0.75rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_5</td><td class='text_right'> grid-column-gap :</td><td> 1rem </td></tr> </tbody></table>  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-y_0</td><td class='text_right'> grid-row-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-y_1</td><td class='text_right'> grid-row-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_2</td><td class='text_right'> grid-row-gap :</td><td> 0.375rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_3</td><td class='text_right'> grid-row-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_4</td><td class='text_right'> grid-row-gap :</td><td> 0.75rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_5</td><td class='text_right'> grid-row-gap :</td><td> 1rem </td></tr> </tbody></table>  
+Description: Grid Gap  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-x_0</td><td class='text_right'> grid-column-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-x_1</td><td class='text_right'> grid-column-gap :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .gap-x_2</td><td class='text_right'> grid-column-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_3</td><td class='text_right'> grid-column-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_4</td><td class='text_right'> grid-column-gap :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_5</td><td class='text_right'> grid-column-gap :</td><td> 2rem </td></tr> </tbody></table>  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-y_0</td><td class='text_right'> grid-row-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-y_1</td><td class='text_right'> grid-row-gap :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .gap-y_2</td><td class='text_right'> grid-row-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_3</td><td class='text_right'> grid-row-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_4</td><td class='text_right'> grid-row-gap :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_5</td><td class='text_right'> grid-row-gap :</td><td> 2rem </td></tr> </tbody></table>  
 
 Weight: 0
 
@@ -8675,11 +8666,11 @@ Styleguide  UC.display.Grid.Gap
 }
 
 .gap-x_1 {
-  grid-column-gap: 0.25rem !important;
+  grid-column-gap: 1px !important;
 }
 
 .gap-x_2 {
-  grid-column-gap: 0.375rem !important;
+  grid-column-gap: 0.25rem !important;
 }
 
 .gap-x_3 {
@@ -8687,11 +8678,11 @@ Styleguide  UC.display.Grid.Gap
 }
 
 .gap-x_4 {
-  grid-column-gap: 0.75rem !important;
+  grid-column-gap: 1rem !important;
 }
 
 .gap-x_5 {
-  grid-column-gap: 1rem !important;
+  grid-column-gap: 2rem !important;
 }
 
 @media only screen and (min-width : 768px) {
@@ -8700,11 +8691,11 @@ Styleguide  UC.display.Grid.Gap
   }
 
   .gap-x_1\:md {
-    grid-column-gap: 0.25rem !important;
+    grid-column-gap: 1px !important;
   }
 
   .gap-x_2\:md {
-    grid-column-gap: 0.375rem !important;
+    grid-column-gap: 0.25rem !important;
   }
 
   .gap-x_3\:md {
@@ -8712,11 +8703,11 @@ Styleguide  UC.display.Grid.Gap
   }
 
   .gap-x_4\:md {
-    grid-column-gap: 0.75rem !important;
+    grid-column-gap: 1rem !important;
   }
 
   .gap-x_5\:md {
-    grid-column-gap: 1rem !important;
+    grid-column-gap: 2rem !important;
   }
 }
 @media only screen and (min-width : 1024px) {
@@ -8725,11 +8716,11 @@ Styleguide  UC.display.Grid.Gap
   }
 
   .gap-x_1\:lg {
-    grid-column-gap: 0.25rem !important;
+    grid-column-gap: 1px !important;
   }
 
   .gap-x_2\:lg {
-    grid-column-gap: 0.375rem !important;
+    grid-column-gap: 0.25rem !important;
   }
 
   .gap-x_3\:lg {
@@ -8737,11 +8728,11 @@ Styleguide  UC.display.Grid.Gap
   }
 
   .gap-x_4\:lg {
-    grid-column-gap: 0.75rem !important;
+    grid-column-gap: 1rem !important;
   }
 
   .gap-x_5\:lg {
-    grid-column-gap: 1rem !important;
+    grid-column-gap: 2rem !important;
   }
 }
 .gap-y_0 {
@@ -8749,11 +8740,11 @@ Styleguide  UC.display.Grid.Gap
 }
 
 .gap-y_1 {
-  grid-row-gap: 0.25rem !important;
+  grid-row-gap: 1px !important;
 }
 
 .gap-y_2 {
-  grid-row-gap: 0.375rem !important;
+  grid-row-gap: 0.25rem !important;
 }
 
 .gap-y_3 {
@@ -8761,11 +8752,11 @@ Styleguide  UC.display.Grid.Gap
 }
 
 .gap-y_4 {
-  grid-row-gap: 0.75rem !important;
+  grid-row-gap: 1rem !important;
 }
 
 .gap-y_5 {
-  grid-row-gap: 1rem !important;
+  grid-row-gap: 2rem !important;
 }
 
 @media only screen and (min-width : 768px) {
@@ -8774,11 +8765,11 @@ Styleguide  UC.display.Grid.Gap
   }
 
   .gap-y_1\:md {
-    grid-row-gap: 0.25rem !important;
+    grid-row-gap: 1px !important;
   }
 
   .gap-y_2\:md {
-    grid-row-gap: 0.375rem !important;
+    grid-row-gap: 0.25rem !important;
   }
 
   .gap-y_3\:md {
@@ -8786,11 +8777,11 @@ Styleguide  UC.display.Grid.Gap
   }
 
   .gap-y_4\:md {
-    grid-row-gap: 0.75rem !important;
+    grid-row-gap: 1rem !important;
   }
 
   .gap-y_5\:md {
-    grid-row-gap: 1rem !important;
+    grid-row-gap: 2rem !important;
   }
 }
 @media only screen and (min-width : 1024px) {
@@ -8799,11 +8790,11 @@ Styleguide  UC.display.Grid.Gap
   }
 
   .gap-y_1\:lg {
-    grid-row-gap: 0.25rem !important;
+    grid-row-gap: 1px !important;
   }
 
   .gap-y_2\:lg {
-    grid-row-gap: 0.375rem !important;
+    grid-row-gap: 0.25rem !important;
   }
 
   .gap-y_3\:lg {
@@ -8811,11 +8802,11 @@ Styleguide  UC.display.Grid.Gap
   }
 
   .gap-y_4\:lg {
-    grid-row-gap: 0.75rem !important;
+    grid-row-gap: 1rem !important;
   }
 
   .gap-y_5\:lg {
-    grid-row-gap: 1rem !important;
+    grid-row-gap: 2rem !important;
   }
 }
 /*

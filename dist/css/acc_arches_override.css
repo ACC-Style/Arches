@@ -1669,15 +1669,13 @@
   */
   /*
 
-  Typography
+  Reading Typography
 
-  Basic Typography with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
+  Reading typography is a container class to opt into an override of the basic typography from arches. Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves reading typography lacking. Most ways typogrpahy content is added to a site is devoid of hooks to add styles to an element so work around that restriction and to unified styling across reading experiances the "reading-typography" class is used on the parrent container.  Please note that the reading typography can still look a bit different look depending on the brand or the framework.  
 
-  <section class="max-w_65">
-  <h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
-  elit Lorem ipsum dolor sit amet consectetuer adipiscing 
-  elit Lorem ipsum dolor sit amet consectetuer adipiscing 
-  elit</h1>
+  <section class="max-w_65 reading-typography">
+  <h1>Reading Typography: <small>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit.</small></h1>
   <h2>Aenean commodo ligula eget dolor aenean massa</h2>
   <h3>Cum sociis natoque penatibus et magnis dis 
   parturient montes nascetur ridiculus mus</h3>
@@ -1698,6 +1696,37 @@
   Weight: -9
 
   Styleguide HTML.Typography
+
+  */
+  /*
+
+  Basic Typography
+
+  Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves the reading of content text lacking. The overriding styles that are applied to Basic typography is a consistent font treatment (font sizing, font family, and font-weight) and what comes from the baseline frameworks that build the brand.  
+
+  <section class="max-w_65">
+  <h1>Basic Typography: <small>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit.</small></h1>
+  <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+  <h3>Cum sociis natoque penatibus et magnis dis 
+  parturient montes nascetur ridiculus mus</h3>
+  <h4>Donec quam felis ultricies nec pellentesque eu 
+  pretium quis sem nlla consequat massa quis enim</h4>
+  <h5>Donec pede justo fringilla vel aliquet nec vulputate 
+  eget arcu</h5>
+  <h6>In enim justo rhoncus ut imperdiet a venenatis vitae 
+  justo</h6>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+  elit. Aenean commodo ligula eget dolor. Aenean massa. 
+  Cum sociis natoque penatibus et magnis dis parturient 
+  montes, nascetur ridiculus mus. Donec quam felis, 
+  ultricies nec, pellentesque eu, pretium quis, sem.</p>
+  <article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article>
+  </section>
+
+  Weight: -9
+
+  Styleguide HTML.Unstyled
 
   */
   /* 
@@ -2867,7 +2896,7 @@
   /*
   Margin
 
-  <div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Margin classes are mobile first with postfix modifier for `:md`and `:lg` variations for responsive sizing. Margins that use the short codes of all margin, auto, x margins, and y margin are overriden by specific side margins.  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th>responsive modifiers</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .m_0</td><td class=''>.m_0:md, .m_0:lg</td><td class='text_right'> margin :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .m_n5</td><td class=''>.m_n5:md, .m_n5:lg</td><td class='text_right'> margin :</td><td> -2rem </td></tr> <tr><td class='c_primary-n2'> .m_n4</td><td class=''>.m_n4:md, .m_n4:lg</td><td class='text_right'> margin :</td><td> -1rem </td></tr> <tr><td class='c_primary-n2'> .m_n3</td><td class=''>.m_n3:md, .m_n3:lg</td><td class='text_right'> margin :</td><td> -0.5rem </td></tr> <tr><td class='c_primary-n2'> .m_n2</td><td class=''>.m_n2:md, .m_n2:lg</td><td class='text_right'> margin :</td><td> -0.25rem </td></tr> <tr><td class='c_primary-n2'> .m_n1</td><td class=''>.m_n1:md, .m_n1:lg</td><td class='text_right'> margin :</td><td> -1px </td></tr> <tr><td class='c_primary-n2'> .m_1</td><td class=''>.m_1:md, .m_1:lg</td><td class='text_right'> margin :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .m_2</td><td class=''>.m_2:md, .m_2:lg</td><td class='text_right'> margin :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .m_3</td><td class=''>.m_3:md, .m_3:lg</td><td class='text_right'> margin :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .m_4</td><td class=''>.m_4:md, .m_4:lg</td><td class='text_right'> margin :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .m_5</td><td class=''>.m_5:md, .m_5:lg</td><td class='text_right'> margin :</td><td> 2rem </td></tr> <tr><td class='c_primary-n2'> .m_auto</td><td class=''>.m_auto:md, .m_auto:lg</td><td class='text_right'> margin :</td><td> auto </td></tr> <tr><td class='c_primary-n2'> .m_unset</td><td class=''>.m_unset:md, .m_unset:lg</td><td class='text_right'> margin :</td><td> unset </td></tr> </tbody></table>	
+  <div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Margin classes are mobile first with postfix modifier for `:md`and `:lg` variations for responsive sizing. Margins that use the short codes of all margin, auto, x margins, and y margin are overriden by specific side margins. 			
 
   m_0     	 		-  margin: 0 
   m_n5 	 			-  margin:	 -2rem
@@ -2891,14 +2920,14 @@
   /*
   Padding
 
-  <div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Quickly alter the padding of an object.
+  <div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Quickly alter the padding of an object. <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th>responsive modifiers</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .p_0</td><td class=''>.p_0:md, .p_0:lg</td><td class='text_right'> padding :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .p_1</td><td class=''>.p_1:md, .p_1:lg</td><td class='text_right'> padding :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .p_2</td><td class=''>.p_2:md, .p_2:lg</td><td class='text_right'> padding :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .p_3</td><td class=''>.p_3:md, .p_3:lg</td><td class='text_right'> padding :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .p_4</td><td class=''>.p_4:md, .p_4:lg</td><td class='text_right'> padding :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .p_5</td><td class=''>.p_5:md, .p_5:lg</td><td class='text_right'> padding :</td><td> 2rem </td></tr> </tbody></table>
 
-  .p_0             	 - All paddings set to 0
-  .p_1             	 - All paddings set to 1px
-  .p_2             	 - All paddings set to 1/4 of global padding
-  .p_3             	 - All paddings set to 1/2 of global padding
-  .p_4             	 - All paddings set to global padding
-  .p_5             	 - All paddings set to 2x of global padding 
+  .p_0      	-  padding: 0 
+  .p_1   				-  padding: 1px
+  .p_2   -  padding: 0.25rem
+  .p_3   -  padding: 0.5rem
+  .p_4   -  padding: 1rem
+  .p_5   -  padding: 2rem
   .p-x_5             	 - left and right paddings set to 2x of global padding 
   .p-y_5             	 - top and bottom paddings set to 2x of global padding 
   .p-t_4          	- Top padding set to global padding
@@ -3073,7 +3102,7 @@
   /*
   Grid Gap
 
-  Description: Grid Gap  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-x_0</td><td class='text_right'> grid-column-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-x_1</td><td class='text_right'> grid-column-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_2</td><td class='text_right'> grid-column-gap :</td><td> 0.375rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_3</td><td class='text_right'> grid-column-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_4</td><td class='text_right'> grid-column-gap :</td><td> 0.75rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_5</td><td class='text_right'> grid-column-gap :</td><td> 1rem </td></tr> </tbody></table>  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-y_0</td><td class='text_right'> grid-row-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-y_1</td><td class='text_right'> grid-row-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_2</td><td class='text_right'> grid-row-gap :</td><td> 0.375rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_3</td><td class='text_right'> grid-row-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_4</td><td class='text_right'> grid-row-gap :</td><td> 0.75rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_5</td><td class='text_right'> grid-row-gap :</td><td> 1rem </td></tr> </tbody></table>  
+  Description: Grid Gap  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-x_0</td><td class='text_right'> grid-column-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-x_1</td><td class='text_right'> grid-column-gap :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .gap-x_2</td><td class='text_right'> grid-column-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_3</td><td class='text_right'> grid-column-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_4</td><td class='text_right'> grid-column-gap :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_5</td><td class='text_right'> grid-column-gap :</td><td> 2rem </td></tr> </tbody></table>  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-y_0</td><td class='text_right'> grid-row-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-y_1</td><td class='text_right'> grid-row-gap :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .gap-y_2</td><td class='text_right'> grid-row-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_3</td><td class='text_right'> grid-row-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_4</td><td class='text_right'> grid-row-gap :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_5</td><td class='text_right'> grid-row-gap :</td><td> 2rem </td></tr> </tbody></table>  
 
   Weight: 0
 
@@ -4432,15 +4461,41 @@
   /**  Logos  **/
   /** Base UC File **/
 }
-#acc_arches_override .icon-after:after, #acc_arches_override a.link[target=_blank]:after, #acc_arches_override a.link[href^=http][target=_blank]:after, #acc_arches_override a.link[href^=https][target=_blank]:after,
+#acc_arches_override .icon-after:after, #acc_arches_override a.link[target=_blank]:after, #acc_arches_override a.link[href^=http][target=_blank]:after, #acc_arches_override a.link[href^=https][target=_blank]:after, #acc_arches_override a.link[href^="mailto:"]:after, #acc_arches_override a.link[href^="tel:"]:after,
 #acc_arches_override a.link-light[target=_blank]:after,
 #acc_arches_override a.link-light[href^=http][target=_blank]:after,
 #acc_arches_override a.link-light[href^=https][target=_blank]:after,
-#acc_arches_override .typography a[target=_blank]:after,
-#acc_arches_override .typography a[href^=http][target=_blank]:after,
-#acc_arches_override .typography a[href^=https][target=_blank]:after, #acc_arches_override .icon-before:before, #acc_arches_override a.link:before,
-#acc_arches_override a.link-light:before,
-#acc_arches_override .typography a:before {
+#acc_arches_override a.link-light[href^="mailto:"]:after,
+#acc_arches_override a.link-light[href^="tel:"]:after,
+#acc_arches_override .reading-typography a[target=_blank]:after,
+#acc_arches_override .reading-typography a[href^=http][target=_blank]:after,
+#acc_arches_override .reading-typography a[href^=https][target=_blank]:after,
+#acc_arches_override .reading-typography a[href^="mailto:"]:after,
+#acc_arches_override .reading-typography a[href^="tel:"]:after, #acc_arches_override .icon-before:before, #acc_arches_override a.link[href$=".pdf"]:before, #acc_arches_override a.link[href$=".doc"]:before, #acc_arches_override a.link[href$=".docx"]:before, #acc_arches_override a.link[href$=".txt"]:before, #acc_arches_override a.link[href$=".zip"]:before, #acc_arches_override a.link[href*=".ppt"]:before, #acc_arches_override a.link[href*=".pptx"]:before, #acc_arches_override a.link[href$=".csv"]:before, #acc_arches_override a.link[href$=".xls"]:before, #acc_arches_override a.link[href$=".xlsx"]:before, #acc_arches_override a.link[href$=".mp4"]:before, #acc_arches_override a.link[href$=".mov"]:before,
+#acc_arches_override a.link-light[href$=".pdf"]:before,
+#acc_arches_override a.link-light[href$=".doc"]:before,
+#acc_arches_override a.link-light[href$=".docx"]:before,
+#acc_arches_override a.link-light[href$=".txt"]:before,
+#acc_arches_override a.link-light[href$=".zip"]:before,
+#acc_arches_override a.link-light[href*=".ppt"]:before,
+#acc_arches_override a.link-light[href*=".pptx"]:before,
+#acc_arches_override a.link-light[href$=".csv"]:before,
+#acc_arches_override a.link-light[href$=".xls"]:before,
+#acc_arches_override a.link-light[href$=".xlsx"]:before,
+#acc_arches_override a.link-light[href$=".mp4"]:before,
+#acc_arches_override a.link-light[href$=".mov"]:before,
+#acc_arches_override .reading-typography a[href$=".pdf"]:before,
+#acc_arches_override .reading-typography a[href$=".doc"]:before,
+#acc_arches_override .reading-typography a[href$=".docx"]:before,
+#acc_arches_override .reading-typography a[href$=".txt"]:before,
+#acc_arches_override .reading-typography a[href$=".zip"]:before,
+#acc_arches_override .reading-typography a[href*=".ppt"]:before,
+#acc_arches_override .reading-typography a[href*=".pptx"]:before,
+#acc_arches_override .reading-typography a[href$=".csv"]:before,
+#acc_arches_override .reading-typography a[href$=".xls"]:before,
+#acc_arches_override .reading-typography a[href$=".xlsx"]:before,
+#acc_arches_override .reading-typography a[href$=".mp4"]:before,
+#acc_arches_override .reading-typography a[href$=".mov"]:before {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-family: "Font Awesome 5 Pro";
@@ -4488,6 +4543,11 @@
     content: "";
   }
 }
+#acc_arches_override body {
+  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
 #acc_arches_override h1,
 #acc_arches_override h2,
 #acc_arches_override h3,
@@ -4500,31 +4560,12 @@
 #acc_arches_override h6 {
   font-weight: 700;
 }
-#acc_arches_override h1,
-#acc_arches_override h2,
-#acc_arches_override h3,
-#acc_arches_override h4,
-#acc_arches_override h5,
-#acc_arches_override h6 {
-  margin: 16px 0 8px;
-  margin: 1rem 0 0.5rem;
-  line-height: 1.65;
-}
 #acc_arches_override p {
-  line-height: 1.65;
+  line-height: 1.35;
 }
 #acc_arches_override ul,
 #acc_arches_override ol {
-  line-height: 2.1;
-}
-#acc_arches_override body {
-  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-}
-#acc_arches_override p + p {
-  margin-top: 8px;
-  margin-top: 0.5rem;
+  line-height: 1.5;
 }
 #acc_arches_override h6,#acc_arches_override h5 {
   font-size: 16px;
@@ -4543,8 +4584,6 @@
   font-size: 2.0736rem;
 }
 #acc_arches_override h1 {
-  margin: 16px 0;
-  margin: 1rem 0;
   font-size: 39.813px;
   font-size: 2.48832rem;
 }
@@ -4598,7 +4637,7 @@
   padding: 0.25rem 0.5rem;
   border-width: thin;
   border-color: rgba(19, 18, 18, 0.25);
-  line-height: 1.35;
+  line-height: 1.1;
 }
 #acc_arches_override [type=date],
 #acc_arches_override [type=datetime],
@@ -4868,108 +4907,134 @@
     background-position: 0% 50%;
   }
 }
-#acc_arches_override .icon-before:before, #acc_arches_override a.link:before,
-#acc_arches_override a.link-light:before,
-#acc_arches_override .typography a:before {
+#acc_arches_override .icon-before:before, #acc_arches_override a.link[href$=".pdf"]:before, #acc_arches_override a.link[href$=".doc"]:before, #acc_arches_override a.link[href$=".docx"]:before, #acc_arches_override a.link[href$=".txt"]:before, #acc_arches_override a.link[href$=".zip"]:before, #acc_arches_override a.link[href*=".ppt"]:before, #acc_arches_override a.link[href*=".pptx"]:before, #acc_arches_override a.link[href$=".csv"]:before, #acc_arches_override a.link[href$=".xls"]:before, #acc_arches_override a.link[href$=".xlsx"]:before, #acc_arches_override a.link[href$=".mp4"]:before, #acc_arches_override a.link[href$=".mov"]:before,
+#acc_arches_override a.link-light[href$=".pdf"]:before,
+#acc_arches_override a.link-light[href$=".doc"]:before,
+#acc_arches_override a.link-light[href$=".docx"]:before,
+#acc_arches_override a.link-light[href$=".txt"]:before,
+#acc_arches_override a.link-light[href$=".zip"]:before,
+#acc_arches_override a.link-light[href*=".ppt"]:before,
+#acc_arches_override a.link-light[href*=".pptx"]:before,
+#acc_arches_override a.link-light[href$=".csv"]:before,
+#acc_arches_override a.link-light[href$=".xls"]:before,
+#acc_arches_override a.link-light[href$=".xlsx"]:before,
+#acc_arches_override a.link-light[href$=".mp4"]:before,
+#acc_arches_override a.link-light[href$=".mov"]:before,
+#acc_arches_override .reading-typography a[href$=".pdf"]:before,
+#acc_arches_override .reading-typography a[href$=".doc"]:before,
+#acc_arches_override .reading-typography a[href$=".docx"]:before,
+#acc_arches_override .reading-typography a[href$=".txt"]:before,
+#acc_arches_override .reading-typography a[href$=".zip"]:before,
+#acc_arches_override .reading-typography a[href*=".ppt"]:before,
+#acc_arches_override .reading-typography a[href*=".pptx"]:before,
+#acc_arches_override .reading-typography a[href$=".csv"]:before,
+#acc_arches_override .reading-typography a[href$=".xls"]:before,
+#acc_arches_override .reading-typography a[href$=".xlsx"]:before,
+#acc_arches_override .reading-typography a[href$=".mp4"]:before,
+#acc_arches_override .reading-typography a[href$=".mov"]:before {
   width: 1.28571429em;
   margin-right: 4px;
   margin-right: 0.25rem;
   text-align: center;
 }
-#acc_arches_override .icon-after:after, #acc_arches_override a.link[target=_blank]:after, #acc_arches_override a.link[href^=http][target=_blank]:after, #acc_arches_override a.link[href^=https][target=_blank]:after,
+#acc_arches_override .icon-after:after, #acc_arches_override a.link[target=_blank]:after, #acc_arches_override a.link[href^=http][target=_blank]:after, #acc_arches_override a.link[href^=https][target=_blank]:after, #acc_arches_override a.link[href^="mailto:"]:after, #acc_arches_override a.link[href^="tel:"]:after,
 #acc_arches_override a.link-light[target=_blank]:after,
 #acc_arches_override a.link-light[href^=http][target=_blank]:after,
 #acc_arches_override a.link-light[href^=https][target=_blank]:after,
-#acc_arches_override .typography a[target=_blank]:after,
-#acc_arches_override .typography a[href^=http][target=_blank]:after,
-#acc_arches_override .typography a[href^=https][target=_blank]:after {
+#acc_arches_override a.link-light[href^="mailto:"]:after,
+#acc_arches_override a.link-light[href^="tel:"]:after,
+#acc_arches_override .reading-typography a[target=_blank]:after,
+#acc_arches_override .reading-typography a[href^=http][target=_blank]:after,
+#acc_arches_override .reading-typography a[href^=https][target=_blank]:after,
+#acc_arches_override .reading-typography a[href^="mailto:"]:after,
+#acc_arches_override .reading-typography a[href^="tel:"]:after {
   width: 1.28571429em;
   margin-left: 4px;
   margin-left: 0.25rem;
   text-align: center;
 }
-#acc_arches_override .link {
+#acc_arches_override .link, #acc_arches_override .reading-typography a {
   color: #094135;
 }
-#acc_arches_override .link:hover {
+#acc_arches_override .link:hover, #acc_arches_override .reading-typography a:hover {
   color: black;
 }
 #acc_arches_override .link-light {
   color: #1ccea8;
 }
 #acc_arches_override .link-light:hover {
-  color: #8cf0da;
+  color: #92f0dc;
+}
+#acc_arches_override a.link:hover,
+#acc_arches_override a.link-light:hover,
+#acc_arches_override .reading-typography a:hover {
+  text-decoration: underline;
 }
 #acc_arches_override a.link[href$=".pdf"]:before,
 #acc_arches_override a.link-light[href$=".pdf"]:before,
-#acc_arches_override .typography a[href$=".pdf"]:before {
+#acc_arches_override .reading-typography a[href$=".pdf"]:before {
   content: "";
 }
 #acc_arches_override a.link[href$=".doc"]:before, #acc_arches_override a.link[href$=".docx"]:before, #acc_arches_override a.link[href$=".txt"]:before,
 #acc_arches_override a.link-light[href$=".doc"]:before,
 #acc_arches_override a.link-light[href$=".docx"]:before,
 #acc_arches_override a.link-light[href$=".txt"]:before,
-#acc_arches_override .typography a[href$=".doc"]:before,
-#acc_arches_override .typography a[href$=".docx"]:before,
-#acc_arches_override .typography a[href$=".txt"]:before {
+#acc_arches_override .reading-typography a[href$=".doc"]:before,
+#acc_arches_override .reading-typography a[href$=".docx"]:before,
+#acc_arches_override .reading-typography a[href$=".txt"]:before {
   content: "";
 }
 #acc_arches_override a.link[href$=".zip"]:before,
 #acc_arches_override a.link-light[href$=".zip"]:before,
-#acc_arches_override .typography a[href$=".zip"]:before {
+#acc_arches_override .reading-typography a[href$=".zip"]:before {
   content: "";
 }
 #acc_arches_override a.link[href*=".ppt"]:before, #acc_arches_override a.link[href*=".pptx"]:before,
 #acc_arches_override a.link-light[href*=".ppt"]:before,
 #acc_arches_override a.link-light[href*=".pptx"]:before,
-#acc_arches_override .typography a[href*=".ppt"]:before,
-#acc_arches_override .typography a[href*=".pptx"]:before {
+#acc_arches_override .reading-typography a[href*=".ppt"]:before,
+#acc_arches_override .reading-typography a[href*=".pptx"]:before {
   content: "";
 }
 #acc_arches_override a.link[href$=".csv"]:before, #acc_arches_override a.link[href$=".xls"]:before, #acc_arches_override a.link[href$=".xlsx"]:before,
 #acc_arches_override a.link-light[href$=".csv"]:before,
 #acc_arches_override a.link-light[href$=".xls"]:before,
 #acc_arches_override a.link-light[href$=".xlsx"]:before,
-#acc_arches_override .typography a[href$=".csv"]:before,
-#acc_arches_override .typography a[href$=".xls"]:before,
-#acc_arches_override .typography a[href$=".xlsx"]:before {
+#acc_arches_override .reading-typography a[href$=".csv"]:before,
+#acc_arches_override .reading-typography a[href$=".xls"]:before,
+#acc_arches_override .reading-typography a[href$=".xlsx"]:before {
   content: "";
 }
 #acc_arches_override a.link[href$=".mp4"]:before, #acc_arches_override a.link[href$=".mov"]:before,
 #acc_arches_override a.link-light[href$=".mp4"]:before,
 #acc_arches_override a.link-light[href$=".mov"]:before,
-#acc_arches_override .typography a[href$=".mp4"]:before,
-#acc_arches_override .typography a[href$=".mov"]:before {
+#acc_arches_override .reading-typography a[href$=".mp4"]:before,
+#acc_arches_override .reading-typography a[href$=".mov"]:before {
   content: "";
 }
 #acc_arches_override a.link[target=_blank]:after, #acc_arches_override a.link[href^=http][target=_blank]:after, #acc_arches_override a.link[href^=https][target=_blank]:after,
 #acc_arches_override a.link-light[target=_blank]:after,
 #acc_arches_override a.link-light[href^=http][target=_blank]:after,
 #acc_arches_override a.link-light[href^=https][target=_blank]:after,
-#acc_arches_override .typography a[target=_blank]:after,
-#acc_arches_override .typography a[href^=http][target=_blank]:after,
-#acc_arches_override .typography a[href^=https][target=_blank]:after {
+#acc_arches_override .reading-typography a[target=_blank]:after,
+#acc_arches_override .reading-typography a[href^=http][target=_blank]:after,
+#acc_arches_override .reading-typography a[href^=https][target=_blank]:after {
   content: "";
 }
-#acc_arches_override a.link[href^="mailto:"]:before,
-#acc_arches_override a.link-light[href^="mailto:"]:before,
-#acc_arches_override .typography a[href^="mailto:"]:before {
+#acc_arches_override a.link[href^="mailto:"]:after,
+#acc_arches_override a.link-light[href^="mailto:"]:after,
+#acc_arches_override .reading-typography a[href^="mailto:"]:after {
   content: "";
 }
-#acc_arches_override a.link[href^="tel:"]:before,
-#acc_arches_override a.link-light[href^="tel:"]:before,
-#acc_arches_override .typography a[href^="tel:"]:before {
+#acc_arches_override a.link[href^="tel:"]:after,
+#acc_arches_override a.link-light[href^="tel:"]:after,
+#acc_arches_override .reading-typography a[href^="tel:"]:after {
   content: "";
 }
-#acc_arches_override a.link[href^="fax:"]:before,
-#acc_arches_override a.link-light[href^="fax:"]:before,
-#acc_arches_override .typography a[href^="fax:"]:before {
+#acc_arches_override a.link[href^="fax:"]:after,
+#acc_arches_override a.link-light[href^="fax:"]:after,
+#acc_arches_override .reading-typography a[href^="fax:"]:after {
   content: "";
-}
-#acc_arches_override a.link:hover,
-#acc_arches_override a.link-light:hover,
-#acc_arches_override .typography a:hover {
-  text-decoration: underline;
 }
 #acc_arches_override .expanded-click-area::after {
   z-index: 1;
@@ -5167,6 +5232,23 @@
 #acc_arches_override .container,
 #acc_arches_override .card {
   position: relative;
+}
+#acc_arches_override .reading-typography h1,
+#acc_arches_override .reading-typography h2,
+#acc_arches_override .reading-typography h3,
+#acc_arches_override .reading-typography h4,
+#acc_arches_override .reading-typography h5,
+#acc_arches_override .reading-typography h6 {
+  margin: 16px 0 8px;
+  margin: 1rem 0 0.5rem;
+}
+#acc_arches_override .reading-typography ul,
+#acc_arches_override .reading-typography ol {
+  line-height: 1.5;
+}
+#acc_arches_override .reading-typography p + p {
+  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 #acc_arches_override .font_unset {
   font-size: unset;
@@ -6021,16 +6103,16 @@
   line-height: 1 !important;
 }
 #acc_arches_override .lh_1 {
-  line-height: 1.35 !important;
+  line-height: 1.1 !important;
 }
 #acc_arches_override .lh_2 {
-  line-height: 1.65 !important;
+  line-height: 1.35 !important;
 }
 #acc_arches_override .lh_3 {
-  line-height: 1.85 !important;
+  line-height: 1.6 !important;
 }
 #acc_arches_override .lh_4 {
-  line-height: 2.1 !important;
+  line-height: 1.5 !important;
 }
 #acc_arches_override .lh_5 {
   line-height: 2.5 !important;
@@ -7108,9 +7190,6 @@
   padding: 32px  !important;
   padding: 2rem  !important;
 }
-#acc_arches_override .p_auto {
-  padding: auto  !important;
-}
 #acc_arches_override .p-y_0 {
   padding-top: 0  !important;
   padding-bottom: 0  !important;
@@ -7142,10 +7221,6 @@
   padding-top: 2rem  !important;
   padding-bottom: 32px  !important;
   padding-bottom: 2rem  !important;
-}
-#acc_arches_override .p-y_auto {
-  padding-top: auto  !important;
-  padding-bottom: auto  !important;
 }
 #acc_arches_override .p-x_0 {
   padding-right: 0  !important;
@@ -7179,10 +7254,6 @@
   padding-left: 32px  !important;
   padding-left: 2rem  !important;
 }
-#acc_arches_override .p-x_auto {
-  padding-right: auto  !important;
-  padding-left: auto  !important;
-}
 #acc_arches_override .p-t_0 {
   padding-top: 0  !important;
 }
@@ -7204,9 +7275,6 @@
 #acc_arches_override .p-t_5 {
   padding-top: 32px  !important;
   padding-top: 2rem  !important;
-}
-#acc_arches_override .p-t_auto {
-  padding-top: auto  !important;
 }
 #acc_arches_override .p-b_0 {
   padding-bottom: 0  !important;
@@ -7230,9 +7298,6 @@
   padding-bottom: 32px  !important;
   padding-bottom: 2rem  !important;
 }
-#acc_arches_override .p-b_auto {
-  padding-bottom: auto  !important;
-}
 #acc_arches_override .p-l_0 {
   padding-left: 0  !important;
 }
@@ -7254,9 +7319,6 @@
 #acc_arches_override .p-l_5 {
   padding-left: 32px  !important;
   padding-left: 2rem  !important;
-}
-#acc_arches_override .p-l_auto {
-  padding-left: auto  !important;
 }
 #acc_arches_override .p-r_0 {
   padding-right: 0  !important;
@@ -7280,9 +7342,6 @@
   padding-right: 32px  !important;
   padding-right: 2rem  !important;
 }
-#acc_arches_override .p-r_auto {
-  padding-right: auto  !important;
-}
 @media only screen and (min-width : 768px) {
   #acc_arches_override .p_0\:md {
     padding: 0  !important;
@@ -7301,9 +7360,6 @@
   }
   #acc_arches_override .p_5\:md {
     padding: 2rem  !important;
-  }
-  #acc_arches_override .p_auto\:md {
-    padding: auto  !important;
   }
   #acc_arches_override .p-y_0\:md {
     padding-top: 0  !important;
@@ -7329,10 +7385,6 @@
     padding-top: 2rem  !important;
     padding-bottom: 2rem  !important;
   }
-  #acc_arches_override .p-y_auto\:md {
-    padding-top: auto  !important;
-    padding-bottom: auto  !important;
-  }
   #acc_arches_override .p-x_0\:md {
     padding-right: 0  !important;
     padding-left: 0  !important;
@@ -7357,10 +7409,6 @@
     padding-right: 2rem  !important;
     padding-left: 2rem  !important;
   }
-  #acc_arches_override .p-x_auto\:md {
-    padding-right: auto  !important;
-    padding-left: auto  !important;
-  }
   #acc_arches_override .p-t_0\:md {
     padding-top: 0  !important;
   }
@@ -7378,9 +7426,6 @@
   }
   #acc_arches_override .p-t_5\:md {
     padding-top: 2rem  !important;
-  }
-  #acc_arches_override .p-t_auto\:md {
-    padding-top: auto  !important;
   }
   #acc_arches_override .p-b_0\:md {
     padding-bottom: 0  !important;
@@ -7400,9 +7445,6 @@
   #acc_arches_override .p-b_5\:md {
     padding-bottom: 2rem  !important;
   }
-  #acc_arches_override .p-b_auto\:md {
-    padding-bottom: auto  !important;
-  }
   #acc_arches_override .p-l_0\:md {
     padding-left: 0  !important;
   }
@@ -7421,9 +7463,6 @@
   #acc_arches_override .p-l_5\:md {
     padding-left: 2rem  !important;
   }
-  #acc_arches_override .p-l_auto\:md {
-    padding-left: auto  !important;
-  }
   #acc_arches_override .p-r_0\:md {
     padding-right: 0  !important;
   }
@@ -7441,9 +7480,6 @@
   }
   #acc_arches_override .p-r_5\:md {
     padding-right: 2rem  !important;
-  }
-  #acc_arches_override .p-r_auto\:md {
-    padding-right: auto  !important;
   }
 }
 @media only screen and (min-width : 1024px) {
@@ -7464,9 +7500,6 @@
   }
   #acc_arches_override .p_5\:lg {
     padding: 2rem  !important;
-  }
-  #acc_arches_override .p_auto\:lg {
-    padding: auto  !important;
   }
   #acc_arches_override .p-y_0\:lg {
     padding-top: 0  !important;
@@ -7492,10 +7525,6 @@
     padding-top: 2rem  !important;
     padding-bottom: 2rem  !important;
   }
-  #acc_arches_override .p-y_auto\:lg {
-    padding-top: auto  !important;
-    padding-bottom: auto  !important;
-  }
   #acc_arches_override .p-x_0\:lg {
     padding-right: 0  !important;
     padding-left: 0  !important;
@@ -7520,10 +7549,6 @@
     padding-right: 2rem  !important;
     padding-left: 2rem  !important;
   }
-  #acc_arches_override .p-x_auto\:lg {
-    padding-right: auto  !important;
-    padding-left: auto  !important;
-  }
   #acc_arches_override .p-t_0\:lg {
     padding-top: 0  !important;
   }
@@ -7541,9 +7566,6 @@
   }
   #acc_arches_override .p-t_5\:lg {
     padding-top: 2rem  !important;
-  }
-  #acc_arches_override .p-t_auto\:lg {
-    padding-top: auto  !important;
   }
   #acc_arches_override .p-b_0\:lg {
     padding-bottom: 0  !important;
@@ -7563,9 +7585,6 @@
   #acc_arches_override .p-b_5\:lg {
     padding-bottom: 2rem  !important;
   }
-  #acc_arches_override .p-b_auto\:lg {
-    padding-bottom: auto  !important;
-  }
   #acc_arches_override .p-l_0\:lg {
     padding-left: 0  !important;
   }
@@ -7584,9 +7603,6 @@
   #acc_arches_override .p-l_5\:lg {
     padding-left: 2rem  !important;
   }
-  #acc_arches_override .p-l_auto\:lg {
-    padding-left: auto  !important;
-  }
   #acc_arches_override .p-r_0\:lg {
     padding-right: 0  !important;
   }
@@ -7604,9 +7620,6 @@
   }
   #acc_arches_override .p-r_5\:lg {
     padding-right: 2rem  !important;
-  }
-  #acc_arches_override .p-r_auto\:lg {
-    padding-right: auto  !important;
   }
 }
 #acc_arches_override .initial {
@@ -8857,38 +8870,38 @@
   grid-column-gap: 0 !important;
 }
 #acc_arches_override .gap-x_1 {
-  grid-column-gap: 0.25rem !important;
+  grid-column-gap: 1px !important;
 }
 #acc_arches_override .gap-x_2 {
-  grid-column-gap: 0.375rem !important;
+  grid-column-gap: 0.25rem !important;
 }
 #acc_arches_override .gap-x_3 {
   grid-column-gap: 0.5rem !important;
 }
 #acc_arches_override .gap-x_4 {
-  grid-column-gap: 0.75rem !important;
+  grid-column-gap: 1rem !important;
 }
 #acc_arches_override .gap-x_5 {
-  grid-column-gap: 1rem !important;
+  grid-column-gap: 2rem !important;
 }
 @media only screen and (min-width : 768px) {
   #acc_arches_override .gap-x_0\:md {
     grid-column-gap: 0 !important;
   }
   #acc_arches_override .gap-x_1\:md {
-    grid-column-gap: 0.25rem !important;
+    grid-column-gap: 1px !important;
   }
   #acc_arches_override .gap-x_2\:md {
-    grid-column-gap: 0.375rem !important;
+    grid-column-gap: 0.25rem !important;
   }
   #acc_arches_override .gap-x_3\:md {
     grid-column-gap: 0.5rem !important;
   }
   #acc_arches_override .gap-x_4\:md {
-    grid-column-gap: 0.75rem !important;
+    grid-column-gap: 1rem !important;
   }
   #acc_arches_override .gap-x_5\:md {
-    grid-column-gap: 1rem !important;
+    grid-column-gap: 2rem !important;
   }
 }
 @media only screen and (min-width : 1024px) {
@@ -8896,57 +8909,57 @@
     grid-column-gap: 0 !important;
   }
   #acc_arches_override .gap-x_1\:lg {
-    grid-column-gap: 0.25rem !important;
+    grid-column-gap: 1px !important;
   }
   #acc_arches_override .gap-x_2\:lg {
-    grid-column-gap: 0.375rem !important;
+    grid-column-gap: 0.25rem !important;
   }
   #acc_arches_override .gap-x_3\:lg {
     grid-column-gap: 0.5rem !important;
   }
   #acc_arches_override .gap-x_4\:lg {
-    grid-column-gap: 0.75rem !important;
+    grid-column-gap: 1rem !important;
   }
   #acc_arches_override .gap-x_5\:lg {
-    grid-column-gap: 1rem !important;
+    grid-column-gap: 2rem !important;
   }
 }
 #acc_arches_override .gap-y_0 {
   grid-row-gap: 0 !important;
 }
 #acc_arches_override .gap-y_1 {
-  grid-row-gap: 0.25rem !important;
+  grid-row-gap: 1px !important;
 }
 #acc_arches_override .gap-y_2 {
-  grid-row-gap: 0.375rem !important;
+  grid-row-gap: 0.25rem !important;
 }
 #acc_arches_override .gap-y_3 {
   grid-row-gap: 0.5rem !important;
 }
 #acc_arches_override .gap-y_4 {
-  grid-row-gap: 0.75rem !important;
+  grid-row-gap: 1rem !important;
 }
 #acc_arches_override .gap-y_5 {
-  grid-row-gap: 1rem !important;
+  grid-row-gap: 2rem !important;
 }
 @media only screen and (min-width : 768px) {
   #acc_arches_override .gap-y_0\:md {
     grid-row-gap: 0 !important;
   }
   #acc_arches_override .gap-y_1\:md {
-    grid-row-gap: 0.25rem !important;
+    grid-row-gap: 1px !important;
   }
   #acc_arches_override .gap-y_2\:md {
-    grid-row-gap: 0.375rem !important;
+    grid-row-gap: 0.25rem !important;
   }
   #acc_arches_override .gap-y_3\:md {
     grid-row-gap: 0.5rem !important;
   }
   #acc_arches_override .gap-y_4\:md {
-    grid-row-gap: 0.75rem !important;
+    grid-row-gap: 1rem !important;
   }
   #acc_arches_override .gap-y_5\:md {
-    grid-row-gap: 1rem !important;
+    grid-row-gap: 2rem !important;
   }
 }
 @media only screen and (min-width : 1024px) {
@@ -8954,19 +8967,19 @@
     grid-row-gap: 0 !important;
   }
   #acc_arches_override .gap-y_1\:lg {
-    grid-row-gap: 0.25rem !important;
+    grid-row-gap: 1px !important;
   }
   #acc_arches_override .gap-y_2\:lg {
-    grid-row-gap: 0.375rem !important;
+    grid-row-gap: 0.25rem !important;
   }
   #acc_arches_override .gap-y_3\:lg {
     grid-row-gap: 0.5rem !important;
   }
   #acc_arches_override .gap-y_4\:lg {
-    grid-row-gap: 0.75rem !important;
+    grid-row-gap: 1rem !important;
   }
   #acc_arches_override .gap-y_5\:lg {
-    grid-row-gap: 1rem !important;
+    grid-row-gap: 2rem !important;
   }
 }
 #acc_arches_override .template-x_15 {
@@ -13705,15 +13718,41 @@
   text-align: center;
   vertical-align: top;
 }
-#acc_arches_override .icon-before:before, #acc_arches_override .icon-after:after, #acc_arches_override a.link:before,
-#acc_arches_override a.link-light:before,
-#acc_arches_override .typography a:before, #acc_arches_override a.link[target=_blank]:after, #acc_arches_override a.link[href^=http][target=_blank]:after, #acc_arches_override a.link[href^=https][target=_blank]:after,
+#acc_arches_override .icon-before:before, #acc_arches_override .icon-after:after, #acc_arches_override a.link[href$=".pdf"]:before, #acc_arches_override a.link[href$=".doc"]:before, #acc_arches_override a.link[href$=".docx"]:before, #acc_arches_override a.link[href$=".txt"]:before, #acc_arches_override a.link[href$=".zip"]:before, #acc_arches_override a.link[href*=".ppt"]:before, #acc_arches_override a.link[href*=".pptx"]:before, #acc_arches_override a.link[href$=".csv"]:before, #acc_arches_override a.link[href$=".xls"]:before, #acc_arches_override a.link[href$=".xlsx"]:before, #acc_arches_override a.link[href$=".mp4"]:before, #acc_arches_override a.link[href$=".mov"]:before,
+#acc_arches_override a.link-light[href$=".pdf"]:before,
+#acc_arches_override a.link-light[href$=".doc"]:before,
+#acc_arches_override a.link-light[href$=".docx"]:before,
+#acc_arches_override a.link-light[href$=".txt"]:before,
+#acc_arches_override a.link-light[href$=".zip"]:before,
+#acc_arches_override a.link-light[href*=".ppt"]:before,
+#acc_arches_override a.link-light[href*=".pptx"]:before,
+#acc_arches_override a.link-light[href$=".csv"]:before,
+#acc_arches_override a.link-light[href$=".xls"]:before,
+#acc_arches_override a.link-light[href$=".xlsx"]:before,
+#acc_arches_override a.link-light[href$=".mp4"]:before,
+#acc_arches_override a.link-light[href$=".mov"]:before,
+#acc_arches_override .reading-typography a[href$=".pdf"]:before,
+#acc_arches_override .reading-typography a[href$=".doc"]:before,
+#acc_arches_override .reading-typography a[href$=".docx"]:before,
+#acc_arches_override .reading-typography a[href$=".txt"]:before,
+#acc_arches_override .reading-typography a[href$=".zip"]:before,
+#acc_arches_override .reading-typography a[href*=".ppt"]:before,
+#acc_arches_override .reading-typography a[href*=".pptx"]:before,
+#acc_arches_override .reading-typography a[href$=".csv"]:before,
+#acc_arches_override .reading-typography a[href$=".xls"]:before,
+#acc_arches_override .reading-typography a[href$=".xlsx"]:before,
+#acc_arches_override .reading-typography a[href$=".mp4"]:before,
+#acc_arches_override .reading-typography a[href$=".mov"]:before, #acc_arches_override a.link[target=_blank]:after, #acc_arches_override a.link[href^=http][target=_blank]:after, #acc_arches_override a.link[href^=https][target=_blank]:after, #acc_arches_override a.link[href^="mailto:"]:after, #acc_arches_override a.link[href^="tel:"]:after,
 #acc_arches_override a.link-light[target=_blank]:after,
 #acc_arches_override a.link-light[href^=http][target=_blank]:after,
 #acc_arches_override a.link-light[href^=https][target=_blank]:after,
-#acc_arches_override .typography a[target=_blank]:after,
-#acc_arches_override .typography a[href^=http][target=_blank]:after,
-#acc_arches_override .typography a[href^=https][target=_blank]:after {
+#acc_arches_override a.link-light[href^="mailto:"]:after,
+#acc_arches_override a.link-light[href^="tel:"]:after,
+#acc_arches_override .reading-typography a[target=_blank]:after,
+#acc_arches_override .reading-typography a[href^=http][target=_blank]:after,
+#acc_arches_override .reading-typography a[href^=https][target=_blank]:after,
+#acc_arches_override .reading-typography a[href^="mailto:"]:after,
+#acc_arches_override .reading-typography a[href^="tel:"]:after {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-family: "Font Awesome 5 Pro";
