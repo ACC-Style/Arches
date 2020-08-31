@@ -96,7 +96,8 @@ html {
 }
 
 /**  Textures  **/
-div[class*=texture_] {
+.texture-dynamic, .texture_cross, .disabled,
+.disabled:hover, .texture_disabled, .texture_dust, .texture_dark, .texture_medium, .texture_light {
   background-attachment: local;
   background-origin: border-box;
   background-position: top right;
@@ -1116,7 +1117,7 @@ External Resource
 Description: External Sections of content that are helpful to cross promote with in a confernces. 
 
 Markup:
-<article class="aspect_21x9 bg-blend_luminosity bg_cover bg_no-repeat bg_primary-2 br_1 br_black-3 br_radius br_solid flex_shrink generic_video generic_video-nolabel h:bg_secondary-n2 relative shadow_3 text_center c_priamry"><em class="opacity_5 absolute t_1 r_2 fas font_4 fa-external-link-square-alt"></em><a data-sf-ec-immutable="" class="block font_7 font_6:md font_9:lg font_display font_xbold h:undecorated m_0 p_4 p_5:lg text_left uppercase" style="line-height: .85em" href="https://www.acc.org/latest-in-cardiology/features/accs-coronavirus-disease-2019-covid-19-hub?_ga=2.121293644.574512269.1591713176-49927898.1591404069#sort=%40fcommonsortdate90022%20descending" target="_blank"><span class="font_3 font_4:md m_0 m-l_0 m-b_n2 lh_0 block m-b_2">ACC’s</span>
+<article class="aspect_21x9 bg-blend_luminosity bg_cover bg_no-repeat bg_primary-2 br_1 br_black-3 br_radius br_solid flex_shrink generic_video generic_video-nolabel h:bg_secondary-n2 relative shadow_3 text_center c_primary"><em class="opacity_5 absolute t_1 r_2 fas font_4 fa-external-link-square-alt"></em><a data-sf-ec-immutable="" class="block font_7 font_6:md font_9:lg font_display font_xbold h:undecorated m_0 p_4 p_5:lg text_left uppercase" style="line-height: .85em" href="https://www.acc.org/latest-in-cardiology/features/accs-coronavirus-disease-2019-covid-19-hub?_ga=2.121293644.574512269.1591713176-49927898.1591404069#sort=%40fcommonsortdate90022%20descending" target="_blank"><span class="font_3 font_4:md m_0 m-l_0 m-b_n2 lh_0 block m-b_2">ACC’s</span>
  <span class=" block"><span class="nowrap">COVID-19</span> HUB</span>
  </a>
  </article>
@@ -1202,7 +1203,7 @@ p {
 
 ul,
 ol {
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 h6,h5 {
@@ -2679,24 +2680,85 @@ Reading Typography
 Reading typography is a container class to opt into an override of the basic typography from arches. Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves reading typography lacking. Most ways typogrpahy content is added to a site is devoid of hooks to add styles to an element so work around that restriction and to unified styling across reading experiances the "reading-typography" class is used on the parrent container.  Please note that the reading typography can still look a bit different look depending on the brand or the framework.  
 
 <section class="max-w_65 reading-typography">
-<h1>Reading Typography: <small>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-elit.</small></h1>
-<h2>Aenean commodo ligula eget dolor aenean massa</h2>
-<h3>Cum sociis natoque penatibus et magnis dis 
-parturient montes nascetur ridiculus mus</h3>
-<h4>Donec quam felis ultricies nec pellentesque eu 
-pretium quis sem nlla consequat massa quis enim</h4>
-<h5>Donec pede justo fringilla vel aliquet nec vulputate 
-eget arcu</h5>
-<h6>In enim justo rhoncus ut imperdiet a venenatis vitae 
-justo</h6>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient 
-montes, nascetur ridiculus mus. Donec quam felis, 
-ultricies nec, pellentesque eu, pretium quis, sem.</p>
-<article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article>
-</section>
+  <h1>This is the primary heading and there should only be one of these per page</h1>
+    <p>A small paragraph to <em>emphasis</em> and show <strong>important</strong> bits.</p>
+    <ul>
+        <li>This is a list item</li>
+        <li>So is this - there could be more</li>
+        <li>Make sure to style list items to:
+            <ul>
+                <li>Not forgetting child list items</li>
+                <li>Not forgetting child list items</li>
+                <li>Not forgetting child list items</li>
+                <li>Not forgetting child list items</li>
+            </ul>
+        </li>
+        <li>A couple more</li>
+        <li>top level list items</li>
+    </ul>
+    <p>Don't forget <strong>Ordered lists</strong>:</p>
+    <ol>
+       <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+       <li>Aliquam tincidunt mauris eu risus.
+        <ol>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+        </ol>
+        </li>
+       <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+       <li>Aliquam tincidunt mauris eu risus.
+    </li></ol>
+    <h2>A sub heading which is not as important as the first, but is quite imporant overall</h2>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <table>
+        <tbody><tr>
+            <th>Table Heading</th>
+            <th>Table Heading</th>
+        </tr>
+        <tr>
+            <td>table data</td>
+            <td>table data</td>
+        </tr>
+        <tr>
+            <td>table data</td>
+            <td>table data</td>
+        </tr>
+        <tr>
+            <td>table data</td>
+            <td>table data</td>
+        </tr>
+        <tr>
+            <td>table data</td>
+            <td>table data</td>
+        </tr>
+    </tbody></table>    	
+    <h3>A sub heading which is not as important as the second, but should be used with consideration</h3>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <blockquote><p>“Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”</p></blockquote>
+    <h4>A sub heading which is not as important as the second, but should be used with consideration</h4>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <pre><code>
+#header h1 a { 
+    display: block; 
+    width: 300px; 
+    height: 80px; 
+}
+</code></pre>
+    <h5>A sub heading which is not as important as the second, but should be used with consideration</h5>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <dl>
+   <dt>Definition list</dt>
+   <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+	commodo consequat.</dd>
+	   <dt>Lorem ipsum dolor sit amet</dt>
+	   <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+	commodo consequat.</dd>
+	</dl>
+	<h6>This heading plays a relatively small bit part role, if you use it at all</h6>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+<section>
 
 Weight: -9
 
@@ -3440,22 +3502,81 @@ The breakdown of the names for UCs follow a structured patter for easy muscle me
 
  Styleguide UC.Shorthand
 */
-.reading-typography h1,
+.reading-typography h1, .reading-typography h2, .reading-typography h3, .reading-typography h4, .reading-typography h5, .reading-typography h6 {
+  color: #004176;
+}
+.reading-typography h1:not(:first-child),
+.reading-typography h2:not(:first-child),
+.reading-typography h3:not(:first-child),
+.reading-typography h4:not(:first-child),
+.reading-typography h5:not(:first-child),
+.reading-typography h6:not(:first-child) {
+  margin: 24px 0 12px;
+  margin: 1.5rem 0 0.75rem;
+}
+.reading-typography h1 {
+  line-height: 1.1;
+}
 .reading-typography h2,
 .reading-typography h3,
 .reading-typography h4,
 .reading-typography h5,
-.reading-typography h6 {
-  margin: 16px 0 8px;
-  margin: 1rem 0 0.5rem;
-}
-.reading-typography ul,
+.reading-typography h6,.reading-typography ul,
 .reading-typography ol {
-  line-height: 1.5;
+  line-height: 1.35;
+}
+.reading-typography li {
+  margin-top: 4px;
+  margin-top: 0.25rem;
+  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
 }
 .reading-typography p + p {
   margin-top: 8px;
   margin-top: 0.5rem;
+}
+.reading-typography ul,
+.reading-typography ol {
+  list-style-position: outside;
+}
+.reading-typography ul {
+  list-style-type: disc;
+}
+.reading-typography ul ul {
+  list-style-type: circle;
+}
+.reading-typography ol {
+  list-style-type: decimal;
+}
+.reading-typography ol ol {
+  list-style-type: lower-alpha;
+}
+.reading-typography li > ul,
+.reading-typography li > ol {
+  margin-left: 4px;
+  margin-left: 0.25rem;
+}
+.reading-typography accr {
+  border-bottom: 1px dotted #00aeef;
+}
+.reading-typography hr {
+  margin: 16px 0;
+  margin: 1rem 0;
+}
+.reading-typography img {
+  width: 100%;
+  margin: 0;
+  border: 1px solid #004176;
+}
+.reading-typography p,
+.reading-typography ul,
+.reading-typography ol,
+.reading-typography dl,
+.reading-typography table {
+  margin-top: 8px;
+  margin-top: 0.5rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 /*

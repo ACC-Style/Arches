@@ -94,7 +94,8 @@ $font-size-base: $base-font-size-rem; // Assumes the browser default, typically 
 $font-size-lg: map-deep-get($value-to-unit, font-size, 2);
 $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
 $link-color-dark: get-themecolor(accent, -3);
-$link-color-light: get-themecolor(accent, 1);/** Built With acc Branding **//**  Default Brands    *********************************/
+$link-color-light: get-themecolor(accent, 1);
+$headline-color: get-themecolor(primary,-1);/** Built With acc Branding **//**  Default Brands    *********************************/
 /**  Colors  **/
 
 @import 'setup/config/colors';
@@ -108,6 +109,8 @@ $link-color-light: get-themecolor(accent, 1);/** Built With acc Branding **//** 
 
 $link-color-dark: get-themecolor(accent, -3);
 $link-color-light: get-themecolor(accent, 1);
+// reading-typography
+$headline-color: inherit !default;
 /**  Zurb Foundation Framework Setup Files. ***************************************/
 @import '../../node_modules/foundation-sites/scss/util/util';
 @import 'setup/config/__config.zurb';

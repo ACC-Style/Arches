@@ -1,26 +1,73 @@
 // Nothing in here can have important! to reduce the need for overrides.
-.reading-typography{
-   // a and links are takend care of in the _link-decoration.scss
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: $margin_4 $margin_0 $margin_3;
-}
- h1{}
- h2{}
- h3{}
- h4{}
- h5{}
-ul,
-ol {
-    line-height: $line-height_4;
-}
- p+p {
-    margin-top: $margin_3;
-}
-
-
+.reading-typography {
+    // a and links are takend care of in the _link-decoration.scss
+    h1,h2,h3,h4,h5,h6{ color:$headline-color;}
+    h1:not(:first-child),
+    h2:not(:first-child),
+    h3:not(:first-child),
+    h4:not(:first-child),
+    h5:not(:first-child),
+    h6:not(:first-child) {
+        margin: $vertical-space $margin_0 $vertical-space/2;
+    }
+    h1{line-height: $line-height_1;}
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        line-height: $line-height_2;     
+    }
+   
+    ul,
+    ol {
+        line-height: $line-height_2;
+    }
+    li {
+        margin-top: $margin_2;
+        margin-bottom: $margin_2;
+    }
+    p + p {
+        margin-top: $margin_3;
+    }
+    ul,
+    ol {
+        list-style-position: outside;
+    }
+    ul {
+        list-style-type: disc;
+    }
+    ul ul {
+        list-style-type: circle;
+    }
+    ol {
+        list-style-type: decimal;
+    }
+    ol ol {
+        list-style-type: lower-alpha;
+    }
+    // nested lists
+    li > ul,
+    li > ol {
+        margin-left: $margin_2;
+    }
+    accr {
+        border-bottom: 1px dotted get-themecolor(accent);
+    }
+    hr {
+        margin: $margin_4 0;
+    }
+    img {
+        width: 100%;
+        margin: 0;
+        border: 1px solid get-themecolor(primary);
+    }
+    p,
+    ul,
+    ol,
+    dl,
+    table {
+        margin-top: $margin_3;
+        margin-bottom: $margin_3;
+    }
 }
