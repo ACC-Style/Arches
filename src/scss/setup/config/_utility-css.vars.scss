@@ -1,15 +1,10 @@
 $grid-column-count: 12;
 $optimal-characters: 65;
-$lineheight-crushed: 1.1 !default;
-$lineheight-tight: 1.35 !default;
-$lineheight-normal: 1.6 !default;
-$lineheight-loose: 1.5 !default;
-$lineheight-airy: 2.5 !default;
-$baseline-modifier: 1.5;
 $active-class-name: "is-active" !default;
 $ms-base: 1em;
 $base-font-size: $ms-base;
 $base-font-size-rem: strip-unit($ms-base) * 1rem;
+$baseline-modifier: 1.5;
 $baseline: $baseline-modifier * $base-font-size-rem; // Unitless item * PIXEL Size / Font PIXEL Converted to REM
 // $line-height:strip-unit($baseline-modifier);
 $ms-ratio: $minor-third;
@@ -102,11 +97,11 @@ $value-to-unit: (
 	),
 	line-height: (
 		0: 1,
-		1: $lineheight-crushed,
-		2: $lineheight-tight,
-		3: $lineheight-normal,
-		4: $lineheight-loose,
-		5: $lineheight-airy,
+		1: 1.125,
+		2: 1.35,
+		3: 1.6,
+		4: 1.8,
+		5: 2.5
 	),
 	opacity: (
 		0: 0,
@@ -287,14 +282,6 @@ $value-to-unit: (
 		n3: strip-unit(ms(-3)) * 1rem,
 		n4: strip-unit(ms(-4)) * 1rem,
 		n5: strip-unit(ms(-5)) * 1rem,
-	),
-	font-size-golden: (
-		0: ms-calc(0, $ms-base, $golden),
-		1: ms-calc(1, $ms-base, $golden),
-		2: ms-calc(2, $ms-base, $golden),
-		3: ms-calc(3, $ms-base, $golden),
-		4: ms-calc(4, $ms-base, $golden),
-		5: ms-calc(5, $ms-base, $golden),
 	),
 	display: (
 		block: block,
@@ -699,14 +686,6 @@ $style-definition: (
 		),
 		long-name: ".font-weight",
 		unit: map-get($value-to-unit, "font-weight"),
-	),
-	golden: (
-		short-name: ".font-golden",
-		css-style: (
-			"font-size",
-		),
-		long-name: ".font-size-golden",
-		unit: map-get($value-to-unit, "font-size-golden"),
 	),
 	hover: (
 		short-name: "h\\3A ",
@@ -1158,6 +1137,7 @@ $font_slab: get-css-size(font-family, slab);
 $font_ui: get-css-size(font-family, ui);
 $font_copy: get-css-size(font-family, copy);
 $font_mono: get-css-size(font-family, mono);
+$font_6: get-css-size(font-size, 6);
 $font_5: get-css-size(font-size, 5);
 $font_4: get-css-size(font-size, 4);
 $font_3: get-css-size(font-size, 3);

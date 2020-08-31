@@ -83,7 +83,9 @@ $global-border-radius: 6px;
 $value-to-unit: map-deep-set($value-to-unit, 'radius' 'radius', $global-border-radius);
 $global-border-round: 25px;
 $value-to-unit: map-deep-set($value-to-unit, 'radius' 'round', $global-border-round);
+
 $basicSizeMultiplier: 1rem;
+
 $h1-font-size: map-deep-get($value-to-unit, font-size, 5);
 $h2-font-size: map-deep-get($value-to-unit, font-size, 4);
 $h3-font-size: map-deep-get($value-to-unit, font-size, 3);
@@ -95,7 +97,11 @@ $font-size-lg: map-deep-get($value-to-unit, font-size, 2);
 $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
 $link-color-dark: get-themecolor(accent, -3);
 $link-color-light: get-themecolor(accent, 1);
-$headline-color: get-themecolor(primary,-1);/** Built With acc Branding **//**  Default Brands    *********************************/
+$headline-color: get-themecolor(primary,-1);
+
+
+
+/** Built With acc Branding **//**  Default Brands    *********************************/
 /**  Colors  **/
 
 @import 'setup/config/colors';
@@ -111,6 +117,7 @@ $link-color-dark: get-themecolor(accent, -3);
 $link-color-light: get-themecolor(accent, 1);
 // reading-typography
 $headline-color: inherit !default;
+$reading-min:16px;
 /** Base UC File **//*
 	Recipes
 

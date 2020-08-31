@@ -1673,6 +1673,7 @@
 
   Reading typography is a container class to opt into an override of the basic typography from arches. Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves reading typography lacking. Most ways typogrpahy content is added to a site is devoid of hooks to add styles to an element so work around that restriction and to unified styling across reading experiances the "reading-typography" class is used on the parrent container.  Please note that the reading typography can still look a bit different look depending on the brand or the framework.  
 
+  Markup:
   <section class="max-w_65 reading-typography">
     <h1>This is the primary heading and there should only be one of these per page</h1>
       <p>A small paragraph to <em>emphasis</em> and show <strong>important</strong> bits.</p>
@@ -1705,10 +1706,11 @@
       <h2>A sub heading which is not as important as the first, but is quite imporant overall</h2>
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
       <table>
-          <tbody><tr>
+      <thead><tr>
               <th>Table Heading</th>
               <th>Table Heading</th>
-          </tr>
+          </tr></thead>
+          <tbody>
           <tr>
               <td>table data</td>
               <td>table data</td>
@@ -1765,6 +1767,7 @@
 
   Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves the reading of content text lacking. The overriding styles that are applied to Basic typography is a consistent font treatment (font sizing, font family, and font-weight) and what comes from the baseline frameworks that build the brand.  
 
+  Markup:
   <section class="max-w_65">
   <h1>Basic Typography: <small>Lorem ipsum dolor sit amet, consectetuer adipiscing 
   elit.</small></h1>
@@ -1788,6 +1791,93 @@
   Weight: -9
 
   Styleguide HTML.Unstyled
+
+  */
+  /*
+  ACC Article
+
+  Markup:
+  <div class="reading-typography">
+      <div class="the-text">
+          <div class="contribution-to-literature">
+              <h2>Contribution To Literature:</h2>
+              <p></p>
+              <p>The HOME-PE trial showed that risk stratification can identify approximately one-third of PE patients who can be safely treated at home.</p>
+              <p></p>
+          </div>
+          <div class="description">
+              <h2>Description:</h2>
+              <p></p>
+              <p>The goal of the trial was to evaluate two risk stratification tools among patients diagnosed with pulmonary embolism (PE).</p>
+              <p></p>
+          </div>
+          <div class="study-design">
+              <h2>Study Design</h2>
+              <p></p>
+              <ul>
+                  <li>Randomized</li>
+                  <li>Parallel</li>
+                  <li>Open-label</li>
+              </ul>
+              <p>Eligible patients were randomized to risk stratification with the HESTIA rule (n = 984) versus the simplified Pulmonary Embolism Severity Index (PESI) score (n = 986). Low-risk patients were discharged home, while &gt; low-risk patients were admitted to the hospital.</p>
+              <p>The HESTIA rule is considered low-risk if none of the following apply: hemodynamic instability, thrombolysis or embolectomy, active bleeding or high-risk of bleeding, supplemental oxygen, PE diagnosed during anticoagulation treatment, severe pain requiring intravenous medication, medical or social reason for hospitalization, severe renal or hepatic impairment, or pregnancy.</p>
+              <p>The PESI score assigns a score for each of the following: age &gt;80 years, history of cancer, chronic cardiopulmonary disease, systolic blood pressure &lt;100 mm Hg, heart rate ≥110 beats per minute, or oxygen saturation &lt;90%. Low risk is considered a score of 0. </p>
+              <ul>
+                  <li>Total number of enrollees: 1,970</li>
+                  <li>Duration of follow-up: 90 days</li>
+                  <li>Mean patient age: 64 years</li>
+                  <li>Percentage female:
+                  <ul>
+                  <li>Total number of enrollees: 1,970</li>
+                  <li>Duration of follow-up: 90 days</li>
+                  <li>Mean patient age: 64 years</li>
+                  <li>Percentage female: 48%</li>
+              </ul></li>
+              </ul>
+              <p>Inclusion criteria:</p>
+              <ul>
+                  <li>Patients diagnosed with PE</li>
+              </ul>
+              <p>Other salient features/characteristics: </p>
+              <ul>
+                  <li>In the HESTIA group, 62% were hospitalized, while 38% were managed at home.</li>
+                  <li>In the PESI group, 64% were hospitalized, while 36% were managed at home.</li>
+              </ul>
+              <p></p>
+          </div>
+          <div class="principal-findings">
+              <h2>Principal Findings:</h2>
+              <p></p>
+              <p>The primary outcome, all-cause death, recurrent VTE, or major bleeding at 30 days, occurred in 3.8% of the HESTIA group compared with 3.6% of the PESI group (p for noninferiority = 0.005). </p>
+              <p>Secondary outcomes:</p>
+              <ul>
+                  <li>Proportion of patients actually treated as outpatients: 38.4% of the HESTIA group compared with 36.6% of the PESI group (p for superiority = 0.41)</li>
+                  <li>Rate of low-risk patients eligible for outpatient care: 39.4% of the HESTIA group compared with 48.4% of the PESI group</li>
+                  <li>Patients treated as outpatients among eligible patients: 88.4% of the HESTIA group compared with 64.8% of the PESI group</li>
+              </ul>
+              <p></p>
+          </div>
+          <div class="interpretation">
+              <h2>Interpretation:</h2>
+              <p>Among patients with PE, risk stratification with the HESTIA rule was noninferior to the PESI score on all-cause death, recurrent VTE, or major bleeding. The two strategies were similar regarding the proportion of patients treated at home. By using risk stratification, approximately one-third of low-risk patients with PE could be safely managed at home.<br></p>
+          </div>
+          <div class="legacy-references" id="references-for-article">
+              <h2>References:</h2>
+              <p></p>
+              <p>Presented by Dr. Pierre-Marie Roy at the European Society of Cardiology Virtual Congress, August 31, 2020.</p>
+              <p></p>
+          </div>
+          <p class="topics-list"><b>Clinical Topics:</b> <a href="http://www.acc.org/clinical-topics/anticoagulation-management">Anticoagulation Management, </a><a href="http://www.acc.org/clinical-topics/invasive-cardiovascular-angiography-and-intervention">Invasive Cardiovascular Angiography and Intervention, </a><a href="http://www.acc.org/clinical-topics/prevention">Prevention, </a><a href="http://www.acc.org/clinical-topics/pulmonary-hypertension-and-venous-thromboembolism">Pulmonary Hypertension and Venous Thromboembolism, </a><a href="http://www.acc.org/clinical-topics/vascular-medicine">Vascular Medicine, </a><a href="http://www.acc.org/clinical-topics/anticoagulation-management/anticoagulation-management-and-venothromboembolism">Anticoagulation Management and Venothromboembolism, </a><a href="http://www.acc.org/clinical-topics/invasive-cardiovascular-angiography-and-intervention/interventions-and-vascular-medicine">Interventions and Vascular Medicine</a> </p>
+          <p class="keywords-list"><b>Keywords:</b> <i>ESC Congress, </i><i>ESC20, </i><i>Anticoagulants, </i><i>Blood Pressure, </i><i>Embolectomy, </i><i>Hemorrhage, </i><i>Neoplasms, </i><i>Outpatients, </i><i>Patient Discharge, </i><i>Pulmonary Embolism, </i><i>Primary Prevention, </i><i>Risk Assessment, </i><i>Thrombolytic Therapy, </i><i>Thromboembolism, </i><i>Vascular Diseases, </i><i>Venous Thromboembolism</i> </p>
+          <a href="#" id="backToListings" class="parent back-to-listing">&lt; Back to Listings</a>
+      </div>
+  </div>
+
+  MarkupWrapperClasses: max-w_60
+
+  Weight:100
+
+  Styleguide HTML.RealArticle
 
   */
   /* 
@@ -4629,26 +4719,6 @@
 #acc_arches_override ol {
   line-height: 1.6;
 }
-#acc_arches_override h6,#acc_arches_override h5 {
-  font-size: 16px;
-  font-size: 1rem;
-}
-#acc_arches_override h4 {
-  font-size: 23.04px;
-  font-size: 1.44rem;
-}
-#acc_arches_override h3 {
-  font-size: 27.648px;
-  font-size: 1.728rem;
-}
-#acc_arches_override h2 {
-  font-size: 33.177px;
-  font-size: 2.0736rem;
-}
-#acc_arches_override h1 {
-  font-size: 39.813px;
-  font-size: 2.48832rem;
-}
 #acc_arches_override kbd,
 #acc_arches_override code,
 #acc_arches_override samp,
@@ -4699,7 +4769,7 @@
   padding: 0.25rem 0.5rem;
   border-width: thin;
   border-color: rgba(19, 18, 18, 0.25);
-  line-height: 1.1;
+  line-height: 1.125;
 }
 #acc_arches_override [type=date],
 #acc_arches_override [type=datetime],
@@ -4768,10 +4838,18 @@
   text-align: start;
 }
 #acc_arches_override thead {
+  padding: 4px 8px 0;
+  padding: 0.25rem 0.5rem 0;
   font-weight: 700;
+}
+#acc_arches_override tbody {
+  padding: 0 8px;
+  padding: 0 0.5rem;
 }
 #acc_arches_override tfoot,
 #acc_arches_override caption {
+  padding: 0 8px 4px;
+  padding: 0 0.5rem 0.25rem;
   font-size: 13.333px;
   font-size: 0.8333333333rem;
 }
@@ -5295,8 +5373,13 @@
 #acc_arches_override .card {
   position: relative;
 }
-#acc_arches_override .reading-typography h1, #acc_arches_override .reading-typography h2, #acc_arches_override .reading-typography h3, #acc_arches_override .reading-typography h4, #acc_arches_override .reading-typography h5, #acc_arches_override .reading-typography h6 {
-  color: get-themcolor(primary, -1);
+#acc_arches_override .reading-typography h1,
+#acc_arches_override .reading-typography h2,
+#acc_arches_override .reading-typography h3,
+#acc_arches_override .reading-typography h4,
+#acc_arches_override .reading-typography h5,
+#acc_arches_override .reading-typography h6 {
+  color: #157894;
 }
 #acc_arches_override .reading-typography h1:not(:first-child),
 #acc_arches_override .reading-typography h2:not(:first-child),
@@ -5307,29 +5390,52 @@
   margin: 24px 0 12px;
   margin: 1.5rem 0 0.75rem;
 }
-#acc_arches_override .reading-typography h1 {
-  line-height: 1.1;
+#acc_arches_override .reading-typography h3, #acc_arches_override .reading-typography h2, #acc_arches_override .reading-typography h1 {
+  line-height: 1.125;
 }
-#acc_arches_override .reading-typography h2,
-#acc_arches_override .reading-typography h3,
-#acc_arches_override .reading-typography h4,
-#acc_arches_override .reading-typography h5,
-#acc_arches_override .reading-typography h6,#acc_arches_override .reading-typography ul,
-#acc_arches_override .reading-typography ol {
+#acc_arches_override .reading-typography li, #acc_arches_override .reading-typography h6, #acc_arches_override .reading-typography h5, #acc_arches_override .reading-typography h4 {
   line-height: 1.35;
+}
+#acc_arches_override .reading-typography p {
+  line-height: 1.6;
+}
+#acc_arches_override .reading-typography h1 {
+  font-size: 39.813px;
+  font-size: 2.48832rem;
+}
+#acc_arches_override .reading-typography h2 {
+  font-size: 33.177px;
+  font-size: 2.0736rem;
+}
+#acc_arches_override .reading-typography h3 {
+  font-size: 27.648px;
+  font-size: 1.728rem;
+}
+#acc_arches_override .reading-typography h4 {
+  font-size: 23.04px;
+  font-size: 1.44rem;
+}
+#acc_arches_override .reading-typography h5 {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+#acc_arches_override .reading-typography h6 {
+  font-size: 19.2px;
+  font-size: 1.2rem;
 }
 #acc_arches_override .reading-typography li {
   margin-top: 4px;
   margin-top: 0.25rem;
-  margin-bottom: 4px;
-  margin-bottom: 0.25rem;
-}
-#acc_arches_override .reading-typography p + p {
-  margin-top: 8px;
-  margin-top: 0.5rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+  padding-left: 4px;
+  padding-left: 0.25rem;
 }
 #acc_arches_override .reading-typography ul,
 #acc_arches_override .reading-typography ol {
+  padding-left: 32px;
+  padding-left: 2rem;
   list-style-position: outside;
 }
 #acc_arches_override .reading-typography ul {
@@ -5346,8 +5452,22 @@
 }
 #acc_arches_override .reading-typography li > ul,
 #acc_arches_override .reading-typography li > ol {
-  margin-left: 4px;
-  margin-left: 0.25rem;
+  margin-left: 16px;
+  margin-left: 1rem;
+  padding-left: 16px;
+  padding-left: 1rem;
+}
+#acc_arches_override .reading-typography li + li {
+  margin-top: 8px;
+  margin-top: 0.5rem;
+}
+#acc_arches_override .reading-typography li:last-child {
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+}
+#acc_arches_override .reading-typography p + p {
+  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 #acc_arches_override .reading-typography accr {
   border-bottom: 1px dotted #16a385;
@@ -5368,8 +5488,16 @@
 #acc_arches_override .reading-typography table {
   margin-top: 8px;
   margin-top: 0.5rem;
-  margin-bottom: 8px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  font-size: max(16px, 16px);
+  font-size: max(1rem, 16px);
+}
+#acc_arches_override .reading-typography table {
+  width: 100%;
+}
+#acc_arches_override .reading-typography thead {
+  border-bottom: 1px solid #157894;
 }
 #acc_arches_override .font_unset {
   font-size: unset;
@@ -6224,7 +6352,7 @@
   line-height: 1 !important;
 }
 #acc_arches_override .lh_1 {
-  line-height: 1.1 !important;
+  line-height: 1.125 !important;
 }
 #acc_arches_override .lh_2 {
   line-height: 1.35 !important;
@@ -6233,7 +6361,7 @@
   line-height: 1.6 !important;
 }
 #acc_arches_override .lh_4 {
-  line-height: 1.5 !important;
+  line-height: 1.8 !important;
 }
 #acc_arches_override .lh_5 {
   line-height: 2.5 !important;

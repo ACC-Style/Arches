@@ -1,7 +1,14 @@
 // Nothing in here can have important! to reduce the need for overrides.
 .reading-typography {
     // a and links are takend care of in the _link-decoration.scss
-    h1,h2,h3,h4,h5,h6{ color:$headline-color;}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $headline-color;
+    }
     h1:not(:first-child),
     h2:not(:first-child),
     h3:not(:first-child),
@@ -10,29 +17,33 @@
     h6:not(:first-child) {
         margin: $vertical-space $margin_0 $vertical-space/2;
     }
-    h1{line-height: $line-height_1;}
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        line-height: $line-height_2;     
+    %lh_1{line-height: $line-height_1;}
+    %lh_2{line-height: $line-height_2;}
+    %lh_3{line-height: $line-height_3;}
+    h1 {
+        @extend %lh_1;
+        font-size: $font_5;
     }
-   
-    ul,
-    ol {
-        line-height: $line-height_2;
+    h2{ 
+        @extend %lh_1;
+        font-size: $font_4;
+    
     }
+    h3{ @extend %lh_1;font-size: $font_3; }
+    h4{@extend %lh_2; font-size: $font_2;}
+    h5{@extend %lh_2;font-size: $font_1;font-weight: $font_bold;}
+    h6 {@extend %lh_2;font-size: $font_1;}
+    p{@extend %lh_3;}
     li {
         margin-top: $margin_2;
-        margin-bottom: $margin_2;
-    }
-    p + p {
-        margin-top: $margin_3;
-    }
+        margin-bottom: $margin_3;
+        padding-left:$padding_2;
+        @extend %lh_2;
+    }  
     ul,
     ol {
         list-style-position: outside;
+        padding-left:$padding_5;
     }
     ul {
         list-style-type: disc;
@@ -49,7 +60,13 @@
     // nested lists
     li > ul,
     li > ol {
-        margin-left: $margin_2;
+        margin-left: $margin_4;
+        padding-left:$padding_4;
+    }
+    li + li {margin-top:$margin_3}
+    li:last-child{margin-bottom: $margin_3;}
+    p + p {
+        margin-top: $margin_3;
     }
     accr {
         border-bottom: 1px dotted get-themecolor(accent);
@@ -68,6 +85,15 @@
     dl,
     table {
         margin-top: $margin_3;
-        margin-bottom: $margin_3;
+        margin-bottom: $margin_4;
+        font-size: max(#{$font_0}, #{$reading-min});
     }
+    table{
+        width:100%;
+
+    }
+    thead{
+        border-bottom: 1px solid $headline-color;
+    }
+
 }
