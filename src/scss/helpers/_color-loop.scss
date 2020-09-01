@@ -46,7 +46,7 @@ Gets utilty style and prints it.
     @if ($size==default) {
         $size: default-util-size($key);
     }
-    $unit: map-get(get-css-unit($key), $size);
+    $unit: map-get(get-all-css-sizes($key), $size);
     @return print-style($style, $unit);
 }
 
@@ -130,7 +130,7 @@ Gets utilty style and prints it.
 
 @mixin loop-transparent($key, $color: black, $breakpoint: '', $important: '', $hover: false) {
     $styles: get-css-style($key);
-    $sizes: get-css-unit($key);
+    $sizes: get-all-css-sizes($key);
     $hex: $color;
     @if (#{$color}=='white') {
         $hex: $white;

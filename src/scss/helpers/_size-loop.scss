@@ -1,7 +1,7 @@
 $debug-trace: true !default;
 @mixin loop-style($key, $breakpoint: '', $important: '') {
 	$styles: get-css-style($key);
-	$sizes: get-css-unit($key);
+	$sizes: get-all-css-sizes($key);
 	@if $debug-trace {
 		@debug 'Loop Style Running #{$key}';
 	}

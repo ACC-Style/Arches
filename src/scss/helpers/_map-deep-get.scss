@@ -41,22 +41,30 @@
     @return map-deep-get($style-list, $key, css-style);
 }
 
-/// get-css-unit
+/// get-unit
+/// @author Matt Watier
+/// @access public
+/// @param {Arglist} $keys - Key chain
+/// @return {key} - Desired value
+@function get-unit($key) {
+    @return map-deep-get($style-definition,$key, unit);
+}
+
+/// get-all-css-sizes
 /// @author Matt Watier
 /// @access public
 /// @param {Arglist} $keys - Key chain
 /// @return {Map} - Desired value
-@function get-css-unit($key, $style-list: $style-definition) {
-    @return map-deep-get($style-list, $key, unit);
-    // @return map-get(map-get($style-list, $key), unit);
+@function get-all-css-sizes($key) {
+    @return map-deep-get($value-to-unit, get-unit($key));
 }
 
 /// get-css-size
 /// @author Matt Watier
 /// @access public
 /// @param {Arglist} $keys - Key chain
-/// @return {Map} - Desired value
-@function get-css-size($key, $size, $style-list: $style-definition) {
-    @return map-deep-get($style-list, $key, "unit", $size);
-    //@return map-get(map-get(map-get($style-list, $key), unit), $size);
+/// @return {value} - Desired value
+@function get-css-size($key, $size) {
+
+       @return map-get( get-all-css-sizes($key), $size);
 }

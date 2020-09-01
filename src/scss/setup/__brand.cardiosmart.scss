@@ -39,48 +39,30 @@ $style-definition: map-deep-set($style-definition, 'is-active-self' 'short-name'
 $fonts: (
 	slab: (
 		name: 'Roboto Slab',
+		short-name:"RS",
 		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
 	),
 	display: (
 		name: 'Maven Pro',
+		short-name:"MP",
 		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif',
 	),
 	copy: (
 		name: 'Muli',
+		short-name:"Mu",
 		stack: '"Muli","Open Sans","system",sans-serif',
 	),
 	ui: (
 		name: 'Open Sans',
+		short-name:"OS",
 		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
 	),
 );
 
 // Reset Values of Utlity-css.vars.scss
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'slab', map-deep-get($fonts, 'slab', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'display', map-deep-get($fonts, 'display', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'copy', map-deep-get($fonts, 'copy', 'stack'));
-
-// reset all the references for the fonts
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'slab',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'slab'))
-);
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'display',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'display'))
-);
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'copy',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'copy'))
-);
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'ui',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'ui'))
-);
+$value-to-unit: map-deep-set($value-to-unit, font-family slab, map-deep-get($fonts, slab stack));
+$value-to-unit: map-deep-set($value-to-unit, font-family display, map-deep-get($fonts, display stack));
+$value-to-unit: map-deep-set($value-to-unit, font-family copy, map-deep-get($fonts, copy stack));
 
 $font_display: get-css-size(font-family, display);
 $font_slab: get-css-size(font-family, slab);

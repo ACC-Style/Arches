@@ -103,6 +103,7 @@ var markdownbuild = function(base, label) {
 };
 var buildbrand = function(base, brand, framework) {
     var construct = base;
+    
     switch (framework) {
         case "zurb":
             construct.pipe(headerFromFile("/setup/__setup.zurb.scss"));
@@ -114,6 +115,7 @@ var buildbrand = function(base, brand, framework) {
             construct.pipe(headerFromFile("/setup/__setup.none.scss"));
             break;
     }
+    construct.pipe((headerFromFile("/setup/config/_var.output.scss")));
     construct.pipe(
         header(fs.readFileSync(PATHS.SCSS + "/setup/__brand.base.scss", "utf8"), {
             pkg: pkg,

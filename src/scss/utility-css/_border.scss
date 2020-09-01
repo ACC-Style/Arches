@@ -15,10 +15,10 @@ Border Style
 
 Depends on base border module in _borders.css
 
-#{ class-name-constructor(border-style,none)}           - makes a border #{ map-deep-get($style-definition,border-style,unit,none)}
-#{ class-name-constructor(border-style,dotted)}         - makes a border #{ map-deep-get($style-definition,border-style,unit,dotted)}
-#{ class-name-constructor(border-style,dashed)}         - makes a border #{ map-deep-get($style-definition,border-style,unit,dashed)}
-#{ class-name-constructor(border-style,solid)}          - makes a border #{ map-deep-get($style-definition,border-style,unit,solid)}
+#{ class-name-constructor(border-style,none)}           - makes a border #{ get-css-size(border-style, none)}
+#{ class-name-constructor(border-style,dotted)}         - makes a border #{ get-css-size(border-style, dotted)}
+#{ class-name-constructor(border-style,dashed)}         - makes a border #{ get-css-size(border-style, dashed)}
+#{ class-name-constructor(border-style,solid)}          - makes a border #{ get-css-size(border-style, solid)}
   
 Markup:
 <div class="{{modifier_class}} br_black bw_1 p_3">{{modifier_class}} border</div>
