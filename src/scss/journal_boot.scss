@@ -120,9 +120,9 @@ $fonts: (
 		stack: '"Roboto","Maven Pro","Muli","Open Sans","system",sans-serif',
 	),
 	copy: (
-		name: 'Muli',
-		short-name: 'Mu',
-		stack: '"Muli","Open Sans","system",Helvetica, Arial,sans-serif',
+		name: 'Open Sans',
+		short-name: 'OS',
+		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
 	),
 	ui: (
 		name: 'Open Sans',
@@ -132,32 +132,12 @@ $fonts: (
 );
 
 // Reset Values of Utlity-css.vars.scss
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'slab', map-deep-get($fonts, 'slab', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'display', map-deep-get($fonts, 'display', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'copy', map-deep-get($fonts, 'copy', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'ui', map-deep-get($fonts, 'ui', 'stack'));
+$value-to-unit: map-deep-set($value-to-unit, font-family slab, unquote(map-deep-get($fonts, slab, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family display, unquote(map-deep-get($fonts, display, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family copy, unquote(map-deep-get($fonts, copy, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family ui, unquote(map-deep-get($fonts, ui, stack)));
 
-// reset all the references for the fonts
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'slab',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'slab'))
-);
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'display',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'display'))
-);
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'copy',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'copy'))
-);
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'ui',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'ui'))
-);
+
 
 $font_display: get-css-size(font-family, display);
 $font_slab: get-css-size(font-family, slab);
@@ -202,7 +182,61 @@ $link-color-light: get-themecolor(accent, 1);
 // reading-typography
 $headline-color: inherit !default;
 $reading-min:16px;
-/*Bootstrap Framework Setup Files.*/
+$margin_0: get-css-size(margin, 0);
+$margin_1: get-css-size(margin, 1);
+$margin_2: get-css-size(margin, 2);
+$margin_3: get-css-size(margin, 3);
+$margin_4: get-css-size(margin, 4);
+$margin_5: get-css-size(margin, 5);
+$margin_n1: get-css-size(margin, n1);
+$margin_n2: get-css-size(margin, n2);
+$margin_n3: get-css-size(margin, n3);
+$margin_n4: get-css-size(margin, n4);
+$margin_n5: get-css-size(margin, n5);
+$padding_0: get-css-size(padding, 0);
+$padding_1: get-css-size(padding, 1);
+$padding_2: get-css-size(padding, 2);
+$padding_3: get-css-size(padding, 3);
+$padding_4: get-css-size(padding, 4);
+$padding_5: get-css-size(padding, 5);
+$border_square: 0;
+$border_radius: get-css-size(border-radius, radius);
+$border_round: get-css-size(border-radius, round);
+$border_circle: get-css-size(border-radius, circle);
+$border-width_0: get-css-size(border-width, 0);
+$border-width_1: get-css-size(border-width, 1);
+$border-width_2: get-css-size(border-width, 2);
+$border-width_3: get-css-size(border-width, 3);
+$border-width_4: get-css-size(border-width, 4);
+$border-width_5: get-css-size(border-width, 5);
+$font_display: get-css-size(font-family, display);
+$font_slab: get-css-size(font-family, slab);
+$font_ui: get-css-size(font-family, ui);
+$font_copy: get-css-size(font-family, copy);
+$font_mono: get-css-size(font-family, mono);
+$font_6: get-css-size(font-size, 6);
+$font_5: get-css-size(font-size, 5);
+$font_4: get-css-size(font-size, 4);
+$font_3: get-css-size(font-size, 3);
+$font_2: get-css-size(font-size, 2);
+$font_1: get-css-size(font-size, 1);
+$font_0: get-css-size(font-size, 0);
+$font_n1: get-css-size(font-size, n1);
+$font_n2: get-css-size(font-size, n2);
+$font_n3: get-css-size(font-size, n3);
+$font_n4: get-css-size(font-size, n4);
+$font_n5: get-css-size(font-size, n5);
+$font_bold: get-css-size(font-weight, bold);
+$font_medium: get-css-size(font-weight, medium);
+$font_xbold: get-css-size(font-weight, xbold);
+$font_light: get-css-size(font-weight, light);
+$font_regular: get-css-size(font-weight, regular);
+$line-height_0: get-css-size(line-height, 0);
+$line-height_1: get-css-size(line-height, 1);
+$line-height_2: get-css-size(line-height, 2);
+$line-height_3: get-css-size(line-height, 3);
+$line-height_4: get-css-size(line-height, 4);
+$line-height_5: get-css-size(line-height, 5);/*Bootstrap Framework Setup Files.*/
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)

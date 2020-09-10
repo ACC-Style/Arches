@@ -139,7 +139,7 @@
             <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
                     <header class="bg_white kss-section kss-section--depth-2 shadow_1" id="kssref-html-typography">
                 <article class="kss-section__content">
-                        <p class="kss-section__source">Source: <span>dist/css/virtual_boot_combo.css</span>, line <span>10426</span>
+                        <p class="kss-section__source">Source: <span>dist/css/virtual_boot_combo.css</span>, line <span>10440</span>
                         </p>
                     <a class="kss-section__permalink" href="#kssref-html-typography">
                         <h2 class="kss-section__item kss-section__item--depth-2">
@@ -149,7 +149,13 @@
                     </a>
                         <div class="kss-section__description">
                             <p>Reading typography is a container class to opt into an override of the basic typography from arches. Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves reading typography lacking. Most ways typogrpahy content is added to a site is devoid of hooks to add styles to an element so work around that restriction and to unified styling across reading experiances the &quot;reading-typography&quot; class is used on the parrent container.  Please note that the reading typography can still look a bit different look depending on the brand or the framework.</p>
-<section class="max-w_65 reading-typography">
+</div>
+                </article>
+                    <article class="kss-section__modifiers">
+                        <h1 class="kss-modifiers__heading">Example 
+                        </h1>
+                        <div class="kss-modifiers__example">
+                            <div class=""><section class="max-w_65 reading-typography">
   <h1>This is the primary heading and there should only be one of these per page</h1>
     <p>A small paragraph to <em>emphasis</em> and show <strong>important</strong> bits.</p>
     <ul>
@@ -181,10 +187,11 @@
     <h2>A sub heading which is not as important as the first, but is quite imporant overall</h2>
     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
     <table>
-        <tbody><tr>
+    <thead><tr>
             <th>Table Heading</th>
             <th>Table Heading</th>
-        </tr>
+        </tr></thead>
+        <tbody>
         <tr>
             <td>table data</td>
             <td>table data</td>
@@ -229,7 +236,255 @@
 	<h6>This heading plays a relatively small bit part role, if you use it at all</h6>
     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 <section></div>
-                </article>
+                        </div>
+                    </article>
+                        <section class="relative">
+                            <article class="kss-section__markup overflow_scroll scrollbar-mini" style="max-height: 30vh;">
+                                <pre><code class="language-markup"  id="input-html-typography" value='&lt;section class&#x3D;&quot;max-w_65 reading-typography&quot;&gt;
+  &lt;h1&gt;This is the primary heading and there should only be one of these per page&lt;/h1&gt;
+    &lt;p&gt;A small paragraph to &lt;em&gt;emphasis&lt;/em&gt; and show &lt;strong&gt;important&lt;/strong&gt; bits.&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;This is a list item&lt;/li&gt;
+        &lt;li&gt;So is this - there could be more&lt;/li&gt;
+        &lt;li&gt;Make sure to style list items to:
+            &lt;ul&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;A couple more&lt;/li&gt;
+        &lt;li&gt;top level list items&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Don&#x27;t forget &lt;strong&gt;Ordered lists&lt;/strong&gt;:&lt;/p&gt;
+    &lt;ol&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.
+        &lt;ol&gt;
+            &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+            &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;/li&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.
+    &lt;/li&gt;&lt;/ol&gt;
+    &lt;h2&gt;A sub heading which is not as important as the first, but is quite imporant overall&lt;/h2&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;table&gt;
+    &lt;thead&gt;&lt;tr&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+        &lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;&lt;/table&gt;
+    &lt;h3&gt;A sub heading which is not as important as the second, but should be used with consideration&lt;/h3&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;blockquote&gt;&lt;p&gt;“Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”&lt;/p&gt;&lt;/blockquote&gt;
+    &lt;h4&gt;A sub heading which is not as important as the second, but should be used with consideration&lt;/h4&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;pre&gt;&lt;code&gt;
+#header h1 a {
+    display: block;
+    width: 300px;
+    height: 80px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;h5&gt;A sub heading which is not as important as the second, but should be used with consideration&lt;/h5&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;dl&gt;
+   &lt;dt&gt;Definition list&lt;/dt&gt;
+   &lt;dd&gt;Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+	commodo consequat.&lt;/dd&gt;
+	   &lt;dt&gt;Lorem ipsum dolor sit amet&lt;/dt&gt;
+	   &lt;dd&gt;Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+	commodo consequat.&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;h6&gt;This heading plays a relatively small bit part role, if you use it at all&lt;/h6&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+&lt;section&gt;'>&lt;section class&#x3D;&quot;max-w_65 reading-typography&quot;&gt;
+  &lt;h1&gt;This is the primary heading and there should only be one of these per page&lt;/h1&gt;
+    &lt;p&gt;A small paragraph to &lt;em&gt;emphasis&lt;/em&gt; and show &lt;strong&gt;important&lt;/strong&gt; bits.&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;This is a list item&lt;/li&gt;
+        &lt;li&gt;So is this - there could be more&lt;/li&gt;
+        &lt;li&gt;Make sure to style list items to:
+            &lt;ul&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;A couple more&lt;/li&gt;
+        &lt;li&gt;top level list items&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Don&#x27;t forget &lt;strong&gt;Ordered lists&lt;/strong&gt;:&lt;/p&gt;
+    &lt;ol&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.
+        &lt;ol&gt;
+            &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+            &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;/li&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.
+    &lt;/li&gt;&lt;/ol&gt;
+    &lt;h2&gt;A sub heading which is not as important as the first, but is quite imporant overall&lt;/h2&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;table&gt;
+    &lt;thead&gt;&lt;tr&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+        &lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;&lt;/table&gt;
+    &lt;h3&gt;A sub heading which is not as important as the second, but should be used with consideration&lt;/h3&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;blockquote&gt;&lt;p&gt;“Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”&lt;/p&gt;&lt;/blockquote&gt;
+    &lt;h4&gt;A sub heading which is not as important as the second, but should be used with consideration&lt;/h4&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;pre&gt;&lt;code&gt;
+#header h1 a {
+    display: block;
+    width: 300px;
+    height: 80px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;h5&gt;A sub heading which is not as important as the second, but should be used with consideration&lt;/h5&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;dl&gt;
+   &lt;dt&gt;Definition list&lt;/dt&gt;
+   &lt;dd&gt;Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+	commodo consequat.&lt;/dd&gt;
+	   &lt;dt&gt;Lorem ipsum dolor sit amet&lt;/dt&gt;
+	   &lt;dd&gt;Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+	commodo consequat.&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;h6&gt;This heading plays a relatively small bit part role, if you use it at all&lt;/h6&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+&lt;section&gt;</code></pre>
+                            </article>
+                            <input class="display_none text-input html-code-input" type="text" name="" id="input-html-typography" value='&lt;section class&#x3D;&quot;max-w_65 reading-typography&quot;&gt;
+  &lt;h1&gt;This is the primary heading and there should only be one of these per page&lt;/h1&gt;
+    &lt;p&gt;A small paragraph to &lt;em&gt;emphasis&lt;/em&gt; and show &lt;strong&gt;important&lt;/strong&gt; bits.&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;This is a list item&lt;/li&gt;
+        &lt;li&gt;So is this - there could be more&lt;/li&gt;
+        &lt;li&gt;Make sure to style list items to:
+            &lt;ul&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+                &lt;li&gt;Not forgetting child list items&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;A couple more&lt;/li&gt;
+        &lt;li&gt;top level list items&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Don&#x27;t forget &lt;strong&gt;Ordered lists&lt;/strong&gt;:&lt;/p&gt;
+    &lt;ol&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.
+        &lt;ol&gt;
+            &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+            &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;/li&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.
+    &lt;/li&gt;&lt;/ol&gt;
+    &lt;h2&gt;A sub heading which is not as important as the first, but is quite imporant overall&lt;/h2&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;table&gt;
+    &lt;thead&gt;&lt;tr&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+        &lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+            &lt;td&gt;table data&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;&lt;/table&gt;
+    &lt;h3&gt;A sub heading which is not as important as the second, but should be used with consideration&lt;/h3&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;blockquote&gt;&lt;p&gt;“Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”&lt;/p&gt;&lt;/blockquote&gt;
+    &lt;h4&gt;A sub heading which is not as important as the second, but should be used with consideration&lt;/h4&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;pre&gt;&lt;code&gt;
+#header h1 a {
+    display: block;
+    width: 300px;
+    height: 80px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;h5&gt;A sub heading which is not as important as the second, but should be used with consideration&lt;/h5&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+    &lt;dl&gt;
+   &lt;dt&gt;Definition list&lt;/dt&gt;
+   &lt;dd&gt;Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+	commodo consequat.&lt;/dd&gt;
+	   &lt;dt&gt;Lorem ipsum dolor sit amet&lt;/dt&gt;
+	   &lt;dd&gt;Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+	commodo consequat.&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;h6&gt;This heading plays a relatively small bit part role, if you use it at all&lt;/h6&gt;
+    &lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+&lt;section&gt;'>
+                            <a class="absolute bg_shade-3 br_1 br_black-3 br_radius br_solid font_medium h:bg_shade-1 m-r_3 p-x_4 p-y_3 r_3 shadow_overlap-light t_3" onclick="CopyText( '#input-html-typography',event )"><i class="far fa-copy"></i> Copy</a>
+                        </section>
                     </header>
     </section>
     
