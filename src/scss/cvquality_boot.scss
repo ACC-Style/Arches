@@ -209,32 +209,10 @@ $fonts: (
 );
 
 // Reset Values of Utlity-css.vars.scss
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'slab', map-deep-get($fonts, 'slab', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'display', map-deep-get($fonts, 'display', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'copy', map-deep-get($fonts, 'copy', 'stack'));
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'ui', map-deep-get($fonts, 'ui', 'stack'));
-
-// reset all the references for the fonts
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'slab',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'slab'))
-);
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'display',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'display'))
-);
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'copy',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'copy'))
-);
-$style-definition: map-deep-set(
-	$style-definition,
-	'font-family' 'unit' 'ui',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'ui'))
-);
+$value-to-unit: map-deep-set($value-to-unit, font-family slab, map-deep-get($fonts, slab stack));
+$value-to-unit: map-deep-set($value-to-unit, font-family display, map-deep-get($fonts, display stack));
+$value-to-unit: map-deep-set($value-to-unit, font-family copy, map-deep-get($fonts, copy stack));
+$value-to-unit: map-deep-set($value-to-unit, font-family ui, map-deep-get($fonts, ui stack));
 
 $font_display: get-css-size(font-family, display);
 $font_slab: get-css-size(font-family, slab);

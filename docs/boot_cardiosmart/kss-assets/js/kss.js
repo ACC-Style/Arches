@@ -111,12 +111,12 @@
         var colorCode = description.split( ';' )[ 0 ];
         var isHexadecimal = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test( colorCode );
         var isRGB = /(rgba?\((?:\d{1,3}(, +|,|\))){3}(?:\d+\.\d+\))?)/i.test( colorCode );
-        var colorContent = '<span class="kss-color__name">' + colorName + '</span>' +
+        var colorContent = '<span class="kss-color__name lh_1 font_0 p-b_3">' + colorName + '</span>' +
           '<span class="kss-color__var">' + colorVar + '</span>' +
           '<span class="kss-color__code">' + colorCode + '</span>';
 
         if ( isHexadecimal || isRGB ) {
-          $( this ).parent().addClass( 'kss-colors-container' );
+          $( this ).parent().addClass( 'kss-colors-container gap-x_4 gap-y_3 grid template-x_15' );
           $( this ).addClass( 'kss-color' ).css( 'background', colorCode );
           $(this).find('.kss-parameters__description').html(colorContent);
           $(this).find('.kss-parameters__description').addClass(
