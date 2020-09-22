@@ -16,9 +16,13 @@
 	}
 	@each $unit, $value in get-all-css-sizes($CSS-property){ 
 		@if($responsive){
-			$table:	#{$table} + "<tr><td class='c_primary-n2'> #{ class-name-constructor($CSS-property,$unit)}</td><td class=''>#{ class-name-constructor($CSS-property,$unit)}:md, #{ class-name-constructor($CSS-property,$unit)}:lg</td><td class='text_right'> #{ map-deep-get($style-definition,$CSS-property css-style)} :</td><td> #{ $value} </td></tr> ";
+			$table:	#{$table} + "<tr><td class='c_primary-n2'> #{ class-name-constructor($CSS-property,$unit)}</td><td class=''>#{ class-name-constructor($CSS-property,$unit)}:md, #{ class-name-constructor($CSS-property,$unit)}:lg</td><td class='text_right'> #{ map-deep-get($style-definition,$CSS-property, css-style)} :</td><td> #{ $value} </td></tr> ";
 		}@else{
-			$table:	#{$table} + "<tr><td class='c_primary-n2'> #{ class-name-constructor($CSS-property,$unit)}</td><td class='text_right'> #{ map-deep-get($style-definition,$CSS-property css-style)} :</td><td> #{ $value } </td></tr> ";
+			$table:	#{$table} + "<tr><td class='c_primary-n2'> #{ class-name-constructor($CSS-property,$unit)}</td><td class='text_right'> #{ map-deep-get($style-definition,$CSS-property,  css-style)} :</td><td> #{ $value }";
+			@if($CSS-property == font-size ){
+				$table:#{$table} + " #{ ( $value/1rem ) * 16px} ";
+			}
+			$table:#{$table} + " </td></tr> ";
 		}
    }
    $table:	#{$table} + "</tbody></table>";
