@@ -4369,6 +4369,24 @@
 
   */
   /*
+    Hover:Border Color
+
+    hovers can easily effect the border style to toggle between styles.  Very useful fo toggling from a border type to none or vice versa. 
+  | Class          | Effect                                                                                      |
+  | -------------- | ------------------------------------------------------------------------------------------- |
+  | cursor_pointer        | pointer                                                                     |
+  | cursor_not-allowed      | no touch                                                                   |
+  | cursor_grab      | open hand                                                                   |
+  | cursor_grabbing      | closed hand                                                                   |
+  | cursor_wait | spinning ball |
+
+
+  Weight: 100
+
+  Styleguide UC.hover.cursor
+
+  */
+  /*
   Animation
 
   Transitions Eases and Transforms.Create simple toggleable animations with a combination of classes. 
@@ -13734,6 +13752,23 @@
 }
 #acc_arches_override .h\:br_transparent:hover {
   border-color: transparent !important;
+}
+#acc_arches_override .cursor_pointer {
+  cursor: pointer;
+}
+#acc_arches_override .cursor_not-allowed {
+  cursor: not-allowed;
+}
+#acc_arches_override .cursor_grab {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+#acc_arches_override .cursor_grabbing {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+#acc_arches_override .cursor_wait {
+  cursor: wait;
 }
 #acc_arches_override *[class*=transition] {
   transition-property: all;
