@@ -121,336 +121,6 @@ html {
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(19, 18, 18, 0);
-  font-family: sans-serif;
-  line-height: 1.15;
-}
-
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display: block;
-}
-
-body {
-  margin: 0;
-  background-color: white;
-  color: #000;
-  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-}
-
-[tabindex="-1"]:focus:not(:focus-visible) {
-  outline: 0 !important;
-}
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 8px;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
-}
-
-abbr[title],
-abbr[data-original-title] {
-  border-bottom: 0;
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  cursor: help;
-}
-
-address {
-  font-style: normal;
-  line-height: inherit;
-}
-
-address,ol,
-ul,
-dl {
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
-}
-
-ol,
-ul,
-dl {
-  margin-top: 0;
-}
-
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-  margin-bottom: 0;
-}
-
-dt {
-  font-weight: 700;
-}
-
-dd {
-  margin-bottom: 8px;
-  margin-bottom: 0.5rem;
-  margin-left: 0;
-}
-
-blockquote {
-  margin: 0 0 16px;
-  margin: 0 0 1rem;
-}
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-a {
-  background-color: transparent;
-  color: #004176;
-  text-decoration: none;
-}
-a:hover {
-  color: #002e53;
-  text-decoration: underline;
-}
-a:not([href]),a:not([href]):hover {
-  color: inherit;
-  text-decoration: none;
-}
-
-pre,
-code,
-kbd,
-samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  font-size: 1em;
-}
-
-pre {
-  -ms-overflow-style: scrollbar;
-  margin-top: 0;
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
-  overflow: auto;
-}
-
-figure {
-  margin: 0 0 16px;
-  margin: 0 0 1rem;
-}
-
-img {
-  border-style: none;
-}
-
-img,svg {
-  vertical-align: middle;
-}
-
-svg {
-  overflow: hidden;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-caption {
-  padding-top: 12px;
-  padding-top: 0.75rem;
-  padding-bottom: 12px;
-  padding-bottom: 0.75rem;
-  color: #a1a0a0;
-  text-align: left;
-  caption-side: bottom;
-}
-
-th {
-  text-align: inherit;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: 8px;
-  margin-bottom: 0.5rem;
-}
-
-button {
-  border-radius: 0;
-}
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-input,
-button,
-select,
-optgroup,
-textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-button,
-input {
-  overflow: visible;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-[role=button] {
-  cursor: pointer;
-}
-
-select {
-  word-wrap: normal;
-}
-
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
-
-button:not(:disabled),
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled) {
-  cursor: pointer;
-}
-
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
-}
-
-input[type=radio],
-input[type=checkbox] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-textarea {
-  overflow: auto;
-  resize: vertical;
-}
-
-fieldset {
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-legend {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 8px;
-  margin-bottom: 0.5rem;
-  padding: 0;
-  color: inherit;
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: inherit;
-  white-space: normal;
-}
-
-progress {
-  vertical-align: baseline;
-}
-
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-[type=search] {
-  -webkit-appearance: none;
-  outline-offset: -2px;
-}
-
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-
-output {
-  display: inline-block;
-}
-
-summary {
-  display: list-item;
-  cursor: pointer;
-}
-
-template {
-  display: none;
-}
-
-[hidden] {
-  display: none !important;
-}
-
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 8px;
@@ -21109,6 +20779,1451 @@ Styleguide UC.opacity
 }
 
 /*
+UC: Is-active 
+
+A common class name given to the parent container can effect the color, background and opacity of the children.  The active class is different depending if you are using Bootstrap or Foundation. <h1>This Variation of Arches uses <strong>"active"</strong></h1>  
+
+Weight: 135
+
+Styleguide UC.is-active
+
+*/
+/*
+Is-active to Full Opacity
+
+<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div><strong>`.is-acitve .a:opacity`</strong> Set the Opacity of an objects children to 100% when it has the class is-active. 
+
+Markup:
+<div class="flex p_4 bg_primary is-active_toggle-function ">
+  <div class="flex_auto opacity_0 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 0 </div>
+  <div class="flex_auto opacity_1 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 1 </div>
+  <div class="flex_auto opacity_2 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 2 </div>
+  <div class="flex_auto opacity_3 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 3 </div>
+  <div class="flex_auto opacity_4 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 4 </div>
+  <div class="flex_auto opacity_5 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 5 </div>
+  <div class="flex_auto opacity_6 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 6 </div>
+  <div class="flex_auto opacity_7 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 7 </div>
+  <div class="flex_auto opacity_8 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 8 </div>
+  <div class="flex_auto opacity_9 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 9 </div>
+</div>
+
+Weight: 60
+
+Styleguide UC.is-active.opacity
+
+*/
+/*
+Is-active Black n White 
+
+<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div>Set the background to full white or black when the parent has a class of `is-active`. 
+
+bg_white              - text color modified light to dark
+bg_black              - text color modified light to dark
+
+Markup:
+<div class="flex p_5 bg_primary m_5 is-active_toggle-function">
+  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-0 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">0</div>
+  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-1 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">1</div>
+  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-2 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">2</div>
+  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-3 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">3</div>
+  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-4 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">4</div>
+  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-5 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">5</div>
+  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-6 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">6</div>
+  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-7 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">7</div>
+  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-8 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">8</div>
+  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-9 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">9</div>
+  <div class="flex_auto  a:{{modifier_class}} bg_{{modifier_class}}-0 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">default</div>
+</div>
+
+Weight: 50
+
+Styleguide UC.is-active.black and white
+
+ */
+/*
+  Is active font color
+
+  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Set the font color of the child by setting the parent to .active. `a:c_primary`
+
+  c_primary              - text color modified light to dark
+  c_shade              - text color modified light to dark
+  c_info              - text color modified light to dark
+  c_highlight              - text color success color
+  c_success              - text color modified light to dark
+  c_warning              - text color modified light to dark
+  c_alert              - text color modified light to dark
+
+  Markup:
+  <div class="flex p_5 is-active_toggle-function c_white">
+    <div class="flex_auto a:{{modifier_class}}-5 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">5</div>
+    <div class="flex_auto a:{{modifier_class}}-4 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">4</div>
+    <div class="flex_auto a:{{modifier_class}}-3 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">3</div>
+    <div class="flex_auto a:{{modifier_class}}-2 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">2</div>
+    <div class="flex_auto a:{{modifier_class}}-1 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">1</div>
+    <div class="flex_auto a:{{modifier_class}}-0 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">0</div>
+    <div class="flex_auto a:{{modifier_class}}-n1 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n1</div>
+    <div class="flex_auto a:{{modifier_class}}-n2 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n2</div>
+    <div class="flex_auto a:{{modifier_class}}-n3 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n3</div>
+    <div class="flex_auto a:{{modifier_class}}-n4 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n4</div>
+    <div class="flex_auto a:{{modifier_class}}-n5 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n5</div>
+  </div>
+
+  Weight: 10
+
+  Styleguide UC.is-active.text
+
+ */
+/*
+  Is active font color
+
+  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Set the font color of the child by setting the parent to .active. `a:c_primary`
+
+  bg_primary              - text color modified light to dark
+  bg_shade              - text color modified light to dark
+  bg_info              - text color modified light to dark
+  bg_highlight              - text color success color
+  bg_success              - text color modified light to dark
+  bg_warning              - text color modified light to dark
+  bg_alert              - text color modified light to dark
+
+  Markup:
+  <div class="flex p_5 is-active_toggle-function">
+    <div class="flex_auto a:{{modifier_class}}-5 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">5</div>
+    <div class="flex_auto a:{{modifier_class}}-4 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">4</div>
+    <div class="flex_auto a:{{modifier_class}}-3 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">3</div>
+    <div class="flex_auto a:{{modifier_class}}-2 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">2</div>
+    <div class="flex_auto a:{{modifier_class}}-1 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">1</div>
+    <div class="flex_auto a:{{modifier_class}}-0 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">0</div>
+    <div class="flex_auto a:{{modifier_class}}-n1 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n1</div>
+    <div class="flex_auto a:{{modifier_class}}-n2 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n2</div>
+    <div class="flex_auto a:{{modifier_class}}-n3 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n3</div>
+    <div class="flex_auto a:{{modifier_class}}-n4 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n4</div>
+    <div class="flex_auto a:{{modifier_class}}-n5 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n5</div>
+  </div>
+
+  Weight: 10
+
+  Styleguide UC.is-active.background color
+
+ */
+/*
+  Is active Icons
+
+  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Toggle the display and hide of a an icon with applying `is-active_icon-show` or `is-active_icon-hide`  
+
+  fa-award            - toggle the award icon
+  fa-bell             - toggle the bell icon
+  fa-bell-slash       - toggle the bell slash icon
+  fa-bug              - toggle the bug icon
+
+
+  Markup:
+  <div class="flex is-active_toggle-function">
+    <div class="flex_auto a:bg_accent bg_shade-2 font_3 text_center br_1 br_solid br_shade-4 p_3"><i class="fas font_4 {{modifier_class}} a:icon-show"></i> Show When Active</div>
+    <div class="flex_auto a:bg_accent bg_shade-2 font_3 text_center br_1 br_solid br_shade-4 p_3"><i class="fas font_4 {{modifier_class}} a:icon-hide"></i> Hide when Active</div>
+  </div>
+
+  Weight: 10
+
+  Styleguide UC.is-active.icon
+
+ */
+
+.active.a\:bg_primary,
+.active > .a\:bg_primary,.active.a\:bg_primary-0,
+.active > .a\:bg_primary-0 {
+  background-color: #004176 !important;
+}
+
+.active.a\:bg_primary-1,
+.active > .a\:bg_primary-1 {
+  background-color: #265e8b !important;
+}
+
+.active.a\:bg_primary-2,
+.active > .a\:bg_primary-2 {
+  background-color: #5e87a9 !important;
+}
+
+.active.a\:bg_primary-3,
+.active > .a\:bg_primary-3 {
+  background-color: #99b3c8 !important;
+}
+
+.active.a\:bg_primary-4,
+.active > .a\:bg_primary-4 {
+  background-color: #c7d5e1 !important;
+}
+
+.active.a\:bg_primary-5,
+.active > .a\:bg_primary-5 {
+  background-color: #e6ecf1 !important;
+}
+
+.active.a\:bg_primary-n1,
+.active > .a\:bg_primary-n1 {
+  background-color: #003b6a !important;
+}
+
+.active.a\:bg_primary-n2,
+.active > .a\:bg_primary-n2 {
+  background-color: #003159 !important;
+}
+
+.active.a\:bg_primary-n3,
+.active > .a\:bg_primary-n3 {
+  background-color: #002441 !important;
+}
+
+.active.a\:bg_primary-n4,
+.active > .a\:bg_primary-n4 {
+  background-color: #001a2f !important;
+}
+
+.active.a\:bg_primary-n5,
+.active > .a\:bg_primary-n5 {
+  background-color: #00101e !important;
+}
+
+.active.a\:c_primary,
+.active > .a\:c_primary,.active.a\:c_primary-0,
+.active > .a\:c_primary-0 {
+  color: #004176 !important;
+}
+
+.active.a\:c_primary-1,
+.active > .a\:c_primary-1 {
+  color: #265e8b !important;
+}
+
+.active.a\:c_primary-2,
+.active > .a\:c_primary-2 {
+  color: #5e87a9 !important;
+}
+
+.active.a\:c_primary-3,
+.active > .a\:c_primary-3 {
+  color: #99b3c8 !important;
+}
+
+.active.a\:c_primary-4,
+.active > .a\:c_primary-4 {
+  color: #c7d5e1 !important;
+}
+
+.active.a\:c_primary-5,
+.active > .a\:c_primary-5 {
+  color: #e6ecf1 !important;
+}
+
+.active.a\:c_primary-n1,
+.active > .a\:c_primary-n1 {
+  color: #003b6a !important;
+}
+
+.active.a\:c_primary-n2,
+.active > .a\:c_primary-n2 {
+  color: #003159 !important;
+}
+
+.active.a\:c_primary-n3,
+.active > .a\:c_primary-n3 {
+  color: #002441 !important;
+}
+
+.active.a\:c_primary-n4,
+.active > .a\:c_primary-n4 {
+  color: #001a2f !important;
+}
+
+.active.a\:c_primary-n5,
+.active > .a\:c_primary-n5 {
+  color: #00101e !important;
+}
+
+.active.a\:bg_secondary,
+.active > .a\:bg_secondary {
+  background-color: #f60 !important;
+}
+
+.active.a\:bg_secondary-0,
+.active > .a\:bg_secondary-0 {
+  background-color: #ff6600 !important;
+}
+
+.active.a\:bg_secondary-1,
+.active > .a\:bg_secondary-1 {
+  background-color: #ff7d26 !important;
+}
+
+.active.a\:bg_secondary-2,
+.active > .a\:bg_secondary-2 {
+  background-color: #ff9f5e !important;
+}
+
+.active.a\:bg_secondary-3,
+.active > .a\:bg_secondary-3 {
+  background-color: #ffc299 !important;
+}
+
+.active.a\:bg_secondary-4,
+.active > .a\:bg_secondary-4 {
+  background-color: #ffddc7 !important;
+}
+
+.active.a\:bg_secondary-5,
+.active > .a\:bg_secondary-5 {
+  background-color: #fff0e6 !important;
+}
+
+.active.a\:bg_secondary-n1,
+.active > .a\:bg_secondary-n1 {
+  background-color: #e65c00 !important;
+}
+
+.active.a\:bg_secondary-n2,
+.active > .a\:bg_secondary-n2 {
+  background-color: #bf4d00 !important;
+}
+
+.active.a\:bg_secondary-n3,
+.active > .a\:bg_secondary-n3 {
+  background-color: #8c3800 !important;
+}
+
+.active.a\:bg_secondary-n4,
+.active > .a\:bg_secondary-n4 {
+  background-color: #662900 !important;
+}
+
+.active.a\:bg_secondary-n5,
+.active > .a\:bg_secondary-n5 {
+  background-color: #401a00 !important;
+}
+
+.active.a\:c_secondary,
+.active > .a\:c_secondary {
+  color: #f60 !important;
+}
+
+.active.a\:c_secondary-0,
+.active > .a\:c_secondary-0 {
+  color: #ff6600 !important;
+}
+
+.active.a\:c_secondary-1,
+.active > .a\:c_secondary-1 {
+  color: #ff7d26 !important;
+}
+
+.active.a\:c_secondary-2,
+.active > .a\:c_secondary-2 {
+  color: #ff9f5e !important;
+}
+
+.active.a\:c_secondary-3,
+.active > .a\:c_secondary-3 {
+  color: #ffc299 !important;
+}
+
+.active.a\:c_secondary-4,
+.active > .a\:c_secondary-4 {
+  color: #ffddc7 !important;
+}
+
+.active.a\:c_secondary-5,
+.active > .a\:c_secondary-5 {
+  color: #fff0e6 !important;
+}
+
+.active.a\:c_secondary-n1,
+.active > .a\:c_secondary-n1 {
+  color: #e65c00 !important;
+}
+
+.active.a\:c_secondary-n2,
+.active > .a\:c_secondary-n2 {
+  color: #bf4d00 !important;
+}
+
+.active.a\:c_secondary-n3,
+.active > .a\:c_secondary-n3 {
+  color: #8c3800 !important;
+}
+
+.active.a\:c_secondary-n4,
+.active > .a\:c_secondary-n4 {
+  color: #662900 !important;
+}
+
+.active.a\:c_secondary-n5,
+.active > .a\:c_secondary-n5 {
+  color: #401a00 !important;
+}
+
+.active.a\:bg_success,
+.active > .a\:bg_success,.active.a\:bg_success-0,
+.active > .a\:bg_success-0 {
+  background-color: #078a2e !important;
+}
+
+.active.a\:bg_success-1,
+.active > .a\:bg_success-1 {
+  background-color: #2c9c4d !important;
+}
+
+.active.a\:bg_success-2,
+.active > .a\:bg_success-2 {
+  background-color: #63b57b !important;
+}
+
+.active.a\:bg_success-3,
+.active > .a\:bg_success-3 {
+  background-color: #9cd0ab !important;
+}
+
+.active.a\:bg_success-4,
+.active > .a\:bg_success-4 {
+  background-color: #c8e5d1 !important;
+}
+
+.active.a\:bg_success-5,
+.active > .a\:bg_success-5 {
+  background-color: #e6f3ea !important;
+}
+
+.active.a\:bg_success-n1,
+.active > .a\:bg_success-n1 {
+  background-color: #067c29 !important;
+}
+
+.active.a\:bg_success-n2,
+.active > .a\:bg_success-n2 {
+  background-color: #056823 !important;
+}
+
+.active.a\:bg_success-n3,
+.active > .a\:bg_success-n3 {
+  background-color: #044c19 !important;
+}
+
+.active.a\:bg_success-n4,
+.active > .a\:bg_success-n4 {
+  background-color: #033712 !important;
+}
+
+.active.a\:bg_success-n5,
+.active > .a\:bg_success-n5 {
+  background-color: #02230c !important;
+}
+
+.active.a\:c_success,
+.active > .a\:c_success,.active.a\:c_success-0,
+.active > .a\:c_success-0 {
+  color: #078a2e !important;
+}
+
+.active.a\:c_success-1,
+.active > .a\:c_success-1 {
+  color: #2c9c4d !important;
+}
+
+.active.a\:c_success-2,
+.active > .a\:c_success-2 {
+  color: #63b57b !important;
+}
+
+.active.a\:c_success-3,
+.active > .a\:c_success-3 {
+  color: #9cd0ab !important;
+}
+
+.active.a\:c_success-4,
+.active > .a\:c_success-4 {
+  color: #c8e5d1 !important;
+}
+
+.active.a\:c_success-5,
+.active > .a\:c_success-5 {
+  color: #e6f3ea !important;
+}
+
+.active.a\:c_success-n1,
+.active > .a\:c_success-n1 {
+  color: #067c29 !important;
+}
+
+.active.a\:c_success-n2,
+.active > .a\:c_success-n2 {
+  color: #056823 !important;
+}
+
+.active.a\:c_success-n3,
+.active > .a\:c_success-n3 {
+  color: #044c19 !important;
+}
+
+.active.a\:c_success-n4,
+.active > .a\:c_success-n4 {
+  color: #033712 !important;
+}
+
+.active.a\:c_success-n5,
+.active > .a\:c_success-n5 {
+  color: #02230c !important;
+}
+
+.active.a\:bg_shade,
+.active > .a\:bg_shade,.active.a\:bg_shade-0,
+.active > .a\:bg_shade-0 {
+  background-color: #868686 !important;
+}
+
+.active.a\:bg_shade-1,
+.active > .a\:bg_shade-1 {
+  background-color: #989898 !important;
+}
+
+.active.a\:bg_shade-2,
+.active > .a\:bg_shade-2 {
+  background-color: #b3b3b3 !important;
+}
+
+.active.a\:bg_shade-3,
+.active > .a\:bg_shade-3 {
+  background-color: #cfcfcf !important;
+}
+
+.active.a\:bg_shade-4,
+.active > .a\:bg_shade-4 {
+  background-color: #e4e4e4 !important;
+}
+
+.active.a\:bg_shade-5,
+.active > .a\:bg_shade-5 {
+  background-color: #f3f3f3 !important;
+}
+
+.active.a\:bg_shade-n1,
+.active > .a\:bg_shade-n1 {
+  background-color: #797979 !important;
+}
+
+.active.a\:bg_shade-n2,
+.active > .a\:bg_shade-n2 {
+  background-color: #656565 !important;
+}
+
+.active.a\:bg_shade-n3,
+.active > .a\:bg_shade-n3 {
+  background-color: #4a4a4a !important;
+}
+
+.active.a\:bg_shade-n4,
+.active > .a\:bg_shade-n4 {
+  background-color: #363636 !important;
+}
+
+.active.a\:bg_shade-n5,
+.active > .a\:bg_shade-n5 {
+  background-color: #222222 !important;
+}
+
+.active.a\:c_shade,
+.active > .a\:c_shade,.active.a\:c_shade-0,
+.active > .a\:c_shade-0 {
+  color: #868686 !important;
+}
+
+.active.a\:c_shade-1,
+.active > .a\:c_shade-1 {
+  color: #989898 !important;
+}
+
+.active.a\:c_shade-2,
+.active > .a\:c_shade-2 {
+  color: #b3b3b3 !important;
+}
+
+.active.a\:c_shade-3,
+.active > .a\:c_shade-3 {
+  color: #cfcfcf !important;
+}
+
+.active.a\:c_shade-4,
+.active > .a\:c_shade-4 {
+  color: #e4e4e4 !important;
+}
+
+.active.a\:c_shade-5,
+.active > .a\:c_shade-5 {
+  color: #f3f3f3 !important;
+}
+
+.active.a\:c_shade-n1,
+.active > .a\:c_shade-n1 {
+  color: #797979 !important;
+}
+
+.active.a\:c_shade-n2,
+.active > .a\:c_shade-n2 {
+  color: #656565 !important;
+}
+
+.active.a\:c_shade-n3,
+.active > .a\:c_shade-n3 {
+  color: #4a4a4a !important;
+}
+
+.active.a\:c_shade-n4,
+.active > .a\:c_shade-n4 {
+  color: #363636 !important;
+}
+
+.active.a\:c_shade-n5,
+.active > .a\:c_shade-n5 {
+  color: #222222 !important;
+}
+
+.active.a\:bg_warning,
+.active > .a\:bg_warning,.active.a\:bg_warning-0,
+.active > .a\:bg_warning-0 {
+  background-color: #da8210 !important;
+}
+
+.active.a\:bg_warning-1,
+.active > .a\:bg_warning-1 {
+  background-color: #e09534 !important;
+}
+
+.active.a\:bg_warning-2,
+.active > .a\:bg_warning-2 {
+  background-color: #e8b068 !important;
+}
+
+.active.a\:bg_warning-3,
+.active > .a\:bg_warning-3 {
+  background-color: #f0cd9f !important;
+}
+
+.active.a\:bg_warning-4,
+.active > .a\:bg_warning-4 {
+  background-color: #f7e4ca !important;
+}
+
+.active.a\:bg_warning-5,
+.active > .a\:bg_warning-5 {
+  background-color: #fbf3e7 !important;
+}
+
+.active.a\:bg_warning-n1,
+.active > .a\:bg_warning-n1 {
+  background-color: #c4750e !important;
+}
+
+.active.a\:bg_warning-n2,
+.active > .a\:bg_warning-n2 {
+  background-color: #a4620c !important;
+}
+
+.active.a\:bg_warning-n3,
+.active > .a\:bg_warning-n3 {
+  background-color: #784809 !important;
+}
+
+.active.a\:bg_warning-n4,
+.active > .a\:bg_warning-n4 {
+  background-color: #573406 !important;
+}
+
+.active.a\:bg_warning-n5,
+.active > .a\:bg_warning-n5 {
+  background-color: #372104 !important;
+}
+
+.active.a\:c_warning,
+.active > .a\:c_warning,.active.a\:c_warning-0,
+.active > .a\:c_warning-0 {
+  color: #da8210 !important;
+}
+
+.active.a\:c_warning-1,
+.active > .a\:c_warning-1 {
+  color: #e09534 !important;
+}
+
+.active.a\:c_warning-2,
+.active > .a\:c_warning-2 {
+  color: #e8b068 !important;
+}
+
+.active.a\:c_warning-3,
+.active > .a\:c_warning-3 {
+  color: #f0cd9f !important;
+}
+
+.active.a\:c_warning-4,
+.active > .a\:c_warning-4 {
+  color: #f7e4ca !important;
+}
+
+.active.a\:c_warning-5,
+.active > .a\:c_warning-5 {
+  color: #fbf3e7 !important;
+}
+
+.active.a\:c_warning-n1,
+.active > .a\:c_warning-n1 {
+  color: #c4750e !important;
+}
+
+.active.a\:c_warning-n2,
+.active > .a\:c_warning-n2 {
+  color: #a4620c !important;
+}
+
+.active.a\:c_warning-n3,
+.active > .a\:c_warning-n3 {
+  color: #784809 !important;
+}
+
+.active.a\:c_warning-n4,
+.active > .a\:c_warning-n4 {
+  color: #573406 !important;
+}
+
+.active.a\:c_warning-n5,
+.active > .a\:c_warning-n5 {
+  color: #372104 !important;
+}
+
+.active.a\:bg_alert,
+.active > .a\:bg_alert,.active.a\:bg_alert-0,
+.active > .a\:bg_alert-0 {
+  background-color: #dd1a1a !important;
+}
+
+.active.a\:bg_alert-1,
+.active > .a\:bg_alert-1 {
+  background-color: #e23c3c !important;
+}
+
+.active.a\:bg_alert-2,
+.active > .a\:bg_alert-2 {
+  background-color: #ea6f6f !important;
+}
+
+.active.a\:bg_alert-3,
+.active > .a\:bg_alert-3 {
+  background-color: #f1a3a3 !important;
+}
+
+.active.a\:bg_alert-4,
+.active > .a\:bg_alert-4 {
+  background-color: #f8cdcd !important;
+}
+
+.active.a\:bg_alert-5,
+.active > .a\:bg_alert-5 {
+  background-color: #fce8e8 !important;
+}
+
+.active.a\:bg_alert-n1,
+.active > .a\:bg_alert-n1 {
+  background-color: #c71717 !important;
+}
+
+.active.a\:bg_alert-n2,
+.active > .a\:bg_alert-n2 {
+  background-color: #a61414 !important;
+}
+
+.active.a\:bg_alert-n3,
+.active > .a\:bg_alert-n3 {
+  background-color: #7a0e0e !important;
+}
+
+.active.a\:bg_alert-n4,
+.active > .a\:bg_alert-n4 {
+  background-color: #580a0a !important;
+}
+
+.active.a\:bg_alert-n5,
+.active > .a\:bg_alert-n5 {
+  background-color: #370707 !important;
+}
+
+.active.a\:c_alert,
+.active > .a\:c_alert,.active.a\:c_alert-0,
+.active > .a\:c_alert-0 {
+  color: #dd1a1a !important;
+}
+
+.active.a\:c_alert-1,
+.active > .a\:c_alert-1 {
+  color: #e23c3c !important;
+}
+
+.active.a\:c_alert-2,
+.active > .a\:c_alert-2 {
+  color: #ea6f6f !important;
+}
+
+.active.a\:c_alert-3,
+.active > .a\:c_alert-3 {
+  color: #f1a3a3 !important;
+}
+
+.active.a\:c_alert-4,
+.active > .a\:c_alert-4 {
+  color: #f8cdcd !important;
+}
+
+.active.a\:c_alert-5,
+.active > .a\:c_alert-5 {
+  color: #fce8e8 !important;
+}
+
+.active.a\:c_alert-n1,
+.active > .a\:c_alert-n1 {
+  color: #c71717 !important;
+}
+
+.active.a\:c_alert-n2,
+.active > .a\:c_alert-n2 {
+  color: #a61414 !important;
+}
+
+.active.a\:c_alert-n3,
+.active > .a\:c_alert-n3 {
+  color: #7a0e0e !important;
+}
+
+.active.a\:c_alert-n4,
+.active > .a\:c_alert-n4 {
+  color: #580a0a !important;
+}
+
+.active.a\:c_alert-n5,
+.active > .a\:c_alert-n5 {
+  color: #370707 !important;
+}
+
+.active.a\:bg_navigation,
+.active > .a\:bg_navigation,.active.a\:bg_navigation-0,
+.active > .a\:bg_navigation-0 {
+  background-color: #2b58c0 !important;
+}
+
+.active.a\:bg_navigation-1,
+.active > .a\:bg_navigation-1 {
+  background-color: #4b71c9 !important;
+}
+
+.active.a\:bg_navigation-2,
+.active > .a\:bg_navigation-2 {
+  background-color: #7996d7 !important;
+}
+
+.active.a\:bg_navigation-3,
+.active > .a\:bg_navigation-3 {
+  background-color: #aabce6 !important;
+}
+
+.active.a\:bg_navigation-4,
+.active > .a\:bg_navigation-4 {
+  background-color: #d0daf1 !important;
+}
+
+.active.a\:bg_navigation-5,
+.active > .a\:bg_navigation-5 {
+  background-color: #eaeef9 !important;
+}
+
+.active.a\:bg_navigation-n1,
+.active > .a\:bg_navigation-n1 {
+  background-color: #274fad !important;
+}
+
+.active.a\:bg_navigation-n2,
+.active > .a\:bg_navigation-n2 {
+  background-color: #204290 !important;
+}
+
+.active.a\:bg_navigation-n3,
+.active > .a\:bg_navigation-n3 {
+  background-color: #18306a !important;
+}
+
+.active.a\:bg_navigation-n4,
+.active > .a\:bg_navigation-n4 {
+  background-color: #11234d !important;
+}
+
+.active.a\:bg_navigation-n5,
+.active > .a\:bg_navigation-n5 {
+  background-color: #0b1630 !important;
+}
+
+.active.a\:c_navigation,
+.active > .a\:c_navigation,.active.a\:c_navigation-0,
+.active > .a\:c_navigation-0 {
+  color: #2b58c0 !important;
+}
+
+.active.a\:c_navigation-1,
+.active > .a\:c_navigation-1 {
+  color: #4b71c9 !important;
+}
+
+.active.a\:c_navigation-2,
+.active > .a\:c_navigation-2 {
+  color: #7996d7 !important;
+}
+
+.active.a\:c_navigation-3,
+.active > .a\:c_navigation-3 {
+  color: #aabce6 !important;
+}
+
+.active.a\:c_navigation-4,
+.active > .a\:c_navigation-4 {
+  color: #d0daf1 !important;
+}
+
+.active.a\:c_navigation-5,
+.active > .a\:c_navigation-5 {
+  color: #eaeef9 !important;
+}
+
+.active.a\:c_navigation-n1,
+.active > .a\:c_navigation-n1 {
+  color: #274fad !important;
+}
+
+.active.a\:c_navigation-n2,
+.active > .a\:c_navigation-n2 {
+  color: #204290 !important;
+}
+
+.active.a\:c_navigation-n3,
+.active > .a\:c_navigation-n3 {
+  color: #18306a !important;
+}
+
+.active.a\:c_navigation-n4,
+.active > .a\:c_navigation-n4 {
+  color: #11234d !important;
+}
+
+.active.a\:c_navigation-n5,
+.active > .a\:c_navigation-n5 {
+  color: #0b1630 !important;
+}
+
+.active.a\:bg_accent,
+.active > .a\:bg_accent,.active.a\:bg_accent-0,
+.active > .a\:bg_accent-0 {
+  background-color: #16a385 !important;
+}
+
+.active.a\:bg_accent-1,
+.active > .a\:bg_accent-1 {
+  background-color: #39b197 !important;
+}
+
+.active.a\:bg_accent-2,
+.active > .a\:bg_accent-2 {
+  background-color: #6cc5b2 !important;
+}
+
+.active.a\:bg_accent-3,
+.active > .a\:bg_accent-3 {
+  background-color: #a2dace !important;
+}
+
+.active.a\:bg_accent-4,
+.active > .a\:bg_accent-4 {
+  background-color: #ccebe4 !important;
+}
+
+.active.a\:bg_accent-5,
+.active > .a\:bg_accent-5 {
+  background-color: #e8f6f3 !important;
+}
+
+.active.a\:bg_accent-n1,
+.active > .a\:bg_accent-n1 {
+  background-color: #149378 !important;
+}
+
+.active.a\:bg_accent-n2,
+.active > .a\:bg_accent-n2 {
+  background-color: #117a64 !important;
+}
+
+.active.a\:bg_accent-n3,
+.active > .a\:bg_accent-n3 {
+  background-color: #0c5a49 !important;
+}
+
+.active.a\:bg_accent-n4,
+.active > .a\:bg_accent-n4 {
+  background-color: #094135 !important;
+}
+
+.active.a\:bg_accent-n5,
+.active > .a\:bg_accent-n5 {
+  background-color: #062921 !important;
+}
+
+.active.a\:c_accent,
+.active > .a\:c_accent,.active.a\:c_accent-0,
+.active > .a\:c_accent-0 {
+  color: #16a385 !important;
+}
+
+.active.a\:c_accent-1,
+.active > .a\:c_accent-1 {
+  color: #39b197 !important;
+}
+
+.active.a\:c_accent-2,
+.active > .a\:c_accent-2 {
+  color: #6cc5b2 !important;
+}
+
+.active.a\:c_accent-3,
+.active > .a\:c_accent-3 {
+  color: #a2dace !important;
+}
+
+.active.a\:c_accent-4,
+.active > .a\:c_accent-4 {
+  color: #ccebe4 !important;
+}
+
+.active.a\:c_accent-5,
+.active > .a\:c_accent-5 {
+  color: #e8f6f3 !important;
+}
+
+.active.a\:c_accent-n1,
+.active > .a\:c_accent-n1 {
+  color: #149378 !important;
+}
+
+.active.a\:c_accent-n2,
+.active > .a\:c_accent-n2 {
+  color: #117a64 !important;
+}
+
+.active.a\:c_accent-n3,
+.active > .a\:c_accent-n3 {
+  color: #0c5a49 !important;
+}
+
+.active.a\:c_accent-n4,
+.active > .a\:c_accent-n4 {
+  color: #094135 !important;
+}
+
+.active.a\:c_accent-n5,
+.active > .a\:c_accent-n5 {
+  color: #062921 !important;
+}
+
+.active.a\:bg_info,
+.active > .a\:bg_info,.active.a\:bg_info-0,
+.active > .a\:bg_info-0 {
+  background-color: #a3988c !important;
+}
+
+.active.a\:bg_info-1,
+.active > .a\:bg_info-1 {
+  background-color: #b1a79d !important;
+}
+
+.active.a\:bg_info-2,
+.active > .a\:bg_info-2 {
+  background-color: #c5beb7 !important;
+}
+
+.active.a\:bg_info-3,
+.active > .a\:bg_info-3 {
+  background-color: #dad6d1 !important;
+}
+
+.active.a\:bg_info-4,
+.active > .a\:bg_info-4 {
+  background-color: #ebe8e6 !important;
+}
+
+.active.a\:bg_info-5,
+.active > .a\:bg_info-5 {
+  background-color: #f6f5f4 !important;
+}
+
+.active.a\:bg_info-n1,
+.active > .a\:bg_info-n1 {
+  background-color: #93897e !important;
+}
+
+.active.a\:bg_info-n2,
+.active > .a\:bg_info-n2 {
+  background-color: #7a7269 !important;
+}
+
+.active.a\:bg_info-n3,
+.active > .a\:bg_info-n3 {
+  background-color: #5a544d !important;
+}
+
+.active.a\:bg_info-n4,
+.active > .a\:bg_info-n4 {
+  background-color: #413d38 !important;
+}
+
+.active.a\:bg_info-n5,
+.active > .a\:bg_info-n5 {
+  background-color: #292623 !important;
+}
+
+.active.a\:c_info,
+.active > .a\:c_info,.active.a\:c_info-0,
+.active > .a\:c_info-0 {
+  color: #a3988c !important;
+}
+
+.active.a\:c_info-1,
+.active > .a\:c_info-1 {
+  color: #b1a79d !important;
+}
+
+.active.a\:c_info-2,
+.active > .a\:c_info-2 {
+  color: #c5beb7 !important;
+}
+
+.active.a\:c_info-3,
+.active > .a\:c_info-3 {
+  color: #dad6d1 !important;
+}
+
+.active.a\:c_info-4,
+.active > .a\:c_info-4 {
+  color: #ebe8e6 !important;
+}
+
+.active.a\:c_info-5,
+.active > .a\:c_info-5 {
+  color: #f6f5f4 !important;
+}
+
+.active.a\:c_info-n1,
+.active > .a\:c_info-n1 {
+  color: #93897e !important;
+}
+
+.active.a\:c_info-n2,
+.active > .a\:c_info-n2 {
+  color: #7a7269 !important;
+}
+
+.active.a\:c_info-n3,
+.active > .a\:c_info-n3 {
+  color: #5a544d !important;
+}
+
+.active.a\:c_info-n4,
+.active > .a\:c_info-n4 {
+  color: #413d38 !important;
+}
+
+.active.a\:c_info-n5,
+.active > .a\:c_info-n5 {
+  color: #292623 !important;
+}
+
+.active.a\:bg_highlight,
+.active > .a\:bg_highlight,.active.a\:bg_highlight-0,
+.active > .a\:bg_highlight-0 {
+  background-color: #198dae !important;
+}
+
+.active.a\:bg_highlight-1,
+.active > .a\:bg_highlight-1 {
+  background-color: #3c9eba !important;
+}
+
+.active.a\:bg_highlight-2,
+.active > .a\:bg_highlight-2 {
+  background-color: #6eb7cc !important;
+}
+
+.active.a\:bg_highlight-3,
+.active > .a\:bg_highlight-3 {
+  background-color: #a3d1df !important;
+}
+
+.active.a\:bg_highlight-4,
+.active > .a\:bg_highlight-4 {
+  background-color: #cce6ed !important;
+}
+
+.active.a\:bg_highlight-5,
+.active > .a\:bg_highlight-5 {
+  background-color: #e8f4f7 !important;
+}
+
+.active.a\:bg_highlight-n1,
+.active > .a\:bg_highlight-n1 {
+  background-color: #177f9d !important;
+}
+
+.active.a\:bg_highlight-n2,
+.active > .a\:bg_highlight-n2 {
+  background-color: #136a83 !important;
+}
+
+.active.a\:bg_highlight-n3,
+.active > .a\:bg_highlight-n3 {
+  background-color: #0e4e60 !important;
+}
+
+.active.a\:bg_highlight-n4,
+.active > .a\:bg_highlight-n4 {
+  background-color: #0a3846 !important;
+}
+
+.active.a\:bg_highlight-n5,
+.active > .a\:bg_highlight-n5 {
+  background-color: #06232c !important;
+}
+
+.active.a\:c_highlight,
+.active > .a\:c_highlight,.active.a\:c_highlight-0,
+.active > .a\:c_highlight-0 {
+  color: #198dae !important;
+}
+
+.active.a\:c_highlight-1,
+.active > .a\:c_highlight-1 {
+  color: #3c9eba !important;
+}
+
+.active.a\:c_highlight-2,
+.active > .a\:c_highlight-2 {
+  color: #6eb7cc !important;
+}
+
+.active.a\:c_highlight-3,
+.active > .a\:c_highlight-3 {
+  color: #a3d1df !important;
+}
+
+.active.a\:c_highlight-4,
+.active > .a\:c_highlight-4 {
+  color: #cce6ed !important;
+}
+
+.active.a\:c_highlight-5,
+.active > .a\:c_highlight-5 {
+  color: #e8f4f7 !important;
+}
+
+.active.a\:c_highlight-n1,
+.active > .a\:c_highlight-n1 {
+  color: #177f9d !important;
+}
+
+.active.a\:c_highlight-n2,
+.active > .a\:c_highlight-n2 {
+  color: #136a83 !important;
+}
+
+.active.a\:c_highlight-n3,
+.active > .a\:c_highlight-n3 {
+  color: #0e4e60 !important;
+}
+
+.active.a\:c_highlight-n4,
+.active > .a\:c_highlight-n4 {
+  color: #0a3846 !important;
+}
+
+.active.a\:c_highlight-n5,
+.active > .a\:c_highlight-n5 {
+  color: #06232c !important;
+}
+
+.active.a\:bg_acc,
+.active > .a\:bg_acc,.active.a\:bg_acc-0,
+.active > .a\:bg_acc-0 {
+  background-color: #004176 !important;
+}
+
+.active.a\:bg_acc-1,
+.active > .a\:bg_acc-1 {
+  background-color: #265e8b !important;
+}
+
+.active.a\:bg_acc-2,
+.active > .a\:bg_acc-2 {
+  background-color: #5e87a9 !important;
+}
+
+.active.a\:bg_acc-3,
+.active > .a\:bg_acc-3 {
+  background-color: #99b3c8 !important;
+}
+
+.active.a\:bg_acc-4,
+.active > .a\:bg_acc-4 {
+  background-color: #c7d5e1 !important;
+}
+
+.active.a\:bg_acc-5,
+.active > .a\:bg_acc-5 {
+  background-color: #e6ecf1 !important;
+}
+
+.active.a\:bg_acc-n1,
+.active > .a\:bg_acc-n1 {
+  background-color: #003b6a !important;
+}
+
+.active.a\:bg_acc-n2,
+.active > .a\:bg_acc-n2 {
+  background-color: #003159 !important;
+}
+
+.active.a\:bg_acc-n3,
+.active > .a\:bg_acc-n3 {
+  background-color: #002441 !important;
+}
+
+.active.a\:bg_acc-n4,
+.active > .a\:bg_acc-n4 {
+  background-color: #001a2f !important;
+}
+
+.active.a\:bg_acc-n5,
+.active > .a\:bg_acc-n5 {
+  background-color: #00101e !important;
+}
+
+.active.a\:c_acc,
+.active > .a\:c_acc,.active.a\:c_acc-0,
+.active > .a\:c_acc-0 {
+  color: #004176 !important;
+}
+
+.active.a\:c_acc-1,
+.active > .a\:c_acc-1 {
+  color: #265e8b !important;
+}
+
+.active.a\:c_acc-2,
+.active > .a\:c_acc-2 {
+  color: #5e87a9 !important;
+}
+
+.active.a\:c_acc-3,
+.active > .a\:c_acc-3 {
+  color: #99b3c8 !important;
+}
+
+.active.a\:c_acc-4,
+.active > .a\:c_acc-4 {
+  color: #c7d5e1 !important;
+}
+
+.active.a\:c_acc-5,
+.active > .a\:c_acc-5 {
+  color: #e6ecf1 !important;
+}
+
+.active.a\:c_acc-n1,
+.active > .a\:c_acc-n1 {
+  color: #003b6a !important;
+}
+
+.active.a\:c_acc-n2,
+.active > .a\:c_acc-n2 {
+  color: #003159 !important;
+}
+
+.active.a\:c_acc-n3,
+.active > .a\:c_acc-n3 {
+  color: #002441 !important;
+}
+
+.active.a\:c_acc-n4,
+.active > .a\:c_acc-n4 {
+  color: #001a2f !important;
+}
+
+.active.a\:c_acc-n5,
+.active > .a\:c_acc-n5 {
+  color: #00101e !important;
+}
+
+.a\:icon-show,
+.active.a\:icon-hide,
+.active > .a\:icon-hide {
+  display: none !important;
+}
+
+.active > .a\:icon-show,
+.active.a\:icon-show {
+  display: inline-block !important;
+}
+
+.a\:visible,
+.active > .a\:_none,
+.active.a\:_none {
+  display: none !important;
+}
+
+.active > .a\:_inline,
+.active.a\:_inline {
+  display: inline !important;
+}
+
+.active > .a\:_inline-block,
+.active.a\:_inline-block {
+  display: inline-block !important;
+}
+
+.active > .a\:_block,
+.active.a\:_inline-block {
+  display: block !important;
+}
+
+/*
+Is active Display
+
+<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg"> Click the areas below to toggle the "is-active" state.</span></div>Toggle the display type of an object when it's parent 'active'
+
+none            -  make the display none when parent is-active
+inline          -  make the display inline when parent is-active
+inline-block    -  make the display inline-block when parent is-active
+block           -  make the display block when parent is-active
+
+
+Markup:
+<div class="p_5 is-active_toggle-function">
+  <span class="a:bg_accent bg_shade-2 font_4 text_center br_1 br_solid br_shade-4 p_4">Click to Toggle parent is-active</span>
+  <span class="a:{{modifier_class}} a:bg_accent bg_shade-2 font_4 text_center br_1 br_solid br_shade-4 p_4">Span with display:{{modifier_class}} when parent is active</span>
+</div>
+
+Weight: 10
+
+Styleguide UC.is-active.display
+
+*/
+/*
 Hover
 
 Decorate containers and text to show user intereaction with simple hover, and focus effects. 
@@ -22952,1451 +24067,6 @@ Styleguide UC.hover.borders
   border-color: transparent !important;
 }
 
-/*
-UC: Is-active 
-
-A common class name given to the parent container can effect the color, background and opacity of the children.  The active class is different depending if you are using Bootstrap or Foundation. <h1>This Variation of Arches uses <strong>"active"</strong></h1>  
-
-Weight: 135
-
-Styleguide UC.is-active
-
-*/
-/*
-Is-active to Full Opacity
-
-<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div><strong>`.is-acitve .a:opacity`</strong> Set the Opacity of an objects children to 100% when it has the class is-active. 
-
-Markup:
-<div class="flex p_4 bg_primary is-active_toggle-function ">
-  <div class="flex_auto opacity_0 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 0 </div>
-  <div class="flex_auto opacity_1 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 1 </div>
-  <div class="flex_auto opacity_2 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 2 </div>
-  <div class="flex_auto opacity_3 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 3 </div>
-  <div class="flex_auto opacity_4 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 4 </div>
-  <div class="flex_auto opacity_5 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 5 </div>
-  <div class="flex_auto opacity_6 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 6 </div>
-  <div class="flex_auto opacity_7 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 7 </div>
-  <div class="flex_auto opacity_8 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 8 </div>
-  <div class="flex_auto opacity_9 a:opacity br_1 br_solid br_white p_2 bg_warning c_white"> 9 </div>
-</div>
-
-Weight: 60
-
-Styleguide UC.is-active.opacity
-
-*/
-/*
-Is-active Black n White 
-
-<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div>Set the background to full white or black when the parent has a class of `is-active`. 
-
-bg_white              - text color modified light to dark
-bg_black              - text color modified light to dark
-
-Markup:
-<div class="flex p_5 bg_primary m_5 is-active_toggle-function">
-  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-0 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">0</div>
-  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-1 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">1</div>
-  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-2 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">2</div>
-  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-3 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">3</div>
-  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-4 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">4</div>
-  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-5 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4">5</div>
-  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-6 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">6</div>
-  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-7 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">7</div>
-  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-8 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">8</div>
-  <div class="flex_auto a:{{modifier_class}} bg_{{modifier_class}}-9 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">9</div>
-  <div class="flex_auto  a:{{modifier_class}} bg_{{modifier_class}}-0 p-y_3 p-x_4 font_bold font_2 font_slab c_shade text_center br_1 br_solid br_shade-4 ">default</div>
-</div>
-
-Weight: 50
-
-Styleguide UC.is-active.black and white
-
- */
-/*
-  Is active font color
-
-  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Set the font color of the child by setting the parent to .active. `a:c_primary`
-
-  c_primary              - text color modified light to dark
-  c_shade              - text color modified light to dark
-  c_info              - text color modified light to dark
-  c_highlight              - text color success color
-  c_success              - text color modified light to dark
-  c_warning              - text color modified light to dark
-  c_alert              - text color modified light to dark
-
-  Markup:
-  <div class="flex p_5 is-active_toggle-function c_white">
-    <div class="flex_auto a:{{modifier_class}}-5 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">5</div>
-    <div class="flex_auto a:{{modifier_class}}-4 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">4</div>
-    <div class="flex_auto a:{{modifier_class}}-3 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">3</div>
-    <div class="flex_auto a:{{modifier_class}}-2 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">2</div>
-    <div class="flex_auto a:{{modifier_class}}-1 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">1</div>
-    <div class="flex_auto a:{{modifier_class}}-0 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">0</div>
-    <div class="flex_auto a:{{modifier_class}}-n1 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n1</div>
-    <div class="flex_auto a:{{modifier_class}}-n2 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n2</div>
-    <div class="flex_auto a:{{modifier_class}}-n3 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n3</div>
-    <div class="flex_auto a:{{modifier_class}}-n4 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n4</div>
-    <div class="flex_auto a:{{modifier_class}}-n5 font_bold bg_shade-n3 font_5 font_slab text_center br_1 br_solid br_shade-4 p_1">n5</div>
-  </div>
-
-  Weight: 10
-
-  Styleguide UC.is-active.text
-
- */
-/*
-  Is active font color
-
-  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Set the font color of the child by setting the parent to .active. `a:c_primary`
-
-  bg_primary              - text color modified light to dark
-  bg_shade              - text color modified light to dark
-  bg_info              - text color modified light to dark
-  bg_highlight              - text color success color
-  bg_success              - text color modified light to dark
-  bg_warning              - text color modified light to dark
-  bg_alert              - text color modified light to dark
-
-  Markup:
-  <div class="flex p_5 is-active_toggle-function">
-    <div class="flex_auto a:{{modifier_class}}-5 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">5</div>
-    <div class="flex_auto a:{{modifier_class}}-4 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">4</div>
-    <div class="flex_auto a:{{modifier_class}}-3 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">3</div>
-    <div class="flex_auto a:{{modifier_class}}-2 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">2</div>
-    <div class="flex_auto a:{{modifier_class}}-1 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">1</div>
-    <div class="flex_auto a:{{modifier_class}}-0 bg_shade-2 font_3  text_center br_1 br_solid br_shade-4 p_1">0</div>
-    <div class="flex_auto a:{{modifier_class}}-n1 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n1</div>
-    <div class="flex_auto a:{{modifier_class}}-n2 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n2</div>
-    <div class="flex_auto a:{{modifier_class}}-n3 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n3</div>
-    <div class="flex_auto a:{{modifier_class}}-n4 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n4</div>
-    <div class="flex_auto a:{{modifier_class}}-n5 bg_shade-2  font_3  text_center br_1 br_solid br_shade-4 p_1">n5</div>
-  </div>
-
-  Weight: 10
-
-  Styleguide UC.is-active.background color
-
- */
-/*
-  Is active Icons
-
-  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div> Toggle the display and hide of a an icon with applying `is-active_icon-show` or `is-active_icon-hide`  
-
-  fa-award            - toggle the award icon
-  fa-bell             - toggle the bell icon
-  fa-bell-slash       - toggle the bell slash icon
-  fa-bug              - toggle the bug icon
-
-
-  Markup:
-  <div class="flex is-active_toggle-function">
-    <div class="flex_auto a:bg_accent bg_shade-2 font_3 text_center br_1 br_solid br_shade-4 p_3"><i class="fas font_4 {{modifier_class}} a:icon-show"></i> Show When Active</div>
-    <div class="flex_auto a:bg_accent bg_shade-2 font_3 text_center br_1 br_solid br_shade-4 p_3"><i class="fas font_4 {{modifier_class}} a:icon-hide"></i> Hide when Active</div>
-  </div>
-
-  Weight: 10
-
-  Styleguide UC.is-active.icon
-
- */
-
-.active.a\:bg_primary,
-.active > .a\:bg_primary,.active.a\:bg_primary-0,
-.active > .a\:bg_primary-0 {
-  background-color: #004176 !important;
-}
-
-.active.a\:bg_primary-1,
-.active > .a\:bg_primary-1 {
-  background-color: #265e8b !important;
-}
-
-.active.a\:bg_primary-2,
-.active > .a\:bg_primary-2 {
-  background-color: #5e87a9 !important;
-}
-
-.active.a\:bg_primary-3,
-.active > .a\:bg_primary-3 {
-  background-color: #99b3c8 !important;
-}
-
-.active.a\:bg_primary-4,
-.active > .a\:bg_primary-4 {
-  background-color: #c7d5e1 !important;
-}
-
-.active.a\:bg_primary-5,
-.active > .a\:bg_primary-5 {
-  background-color: #e6ecf1 !important;
-}
-
-.active.a\:bg_primary-n1,
-.active > .a\:bg_primary-n1 {
-  background-color: #003b6a !important;
-}
-
-.active.a\:bg_primary-n2,
-.active > .a\:bg_primary-n2 {
-  background-color: #003159 !important;
-}
-
-.active.a\:bg_primary-n3,
-.active > .a\:bg_primary-n3 {
-  background-color: #002441 !important;
-}
-
-.active.a\:bg_primary-n4,
-.active > .a\:bg_primary-n4 {
-  background-color: #001a2f !important;
-}
-
-.active.a\:bg_primary-n5,
-.active > .a\:bg_primary-n5 {
-  background-color: #00101e !important;
-}
-
-.active.a\:c_primary,
-.active > .a\:c_primary,.active.a\:c_primary-0,
-.active > .a\:c_primary-0 {
-  color: #004176 !important;
-}
-
-.active.a\:c_primary-1,
-.active > .a\:c_primary-1 {
-  color: #265e8b !important;
-}
-
-.active.a\:c_primary-2,
-.active > .a\:c_primary-2 {
-  color: #5e87a9 !important;
-}
-
-.active.a\:c_primary-3,
-.active > .a\:c_primary-3 {
-  color: #99b3c8 !important;
-}
-
-.active.a\:c_primary-4,
-.active > .a\:c_primary-4 {
-  color: #c7d5e1 !important;
-}
-
-.active.a\:c_primary-5,
-.active > .a\:c_primary-5 {
-  color: #e6ecf1 !important;
-}
-
-.active.a\:c_primary-n1,
-.active > .a\:c_primary-n1 {
-  color: #003b6a !important;
-}
-
-.active.a\:c_primary-n2,
-.active > .a\:c_primary-n2 {
-  color: #003159 !important;
-}
-
-.active.a\:c_primary-n3,
-.active > .a\:c_primary-n3 {
-  color: #002441 !important;
-}
-
-.active.a\:c_primary-n4,
-.active > .a\:c_primary-n4 {
-  color: #001a2f !important;
-}
-
-.active.a\:c_primary-n5,
-.active > .a\:c_primary-n5 {
-  color: #00101e !important;
-}
-
-.active.a\:bg_secondary,
-.active > .a\:bg_secondary {
-  background-color: #f60 !important;
-}
-
-.active.a\:bg_secondary-0,
-.active > .a\:bg_secondary-0 {
-  background-color: #ff6600 !important;
-}
-
-.active.a\:bg_secondary-1,
-.active > .a\:bg_secondary-1 {
-  background-color: #ff7d26 !important;
-}
-
-.active.a\:bg_secondary-2,
-.active > .a\:bg_secondary-2 {
-  background-color: #ff9f5e !important;
-}
-
-.active.a\:bg_secondary-3,
-.active > .a\:bg_secondary-3 {
-  background-color: #ffc299 !important;
-}
-
-.active.a\:bg_secondary-4,
-.active > .a\:bg_secondary-4 {
-  background-color: #ffddc7 !important;
-}
-
-.active.a\:bg_secondary-5,
-.active > .a\:bg_secondary-5 {
-  background-color: #fff0e6 !important;
-}
-
-.active.a\:bg_secondary-n1,
-.active > .a\:bg_secondary-n1 {
-  background-color: #e65c00 !important;
-}
-
-.active.a\:bg_secondary-n2,
-.active > .a\:bg_secondary-n2 {
-  background-color: #bf4d00 !important;
-}
-
-.active.a\:bg_secondary-n3,
-.active > .a\:bg_secondary-n3 {
-  background-color: #8c3800 !important;
-}
-
-.active.a\:bg_secondary-n4,
-.active > .a\:bg_secondary-n4 {
-  background-color: #662900 !important;
-}
-
-.active.a\:bg_secondary-n5,
-.active > .a\:bg_secondary-n5 {
-  background-color: #401a00 !important;
-}
-
-.active.a\:c_secondary,
-.active > .a\:c_secondary {
-  color: #f60 !important;
-}
-
-.active.a\:c_secondary-0,
-.active > .a\:c_secondary-0 {
-  color: #ff6600 !important;
-}
-
-.active.a\:c_secondary-1,
-.active > .a\:c_secondary-1 {
-  color: #ff7d26 !important;
-}
-
-.active.a\:c_secondary-2,
-.active > .a\:c_secondary-2 {
-  color: #ff9f5e !important;
-}
-
-.active.a\:c_secondary-3,
-.active > .a\:c_secondary-3 {
-  color: #ffc299 !important;
-}
-
-.active.a\:c_secondary-4,
-.active > .a\:c_secondary-4 {
-  color: #ffddc7 !important;
-}
-
-.active.a\:c_secondary-5,
-.active > .a\:c_secondary-5 {
-  color: #fff0e6 !important;
-}
-
-.active.a\:c_secondary-n1,
-.active > .a\:c_secondary-n1 {
-  color: #e65c00 !important;
-}
-
-.active.a\:c_secondary-n2,
-.active > .a\:c_secondary-n2 {
-  color: #bf4d00 !important;
-}
-
-.active.a\:c_secondary-n3,
-.active > .a\:c_secondary-n3 {
-  color: #8c3800 !important;
-}
-
-.active.a\:c_secondary-n4,
-.active > .a\:c_secondary-n4 {
-  color: #662900 !important;
-}
-
-.active.a\:c_secondary-n5,
-.active > .a\:c_secondary-n5 {
-  color: #401a00 !important;
-}
-
-.active.a\:bg_success,
-.active > .a\:bg_success,.active.a\:bg_success-0,
-.active > .a\:bg_success-0 {
-  background-color: #078a2e !important;
-}
-
-.active.a\:bg_success-1,
-.active > .a\:bg_success-1 {
-  background-color: #2c9c4d !important;
-}
-
-.active.a\:bg_success-2,
-.active > .a\:bg_success-2 {
-  background-color: #63b57b !important;
-}
-
-.active.a\:bg_success-3,
-.active > .a\:bg_success-3 {
-  background-color: #9cd0ab !important;
-}
-
-.active.a\:bg_success-4,
-.active > .a\:bg_success-4 {
-  background-color: #c8e5d1 !important;
-}
-
-.active.a\:bg_success-5,
-.active > .a\:bg_success-5 {
-  background-color: #e6f3ea !important;
-}
-
-.active.a\:bg_success-n1,
-.active > .a\:bg_success-n1 {
-  background-color: #067c29 !important;
-}
-
-.active.a\:bg_success-n2,
-.active > .a\:bg_success-n2 {
-  background-color: #056823 !important;
-}
-
-.active.a\:bg_success-n3,
-.active > .a\:bg_success-n3 {
-  background-color: #044c19 !important;
-}
-
-.active.a\:bg_success-n4,
-.active > .a\:bg_success-n4 {
-  background-color: #033712 !important;
-}
-
-.active.a\:bg_success-n5,
-.active > .a\:bg_success-n5 {
-  background-color: #02230c !important;
-}
-
-.active.a\:c_success,
-.active > .a\:c_success,.active.a\:c_success-0,
-.active > .a\:c_success-0 {
-  color: #078a2e !important;
-}
-
-.active.a\:c_success-1,
-.active > .a\:c_success-1 {
-  color: #2c9c4d !important;
-}
-
-.active.a\:c_success-2,
-.active > .a\:c_success-2 {
-  color: #63b57b !important;
-}
-
-.active.a\:c_success-3,
-.active > .a\:c_success-3 {
-  color: #9cd0ab !important;
-}
-
-.active.a\:c_success-4,
-.active > .a\:c_success-4 {
-  color: #c8e5d1 !important;
-}
-
-.active.a\:c_success-5,
-.active > .a\:c_success-5 {
-  color: #e6f3ea !important;
-}
-
-.active.a\:c_success-n1,
-.active > .a\:c_success-n1 {
-  color: #067c29 !important;
-}
-
-.active.a\:c_success-n2,
-.active > .a\:c_success-n2 {
-  color: #056823 !important;
-}
-
-.active.a\:c_success-n3,
-.active > .a\:c_success-n3 {
-  color: #044c19 !important;
-}
-
-.active.a\:c_success-n4,
-.active > .a\:c_success-n4 {
-  color: #033712 !important;
-}
-
-.active.a\:c_success-n5,
-.active > .a\:c_success-n5 {
-  color: #02230c !important;
-}
-
-.active.a\:bg_shade,
-.active > .a\:bg_shade,.active.a\:bg_shade-0,
-.active > .a\:bg_shade-0 {
-  background-color: #868686 !important;
-}
-
-.active.a\:bg_shade-1,
-.active > .a\:bg_shade-1 {
-  background-color: #989898 !important;
-}
-
-.active.a\:bg_shade-2,
-.active > .a\:bg_shade-2 {
-  background-color: #b3b3b3 !important;
-}
-
-.active.a\:bg_shade-3,
-.active > .a\:bg_shade-3 {
-  background-color: #cfcfcf !important;
-}
-
-.active.a\:bg_shade-4,
-.active > .a\:bg_shade-4 {
-  background-color: #e4e4e4 !important;
-}
-
-.active.a\:bg_shade-5,
-.active > .a\:bg_shade-5 {
-  background-color: #f3f3f3 !important;
-}
-
-.active.a\:bg_shade-n1,
-.active > .a\:bg_shade-n1 {
-  background-color: #797979 !important;
-}
-
-.active.a\:bg_shade-n2,
-.active > .a\:bg_shade-n2 {
-  background-color: #656565 !important;
-}
-
-.active.a\:bg_shade-n3,
-.active > .a\:bg_shade-n3 {
-  background-color: #4a4a4a !important;
-}
-
-.active.a\:bg_shade-n4,
-.active > .a\:bg_shade-n4 {
-  background-color: #363636 !important;
-}
-
-.active.a\:bg_shade-n5,
-.active > .a\:bg_shade-n5 {
-  background-color: #222222 !important;
-}
-
-.active.a\:c_shade,
-.active > .a\:c_shade,.active.a\:c_shade-0,
-.active > .a\:c_shade-0 {
-  color: #868686 !important;
-}
-
-.active.a\:c_shade-1,
-.active > .a\:c_shade-1 {
-  color: #989898 !important;
-}
-
-.active.a\:c_shade-2,
-.active > .a\:c_shade-2 {
-  color: #b3b3b3 !important;
-}
-
-.active.a\:c_shade-3,
-.active > .a\:c_shade-3 {
-  color: #cfcfcf !important;
-}
-
-.active.a\:c_shade-4,
-.active > .a\:c_shade-4 {
-  color: #e4e4e4 !important;
-}
-
-.active.a\:c_shade-5,
-.active > .a\:c_shade-5 {
-  color: #f3f3f3 !important;
-}
-
-.active.a\:c_shade-n1,
-.active > .a\:c_shade-n1 {
-  color: #797979 !important;
-}
-
-.active.a\:c_shade-n2,
-.active > .a\:c_shade-n2 {
-  color: #656565 !important;
-}
-
-.active.a\:c_shade-n3,
-.active > .a\:c_shade-n3 {
-  color: #4a4a4a !important;
-}
-
-.active.a\:c_shade-n4,
-.active > .a\:c_shade-n4 {
-  color: #363636 !important;
-}
-
-.active.a\:c_shade-n5,
-.active > .a\:c_shade-n5 {
-  color: #222222 !important;
-}
-
-.active.a\:bg_warning,
-.active > .a\:bg_warning,.active.a\:bg_warning-0,
-.active > .a\:bg_warning-0 {
-  background-color: #da8210 !important;
-}
-
-.active.a\:bg_warning-1,
-.active > .a\:bg_warning-1 {
-  background-color: #e09534 !important;
-}
-
-.active.a\:bg_warning-2,
-.active > .a\:bg_warning-2 {
-  background-color: #e8b068 !important;
-}
-
-.active.a\:bg_warning-3,
-.active > .a\:bg_warning-3 {
-  background-color: #f0cd9f !important;
-}
-
-.active.a\:bg_warning-4,
-.active > .a\:bg_warning-4 {
-  background-color: #f7e4ca !important;
-}
-
-.active.a\:bg_warning-5,
-.active > .a\:bg_warning-5 {
-  background-color: #fbf3e7 !important;
-}
-
-.active.a\:bg_warning-n1,
-.active > .a\:bg_warning-n1 {
-  background-color: #c4750e !important;
-}
-
-.active.a\:bg_warning-n2,
-.active > .a\:bg_warning-n2 {
-  background-color: #a4620c !important;
-}
-
-.active.a\:bg_warning-n3,
-.active > .a\:bg_warning-n3 {
-  background-color: #784809 !important;
-}
-
-.active.a\:bg_warning-n4,
-.active > .a\:bg_warning-n4 {
-  background-color: #573406 !important;
-}
-
-.active.a\:bg_warning-n5,
-.active > .a\:bg_warning-n5 {
-  background-color: #372104 !important;
-}
-
-.active.a\:c_warning,
-.active > .a\:c_warning,.active.a\:c_warning-0,
-.active > .a\:c_warning-0 {
-  color: #da8210 !important;
-}
-
-.active.a\:c_warning-1,
-.active > .a\:c_warning-1 {
-  color: #e09534 !important;
-}
-
-.active.a\:c_warning-2,
-.active > .a\:c_warning-2 {
-  color: #e8b068 !important;
-}
-
-.active.a\:c_warning-3,
-.active > .a\:c_warning-3 {
-  color: #f0cd9f !important;
-}
-
-.active.a\:c_warning-4,
-.active > .a\:c_warning-4 {
-  color: #f7e4ca !important;
-}
-
-.active.a\:c_warning-5,
-.active > .a\:c_warning-5 {
-  color: #fbf3e7 !important;
-}
-
-.active.a\:c_warning-n1,
-.active > .a\:c_warning-n1 {
-  color: #c4750e !important;
-}
-
-.active.a\:c_warning-n2,
-.active > .a\:c_warning-n2 {
-  color: #a4620c !important;
-}
-
-.active.a\:c_warning-n3,
-.active > .a\:c_warning-n3 {
-  color: #784809 !important;
-}
-
-.active.a\:c_warning-n4,
-.active > .a\:c_warning-n4 {
-  color: #573406 !important;
-}
-
-.active.a\:c_warning-n5,
-.active > .a\:c_warning-n5 {
-  color: #372104 !important;
-}
-
-.active.a\:bg_alert,
-.active > .a\:bg_alert,.active.a\:bg_alert-0,
-.active > .a\:bg_alert-0 {
-  background-color: #dd1a1a !important;
-}
-
-.active.a\:bg_alert-1,
-.active > .a\:bg_alert-1 {
-  background-color: #e23c3c !important;
-}
-
-.active.a\:bg_alert-2,
-.active > .a\:bg_alert-2 {
-  background-color: #ea6f6f !important;
-}
-
-.active.a\:bg_alert-3,
-.active > .a\:bg_alert-3 {
-  background-color: #f1a3a3 !important;
-}
-
-.active.a\:bg_alert-4,
-.active > .a\:bg_alert-4 {
-  background-color: #f8cdcd !important;
-}
-
-.active.a\:bg_alert-5,
-.active > .a\:bg_alert-5 {
-  background-color: #fce8e8 !important;
-}
-
-.active.a\:bg_alert-n1,
-.active > .a\:bg_alert-n1 {
-  background-color: #c71717 !important;
-}
-
-.active.a\:bg_alert-n2,
-.active > .a\:bg_alert-n2 {
-  background-color: #a61414 !important;
-}
-
-.active.a\:bg_alert-n3,
-.active > .a\:bg_alert-n3 {
-  background-color: #7a0e0e !important;
-}
-
-.active.a\:bg_alert-n4,
-.active > .a\:bg_alert-n4 {
-  background-color: #580a0a !important;
-}
-
-.active.a\:bg_alert-n5,
-.active > .a\:bg_alert-n5 {
-  background-color: #370707 !important;
-}
-
-.active.a\:c_alert,
-.active > .a\:c_alert,.active.a\:c_alert-0,
-.active > .a\:c_alert-0 {
-  color: #dd1a1a !important;
-}
-
-.active.a\:c_alert-1,
-.active > .a\:c_alert-1 {
-  color: #e23c3c !important;
-}
-
-.active.a\:c_alert-2,
-.active > .a\:c_alert-2 {
-  color: #ea6f6f !important;
-}
-
-.active.a\:c_alert-3,
-.active > .a\:c_alert-3 {
-  color: #f1a3a3 !important;
-}
-
-.active.a\:c_alert-4,
-.active > .a\:c_alert-4 {
-  color: #f8cdcd !important;
-}
-
-.active.a\:c_alert-5,
-.active > .a\:c_alert-5 {
-  color: #fce8e8 !important;
-}
-
-.active.a\:c_alert-n1,
-.active > .a\:c_alert-n1 {
-  color: #c71717 !important;
-}
-
-.active.a\:c_alert-n2,
-.active > .a\:c_alert-n2 {
-  color: #a61414 !important;
-}
-
-.active.a\:c_alert-n3,
-.active > .a\:c_alert-n3 {
-  color: #7a0e0e !important;
-}
-
-.active.a\:c_alert-n4,
-.active > .a\:c_alert-n4 {
-  color: #580a0a !important;
-}
-
-.active.a\:c_alert-n5,
-.active > .a\:c_alert-n5 {
-  color: #370707 !important;
-}
-
-.active.a\:bg_navigation,
-.active > .a\:bg_navigation,.active.a\:bg_navigation-0,
-.active > .a\:bg_navigation-0 {
-  background-color: #2b58c0 !important;
-}
-
-.active.a\:bg_navigation-1,
-.active > .a\:bg_navigation-1 {
-  background-color: #4b71c9 !important;
-}
-
-.active.a\:bg_navigation-2,
-.active > .a\:bg_navigation-2 {
-  background-color: #7996d7 !important;
-}
-
-.active.a\:bg_navigation-3,
-.active > .a\:bg_navigation-3 {
-  background-color: #aabce6 !important;
-}
-
-.active.a\:bg_navigation-4,
-.active > .a\:bg_navigation-4 {
-  background-color: #d0daf1 !important;
-}
-
-.active.a\:bg_navigation-5,
-.active > .a\:bg_navigation-5 {
-  background-color: #eaeef9 !important;
-}
-
-.active.a\:bg_navigation-n1,
-.active > .a\:bg_navigation-n1 {
-  background-color: #274fad !important;
-}
-
-.active.a\:bg_navigation-n2,
-.active > .a\:bg_navigation-n2 {
-  background-color: #204290 !important;
-}
-
-.active.a\:bg_navigation-n3,
-.active > .a\:bg_navigation-n3 {
-  background-color: #18306a !important;
-}
-
-.active.a\:bg_navigation-n4,
-.active > .a\:bg_navigation-n4 {
-  background-color: #11234d !important;
-}
-
-.active.a\:bg_navigation-n5,
-.active > .a\:bg_navigation-n5 {
-  background-color: #0b1630 !important;
-}
-
-.active.a\:c_navigation,
-.active > .a\:c_navigation,.active.a\:c_navigation-0,
-.active > .a\:c_navigation-0 {
-  color: #2b58c0 !important;
-}
-
-.active.a\:c_navigation-1,
-.active > .a\:c_navigation-1 {
-  color: #4b71c9 !important;
-}
-
-.active.a\:c_navigation-2,
-.active > .a\:c_navigation-2 {
-  color: #7996d7 !important;
-}
-
-.active.a\:c_navigation-3,
-.active > .a\:c_navigation-3 {
-  color: #aabce6 !important;
-}
-
-.active.a\:c_navigation-4,
-.active > .a\:c_navigation-4 {
-  color: #d0daf1 !important;
-}
-
-.active.a\:c_navigation-5,
-.active > .a\:c_navigation-5 {
-  color: #eaeef9 !important;
-}
-
-.active.a\:c_navigation-n1,
-.active > .a\:c_navigation-n1 {
-  color: #274fad !important;
-}
-
-.active.a\:c_navigation-n2,
-.active > .a\:c_navigation-n2 {
-  color: #204290 !important;
-}
-
-.active.a\:c_navigation-n3,
-.active > .a\:c_navigation-n3 {
-  color: #18306a !important;
-}
-
-.active.a\:c_navigation-n4,
-.active > .a\:c_navigation-n4 {
-  color: #11234d !important;
-}
-
-.active.a\:c_navigation-n5,
-.active > .a\:c_navigation-n5 {
-  color: #0b1630 !important;
-}
-
-.active.a\:bg_accent,
-.active > .a\:bg_accent,.active.a\:bg_accent-0,
-.active > .a\:bg_accent-0 {
-  background-color: #16a385 !important;
-}
-
-.active.a\:bg_accent-1,
-.active > .a\:bg_accent-1 {
-  background-color: #39b197 !important;
-}
-
-.active.a\:bg_accent-2,
-.active > .a\:bg_accent-2 {
-  background-color: #6cc5b2 !important;
-}
-
-.active.a\:bg_accent-3,
-.active > .a\:bg_accent-3 {
-  background-color: #a2dace !important;
-}
-
-.active.a\:bg_accent-4,
-.active > .a\:bg_accent-4 {
-  background-color: #ccebe4 !important;
-}
-
-.active.a\:bg_accent-5,
-.active > .a\:bg_accent-5 {
-  background-color: #e8f6f3 !important;
-}
-
-.active.a\:bg_accent-n1,
-.active > .a\:bg_accent-n1 {
-  background-color: #149378 !important;
-}
-
-.active.a\:bg_accent-n2,
-.active > .a\:bg_accent-n2 {
-  background-color: #117a64 !important;
-}
-
-.active.a\:bg_accent-n3,
-.active > .a\:bg_accent-n3 {
-  background-color: #0c5a49 !important;
-}
-
-.active.a\:bg_accent-n4,
-.active > .a\:bg_accent-n4 {
-  background-color: #094135 !important;
-}
-
-.active.a\:bg_accent-n5,
-.active > .a\:bg_accent-n5 {
-  background-color: #062921 !important;
-}
-
-.active.a\:c_accent,
-.active > .a\:c_accent,.active.a\:c_accent-0,
-.active > .a\:c_accent-0 {
-  color: #16a385 !important;
-}
-
-.active.a\:c_accent-1,
-.active > .a\:c_accent-1 {
-  color: #39b197 !important;
-}
-
-.active.a\:c_accent-2,
-.active > .a\:c_accent-2 {
-  color: #6cc5b2 !important;
-}
-
-.active.a\:c_accent-3,
-.active > .a\:c_accent-3 {
-  color: #a2dace !important;
-}
-
-.active.a\:c_accent-4,
-.active > .a\:c_accent-4 {
-  color: #ccebe4 !important;
-}
-
-.active.a\:c_accent-5,
-.active > .a\:c_accent-5 {
-  color: #e8f6f3 !important;
-}
-
-.active.a\:c_accent-n1,
-.active > .a\:c_accent-n1 {
-  color: #149378 !important;
-}
-
-.active.a\:c_accent-n2,
-.active > .a\:c_accent-n2 {
-  color: #117a64 !important;
-}
-
-.active.a\:c_accent-n3,
-.active > .a\:c_accent-n3 {
-  color: #0c5a49 !important;
-}
-
-.active.a\:c_accent-n4,
-.active > .a\:c_accent-n4 {
-  color: #094135 !important;
-}
-
-.active.a\:c_accent-n5,
-.active > .a\:c_accent-n5 {
-  color: #062921 !important;
-}
-
-.active.a\:bg_info,
-.active > .a\:bg_info,.active.a\:bg_info-0,
-.active > .a\:bg_info-0 {
-  background-color: #a3988c !important;
-}
-
-.active.a\:bg_info-1,
-.active > .a\:bg_info-1 {
-  background-color: #b1a79d !important;
-}
-
-.active.a\:bg_info-2,
-.active > .a\:bg_info-2 {
-  background-color: #c5beb7 !important;
-}
-
-.active.a\:bg_info-3,
-.active > .a\:bg_info-3 {
-  background-color: #dad6d1 !important;
-}
-
-.active.a\:bg_info-4,
-.active > .a\:bg_info-4 {
-  background-color: #ebe8e6 !important;
-}
-
-.active.a\:bg_info-5,
-.active > .a\:bg_info-5 {
-  background-color: #f6f5f4 !important;
-}
-
-.active.a\:bg_info-n1,
-.active > .a\:bg_info-n1 {
-  background-color: #93897e !important;
-}
-
-.active.a\:bg_info-n2,
-.active > .a\:bg_info-n2 {
-  background-color: #7a7269 !important;
-}
-
-.active.a\:bg_info-n3,
-.active > .a\:bg_info-n3 {
-  background-color: #5a544d !important;
-}
-
-.active.a\:bg_info-n4,
-.active > .a\:bg_info-n4 {
-  background-color: #413d38 !important;
-}
-
-.active.a\:bg_info-n5,
-.active > .a\:bg_info-n5 {
-  background-color: #292623 !important;
-}
-
-.active.a\:c_info,
-.active > .a\:c_info,.active.a\:c_info-0,
-.active > .a\:c_info-0 {
-  color: #a3988c !important;
-}
-
-.active.a\:c_info-1,
-.active > .a\:c_info-1 {
-  color: #b1a79d !important;
-}
-
-.active.a\:c_info-2,
-.active > .a\:c_info-2 {
-  color: #c5beb7 !important;
-}
-
-.active.a\:c_info-3,
-.active > .a\:c_info-3 {
-  color: #dad6d1 !important;
-}
-
-.active.a\:c_info-4,
-.active > .a\:c_info-4 {
-  color: #ebe8e6 !important;
-}
-
-.active.a\:c_info-5,
-.active > .a\:c_info-5 {
-  color: #f6f5f4 !important;
-}
-
-.active.a\:c_info-n1,
-.active > .a\:c_info-n1 {
-  color: #93897e !important;
-}
-
-.active.a\:c_info-n2,
-.active > .a\:c_info-n2 {
-  color: #7a7269 !important;
-}
-
-.active.a\:c_info-n3,
-.active > .a\:c_info-n3 {
-  color: #5a544d !important;
-}
-
-.active.a\:c_info-n4,
-.active > .a\:c_info-n4 {
-  color: #413d38 !important;
-}
-
-.active.a\:c_info-n5,
-.active > .a\:c_info-n5 {
-  color: #292623 !important;
-}
-
-.active.a\:bg_highlight,
-.active > .a\:bg_highlight,.active.a\:bg_highlight-0,
-.active > .a\:bg_highlight-0 {
-  background-color: #198dae !important;
-}
-
-.active.a\:bg_highlight-1,
-.active > .a\:bg_highlight-1 {
-  background-color: #3c9eba !important;
-}
-
-.active.a\:bg_highlight-2,
-.active > .a\:bg_highlight-2 {
-  background-color: #6eb7cc !important;
-}
-
-.active.a\:bg_highlight-3,
-.active > .a\:bg_highlight-3 {
-  background-color: #a3d1df !important;
-}
-
-.active.a\:bg_highlight-4,
-.active > .a\:bg_highlight-4 {
-  background-color: #cce6ed !important;
-}
-
-.active.a\:bg_highlight-5,
-.active > .a\:bg_highlight-5 {
-  background-color: #e8f4f7 !important;
-}
-
-.active.a\:bg_highlight-n1,
-.active > .a\:bg_highlight-n1 {
-  background-color: #177f9d !important;
-}
-
-.active.a\:bg_highlight-n2,
-.active > .a\:bg_highlight-n2 {
-  background-color: #136a83 !important;
-}
-
-.active.a\:bg_highlight-n3,
-.active > .a\:bg_highlight-n3 {
-  background-color: #0e4e60 !important;
-}
-
-.active.a\:bg_highlight-n4,
-.active > .a\:bg_highlight-n4 {
-  background-color: #0a3846 !important;
-}
-
-.active.a\:bg_highlight-n5,
-.active > .a\:bg_highlight-n5 {
-  background-color: #06232c !important;
-}
-
-.active.a\:c_highlight,
-.active > .a\:c_highlight,.active.a\:c_highlight-0,
-.active > .a\:c_highlight-0 {
-  color: #198dae !important;
-}
-
-.active.a\:c_highlight-1,
-.active > .a\:c_highlight-1 {
-  color: #3c9eba !important;
-}
-
-.active.a\:c_highlight-2,
-.active > .a\:c_highlight-2 {
-  color: #6eb7cc !important;
-}
-
-.active.a\:c_highlight-3,
-.active > .a\:c_highlight-3 {
-  color: #a3d1df !important;
-}
-
-.active.a\:c_highlight-4,
-.active > .a\:c_highlight-4 {
-  color: #cce6ed !important;
-}
-
-.active.a\:c_highlight-5,
-.active > .a\:c_highlight-5 {
-  color: #e8f4f7 !important;
-}
-
-.active.a\:c_highlight-n1,
-.active > .a\:c_highlight-n1 {
-  color: #177f9d !important;
-}
-
-.active.a\:c_highlight-n2,
-.active > .a\:c_highlight-n2 {
-  color: #136a83 !important;
-}
-
-.active.a\:c_highlight-n3,
-.active > .a\:c_highlight-n3 {
-  color: #0e4e60 !important;
-}
-
-.active.a\:c_highlight-n4,
-.active > .a\:c_highlight-n4 {
-  color: #0a3846 !important;
-}
-
-.active.a\:c_highlight-n5,
-.active > .a\:c_highlight-n5 {
-  color: #06232c !important;
-}
-
-.active.a\:bg_acc,
-.active > .a\:bg_acc,.active.a\:bg_acc-0,
-.active > .a\:bg_acc-0 {
-  background-color: #004176 !important;
-}
-
-.active.a\:bg_acc-1,
-.active > .a\:bg_acc-1 {
-  background-color: #265e8b !important;
-}
-
-.active.a\:bg_acc-2,
-.active > .a\:bg_acc-2 {
-  background-color: #5e87a9 !important;
-}
-
-.active.a\:bg_acc-3,
-.active > .a\:bg_acc-3 {
-  background-color: #99b3c8 !important;
-}
-
-.active.a\:bg_acc-4,
-.active > .a\:bg_acc-4 {
-  background-color: #c7d5e1 !important;
-}
-
-.active.a\:bg_acc-5,
-.active > .a\:bg_acc-5 {
-  background-color: #e6ecf1 !important;
-}
-
-.active.a\:bg_acc-n1,
-.active > .a\:bg_acc-n1 {
-  background-color: #003b6a !important;
-}
-
-.active.a\:bg_acc-n2,
-.active > .a\:bg_acc-n2 {
-  background-color: #003159 !important;
-}
-
-.active.a\:bg_acc-n3,
-.active > .a\:bg_acc-n3 {
-  background-color: #002441 !important;
-}
-
-.active.a\:bg_acc-n4,
-.active > .a\:bg_acc-n4 {
-  background-color: #001a2f !important;
-}
-
-.active.a\:bg_acc-n5,
-.active > .a\:bg_acc-n5 {
-  background-color: #00101e !important;
-}
-
-.active.a\:c_acc,
-.active > .a\:c_acc,.active.a\:c_acc-0,
-.active > .a\:c_acc-0 {
-  color: #004176 !important;
-}
-
-.active.a\:c_acc-1,
-.active > .a\:c_acc-1 {
-  color: #265e8b !important;
-}
-
-.active.a\:c_acc-2,
-.active > .a\:c_acc-2 {
-  color: #5e87a9 !important;
-}
-
-.active.a\:c_acc-3,
-.active > .a\:c_acc-3 {
-  color: #99b3c8 !important;
-}
-
-.active.a\:c_acc-4,
-.active > .a\:c_acc-4 {
-  color: #c7d5e1 !important;
-}
-
-.active.a\:c_acc-5,
-.active > .a\:c_acc-5 {
-  color: #e6ecf1 !important;
-}
-
-.active.a\:c_acc-n1,
-.active > .a\:c_acc-n1 {
-  color: #003b6a !important;
-}
-
-.active.a\:c_acc-n2,
-.active > .a\:c_acc-n2 {
-  color: #003159 !important;
-}
-
-.active.a\:c_acc-n3,
-.active > .a\:c_acc-n3 {
-  color: #002441 !important;
-}
-
-.active.a\:c_acc-n4,
-.active > .a\:c_acc-n4 {
-  color: #001a2f !important;
-}
-
-.active.a\:c_acc-n5,
-.active > .a\:c_acc-n5 {
-  color: #00101e !important;
-}
-
-.a\:icon-show,
-.active.a\:icon-hide,
-.active > .a\:icon-hide {
-  display: none !important;
-}
-
-.active > .a\:icon-show,
-.active.a\:icon-show {
-  display: inline-block !important;
-}
-
-.a\:visible,
-.active > .a\:_none,
-.active.a\:_none {
-  display: none !important;
-}
-
-.active > .a\:_inline,
-.active.a\:_inline {
-  display: inline !important;
-}
-
-.active > .a\:_inline-block,
-.active.a\:_inline-block {
-  display: inline-block !important;
-}
-
-.active > .a\:_block,
-.active.a\:_inline-block {
-  display: block !important;
-}
-
-/*
-Is active Display
-
-<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg"> Click the areas below to toggle the "is-active" state.</span></div>Toggle the display type of an object when it's parent 'active'
-
-none            -  make the display none when parent is-active
-inline          -  make the display inline when parent is-active
-inline-block    -  make the display inline-block when parent is-active
-block           -  make the display block when parent is-active
-
-
-Markup:
-<div class="p_5 is-active_toggle-function">
-  <span class="a:bg_accent bg_shade-2 font_4 text_center br_1 br_solid br_shade-4 p_4">Click to Toggle parent is-active</span>
-  <span class="a:{{modifier_class}} a:bg_accent bg_shade-2 font_4 text_center br_1 br_solid br_shade-4 p_4">Span with display:{{modifier_class}} when parent is active</span>
-</div>
-
-Weight: 10
-
-Styleguide UC.is-active.display
-
-*/
 /*
 Animation
 
