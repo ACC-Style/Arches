@@ -151,10 +151,14 @@ Styleguide UC.is-active.black and white
   Styleguide UC.is-active.icon
  
  */
+ @include is-active-loop-transparent('background-transparent', 'white');
+ @include is-active-loop-transparent('color-transparent', 'white');
+ @include is-active-loop-transparent('background-transparent', 'black');
+ @include is-active-loop-transparent('color-transparent', 'black');
 
 @each $color-name, $color in $theme-palette {
-	@include is-active-loop('background-color', $color-name, $color);
-	@include is-active-loop('color', $color-name, $color);
+  @include is-active-loop('background-transparent', $color-name, $color);
+	@include is-active-loop('color-transparent', $color-name, $color);
 }
 
 .a\:icon-show,

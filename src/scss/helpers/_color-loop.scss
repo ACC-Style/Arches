@@ -85,11 +85,11 @@ Gets utilty style and prints it.
             #{$style}: mix(black, $color, $val) !important;
         }
     }
+    @if $debug-trace {
+        @debug 'Color Loop for #{$key} painting it with #{$color-name}';
+    }
 }
 
-@if $debug-trace {
-    @debug 'Color Loop for #{$key} painting it with #{$color-name}';
-}
 
 @mixin hover-loop($key, $color-name, $color) {
     $white-mix: map-get($value-to-unit, percent-positive);
@@ -162,6 +162,41 @@ Gets utilty style and prints it.
         }
     }
 }
+// $key :  css class
+// $color-name: the mapped color name to the object. 
+// $color: hex value 
+
+@mixin is-active-loop-transparent($key, $color:'black', $breakpoint: '', $important: '!important' , $hover: false) {
+    $styles: get-css-style($key);
+    $sizes: get-all-css-sizes($key);
+    $hex: $color;
+    @if (#{$color}=='white') {
+        $hex: $white;
+    }
+    @else {
+        $hex: $black;
+    }
+
+    @each $val-name, $val in $sizes {
+        $unit: #{$color}-#{$val-name};
+       
+        @each $style in $styles { 
+            $name-self: class-name-constructor($key, $unit, $breakpoint, 'is-active-self');
+            $name-child: class-name-constructor($key, $unit, $breakpoint, 'is-active');
+            
+            #{$name-self},
+            #{$name-child}  {
+           
+                #{$style}: rgba($hex, $val) #{$important};
+            }
+            
+        }
+        @if $debug-trace {
+            @debug 'My Name is  #{$name-child}';
+        }
+    }
+}
+
 
 @mixin is-active-loop($key, $color-name, $color) {
     $white-mix: map-get($value-to-unit, percent-positive);
