@@ -320,6 +320,335 @@ html {
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(19, 18, 18, 0);
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  color: #000;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  border-bottom: 0;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  cursor: help;
+}
+
+address {
+  font-style: normal;
+  line-height: inherit;
+}
+
+address,ol,
+ul,
+dl {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+blockquote {
+  margin: 0 0 16px;
+  margin: 0 0 1rem;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+a {
+  background-color: transparent;
+  color: #0088aa;
+  text-decoration: none;
+}
+a:hover {
+  color: #005f77;
+  text-decoration: underline;
+}
+a:not([href]),a:not([href]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-size: 1em;
+}
+
+pre {
+  -ms-overflow-style: scrollbar;
+  margin-top: 0;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+
+figure {
+  margin: 0 0 16px;
+  margin: 0 0 1rem;
+}
+
+img {
+  border-style: none;
+}
+
+img,svg {
+  vertical-align: middle;
+}
+
+svg {
+  overflow: hidden;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: 12px;
+  padding-top: 0.75rem;
+  padding-bottom: 12px;
+  padding-bottom: 0.75rem;
+  color: #a1a0a0;
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  text-align: inherit;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+select {
+  word-wrap: normal;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  color: inherit;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: inherit;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: none;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+output {
+  display: inline-block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 8px;
@@ -447,6 +776,33 @@ mark,
 }
 .blockquote-footer::before {
   content: "— ";
+}
+
+.img-fluid,.img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 4px;
+  padding: 0.25rem;
+  border: 1px solid #5a5959;
+  background-color: white;
+}
+
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.figure-caption {
+  color: #a1a0a0;
+  font-size: 90%;
 }
 
 .container {
@@ -4482,6 +4838,254 @@ input[type=button].btn-block {
     -webkit-animation: none;
             animation: none;
   }
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.list-group-item-action {
+  width: 100%;
+  color: #b8b8b8;
+  text-align: inherit;
+}
+.list-group-item-action:hover, .list-group-item-action:focus {
+  z-index: 1;
+  background-color: #2b2a2a;
+  color: #b8b8b8;
+  text-decoration: none;
+}
+.list-group-item-action:active {
+  background-color: #424141;
+  color: #000;
+}
+
+.list-group-item {
+  display: block;
+  position: relative;
+  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(19, 18, 18, 0.125);
+  background-color: white;
+}
+.list-group-item.disabled, .list-group-item:disabled {
+  background-color: white;
+  color: #a1a0a0;
+  pointer-events: none;
+}
+.list-group-item.active {
+  z-index: 2;
+  border-color: #0088aa;
+  background-color: #0088aa;
+  color: white;
+}
+.list-group-item + .list-group-item {
+  border-top-width: 0;
+}
+.list-group-item + .list-group-item.active {
+  margin-top: -1px;
+  border-top-width: 1px;
+}
+
+.list-group-horizontal {
+  flex-direction: row;
+}
+.list-group-horizontal > .list-group-item.active {
+  margin-top: 0;
+}
+.list-group-horizontal > .list-group-item + .list-group-item {
+  border-top-width: 1px;
+  border-left-width: 0;
+}
+.list-group-horizontal > .list-group-item + .list-group-item.active {
+  margin-left: -1px;
+  border-left-width: 1px;
+}
+
+@media (min-width: 480px) {
+  .list-group-horizontal-sm {
+    flex-direction: row;
+  }
+  .list-group-horizontal-sm > .list-group-item.active {
+    margin-top: 0;
+  }
+  .list-group-horizontal-sm > .list-group-item + .list-group-item {
+    border-top-width: 1px;
+    border-left-width: 0;
+  }
+  .list-group-horizontal-sm > .list-group-item + .list-group-item.active {
+    margin-left: -1px;
+    border-left-width: 1px;
+  }
+}
+@media (min-width: 768px) {
+  .list-group-horizontal-md {
+    flex-direction: row;
+  }
+  .list-group-horizontal-md > .list-group-item.active {
+    margin-top: 0;
+  }
+  .list-group-horizontal-md > .list-group-item + .list-group-item {
+    border-top-width: 1px;
+    border-left-width: 0;
+  }
+  .list-group-horizontal-md > .list-group-item + .list-group-item.active {
+    margin-left: -1px;
+    border-left-width: 1px;
+  }
+}
+@media (min-width: 1024px) {
+  .list-group-horizontal-lg {
+    flex-direction: row;
+  }
+  .list-group-horizontal-lg > .list-group-item.active {
+    margin-top: 0;
+  }
+  .list-group-horizontal-lg > .list-group-item + .list-group-item {
+    border-top-width: 1px;
+    border-left-width: 0;
+  }
+  .list-group-horizontal-lg > .list-group-item + .list-group-item.active {
+    margin-left: -1px;
+    border-left-width: 1px;
+  }
+}
+@media (min-width: 1200px) {
+  .list-group-horizontal-xl {
+    flex-direction: row;
+  }
+  .list-group-horizontal-xl > .list-group-item.active {
+    margin-top: 0;
+  }
+  .list-group-horizontal-xl > .list-group-item + .list-group-item {
+    border-top-width: 1px;
+    border-left-width: 0;
+  }
+  .list-group-horizontal-xl > .list-group-item + .list-group-item.active {
+    margin-left: -1px;
+    border-left-width: 1px;
+  }
+}
+.list-group-flush > .list-group-item {
+  border-width: 0 0 1px;
+}
+.list-group-flush > .list-group-item:last-child {
+  border-bottom-width: 0;
+}
+
+.list-group-item-primary {
+  background-color: #e6f3f7;
+  color: #0b414f;
+}
+.list-group-item-primary.list-group-item-action:hover, .list-group-item-primary.list-group-item-action:focus {
+  background-color: #d3eaf1;
+  color: #0b414f;
+}
+.list-group-item-primary.list-group-item-action.active {
+  border-color: #0b414f;
+  background-color: #0b414f;
+  color: white;
+}
+
+.list-group-item-secondary {
+  background-color: #fdf2e9;
+  color: #683d17;
+}
+.list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
+  background-color: #fbe4d2;
+  color: #683d17;
+}
+.list-group-item-secondary.list-group-item-action.active {
+  border-color: #683d17;
+  background-color: #683d17;
+  color: white;
+}
+
+.list-group-item-success {
+  background-color: #e6f3ea;
+  color: #0e421d;
+}
+.list-group-item-success.list-group-item-action:hover, .list-group-item-success.list-group-item-action:focus {
+  background-color: #d5ebdc;
+  color: #0e421d;
+}
+.list-group-item-success.list-group-item-action.active {
+  border-color: #0e421d;
+  background-color: #0e421d;
+  color: white;
+}
+
+.list-group-item-info {
+  background-color: #f6f5f4;
+  color: #4d4843;
+}
+.list-group-item-info.list-group-item-action:hover, .list-group-item-info.list-group-item-action:focus {
+  background-color: #ebe8e6;
+  color: #4d4843;
+}
+.list-group-item-info.list-group-item-action.active {
+  border-color: #4d4843;
+  background-color: #4d4843;
+  color: white;
+}
+
+.list-group-item-warning {
+  background-color: #fef6e9;
+  color: #6d4b18;
+}
+.list-group-item-warning.list-group-item-action:hover, .list-group-item-warning.list-group-item-action:focus {
+  background-color: #fdecd1;
+  color: #6d4b18;
+}
+.list-group-item-warning.list-group-item-action.active {
+  border-color: #6d4b18;
+  background-color: #6d4b18;
+  color: white;
+}
+
+.list-group-item-danger {
+  background-color: #f5e6e6;
+  color: #490b0b;
+}
+.list-group-item-danger.list-group-item-action:hover, .list-group-item-danger.list-group-item-action:focus {
+  background-color: #eed4d4;
+  color: #490b0b;
+}
+.list-group-item-danger.list-group-item-action.active {
+  border-color: #490b0b;
+  background-color: #490b0b;
+  color: white;
+}
+
+.list-group-item-light {
+  background-color: #fbfbfb;
+  color: #616060;
+}
+.list-group-item-light.list-group-item-action:hover, .list-group-item-light.list-group-item-action:focus {
+  background-color: #eeeeee;
+  color: #616060;
+}
+.list-group-item-light.list-group-item-action.active {
+  border-color: #616060;
+  background-color: #616060;
+  color: white;
+}
+
+.list-group-item-dark {
+  background-color: #f2f2f2;
+  color: #3f3c3c;
+}
+.list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
+  background-color: #e5e5e5;
+  color: #3f3c3c;
+}
+.list-group-item-dark.list-group-item-action.active {
+  border-color: #3f3c3c;
+  background-color: #3f3c3c;
+  color: white;
 }
 
 .close {
@@ -8939,7 +9543,7 @@ Markup:
 
 Weight: -50
 
-Styleguide Recipes CVQualtiy.Navs.Footer
+Styleguide Recipes CVQualtiy.Navs.FooterCardioSmart
 
 */
 /*
@@ -8949,7 +9553,7 @@ Basic Cards
 
 Markup:
 <div class="card">
- <h3 class="card-header">Basic Card</h3>
+ <h3 class="card-header c_black">Basic Card</h3>
   <div class="card-body">
     <p>cupidatat eu dolor dolor aliquip aliqua velit esse magna culpa qui fugiat ad culpa consectetur sint tempor elit dolor eu anim nisi quis consectetur laborum laboris proident consectetur mollit esse</p>
   </div>
@@ -8966,7 +9570,7 @@ Highlighted Cards are stylized cards with a soft blue background and changes all
 
 Markup:
 <div class="bg_primary-5 br_primary-4 br_radius card highlighted">
- <h2 class="bg_tansparent br-b_0 c_accent c_shade-n4 card-header font_1 font_2:md font_3:lg p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Highlighted Card</h2>
+ <h2 class="bg_tansparent br-b_0 c_secondary c_shade-n4 card-header font_1 font_2:md font_3:lg p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Highlighted Card</h2>
   <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
     <p>Repudiandae adipisci illum omnis et suscipit at amet ex. Error magni laborum autem et rerum porro asperiores sunt. Et veritatis rerum voluptas hic eum sint. Ipsa labore eos autem cupiditate ut molestiae sit fugiat. Rerum sit dolorem veritatis est quia nesciunt tenetur ut. Animi earum illo sed incidunt fuga.</p>
   </div>
@@ -8991,7 +9595,7 @@ Placing cards inside of content areas is needed within the design.  Placing some
 
 Markup:
 <div class="bg_primary-alt br_1 br_primary-4 br_radius card highlighted shadow_1 max-w_20 clear_right float_right w_50 w_40\:md w_20\:lg ">
- <h2 class="bg_tansparent br-b_0 c_accent c_shade-n4 card-header font_1 font_2:md font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Positioned Small Right</h2>
+ <h2 class="bg_tansparent br-b_0 c_secondary c_shade-n4 card-header font_1 font_2:md font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg uppercase">Positioned Small Right</h2>
   <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
   <p class=" font_n2"> Container Classes:max-w_1 clear_right float_right w_50 w_40:md w_20:lg</p>  
   <p>Repudiandae adipisci illum omnis et suscipit at amet ex. Error magni laborum autem et rerum porro asperiores sunt. Et veritatis rerum voluptas hic eum sint. Ipsa labore eos autem cupiditate ut molestiae sit fugiat. Rerum sit dolorem veritatis est quia nesciunt tenetur ut. Animi earum illo sed incidunt fuga.</p>
@@ -9040,7 +9644,7 @@ Notice Cards are side notes usually associated with an action button.
 
 Markup:
 <div class="bg_shade-4 br_0   card info text_center">
- <h2 class="bg_tansparent br-b_0 br_accent-alt c_accent card-header font_1 font_2:md font_3:lg font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg triangle_left">Notice Card</h2>
+ <h2 class="bg_tansparent br-b_0 br_secondary-alt c_secondary card-header font_1 font_2:md font_3:lg font_display p-b_3 p-x_3 p-x_3:md p-x_4:lg triangle_left">Notice Card</h2>
   <div class="card-body font_0 font_1:md font_ui lh_2 p-b_0 p-x_3 p-x_3:md p-x_4:lg p-y_0">
     <p>aliqua mollit consectetur labore ipsum velit officia nulla anim magna est id elit irure qui dolor exercitation incididunt exercitation proident anim officia veniam reprehenderit laboris incididunt irure enim amet esse</p>
   </div>
@@ -9057,7 +9661,7 @@ Decorated address card for accreditation
 Markup:
 <div class="bg_shade-5 p_3 p_4:md">
 	<address class="m-b_3 m-x_2 vcard">
-		<h4 class="c_accent font_1 font_bold font_ui m-b_2 m-t_3">Questions About Accreditation?</h4>
+		<h4 class="c_secondary font_1 font_bold font_ui m-b_2 m-t_3">Questions About Accreditation?</h4>
 		<div class="contact font_n1">
 			<ul class="ul_none">
 				<li><a href="mailto:" class="c_shade-n3 email link">non@.org</a></li>
@@ -9065,7 +9669,7 @@ Markup:
 				<li><a href="fax:" class="c_shade-n3 fax link">55-444-55555</a></li>
 			</ul>
 		</div>
-		<h4 class="c_accent font_1 font_bold font_ui m-b_2 m-t_3">Office Hours:</h4>
+		<h4 class="c_secondary font_1 font_bold font_ui m-b_2 m-t_3">Office Hours:</h4>
 		<div class="font_n1 openning-hours">
 			<ul class="ul_none">
 				<li><span class="time">8:00am - 4pm EST</span><br /></li>
@@ -9077,7 +9681,7 @@ Markup:
 				</li>
 			</ul>
 		</div>
-		<h4 class="c_accent font_1 font_bold font_ui m-b_2 m-t_3">Mailing &amp; Shipping</h4>
+		<h4 class="c_secondary font_1 font_bold font_ui m-b_2 m-t_3">Mailing &amp; Shipping</h4>
 		<span class=".org"></span>
 		<ul class="ul_none adr">
 			<li class="street-address">2400 N St. NW</li>
@@ -9088,13 +9692,13 @@ Markup:
 			</li>
 		</ul>
 		<nav class="nav-social-button mono-grey">
-			<h4 class="c_accent font_1 font_bold font_ui m-b_2 m-t_3">Follow Us</h4>
+			<h4 class="c_secondary font_1 font_bold font_ui m-b_2 m-t_3">Follow Us</h4>
 			<ul class="flex m_0 social-bar ul_none">
 				<li class="flex_shrink m-r_1">
 					<a
 						href="https://twitter.com/accintouch"
 						target="_blank"
-						class="bg_shade-1 block br-bl_radius br-tl_radius c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0 twitter"
+						class="bg_shade-1 block br-bl_radius br-tl_radius c_shade-5 h:bg_secondary h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0 twitter"
 						><i class="fab fa-twitter-square"></i
 					></a>
 				</li>
@@ -9102,7 +9706,7 @@ Markup:
 					<a
 						href="https://www.facebook.com/AmericanCollegeofCardiology"
 						target="_blank"
-						class="facebook c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
+						class="facebook c_shade-5 bg_shade-1 block h:bg_secondary h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
 						><i class="fab fa-facebook-square"></i
 					></a>
 				</li>
@@ -9110,7 +9714,7 @@ Markup:
 					<a
 						href="https://www.linkedin.com/company/american-college-of-cardiology/"
 						target="_blank"
-						class="linkedin c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
+						class="linkedin c_shade-5 bg_shade-1 block h:bg_secondary h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
 						><i class="fab fa-linkedin"></i
 					></a>
 				</li>
@@ -9118,7 +9722,7 @@ Markup:
 					<a
 						href="http://www.youtube.com/user/ACCinTouch"
 						target="_blank"
-						class="youtube c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
+						class="youtube c_shade-5 bg_shade-1 block h:bg_secondary h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
 						><i class="fab fa-youtube"></i
 					></a>
 				</li>
@@ -9126,7 +9730,7 @@ Markup:
 					<a
 						href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US"
 						target="_blank"
-						class="google-play c_shade-5 bg_shade-1 block h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
+						class="google-play c_shade-5 bg_shade-1 block h:bg_secondary h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
 						><i class="fab fa-google-play"></i
 					></a>
 				</li>
@@ -9134,7 +9738,7 @@ Markup:
 					<a
 						href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps"
 						target="_blank"
-						class="apple-store bg_shade-1 block br-br_radius br-tr_radius c_shade-5 h:bg_accent h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
+						class="apple-store bg_shade-1 block br-br_radius br-tr_radius c_shade-5 h:bg_secondary h:c_white m-b_0 p-x_3 p_2 social-bar--button text_center transition_0"
 						><i class="fab fa-apple"></i
 					></a>
 				</li>
@@ -9156,16 +9760,16 @@ Markup:
      <h3>veniam quis veniam enim</h3>
      <div class="flex results-points">
          <span class="flex_auto points-possible"><span class="points-breakdown">(0 of 96 possible points)</span></span>
-         <span class="c_accent flex_shrink font_2 points-total">0</span>
+         <span class="c_secondary flex_shrink font_2 points-total">0</span>
      </div>
 </div>
 <div class="m-t_3 overall-score">
-    <span class="c_accent float_right font_n1 your-score-label">Your Score</span>
+    <span class="c_secondary float_right font_n1 your-score-label">Your Score</span>
     <div class="br-t_2 br_shade br_solid clear_both flex results-points">
-        <span class="br-b_1 br_accent br_dashed flex_auto p-t_4 points-possible">
-               <span class="c_accent font_2 font_bold font_ui m-b_n4 p_3 title">Overall Score</span> <span class="c_shade-1 font_italic points-breakdown">(0 of 96 possible points)</span>
+        <span class="br-b_1 br_secondary br_dashed flex_auto p-t_4 points-possible">
+               <span class="c_secondary font_2 font_bold font_ui m-b_n4 p_3 title">Overall Score</span> <span class="c_shade-1 font_italic points-breakdown">(0 of 96 possible points)</span>
         </span>
-        <span class="bg_accent br_shade c_white flex_shrink font_1 p_3 points-total triangle_top">
+        <span class="bg_secondary br_shade c_white flex_shrink font_1 p_3 points-total triangle_top">
             0%
         </span>
     </div>
@@ -9202,7 +9806,7 @@ Markup:
   <span class="bg_primary c_white-9 font_0 font_1 font_bold m-b_n2 m-x_n2 year">2018</span>
     </div></div>
             <div class="event-details flex_grow lh_1 p-l_4">
-                <div class="c_accent-n1 font_2 m-b_2 title">voluptate anim consequat tempor adipisicing aliquip non do</div>
+                <div class="c_secondary-n1 font_2 m-b_2 title">voluptate anim consequat tempor adipisicing aliquip non do</div>
                 <div class="c_primary font_0 font_bold location-title m-b_2">Grand Hayatt</div>
                 <div class="c_shade-n4 font_n1 location">Cincinnati, OH </div>
                 <span class="font_italic font_n2 full-date p-r_3">May 12, 2018</span><span class="time font_italic font_n2 p-r_3"><span class="begin">8:00AM</span> - <span class="end">2:00PM</span> <span class="timezone">(EST)</span></span>
@@ -9212,7 +9816,7 @@ Markup:
         <p>Eu dolore ullamco laboris veniam commodo pariatur pariatur proident ea. Esse in in nisi non eiusmod consequat pariatur officia mollit incididunt qui consectetur est. Ex aute non amet elit. Voluptate commodo minim sit Lorem occaecat sit aute reprehenderit. Dolore pariatur cupidatat velit anim enim veniam mollit aute fugiat magna do. Culpa non veniam non officia exercitation laborum dolor irure exercitation tempor adipisicing tempor elit nulla.</p>
     </div>
     <div class="bg_shade-5 c_shade-1 card-footer font_n1 text_center"><strong>Add to Calendar: </strong><a href="#" class="link">Outlook</a> | <a href="#" class="link">Google</a> | <a href="#" class="link">iCal</a></div>
-    <div class="bg_shade-5 br-t_0 card-footer p-t_0"><a href="#" class="bg_accent br_radius btn btn-accent btn-block c_white font_bold h:bg_accent-n2 h:shadow shadow_2">Register</a></div></div>
+    <div class="bg_shade-5 br-t_0 card-footer p-t_0"><a href="#" class="bg_secondary br_radius btn btn-secondary btn-block c_white font_bold h:bg_secondary-n2 h:shadow shadow_2">Register</a></div></div>
 
     Styleguide Recipes CVQualtiy.Cards.Date Event
 */
@@ -9299,7 +9903,303 @@ Side Nav
 Side Nav DOM
 
 Markup:
-<nav class="hidden-print nav-sub max-w-25"><ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav"><li data-nav="parent" class="nav-item parent"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation" target="_self"><i class="fa fa-holder toggle"></i>About Accreditation</a><ul data-nav="child" class="flex_column font_n1 nav text-indent_2 bg_shade-4"><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/benefits-of-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Benefits of Accreditation</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/steps-to-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Pathway to Accreditation</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/testimonials-and-success-stories" target="_self"><i class="fa fa-holder toggle"></i>Testimonials and Success Stories</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/value-of-process-improvement" target="_self"><i class="fa fa-holder toggle"></i>Value of Process Improvement</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/faqs" target="_self"><i class="fa fa-holder toggle"></i>FAQs</a></li><li class="nav-item"><a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" href="/accreditation/about-accreditation/accreditation-for-systems" target="_self"><i class="fa fa-holder toggle"></i>System-Wide Accreditation</a></li></ul></li><li data-nav="parent" class="is-active nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/services" target="_self"><i class="fa fa-holder toggle"></i>Products and Services</a><ul data-nav="child" class="bg_shade-4 flex_column font_n1 nav text-indent_1"><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/CCL" target="_self"><i class="fa fa-holder toggle"></i>Cardiac Cath Lab Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/CCL/OnDemandCathLabwebianrs" target="_self">On-Demand Cath Lab Webinars</a></li><li class="nav-item"><a class="nav-link nav-link c_shade-n4 p-y_2" href="/accreditation/services/CCL/CCLBenefits" target="_self">Cardiac Cath Lab Features Benefits</a></li><li class="nav-item"><a class="nav-link nav-link c_shade-n4 p-y_2" href="/accreditation/services/CCL/cardiac-cath-lab-accreditation-training" target="_self">Cardiac Cath Lab Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="nav-link c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/cpcwebinars" target="_self"><i class="fa fa-holder toggle"></i>On-Demand Chest Pain Center Webinars</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCDesignations" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Designations</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCBenefits" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Features Benefits</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCsupplementalED" target="_self"><i class="fa fa-holder toggle"></i>Supplemental Education</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCGuidelines" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Guidelines</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCArticles" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Articles Abstracts</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCPublications" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Pubs</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/CPCQuestions" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center FAQs</a></li><li class="nav-item"><a class="nav-link c_shade-n4 nav-link p-y_2" href="/accreditation/services/chest-pain-center-accreditation/chest-pain-center-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Chest Pain Center Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/EP" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/EP/register-for-webinar" target="_self"><i class="fa fa-holder toggle"></i>On-Demand EP Webinars</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/EP/EPBenefits" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Features Benefits</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/EP/electrophysiology-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Electrophysiology Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/HF" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/hfwebinars" target="_self"><i class="fa fa-holder toggle"></i>On-Demand Heart Failure Webinars</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFBenefits" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Features Benefits</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/supplementalED" target="_self"><i class="fa fa-holder toggle"></i>Supplemental Education</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFGuidelines" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Guidelines</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFArticles" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Articles and Abstracts</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFPublications" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Publications</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/HFQuestions" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure FAQs</a></li><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/HF/heart-failure-accreditation-training" target="_self"><i class="fa fa-holder toggle"></i>Heart Failure Accreditation Training</a></li></ul></li><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/services/TCV" target="_self"><i class="fa fa-holder toggle"></i>Transcatheter Valve Certification</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link c_shade-n4 p-y_2" href="/accreditation/services/TCV/TCV-certification-training" target="_self"><i class="fa fa-holder toggle"></i>Transcatheter Valve Certification Training</a></li></ul></li><li class="nav-item"><a class="h:bg_black-1 c_shade-n3 nav-link p-y_2" href="/accreditation/services/C4Certification" target="_self"><i class="fa fa-holder toggle"></i>C4 Certification</a></li></ul></li><li class="nav-item"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/heartcare-center-recognition-program" target="_self"><i class="fa fa-holder toggle"></i>HeartCARE Center Recognition Program</a></li><li class="nav-item"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/acc-quality-summit-2020" target="_self"><i class="fa fa-holder toggle"></i>ACC Quality Summit</a></li><li class="nav-item active current"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/brand" target="_self"><i class="fa fa-holder toggle"></i>Promote Your Achievement</a></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/quality-initiative-proposal" target="_self"><i class="fa fa-holder toggle"></i>Quality Initiative Proposal</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-link c_shade-n4 p-y_2"><a class="nav-link" href="/accreditation/quality-initiative-proposal/2018-recipients" target="_self"><i class="fa fa-holder toggle"></i>2018 Recipients</a></li></ul></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/advocacy" target="_self"><i class="fa fa-holder toggle"></i>Advocate Accreditation</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link" href="/accreditation/advocacy/Community-Education" target="_self"><i class="fa fa-holder toggle"></i>Community Education &amp; EHAC</a></li><li class="nav-item"><a class="nav-link" href="/accreditation/advocacy/helpful-links" target="_self"><i class="fa fa-holder toggle"></i>Helpful Links</a></li></ul></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/about-us" target="_self"><i class="fa fa-holder toggle"></i>About Us</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_2"><li class="nav-item parent"><a class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2" href="/accreditation/about-us/awards" target="_self">Awards</a><ul class="nav flex_column bg_black-1"><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/awards/process-improvement-pioneer-award" target="_self"><i class="fa fa-holder toggle"></i>Process Improvement Pioneer Award</a></li><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/awards/bahr-award-of-excellence" target="_self"><i class="fa fa-holder toggle"></i>Bahr Award of Excellence</a></li></ul></li><li class="nav-item"><a class="nav-link" href="/accreditation/about-us/staff-directory" target="_self"><i class="fa fa-holder toggle"></i>Staff Directory</a></li></ul></li><li class="nav-item"><a class="nav-link" href="/accreditation/map" target="_self"><i class="fa fa-holder toggle"></i>Accreditation Map</a></li><li data-nav="parent" class="nav-item parent"><a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" href="/accreditation/news-and-events" target="_self"><i class="fa fa-holder toggle"></i>News and Events</a><ul class="nav flex_column bg_black-2 font_n1 text-indent_3"><li class="nav-item"><a class="nav-link" href="/accreditation/news-and-events/upcoming-events" target="_self"><i class="fa fa-holder toggle"></i>Upcoming Events</a></li></ul></li></ul></nav>
+<nav class="hidden-print nav-sub max-w-25">
+    <ul
+        class="bg_shade-5 br-b_1 br-t_1 br_secondary br_solid flex flex_column font_0 font_bold font_ui nav">
+        <li data-nav="parent"
+            class="nav-item parent"><a
+               class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black"
+               href="/accreditation/about-accreditation"
+               target="_self"><i
+                   class="fa fa-holder toggle"></i>About
+                Accreditation</a>
+            <ul data-nav="child"
+                class="flex_column font_n1 nav text-indent_2 bg_shade-4">
+                <li class="nav-item"><a
+                       class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black"
+                       href="/accreditation/about-accreditation/benefits-of-accreditation"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>Benefits
+                        of Accreditation</a></li>
+                <li class="nav-item"><a
+                       class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black"
+                       href="/accreditation/about-accreditation/steps-to-accreditation"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>Pathway
+                        to Accreditation</a></li>
+                <li class="nav-item"><a
+                       class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black"
+                       href="/accreditation/about-accreditation/testimonials-and-success-stories"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>Testimonials
+                        and Success Stories</a></li>
+                <li class="nav-item"><a
+                       class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black"
+                       href="/accreditation/about-accreditation/value-of-process-improvement"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>Value
+                        of Process Improvement</a></li>
+                <li class="nav-item"><a
+                       class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black"
+                       href="/accreditation/about-accreditation/faqs"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>FAQs</a>
+                </li>
+                <li class="nav-item"><a
+                       class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black"
+                       href="/accreditation/about-accreditation/accreditation-for-systems"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>System-Wide
+                        Accreditation</a></li>
+            </ul>
+        </li>
+        <li data-nav="parent"
+            class="is-active nav-item parent"><a
+               class="a:c_secondary c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2"
+               href="/accreditation/services"
+               target="_self"><i
+                   class="fa fa-holder toggle"></i>Products
+                and Services</a>
+            <ul data-nav="child"
+                class="bg_shade-4 flex_column font_n1 nav text-indent_1">
+                <li class="nav-item parent"><a
+                       class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2"
+                       href="/accreditation/services/CCL"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>Cardiac
+                        Cath Lab Accreditation</a>
+                    <ul
+                        class="nav flex_column bg_black-2 font_n1 text-indent_3">
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/CCL/OnDemandCathLabwebianrs"
+                               target="_self">On-Demand Cath
+                                Lab Webinars</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/CCL/CCLBenefits"
+                               target="_self">Cardiac Cath
+                                Lab Features Benefits</a>
+                        </li>
+                        <li class="nav-item"><a
+                               class="nav-link nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/CCL/cardiac-cath-lab-accreditation-training"
+                               target="_self">Cardiac Cath
+                                Lab Accreditation
+                                Training</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item parent"><a
+                       class="nav-link c_shade-n3 fa-caret-right icon-before nav-link p-y_2"
+                       href="/accreditation/services/chest-pain-center-accreditation"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>Chest
+                        Pain Center Accreditation</a>
+                    <ul
+                        class="nav flex_column bg_black-2 font_n1 text-indent_3">
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 nav-link p-y_2"
+                               href="/accreditation/services/chest-pain-center-accreditation/cpcwebinars"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>On-Demand
+                                Chest Pain Center
+                                Webinars</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 nav-link p-y_2"
+                               href="/accreditation/services/chest-pain-center-accreditation/CPCDesignations"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Chest
+                                Pain Center Accreditation
+                                Designations</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 nav-link p-y_2"
+                               href="/accreditation/services/chest-pain-center-accreditation/CPCBenefits"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Chest
+                                Pain Center Accreditation
+                                Features Benefits</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 nav-link p-y_2"
+                               href="/accreditation/services/chest-pain-center-accreditation/CPCsupplementalED"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Supplemental
+                                Education</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 nav-link p-y_2"
+                               href="/accreditation/services/chest-pain-center-accreditation/CPCGuidelines"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Chest
+                                Pain Center Accreditation
+                                Guidelines</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 nav-link p-y_2"
+                               href="/accreditation/services/chest-pain-center-accreditation/CPCArticles"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Chest
+                                Pain Center Accreditation
+                                Articles Abstracts</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 nav-link p-y_2"
+                               href="/accreditation/services/chest-pain-center-accreditation/CPCPublications"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Chest
+                                Pain Center Accreditation
+                                Pubs</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 nav-link p-y_2"
+                               href="/accreditation/services/chest-pain-center-accreditation/CPCQuestions"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Chest
+                                Pain Center FAQs</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 nav-link p-y_2"
+                               href="/accreditation/services/chest-pain-center-accreditation/chest-pain-center-accreditation-training"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Chest
+                                Pain Center Accreditation
+                                Training</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item parent"><a
+                       class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2"
+                       href="/accreditation/services/EP"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>Electrophysiology
+                        Accreditation</a>
+                    <ul
+                        class="nav flex_column bg_black-2 font_n1 text-indent_3">
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/EP/register-for-webinar"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>On-Demand
+                                EP Webinars</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/EP/EPBenefits"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Electrophysiology
+                                Features Benefits</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/EP/electrophysiology-accreditation-training"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Electrophysiology
+                                Accreditation Training</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item parent"><a
+                       class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2"
+                       href="/accreditation/services/HF"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>Heart
+                        Failure Accreditation</a>
+                    <ul
+                        class="nav flex_column bg_black-2 font_n1 text-indent_3">
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/HF/hfwebinars"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>On-Demand
+                                Heart Failure Webinars</a>
+                        </li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/HF/HFBenefits"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Heart
+                                Failure Accreditation
+                                Features Benefits</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/HF/supplementalED"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Supplemental
+                                Education</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/HF/HFGuidelines"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Heart
+                                Failure Accreditation
+                                Guidelines</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/HF/HFArticles"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Heart
+                                Failure Accreditation
+                                Articles and Abstracts</a>
+                        </li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/HF/HFPublications"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Heart
+                                Failure Accreditation
+                                Publications</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/HF/HFQuestions"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Heart
+                                Failure FAQs</a></li>
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/HF/heart-failure-accreditation-training"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Heart
+                                Failure Accreditation
+                                Training</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item parent"><a
+                       class="h:bg_black-1 c_shade-n3 fa-caret-right icon-before nav-link p-y_2"
+                       href="/accreditation/services/TCV"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>Transcatheter
+                        Valve Certification</a>
+                    <ul
+                        class="nav flex_column bg_black-2 font_n1 text-indent_3">
+                        <li class="nav-item"><a
+                               class="nav-link c_shade-n4 p-y_2"
+                               href="/accreditation/services/TCV/TCV-certification-training"
+                               target="_self"><i
+                                   class="fa fa-holder toggle"></i>Transcatheter
+                                Valve Certification
+                                Training</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a
+                       class="h:bg_black-1 c_shade-n3 nav-link p-y_2"
+                       href="/accreditation/services/C4Certification"
+                       target="_self"><i
+                           class="fa fa-holder toggle"></i>C4
+                        Certification</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a
+               class="a:c_secondary c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2"
+               href="/accreditation/heartcare-center-recognition-program"
+               target="_self"><i
+                   class="fa fa-holder toggle"></i>HeartCARE
+                Center Recognition Program</a></li>
+        <li class="nav-item"><a
+               class="a:c_secondary c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2"
+               href="/accreditation/acc-quality-summit-2020"
+               target="_self"><i
+                   class="fa fa-holder toggle"></i>ACC
+                Quality Summit</a></li>
+        <li class="nav-item active current"><a
+               class="a:c_secondary c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2"
+               href="/accreditation/brand"
+               target="_self"><i
+                   class="fa fa-holder toggle"></i>Promote
+                Your Achievement</a></li>
+    </ul>
+</nav>
+
 
 
 Styleguide Recipes CVQualtiy.Navs.SideNav
@@ -9311,19 +10211,19 @@ Decoration classes with UC's to make the nav look like the primary level.
 
 Markup:
 <nav class="hidden-print nav-sub max-w-25">
-	<ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
+	<ul class="bg_shade-5 br-b_1 br-t_1 br_secondary br_solid flex flex_column font_0 font_bold font_ui nav">
 		<li data-nav="parent" class="nav-item parent">
-			<a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
+			<a class="a:c_secondary c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
 				Link with children
 			</a>
 		</li>
 		<li  class="nav-item">
-			<a class="a:c_accent c_shade-n3 h:bg_white-4 nav-link p-y_2" target="_self">
+			<a class="a:c_secondary c_shade-n3 h:bg_white-4 nav-link p-y_2" target="_self">
 				Link without children
 			</a>
 		</li>
 		<li data-nav="parent" class="nav-item parent active">
-			<a class="a:c_accent c_shade-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
+			<a class="a:c_secondary c_shade-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
 				Link that is active
 			</a>
 		</li>
@@ -9341,9 +10241,9 @@ Decoration classes with UC's to make the nav look like the child of the primary 
 
 Markup:
 <nav class="hidden-print nav-sub max-w-25">
-	<ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
+	<ul class="bg_shade-5 br-b_1 br-t_1 br_secondary br_solid flex flex_column font_0 font_bold font_ui nav">
 		<li data-nav="parent" class="nav-item parent">
-			<a class="a:c_accent c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
+			<a class="a:c_secondary c_shade-n3 fa-caret-right h:bg_white-4 icon-before nav-link p-y_2" target="_self">
 				Parent Link
 			</a>
 			<ul class="flex_column font_n1 nav text-indent_2 bg_shade-4">
@@ -9353,12 +10253,12 @@ Markup:
 					</a>
 				</li>
 				<li  class="nav-item">
-					<a class="a:c_accent c_shade-n3 h:bg_white-4 nav-link p-y_2" target="_self">
+					<a class="a:c_secondary c_shade-n3 h:bg_white-4 nav-link p-y_2" target="_self">
 						Link without children
 					</a>
 				</li>
 				<li data-nav="parent" class="nav-item parent active">
-					<a class="a:c_accent c_shade-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
+					<a class="a:c_secondary c_shade-n3 fa-caret-down h:bg_white-4 icon-before nav-link p-y_2"t arget="_self">
 						Link that is active
 					</a>
 				</li>
@@ -9378,7 +10278,7 @@ Decoration classes with UC's to make the nav look like the child of the primary 
 
 Markup:
 <nav class="hidden-print nav-sub max-w-25">
-	<ul class="bg_shade-5 br-b_1 br-t_1 br_accent br_solid flex flex_column font_0 font_bold font_ui nav">
+	<ul class="bg_shade-5 br-b_1 br-t_1 br_secondary br_solid flex flex_column font_0 font_bold font_ui nav">
 		<li data-nav="parent" class="nav-item parent">
 			<a class="nav-link p-y_2 c_shade-n3 h:bg_black-2 h:c_black" target="_self">
 				Link with children
@@ -11170,6 +12070,44 @@ Styleguide HTML.RealArticle
   display: none;
 }
 
+@media only screen and (min-width : 768px) {
+  .navbar-primary.navbar-expand-md .nav-item {
+    border-top: 0.25rem #ffc425 solid;
+    border-bottom: 0;
+  }
+  .navbar-primary.navbar-expand-md .nav-item.active, .navbar-primary.navbar-expand-md .nav-item.show, .navbar-primary.navbar-expand-md .nav-item:hover {
+    border-top-color: #ca6a15;
+    border-bottom-color: #fff;
+    background-color: #766d6c;
+  }
+  .navbar-primary.navbar-expand-md .nav-item.active .nav-link, .navbar-primary.navbar-expand-md .nav-item.show .nav-link, .navbar-primary.navbar-expand-md .nav-item:hover .nav-link {
+    color: white;
+  }
+  .navbar-primary.navbar-expand-md .nav-item .nav-item {
+    border-top: none 0px;
+    border-bottom: none 0px;
+  }
+}
+
+@media only screen and (min-width : 1024px) {
+  .navbar-primary.navbar-expand-lg .nav-item {
+    border-top: 0.25rem #ffc425 solid;
+    border-bottom: 0;
+  }
+  .navbar-primary.navbar-expand-lg .nav-item.active, .navbar-primary.navbar-expand-lg .nav-item.show, .navbar-primary.navbar-expand-lg .nav-item:hover {
+    border-top-color: #ca6a15;
+    border-bottom-color: #fff;
+    background-color: #766d6c;
+  }
+  .navbar-primary.navbar-expand-lg .nav-item.active .nav-link, .navbar-primary.navbar-expand-lg .nav-item.show .nav-link, .navbar-primary.navbar-expand-lg .nav-item:hover .nav-link {
+    color: white;
+  }
+}
+.navbar-primary.navbar-expand-lg .nav-item.dropdown .nav-item {
+  border-top: none 0px;
+  border-bottom: none 0px;
+}
+
 @media only screen and (min-width : 480px) {
   .navbar-expand-sm .dropdown:hover > .dropdown-menu {
     display: block;
@@ -11193,6 +12131,10 @@ Styleguide HTML.RealArticle
   color: white;
 }
 
+.show > i.icon-toggle_plus-minus:before, .dropdown:hover i.icon-toggle_plus-minus:before {
+  content: "";
+}
+
 /* 
 
 Primary Nav 
@@ -11200,35 +12142,35 @@ Primary Nav
 The Header Nav of ACC.org 
 
 Markup:
-<div class="flex relative br_solid br_0 br-t_3 br_accent-alt">
-	<nav class="bg_shade-2 flex_auto font_0 font_1:lg font_display navbar navbar-dark navbar-expand-lg navbar-primary p-x_0 uppercase">
-		<button class="br_white-2 flex is-active_toggle-function m-l_3 m-l_n2 m-y_2 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed" type="button" data-toggle="collapse" data-target="#navbarLoginContent" aria-controls="navbarLoginContent" aria-expanded="false" aria-label="Toggle navigation">
-			<i class="a:c_acc-2 c_white fas flex_shrink font_0 icon-toggle_bars-times self_center"></i><span class="a:c_acc-2 c_white flex_auto self_center">&nbsp;Menu</span>
-		</button>
+<div class="flex relative font_display font_medium">
+	<nav class="bg_shade-1  flex_auto font_0 font_1:lg font_display navbar navbar-dark navbar-expand-lg navbar-primary p-x_0 uppercase">
+		<a class="br_white-2 flex is-active_toggle-function m-l_3 m-l_n2 m-y_2 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed" type="button" data-toggle="collapse" data-target="#navbarLoginContent" aria-controls="navbarLoginContent" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="a:c_secondary c_white fas flex_shrink font_0 icon-toggle_bars-times self_center"></i><span class="a:c_acc-2 c_white flex_auto self_center">&nbsp;Menu</span>
+		</a>
 		<div class="navbar-collapse collapse" id="navbarLoginContent" style="">
 			<ul class="expand expanded flex flex_column flex_row:lg nav text_center:lg text_left w_100">
 				<li class="nav-item flex_shrink">
 					<a class="active c_white h:bg_shade nav-link p-x_4 p-x_5:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources"><i class="fas fa-home"></i><span class="display_none:lg p-x_3">Home</span></a>
 				</li>
-				<li class="nav-item flex_auto dropdown">
+				<li class="nav-item flex_auto dropdown lh_2">
 					<a class="c_white dropdown-toggle h:bg_shade is-active_toggle-function nav-link p-x_4" href="/NCDR-Home" target="_self" data-delay="300" data-close-others="false" id="clinicalTopicsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far faw icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Clinical Topics</a>
 					<div class="absolute:lg br_1 br_none br_shade-3 br_solid:lg c_white dropdown-menu font_bold l_0 m-t_0 m-x_0 m-x_0:lg p_0 r_0 relative w_100" aria-labelledby="clinicalTopicsDropdown">
 						<ul class="bg_shade-5 font_0 font_bold lh_1 ul_none">
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/about-ncdr" target="_self">About NCDR</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/registries" target="_self">Registries</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/data-collection" target="_self">Data Collection</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/reports" target="_self">Reports</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/quality-payment-program" target="_self">Quality Payment Program</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/research" target="_self">Research</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/analytics" target="_self">Analytics</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/annual-conference" target="_self">ACC Quality Summit</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/ncdr-learning-center" target="_self">NCDR Learning Center</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/transform-ldl-c-risk" target="_self">TRANSFORM LDL C Risk</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/participant-directory" target="_self">Participant Directory</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/acc-public-reporting" target="_self">ACC Public Reporting</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/clinical-quality-coach" target="_self">NCDR Clinical Quality Coach Practice Dashboard</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="https://www.ncdr.com/webncdr/Login?ReturnUrl=/webncdr/home/registry-selection" target="_self">Registry Participant Login</a></li>
-							<li class="nav-item"><a class="c_shade-2 dropdown-item h:bg_shade-1 h:c_shade-5 nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/join-a-registry" target="_self">Join a Registry</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/about-ncdr" target="_self">About NCDR</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/registries" target="_self">Registries</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/data-collection" target="_self">Data Collection</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/reports" target="_self">Reports</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/quality-payment-program" target="_self">Quality Payment Program</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/research" target="_self">Research</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/analytics" target="_self">Analytics</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/annual-conference" target="_self">ACC Quality Summit</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/ncdr-learning-center" target="_self">NCDR Learning Center</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/transform-ldl-c-risk" target="_self">TRANSFORM LDL C Risk</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/participant-directory" target="_self">Participant Directory</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/acc-public-reporting" target="_self">ACC Public Reporting</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/clinical-quality-coach" target="_self">NCDR Clinical Quality Coach Practice Dashboard</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="https://www.ncdr.com/webncdr/Login?ReturnUrl=/webncdr/home/registry-selection" target="_self">Registry Participant Login</a></li>
+							<li class="nav-item"><a class="c_black-8 dropdown-item h:bg_black-2 h:c_white nav-link p-x_5 text-indent_n1 wrap" href="/NCDR-Home/join-a-registry" target="_self">Join a Registry</a></li>
 						</ul>
 					</div>
 				</li>
@@ -11251,7 +12193,7 @@ Markup:
 				<div class="br_none br_solid:lg dropdown-menu dropdown-menu-right font_0 m-t_n1 p_0 r_0 show" aria-labelledby="navbarDropdown">
 					<ul class="ul_none">
 						<li class="nav-item">
-							<a class="dropdown-item nav-link bg_accent h:bg_accent-n2 c_white flex" href="#">
+							<a class="dropdown-item nav-link bg_secondary h:bg_secondary-n2 c_white flex" href="#">
 								<span class="flex_auto inline-block p-l_2 p-r_4 uppercase">CV Quality </span>
 								<span class="c_white-7 flex-shrink font_n1 p-x_3 self_center">Log Out <i class="fas fa-sign-out"></i></span></a>
 						</li>
