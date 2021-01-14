@@ -1,0 +1,141 @@
+#search-holder {
+	float: right;
+	clear: right;
+	width: 400px;
+	position: relative;
+	z-index: 3000;
+	border: 1px solid get-themecolor(secondary,3);
+	border-radius: $border_radius/2;
+	clear:both;
+	input{
+		position: absolute;
+		left: 0;
+		width: 100%;
+		line-height: 1.5em;
+		font-size: 1.2em;
+		box-sizing: border-box;
+		color: #ccc;
+	}
+	button{
+		position: absolute;
+		top: 3px;
+		right: 3px;
+		height: 26px;
+		width: 26px;
+		background: #fff url(../images/icon-search.png) 50% 50% no-repeat;
+		border: 0;
+		overflow: hidden;
+		text-indent: -99em;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	.coveo-omnibox{
+		top: 30px;
+	}
+	.coveo-query-box-clear{
+		display: none !important;//this is problematic in the header search
+	}
+}
+.search-bar {
+	width: 100%;
+	height:auto;
+	float:left;
+}
+#nav-search-label {
+	position: absolute;
+	overflow: hidden;
+	text-indent: -99em;
+}
+#nav-search-in {
+	position: relative;
+	display: block;
+	float: left;
+	width: 200px;
+	padding: 0 24px 0 10px;
+	height: 30px;
+	overflow: hidden;
+	border-right: 1px get-themecolor(secondary,3) solid;
+	background: #e6e6e6;
+	border-radius: $border_radius/2 0 0 $border_radius/2;
+
+	#nav-search-in-content {
+		display: inline-block;
+		margin: 0;
+		padding: 6px 0 0 0;
+		text-indent: 1px;
+		text-overflow: ellipsis;
+		white-space: nowrap;		
+		overflow: hidden;
+		max-width: 90px;
+	}
+	&.nav-facade-active{
+		.nav-down-arrow {
+			position: absolute;
+			display:inline-block;
+			right: 10px;
+			top: 11px;
+			background:url("../images/search_arrow.png");
+			height:5px;
+			width:9px;
+		}
+		#searchDropdownBox {
+			cursor: pointer;
+			height: 29px;
+			left: 0;
+			opacity: 0;
+			top: 0;
+			visibility: visible;
+			width: auto;
+		}
+	} 
+}
+#searchDropdownBox {
+	border: 1px solid #DDDDDD;
+	color: black;
+	left: 5px;
+	margin: 0;
+	outline: medium none;
+	padding: 0;
+	position: absolute;
+	top: 3px;
+	visibility: hidden;
+	width: 190px;
+}
+.nav-sprite {
+
+}
+
+.nav-searchfield-outer {
+	position: relative;
+	float: left;
+	width: 245px;
+	height: 30px;
+}
+
+#twotabsearchtextbox {
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	margin: 6px 0 0 6px;
+	outline: medium none;
+	padding: 0;
+	width: 100%;
+}
+.nav-submit-button {
+	margin: 0;
+	overflow: hidden;
+	padding: 0 0 0 3px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 28px;
+	width: 40px;
+	.nav-submit-input {
+		border: medium none;
+		color: white;
+		cursor: pointer;
+		margin: 0;
+		padding: 0;
+		width: 34px;
+	}
+}

@@ -549,6 +549,39 @@ gulp.task(
 );
 
 gulp.task(
+    "build-home",
+    gulp.series(
+        function() {
+            return gulp
+                .src(PATHS.SCSS + "/styleguide/_arches.scss")
+                .pipe(rename("arches_home.scss"))
+                .pipe(header("/** Layouts Demo Test 1 **/\n"))
+                .pipe(sass().on("error", sass.logError))
+                .pipe(gulp.dest(PATHS.CSS));
+        },
+        "copy-to-dist",
+        "copy-to-styleguide",
+        function() {
+            var brand = "home";
+            var framework = "arches";
+            var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
+            base = markdownbuild(base, brand + "_" + framework);
+            return merge(base)
+                .pipe(
+                    header(
+                        fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md", "utf8")
+                    )
+                )
+                .pipe(gulp.dest(SOURCE.MD));
+        },
+        function() {
+            return run("npm run home").exec();
+        }
+    )
+    
+);
+
+gulp.task(
     "default",
     gulp.series(
         "build-acc",

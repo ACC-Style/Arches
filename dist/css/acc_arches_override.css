@@ -1207,32 +1207,6 @@
   Styleguide InteractiveExtras.ToggleIcons
   */
   /*
-  Loading Grid Dots
-
-  Experimental: Animated Loading Dots
-
-  white              - text color modified light to dark
-  black              - text color modified light to dark
-
-  Markup:
-  <div  data-style="{{ modifier_class }}"  class="p_5 bg_primary texture_medium clearboth"> 
-  <div class="lds-grid">
-  		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-  		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-  		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-  		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-  		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-  		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-  		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-  		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-  		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-  	</div>
-  	</div>
-
-  Styleguide InteractiveExtras.Loading Grid
-
-    */
-  /*
 
   Scrollbar Mini
 
@@ -5303,91 +5277,6 @@
 .active #acc_arches_override .icon-toggle_check:before, .active > #acc_arches_override .icon-toggle_check:before {
   content: "";
 }
-#acc_arches_override .lds-grid {
-  grid-gap: 12px;
-  display: -ms-grid;
-  display: grid;
-  position: relative;
-  -ms-grid-columns: 16px 12px 16px 12px 16px;
-  grid-template-columns: 16px 16px 16px;
-  -ms-grid-rows: auto 12px auto;
-  grid-template-rows: auto auto;
-  width: 64px;
-  height: 64px;
-  margin: 0 auto;
-}
-#acc_arches_override .lds-grid > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-#acc_arches_override .lds-grid > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-}
-#acc_arches_override .lds-grid > *:nth-child(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-}
-#acc_arches_override .lds-grid > *:nth-child(4) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-#acc_arches_override .lds-grid > *:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-}
-#acc_arches_override .lds-grid > *:nth-child(6) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
-}
-#acc_arches_override .lds-grid .dot {
-  width: 16px;
-  height: 16px;
-  -webkit-animation: lds-grid 1.5s linear infinite;
-          animation: lds-grid 1.5s linear infinite;
-}
-#acc_arches_override .lds-grid .dot:nth-child(1) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-#acc_arches_override .lds-grid .dot:nth-child(2),#acc_arches_override .lds-grid .dot:nth-child(4) {
-  -webkit-animation-delay: -0.3s;
-          animation-delay: -0.3s;
-}
-#acc_arches_override .lds-grid .dot:nth-child(3),#acc_arches_override .lds-grid .dot:nth-child(5),#acc_arches_override .lds-grid .dot:nth-child(7) {
-  -webkit-animation-delay: -0.6s;
-          animation-delay: -0.6s;
-}
-#acc_arches_override .lds-grid .dot:nth-child(6),#acc_arches_override .lds-grid .dot:nth-child(8) {
-  -webkit-animation-delay: -0.9s;
-          animation-delay: -0.9s;
-}
-#acc_arches_override .lds-grid .dot:nth-child(9) {
-  -webkit-animation-delay: -1.2s;
-          animation-delay: -1.2s;
-}
-@-webkit-keyframes lds-grid {
-  0%, 100% {
-    opacity: 0.95;
-  }
-  10%, 90% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.25;
-  }
-}
-@keyframes lds-grid {
-  0%, 100% {
-    opacity: 0.95;
-  }
-  10%, 90% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.25;
-  }
-}
 #acc_arches_override .scrollbar-mini::-webkit-scrollbar {
   width: 6.4px;
   width: 0.4rem;
@@ -5421,6 +5310,139 @@
 #acc_arches_override .container,
 #acc_arches_override .card {
   position: relative;
+}
+#acc_arches_override #search-holder {
+  z-index: 3000;
+  position: relative;
+  width: 400px;
+  float: right;
+  clear: right;
+  clear: both;
+  border: 1px solid #c1c3c7;
+  border-radius: 3px;
+}
+#acc_arches_override #search-holder input {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: #ccc;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+#acc_arches_override #search-holder button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
+  border: 0;
+  background: #fff url(../images/icon-search.png) 50% 50% no-repeat;
+  text-indent: -99em;
+}
+#acc_arches_override #search-holder button:hover {
+  cursor: pointer;
+}
+#acc_arches_override #search-holder .coveo-omnibox {
+  top: 30px;
+}
+#acc_arches_override #search-holder .coveo-query-box-clear {
+  display: none !important;
+}
+#acc_arches_override .search-bar {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+#acc_arches_override #nav-search-label {
+  position: absolute;
+  overflow: hidden;
+  text-indent: -99em;
+}
+#acc_arches_override #nav-search-in {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 30px;
+  padding: 0 24px 0 10px;
+  float: left;
+  overflow: hidden;
+  border-right: 1px #c1c3c7 solid;
+  border-radius: 3px 0 0 3px;
+  background: #e6e6e6;
+}
+#acc_arches_override #nav-search-in #nav-search-in-content {
+  display: inline-block;
+  max-width: 90px;
+  margin: 0;
+  padding: 6px 0 0 0;
+  overflow: hidden;
+  text-indent: 1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#acc_arches_override #nav-search-in.nav-facade-active .nav-down-arrow {
+  display: inline-block;
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  width: 9px;
+  height: 5px;
+  background: url("../images/search_arrow.png");
+}
+#acc_arches_override #nav-search-in.nav-facade-active #searchDropdownBox {
+  visibility: visible;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 29px;
+  cursor: pointer;
+  opacity: 0;
+}
+#acc_arches_override #searchDropdownBox {
+  visibility: hidden;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 190px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #DDDDDD;
+  outline: medium none;
+  color: black;
+}
+#acc_arches_override .nav-searchfield-outer {
+  position: relative;
+  width: 245px;
+  height: 30px;
+  float: left;
+}
+#acc_arches_override #twotabsearchtextbox {
+  width: 100%;
+  margin: 6px 0 0 6px;
+  padding: 0;
+  border: medium none;
+  outline: medium none;
+  background: none repeat scroll 0 0 transparent;
+}
+#acc_arches_override .nav-submit-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 28px;
+  margin: 0;
+  padding: 0 0 0 3px;
+  overflow: hidden;
+}
+#acc_arches_override .nav-submit-button .nav-submit-input {
+  width: 34px;
+  margin: 0;
+  padding: 0;
+  border: medium none;
+  color: white;
+  cursor: pointer;
 }
 #acc_arches_override .reading-typography h1,
 #acc_arches_override .reading-typography h2,
