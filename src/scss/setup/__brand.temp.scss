@@ -47,7 +47,7 @@ $theme-palette: map-merge(
 );
 
 $fonts: (
-	slab: (
+	accent: (
 		name: 'Roboto Slab',
 		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
 	),
@@ -66,15 +66,15 @@ $fonts: (
 );
 
 // Reset Values of Utlity-css.vars.scss
-$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'slab', map-deep-get($fonts, 'slab', 'stack'));
+$value-to-unit: map-deep-set($value-to-unit, 'font-family' 'accent', map-deep-get($fonts, 'accent', 'stack'));
 $value-to-unit: map-deep-set($value-to-unit, 'font-family' 'display', map-deep-get($fonts, 'display', 'stack'));
 $value-to-unit: map-deep-set($value-to-unit, 'font-family' 'copy', map-deep-get($fonts, 'copy', 'stack'));
 
 // reset all the references for the fonts
 $style-definition: map-deep-set(
 	$style-definition,
-	'font-family' 'unit' 'slab',
-	unquote(map-deep-get($value-to-unit, 'font-family', 'slab'))
+	'font-family' 'unit' 'accent',
+	unquote(map-deep-get($value-to-unit, 'font-family', 'accent'))
 );
 $style-definition: map-deep-set(
 	$style-definition,
@@ -93,7 +93,7 @@ $style-definition: map-deep-set(
 );
 
 $font_display: get-css-size(font-family, display);
-$font_slab: get-css-size(font-family, slab);
+$font_accent: get-css-size(font-family, accent);
 $font_ui: get-css-size(font-family, ui);
 $font_copy: get-css-size(font-family, copy);
 $font_mono: get-css-size(font-family, mono);

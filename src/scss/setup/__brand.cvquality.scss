@@ -152,7 +152,7 @@ $light: $warm-grey-light;
 $dark: $warm-grey-dark;
 
 $fonts: (
-	slab: (
+	accent: (
 		name: 'Roboto Slab',
 		short-name: 'RS',
 		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,"slab",serif',
@@ -175,13 +175,13 @@ $fonts: (
 );
 
 // Reset Values of Utlity-css.vars.scss
-$value-to-unit: map-deep-set($value-to-unit, font-family slab, map-deep-get($fonts, slab stack));
+$value-to-unit: map-deep-set($value-to-unit, font-family accent, map-deep-get($fonts, accent stack));
 $value-to-unit: map-deep-set($value-to-unit, font-family display, map-deep-get($fonts, display stack));
 $value-to-unit: map-deep-set($value-to-unit, font-family copy, map-deep-get($fonts, copy stack));
 $value-to-unit: map-deep-set($value-to-unit, font-family ui, map-deep-get($fonts, ui stack));
 
 $font_display: get-css-size(font-family, display);
-$font_slab: get-css-size(font-family, slab);
+$font_accent: get-css-size(font-family, accent);
 $font_ui: get-css-size(font-family, ui);
 $font_copy: get-css-size(font-family, copy);
 $font_mono: get-css-size(font-family, mono);
