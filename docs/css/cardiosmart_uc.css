@@ -4159,125 +4159,6 @@ Styleguide InteractiveExtras.ToggleIcons
 }
 
 /*
-Loading Grid Dots
-
-Experimental: Animated Loading Dots
-
-white              - text color modified light to dark
-black              - text color modified light to dark
-
-Markup:
-<div  data-style="{{ modifier_class }}"  class="p_5 bg_primary texture_medium clearboth"> 
-<div class="lds-grid">
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-		<div class="dot bg_{{modifier_class}}-6 br_solid br_2 br_{{modifier_class}} br_circle"></div>
-	</div>
-	</div>
-
-Styleguide InteractiveExtras.Loading Grid
-
-  */
-.lds-grid {
-  grid-gap: 12px;
-  display: -ms-grid;
-  display: grid;
-  position: relative;
-  -ms-grid-columns: 16px 12px 16px 12px 16px;
-  grid-template-columns: 16px 16px 16px;
-  -ms-grid-rows: auto 12px auto;
-  grid-template-rows: auto auto;
-  width: 64px;
-  height: 64px;
-  margin: 0 auto;
-}
-.lds-grid > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-.lds-grid > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-}
-.lds-grid > *:nth-child(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-}
-.lds-grid > *:nth-child(4) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-.lds-grid > *:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-}
-.lds-grid > *:nth-child(6) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
-}
-
-.lds-grid .dot {
-  width: 16px;
-  height: 16px;
-  -webkit-animation: lds-grid 1.5s linear infinite;
-          animation: lds-grid 1.5s linear infinite;
-}
-
-.lds-grid .dot:nth-child(1) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-.lds-grid .dot:nth-child(2),.lds-grid .dot:nth-child(4) {
-  -webkit-animation-delay: -0.3s;
-          animation-delay: -0.3s;
-}
-
-.lds-grid .dot:nth-child(3),.lds-grid .dot:nth-child(5),.lds-grid .dot:nth-child(7) {
-  -webkit-animation-delay: -0.6s;
-          animation-delay: -0.6s;
-}
-
-.lds-grid .dot:nth-child(6),.lds-grid .dot:nth-child(8) {
-  -webkit-animation-delay: -0.9s;
-          animation-delay: -0.9s;
-}
-
-.lds-grid .dot:nth-child(9) {
-  -webkit-animation-delay: -1.2s;
-          animation-delay: -1.2s;
-}
-
-@-webkit-keyframes lds-grid {
-  0%, 100% {
-    opacity: 0.95;
-  }
-  10%, 90% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.25;
-  }
-}
-
-@keyframes lds-grid {
-  0%, 100% {
-    opacity: 0.95;
-  }
-  10%, 90% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.25;
-  }
-}
-/*
 
 Scrollbar Mini
 
@@ -4533,16 +4414,6 @@ UI: Open Sans
 
  Styleguide DesignBase.Fonts.UI
 */
-.font .font--example {
-  background-image: url(http://basehold.it/i/24);
-}
-.font .font--name {
-  color: #000;
-}
-.font .font--dropcase_2x {
-  color: #015697;
-}
-
 /*
 
 Icons: Font Awesome
@@ -4768,6 +4639,16 @@ Interactions can be enhanced with toggle icons or loading graphics to show the s
 
  Styleguide InteractiveExtras
 */
+.font .font--example {
+  background-image: url(http://basehold.it/i/24);
+}
+.font .font--name {
+  color: #000;
+}
+.font .font--dropcase_2x {
+  color: #015697;
+}
+
 /*
 
 Basic HTML
@@ -5964,7 +5845,7 @@ Markup:
 
 Styleguide UC.Typography.Font.Color Transparency
  */
-.c_white {
+.c_white, .btn_acc-priamry {
   color: white !important;
 }
 
@@ -6107,7 +5988,7 @@ Styleguide UC.Typography.Font.Color Transparency
   font-weight: 400 !important;
 }
 
-.font_medium {
+.font_medium, .btn_acc-priamry {
   font-weight: 500 !important;
 }
 
@@ -6155,7 +6036,7 @@ Styleguide UC.Typography.Font.Color Transparency
   font-size: 1rem;
 }
 
-.font_1 {
+.font_1, .btn_acc-priamry {
   font-size: 18px;
   font-size: 1.125rem;
 }
@@ -6239,7 +6120,7 @@ Styleguide UC.Typography.Font.Color Transparency
     font-size: 1.125rem;
   }
 
-  .font_2\:md {
+  .font_2\:md, .btn_acc-priamry {
     font-size: 1.265625rem;
   }
 
@@ -6720,7 +6601,7 @@ Styleguide UC.Typography.Text.Indent
   line-height: 1.125 !important;
 }
 
-.lh_2 {
+.lh_2, .btn_acc-priamry {
   line-height: 1.35 !important;
 }
 
@@ -6757,7 +6638,7 @@ Styleguide UC.Typography.Text.Indent
   text-align: unset !important;
 }
 
-.text_center {
+.text_center, .btn_acc-priamry {
   text-align: center !important;
 }
 
@@ -8225,7 +8106,7 @@ Styleguide UC.Spacing.Padding
   padding-bottom: 0.25rem  !important;
 }
 
-.p-y_3 {
+.p-y_3, .btn_acc-priamry {
   padding-top: 8px  !important;
   padding-top: 0.5rem  !important;
   padding-bottom: 8px  !important;
@@ -8270,7 +8151,7 @@ Styleguide UC.Spacing.Padding
   padding-left: 0.5rem  !important;
 }
 
-.p-x_4 {
+.p-x_4, .btn_acc-priamry {
   padding-right: 16px  !important;
   padding-right: 1rem  !important;
   padding-left: 16px  !important;
@@ -9747,7 +9628,7 @@ Styleguide UC.display
   display: inline;
 }
 
-.inline-block {
+.inline-block, .btn_acc-priamry {
   display: inline-block;
 }
 
@@ -11008,7 +10889,7 @@ Control the width percents.
 Styleguide UC.Width
 
  */
-.w_auto {
+.w_auto, .btn_acc-priamry {
   width: auto !important;
 }
 
@@ -12363,7 +12244,7 @@ Styleguide UC.Background.Color.Shades
   }
 }
 
-.bg_primary,.bg_primary-0 {
+.bg_primary, .btn_acc-priamry,.bg_primary-0 {
   background-color: #015697 !important;
 }
 
@@ -13228,7 +13109,7 @@ Markup:
 Styleguide UC.Borders.Style
 
 */
-.br_none {
+.br_none, .btn_acc-priamry {
   border-style: none;
 }
 
@@ -13480,7 +13361,7 @@ Styleguide UC.Borders.Colors.Black
   border-radius: 0px;
 }
 
-.br_radius {
+.br_radius, .btn_acc-priamry {
   border-radius: 6px;
 }
 
@@ -13636,7 +13517,7 @@ Styleguide UC.Borders.Colors.Black
   border-color: #014171 !important;
 }
 
-.br_primary-n3 {
+.br_primary-n3, .btn_acc-priamry {
   border-color: #012f53 !important;
 }
 
@@ -16146,7 +16027,7 @@ a:focus {
   background-color: #014d88 !important;
 }
 
-.h\:bg_primary-n2:hover {
+.h\:bg_primary-n2:hover, .btn_acc-priamry:hover {
   background-color: #014171 !important;
 }
 
@@ -17603,7 +17484,7 @@ a:focus {
   Styleguide UC.hover.text
 
  */
-.h\:c_white:hover,
+.h\:c_white:hover, .btn_acc-priamry:hover,
 .active > .a\:c_white,
 .active.a\:c_white {
   color: white !important;
@@ -17992,7 +17873,7 @@ Styleguide UC.Animation.transition
   transition: all 0s;
 }
 
-.transition_1 {
+.transition_1, .btn_acc-priamry {
   transition: all 0.1s;
 }
 
@@ -18055,7 +17936,7 @@ Styleguide UC.Animation.ease
   transition-timing-function: ease-in;
 }
 
-.ease_out {
+.ease_out, .btn_acc-priamry {
   transition-timing-function: ease-out;
 }
 
