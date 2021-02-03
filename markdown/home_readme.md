@@ -1,9 +1,39 @@
 <div class='home_nav'><div class="br_1 br_round br_solid br_white-7 p_5 relative shadow_3 m-x_3">
-	<div class="absolute t_0 r_0 l_0 b_0 opacity_7 z_0 br_round bg_center bg_cover" style="background-image:url('img/triangletexture/rainbowtriangles.PNG')"></div>
-		<div class="c_black font_11:lg font_6 font_8:md font_ui lh_1 m-y_4">Arches
-			<span class="block font_1 m-y_2 font_bold opacity_7">Multi Product, Framework, Brand Style System</span>
-		</div>
-	<p class="c_black m-y_3 max-w_65 lh_3">Arches is a central design system for the American College of Cardiology. This system, through some compiler wizardry, builds out to variations using frameworks and product brands to be used across many products built by the ACC.  Arches vanilla is just a Utility Classes and when added to a project with an already established style sheet is made to add new styling features non-destructively. There are also variations of Arches that build on top of the two popular frameworks that currently in use at the College, Twitter Bootstrap, and Zurb Foundation.  A third variation of the Arches product shifts the brand to CVquality with Bootstrap for a base.</p>
+	<div class="absolute t_0 r_0 l_0 b_0 opacity_5 z_0 br_round bg_center bg_cover" style="background-image:url('img/triangletexture/rainbowtriangles.PNG')"></div>
+		<h1 class="c_black font_10:lg font_6 font_8:md font_ui lh_1 m-y_4">
+			Arches
+			<span class="block font_2 m-y_2 font_bold opacity_7">Multi Product, Framework, Brand Style System</span>
+		</h1>
+		<p class="c_black m-y_3 max-w_65 lh_3 font_1">
+			Arches is a central design system for the American College of
+			Cardiology and establishes the DNA standards for multiple products
+			within the ACC portfolio. The Arches Design System achieves this in
+			a three-layered process. First, the branding layer defines the
+			fonts, colors, and logos, known as the Design DNA. The second layer
+			establishes the variances to that DNA design through the use of
+			Utility Classes. These classes give modifiers that can affect size,
+			color value, font attributes, and structure mechanisms. The third is
+			to level-set the frameworks that are the foundational framework on
+			the specific web products.
+		</p>
+		<p class="c_black m-y_3 max-w_65 lh_3 font_0">
+			The arches code base has split up the CSS depending on the need.
+			Utility Classes have no defined UI patterns but can be combined to
+			make complicated UI elements. The naming convention combines the
+			brand with the utility class abbreviation, for example,
+			"acc_uc.css." Similar frameworks style sheets with the UI patterns
+			combine an abbreviation of the brand and framework, such as
+			"acc_boot.css."
+		</p>
+		<p class="c_black m-y_3 max-w_65 lh_3 font_0">
+			There are extending style sheets that define a universal color
+			language for our document elements and concepts. These color code
+			style sheets cover social, credit colors, scientific pathway, and
+			level of effort & confidence. Only include these separated
+			stylesheets when the extra decoration is needed to help improve page
+			performance. The naming for these files combines "color-code" with
+			the defined usage, such as "color-codes_credits.css."
+        </p>
 </div>
 <div class="p_5">
 
@@ -13,11 +43,11 @@
 
 ## Utility Classes
 
-Utility classes are a distinct departure from many previous learned CSS theories, but what utility classes allow for is an excellent separation of concerns between the HTML and CSS. The singular focus for utility classes is a single class controls a single style in CSS. Utility Class has significant benefits of reducing scope expansion in the CSS and also gives greater flexibility of crafting user interface components that are currently undefined. Html should continually be written using the best standards for semantics, but it is no longer a concern to follow a components design pattern because it is applicable at the HTML level.
+Utility classes are a distinct departure from many previous learned CSS theories, but what utility classes allow is an excellent separation of concerns between the HTML and CSS. Utility classes are focused on controlling a single style in CSS. Utility Class Methodology has significant benefits of reducing the expansion of scope in CSS coding while giving greater flexibility in crafting new user interface components. While writing new user interfaces, the Html should use the best semantics standards, but it is no longer a concern to follow HTML patterns tightly coupled to the CSS Code.
 
 ### Naming Convention
 
-Strathmore does have a learning curve, but to reduce the curve the names follow a strict pattern. State of the elements which then effects a single style at a defined value which only effects at a specific breakpoint. <a href="./Strathmore/#!/section/100"> read more</a>
+Arches does have a learning curve, but to reduce the curve the names follow a strict pattern with consistent abreviation. [Read More](https://acc-style.github.io/Arches/boot_acc/section-uc.html)
 
 #### [pseudo state]:[style name]\_[value+unit]-[modifier]:[break point]
 
