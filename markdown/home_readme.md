@@ -5,16 +5,7 @@
 			<span class="block font_2 m-y_2 font_bold opacity_7">Multi Product, Framework, Brand Style System</span>
 		</h1>
 		<p class="c_black m-y_3 max-w_65 lh_3 font_1">
-			Arches is a central design system for the American College of
-			Cardiology and establishes the DNA standards for multiple products
-			within the ACC portfolio. The Arches Design System achieves this in
-			a three-layered process. First, the branding layer defines the
-			fonts, colors, and logos, known as the Design DNA. The second layer
-			establishes the variances to that DNA design through the use of
-			Utility Classes. These classes give modifiers that can affect size,
-			color value, font attributes, and structure mechanisms. The third is
-			to level-set the frameworks that are the foundational framework on
-			the specific web products.
+			Arches is a central design system for the American College of Cardiology and establishes the DNA standards for multiple products within the ACC portfolio. The Arches Design System achieves its front end flexibility through three layers, each building upon the former: Basic UI Structures, Branding, and Utility Classes. The Basic UI structure brings patterns for commonly used UI patterns found on the web, which are a combination of design and interaction. The branding layer defines the fonts, colors, and logos for a product line within the ACC's Larger Portfolio, establishing the product's  Design DNA. The Utility Classes establish the Design DNA's variances through modifiers that can affect size, color value, font attributes, and structure mechanisms. These layers in concert produce a robust front-end solution giving both designers and developers the power to tackle the college's future needs. 
 		</p>
 		<p class="c_black m-y_3 max-w_65 lh_3 font_0">
 			The arches code base has split up the CSS depending on the need.
