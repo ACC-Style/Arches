@@ -305,21 +305,133 @@ $line-height_5: get-css-size(line-height, 5);/*Bootstrap Framework Setup Files.*
         background-attachment: fixed;
         background-color: #cad3d0;
     }
-}@import 'base/table.boot';
-@import 'styleguide/__basic-html.boot';
-@import 'components/boot/_boot.buttons';
-@import 'components/boot/_boot.carousel.override';
-@import 'components/boot/_boot.navbar.override';
-@import 'components/boot/_boot.collapser.icon';
-/*
-	Bootstrap Recipes
+}/*
+	Recipes
 
-	Combination of UCs and Base Components from the Bootstrap can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to the Bootstrap Components with the Utiltity Classes. 
+	Combination of UCs can make complex and rich UI elements.  Here is a collection of curated UI that can be used in projects by just following these patterns.
 
-	Weight: -1
+	Weight: 900
 
-Styleguide  Recipes Bootstrap.Intro
+	Styleguide Recipes
 
 */
 
-@import "recipes/boot/_boot.basic_nav";
+
+/* Nav Recipes.00x */
+
+@import "recipes/base/mobile-nav";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/web-footer";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/quicklinks";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/advertisement";
+
+/* content Recipes.100 */
+
+@import "recipes/base/ordered-cards";
+
+/* content Recipes.250 */
+
+@import "recipes/base/GLSEARCH-search-result";/*
+	CardioSmart Recipes
+
+	The use of Utiltiy Class give us the ablitiy to create much of the UI needed for CardioSmart without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of CardioSmart.
+
+	Weight: 3000
+
+	Styleguide Recipes
+
+*/
+
+@import 'recipes/cardiosmart/_cardiosmart._header';
+
+@import 'recipes/cardiosmart/_cardiosmart._footer';
+
+@import 'recipes/cardiosmart/_cardiosmart._base';
+@import 'recipes/cardiosmart/_cardiosmart._page';
+/*
+	CardioSmart: Pages
+
+	The page is the backbone of the structures through out the website.  There are some swapable content for a page.  Basic content to graphic links build out a page. 
+
+	Weight: 3300
+
+	Styleguide RecipesPages
+
+*/
+@import 'recipes/cardiosmart/_cardiosmart._news';
+@import 'recipes/cardiosmart/_cardiosmart._articles';
+/*
+	CardioSmart: News Articles
+
+	The science and discoveries are always evolving and the news articles are a way for a user to keep up with the latest science. 
+
+	Weight: 3400
+
+	Styleguide RecipesNews
+
+*/
+@import 'recipes/cardiosmart/_cadiosmart._featured-related';
+/*
+	CardioSmart: Related Content
+
+	There are many components that pull in lists, carousels, and featurd presenetations of other assets and or pages because they are related. 
+
+	Weight: 3500
+
+	Styleguide RecipesRelated
+
+*/
+@import 'recipes/cardiosmart/_cardiosmart._patient-story';
+/*
+	CardioSmart: Patient Stories
+
+	The human face of cardiosmart is the stories of people who live and thrive with these conditions.
+
+	Weight: 3600
+
+	Styleguide RecipesPatient
+
+*/
+/*
+	FYHAH
+
+	Find your heart a home is a single page application that is housed in a subdomain of cardiosmart.
+
+	Weight: 5000
+
+	Styleguide RecipesFYHAH
+
+*/
+
+@import 'recipes/cardiosmart/_fyhah.cardiosmart.elements';
+
+/*
+	CHD
+
+	A search systems for clinics that meet the standard.
+
+	Weight: 6000
+
+	Styleguide RecipesCHD
+
+*/
+@import 'recipes/cardiosmart/_chdDirectory.cardiosmart.elements';
+// ACC Design Alterations
+@import "base/base";
+@import "components/logo";
+@import "components/interactive-extras";
+@import "styleguide/styleguide";
+@import "styleguide/__basic-html.base";
+@import "containers/containers";
+
+
+@import 'components/cardiosmart/_cardiosmart.boot._navbar.override';
+@import 'components/sitefinity/_sitefinity.editor-decorator';
