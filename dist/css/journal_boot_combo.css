@@ -13638,7 +13638,7 @@ Gets utilty style and prints it.
 */
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
+.carousel-alt.chevron-on .carousel-indicators li.active:before, .icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -16840,7 +16840,7 @@ input[type=button].btn-block {
   clear: both;
   border: 0;
   background-color: transparent;
-  color: #e7e7e7;
+  color: #2b2a2a;
   font-weight: 400;
   text-align: inherit;
   white-space: nowrap;
@@ -16874,7 +16874,7 @@ input[type=button].btn-block {
   display: block;
   padding: 4px 16px;
   padding: 0.25rem 1rem;
-  color: #e7e7e7;
+  color: #2b2a2a;
 }
 
 .btn-group,
@@ -19578,12 +19578,12 @@ Markup:
 <h4 class="c_white font_regular font_accent: m-b_3 m-b_4:lg text_center text_left:lg">Stay Connected
 </h4>
 <ul class="flex social-bar ul_none c_white h:c_white m_0">
-    <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-twitter-square"></i></a></li>
-    <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-facebook-square"></i></a></li>
-    <li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-youtube"></i></a></li>
-    <li class="flex_auto m-r_2"><a href="https://www.instagram.com/" target="_blank" class="instagram social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-instagram"></i></a></li>
-    <li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="google-play social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-google-play"></i></a></li>
-    <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-apple"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="bg_twitter social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-twitter-square"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="bg_facebook social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-facebook-square"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="https://www.instagram.com/americancollegeofcardiology" target="_blank" class="bg_instagram social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-apple"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="bg_youtube social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-youtube"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="bg_google-play social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-google-play"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="bg_apple-store social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-apple"></i></a></li>
 </ul>
 <!-- Social -->
 
@@ -21621,6 +21621,2171 @@ Styleguide HTML.RealArticle
 .container,
 .card {
   position: relative;
+}
+
+.table td,
+.table th {
+  text-align: left;
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f3f3f3;
+}
+.table.unshaded tbody tr:nth-of-type(odd) {
+  background-color: unset;
+}
+
+/*
+
+Bootstrap
+
+<div class="bg-blend_luminosity bg_acc bg_cover br_round jumbotron overflow_hidden relative" style="
+    background-image: url(https://picsum.photos/2000/400?grayscale&amp;blur=2);
+	">
+	<div class="c_white-8 container font-blend_luminosity m_0 p-x_4 w_auto">
+			<h1 class="font_10:lg font_6 font_8:md lh_0">CVQuality's Bootstrap</h1>
+			<p class="c_white font_1 font_1:md font_3:lg">Bootstrap 4 is a complete UI framework with many features. Please familiarize yourself with bootstrap framework as you build. It will give you access to grid, forms and other UI items.</p>
+			<div class="flex">
+				<div class="flex_shrink p_2">
+					<a class="br_radius btn btn-primary c_white  gradient_teal h:gradient_teal-reverse" href="section-recipes-bootstrap.html#kssref-recipes-bootstrap-kitchensink" role="button">Kitchen Sink</a>
+				</div>
+				<div class="flex_shrink p_2">
+					<a class="br_radius btn btn-primary c_white  gradient_teal h:gradient_teal-reverse" href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" role="button">Bootstrap</a>
+				</div>
+			</div>
+	</div>
+	</div>
+
+Weight: 1000
+
+Styleguide  Recipes Bootstrap
+*/
+/*
+Bootstrap UI
+
+A sub selection of the UI that comes from bootstrap. 
+
+Markup:
+<h2>Content</h2>
+<div class="row">
+	<div class="col-sm-6">
+		<h3>Display Headings</h3>
+		<h1 class="display-1">Display 1</h1>
+		<h1 class="display-2">Display 2</h1>
+		<h1 class="display-3">Display 3</h1>
+		<h1 class="display-4">Display 4</h1>
+		<h3>Muted Text Class</h3>
+		<h3>
+			Heading Text
+			<small class="text-muted">With muted shade text</small>
+		</h3>
+		<h3>Blockquote</h3>
+		<blockquote class="blockquote">
+			<p class="mb-0">
+				Typography is to literature as musical performance is to composition: an
+				essential act of interpretation, full of endless opportunities for
+				insight or obtuseness.
+			</p>
+			<footer class="blockquote-footer">
+				Robert Bringhurst in
+				<cite title="Source Title">The Elements of Typographic Style</cite>
+			</footer>
+		</blockquote>
+		<h3>Table</h3>
+		<table class="table ">
+			<thead class="thead-default">
+				<tr>
+					<th>#</th>
+					<th>thead-default</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Nina</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Penta</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>Santa Maria</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table">
+			<thead class="thead-inverse">
+				<tr>
+					<th>#</th>
+					<th>thead-inverse</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Nina</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Penta</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>Santa Maria</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="col-sm-6">
+		<h3>Lead</h3>
+		<p class="lead">
+			A lead paragraph is used to draw a reader into the body copy. In a badly
+			designed book, the letters mill and stand like starving horses in a field.
+			In a book designed by rote, they sit like stale bread and mutton on the
+			page.
+		</p>
+		<p>
+			In a well-made book, where designer, compositor and printer have all done
+			their jobs, no matter how many thousands of lines and pages, the letters
+			are alive. They dance in their seats. Sometimes they rise and dance in the
+			margins and aisles.
+		</p>
+		<h3>Unstyled List</h3>
+		<ul class="list-unstyled">
+			<li>Unstyled list item text</li>
+			<li>
+				Unstyled list item text
+				<ul>
+					<li>
+						Nested list items need the <code>.list-unstyled</code> class as well
+						or they will have bullets
+					</li>
+				</ul>
+			</li>
+			<li>Unstyled list item text</li>
+			<li>Unstyled list item text</li>
+		</ul>
+		<h3>Inline List</h3>
+		<ul class="list-inline">
+			<li class="list-inline-item">List item one</li>
+			<li class="list-inline-item">List item two</li>
+			<li class="list-inline-item">List item three</li>
+		</ul>
+		<h3>Description List</h3>
+		<dl class="row">
+			<dt class="col-sm-3">
+				Long title that <strong>is not</strong> truncated or shortened
+			</dt>
+			<dd class="col-sm-9">
+				Definition list description etiam porta sem malesuada magna mollis
+				euismod.
+			</dd>
+			<dt class="col-sm-3 text-truncate">
+				Long title that <strong>is</strong> truncated or shortened
+			</dt>
+			<dd class="col-sm-9">
+				Definition list description etiam porta sem malesuada magna mollis
+				euismod.
+			</dd>
+			<dt class="col-sm-3">Nesting</dt>
+			<dd class="col-sm-9">
+				<dl class="row">
+					<dt class="col-sm-4">Nested definition list</dt>
+					<dd class="col-sm-8">
+						Definition list description etiam porta sem malesuada magna mollis
+						euismod.
+					</dd>
+				</dl>
+			</dd>
+		</dl>
+		<h3>Image Thumbnails</h3>
+		<img
+			src="https://dummyimage.com/80x80/563d7c/fff"
+			alt=""
+			class="img-thumbnail"
+		/>
+		<img
+			src="https://dummyimage.com/80x80/563d7c/fff"
+			alt=""
+			class="img-thumbnail"
+		/>
+		<img
+			src="https://dummyimage.com/80x80/563d7c/fff"
+			alt=""
+			class="img-thumbnail"
+		/>
+		<h3>Figure</h3>
+		<figure class="figure">
+			<img
+				src="https://dummyimage.com/400x200/563d7c/fff"
+				class="figure-img img-fluid rounded"
+				alt=""
+			/>
+			<figcaption class="figure-caption">
+				Figure caption description text
+			</figcaption>
+		</figure>
+	</div>
+</div>
+<h2 id="components">Components</h2>
+<div class="row">
+	<div class="col-sm-6">
+		<h3>Alert</h3>
+		<div class="alert alert-warning" role="alert">
+			<strong>Alert!</strong> This is a Bootstrap alert box
+		</div>
+		<h3>Badge</h3>
+		<p>Example heading <span class="badge badge-default">badge</span></p>
+		<p>
+			Example heading <span class="badge badge-primary">.badge-primary</span>
+		</p>
+		<h3>Popover</h3>
+		<a
+			tabindex="0"
+			class="btn btn-lg btn-primary"
+			role="button"
+			data-toggle="popover"
+			data-trigger="focus"
+			title="Dismissible popover"
+			data-content="And here's some amazing content. It's very engaging. Right?"
+			>Popover on click</a
+		>
+		<button
+			type="button"
+			class="btn btn-lg btn-primary"
+			data-toggle="popover"
+			data-trigger="hover"
+			data-delay="300"
+			title="Popover title"
+			data-content="Popover description text"
+		>
+			Popover on hover
+		</button>
+		<h3>Card</h3>
+		<div class="card" style="width: 20rem;">
+			<img
+				class="card-img-top w-100"
+				src="https://dummyimage.com/600x400/563d7c/fff"
+				alt="Card image cap"
+			/>
+			<div class="card-block">
+				<h4 class="card-title">Card title</h4>
+				<p class="card-text">
+					Some quick example text to build on the card title and make up the
+					bulk of the card's content.
+				</p>
+				<a href="#" class="btn btn-primary">Go somewhere</a>
+			</div>
+		</div>
+		<h3>Collapse - Accordian</h3>
+		<div id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="card">
+				<div class="card-header" role="tab" id="headingOne">
+					<h5 class="mb-0">
+						<a
+							data-toggle="collapse"
+							data-parent="#accordion"
+							href="#collapseOne"
+							aria-expanded="true"
+							aria-controls="collapseOne"
+						>
+							Accordian Group Item #1
+						</a>
+					</h5>
+				</div>
+				<div
+					id="collapseOne"
+					class="collapse show"
+					role="tabpanel"
+					aria-labelledby="headingOne"
+				>
+					<div class="card-block">
+						<div class="row">
+							<div class="col-sm-6">
+								<img
+									src="https://dummyimage.com/200x200/563d7c/fff"
+									alt=""
+									class="img-thumbnail img-fluid"
+								/>
+							</div>
+							<div class="col-sm-6">
+								<h2>Accordian Group Heading</h2>
+								Accordian content description text.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab" id="headingTwo">
+					<h5 class="mb-0">
+						<a
+							class="collapsed"
+							data-toggle="collapse"
+							data-parent="#accordion"
+							href="#collapseTwo"
+							aria-expanded="false"
+							aria-controls="collapseTwo"
+						>
+							Accordian Group Item #2
+						</a>
+					</h5>
+				</div>
+				<div
+					id="collapseTwo"
+					class="collapse"
+					role="tabpanel"
+					aria-labelledby="headingTwo"
+				>
+					<div class="card-block">
+						<div class="row">
+							<div class="col-sm-6">
+								<img
+									src="https://dummyimage.com/200x200/563d7c/fff"
+									alt=""
+									class="img-thumbnail img-fluid"
+								/>
+							</div>
+							<div class="col-sm-6">
+								<h2>Accordian Group Heading</h2>
+								Accordian content description text.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab" id="headingThree">
+					<h5 class="mb-0">
+						<a
+							class="collapsed"
+							data-toggle="collapse"
+							data-parent="#accordion"
+							href="#collapseThree"
+							aria-expanded="false"
+							aria-controls="collapseThree"
+						>
+							Accordian Group Item #3
+						</a>
+					</h5>
+				</div>
+				<div
+					id="collapseThree"
+					class="collapse"
+					role="tabpanel"
+					aria-labelledby="headingThree"
+				>
+					<div class="card-block">
+						<div class="row">
+							<div class="col-sm-6">
+								<img
+									src="https://dummyimage.com/200x200/563d7c/fff"
+									alt=""
+									class="img-thumbnail img-fluid"
+								/>
+							</div>
+							<div class="col-sm-6">
+								<h2>Accordian Group Heading</h2>
+								Accordian content description text.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3>Input group</h3>
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Search Products" />
+			<button
+				class="btn btn-primary input-group-btn br-bl_square br-tl_square "
+				type="button"
+			>
+				Search
+			</button>
+		</div>
+		<div class="input-group input-group-lg">
+			<input type="email" class="form-control" placeholder="Email Address" />
+			<button
+				class="bg_primary br-bl_square br-tl_square btn btn-primary input-group-btn"
+				type="button"
+			>
+				Subscribe
+			</button>
+		</div>
+		<h3>Pills Nav</h3>
+		<ul class="nav nav-pills">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Active</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a
+					class="nav-link dropdown-toggle"
+					data-toggle="dropdown"
+					href="#"
+					role="button"
+					aria-haspopup="true"
+					aria-expanded="false"
+					>Dropdown</a
+				>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="#">Something else here</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Separated link</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+		<h3>Fill and Justify Pills Nav</h3>
+		<div class=" ">
+			<ul class="nav nav-pills nav-fill">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Active</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Longer nav link</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#">Disabled</a>
+				</li>
+			</ul>
+		</div>
+		<h3>Progress</h3>
+		<div class="progress">
+			<div
+				class="progress-bar progress-bar-striped progress-bar-animated"
+				role="progressbar"
+				aria-valuenow="75"
+				aria-valuemin="0"
+				aria-valuemax="100"
+				style="width: 75%"
+			>
+				75%
+			</div>
+		</div>
+		<h3>Buttons</h3>
+		<div class="flex">
+			<ul class="ul_none flex_auto p-r_4">
+				<li>
+					<button type="button" class="btn btn-primary btn-sm">Primary</button>
+				</li>
+				<li><button type="button" class="btn btn-primary">Primary</button></li>
+				<li>
+					<button type="button" class="btn btn-primary btn-lg">Primary</button>
+				</li>
+			</ul>
+			<ul class="ul_none flex_auto p-r_4">
+				<li>
+					<button type="button" class="btn btn-secondary btn-sm">
+						secondary
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-secondary">secondary</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-secondary btn-lg">
+						secondary
+					</button>
+				</li>
+				<li><button type="button" class="btn btn-link">Link</button></li>
+			</ul>
+			<ul class="ul_none flex_auto p-r_4">
+				<li>
+					<button type="button" class="btn btn-accent btn-sm">
+						accent
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-accent">accent</button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-accent btn-lg">
+						accent
+					</button>
+				</li>
+				<li><button type="button" class="btn btn-link">Link</button></li>
+			</ul>
+		</div>
+		<h3>Button Group</h3>
+		<div
+			class="btn-group btn-group-sm"
+			role="group"
+			aria-label="Button group with nested dropdown"
+		>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
+			<div class="btn-group" role="group">
+				<button
+					id="btnGroupDrop1"
+					type="button"
+					class="btn btn-secondary dropdown-toggle"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+				>
+					Dropdown
+				</button>
+				<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+					<a class="dropdown-item" href="#">Dropdown link</a>
+					<a class="dropdown-item" href="#">Dropdown link</a>
+				</div>
+			</div>
+		</div>
+		<div
+			class="btn-group"
+			role="group"
+			aria-label="Button group with nested dropdown"
+		>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
+			<div class="btn-group" role="group">
+				<button
+					id="btnGroupDrop1"
+					type="button"
+					class="btn btn-secondary dropdown-toggle"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+				>
+					Dropdown
+				</button>
+				<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+					<a class="dropdown-item" href="#">Dropdown link</a>
+					<a class="dropdown-item" href="#">Dropdown link</a>
+				</div>
+			</div>
+		</div>
+		<div
+			class="btn-group btn-group-lg"
+			role="group"
+			aria-label="Button group with nested dropdown"
+		>
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
+			<div class="btn-group" role="group">
+				<button
+					id="btnGroupDrop1"
+					type="button"
+					class="btn btn-secondary dropdown-toggle"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+				>
+					Dropdown
+				</button>
+				<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+					<a class="dropdown-item" href="#">Dropdown link</a>
+					<a class="dropdown-item" href="#">Dropdown link</a>
+				</div>
+			</div>
+		</div>
+		<h3>Collapse</h3>
+		<p>
+			<a
+				class="btn btn-primary"
+				data-toggle="collapse"
+				href="#collapseExample"
+				aria-expanded="false"
+				aria-controls="collapseExample"
+			>
+				Link with href
+			</a>
+			<button
+				class="btn btn-primary"
+				type="button"
+				data-toggle="collapse"
+				data-target="#collapseExample"
+				aria-expanded="false"
+				aria-controls="collapseExample"
+			>
+				Button with data-target
+			</button>
+		</p>
+		<div class="collapse" id="collapseExample">
+			<div class="card card-block p-x_5 p-t_3 p-b_4">
+				Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+				terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
+				labore wes anderson cred nesciunt sapiente ea proident.
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<h3>Breadcrumb</h3>
+		<nav class="breadcrumb">
+			<a class="breadcrumb-item" href="#">Home</a>
+			<a class="breadcrumb-item" href="#">Library</a>
+			<span class="breadcrumb-item active">Breadcrumb</span>
+		</nav>
+		<h3>Dropdowns</h3>
+		<div class="btn-toolbar" role="toolbar">
+			<div class="btn-group">
+				<button
+					class="btn btn-secondary btn-lg dropdown-toggle"
+					type="button"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+				>
+					Large button
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="#">Something else here</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Separated link</a>
+				</div>
+			</div>
+			<div class="btn-group ml-2">
+				<button type="button" class="btn btn-lg btn-secondary">
+					Large split button
+				</button>
+				<button
+					type="button"
+					class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+				>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="#">Something else here</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Separated link</a>
+				</div>
+			</div>
+		</div>
+		<h3>Navbar</h3>
+		<nav class="navbar navbar-toggleable-md navbar-dark bg_primary">
+			<button
+				class="br_none navbar-toggler navbar-toggler-right"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<i class="fas fa-bars"></i>
+			</button>
+			<a class="navbar-brand" href="#">Navbar</a>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#"
+							>Home <span class="sr-only">(current)</span></a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="http://example.com"
+							id="navbarDropdownMenuLink"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+							Dropdown link
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<h3>List group</h3>
+		<ul class="list-group">
+			<li class="list-group-item justify-content-between">
+				List group item #1
+				<span class="badge badge-default badge-pill">14</span>
+			</li>
+			<li class="list-group-item justify-content-between">
+				List group item #2
+				<span class="badge badge-default badge-pill">2</span>
+			</li>
+			<li class="list-group-item justify-content-between">
+				List group item #3
+				<span class="badge badge-warning badge-pill">1</span>
+			</li>
+		</ul>
+		<h3>Base Nav</h3>
+		<ul class="nav">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Active</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+		<h3>List group with Custom Content</h3>
+		<div class="list-group">
+			<a
+				href="#"
+				class="list-group-item list-group-item-action flex-column align-items-start active"
+			>
+				<div class="d-flex w-100 justify-content-between">
+					<h5 class="mb-1">Don't Make Me Think</h5>
+					<small>20 Comments</small>
+				</div>
+				<p class="mb-1">
+					Description text gravida at eget metus. Maecenas sed diam eget risus
+					varius blandit.
+				</p>
+				<small>Category: Design</small>
+			</a>
+			<a
+				href="#"
+				class="list-group-item list-group-item-action flex-column align-items-start"
+			>
+				<div class="d-flex w-100 justify-content-between">
+					<h5 class="mb-1">Thinking with Type</h5>
+					<small class="text-muted">3 Comments</small>
+				</div>
+				<p class="mb-1">
+					Description text gravida at eget metus. Maecenas sed diam eget risus
+					varius blandit
+				</p>
+				<small class="text-muted">Category: Design</small>
+			</a>
+			<a
+				href="#"
+				class="list-group-item list-group-item-action flex-column align-items-start"
+			>
+				<div class="d-flex w-100 justify-content-between">
+					<h5 class="mb-1">Design of Everyday Things</h5>
+					<small class="text-muted">3 Comments</small>
+				</div>
+				<p class="mb-1">
+					Description text gravida at eget metus. Maecenas sed diam eget risus
+					varius blandit
+				</p>
+				<small class="text-muted">Category: Design</small>
+			</a>
+		</div>
+		<h3>Tabs Nav</h3>
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link active" href="#tab-1" data-toggle="tab">Active</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a
+					class="nav-link dropdown-toggle"
+					data-toggle="dropdown"
+					href="#"
+					role="button"
+					aria-haspopup="true"
+					aria-expanded="false"
+					>Dropdown</a
+				>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#tab-2" data-toggle="tab">Tab 2</a>
+					<a class="dropdown-item" href="#tab-3" data-toggle="tab">Tab 3</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#tab-4" data-toggle="tab">Tab 4</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+		<br />
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab-1" role="tabpanel">
+				<h5>Tab #1 Content</h5>
+				<p>Tab main content.</p>
+			</div>
+			<div class="tab-pane" id="tab-2" role="tabpanel">Tab #2 content</div>
+			<div class="tab-pane" id="tab-3" role="tabpanel">Tab #3 content</div>
+			<div class="tab-pane" id="tab-4" role="tabpanel">Tab #4 content</div>
+		</div>
+		<h3>Pagination</h3>
+		<nav aria-label="...">
+			<ul class="pagination">
+				<li class="page-item disabled">
+					<span class="page-link">Previous</span>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item active">
+					<span class="page-link">
+						2
+						<span class="sr-only">(current)</span>
+					</span>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item">
+					<a class="page-link" href="#">Next</a>
+				</li>
+			</ul>
+		</nav>
+		<nav aria-label="...">
+			<ul class="pagination pagination-lg">
+				<li class="page-item disabled">
+					<a class="page-link" href="#" tabindex="-1">Previous</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item">
+					<a class="page-link" href="#">Next</a>
+				</li>
+			</ul>
+		</nav>
+		<h3>Forms</h3>
+		<form>
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label for="exampleInputEmail1">Email address</label>
+						<input
+							type="email"
+							class="form-control"
+							id="exampleInputEmail1"
+							aria-describedby="emailHelp"
+							placeholder="Enter email"
+						/>
+						<small id="emailHelp" class="form-text text-muted">No Spam.</small>
+					</div>
+					<div class="form-group">
+						<label for="exampleSelect1">Example select</label>
+						<select class="form-control" id="exampleSelect1">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+					<fieldset class="form-group">
+						<legend>Radio buttons</legend>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input
+									type="radio"
+									class="form-check-input"
+									name="optionsRadios"
+									id="optionsRadios1"
+									value="option1"
+									checked
+								/>
+								Option one
+							</label>
+						</div>
+						<div class="form-check disabled">
+							<label class="form-check-label">
+								<input
+									type="radio"
+									class="form-check-input"
+									name="optionsRadios"
+									id="optionsRadios3"
+									value="option3"
+									disabled
+								/>
+								Option two - disabled
+							</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="col">
+					<div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input
+							type="password"
+							class="form-control"
+							id="exampleInputPassword1"
+							placeholder="Password"
+						/>
+						<small id="emailHelp" class="form-text text-muted"
+							><a href="">Forgot Password?</a> / <a href="">Sign Up</a></small
+						>
+					</div>
+					<div class="form-group">
+						<label for="exampleSelect2">Multiple select</label>
+						<select multiple class="form-control" id="exampleSelect2">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" />
+							Checkbox
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" disabled />
+							Checkbox - disabled
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="exampleTextarea">Textarea</label>
+				<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="exampleInputFile">File input</label>
+				<input
+					type="file"
+					class="form-control-file"
+					id="exampleInputFile"
+					aria-describedby="fileHelp"
+				/>
+				<small id="fileHelp" class="form-text text-muted">Help message</small>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+</div>
+
+
+Weight: 10000
+
+Styleguide  Recipes Bootstrap.KitchenSink
+*/
+/*
+Buttons
+
+Basic Buttons
+
+default		            - Medium buttons (default)
+.btn-primary	            - Primary Class Button (default)
+.btn-secondary 	            - Second Class Button
+.btn-accent             - Button for call out acctions
+.btn-success                - Success State.
+.btn-danger                  - Alert State.
+.btn-warning	            - Warning State
+.clear		            - All button states can become hollow
+.radius		            - Give the button softer corners
+.shadow.clear		    - Give a button a shadow
+.btn-sm		            - Small buttons
+.btn-lg		            - Large buttons
+.disabled	            - Disabled buttons
+
+Markup:
+<a class="btn btn-primary {{modifier_class}}" href="#">{{modifier_class}} button</a>
+
+ Styleguide Recipes Bootstrap.Button
+*/
+.btn {
+  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.btn.clear {
+  border-color: transparent;
+  background-color: transparent;
+  color: #094135;
+}
+.btn.clear:hover {
+  color: black;
+}
+
+.btn-accent {
+  background-color: #138b71;
+}
+.btn-accent:hover {
+  background-color: #094135;
+}
+
+.btn.shadow {
+  box-shadow: 1.5px 1.5px 6px 0.75px rgba(0, 0, 0, 0.4);
+}
+
+.btn.shadow:hover {
+  box-shadow: 0.5px 0.5px 2px 0.25px rgba(0, 0, 0, 0.1);
+}
+
+/*
+Carousel ALT
+
+A slide-show component for cycling through groups of images and text.
+.no-controls            Will remove left and right arrow
+.text-indicators        Converts the circle indicators to text tabs that lock to the right side of the images.
+.chevron-on             Adds a light orange chevron on the '.active' indicator to increase its impact.
+
+
+Markup:
+<div
+	id="carouselExampleFade"
+	class="carousel carousel-alt slide no-controls text-indicators chevron-on"
+>
+	<ol class="carousel-indicators">
+		<li data-target="#carouselExampleFade" data-slide-to="0" class="wrap" >
+			quaerat odit assumenda
+		</li>
+		<li data-target="#carouselExampleFade" data-slide-to="1" class=" wrap">
+			delectus sunt optio
+		</li>
+		<li data-target="#carouselExampleFade" data-slide-to="2" class=" wrap">
+			deserunt quia quasi
+		</li>
+	</ol>
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" role="listbox">
+		<div class="carousel-item active">
+			<a><img class="block w_100" src="http://lorempixel.com/630/420/animals" alt="..."/></a>
+			<div class="carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0">
+                    <span class="title  font_display block m-b_2 font_4:md m-b_3:md">Cardiac Syncope Program Launches!</span>
+                    <p><strong>NEW</strong>&nbsp;|&nbsp;Hear from an expert panel and complete four patient cases to test your knowledge on our Syncope Program! <a href="http://edu.acc.org/diweb/catalog/item/eid/SYNCOPE2019" title="" class="" target="_blank"><strong>Find out more!</strong></a></p>
+                </div>
+		</div>
+		<div class="carousel-item">
+			<a><img class="block w_100" src="http://lorempixel.com/630/420/nature" alt="..."/></a>
+			<div class="carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0">
+				<span class="title font_display block m-b_2 font_4:md m-b_3:md">sint explicabo sequi</span> Earum nihil omnis.
+			</div>
+		</div>
+		<div class="carousel-item">
+			<a><img class="block w_100" src="http://lorempixel.com/630/420/food" alt="..."/></a>
+			<div class="carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0">
+				<span class="title font_display block m-b_2 font_4:md m-b_3:md">sint explicabo sequi</span> Earum nihil omnis.
+			</div>
+		</div>
+	</div>
+	<!-- Controls -->
+	<a
+		class="left carousel-control-prev"
+		href="#carouselExampleFade"
+		role="button"
+		data-slide="prev"
+	>
+		<i class="fas fa-chevron-left"></i>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a
+		class="right carousel-control-next"
+		href="#carouselExampleFade"
+		role="button"
+		data-slide="next"
+	>
+		<i class="fas fa-chevron-right"></i>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
+
+
+Styleguide  Recipes Bootstrap.Carousel
+
+*/
+.carousel-alt {
+  position: relative;
+  max-width: 630px;
+  margin: 0 auto 16px;
+  margin: 0 auto 1rem;
+  background: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/subtle_surface.png");
+  background-repeat: repeat;
+}
+.carousel-alt:before {
+  display: block;
+  width: 100%;
+  padding-top: 66.6666666667%;
+  content: "";
+}
+.carousel-alt > .carousel-inner {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.carousel-alt .carousel-indicators {
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.carousel-alt .carousel-indicators li {
+  box-sizing: content-box;
+  width: 12px;
+  height: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  border: none;
+  border-radius: 25px;
+  text-indent: -9999px;
+}
+.carousel-alt .carousel-indicators li.active {
+  border-color: #16a385;
+  background-color: #16a385;
+}
+.carousel-alt.chevron-on .carousel-indicators li.active:before {
+  top: 4px;
+  left: 4px;
+  padding-top: 5px;
+  color: #16a385;
+  font-size: 1.6018066406em;
+  content: "";
+}
+@media only screen and (min-width : 768px) {
+  .carousel-alt.text-indicators {
+    max-width: 900px;
+  }
+  .carousel-alt.text-indicators:before {
+    padding-top: 46.6666666667%;
+  }
+  .carousel-alt.text-indicators .carousel-inner {
+    width: 70%;
+  }
+  .carousel-alt.text-indicators .carousel-inner > .carousel-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .carousel-alt.text-indicators .carousel-inner > .carousel-item:before {
+    display: inline-block;
+    /* width: 100%; */
+    width: 1px;
+    margin-left: -1px;
+    padding-top: 66.6666666667%;
+    float: left;
+    content: "";
+  }
+  .carousel-alt.text-indicators .carousel-inner > .carousel-item a {
+    float: left;
+  }
+  .carousel-alt.text-indicators a[class^=carousel-control].right {
+    right: 30%;
+  }
+  .carousel-alt.text-indicators .carousel-indicators {
+    display: flex;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    flex-direction: column;
+    width: 30%;
+    max-width: 300px;
+    height: 100%;
+  }
+  .carousel-alt.text-indicators .carousel-indicators li {
+    -moz-transition: background-color 0.25s ease-out;
+    -webkit-transition: background-color 0.25s ease-out;
+    display: block;
+    position: relative;
+    flex: 1 1 20%;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 0;
+    background-color: #e4e4e4;
+    font-size: 1.125em;
+    text-align: left;
+    text-indent: 0;
+    transition: background-color 0.25s ease-out;
+  }
+  .carousel-alt.text-indicators .carousel-indicators li:first-child {
+    border-top: 0;
+  }
+  .carousel-alt.text-indicators .carousel-indicators li:last-child {
+    border-bottom: 0;
+  }
+  .carousel-alt.text-indicators .carousel-indicators li.active {
+    padding-right: 10px;
+    border-right: #16a385 10px solid;
+    background-color: #727272;
+    color: white;
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  min-width: 48px;
+  min-width: 3rem;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1.125em;
+  text-align: center;
+}
+@media only screen and (min-width : 768px) {
+  .no-controls .carousel-control-prev,
+.no-controls .carousel-control-next {
+    display: none;
+  }
+}
+@media only screen and (min-width : 768px) {
+  .carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+  }
+}
+@media only screen and (min-width : 1024px) {
+  .carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+  }
+}
+.carousel-control-prev:hover, .carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+  outline: 0;
+  color: #16a385;
+  text-decoration: none;
+}
+.carousel-control-prev .fa,
+.carousel-control-next .fa {
+  display: inline-block;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.carousel-control-prev .fa {
+  left: 50%;
+  margin-left: -10px;
+}
+
+.carousel-control-next {
+  right: 0;
+  left: auto;
+}
+.carousel-control-next .fa {
+  right: 50%;
+  margin-right: -10px;
+}
+
+@media only screen and (min-width : 768px) {
+  .carousel-control-prev .fas,
+.carousel-control-next .fas {
+    width: 1.6875em;
+    height: 1.6875em;
+    margin-top: -0.5625em;
+    font-size: 1.6875em;
+  }
+
+  .carousel-control-prev .fa {
+    margin-left: -0.5625em;
+  }
+
+  .carousel-control-next .fa {
+    margin-right: -0.5625em;
+  }
+}
+.navbar {
+  font-family: "Roboto Slab","Times New Roman","Lucida Bright",Georgia,"slab",serif;
+}
+
+.dropdown-menu {
+  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.nav-link {
+  padding-right: 4px;
+  padding-right: 0.25rem;
+  padding-left: 4px;
+  padding-left: 0.25rem;
+}
+
+.navbar-primary .dropdown-toggle:after {
+  display: none;
+}
+
+@media only screen and (min-width : 768px) {
+  .navbar-primary.navbar-expand-md .nav-item {
+    border-top: 0.25rem #004176 solid;
+    border-bottom: 0.25rem #004176 solid;
+  }
+  .navbar-primary.navbar-expand-md .nav-item.active, .navbar-primary.navbar-expand-md .nav-item.show, .navbar-primary.navbar-expand-md .nav-item:hover {
+    border-top-color: #16a385;
+    border-bottom-color: #fff;
+    background-color: #fff;
+  }
+  .navbar-primary.navbar-expand-md .nav-item.active .nav-link, .navbar-primary.navbar-expand-md .nav-item.show .nav-link, .navbar-primary.navbar-expand-md .nav-item:hover .nav-link {
+    color: #004176;
+  }
+}
+
+@media only screen and (min-width : 1024px) {
+  .navbar-primary.navbar-expand-lg .nav-item {
+    border-top: 0.25rem #004176 solid;
+    border-bottom: 0.25rem #004176 solid;
+  }
+  .navbar-primary.navbar-expand-lg .nav-item.active, .navbar-primary.navbar-expand-lg .nav-item.show, .navbar-primary.navbar-expand-lg .nav-item:hover {
+    border-top-color: #16a385;
+    border-bottom-color: #fff;
+    background-color: #fff;
+  }
+  .navbar-primary.navbar-expand-lg .nav-item.active .nav-link, .navbar-primary.navbar-expand-lg .nav-item.show .nav-link, .navbar-primary.navbar-expand-lg .nav-item:hover .nav-link {
+    color: #004176;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+  .navbar-expand-sm .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+@media only screen and (min-width : 768px) {
+  .navbar-expand-md .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+@media only screen and (min-width : 1024px) {
+  .navbar-expand-lg .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+.dropdown-item {
+  color: #003764;
+}
+.dropdown-item:hover {
+  color: white;
+}
+
+/*
+Nav With Login
+
+The ACC.org Nav has a shade nav that houses the login and profile nav with a shade color. To make sure it doesn't resize when the main nav expands the login nav needs to be placed absolutely. 
+
+Markup:
+<div class="flex  relative">
+	<nav class="flex_auto navbar navbar-primary navbar-expand-lg navbar-dark bg_acc">
+		<button
+			class="br_white-2 is-active_toggle-function m-l_n2 m-y_3 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed"
+			type="button"
+			data-toggle="collapse"
+			data-target="#navbarLoginContent"
+			aria-controls="navbarLoginContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<i class="icon-toggle_bars-times fas a:c_acc-2 c_white"></i
+			><span class="a:c_acc-2 c_white">&nbsp;Menu</span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarLoginContent">
+			<ul class="navbar-nav font_1"><li class="nav-item"><a class="nav-link" href="#">Latest In Cardiology</a></li></ul>
+		</div>
+	</nav>
+	<nav class="absolute bg_primary flex_shrink font_0 font_1:lg navbar navbar-dark navbar-expand p-y_2 r_0 br-t_1 br_solid br_primary">
+		<ul class="navbar-nav m-t_1">
+			<li class="nav-item dropdown">
+				<a
+					class="nav-link is-active_toggle-function"
+					id="myACCDropdown"
+					role="button"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+					><i class="far icon-toggle_chevron-up-down"></i> My ACC</a
+				>
+				<div
+					class="dropdown-menu dropdown-menu-right br_none br_solid:lg m-x_0:lg m-x_n4 m-t_0 m-t_2:lg font_0"
+					aria-labelledby="navbarDropdown"
+				>
+					<div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
+						<div class="flex_auto p-x_2 p-y_0 ">
+							<ul class="ul_none m_0">
+								<li>
+									<a class="dropdown-item transition_4 nowrap" href="/my-acc/my-profile"
+										>My Profile</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 nowrap" href="/my-acc/my-training-program"
+										>My Training Programs</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 nowrap" href="/my-acc/my-membership"
+										>My Membership</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 nowrap" href="/my-acc/my-library"
+										>My Library</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 nowrap"
+										href="http://edu.acc.org/diweb/dashboard"
+										>My Learning Dashboard</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 nowrap" href="http://edu.acc.org/diweb/grades"
+										>My Transcript</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 nowrap" href="/my-acc/ncdr-physician-dashboard"
+										>NCDR Physician Dashboard</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 nowrap"
+										href="/my-acc/my-communication-preferences"
+										>My Communication Preferences</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 nowrap" href="https://memberhub.acc.org/"
+										>ACC Member Hub</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 nowrap" href="/my-acc/my-purchase-history"
+										>My Purchases</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 nowrap" href="/my-acc/personalization"
+										>Personalize ACC.org</a
+									>
+								</li>
+								<div class="dropdown-divider m-y_3"></div>
+								<li class="">
+									<a class="dropdown-item transition_4 nowrap" href="/RemoteLogOff"> Logout</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class=" nav-link" href="#"><i class="far fa-shopping-cart"></i></a>
+			</li>
+			<li class="nav-item">
+				<a class=" nav-link" href="#"><i class="fas fa-sign-out-alt"></i></a>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+Weight: 100
+
+Styleguide Recipes.BrandedNav.Login
+
+*/
+/*
+Responsive Top Nav with Single Layer Nav
+
+The Header Nav with no dropdown navs but with elements that show up only in the mobile viewport
+
+Markup:
+<nav class="navbar navbar-primary navbar-expand-lg navbar-dark bg_acc font_1">
+	<button
+		class="br_white-2 is-active_toggle-function m-l_n2 m-y_3 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed"
+		type="button"
+		data-toggle="collapse"
+		data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent"
+		aria-expanded="false"
+		aria-label="Toggle navigation"
+	>
+		<i class="icon-toggle_bars-times fas a:c_acc-2 c_white"></i><span class="a:c_acc-2 c_white">&nbsp;Menu</span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav">
+			<li class="display_none:lg nav-item">
+				<a class="nav-link" href="//www.acc.org/" title="Home of the American College of Cardiology"
+					><i class="fas fa-home"></i><span class="display_none:lg">&nbsp;Home</span></a
+				>
+			</li>
+			<li class="display_none:lg nav-item">
+				<a
+					class="nav-link" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources" >Guidelines</a
+				>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/clinical-topics" >Clinical Topics</a
+				>
+			</li>	
+			<li class="nav-item">
+				<a class="nav-link" href="#">Latest In Cardiology</a>
+			</li>
+			<li class="display_none:lg nav-item">
+				<a
+					class="nav-link"
+					href="//www.acc.org/membership"
+					title="Access exclusive member features and groups or learn about ACC membership"
+					>Membership</a
+				>
+			</li>
+			<li class="display_none:lg nav-item">
+				<a class="nav-link" href="//www.acc.org/about-acc" title="Learn about the ACC organization"
+					>About ACC</a
+				>
+			</li>
+			<li class="display_none:lg nav-item">
+				<a class="nav-link" href="http://www.onlinejacc.org/" target="_blank" title="JACC.org">JACC <i class="c_white fa-external-link-square fal h:c_white m-l_3 p-r_3 p-t_2" style="text-indent: 0;"></i></a>
+			</li>
+			<li class="display_none:lg nav-item">
+				<a
+					class="nav-link"
+					href="http://accscientificsession.acc.org"
+					target="_blank"
+					title="ACC Annual Scientific Session Website"
+					>ACC.19 <i class="c_white fa-external-link-square fal h:c_white m-l_3 p-r_3 p-t_2" style="text-indent: 0;"></i></a
+				>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+Weight: 1
+
+Styleguide Recipes.BrandedNav.Simple
+
+*/
+/*
+Nav Dropdown Simple
+
+The Header Nav of ACC.org
+
+Markup:
+<nav class="navbar navbar-primary navbar-expand-lg navbar-dark bg_acc font_1">
+	<button
+		class="br_white-2 is-active_toggle-function m-l_n2 m-y_3 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed"
+		type="button"
+		data-toggle="collapse"
+		data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent"
+		aria-expanded="false"
+		aria-label="Toggle navigation"
+	>
+		<i class="icon-toggle_bars-times fas a:c_acc-2 c_white"></i><span class="a:c_acc-2 c_white">&nbsp;Menu</span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav">
+			<li class="display_none:lg nav-item">
+				<a class="nav-link" href="//www.acc.org/" title="Home of the American College of Cardiology"
+					><i class="fas fa-home"></i><span class="display_none:lg">&nbsp;Home</span></a
+				>
+			</li>
+			<li class="display_none:lg nav-item">
+				<a
+					class="nav-link"
+					href="//www.acc.org/guidelines#doctype=Guidelines"
+					title="Access ACC guidelines and clinical policy documents as well as related resources"
+					>Guidelines</a
+				>
+			</li>
+			<li class="nav-item dropdown">
+				<a
+					class="nav-link dropdown-toggle is-active_toggle-function"
+					href="/clinical-topics"
+					id="clinicalTopicsDropdown"
+					role="button"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+					><i class="far faw icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Clinical Topics</a
+				>
+				<div
+					class="dropdown-menu br_none br_solid:lg m-x_0:lg m-x_n4 m-t_0 m-t_2:lg"
+					aria-labelledby="clinicalTopicsDropdown"
+				>
+					<div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
+						<div class="flex_auto p-x_2 p-y_0 p-y_3:md">
+							<ul class="ul_none m_0">
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/acute-coronary-syndromes"
+										>Acute Coronary Syndromes</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/anticoagulation-management"
+										title="Anticoagulation Management"
+										>Anticoagulation Management</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/arrhythmias-and-clinical-ep"
+										>Arrhythmias and Clinical EP</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/acute-coronary-syndromes/atherosclerotic-disease-cad-pad"
+										>Atherosclerotic Disease (CAD/PAD)</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/cardiac-surgery"
+										>Cardiac Surgery</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/cardio-oncology"
+										>Cardio-Oncology</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/congenital-heart-disease-pediatric-cardiology"
+										>Congenital Heart Disease and Pediatric Cardiology</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/diabetes-and-cardiometabolic-disease"
+										>Diabetes and Cardiometabolic Disease</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/dyslipidemia"
+										title="Dyslipidemia"
+										>Dyslipidemia</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/geriatric-cardiology"
+										>Geriatric Cardiology</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/heart-failure-and-cardiomyopathies"
+										title="Heart Failure and Cardiomyopathies"
+										>Heart Failure and Cardiomyopathies</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div
+							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md"
+						>
+							<ul class="ul_none">
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/dyslipidemia/hypertriglyceridemia"
+										>Hypertriglyceridemia</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/invasive-cardiovascular-angiography-and-intervention"
+										title="Invasive Cardiovascular Angiography and Intervention"
+										>Invasive Cardiovascular Angiography and Intervention</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/noninvasive-imaging"
+										title="Noninvasive Imaging"
+										>Noninvasive Imaging</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/pericardial-disease"
+										title="Pericardial Disease"
+										>Pericardial Disease</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/prevention"
+										title="Prevention"
+										>Prevention</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/pulmonary-hypertension-and-venous-thromboembolism"
+										>Pulmonary Hypertension and Venous Thromboembolism</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/sports-and-exercise-cardiology"
+										>Sports and Exercise Cardiology</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/stable-ischemic-heart-disease"
+										title="Stable Ischemic Heart Disease"
+										>Stable Ischemic Heart Disease</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/valvular-heart-disease"
+										>Valvular Heart Disease</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/clinical-topics/vascular-medicine"
+										>Vascular Medicine</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+Weight: 1
+
+	Styleguide Recipes.BrandedNav.Dropdowns
+
+*/
+/*
+Nav Dropdown with Sub Links
+
+The Header Nav of ACC.org
+
+Markup:
+<nav class="navbar navbar-primary navbar-expand-lg navbar-dark bg_acc font_1">
+	<button
+		class="br_white-2 is-active_toggle-function m-l_n2 m-y_3 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed"
+		type="button"
+		data-toggle="collapse"
+		data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent"
+		aria-expanded="false"
+		aria-label="Toggle navigation"
+	>
+		<i class="icon-toggle_bars-times fas a:c_acc-2 c_white"></i><span class="a:c_acc-2 c_white">&nbsp;Menu</span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav">
+			<li class="nav-item dropdown">
+				<a
+					class="nav-link dropdown-toggle is-active_toggle-function"
+					href="#"
+					id="eduDropdown"
+					role="button"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+					><i
+						class="far faw icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"
+					></i>
+					Education and Meetings
+				</a>
+				<div
+					class="dropdown-menu br_none br_solid:lg m-x_0:lg m-x_n4 m-t_0 m-t_2:lg"
+					aria-labelledby="eduDropdown"
+				>
+					<div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
+						<div class="flex_auto p-x_2 p-y_0 p-y_3:md">
+							<ul class="ul_none">
+								<li class="">
+									<span class="toggler"></span>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/education-and-meetings/education-catalog"
+										>Online Learning Catalog</a
+									>
+									<ul class="ul_none font_n1 lh_3">
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/earncredit"
+												>Earn Credit</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/board-prep-offerings"
+												title="Board Prep Offerings"
+												>Board Prep Offerings</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/education-catalog"
+												>View the Entire Catalog</a
+											>
+										</li>
+									</ul>
+								</li>
+								<li class="">
+									<span class="toggler"></span>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/education-and-meetings/education-catalog"
+										>Products</a
+									>
+									<ul class="ul_none font_n1 lh_3">
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/accsap"
+												>ACCSAP</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/accel-audio"
+												>ACCEL</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/cardiosource-plus"
+												>CardioSource Plus for Institutions and Practices</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/cathsap"
+												>CathSAP</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/ecg-drill-and-practice"
+												title="ECG Drill and Practice"
+												>ECG Drill and Practice</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/echosap"
+												>EchoSAP</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/epsap"
+												>EP SAP</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/heart-songs-5"
+												>Heart Songs</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/iscience"
+												>iScience</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/recent-advances-in-clinical-nuclear-cardiology-and-cardiac-ct-mod"
+												>Nuclear Cardiology and Cardiac CT Meeting on Demand</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/products-and-resources/rightsteps-optimizing-medical-therapy-for-chronic-heart-failure"
+												>RightSTEPS Optimizing Medical Therapy for Chronic Heart
+												Failure</a
+											>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div
+							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md"
+						>
+							<ul class="ul_none m_0">
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/education-and-meetings/products-and-resources"
+										>Resources</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/education-and-meetings/products-and-resources/guideline-education"
+										>Guideline Education</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/education-and-meetings/maintenance-of-certification-information-hub"
+										>Understanding MOC</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/education-and-meetings/image-and-slide-gallery"
+										>Image and Slide Gallery</a
+									>
+								</li>
+								<li class="">
+									<span class="toggler"></span>
+									<a
+										class="dropdown-item transition_4 wrap nowrap:lg"
+										href="/education-and-meetings/meetings"
+										>Meetings</a
+									>
+									<ul class="ul_none font_n1 lh_3">
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="http://accscientificsession.acc.org"
+												class="new-window-icon"
+												target="_blank"
+												>Annual Scientific Session and Related Events</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="http://www.acc.org/education-and-meetings/meetings?w_nav=MN#type=Chapter Meetings"
+												>Chapter Meetings</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="http://www.acc.org/education-and-meetings/meetings?w_nav=MN#type=Live Meetings"
+												class="lvl2"
+												>Live Meetings</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/meetings#type=Webinars - Live"
+												class="lvl2"
+												>Webinars - Live</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a
+												class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/education-and-meetings/meetings?view=archive&amp;#type=Webinars - OnDemand"
+												>Webinars - OnDemand</a
+											>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+Weight: 2
+
+Styleguide Recipes.BrandedNav.Dropdowns.Sublinks
+
+*/
+/*
+Nav Dropdown with Alternate Content in Links
+
+It is easy to add images in replace of text links in the navs.   
+
+Markup:
+<nav class="navbar navbar-primary navbar-expand-lg navbar-dark bg_acc font_1">
+	<button
+		class="br_white-2 is-active_toggle-function m-l_n2 m-y_3 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed"
+		type="button"
+		data-toggle="collapse"
+		data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent"
+		aria-expanded="false"
+		aria-label="Toggle navigation"
+	>
+		<i class="icon-toggle_bars-times fas a:c_acc-2 c_white"></i><span class="a:c_acc-2 c_white">&nbsp;Menu</span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav">
+			<li class="nav-item dropdown">
+				<a
+					class="nav-link dropdown-toggle is-active_toggle-function"
+					href="#"
+					id="toolDropdown"
+					role="button"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+					><i class="far faw icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Tools &amp; Practice Support
+				</a>
+				<div class="dropdown-menu m-x_0:lg m-x_n4 m-t_0 m-t_2:lg" aria-labelledby="toolDropdown">
+					<div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
+						<div class="flex_auto p-x_2 p-y_0 p-y_3:md order_2 order_1:md">
+							<ul class="ul_none">
+								<li class="relative m-x_2:md m-x_4">
+									<a
+										href="http://cvquality.acc.org/?_ga=2.33577825.159963902.1562853382-843642371.1562007133"
+										target="_blank"
+										class="expanded-click-area transition_1 h:opacity opacity_8"
+										><img
+											src="https://www.acc.org/~/media/Non-Clinical/Images/External%20Site%20Logos/ACC_QII_logo.png"
+											alt="QII"
+									/></a>
+								</li>
+								<li class="relative m-x_2:md m-x_4">
+									<a href="http://cvquality.acc.org/NCDR-Home.aspx?_ga=2.91395290.159963902.1562853382-843642371.1562007133" target="_blank" class="expanded-click-area transition_1 h:opacity opacity_8"><img src="https://www.acc.org/~/media/Non-Clinical/Images/External Site Logos/ACC_NCDR_logo.png" alt="NCDR"></a>
+								</li>
+							</ul>
+						</div>
+						<div
+							class="flex_auto p-x_2 p-y_0 p-y_3:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md order_1 order_2:md"
+						>
+							<ul class="ul_none">
+								<li>
+									<a class="dropdown-item transition_4 wrap nowrap:lg" href="/tools-and-practice-support/advocacy-at-the-acc">Advocacy at the ACC</a>
+									<ul class="ul_none font_n1 lh_3">
+										<li class="text-indent_1">
+											<a class="dropdown-item transition_4 wrap nowrap:lg" href="/tools-and-practice-support/advocacy-at-the-acc/advocacy-action"
+												>Advocacy Action</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/tools-and-practice-support/advocacy-at-the-acc/health-policy-issue-center/alternative-payment-model-framework"
+												>Alternative Payment Model Framework</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/tools-and-practice-support/advocacy-at-the-acc/acc-legislative-conference"
+												>Legislative Conference</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a class="dropdown-item transition_4 wrap nowrap:lg" href="http://www.acc.org/macra/index.html" target="_blank"
+												>MACRA/QPP Hub</a
+											>
+										</li>
+										<li class="text-indent_1">
+											<a class="dropdown-item transition_4 wrap nowrap:lg"
+												href="/tools-and-practice-support/advocacy-at-the-acc/acc-political-action-committee"
+												>ACC Political Action Committee</a
+											>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 wrap nowrap:lg" href="http://www.healthecareers.com/acc" class="new-window-icon" target="_blank"
+										>Cardiology Careers</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 wrap nowrap:lg" href="/tools-and-practice-support/clinical-toolkits">Clinical Toolkits</a>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 wrap nowrap:lg" href="/tools-and-practice-support/expert-consensus-decision-pathways"
+										>Expert Consensus Decision Pathways</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 wrap nowrap:lg" href="/tools-and-practice-support/infographics">Infographics</a>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 wrap nowrap:lg" href="/tools-and-practice-support/mobile-resources">Mobile Apps</a>
+								</li>
+								<li>
+									<a class="dropdown-item transition_4 wrap nowrap:lg" href="/tools-and-practice-support/quality-programs">Quality Programs</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+Weight: 3
+
+Styleguide Recipes.BrandedNav.Dropdowns.Alt Content
+
+*/
+.show > i.icon-toggle_plus-minus:before, .dropdown:hover i.icon-toggle_plus-minus:before,.accordion i.icon-toggle_plus-minus:before {
+  content: "";
+}
+.accordion .collapsed i.icon-toggle_plus-minus:before {
+  content: "";
 }
 
 .navbar {

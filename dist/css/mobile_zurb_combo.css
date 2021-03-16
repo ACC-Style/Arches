@@ -96,6 +96,13 @@ html {
 }
 
 /**  Textures  **/
+.pagination .disabled:hover {
+  background-attachment: local;
+  background-origin: border-box;
+  background-position: top right;
+  background-repeat: repeat;
+}
+
 /**  Logos  **/
 /**  Zurb Foundation Framework Setup Files. ***************************************/
 /**
@@ -7272,12 +7279,12 @@ Markup:
 <h4 class="c_white font_regular font_accent: m-b_3 m-b_4:lg text_center text_left:lg">Stay Connected
 </h4>
 <ul class="flex social-bar ul_none c_white h:c_white m_0">
-    <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="twitter social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-twitter-square"></i></a></li>
-    <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="facebook social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-facebook-square"></i></a></li>
-    <li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="youtube social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-youtube"></i></a></li>
-    <li class="flex_auto m-r_2"><a href="https://www.instagram.com/" target="_blank" class="instagram social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-instagram"></i></a></li>
-    <li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="google-play social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-google-play"></i></a></li>
-    <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="apple-store social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-apple"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="bg_twitter social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-twitter-square"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="https://www.facebook.com/AmericanCollegeofCardiology" target="_blank" class="bg_facebook social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-facebook-square"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="https://www.instagram.com/americancollegeofcardiology" target="_blank" class="bg_instagram social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-apple"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="http://www.youtube.com/user/ACCinTouch" target="_blank" class="bg_youtube social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-youtube"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="https://play.google.com/store/apps/dev?id=5189912010956845696&amp;hl=en_US" target="_blank" class="bg_google-play social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-google-play"></i></a></li>
+    <li class="flex_auto m-r_2"><a href="https://apps.apple.com/us/developer/american-college-of-cardiology/id502174543#see-all/i-phonei-pad-apps" target="_blank" class="bg_apple-store social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-apple"></i></a></li>
 </ul>
 <!-- Social -->
 
@@ -9117,6 +9124,1090 @@ Styleguide HTML.RealArticle
 .card {
   position: relative;
 }
+
+/*
+  Table
+
+  There is a basic styling around the pure DOM of a table.   But to get full brand styling alter the parent tag to <table class='table'>.
+
+  Markup:
+  <table>
+    <thead>
+      <tr>
+        <th>Table Header</th>
+        <th>Table Header</th>
+        <th>Table Header</th>
+        <th>Table Header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+    </tbody>
+  </table>
+
+ Styleguide HTML.Table
+*/
+/*
+
+Table Styled
+
+<table class='table'> will style the table with the generic branded coloring and spacing. 
+
+Markup:
+<table class="table">
+  <thead class="thead">
+    <tr>
+      <th>table header</th>
+      <th>table header</th>
+      <th>table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>table row 1 table cell A
+        <br>
+        <small class="c_primary">this is small text in blue</small>
+      </td>
+      <td>table row 1 table cell B
+        <br>
+        <small class="c_highlight">this is small text with magenta</small>
+      </td>
+      <td>table row 1 table cell C</td>
+    </tr>
+    <tr>
+      <td>table row 2 table cell A</td>
+      <td>table row 2 table cell B</td>
+      <td>table row 2 table cell C</td>
+    </tr>
+  </tbody>
+  <tfoot class="tfoot">
+    <tr>
+      <td colspan="3">footer cell</td>
+    </tr>
+  </tfoot>
+</table>
+
+Styleguide HTML.Table.BasicStyle
+*/
+.table {
+  border-spacing: 0;
+}
+.table .thead,
+.table thead {
+  background-color: white;
+}
+.table .thead th,
+.table .thead td,
+.table thead th,
+.table thead td {
+  border-bottom: 2px solid #1faed7;
+}
+.table .tfoot,
+.table tfoot {
+  background-color: #f3f3f3;
+}
+.table .tfoot th,
+.table .tfoot td,
+.table tfoot th,
+.table tfoot td {
+  border-top: 1px solid #9b9b9b;
+  font-style: italic;
+}
+
+/*
+
+Table Column Shaded
+
+`<table class="table column-shaded">` gives a blue tint to every other column in the table.
+
+
+
+Markup:
+<table class="table column-shaded">
+  <thead>
+    <tr>
+      <th>table header</th>
+      <th>table header</th>
+      <th>table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>row 1 cell A</td>
+      <td>row 1 cell B</td>
+      <td>row 1 cell C</td>
+    </tr>
+    <tr>
+      <td>row 2 cell A</td>
+      <td>row 2 cell B</td>
+      <td>row 2 cell C</td>
+    </tr>
+    <tr>
+      <td>row 3 cell A</td>
+      <td>row 3 cell B</td>
+      <td>row 3 cell C</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">footer cell</td>
+    </tr>
+  </tfoot>
+</table>
+
+Styleguide HTML.Table.ColumnShaded
+*/
+.table.column-shaded .thead th:nth-child(even),
+.table.column-shaded thead th:nth-child(even) {
+  background-color: #d8edff;
+}
+.table.column-shaded .tbody td:nth-child(even),
+.table.column-shaded tbody td:nth-child(even) {
+  background-color: #e4f6fb;
+}
+.table.column-shaded .tbody tr:nth-child(even) td:nth-child(even),
+.table.column-shaded tbody tr:nth-child(even) td:nth-child(even) {
+  background-color: #a9d8ff;
+}
+
+/*
+
+
+Table Unshaded
+
+`<table class="table unshaded"> removes the shadding for rows and footer giving a cleaner table. This table type is great for small data sets and removes the 100% wide table that is default in all other tables.  
+
+Markup:
+<table class="table unshaded">
+  <thead>
+    <tr>
+      <th>table header</th>
+      <th>table header</th>
+      <th>table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>row 1 cell A</td>
+      <td>row 1 cell B</td>
+      <td>row 1 cell C</td>
+    </tr>
+    <tr>
+      <td>row 2 cell A</td>
+      <td>row 2 cell B</td>
+      <td>row 2 cell C</td>
+    </tr>
+    <tr>
+      <td>row 3 cell A</td>
+      <td>row 3 cell B</td>
+      <td>row 3 cell C</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">footer cell</td>
+    </tr>
+  </tfoot>
+</table>
+
+Styleguide HTML.Table.Unshaded
+*/
+.table.unshaded {
+  width: auto;
+  border: none;
+}
+.table.unshaded thead {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+.table.unshaded tbody tr:nth-child(even) {
+  background-color: unset;
+}
+.table.unshaded tbody tr + tr td {
+  border-top: 1px #f3f3f3 solid;
+}
+.table.unshaded tfoot {
+  background-color: unset;
+}
+
+/*
+
+Table Column Shading: recipe
+
+Table shading can be much more dynamic and varied if you are willing to build with utlity classes(UC's). You can see few variations of tables bellow that have been quickly been made with a basic table and background color classes applied to cells. 
+
+.primary          - column colored variations of primary
+.info             - column colored variations of info 
+.accent      - column colored variations of highlighted 
+
+Markup:
+<table class="table">
+  <thead>
+    <tr>
+      <th>table header</th>
+      <th class="bg_{{modifier_class}}-4">table header</th>
+      <th>table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>row 1 cell A</td>
+      <td class="bg_{{modifier_class}}-5">row 1 cell B</td>
+      <td>row 1 cell C</td>
+    </tr>
+    <tr>
+      <td>row 2 cell A</td>
+      <td class="bg_{{modifier_class}}-4">row 2 cell B</td>
+      <td>row 2 cell C</td>
+    </tr>
+    <tr>
+      <td>row 3 cell A</td>
+      <td class="bg_{{modifier_class}}-5">row 3 cell B</td>
+      <td>row 3 cell C</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">footer cell</td>
+    </tr>
+  </tfoot>
+</table>
+
+Styleguide HTML.Table.UtilityClasses.Shading
+*/
+/*
+Table Cell States: RECIPE
+
+States can be easily applied to the tables using UC's
+
+
+Markup:
+<table class="table">
+  <tr>
+    <td class="bg_alert-4 border_solid border-width_1 border_alert font-weight_bold text_center">
+      <i class="fas fa-times-circle"></i>
+    </td>
+    <td class="">
+    </td>
+    <td class="">Text</td>
+    <td class="bg_warning-4 border_solid border-width_1 border_warning font-weight_bold">
+      <i class="fas fa-exclamation-triangle"></i> Warning</td>
+  </tr>
+  <tr>
+    <td class="">
+    </td>
+    <td class="bg_info-4 border_solid border-width_1 border_info font-weight_bold text_center">
+      <i class="fas fa-lightbulb-exclamation"></i>
+    </td>
+    <td class="">Text</td>
+    <td class="bg_info-4 border_solid border-width_1 border_info font-weight_bold">
+      <i class="fas fa-lightbulb-exclamation"></i>
+      Info</td>
+  </tr>
+  <tr>
+    <td class="">
+    </td>
+    <td class="warning icon">
+    </td>  
+    <td class="bg_alert-4 border_solid border-width_1 border_alert font-weight_bold">Alert</td>
+    <td class=""> Text</td>
+  </tr>
+  <tr>
+    <td class="success icon">
+    </td>
+    <td class="info icon">
+    </td>
+    <td class="bg_success-4 border_solid border-width_1 border_success font-weight_bold"><i class="fas fa-check"></i> Success</td>
+    <td class=""> text</td>
+  </tr>
+</table>
+
+Styleguide HTML.Table.UtilityClasses.CellStates
+*/
+/*
+
+Table Seperators: RECIPE
+
+Styling seperators on tables is now completely controled by utility classes giving much more flexablity to designs.
+
+
+
+Markup:
+<table class="table stripped">
+  <thead>
+    <tr>
+      <th>table header</th>
+      <th>table header</th>
+      <th>table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>row 1 cell A</td>
+      <td>row 1 cell B</td>
+      <td>row 1 cell C</td>
+    </tr>
+    <tr class="bg_info-1 border_solid border-left-width_0  border-right-width_0 border-width_1 border border_info font-weight_bold font_n2 text-left c_white">
+      <td colspan='3' class="p_2">Separator With Info</td>
+    </tr>
+    <tr>
+      <td>row 1 cell A</td>
+      <td>row 1 cell B</td>
+      <td>row 1 cell C</td>
+    </tr>
+    <tr class="bg_success-1 border_solid border-left-width_0  border-right-width_0 border-width_1 border border_success font-weight_bold font_n2 text-left c_white">
+      <td colspan='3' class="p_2">Separator With success</td>
+    </tr>
+    <tr>
+      <td>row 1 cell A</td>
+      <td>row 1 cell B</td>
+      <td>row 1 cell C</td>
+    </tr>
+    <tr class="bg_alert-1 border_solid border-left-width_0 border-right-width_0 border-width_1 border border_alert font-weight_bold font_n2 text-left c_white">
+      <td colspan='3' class="p_2">Separator With Alert</td>
+    </tr>
+    <tr>
+      <td>row 1 cell A</td>
+      <td>row 1 cell B</td>
+      <td>row 1 cell C</td>
+    </tr>
+   <tr class="bg_warning-1 border_solid border-left-width_0  border-right-width_0 border-width_1 border border_warning font-weight_bold font_n2 text-left">
+      <td colspan='3' class="p_2">Separator With warning</td>
+    </tr>
+    <tr>
+      <td>row 1 cell A</td>
+      <td>row 1 cell B</td>
+      <td>row 1 cell C</td>
+    </tr>
+   <tr class="bg_shade-3 border_solid border-left-width_0  border-right-width_0 border-width_1 border border_shade font-weight_bold font_n2 text-left">
+      <td colspan='3' class="p_2">Separator With disabled</td>
+    </tr>
+    <tr>
+      <td>row 1 cell A</td>
+      <td>row 1 cell B</td>
+      <td>row 1 cell C</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">footer cell</td>
+    </tr>
+  </tfoot>
+</table>
+
+Styleguide HTML.Table.UtilityClasses.RowSeperators
+*/
+/*
+Buttons
+
+Basic Buttons
+
+.primary	            	- Primary Class Button (default)
+.secondary 	            - Second Class Button
+.shade 	            	- Shade Class Button
+.navigation             - Button reserved for navigation elements
+.success                - Success State.
+.alert                  - Alert State.
+.warning	            	- Warning State
+.hollow		            - All button states can become hollow
+.clear		            - All button states can become hollow
+.dropdown		        	- All button states can become hollow
+.radius		            - Give the button softer corners
+.shadow.clear		   	- Give a button a shadow
+.tiny		           		- tiny buttons
+.small		            - Small buttons
+default		            - Medium buttons (default)
+.large		            - Large buttons
+.xlarge		            - Large buttons
+.disabled	            - Disabled buttons
+
+Markup:
+<a data-style="{{ modifier_class }}"  class="button {{modifier_class}}">{{modifier_class}} button</a>
+
+ Styleguide HTML.Buttons
+*/
+.button {
+  white-space: nowrap;
+}
+.button.hollow,.button.clear {
+  background-color: transparent;
+}
+.button.clear {
+  border-color: transparent;
+}
+.button.shadow {
+  box-shadow: 1.5px 1.5px 6px 0.75px rgba(0, 0, 0, 0.4);
+}
+.button.shadow:hover {
+  box-shadow: 0.5px 0.5px 2px 0.25px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+  right: 0;
+  left: 0;
+  width: 100%;
+  border-top: #198dae 9px solid;
+  text-align: right;
+}
+.close-button span {
+  padding: 0 0.2em;
+  background: #198dae;
+  vertical-align: top;
+}
+.close-button:focus {
+  outline: none;
+}
+
+/*
+
+    Question Structure
+
+    shade - default decoration when there is no validation run on the input.
+
+    Markup:
+    <div data-style="{{ modifier_class }}"  class="question required {{modifier_class}}">
+    <label for="input-x" class="label-holder grid-x c_{{modifier_class}} font_1">
+        <span class="text cell shrink">Question Text</span>
+        <span class="required-holder cell shrink">
+            <i class="fas fa-asterisk c_warning font_n3 vertical-align_t"></i>
+        </span>
+    </label>
+    <div class="input-holder grid-x c_{{modifier_class}}">
+        <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+            <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-square"></i></span>
+        </div>
+        <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+            <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-triangle"></i></span>
+        </div>
+        <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+            <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-lightbulb-exclamation"></i></span>
+        </div>
+        <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+            <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-check-square"></i></span>
+        </div>
+        <div class="input-space cell auto">
+            <input id="input-x" type="text" class="m-b_0 br_{{modifier_class}}-3 " />
+        </div>
+    </div>
+    <div class="message-holder font_n1">
+        <div class="alert p_2 bg_alert-n1 c_white">
+        <i class="fas fa-fw fa-exclamation-square m-r_3 m-l_2"></i> Error message</div>
+        <div class="warning p_2 bg_warning-n1 c_white">
+        <i class="fas fa-fw fa-exclamation-triangle m-r_3 m-l_2"></i> Warning message</div>
+        <div class="info p_2 bg_info-n1 c_white">
+        <i class="fas fa-fw fa-lightbulb-exclamation m-r_3 m-l_2"></i> Informational message about your input</div>
+    </div>
+    <div class="hint-holder m-t_2 font_n1 c_shade p_2 p-t_0">This is some hint-holder text</div>
+    </div>
+
+    Weight: -1
+
+    Styleguide Questions.Introduction
+*/
+/*
+
+    Question Structure with States applied
+
+    shade - default decoration when there is no validation run on the input.
+    alert   - alert settings for questions
+    warning - warning decoration for when required is missing. 
+    info - sometimes inputs show extra informaiton when an item is selected or when a value is entered.
+    success - On rare occations it is needed for a success response on an input.
+
+    Markup:
+    <div class="question required {{modifier_class}}">
+    <label for="input-x" class="label-holder grid-x c_{{modifier_class}} font_1">
+        <span class="text cell shrink">Question Text</span>
+        <span class="required-holder cell shrink">
+            <i class="fas fa-asterisk c_warning font_n3 vertical-align_t"></i>
+        </span>
+        </label>
+    <div class="input-holder grid-x c_{{modifier_class}}">
+        <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+            <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-square"></i></span>
+        </div>
+        <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+            <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-triangle"></i></span>
+        </div>
+        <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+            <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-lightbulb-exclamation"></i></span>
+        </div>
+        <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+            <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-check-square"></i></span>
+        </div>
+        <div class="input-space cell auto">
+            <input id="input-x" type="text" class="m-b_0 br_{{modifier_class}}-3 " />
+        </div>
+    </div>
+    <div class="message-holder font_n1 font_bold">
+            <div class="alert br_alert-n1 c_alert">
+            <i class="fas fa-fw fa-exclamation-square m-r_3 m-l_2 "></i> Error message</div>
+            <div class="warning br_warning-n1 c_warning ">
+            <i class="fas fa-fw fa-exclamation-triangle m-r_3 m-l_2"></i> Warning message</div>
+            <div class="info br_info-n1 c_info ">
+            <i class="fas fa-fw fa-lightbulb-exclamation m-r_3 m-l_2"></i> Informational message about your input</div>
+            <div class="success br_success-n1 c_success ">
+            <i class="fas fa-fw fa-lightbulb-exclamation m-r_3 m-l_2"></i> succes message are rare but sometimes needed.</div>
+        </div>
+    <div class="hint-holder m-t_2 font_n1 c_shade p_2 p-t_0">This is some hint-holder text</div>
+    </div>
+
+    Styleguide Questions.States
+*/
+.question div.alert,
+.question div.warning,
+.question div.info,
+.question div.success {
+  display: none;
+}
+
+.alert.question div.alert,
+.warning.question div.warning,
+.info.question div.info,
+.success.question div.success {
+  display: block;
+}
+
+.alert.question select {
+  border-color: #ee6b6b;
+  color: #8b1010;
+}
+
+.warning.question select {
+  border-color: #f3b25d;
+  color: #89520a;
+}
+
+.info.question select {
+  border-color: #c5beb7;
+  color: #6a6055;
+}
+
+.success.question select {
+  border-color: #24f462;
+  color: #04571d;
+}
+
+.required .required-holder {
+  display: inline-flex;
+}
+
+.switch {
+  margin-bottom: 0;
+}
+
+.switch-value {
+  margin-left: 8px;
+  margin-left: 0.5rem;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-holder,.input-holder,.message-holder {
+  flex: 1 0 auto;
+}
+
+.message-holder div {
+  padding: 4px;
+  padding: 0.25rem;
+  border-top-width: 4px;
+  border-top-width: 0.25rem;
+  border-top-style: solid;
+}
+
+.hint-holder {
+  flex: 1 0 auto;
+}
+
+/*
+
+    Question Input Value Area
+
+    shade - default decoration when there is no validation run on the input.
+    alert   - alert settings for questions
+    warning - warning decoration for when required is missing. 
+    info - sometimes inputs show extra informaiton when an item is selected or when a value is entered.
+    success - On rare occations it is needed for a success response on an input.
+
+    Markup:
+    <div class="question required {{modifier_class}}">
+        <label for="input-x" class="label-holder grid-x c_{{modifier_class}} font_1">
+        <span class="text cell shrink">Question Text</span>
+        <span class="required-holder cell shrink">
+            <i class="fas fa-asterisk c_warning font_n3 vertical-align_t"></i>
+        </span>
+        </label>
+        <div class="input-holder grid-x c_{{modifier_class}}">
+            <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-square"></i></span>
+            </div>
+            <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-triangle"></i></span>
+            </div>
+            <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-lightbulb-exclamation"></i></span>
+            </div>
+            <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-check-square"></i></span>
+            </div>
+            <div class="input-space cell auto">
+                <input id="input-x" type="text" class="m-b_0 br_{{modifier_class}}-3 " />
+            </div>
+            <div class="br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="value">Years</span>
+            </div>
+        </div>
+        <div class="message-holder font_n1 font_bold">
+            <div class="alert br_alert-n1 c_alert">
+            <i class="fas fa-fw fa-exclamation-square m-r_3 m-l_2 "></i> Error message</div>
+            <div class="warning br_warning-n1 c_warning ">
+            <i class="fas fa-fw fa-exclamation-triangle m-r_3 m-l_2"></i> Warning message</div>
+            <div class="info br_info-n1 c_info ">
+            <i class="fas fa-fw fa-lightbulb-exclamation m-r_3 m-l_2"></i> Informational message about your input</div>
+        </div>
+        <div class="hint-holder m-t_2 font_n1 c_shade p_2 p-t_0">This is some hint-holder text</div>
+    </div>
+
+    Styleguide Questions.Value Area
+*/
+/*
+
+    Question with grouped inputs
+
+    shade - default decoration when there is no validation run on the input.
+    alert - alerts show up when errors are validated from the input.
+
+    Markup:
+    <div class="question required {{modifier_class}}">
+        <label for="input-x" class="label-holder grid-x c_{{modifier_class}} font_1">
+            <span class="text cell shrink">Question Text</span>
+            <span class="required-holder cell shrink">
+                <i class="fas fa-asterisk c_warning font_n3 vertical-align_t"></i>
+            </span>
+            </label>
+        <div class="input-holder grid-x c_{{modifier_class}}">
+            <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-square"></i></span>
+            </div>
+            <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-triangle"></i></span>
+            </div>
+            <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-lightbulb-exclamation"></i></span>
+            </div>
+            <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-check-square"></i></span>
+            </div>
+            <div class="input-space cell small-2">
+                <select name="" id="" class="m-b_0">
+                    <option value="">All</option>
+                    <option value="">Group A</option>
+                    <option value="">Group B</option>
+                </select>
+            </div>       
+            <div class="input-space cell auto">
+                <input id="input-x" type="text" class="m-b_0 br_{{modifier_class}}-3 " />
+            </div>
+            <div class="br_{{modifier_class}}-3  bg_{{modifier_class}}-4 c_{{modifier_class}}-n2  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="value">Years</span>
+            </div>
+        </div>
+        <div class="message-holder font_n1 font_bold">
+            <div class="alert br_alert-n1 c_alert">
+            <i class="fas fa-fw fa-exclamation-square m-r_3 m-l_2 "></i> Error message</div>
+            <div class="warning br_warning-n1 c_warning ">
+            <i class="fas fa-fw fa-exclamation-triangle m-r_3 m-l_2"></i> Warning message</div>
+            <div class="info br_info-n1 c_info ">
+            <i class="fas fa-fw fa-lightbulb-exclamation m-r_3 m-l_2"></i> Informational message about your input</div>
+        </div>
+        <div class="hint-holder m-t_2 font_n1 c_shade p_2 p-t_0">This is some hint-holder text</div>
+    </div>
+
+    Styleguide Questions.Grouped Inputs
+*/
+/*
+
+    Question with Switches
+
+    shade - default decoration when there is no validation run on the input.
+    alert - alert on the area of inputs
+    warning - warning decoration for when required is missing. 
+    info - sometimes inputs show extra informaiton when an item is selected or when a value is entered.
+
+    Markup:
+    <div class="question required {{modifier_class}}">
+        <label for="tinySwitch_{{modifier_class}}" class="grid-x c_{{modifier_class}} font_1 label-holder">
+            <span class="text cell shrink">Question Text</span>
+            <span class="required-holder cell shrink">
+                <i class="fas fa-asterisk c_warning font_n3 vertical-align_t"></i>
+            </span>
+        </label>
+        <div class="input-holder grid-x c_{{modifier_class}}">
+            <div class="alert br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-square"></i></span>
+            </div>
+            <div class="warning br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-exclamation-triangle"></i></span>
+            </div>
+            <div class="info br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-lightbulb-exclamation"></i></span>
+            </div>
+            <div class="success br_{{modifier_class}}-3  bg_{{modifier_class}}-4  value-space cell shrink  br_solid br-w_1 p_3 p-b_2 b_shade-4 texture_light">
+                <span class="c_{{modifier_class}} p_2"><i class="fas fa-fw fa-check-square"></i></span>
+            </div>
+            <div class="input-space cell auto grid-x">
+                <div class="cell grid-x p_3 p-r_0 small-12 medium-6">
+                    <div class="switch tiny radius cell shrink">
+                        <input class="switch-input" id="tinySwitch_{{modifier_class}}" type="checkbox" name="exampleSwitch">
+                        <label class="switch-paddle" for="tinySwitch_{{modifier_class}}">
+                            <span class="show-for-sr">Tiny Sandwiches Enabled</span>
+                        </label>
+                    </div>
+                    <label class="switch-value cell auto font_bold" for="tinySwitch_{{modifier_class}}">No Question</label>
+                </div>
+                <div class="cell grid-x p_3 p-r_0 small-12 medium-6">
+                    <div class="switch tiny radius cell shrink">
+                        <input class="switch-input" id="tinySwitchNo_{{modifier_class}}" type="checkbox" name="exampleSwitch">
+                        <label class="switch-paddle" for="tinySwitchNo_{{modifier_class}}">
+                            <span class="show-for-sr">Tiny Sandwiches Enabled</span>
+                        </label>
+                    </div>
+                    <label class="switch-value cell auto font_bold" for="tinySwitchNo_{{modifier_class}}">Yes Question</label>
+                </div>
+            </div>     
+        </div>
+        <div class="message-holder font_n1 font_bold">
+            <div class="alert br_alert-n1 c_alert">
+            <i class="fas fa-fw fa-exclamation-square m-r_3 m-l_2 "></i> Error message</div>
+            <div class="warning br_warning-n1 c_warning ">
+            <i class="fas fa-fw fa-exclamation-triangle m-r_3 m-l_2"></i> Warning message</div>
+            <div class="info br_info-n1 c_info ">
+            <i class="fas fa-fw fa-lightbulb-exclamation m-r_3 m-l_2"></i> Informational message about your input</div>
+        </div>
+        <div class="hint-holder m-t_2 font_n1 c_shade p_2 p-t_0">This is some hint-holder text</div>
+    </div>
+
+    Styleguide Questions.Switches
+*/
+/*
+ Pagination
+
+ This is what pagination should look like and its modifications.
+
+ Markup:
+ <nav aria-label="Pagination" class="border_solid border_primary border-top-width_3">
+  <ul class="pagination font_display font_bold">
+    <li class="pagination-previous disabled"><i class="fas fa-chevron-left"></i> <span class="show-for-sr">page</span></li>
+    <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+    <li><a href="#" aria-label="Page 2">2</a></li>
+    <li><a href="#" aria-label="Page 3">3</a></li>
+    <li><a href="#" aria-label="Page 4">4</a></li>
+    <li class="fal fa-ellipsis-h" aria-hidden="true"></li>
+    <li><a href="#" aria-label="Page 12">12</a></li>
+    <li><a href="#" aria-label="Page 13">13</a></li>
+    <li class="pagination-next"><a href="#" aria-label="Next page"><i class="fas fa-chevron-right"></i><span class="show-for-sr">page</span></a></li>
+  </ul>
+</nav>
+
+ Styleguide Navigation.Pagination
+*/
+.pagination-previous,
+.pagination-next {
+  background: #d0d0d0;
+}
+
+.pagination .disabled:hover {
+  background-image: url("../img/cross_disabled.png");
+}
+
+/*
+ Pagination in Card
+
+ This is what pagination should look like and its modifications.
+
+ Markup:
+ <div class="card shadow_2" >
+    <div class="card-section">
+        <h4>This is a card.</h4>
+    </div>
+    <nav aria-label="Pagination" class=" pagination-container">
+      <ul class="pagination font_display font_bold float-right">
+        <li class="pagination-previous disabled"><i class="fas fa-chevron-left"></i> <span class="show-for-sr">page</span></li>
+        <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+        <li class=""><a href="#" aria-label="Page 2">2</a></li>
+        <li class=""><a href="#" aria-label="Page 3">3</a></li>
+        <li class=""><a href="#" aria-label="Page 4">4</a></li>
+        <li class=" fal fa-ellipsis-h " aria-hidden="true"></li>
+        <li class=""><a href="#" aria-label="Page 12">12</a></li>
+        <li class=""><a href="#" aria-label="Page 13">13</a></li>
+        <li class="pagination-next"><a href="#" aria-label="Next page"><i class="fas fa-chevron-right"></i><span class="show-for-sr">page</span></a></li>
+      </ul>
+    </nav>
+</div>
+
+ Styleguide Navigation.Pagination.Cards
+*/
+.pagination-container {
+  padding: 0 8px;
+  padding: 0 0.5rem;
+  background: #198dae;
+}
+.pagination-container .pagination {
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+}
+.pagination-container .current {
+  background: white;
+  color: #198dae;
+}
+.pagination-container a:not([class=pagination-previous]):not([class=pagination-next]) {
+  color: white;
+}
+.pagination-container a:not([class=pagination-previous]):not([class=pagination-next]):hover {
+  color: #131212;
+}
+
+/*
+
+  Breadcrumbs
+
+  Markup:
+  <nav aria-label="You are here:" role="navigation">
+    <ul class="breadcrumbs font_1">
+      <li><a href="#0">Home</a></li>
+      <li><a href="#0">Features</a></li>
+      <li class="font-italic">Gene Splicing</li>
+      <li>
+        <span class="show-for-sr">Current: </span> Cloning
+      </li>
+    </ul>
+  </nav>
+
+  Styleguide Navigation.Breadcrumbs
+*/
+/*
+
+  Switches
+
+  Markup:
+  <div class="switch tiny switch_radius p_5">
+    <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+    <label class="switch-paddle" for="tinySwitch">
+      <span class="show-for-sr">Tiny Sandwiches Enabled</span>
+    </label>
+  </div>
+  <div class="switch small round p_5">
+    <input class="switch-input" id="smallSwitch" type="checkbox" name="exampleSwitch">
+    <label class="switch-paddle" for="smallSwitch">
+      <span class="show-for-sr">Small Portions Only</span>
+    </label>
+  </div>
+  <div class="switch large p_5">
+    <input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">
+    <label class="switch-paddle" for="largeSwitch">
+      <span class="show-for-sr">Show Large Elephants</span>
+    </label>
+  </div>
+
+  Styleguide HTML.Switches
+  */
+/*
+
+  Progress Bars
+
+  Markup:
+<div class="row">
+  <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+    <div class="progress-meter" style="width: 25%">
+      <p class="progress-meter-text">25%</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="warning progress">
+    <div class="progress-meter" style="width: 50%">
+      <p class="progress-meter-text">50%</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="alert progress">
+    <div class="progress-meter" style="width: 75%">
+      <p class="progress-meter-text">75%</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="success progress" role="progressbar" tabindex="0" aria-valuenow="100" aria-valuemin="0" aria-valuetext="100 percent" aria-valuemax="100">
+    <div class="progress-meter" style="width: 100%">
+      <p class="progress-meter-text">100%</p>
+    </div>
+  </div>
+</div>
+
+  Styleguide HTML.ProgressBars
+  */
+/*
+
+  Call Out Example
+
+  Markup:
+  <div class="callout" data-closable>
+    <button class="close-button" aria-label="Close alert" type="button" data-close>
+      <span aria-hidden="true"><i class="fas fa-times"></i></span>
+    </button>
+    <div class="p_3 p-x_4">
+    <h1>Hello User</h1>
+    <p>This is a callout with close button example.</p>
+    </div>
+  </div>
+
+  Styleguide HTML.Callout
+*/
+/*
+
+  Accordian
+
+  You can see how on the third accordian how utility classes can be added to tranform the look and feel, and you can add toggle icons as well
+
+  Markup:
+  <ul class="accordion" data-accordion>
+    <li class="accordion-item is-active" data-accordion-item>
+      <a href="#" class="accordion-title">Accordion 1</a>
+      <div class="accordion-content" data-tab-content >
+        <p>Panel 1. Lorem ipsum dolor</p>
+        <a href="#">Nowhere to Go</a>
+      </div>
+    </li>
+    <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title"><i class="fas icon-toggle_plus-minus"></i> Accordion 2</a>
+      <div class="accordion-content" data-tab-content>
+        <textarea></textarea>
+        <button class="button">I do nothing!</button>
+      </div>
+    </li>
+    <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title font_2 bg_primary-3 h:c_white h:bg_primary"><i class="fas icon-toggle_caret-circle-right-down"></i> Accordion 3</a>
+      <div class="accordion-content shadow_n1 texture_light" data-tab-content>
+        Type your name!
+        <input type="text"></input>
+      </div>
+    </li>
+  </ul>
+
+  Styleguide Containers.Accordian
+*/
+/*
+    Tabs
+
+    Markup:
+    <ul class="texture_light tabs"data-active-collapse="true"data-tabs id="collapsing-tabs">
+        <li class="tabs-title is-active"><a href="#panel1c"aria-selected="true">Tab 1</a></li>
+        <li class="tabs-title"><a href="#panel2c">Tab 2</a></li>
+        <li class="tabs-title"><a href="#panel3c">Tab 3</a></li>
+        <li class="tabs-title"><a href="#panel4c">Tab 4</a></li>
+    </ul>
+    <div class="tabs-content" data-tabs-content="collapsing-tabs">
+        <div class="tabs-panel is-active" id="panel1c">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="tabs-panel" id="panel2c">
+            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+        </div>
+        <div class="tabs-panel" id="panel3c">
+            <img src="https://picsum.photos/400/300">
+        </div>
+        <div class="tabs-panel" id="panel4c">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+
+    Styleguide Navigation.Tabs
+
+*/
+/*
+    Tabs Inset Area
+
+    Markup:
+    <div class="bg_white br_1 br_shade-4 br_solid p_4">
+        hello this is some text
+    </div>
+    <ul class="texture_light tabs br_primary bg_primary-3 shadow_n3 p-x_2 p-t_3 br-b_0" data-active-collapse="true" data-tabs id="collapsing-tabs">
+        <li class="tabs-title m-x_1 is-active"><a class="br-tr_radius br-tl_radius h:bg_white br_primary"href="#panel-demo2-1c"aria-selected="true"><i class="fal icon-complete_check"></i>Tab 1</a></li>
+        <li class="tabs-title m-x_1"><a class="h:c_white br-tr_radius br-tl_radius h:bg_primary" href="#panel-demo2-2c"><i class="fal icon-complete_check"></i>Tab 2</a></li>
+        <li class="tabs-title m-x_1"><a class="h:c_white br-tr_radius br-tl_radius h:bg_primary" href="#panel-demo2-3c"><i class="fal icon-complete_check"></i>Tab 3</a></li>
+        <li class="tabs-title m-x_1"><a class="h:c_white br-tr_radius br-tl_radius h:bg_primary" href="#panel-demo2-4c"><i class="fal icon-complete_check"></i>Tab 4</a></li>
+    </ul>
+    <div class="tabs-content" data-tabs-content="collapsing-tabs">
+        <div class="tabs-panel card-section  is-active" id="panel-demo2-1c">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="tabs-panel card-section" id="panel-demo2-2c">
+            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+        </div>
+        <div class="tabs-panel card-section" id="panel-demo2-3c">
+            <img src="https://picsum.photos/400/300">
+        </div>
+        <div class="tabs-panel card-section" id="panel-demo2-4c">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+
+    Styleguide Navigation.Tabs.Inset
+
+*/
+/*
+    Tabs In A Card
+
+    Use Case: When content of a card needs to be toggled rather then a whole section of a page.
+
+    Markup:
+        <div class="card shadow_2 cell small-6 large-4" style="max-width: 500px;">
+      <div class=font_accent border-top-left-square c_white font_3 p_4 texture_dust bg_primary">
+      This is a header
+      </div>
+    <ul class="texture_light tabs br_0 bg_primary br_none texture_dust p-x_2 p-t_3 br-b_0" data-active-collapse="true" data-tabs id="collapsing-tabs">
+        <li class="tabs-title m-x_1 is-active"><a class="br-tr_radius br-tl_radius h:bg_white br_primary"href="#panel-demo2-1c"aria-selected="true"><i class="fal icon-complete_check"></i>Overview</a></li>
+        <li class="tabs-title m-x_1"><a class="h:c_white c_white-3 br-tr_radius br-tl_radius h:bg_primary-n2" href="#panel-demo2-2c"><i class="fal icon-complete_check"></i>Details</a></li>
+        <li class="tabs-title m-x_1"><a class="h:c_white c_white-3 br-tr_radius br-tl_radius h:bg_primary-n2" href="#panel-demo2-3c"><i class="fal icon-complete_check"></i>Extra</a></li>
+    </ul>
+    <div class="tabs-content" data-tabs-content="collapsing-tabs">
+        <div class="tabs-panel-demo2 is-active p-x_4 p-y_3" id="panel-demo2-1c">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="tabs-panel-demo2  p-x_4 p-y_3" id="panel-demo2-2c">
+            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+        </div>
+        <div class="tabs-panel-demo2  p-x_4 p-y_3" id="panel-demo2-3c">
+            <img src="https://picsum.photos/400/300">
+        </div>
+    </div>
+    </div>
+
+    Styleguide Navigation.Tabs.OnCard
+
+*/
 /*# sourceMappingURL=maps/mobile_zurb.css.map */
 
 /** Function Test **/
