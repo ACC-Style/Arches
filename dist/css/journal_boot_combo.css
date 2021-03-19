@@ -20481,7 +20481,7 @@ Markup:
    <p class="m-y_2 font_0 lorem-loader">&nbsp;</p>
 </div>
 
-Styleguide InteractiveExtras.Text Placeholder Loader
+Styleguide Recipes.InteractiveExtras.Text Placeholder Loader
 */
 /*
 
@@ -20503,7 +20503,7 @@ Markup:
    <div class="m-y_2 lorem-loader {{modifier_class}} ">&nbsp;</div>
 </div>
 
-Styleguide InteractiveExtras.Placeholder Aspect Ratio
+Styleguide Recipes.InteractiveExtras.Placeholder Aspect Ratio
 */
 div[class*=aspect_],
 .lorem-loader {
@@ -20622,7 +20622,7 @@ Markup:
  <a class="link-light" href="xyz.zip">A link that is a Zip Document</a><br/>
 </div>
 
- Styleguide InteractiveExtras.Links
+ Styleguide Recipes.InteractiveExtras.Links
  */
 .icon-before:before, a.link[href$=".pdf"]:before, a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before, a.link[href$=".zip"]:before, a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before, a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before, a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
 a.link-light[href$=".pdf"]:before,
@@ -20777,7 +20777,7 @@ Markup:
   </div>
 </div>
 
-Styleguide InteractiveExtras.Expanded Click Area
+Styleguide Recipes.InteractiveExtras.Expanded Click Area
 */
 .expanded-click-area::after {
   z-index: 1;
@@ -20841,7 +20841,7 @@ Markup:
 </ul>
 
 
-Styleguide InteractiveExtras.ToggleIcons
+Styleguide Recipes.InteractiveExtras.ToggleIcons
 */
 .icon-toggle_bars-times:before {
   content: "";
@@ -20935,7 +20935,7 @@ Markup:
     <div class="card-divider card-footer br_0 br_solid br-t_1 br_primary"> <a href="#" class="button btn btn-primary">I am so clickable</a></div>
 </div>
 
-Styleguide InteractiveExtras.Scrollbar
+Styleguide Recipes.InteractiveExtras.Scrollbar
 */
 /* Let's get this party started */
 .scrollbar-mini::-webkit-scrollbar {
@@ -21036,6 +21036,31 @@ Markup:
 Styleguide Recipes.Social Links.Smaller
 
 */
+/*
+Stars
+
+Star ratings should be build throught arches in a more dynamic way but this is an easy level of adding stars. 
+
+Markup:
+<ul class="ul_none flex flex_inline star-rating">
+    <li class="flex_shrink"> <i class="fas fa-star"></i></li>
+    <li class="flex_shrink"> <i class="fas fa-star"></i></li>
+    <li class="flex_shrink"> <i class="fas fa-star"></i></li>
+    <li class="flex_shrink"> <i class="fas fa-star"></i></li>
+    <li class="flex_shrink"> <i class="fas fa-star"></i></li>
+</ul>
+
+Weight:0
+
+Styleguide Recipes.InteractiveExtras.Stars
+*/
+.star-rating {
+  color: #ffc299;
+}
+.star-rating.rating-5 li:nth-child(-n+5),.star-rating.rating-4 li:nth-child(-n+4),.star-rating.rating-3 li:nth-child(-n+3),.star-rating.rating-2 li:nth-child(-n+2),.star-rating.rating-1 li:nth-child(-n+1) {
+  color: #003764;
+}
+
 /*
  Design Base
 
@@ -21392,7 +21417,7 @@ Interactive Extras
 
 Interactions can be enhanced with toggle icons or loading graphics to show the system is responding to user input.
 
- Styleguide InteractiveExtras
+Styleguide Recipes.InteractiveExtras
 */
 .font .font--example {
   background-image: url(http://basehold.it/i/24);

@@ -1,0 +1,27 @@
+/*
+Stars
+ 
+Star ratings should be build throught arches in a more dynamic way but this is an easy level of adding stars. 
+ 
+Markup:
+<ul class="ul_none flex flex_inline star-rating">
+    <li class="flex_shrink"> <i class="fas fa-star"></i></li>
+    <li class="flex_shrink"> <i class="fas fa-star"></i></li>
+    <li class="flex_shrink"> <i class="fas fa-star"></i></li>
+    <li class="flex_shrink"> <i class="fas fa-star"></i></li>
+    <li class="flex_shrink"> <i class="fas fa-star"></i></li>
+</ul>
+ 
+Weight:0
+ 
+Styleguide Recipes.InteractiveExtras.Stars
+*/
+
+.star-rating{
+    color: get-themecolor(secondary, 3);;
+    &.rating-5 li:nth-child(-n+5){ color:get-themecolor(primary, -1);}
+    &.rating-4 li:nth-child(-n+4){ color:get-themecolor(primary, -1);}
+    &.rating-3 li:nth-child(-n+3){ color:get-themecolor(primary, -1);}
+    &.rating-2 li:nth-child(-n+2){ color:get-themecolor(primary, -1);}
+    &.rating-1 li:nth-child(-n+1){ color:get-themecolor(primary, -1);}
+}
