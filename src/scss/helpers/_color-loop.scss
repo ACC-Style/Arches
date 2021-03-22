@@ -11,9 +11,10 @@ Gets a color value that fits into the set color patterns for usage in new css.
  Styleguide: mixins.get-themecolor
 */
 
-@function get-themecolor($key: primary, $modifier: 0) {
+@function get-themecolor($key: primary, $modifier: 0, $mode: HEX ) {
     @if $modifier==0 {
-        @return map-get($theme-palette, $key);
+        
+        @return colorMode(map-get($theme-palette, $key), $mode);
     }
     @else {
         $mod: 50%;
@@ -25,8 +26,22 @@ Gets a color value that fits into the set color patterns for usage in new css.
         @else {
             $mod: map-get($mix, $modifier);
         }
-        @return scale-color(map-get($theme-palette, $key), $lightness: $mod);
+        $color:scale-color(map-get($theme-palette, $key), $lightness: $mod);      
+        @return  colorMode($color,$mode);
     }
+}
+@function colorMode($color,$mode){
+    $c:#000;
+    @if $mode == RGB {
+        $c: red($color),green($color),blue($color);
+    }
+    @if $mode == HSL {
+        $c: round(hue($color)), round(saturation($color)), round(lightness($color));
+    }
+    @if( $mode == HEX ){
+        $c: $color;
+    }
+    @return  $c;
 }
 
 

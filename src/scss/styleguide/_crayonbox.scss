@@ -1,0 +1,353 @@
+
+@each $colorName, $color in $theme-palette{
+
+/*
+
+Color Variations #{$colorName}
+ 
+The Modified versions of the #{$colorName} color from this theme
+ 
+Markup:
+<div
+	class="grid gap-x_2 gap-y_2 template-x_15 font_n1 p_4"
+	style="background-color: #{$color};"
+>
+	<div class="p_3 bg_#{$colorName}-n5 p-t_5">
+		<div class="p_3 bg_white-7 c_black m-t_4">
+			<div class="font-size_down font_bold" >#{$colorName}-n5</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HEX:</span
+				>
+				<span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -5)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>RGB:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -5, RGB)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HSL:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -5,HSL)}</span
+				>
+			</div>
+		</div>
+	</div>
+	<div class="p_3 bg_#{$colorName}-n4 p-t_5">
+		<div class="p_3 bg_white-7 c_black m-t_4">
+			<div class="font-size_down font_bold" >#{$colorName}-n4</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HEX:</span
+				>
+				<span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -4)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>RGB:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -4, RGB)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HSL:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -4,HSL)}</span
+				>
+			</div>
+		</div>
+	</div>
+	<div class="p_3 bg_#{$colorName}-n3 p-t_5">
+		<div class="p_3 bg_white-7 c_black m-t_4">
+			<div class="font-size_down font_bold" >#{$colorName}-n3</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HEX:</span
+				>
+				<span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -3)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>RGB:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -3, RGB)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HSL:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -3,HSL)}</span
+				>
+			</div>
+		</div>
+	</div>
+	<div class="p_3 bg_#{$colorName}-n2 p-t_5">
+		<div class="p_3 bg_white-7 c_black m-t_4">
+			<div class="font-size_down font_bold" >#{$colorName}-n2</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HEX:</span
+				>
+				<span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -2)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>RGB:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -2, RGB)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HSL:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -2,HSL)}</span
+				>
+			</div>
+		</div>
+	</div>
+	<div class="p_3 bg_#{$colorName}-n1 p-t_5">
+		<div class="p_3 bg_white-7 c_black m-t_4">
+			<div class="font-size_down font_bold" >#{$colorName}-n1</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HEX:</span
+				>
+				<span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -1)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>RGB:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -1, RGB)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HSL:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, -1,HSL)}</span
+				>
+			</div>
+		</div>
+	</div>
+    <div class="p_3 bg_#{$colorName} p-t_5">
+		<div class="p_3 bg_white-7 c_black m-t_4">
+			<div class="font-size_down font_bold" >#{$colorName}</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HEX:</span
+				>
+				<span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 0 , HEX)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>RGB:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 0 , RGB)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HSL:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName,0,HSL)}</span
+				>
+			</div>
+		</div>
+	</div>
+    <div class="p_3 bg_#{$colorName}-1 p-t_5">
+		<div class="p_3 bg_white-7 c_black m-t_4">
+			<div class="font-size_down font_bold" >#{$colorName}-1</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HEX:</span
+				>
+				<span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 1)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>RGB:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 1, RGB)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HSL:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 1,HSL)}</span
+				>
+			</div>
+		</div>
+	</div>
+    <div class="p_3 bg_#{$colorName}-2 p-t_5">
+		<div class="p_3 bg_white-7 c_black m-t_4">
+			<div class="font-size_down font_bold" >#{$colorName}-2</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HEX:</span
+				>
+				<span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 2)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>RGB:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 2, RGB)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HSL:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 2,HSL)}</span
+				>
+			</div>
+		</div>
+	</div>
+	<div class="p_3 bg_#{$colorName}-3 p-t_5">
+		<div class="p_3 bg_white-7 c_black m-t_4">
+			<div class="font-size_down font_bold" >#{$colorName}-3</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HEX:</span
+				>
+				<span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 3)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>RGB:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 3, RGB)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HSL:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 3,HSL)}</span
+				>
+			</div>
+		</div>
+	</div>
+    <div class="p_3 bg_#{$colorName}-4 p-t_5">
+		<div class="p_3 bg_white-7 c_black m-t_4">
+			<div class="font-size_down font_bold" >#{$colorName}-4</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HEX:</span
+				>
+				<span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 4)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>RGB:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 4, RGB)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HSL:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 4,HSL)}</span
+				>
+			</div>
+		</div>
+	</div>
+    <div class="p_3 bg_#{$colorName}-5 p-t_5">
+		<div class="p_3 bg_white-7 c_black m-t_4">
+			<div class="font-size_down font_bold" >#{$colorName}-5</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HEX:</span
+				>
+				<span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 5)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>RGB:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 5, RGB)}</span
+				>
+			</div>
+			<div class="flex flex_inline">
+				<span class="user-select_none opacity_6 font_bold font_ui uppercase"
+					>HSL:</span
+				><span class="user-select_all font_accent lowercase"
+					>#{get-themecolor($colorName, 5,HSL)}</span
+				>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+Weight:0
+ 
+Styleguide DesignBase.CrayonBox.#{$colorName}
+
+*/
+}
+
+/*
+Crayon Box
+ 
+This is all of the colors of the theme broken out with its modifications written in hex code.
+ 
+
+Weight:0
+ 
+Styleguide DesignBase.CrayonBox
+*/
+$unitless: (
+		0: 0,
+		n5: -5,
+		n4: -4,
+		n3: -3,
+		n2: -2,
+		n1: -1,
+		1: 1,
+		2: 2,
+		3: 3,
+		4: 4,
+		5: 5,
+	);
+/*Adobe XD Color Map*/
+@each $colorName, $color in $theme-palette{
+    @each $label, $value in $unitless{
+       /* $xd-color_#{$colorName}-#{$label}: #{get-themecolor($colorName, $value)}*/
+    }
+}
