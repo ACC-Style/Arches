@@ -3,6 +3,7 @@ $iconHeaders:(
     book-medical:"Guidelines & Policies",
     clipboard-user:"Patient Case Quizzes",
     user-chart:"Expert Consensus",
+    newspaper:"Articles and Abstracts",
 
 );
 
@@ -51,3 +52,53 @@ $iconHeaders:(
      
     Styleguide Edu.Headers.toolkit
     */
+
+
+    /*
+    Snippet Blocks
+     
+    Markup:
+<div class="flex flex_column flex_row:md gap-x_4 max-w_50">
+    <aside class="bg_acc-4 br_2 br_radius br_solid br_white-7 c_acc-n1 flex_none font_10 m-t_4:md p_4 self_center self_start:md shadow_overlap-light">
+        <span class="fa-stack m-x_2 m-y_3">
+            <i class="fa-box fa fa-stack-2x"></i>
+            <i style="top: 22%;font-size: 75%;" class="c_acc-4 fa-stack-1x fa-tools fas"></i>
+        </span>
+    </aside>
+    <main class="p_4">
+        <h1 class="c_primary-n2 font_5 font_display">Clinical Toolkit</h1>
+        <p class="lh_2 font_1">Lorem ipsum dolor sit amet consectetur adipisicing elit. At labore dignissimos alias ratione blanditiis voluptatem tempora quod repellendus, maxime distinctio consequatur dicta cupiditate saepe fuga voluptatibus ad, veritatis laudantium? Ab!</p>
+        <a href="" class="btn_acc-priamry h:undecorated m-t_0:md m-t_3 shadow_overlap-light w_100 w_auto:md">Learn More <i class="fas fa-chevron-right"></i></a>
+    </main>
+</div>
+    
+     
+    Weight:0
+     
+    Styleguide Edu.Snippet.Toolkit
+    */
+
+    @each $icon, $term in $iconHeaders {
+    /*
+    Snippet Blocks: #{$term}
+     
+    Markup:
+<div class="flex flex_column flex_row:md gap-x_4 max-w_50">
+    <aside class="bg_acc-4 br_2 br_radius br_solid br_white-7 c_acc-n1 flex_none font_10 m-t_4:md p_4 self_center self_start:md shadow_overlap-light">
+        <span class="fa-stack m-x_2 m-y_3">
+            <i class="fa fa-#{$icon} fa-stack-2x"></i>
+        </span>
+    </aside>
+    <main class="p_4">
+        <h1 class="c_primary-n2 font_5 font_display">#{$term}</h1>
+        <p class="lh_2 font_1">Lorem ipsum dolor sit amet consectetur adipisicing elit. At labore dignissimos alias ratione blanditiis voluptatem tempora quod repellendus, maxime distinctio consequatur dicta cupiditate saepe fuga voluptatibus ad, veritatis laudantium? Ab!</p>
+        <a href="" class="btn_acc-priamry h:undecorated m-t_0:md m-t_3 shadow_overlap-light w_100 w_auto:md">Learn More <i class="fas fa-chevron-right"></i></a>
+    </main>
+</div>
+    
+     
+    Weight:0
+     
+    Styleguide Edu.Snippet.#{$icon}
+    */
+    }
