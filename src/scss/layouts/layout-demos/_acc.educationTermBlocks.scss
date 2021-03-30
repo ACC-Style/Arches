@@ -1,9 +1,9 @@
 $iconHeaders:(
     microscope:"Clinical Trials",
     book-medical:"Guidelines & Policies",
-    clipboard-user:"Patient Case Quizzes",
     user-chart:"Expert Consensus",
     newspaper:"Articles and Abstracts",
+    notes-medical:"Patient Case Quizzes"
 
 );
 
@@ -54,18 +54,19 @@ $iconHeaders:(
     */
 
 
+
     /*
-    Snippet Blocks
+    Snippet Blocks: Clinical Toolkit
      
     Markup:
 <div class="flex flex_column flex_row:md gap-x_4 max-w_50">
-    <aside class="bg_acc-4 br_2 br_radius br_solid br_white-7 c_acc-n1 flex_none font_10 m-t_4:md p_4 self_center self_start:md shadow_overlap-light">
+    <aside class="br-b_2 br_none:md br_primary-3 br_solid c_acc-n1 flex_none font_10:md font_5 m-b_n3 m-t_4:md p-r_0:md p_4 self_start:md self_strech text_center">
         <span class="fa-stack m-x_2 m-y_3">
             <i class="fa-box fa fa-stack-2x"></i>
             <i style="top: 22%;font-size: 75%;" class="c_acc-4 fa-stack-1x fa-tools fas"></i>
         </span>
     </aside>
-    <main class="p_4">
+    <main class="br-l_1 br_black-2 br_none br_solid:md p-l_5:md p_4">
         <h1 class="c_primary-n2 font_5 font_display">Clinical Toolkit</h1>
         <p class="lh_2 font_1">Lorem ipsum dolor sit amet consectetur adipisicing elit. At labore dignissimos alias ratione blanditiis voluptatem tempora quod repellendus, maxime distinctio consequatur dicta cupiditate saepe fuga voluptatibus ad, veritatis laudantium? Ab!</p>
         <a href="" class="btn_acc-priamry h:undecorated m-t_0:md m-t_3 shadow_overlap-light w_100 w_auto:md">Learn More <i class="fas fa-chevron-right"></i></a>
@@ -78,30 +79,34 @@ $iconHeaders:(
     Styleguide Edu.Snippet.Toolkit
     */
 
-    @each $icon, $term in $iconHeaders {
+
     /*
-    Snippet Blocks: #{$term}
+    Snippet Blocks with List
      
     Markup:
-<div class="flex flex_column flex_row:md gap-x_4 max-w_50">
-    <aside class="bg_acc-4 br_2 br_radius br_solid br_white-7 c_acc-n1 flex_none font_10 m-t_4:md p_4 self_center self_start:md shadow_overlap-light">
+<div class="flex flex_column flex_row:md gap-x_4 max-w_70">
+    <aside class="br-b_2 br_none:md br_primary-3 br_solid c_acc-n1 flex_none font_10:md font_5 m-b_n3 m-t_4:md p-r_0:md p_4 self_start:md self_strech text_center">
         <span class="fa-stack m-x_2 m-y_3">
-            <i class="fa fa-#{$icon} fa-stack-2x"></i>
+            <i class="fa-notes-medical far fa-stack-2x"></i>
         </span>
     </aside>
-    <main class="p_4">
-        <h1 class="c_primary-n2 font_5 font_display">#{$term}</h1>
-        <p class="lh_2 font_1">Lorem ipsum dolor sit amet consectetur adipisicing elit. At labore dignissimos alias ratione blanditiis voluptatem tempora quod repellendus, maxime distinctio consequatur dicta cupiditate saepe fuga voluptatibus ad, veritatis laudantium? Ab!</p>
-        <a href="" class="btn_acc-priamry h:undecorated m-t_0:md m-t_3 shadow_overlap-light w_100 w_auto:md">Learn More <i class="fas fa-chevron-right"></i></a>
+    <main class="br-l_1 br_black-2 br_none br_solid:md p-l_5:md p_4">
+        <h1 class="c_primary-n2 font_5 font_display">Patient Case Quizzes</h1>
+        <p class="lh_2 font_1">Test your knowledge and sharpen your diagnostic skills to bring appropriate treatment to your patients sooner.</p>
+        <div class="br_1 br_solid br_primary br-r_0 br-l_0 font_n1">
+            {{> "Edu.List.Item" modifier_class=""}}
+            {{> "Edu.List.Item" modifier_class=""}}
+            {{> "Edu.List.Item" modifier_class=""}}
+        </div>  
     </main>
 </div>
     
      
     Weight:0
      
-    Styleguide Edu.Snippet.#{$icon}
+    Styleguide Edu.Snippet.Listing
     */
-    }
+ 
 
 
     @each $icon, $term in $iconHeaders {
@@ -131,14 +136,29 @@ $iconHeaders:(
 
 
 
-           /*
-        Coming Soon Button
-         
-        Markup:
-        <a href="" class="bg_black-3 br_none br_radius c_black-7 cursor_not-allowed disabled font_1 font_2:md font_medium h:bg_black-3 h:c_black-7 h:undecorated inline-block m-t_0:md m-t_3 opacity_5 p-x_4 p-y_3 shadow_emboss-light text_center w_100 w_auto:md">Coming Soon</a>
+/*
+Coming Soon Button
+    
+Markup:
+<a href="" class="bg_black-3 br_none br_radius c_black-7 cursor_not-allowed disabled font_1 font_2:md font_medium h:bg_black-3 h:c_black-7 h:undecorated inline-block m-t_0:md m-t_3 opacity_5 p-x_4 p-y_3 shadow_emboss-light text_center w_100 w_auto:md">Coming Soon</a>
+
+    
+Weight:0
+    
+Styleguide Edu.Button.ComingSoon
+*/
         
-         
-        Weight:0
-         
-        Styleguide Edu.Button.ComingSoon
-        */
+
+/*
+Listing Item
+    
+Markup:
+<div class="br-b_1 br_black-8 lh_2 br_solid  p_3 h:bg_primary-5 c_black"><a class="link underline h:undecorated" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia praesentium reiciendis et molestiae pariatur vero veritatis nisi autem labore, quasi hic aspernatur! Minus minima temporibus saepe eveniet officia. Eaque, error!</a></div>
+
+    
+Weight:0
+    
+Styleguide Edu.List.Item
+*/
+
+
