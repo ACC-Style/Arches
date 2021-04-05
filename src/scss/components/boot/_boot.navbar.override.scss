@@ -1,7 +1,7 @@
 $navbar-font_primary: $font_accent !default;
 $navbar-font_shade: $font_ui !default;
-$navbar-color_primary: map-get($theme-palette, acc);
-$navbar-color_shade: map-get($theme-palette, accent);
+$navbar-bgcolor_primary: map-get($theme-palette, acc);
+$navbar-bgcolor_shade: map-get($theme-palette, accent);
 
 .navbar {
 	font-family: $navbar-font_primary;
@@ -10,40 +10,43 @@ $navbar-color_shade: map-get($theme-palette, accent);
 	font-family: $navbar-font_shade;
 }
 .nav-link {
+	
 	padding-left: $padding_2;
 	padding-right: $padding_2;
 }
+.navbar-dark .navbar-nav .nav-link{color: white;}
+
 .navbar-primary .dropdown-toggle:after {
 	display: none;
 }
 .navbar-primary.navbar-expand-md .nav-item {
 	@media #{$medium-up} {
-		border-top: $border-width_3 $navbar-color_primary solid;
-		border-bottom: $border-width_3 $navbar-color_primary solid;
+		border-top: $border-width_3 $navbar-bgcolor_primary solid;
+		border-bottom: $border-width_3 $navbar-bgcolor_primary solid;
 		&.active,
 		&.show,
 		&:hover {
-			border-top-color: $navbar-color_shade;
+			border-top-color: $navbar-bgcolor_shade;
 			border-bottom-color: #fff;
 			background-color: #fff;
 			.nav-link {
-				color: $navbar-color_primary;
+				color: $navbar-bgcolor_primary;
 			}
 		}
 	}
 }
 .navbar-primary.navbar-expand-lg .nav-item {
 	@media #{$large-up} {
-		border-top: $border-width_3 $navbar-color_primary solid;
-		border-bottom: $border-width_3 $navbar-color_primary solid;
+		border-top: $border-width_3 $navbar-bgcolor_primary solid;
+		border-bottom: $border-width_3 $navbar-bgcolor_primary solid;
 		&.active,
 		&.show,
 		&:hover {
-			border-top-color: $navbar-color_shade;
+			border-top-color: $navbar-bgcolor_shade;
 			border-bottom-color: #fff;
 			background-color: #fff;
 			.nav-link {
-				color: $navbar-color_primary;
+				color: $navbar-bgcolor_primary;
 			}
 		}
 	}
@@ -90,7 +93,7 @@ The ACC.org Nav has a shade nav that houses the login and profile nav with a sha
 
 Markup:
 <div class="flex  relative">
-	<nav class="flex_auto navbar navbar-primary navbar-expand-lg navbar-dark bg_acc">
+	<nav class="flex_auto navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc">
 		<button
 			class="br_white-2 is-active_toggle-function m-l_n2 m-y_3 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed"
 			type="button"
@@ -216,7 +219,7 @@ Responsive Top Nav with Single Layer Nav
 The Header Nav with no dropdown navs but with elements that show up only in the mobile viewport
 
 Markup:
-<nav class="navbar navbar-primary navbar-expand-lg navbar-dark bg_acc font_1">
+<nav class="navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_1">
 	<button
 		class="br_white-2 is-active_toggle-function m-l_n2 m-y_3 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed"
 		type="button"
@@ -288,7 +291,7 @@ Nav Dropdown Simple
 The Header Nav of ACC.org
 
 Markup:
-<nav class="navbar navbar-primary navbar-expand-lg navbar-dark bg_acc font_1">
+<nav class="navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_1">
 	<button
 		class="br_white-2 is-active_toggle-function m-l_n2 m-y_3 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed"
 		type="button"
@@ -515,7 +518,7 @@ Nav Dropdown with Sub Links
 The Header Nav of ACC.org
 
 Markup:
-<nav class="navbar navbar-primary navbar-expand-lg navbar-dark bg_acc font_1">
+<nav class="navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_1">
 	<button
 		class="br_white-2 is-active_toggle-function m-l_n2 m-y_3 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed"
 		type="button"
@@ -775,7 +778,7 @@ Nav Dropdown with Alternate Content in Links
 It is easy to add images in replace of text links in the navs.   
 
 Markup:
-<nav class="navbar navbar-primary navbar-expand-lg navbar-dark bg_acc font_1">
+<nav class="navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_1">
 	<button
 		class="br_white-2 is-active_toggle-function m-l_n2 m-y_3 navbar-toggler p-l_2 p-r_3 p-y_2 collapsed"
 		type="button"
