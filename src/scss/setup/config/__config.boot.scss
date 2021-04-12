@@ -386,7 +386,7 @@ $border-color:                get-themecolor(secondary,5) !default;
 // scss-docs-start border-radius-variables
 $border-radius:               map-deep-get($value-to-unit, 'radius', 'radius') !default;
 $border-radius-sm:            map-deep-get($value-to-unit, 'radius', 'radius')/2 !default;
-$border-radius-lg:            map-deep-get($value-to-unit, 'radius', 'radius')*1.5 !default;
+$border-radius-lg:            map-deep-get($value-to-unit, 'radius', 'radius')*1 !default;
 $border-radius-pill:          map-deep-get($value-to-unit, 'radius', 'round') !default;
 // scss-docs-end border-radius-variables
 
@@ -427,29 +427,12 @@ $aspect-ratios: (
 
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: #{map-deep-get($value-to-unit, font-family, copy)};
-$font-family-monospace: #{map-deep-get($value-to-unit, font-family, mono)};
+$font-family-sans-serif: #{ get-css-size(font-family, copy)};
+$font-family-monospace: #{ get-css-size(font-family, mono) };
 
 // stylelint-enable value-keyword-case
-$font-family-base:            var(--#{$variable-prefix}font-sans-serif) !default;
-$font-family-code:            var(--#{$variable-prefix}font-monospace) !default;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$font-family-base:            var(--#{$variable-prefix}font-sans-serif);
+$font-family-code:            var(--#{$variable-prefix}font-monospace);
 
 
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
@@ -812,7 +795,7 @@ $input-group-addon-padding-y:           $input-padding-y !default;
 $input-group-addon-padding-x:           $input-padding-x !default;
 $input-group-addon-font-weight:         $input-font-weight !default;
 $input-group-addon-color:               $input-color !default;
-$input-group-addon-bg:                  $gray-200 !default;
+$input-group-addon-bg:                  get-themecolor(secondary,4);
 $input-group-addon-border-color:        $input-border-color !default;
 // scss-docs-end input-group-variables
 
@@ -831,7 +814,7 @@ $form-select-disabled-bg:           $input-disabled-color;
 $form-select-disabled-border-color: $input-disabled-border-color;
 $form-select-bg-position:           right $form-select-padding-x center !default;
 $form-select-bg-size:               16px 12px !default; // In pixels because image dimensions
-$form-select-indicator-color:       $gray-800 !default;
+$form-select-indicator-color:       $gray-300 !default;
 $form-select-indicator:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !default;
 
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-select-indicator-padding !default;
@@ -878,9 +861,9 @@ $form-range-thumb-transition:              background-color .15s ease-in-out, bo
 // scss-docs-end form-range-variables
 
 // scss-docs-start form-file-variables
-$form-file-button-color:          $input-color !default;
-$form-file-button-bg:             $input-group-addon-bg !default;
-$form-file-button-hover-bg:       shade-color($form-file-button-bg, 5%) !default;
+$form-file-button-color:          $white;
+$form-file-button-bg:             get-themecolor(primary,0);
+$form-file-button-hover-bg:       get-themecolor(primary,-2);
 // scss-docs-end form-file-variables
 
 // scss-docs-start form-floating-variables
@@ -1324,7 +1307,7 @@ $progress-bar-transition:           width .6s ease !default;
 // List group
 
 // scss-docs-start list-group-variables
-$list-group-color:                  $gray-900 !default;
+$list-group-color:                  get-themecolor(primary,-4);
 $list-group-bg:                     $white !default;
 $list-group-border-color:           rgba($black, .125) !default;
 $list-group-border-width:           $border-width !default;
@@ -1333,7 +1316,7 @@ $list-group-border-radius:          $border-radius !default;
 $list-group-item-padding-y:         $spacer / 2 !default;
 $list-group-item-padding-x:         $spacer !default;
 $list-group-item-bg-scale:          -80% !default;
-$list-group-item-color-scale:       40% !default;
+$list-group-item-color-scale:       80% !default;
 
 $list-group-hover-bg:               $gray-100 !default;
 $list-group-active-color:           $component-active-color !default;
