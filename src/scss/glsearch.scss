@@ -135,7 +135,7 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 		padding: $padding_3 $padding_0;
 		li {
 			margin-bottom: $margin_3;
-            line-height: 1.45;
+			line-height: 1.45;
 		}
 		.list-item-label {
 			font-family: $font_display;
@@ -155,7 +155,8 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 		font-family: $font_display;
 		color: get-themecolor(primary, -1);
 	}
-	.inline-reference, .table a {
+	.inline-reference,
+	.table a {
 		color: get-themecolor(primary);
 		&::hover {
 			color: get-themecolor(primary, -2);
@@ -167,15 +168,15 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 		margin: $margin_3 0 $margin_4;
 	}
 	table {
-       thead tr{ 
-           border-bottom: 2px solid #13121280;//br_black-5
-        }
-	    border-bottom: 1px solid #13121280;//br_black-5
-        margin: $margin_2 0 $margin_3;
+		thead tr {
+			border-bottom: 2px solid #13121280; //br_black-5
+		}
+		border-bottom: 1px solid #13121280; //br_black-5
+		margin: $margin_2 0 $margin_3;
 		font-family: $font_ui;
 		th {
 			word-break: break-all;
-            vertical-align: bottom;
+			vertical-align: bottom;
 		}
 		th > b,
 		td b {
@@ -199,10 +200,32 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 			font-family: $font_accent;
 		}
 	}
+	.table table {
+		display: none;
+		@media #{$medium-up} {
+			display: table;
+		}
+	}
+	@media #{$medium-down} {
+		.table::before {
+			content: "table is removed from mobile view";
+			display: block;
+			color: white;
+			border-radius: $border_radius;
+			padding: $padding_2 $padding_3;
+			background-color: get-themecolor(primary, -1);
+			margin: $margin_3 auto $margin_4;
+            text-align: center;
+		}
+	}
 
 	.inline-table-caption {
 		font-size: $font_n1;
 		color: get-themecolor(secondary, -3);
+	}
+	.inline-image.figure {
+		display: flex;
+		justify-content: center;
 	}
 
 	figure {
@@ -210,6 +233,7 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 		padding: $padding_3;
 		border: 1px solid get-themecolor(primary, 3);
 		color: get-themecolor(primary, -3);
+		width: 100%;
 		max-width: 50em;
 		border-radius: $border_radius;
 	}

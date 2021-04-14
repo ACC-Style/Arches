@@ -197,10 +197,12 @@ html {
   font-size: 1.265625rem;
   font-weight: 900;
 }
-.swg-result .inline-reference, .swg-result .table a {
+.swg-result .inline-reference,
+.swg-result .table a {
   color: #198dae;
 }
-.swg-result .inline-reference::hover, .swg-result .table a::hover {
+.swg-result .inline-reference::hover,
+.swg-result .table a::hover {
   color: #10596e;
   text-decoration: none;
 }
@@ -244,12 +246,37 @@ html {
   font-weight: 500;
   text-align: center;
 }
+.swg-result .table table {
+  display: none;
+}
+@media only screen and (min-width : 768px) {
+  .swg-result .table table {
+    display: table;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .swg-result .table::before {
+    display: block;
+    margin: 0.5rem auto 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.3333333333rem;
+    background-color: #157894;
+    color: white;
+    text-align: center;
+    content: "table is removed from mobile view";
+  }
+}
 .swg-result .inline-table-caption {
   color: #292a2e;
   font-size: 14.222px;
   font-size: 0.8888888889rem;
 }
+.swg-result .inline-image.figure {
+  display: flex;
+  justify-content: center;
+}
 .swg-result figure {
+  width: 100%;
   max-width: 50em;
   margin: 8px 0;
   margin: 0.5rem 0;
