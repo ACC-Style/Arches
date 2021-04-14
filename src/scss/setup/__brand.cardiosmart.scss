@@ -37,33 +37,34 @@ $active-class-name: 'active';
 $style-definition: map-deep-set($style-definition, 'is-active' 'short-name', '#{$active-class-name}>.a\\3A ');
 $style-definition: map-deep-set($style-definition, 'is-active-self' 'short-name', '#{$active-class-name}.a\\3A ');
 $fonts: (
-	accent: (
-		name: 'Roboto Slab',
-		short-name:"RS",
-		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
-	),
-	display: (
-		name: 'Maven Pro',
-		short-name:"MP",
-		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif',
-	),
-	copy: (
-		name: 'Muli',
-		short-name:"Mu",
-		stack: '"Muli","Open Sans","system",sans-serif',
-	),
-	ui: (
-		name: 'Open Sans',
-		short-name:"OS",
-		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-	),
+    accent: (
+        name: 'Roboto Slab',
+        short-name:"RS",
+        stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
+    ),
+    display: (
+        name: 'Maven Pro',
+        short-name:"MP",
+        stack: '"Maven Pro","Muli","Open Sans","system",sans-serif',
+    ),
+    copy: (
+        name: 'Open Sans',
+        short-name:"OS",
+        stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+    ),
+    ui: (
+        name: 'Open Sans',
+        short-name:"OS",
+        stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+    ),
 );
-
 // Reset Values of Utlity-css.vars.scss
-$value-to-unit: map-deep-set($value-to-unit, font-family accent, map-deep-get($fonts, accent stack));
-$value-to-unit: map-deep-set($value-to-unit, font-family display, map-deep-get($fonts, display stack));
-$value-to-unit: map-deep-set($value-to-unit, font-family copy, map-deep-get($fonts, copy stack));
-$value-to-unit: map-deep-set($value-to-unit, font-family ui, map-deep-get($fonts, ui stack));
+$value-to-unit: map-deep-set($value-to-unit, font-family accent, unquote(map-deep-get($fonts, accent, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family display, unquote(map-deep-get($fonts, display, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family copy, unquote(map-deep-get($fonts, copy, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family ui, unquote(map-deep-get($fonts, ui, stack)));
+
+
 
 $font_display: get-css-size(font-family, display);
 $font_accent: get-css-size(font-family, accent);
@@ -71,7 +72,7 @@ $font_ui: get-css-size(font-family, ui);
 $font_copy: get-css-size(font-family, copy);
 $font_mono: get-css-size(font-family, mono);
 
-$global-radus-on: false;
+$global-radius-on: false;
 $global-border-radius: 6px;
 $value-to-unit: map-deep-set($value-to-unit, 'radius' 'radius', $global-border-radius);
 $global-border-round: 25px;

@@ -197,6 +197,28 @@ var constructUCStyleSheet = function(brand) {
         .pipe(rename(brand + "_uc.scss"))
         .pipe(headerFromFile("/setup/__utilityclasses.scss"))
         .pipe(header("/** Base UC File **/"));
+
+};
+var constructStandaloneStyleSheet = function(name) {
+    return gulp.src(PATHS.SCSS + "/setup/__globalshame_uc.scss")
+        .pipe(clone())
+        .pipe(rename(name + ".scss"))
+        .pipe(header("/** Standalone CSS FILE **/"))
+        .pipe(headerFromFile("/styleguide/_"+ name +".scss"))
+        .pipe(headerFromFile("/setup/__standAlone."+ name +".scss"))
+        .pipe((headerFromFile("/setup/config/_var.output.scss")))
+        .pipe(headerFromFile("/setup/__setup.none.scss"))
+        .pipe(headerFromFile("/setup/__brand.none.scss"))
+        .pipe(headerFromFile("/setup/__brand.base.scss"))
+        .pipe(headerFromFile("/setup/__preheader.scss"))
+        .pipe(
+            header("/** Built With Base Branding <%= pkg.version %> **/", {
+                pkg: pkg,
+            })
+        )
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(header("/** Function Test **/\n"))
+        .pipe(gulp.dest(PATHS.SCSS));
 };
 var constructColorStyleSheet = function(brand) {
     return gulp
@@ -216,6 +238,10 @@ var concatCSS = function(brand, framework) {
 var constructSassFiles = function(brand, framework) {
     var uc = constructUCStyleSheet(brand);
     uc = buildbrand(uc, brand, "");
+    if(framework == ""){
+        return uc.pipe(header("/** Function Test **/\n"))
+        .pipe(gulp.dest(PATHS.SCSS));
+    }
     var base = constructFrameworkStyleSheet(brand, framework);
     base = buildbrand(base, brand, framework);
     return merge(base, uc)
@@ -224,7 +250,8 @@ var constructSassFiles = function(brand, framework) {
 };
 var constructMarkdown = function(brand, framework) {
     var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
-    base = markdownbuild(base, brand + "_" + framework);
+    base = framework != ''? markdownbuild(base, brand + "_" + framework): markdownbuild(base, brand);
+
     return merge(base)
         .pipe(
             header(fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md", "utf8"))
@@ -509,6 +536,27 @@ gulp.task(
         }
     )
 );
+
+gulp.task(
+    "build-glsearch",
+    gulp.series(
+        function SCSS() {
+            return constructStandaloneStyleSheet("glsearch");
+        },
+        function CSS() {
+            return runSass("glsearch");
+        },
+        function Markdown() {
+            return constructMarkdown("glsearch", "");
+        },
+        "copy-to-dist",
+        "copy-to-styleguide",
+        function() {
+            return run("npm run glsearch").exec();
+        }
+    )
+);
+
 
 gulp.task(
     "build-layout_demo",
