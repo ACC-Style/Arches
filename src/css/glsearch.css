@@ -199,11 +199,11 @@ html {
 }
 .swg-result .inline-reference,
 .swg-result .table a {
-  color: #198dae;
+  color: #24ccae;
 }
 .swg-result .inline-reference::hover,
 .swg-result .table a::hover {
-  color: #10596e;
+  color: #17816e;
   text-decoration: none;
 }
 .swg-result .table,
@@ -214,12 +214,12 @@ html {
 .swg-result table {
   margin: 4px 0 8px;
   margin: 0.25rem 0 0.5rem;
-  border-bottom: 1px solid #13121280;
+  border-bottom: 1px solid rgba(10, 56, 70, 0.5);
   border-collapse: collapse;
   font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 .swg-result table thead tr {
-  border-bottom: 2px solid #13121280;
+  border-bottom: 2px solid rgba(10, 56, 70, 0.8);
 }
 .swg-result table th {
   vertical-align: bottom;
@@ -248,18 +248,20 @@ html {
 .swg-result .table {
   display: block;
 }
-@media only screen and (max-width : 1024px) {
-  .swg-result .table::before {
-    display: block;
-    margin: 0.5rem auto 1rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.3333333333rem;
-    color: #a83582;
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 900;
-    text-align: center;
-    content: " Tables May Scroll Left to Right  ";
-  }
+.swg-result .table::before {
+  display: block;
+  margin: 8px auto 16px;
+  margin: 0.5rem auto 1rem;
+  padding: 4px 8px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.3333333333rem;
+  color: #1fad94;
+  font-family: "Font Awesome 5 Pro";
+  font-size: 14.222px;
+  font-size: 0.8888888889rem;
+  font-weight: 900;
+  text-align: center;
+  content: " Tables May Scroll Left to Right  ";
 }
 .swg-result .table table tr {
   position: relative;
@@ -271,14 +273,14 @@ html {
   left: 0px;
   left: 0rem;
   max-width: 30vw;
-  border-right: 1px solid rgba(10, 56, 70, 0.1);
+  border-right: 1px solid rgba(31, 174, 215, 0.1);
   background: white;
-  box-shadow: 4px 0 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 4px 0 5px 0 rgba(31, 174, 215, 0.1);
 }
 .swg-result .table > div {
   width: calc(100% + 0rem);
   overflow-x: auto;
-  box-shadow: inset 4px 0px 2px 3px rgba(0, 0, 0, 0.02), inset -4px 0px 2px 3px rgba(0, 0, 0, 0.03);
+  box-shadow: inset -4px 0 5px 0px rgba(31, 174, 215, 0.1);
 }
 .swg-result .table > div:where(.table-footnotes,.inline-table-caption,.inline-table-label) {
   overflow: unset;
@@ -312,8 +314,15 @@ html {
 }
 .swg-result .table-footnotes {
   color: #414348;
-  font-size: 11.237px;
-  font-size: 0.7023319616rem;
+  font-size: 12.641px;
+  font-size: 0.7901234568rem;
+}
+.swg-result .superscript-reference, .swg-result .inline-reference {
+  padding-right: 4px;
+  padding-right: 0.25rem;
+  color: #1fad94;
+  font-weight: 700;
+  text-decoration: none;
 }
 .swg-result .inline-image.figure {
   display: flex;
