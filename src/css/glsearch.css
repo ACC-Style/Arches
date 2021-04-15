@@ -1,0 +1,320 @@
+@charset "UTF-8";
+/** Function Test **/
+/**
+ * arches - Global style system focused on utility classes
+ * @version v1.2.0
+ * @link https://github.com/ACC-Style/Arches/
+ */
+/** Built With Base Branding 1.2.0 **/
+/**  Pre Header - modular scale default break points utility    *********************************/
+/**  Version: 1.1.0    *********************************/
+/*  
+get-themecolor()
+
+Gets a color value that fits into the set color patterns for usage in new css.
+
+ $key - The color name to be modified [primary,secondary,etc...]
+ $modifier   - The color shift you desire default is 0 but you can pass in [-5,-4,...0,1...4,5]. 
+
+ Styleguide: mixins.get-themecolor
+*/
+/*  
+util-style()
+
+Gets utilty style and prints it.
+
+ $key - The name of the css class
+ $modifier   - the size of the style needed. 
+
+ Styleguide: mixins.utlity-style
+*/
+/**  Default Brands    *********************************/
+/**  Colors  **/
+/**  Fonts  **/
+/* Define the "system" font family */
+@font-face {
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-line-break: after-white-space;
+  -webkit-locale: "en";
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  line-break: white-space;
+}
+
+/**  Textures  **/
+/**  Logos  **/
+/**  Default Setup  Not sure what this is doing    *********************************/
+/** changing default names to be used with frameworks. **/
+.swg-result {
+  font-family: Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;
+  /*
+
+  Table
+
+  Basic Tables with this variation of Arches. Please note that the html can have a different look depending on the brand or the framework the variation is built on.  
+
+  <table><caption>Tables can have captions now.</caption><tbody><tr><th>Person</th><th>Number</th><th>Third Column</th></tr><tr><td>Someone Lastname</td><td>900</td><td>Nullam quis risus eget urna mollis ornare vel eu leo.</td></tr><tr><td><a href="#">Person Name</a></td><td>1200</td><td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td></tr><tr><td>Another Person</td><td>1500</td><td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td></tr><tr><td>Last One</td><td>2800</td><td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td></tr></tbody></table>
+
+
+  Styleguide HTML.BasicTable
+
+  */
+}
+.swg-result table {
+  font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.swg-result table caption {
+  padding: 8px;
+  padding: 0.5rem;
+}
+.swg-result th,
+.swg-result td {
+  padding: 4px 8px;
+  padding: 0.25rem 0.5rem;
+  text-align: start;
+}
+.swg-result thead {
+  padding: 4px 8px 0;
+  padding: 0.25rem 0.5rem 0;
+  font-weight: 700;
+}
+.swg-result tbody {
+  padding: 0 8px;
+  padding: 0 0.5rem;
+}
+.swg-result tfoot,
+.swg-result caption {
+  padding: 0 8px 4px;
+  padding: 0 0.5rem 0.25rem;
+  font-size: 14.222px;
+  font-size: 0.8888888889rem;
+}
+.swg-result .table td,
+.swg-result .table th {
+  text-align: left;
+}
+.swg-result .table tbody tr:nth-of-type(odd) {
+  background-color: #13121202;
+}
+.swg-result .table tr + tr {
+  border-top: 1px solid #13121240;
+}
+.swg-result .table.unshaded tbody tr:nth-of-type(odd) {
+  background-color: unset;
+}
+.swg-result body {
+  font-family: Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.swg-result h1,
+.swg-result h2,
+.swg-result h3,
+.swg-result h4,
+.swg-result h5,
+.swg-result h6 {
+  font-family: Maven Pro, Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+.swg-result h6 {
+  font-weight: 700;
+}
+.swg-result p {
+  line-height: 1.35;
+}
+.swg-result ul,
+.swg-result ol {
+  line-height: 1.6;
+}
+.swg-result kbd,
+.swg-result code,
+.swg-result samp,
+.swg-result var {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+.swg-result h1,
+.swg-result h2,
+.swg-result h3,
+.swg-result h4 {
+  color: #061f26;
+}
+.swg-result h1 {
+  font-size: 25.628px;
+  font-size: 1.6018066406rem;
+}
+.swg-result h2 {
+  font-size: 22.781px;
+  font-size: 1.423828125rem;
+}
+.swg-result h3 {
+  font-size: 20.25px;
+  font-size: 1.265625rem;
+}
+.swg-result h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.swg-result p {
+  margin-top: 8px;
+  margin-top: 0.5rem;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.swg-result ul {
+  padding: 8px 0;
+  padding: 0.5rem 0;
+  list-style: none;
+}
+.swg-result ul li {
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+  line-height: 1.45;
+}
+.swg-result ul .list-item-label {
+  display: inline;
+  padding-right: 8px;
+  padding-right: 0.5rem;
+  font-family: Maven Pro, Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+.swg-result ul .list-item-label ~ p {
+  display: inline;
+}
+.swg-result .inline-table-label,
+.swg-result .inline-image-label {
+  margin: 0 4px;
+  margin: 0 0.25rem;
+  color: #157894;
+  font-family: Maven Pro, Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;
+  font-size: 20.25px;
+  font-size: 1.265625rem;
+  font-weight: 900;
+}
+.swg-result .inline-reference,
+.swg-result .table a {
+  color: #198dae;
+}
+.swg-result .inline-reference::hover,
+.swg-result .table a::hover {
+  color: #10596e;
+  text-decoration: none;
+}
+.swg-result .table,
+.swg-result .figure {
+  margin: 8px 0 16px;
+  margin: 0.5rem 0 1rem;
+}
+.swg-result table {
+  margin: 4px 0 8px;
+  margin: 0.25rem 0 0.5rem;
+  border-bottom: 1px solid #13121280;
+  border-collapse: collapse;
+  font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+.swg-result table thead tr {
+  border-bottom: 2px solid #13121280;
+}
+.swg-result table th {
+  vertical-align: bottom;
+  word-break: break-all;
+}
+.swg-result table th > b,
+.swg-result table td b {
+  font-weight: 700;
+}
+.swg-result table td {
+  max-width: 50em;
+  padding: 4px 8px;
+  padding: 0.25rem 0.5rem;
+  vertical-align: top;
+}
+.swg-result table ul {
+  margin: 0;
+  padding: 4px 0;
+  padding: 0.25rem 0;
+}
+.swg-result table .table-align-center {
+  background-color: #13121206;
+  font-family: Roboto Slab, Times New Roman, Lucida Bright, Georgia, serif;
+  font-weight: 500;
+  text-align: center;
+}
+.swg-result .table table {
+  display: none;
+}
+@media only screen and (min-width : 768px) {
+  .swg-result .table table {
+    display: table;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .swg-result .table::before {
+    display: block;
+    margin: 0.5rem auto 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.3333333333rem;
+    background-color: #157894;
+    color: white;
+    text-align: center;
+    content: "table is removed from mobile view";
+  }
+}
+.swg-result .inline-table-caption {
+  color: #292a2e;
+  font-size: 14.222px;
+  font-size: 0.8888888889rem;
+}
+.swg-result .inline-image.figure {
+  display: flex;
+  justify-content: center;
+}
+.swg-result figure {
+  width: 100%;
+  max-width: 50em;
+  margin: 8px 0;
+  margin: 0.5rem 0;
+  padding: 8px;
+  padding: 0.5rem;
+  border: 1px solid #92dbef;
+  border-radius: 0.3333333333rem;
+  color: #0a3846;
+}
+
+/*
+Content Sample 1
+
+Description: the returns of GL Search are raw html and can not have classes applied to them so this is a testing ground to write styles that allow for the content be styled as it comes in.
+
+
+Markup:
+<div  class="swg-result">
+<section id="hl0005480"><a id="sec10"></a><section id="hl0007506"><a id="sec10.9"></a><section id="hl0007580"><a id="sec10.9.1"></a><section id="hl0007917"><a id="sec10.9.1.3"></a><a id="sectitle0450"></a><h3 id="hl0007919"><span class="section-label">7.9.1.3</span>&nbsp;Brugada Syndrome</h3><div id="undtbl35" class="table"><div class="inline-table-caption">Recommendations for Brugada Syndrome</div><div class="inline-table-caption">References that support the recommendations are summarized in <a id="hl0007926" href="http://jaccjacc.acc.org/Clinical_Document/2017_VASCD_Data_Supplement.pdf" target="_blank">Online Data Supplement 42</a> and Systematic Review Report. </div><div><table id="hl0007927"><thead><tr><th id="hl0007933" scope="col" class="table-align-">COR</th><th id="hl0007934" scope="col" class="table-align-">LOE</th><th id="hl0007935" scope="col" class="table-align-">Recommendations</th></tr></thead><tbody><tr><td id="hl0007938" class="table-align-"><b>I</b></td><td id="hl0007940" class="table-align-"><b>B-NR</b></td><td id="hl0007942" class="table-align-"><ul id="hl0007943"><li id="hl0007944"><span class="list-item-label"></span><p id="hl0007947"><b>In asymptomatic patients with only inducible type 1 Brugada electrocardiographic pattern, observation without therapy is recommended.</b></p></li></ul></td></tr><tr><td id="hl0007950" class="table-align-"><b>I</b></td><td id="hl0007952" class="table-align-"><b>B-NR</b></td><td id="hl0007954" class="table-align-"><ul id="hl0007955"><li id="hl0007956"><span class="list-item-label"></span><p id="hl0007959"><b>In patients with Brugada syndrome with spontaneous type 1 Brugada electrocardiographic pattern and cardiac arrest, sustained VA or a recent history of syncope presumed due to VA, an ICD is recommended if meaningful survival of greater than 1 year is expected</b><a class="inline-reference" href="#bib856"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib858"><b>[2]</b></a><b>.</b></p></li></ul></td></tr><tr><td id="hl0007965" class="table-align-"><b>I</b></td><td id="hl0007967" class="table-align-"><b>B-NR</b></td><td id="hl0007969" class="table-align-"><ul id="hl0007970"><li id="hl0007971"><span class="list-item-label"></span><p id="hl0007974"><b>In patients with Brugada syndrome experiencing recurrent ICD shocks for polymorphic VT, intensification of therapy with quinidine or catheter ablation is recommended</b><a class="inline-reference" href="#bib859"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib860"><b>[2]</b></a>,&nbsp;<a class="inline-reference" href="#bib861"><b>[3]</b></a>,&nbsp;<a class="inline-reference" href="#bib862"><b>[4]</b></a>,&nbsp;<a class="inline-reference" href="#bib863"><b>[5]</b></a><b>.</b></p></li></ul></td></tr><tr><td id="hl0007980" class="table-align-"><b>I</b></td><td id="hl0007982" class="table-align-"><b>B-NR</b></td><td id="hl0007984" class="table-align-"><ul id="hl0007985"><li id="hl0007986"><span class="list-item-label"></span><p id="hl0007989"><b>In patients with spontaneous type 1 Brugada electrocardiographic pattern and symptomatic VA who either are not candidates for or decline an ICD, quinidine or catheter ablation is recommended</b><a class="inline-reference" href="#bib859"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib861"><b>[2]</b></a>,&nbsp;<a class="inline-reference" href="#bib862"><b>[3]</b></a>,&nbsp;<a class="inline-reference" href="#bib863"><b>[4]</b></a><b>.</b></p></li></ul></td></tr><tr><td id="hl0007995" class="table-align-"><b>IIa</b></td><td id="hl0007997" class="table-align-"><b>B-NR</b></td><td id="hl0007999" class="table-align-"><ul id="hl0008000"><li id="hl0008001"><span class="list-item-label"></span><p id="hl0008004"><b>In patients with suspected Brugada syndrome in the absence of a spontaneous type 1 Brugada electrocardiographic pattern, a pharmacological challenge using a sodium channel blocker can be useful for diagnosis</b><a class="inline-reference" href="#bib864"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib865"><b>[2]</b></a>,&nbsp;<a class="inline-reference" href="#bib866"><b>[3]</b></a><b>.</b></p></li></ul></td></tr><tr><td id="hl0008010" class="table-align-"><b>IIb</b></td><td id="hl0008012" class="table-align-"><b>B-NR</b><sup>SR</sup></td><td id="hl0008015" class="table-align-"><ul id="hl0008016"><li id="hl0008017"><span class="list-item-label"></span><p id="hl0008020"><b>In patients with asymptomatic Brugada syndrome and a spontaneous type 1 Brugada electrocardiographic pattern, an electrophysiological study with programmed ventricular stimulation using single and double extrastimuli may be considered for further risk stratification</b><a class="inline-reference" href="#bib853"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib858"><b>[2]</b></a>,&nbsp;<a class="inline-reference" href="#bib865"><b>[3]</b></a>,&nbsp;<a class="inline-reference" href="#bib867"><b>[4]</b></a>,&nbsp;<a class="inline-reference" href="#bib868"><b>[5]</b></a>,&nbsp;<a class="inline-reference" href="#bib869"><b>[6]</b></a><b>.</b></p></li></ul></td></tr><tr><td id="hl0008026" class="table-align-"><b>IIb</b></td><td id="hl0008028" class="table-align-"><b>C-EO</b></td><td id="hl0008030" class="table-align-"><ul id="hl0008031"><li id="hl0008032"><span class="list-item-label"></span><p id="hl0008035"><b>In patients with suspected or established Brugada syndrome, genetic counseling and genetic testing may be useful to facilitate cascade screening of relatives</b><a class="inline-reference" href="#bib870"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib871"><b>[2]</b></a>,&nbsp;<a class="inline-reference" href="#bib872"><b>[3]</b></a><b>.</b></p></li></ul></td></tr></tbody></table></div><div class="inline-table-caption">SR indicated systematic review.</div></div><p id="hl0008042"><i>and</i>. </p><div class="inline-image figure" id="fig14"><figure><figcaption class="inline-image-label">Figure 14</figcaption><img src="//" alt="" data-eid="1-s2.0-S0735109717413064" data-locator="gr14" data-attachment-filename="07351097/S0735109717X00442/S0735109717413064/gr14-t.gif"><div class="caption-holder"><div class="inline-image-caption">Prevention of SCD in Patients With Brugada Syndrome</div><div class="inline-image-caption">Colors correspond to Class of Recommendation in . See  for discussion. *ICD candidacy as determined by functional status, life expectancy or patient preference. 1° indicates primary; ECG, electrocardiogram; EP, electrophysiological; ICD implantable cardioverter-defibrillator; SCD, sudden cardiac death; VT, ventricular tachycardia; and VF, ventricular fibrillation. </div></div></figure></div><div class="inline-image figure" id="fig15"><figure><figcaption class="inline-image-label">Figure 15</figcaption><img src="//" alt="" data-eid="1-s2.0-S0735109717413064" data-locator="gr15" data-attachment-filename="07351097/S0735109717X00442/S0735109717413064/gr15-t.gif"><div class="caption-holder"><div class="inline-image-caption">Brugada Syndrome</div></div></figure></div><p id="hl0008050"><b>Synopsis</b></p><p id="hl0008052">Refer to the “Systematic Review for the 2017 ACC/AHA/HRS Guideline for Management of Patients With Ventricular Arrhythmias and the Prevention of Sudden Cardiac Death” for the complete systematic evidence review for additional data and analyses <a class="inline-reference" href="#bib867">(S7.9.1.3-15)</a>. The results from the question “For asymptomatic patients with Brugada syndrome, what is the association between an abnormal EP study and SCD and other arrhythmia endpoints? (Part 1)” and the writing committee’s review of the totality of the literature were used to frame decision-making. Recommendations that are based on a body of evidence that includes the systematic review conducted by the ERC are denoted by the superscript SR (e.g., LOE: B-R <sup>SR</sup>). </p><p id="hl0008055">Factors identified as potential triggers of VF and SCA in Brugada syndrome include some psychotropic medications, and anesthetic agents, cocaine, excessive alcohol intake, and fever (<a id="hl0008056" href="http://www.brugadadrugs.org" target="_blank">www.brugadadrugs.org</a>) <a class="inline-reference" href="#bib873">[1]</a>,&nbsp;<a class="inline-reference" href="#bib874">[2]</a>. These agents should be avoided, and fever warrants early and aggressive measures to reduce temperature <a class="inline-reference" href="#bib875">(S7.9.1.3-23)</a>. </p><p id="hl0008059"><b>Recommendation-Specific Supportive Text</b></p><ul id="hl0008061"><li id="hl0008062"><span class="list-item-label">1.</span><p id="hl0008064">The risk of major adverse cardiac events in asymptomatic patients without spontaneous type 1 electrocardiographic changes of Brugada syndrome ( ), or with only medication-induced electrocardiographic changes, is low <a class="inline-reference" href="#bib853">[1]</a>,&nbsp;<a class="inline-reference" href="#bib854">[2]</a>,&nbsp;<a class="inline-reference" href="#bib855">[3]</a>,&nbsp;<a class="inline-reference" href="#bib856">[4]</a>,&nbsp;<a class="inline-reference" href="#bib857">[5]</a>. A positive family history of Brugada syndrome or SCA is not a significant predictor of adverse events in Brugada syndrome <a class="inline-reference" href="#bib853">[1]</a>,&nbsp;<a class="inline-reference" href="#bib854">[2]</a>,&nbsp;<a class="inline-reference" href="#bib856">[3]</a>,&nbsp;<a class="inline-reference" href="#bib857">[4]</a>. Implantation of an ICD in an asymptomatic patient without a spontaneous type 1 Brugada electrocardiographic has not been shown to confer any benefit. </p></li><li id="hl0008068"><span class="list-item-label">2.</span><p id="hl0008070">Brugada syndrome is characterized by coved ST elevation in leads V1 or V2 positioned in the second, third, or fourth intercostal space either spontaneously or induced by administration of a sodium channel–blocking drug in the absence of other causes of ST elevation <a class="inline-reference" href="#bib876">(S7.9.1.3-24)</a> and negative T waves in the right precordial leads, and is associated with syncope or SCA due to VF, predominantly in young males, although it has been reported in all age groups. The type 1 Brugada ECG with coved ST elevation in right precordial leads may be present spontaneously, during fever or vagotonic states, or after medication challenge with sodium channel blockers. QRS complex fractionation is seen in a minority of patients. Patients with spontaneous coved type ST elevation and a history of syncope or prior SCA are at the highest risk for potentially lethal VA. ICD implantation has been shown to reduce mortality in symptomatic patients with Brugada syndrome <a class="inline-reference" href="#bib877">[1]</a>,&nbsp;<a class="inline-reference" href="#bib878">[2]</a>. </p></li><li id="hl0008073"><span class="list-item-label">3.</span><p id="hl0008075">Ablation of abnormal areas of epicardial late activation in the RV can suppress recurrent VA as shown in a small number of patients <a class="inline-reference" href="#bib860">[1]</a>,&nbsp;<a class="inline-reference" href="#bib861">[2]</a>,&nbsp;<a class="inline-reference" href="#bib863">[3]</a>,&nbsp;<a class="inline-reference" href="#bib879">[4]</a>. In these reports, the spontaneous type 1 Brugada pattern on ECG may be eliminated in &gt;75% of patients, and recurrences of VT/VF are markedly reduced <a class="inline-reference" href="#bib861">[1]</a>,&nbsp;<a class="inline-reference" href="#bib862">[2]</a>,&nbsp;<a class="inline-reference" href="#bib863">[3]</a>. Experience and follow-up after ablation are limited, and an ICD for patients who have had syncope or SCA is recommended. A series of patients with Brugada syndrome treated with quinidine had no deaths during a mean follow-up of over 9 years, although adverse effects of quinidine were reported in 38% of patients, these authors felt that quinidine could be used as an alternative to the ICD in selected patients <a class="inline-reference" href="#bib859">(S7.9.1.3-7)</a>. </p></li><li id="hl0008079"><span class="list-item-label">4.</span><p id="hl0008081">Observational studies show that quinidine can suppress VF storm in patients with Brugada syndrome, and a low risk of arrhythmia was observed in a long-term observational study (681). No patient treated with quinidine experienced SCD. Adverse effects of quinidine occur in up to 37% of patients. Catheter ablation targeting the epicardial right ventricular areas of abnormality has also been shown to reduce recurrent VF episodes and normalize the ECG (682, 684, 685).</p></li><li id="hl0008082"><span class="list-item-label">5.</span><p id="hl0008084">Administration of procainamide, flecainide, or ajmaline may be useful to provoke type 1 ST elevation in patients suspected to have Brugada syndrome as a cause of symptoms but who do not have a type 1 electrocardiographic pattern at baseline. Medication challenge should be terminated with the development of VA, marked QRS widening, or type 1 Brugada electrocardiographic pattern <a class="inline-reference" href="#bib866">[1]</a>,&nbsp;<a class="inline-reference" href="#bib880">[2]</a>. The use of high electrocardiographic electrode positioning in the second and third interspaces for electrocardiographic recording improves detection of a type 1 Brugada ECG <a class="inline-reference" href="#bib881">(S7.9.1.3-29)</a>. Asymptomatic patients with a family history of Brugada syndrome may be offered sodium channel blocker challenge for diagnostic evaluation, although a positive test does not require chronic therapy due to a low risk in this setting <a class="inline-reference" href="#bib864">(S7.9.1.3-12)</a>. In asymptomatic patients with type 1 Brugada electrocardiographic findings, medication challenge does not offer additional diagnostic value. </p></li><li id="hl0008088"><span class="list-item-label">6.</span><p id="hl0008090">Polymorphic VT/VF induced by programmed stimulation has been associated with an increased risk of VA in some patients with spontaneous type 1 Brugada ECG <a class="inline-reference" href="#bib865">(S7.9.1.3-13)</a>. The specificity of programmed stimulation for assessing risk decreases with the inclusion of triple extrastimuli <a class="inline-reference" href="#bib858">[1]</a>,&nbsp;<a class="inline-reference" href="#bib865">[2]</a>. The value of programmed stimulation in asymptomatic patients with spontaneous type 1 Brugada ECGs has been the subject of multiple studies <a class="inline-reference" href="#bib853">[1]</a>,&nbsp;<a class="inline-reference" href="#bib854">[2]</a>,&nbsp;<a class="inline-reference" href="#bib856">[3]</a>,&nbsp;<a class="inline-reference" href="#bib857">[4]</a>. A report found that the prognostic value has decreased over time, possibly as patients with less severe phenotypes have been recognized and studied <a class="inline-reference" href="#bib853">(S7.9.1.3-1)</a>. Some experts use the results of programmed ventricular stimulation for informing shared decision-making in consideration of the ICD. In symptomatic patients with Brugada syndrome, programmed ventricular stimulation for risk stratification does not add anything to the evaluation of the patients as an ICD is warranted <a class="inline-reference" href="#bib854">[1]</a>,&nbsp;<a class="inline-reference" href="#bib856">[2]</a>,&nbsp;<a class="inline-reference" href="#bib858">[3]</a>. </p></li><li id="hl0008096"><span class="list-item-label">7.</span><p id="hl0008098">The yield of genetic testing in phenotype positive patients is approximately 20% to 30% in Brugada syndrome <a class="inline-reference" href="#bib856">[1]</a>,&nbsp;<a class="inline-reference" href="#bib868">[2]</a>,&nbsp;<a class="inline-reference" href="#bib870">[3]</a>,&nbsp;<a class="inline-reference" href="#bib871">[4]</a>,&nbsp;<a class="inline-reference" href="#bib882">[5]</a>,&nbsp;<a class="inline-reference" href="#bib883">[6]</a>. <i>SCN5A</i> variants account for most of this subset of genotype positive Brugada syndrome. However, 2% to 10% of otherwise healthy individuals host a rare variant of <i>SCN5A</i><a class="inline-reference" href="#bib872">[1]</a>,&nbsp;<a class="inline-reference" href="#bib883">[2]</a>. A negative genetic test does not exclude the diagnosis of Brugada syndrome, which is usually based on electrocardiographic and clinical characteristics. Risk stratification is based on symptoms and clinical findings <a class="inline-reference" href="#bib884">(S7.9.1.3-32)</a>; genotype status is not correlated with the risk of adverse events <a class="inline-reference" href="#bib857">[1]</a>,&nbsp;<a class="inline-reference" href="#bib870">[2]</a>,&nbsp;<a class="inline-reference" href="#bib871">[3]</a>,&nbsp;<a class="inline-reference" href="#bib885">[4]</a>. Identification of a pathogenetic mutation may help facilitate recognition of carrier status in family members, allowing for lifestyle modification and potential treatment. </p></li><li id="hl0008105"><span class="list-item-label">8.</span><p id="hl0008107">Factors identified as potential triggers of VF and SCA in Brugada syndrome include some psychotropic medications, and anesthetic agents, cocaine, excessive alcohol intake, and fever (<a id="hl0008108" href="http://www.brugadadrugs.org" target="_blank">www.brugadadrugs.org</a>) <a class="inline-reference" href="#bib873">[1]</a>,&nbsp;<a class="inline-reference" href="#bib874">[2]</a>. These agents should be avoided and fever warrants early and aggressive measures to reduce temperature <a class="inline-reference" href="#bib875">(S7.9.1.3-23)</a>. </p></li></ul></section></section></section></section></div>
+
+
+Weight:0
+
+Styleguide Recipes.ContentSample1
+*/
+/*
+Content Sample 2
+
+Description: the returns of GL Search are raw html and can not have classes applied to them so this is a testing ground to write styles that allow for the content be styled as it comes in.
+
+
+Markup:
+<div data-v-198296ba="" data-v-aafd3410="" class="block swg-result"><div data-v-198296ba=""><section id="hl0006474"><a id="sec7"></a><section id="hl0008811"><a id="sec7.4"></a><section id="hl0009869"><a id="sec7.4.7"></a><a id="sectitle0465"></a><h3 id="hl0009871"><span class="section-label">4.4.7</span>&nbsp;Coronary Anomalies</h3><p id="hl0009872">Coronary abnormalities are among the most common congenital cardiovascular anomalies, surpassing in prevalence nearly all others combined. Coronary anomalies include anomalous aortic origin of a coronary artery (AAOCA), coronary fistula, and myocardial bridge. Many congenital coronary abnormalities have a benign outcome. In contrast, natural history studies of anomalous coronary artery from the PA (particularly anomalous left coronary artery from the PA) suggest poor outcome in untreated patients; similar natural history studies are lacking regarding untreated patients with AAOCA, but other evidence raises concern. See  and  for a diagnostic and treatment algorithm for AAOCA. </p><div id="tbl34" class="table"><div class="inline-table-label">Table 34</div><div class="inline-table-caption">Factors That May Relate to the Clinical Importance of AAOCA and Risk of SCD</div><div><table id="hl0002855"><tbody><tr><td id="hl0002860" class="table-align-">Age</td><td id="hl0002861" class="table-align-">AAOCA is more commonly invoked as the cause of SCD in patients &lt;35 y of age than in patients &gt;35 y of age, in whom atherosclerotic coronary disease becomes a more prevalent cause. However, death has been attributed to AAOCA in patients of all ages; there does not seem to be an age beyond which the AAOCA may not be relevant, even in the setting of atherosclerotic coronary disease and other concomitant conditions <a class="inline-reference" href="#bib816">[1]</a>,&nbsp;<a class="inline-reference" href="#bib817">[2]</a>. </td></tr><tr><td id="hl0002864" class="table-align-">Anatomy of coronary ostium and proximal coronary course</td><td id="hl0002865" class="table-align-">Slit-like/fish-mouth-shaped orifice, acute angle takeoff, intramural course, interarterial course and hypoplasia of the proximal coronary artery have all been proposed as reasons for symptoms, ischemia and SCD in patients with AAOCA. The slit-like orifice is more commonly seen in anomalous right coronary artery arising from the left sinus. Each of these anatomic findings offers a pathophysiological mechanism for intermittent ischemia, particularly at times of high cardiac output and/or increased aortic wall tension, such as during exercise <a class="inline-reference" href="#bib821">[1]</a>,&nbsp;<a class="inline-reference" href="#bib824">[2]</a>,&nbsp;<a class="inline-reference" href="#bib825">[3]</a>,&nbsp;<a class="inline-reference" href="#bib826">[4]</a>. </td></tr><tr><td id="hl0002868" class="table-align-">Anomalous origin</td><td id="hl0002869" class="table-align-">Left coronary artery arising from the right cusp is less common than the right coronary artery arising from the left cusp but is more often found in autopsy series of SCD <a class="inline-reference" href="#bib816">[1]</a>,&nbsp;<a class="inline-reference" href="#bib818">[2]</a>,&nbsp;<a class="inline-reference" href="#bib830">[3]</a>. This suggests that anomalous origin of the left coronary artery from the right cusp is more likely to cause SCD than anomalous origin of the right coronary artery from the left cusp. This may be due either to anatomic features that make anomalous aortic origin of the left coronary artery prone to coronary compromise or because a larger proportion of myocardium is supplied by the left coronary artery, or both. </td></tr><tr><td id="hl0002872" class="table-align-">Exercise</td><td id="hl0002873" class="table-align-">Autopsy series suggest a most patients die during, or in close temporal association with, exercise <a class="inline-reference" href="#bib818">[1]</a>,&nbsp;<a class="inline-reference" href="#bib819">[2]</a>,&nbsp;<a class="inline-reference" href="#bib820">[3]</a>. </td></tr><tr><td id="hl0002876" class="table-align-">Ischemia</td><td id="hl0002877" class="table-align-">Autopsy series demonstrate myocardial fibrosis in a significant number of patients whose deaths were attributed to AAOCA, particularly in patients with anomalous left coronary artery arising from the right cusp <a class="inline-reference" href="#bib820">(S4.4.7-5)</a>. Surgical series describe patients with ischemia or MI before surgical repair in the absence of other CAD, suggesting a relation of the coronary anomaly to the ischemia <a class="inline-reference" href="#bib831">(S4.4.7-16)</a>. This suggests that had perfusion imaging been obtained before SCD, ischemia would have been found in such patients <a class="inline-reference" href="#bib832">[1]</a>,&nbsp;<a class="inline-reference" href="#bib833">[2]</a>. However, other data indicate that a normal stress test does not preclude a SCD event, with the proviso that most of those studies used only stress ECG, rather than the more sensitive and specific modalities of nuclear perfusion imaging or stress echocardiography. In addition, postoperative studies have shown that ischemia may be found after surgical repair in the distribution not supplied by the abnormal coronary artery and may not persist on repeat testing <a class="inline-reference" href="#bib834">(S4.4.7-19)</a>. </td></tr><tr><td id="hl0002883" class="table-align-">Symptoms</td><td id="hl0002884" class="table-align-">In autopsy and surgical series, a significant number of patients reported cardiovascular symptoms, including before SCD events <a class="inline-reference" href="#bib819">[1]</a>,&nbsp;<a class="inline-reference" href="#bib822">[2]</a>,&nbsp;<a class="inline-reference" href="#bib823">[3]</a>,&nbsp;<a class="inline-reference" href="#bib835">[4]</a>,&nbsp;<a class="inline-reference" href="#bib836">[5]</a>. Symptoms are more commonly reported in patients in whom the left coronary artery arises from the right sinus. Surgical series have described improvement in symptoms after surgical repair <a class="inline-reference" href="#bib818">[1]</a>,&nbsp;<a class="inline-reference" href="#bib819">[2]</a>,&nbsp;<a class="inline-reference" href="#bib820">[3]</a>,&nbsp;<a class="inline-reference" href="#bib821">[4]</a>,&nbsp;<a class="inline-reference" href="#bib822">[5]</a>,&nbsp;<a class="inline-reference" href="#bib823">[6]</a>. </td></tr></tbody></table></div><div class="inline-table-caption">AAOCA indicates anomalous aortic origin of the coronary artery; CAD, coronary artery disease; ECG, electrocardiogram; MI, myocardial infarction; and SCD, sudden cardiac death.</div></div><div class="inline-image figure" id="fig5"><figure><figcaption class="inline-image-label">Figure 5</figcaption><img src="//" alt="" data-eid="1-s2.0-S0735109718368463" data-locator="gr5" data-attachment-filename="07351097/S0735109718X00187/S0735109718368463/gr5-t.gif"><div class="caption-holder"><div class="inline-image-caption">Anomalous Aortic Origin of the Coronary Artery</div><div class="inline-image-caption">*Surgical intervention to involve unroofing or coronary revascularization for patients with concomitant fixed obstruction.</div></div></figure></div><p id="hl0009877">Assessment of the risk of SCD in patients with AAOCA and of the role of AAOCA in causing ischemia or symptoms is difficult because available data do not adequately capture the clinical spectrum of these anomalies. Autopsy series are available that help describe the anomalies found in patients who suffered SCD contrasted to other causes of death <a class="inline-reference" href="#bib816">[1]</a>,&nbsp;<a class="inline-reference" href="#bib817">[2]</a>,&nbsp;<a class="inline-reference" href="#bib818">[3]</a>,&nbsp;<a class="inline-reference" href="#bib819">[4]</a>,&nbsp;<a class="inline-reference" href="#bib820">[5]</a>. There are surgical case series that describe findings before operation, operative anatomy and postoperative course <a class="inline-reference" href="#bib817">[1]</a>,&nbsp;<a class="inline-reference" href="#bib820">[2]</a>,&nbsp;<a class="inline-reference" href="#bib821">[3]</a>,&nbsp;<a class="inline-reference" href="#bib822">[4]</a>,&nbsp;<a class="inline-reference" href="#bib823">[5]</a>. There are imaging studies describing the anatomy and potential pathophysiological abnormalities associated with AAOCA <a class="inline-reference" href="#bib822">[1]</a>,&nbsp;<a class="inline-reference" href="#bib824">[2]</a>,&nbsp;<a class="inline-reference" href="#bib825">[3]</a>,&nbsp;<a class="inline-reference" href="#bib826">[4]</a>. There are surgical series describing improvement in symptoms after operation <a class="inline-reference" href="#bib821">[1]</a>,&nbsp;<a class="inline-reference" href="#bib822">[2]</a>,&nbsp;<a class="inline-reference" href="#bib823">[3]</a>. There are surveys and registries that describe the heterogeneous management strategies applied to AAOCA <a class="inline-reference" href="#bib827">[1]</a>,&nbsp;<a class="inline-reference" href="#bib828">[2]</a>,&nbsp;<a class="inline-reference" href="#bib829">[3]</a>. What is lacking are data proving that any particular management strategy prevents SCD. As a consequence, decisions regarding whether surgery is necessary or exercise restriction or medical therapy might be beneficial are all based on synthesizing limited data and applying to an individual patient. Clinicians commonly extrapolate to assist in medical decision-making, but the consequences of being “wrong” for a young patient with AAOCA may be perceived to be greater than for many other conditions. Consequently, there is often a clinical urge to seek a reason to do something like surgical repair, because the available data do not identify clinical features that provide reassurance that a patient is at low risk of cardiovascular events. Unfortunately, evidence demonstrating that surgical repair ameliorates SCD risk, derived from large enough cohorts followed over a sufficient period of time, is not available. </p><section id="hl0009883"><a id="sec7.4.7.1"></a><a id="sectitle0470"></a><h3 id="hl0009885"><span class="section-label">4.4.7.1</span>&nbsp;Anomalous Coronary Artery Evaluation</h3><div id="undtbl46" class="table"><div class="inline-table-caption">Recommendations for Anomalous Coronary Artery Evaluation</div><div class="inline-table-caption">Referenced studies that support recommendations are summarized in <a id="hl0009892" href="http://jaccjacc.acc.org/Clinical_Document/ACHD_Guideline_ES-FT_Data_Supplements_08-02-18.pdf" target="_blank">Online Data Supplement 51</a>. </div><div><table id="hl0009893"><thead><tr><th id="hl0009899" scope="col" class="table-align-">COR</th><th id="hl0009900" scope="col" class="table-align-">LOE</th><th id="hl0009901" scope="col" class="table-align-">Recommendations</th></tr></thead><tbody><tr><td id="hl0009904" class="table-align-center" colspan="3">Diagnostic</td></tr><tr><td id="hl0009906" class="table-align-"><b>I</b></td><td id="hl0009908" class="table-align-"><b>C-LD</b></td><td id="hl0009910" class="table-align-"><ul id="hl0009911"><li id="hl0009912"><span class="list-item-label">1.</span><p id="hl0009914"><b>Coronary angiography, using catheterization, CT, or CMR, is recommended for evaluation of anomalous coronary artery</b><a class="inline-reference" href="#bib837"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib838"><b>[2]</b></a>,&nbsp;<a class="inline-reference" href="#bib839"><b>[3]</b></a><b>.</b></p></li></ul></td></tr><tr><td id="hl0009920" class="table-align-"><b>I</b></td><td id="hl0009922" class="table-align-"><b>C-LD</b></td><td id="hl0009924" class="table-align-"><ul id="hl0009925"><li id="hl0009926"><span class="list-item-label">2.</span><p id="hl0009928"><b>Anatomic and physiological evaluation should be performed in patients with anomalous aortic origin of the left coronary from the right sinus and/or right coronary from the left sinus</b><a class="inline-reference" href="#bib840"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib841"><b>[2]</b></a>,&nbsp;<a class="inline-reference" href="#bib842"><b>[3]</b></a>,&nbsp;<a class="inline-reference" href="#bib843"><b>[4]</b></a>,&nbsp;<a class="inline-reference" href="#bib844"><b>[5]</b></a>,&nbsp;<a class="inline-reference" href="#bib845"><b>[6]</b></a><b>.</b></p></li></ul></td></tr></tbody></table></div></div><p id="hl0009933"><b>Recommendation-Specific Supportive Text</b></p><ul id="hl0009935"><li id="hl0009936"><span class="list-item-label">1.</span><p id="hl0009938">CTA, CMR, and catheterization can all delineate the proximal course of the coronary artery and relationship to other structures. CTA is generally preferred because it has superior spatial and temporal resolution, although CMR may also provide adequate delineation of the relationship of the coronary artery to the aorta, PA and other structures, including whether the proximal course appears to be intramural. Coronary angiography by catheterization can be helpful when there is concern about stenosis in the coronary artery or when concomitant hemodynamic evaluation for shunt assessment or intravascular ultrasonography/flow evaluation is needed.</p></li><li id="hl0009939"><span class="list-item-label">2.</span><p id="hl0009941">Assessment of AAOCA is enhanced when the precise anatomy and physiological impact of the coronary artery anomaly are understood. As described in , the specific anomalous origin, anatomy of the orifice and proximal vessel and presence of ischemia may all influence the clinical course and thus the management options. Understanding these issues as precisely as possible will better inform clinical decisions. </p></li></ul></section><section id="hl0009943"><a id="sec7.4.7.2"></a><a id="sectitle0475"></a><h3 id="hl0009945"><span class="section-label">4.4.7.2</span>&nbsp;Anomalous Aortic Origin of Coronary Artery</h3><div id="undtbl47" class="table"><div class="inline-table-caption">Recommendations for Anomalous Aortic Origin of Coronary Artery</div><div class="inline-table-caption">Referenced studies that support recommendations are summarized in <a id="hl0009952" href="http://jaccjacc.acc.org/Clinical_Document/ACHD_Guideline_ES-FT_Data_Supplements_08-02-18.pdf" target="_blank">Online Data Supplement 51</a>. </div><div><table id="hl0009953"><thead><tr><th id="hl0009959" scope="col" class="table-align-">COR</th><th id="hl0009960" scope="col" class="table-align-">LOE</th><th id="hl0009961" scope="col" class="table-align-">Recommendations</th></tr></thead><tbody><tr><td id="hl0009964" class="table-align-center" colspan="3">Therapeutic</td></tr><tr><td id="hl0009966" class="table-align-"><b>I</b></td><td id="hl0009968" class="table-align-"><b>B-NR</b></td><td id="hl0009970" class="table-align-"><ul id="hl0009971"><li id="hl0009972"><span class="list-item-label">1.</span><p id="hl0009974"><b>Surgery is recommended for AAOCA from the left sinus or AAOCA from the right sinus for symptoms or diagnostic evidence consistent with coronary ischemia attributable to the anomalous coronary artery</b><a class="inline-reference" href="#bib846"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib847"><b>[2]</b></a>,&nbsp;<a class="inline-reference" href="#bib848"><b>[3]</b></a><b>.</b></p></li></ul></td></tr><tr><td id="hl0009980" class="table-align-"><b>IIa</b></td><td id="hl0009982" class="table-align-"><b>C-LD</b></td><td id="hl0009984" class="table-align-"><ul id="hl0009985"><li id="hl0009986"><span class="list-item-label">2.</span><p id="hl0009988"><b>Surgery is reasonable for anomalous aortic origin of the left coronary artery from the right sinus in the absence of symptoms or ischemia</b><a class="inline-reference" href="#bib849"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib850"><b>[2]</b></a>,&nbsp;<a class="inline-reference" href="#bib851"><b>[3]</b></a><b>.</b></p></li></ul></td></tr><tr><td id="hl0009994" class="table-align-"><b>IIa</b></td><td id="hl0009996" class="table-align-"><b>C-EO</b></td><td id="hl0009998" class="table-align-"><ul id="hl0009999"><li id="hl0010000"><span class="list-item-label">3.</span><p id="hl0010002"><b>Surgery for AAOCA is reasonable in the setting of ventricular arrhythmias.</b></p></li></ul></td></tr><tr><td id="hl0010005" class="table-align-"><b>IIb</b></td><td id="hl0010007" class="table-align-"><b>B-NR</b></td><td id="hl0010009" class="table-align-"><ul id="hl0010010"><li id="hl0010011"><span class="list-item-label">4.</span><p id="hl0010013"><b>Surgery or continued observation may be reasonable for asymptomatic patients with an anomalous left coronary artery arising from the right sinus or right coronary artery arising from the left sinus without ischemia or anatomic or physiological evaluation suggesting potential for compromise of coronary perfusion (e.g., intramural course, fish-mouth-shaped orifice, acute angle)</b><a class="inline-reference" href="#bib849"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib850"><b>[2]</b></a>,&nbsp;<a class="inline-reference" href="#bib851"><b>[3]</b></a><b>.</b></p></li></ul></td></tr></tbody></table></div></div><p id="hl0010018"><b>Recommendation-Specific Supportive Text</b></p><ul id="hl0010020"><li id="hl0010021"><span class="list-item-label">1.</span><p id="hl0010023">In patients with symptoms related to AAOCA, repair of the anomaly should alleviate symptoms. In autopsy and surgical series, cardiac symptoms are more common in patients with a left coronary artery arising from the right coronary cusp. In autopsy studies of patients who died because of an anomalous coronary artery, fibrosis is a common finding, suggesting that ischemia preceded the terminal event. However, there are patients in whom a SCD event occurred despite normal stress ECG, and consequently absence of ischemia is not reassuring. Autopsy series show that many patients whose death is attributed to anomalous coronary arteries are young, thus management of patients should take age into account, with heightened concern about the risk of sudden death in younger patients <a class="inline-reference" href="#bib852">[1]</a>,&nbsp;<a class="inline-reference" href="#bib853">[2]</a>,&nbsp;<a class="inline-reference" href="#bib854">[3]</a>. </p></li><li id="hl0010025"><span class="list-item-label">2.</span><p id="hl0010027">Anomalous left coronary from the right sinus is less common than anomalous right coronary from the left sinus <a class="inline-reference" href="#bib855">(S4.4.7.2-10)</a>, but anomalous left coronary artery from the right is more commonly found in autopsy series of athletes and military recruits who had nontraumatic death than right coronary from the left sinus <a class="inline-reference" href="#bib846">[1]</a>,&nbsp;<a class="inline-reference" href="#bib856">[2]</a>,&nbsp;<a class="inline-reference" href="#bib857">[3]</a>,&nbsp;<a class="inline-reference" href="#bib858">[4]</a>. The overrepresentation of the anomalous left coronary from the right sinus suggests a higher risk of SCD, particular at extremes of exertion and in patients &lt;35 years of age. </p><p id="hl0010030">There are some anatomic features that are thought to be associated with increased risk of compromise of coronary flow and/or SCD, including a fish-mouth-shaped or slit-like orifice, or intramural course <a class="inline-reference" href="#bib859">(S4.4.7.2-14)</a>, although the slit-like orifice is more commonly encountered in a right coronary arising from the left cusp. It is difficult to quantitate the absolute risk of SCD associated with anomalous aortic origin of the left coronary from the right sinus, and data demonstrating that surgery ameliorates the SCD risk have not been published. Until studies suggest otherwise, limited data and expert consensus suggest that it is reasonable that adults with this malformation should undergo surgical unroofing unless there are extenuating circumstances that would make surgery high risk. </p></li><li id="hl0010032"><span class="list-item-label">3.</span><p id="hl0010034">In patients with ventricular arrhythmias presumed related to ischemia caused by anomalous origin of a coronary artery, repair is an option to alleviate the ischemia and presumably mitigate the recurrence of ventricular arrhythmias. However, care should be individualized, as there may be other factors (e.g., CAD, cardiomyopathy, residual ischemia) contributing to ventricular arrhythmias that warrant continued vigilance and additional therapy.</p></li><li id="hl0010035"><span class="list-item-label">4.</span><p id="hl0010037">Anomalous aortic origin of the right coronary from the left sinus is more common than anomalous aortic origin of the left coronary from the right sinus. The risk of SCD with the former malformation is difficult to quantitate. There is some physiological rationale to believe that asymptomatic patients without evidence of compromised blood flow would benefit from unroofing, but there are not data to demonstrate that surgical interventions alter the risk of SCD. Thus, watchful waiting may be an appropriate course as well, particularly for a patient with an anomalous right coronary arising from the left sinus.</p></li></ul></section><section id="hl0010038"><a id="sec7.4.7.3"></a><a id="sectitle0480"></a><h3 id="hl0010040"><span class="section-label">4.4.7.3</span>&nbsp;Anomalous Coronary Artery Arising From the PA</h3><div id="undtbl48" class="table"><div class="inline-table-caption">Recommendations for Anomalous Coronary Artery Arising From the PA</div><div class="inline-table-caption">Referenced studies that support recommendations are summarized in <a id="hl0010047" href="http://jaccjacc.acc.org/Clinical_Document/ACHD_Guideline_ES-FT_Data_Supplements_08-02-18.pdf" target="_blank">Online Data Supplement 51</a>. </div><div><table id="hl0010048"><thead><tr><th id="hl0010054" scope="col" class="table-align-">COR</th><th id="hl0010055" scope="col" class="table-align-">LOE</th><th id="hl0010056" scope="col" class="table-align-">Recommendations</th></tr></thead><tbody><tr><td id="hl0010059" class="table-align-center" colspan="3">Therapeutic</td></tr><tr><td id="hl0010061" class="table-align-"><b>I</b></td><td id="hl0010063" class="table-align-"><b>B-NR</b></td><td id="hl0010065" class="table-align-"><ul id="hl0010066"><li id="hl0010067"><span class="list-item-label">1.</span><p id="hl0010069"><b>Surgery is recommended for anomalous left coronary artery from the PA</b><a class="inline-reference" href="#bib860"><b>[1]</b></a>,&nbsp;<a class="inline-reference" href="#bib861"><b>[2]</b></a>,&nbsp;<a class="inline-reference" href="#bib862"><b>[3]</b></a>,&nbsp;<a class="inline-reference" href="#bib863"><b>[4]</b></a>,&nbsp;<a class="inline-reference" href="#bib864"><b>[5]</b></a>,&nbsp;<a class="inline-reference" href="#bib865"><b>[6]</b></a>,&nbsp;<a class="inline-reference" href="#bib866"><b>[7]</b></a><b>.</b></p></li></ul></td></tr><tr><td id="hl0010075" class="table-align-"><b>I</b></td><td id="hl0010077" class="table-align-"><b>C-EO</b></td><td id="hl0010079" class="table-align-"><ul id="hl0010080"><li id="hl0010081"><span class="list-item-label">2.</span><p id="hl0010083"><b>In a symptomatic adult with anomalous right coronary artery from the PA with symptoms attributed to the anomalous coronary, surgery is recommended.</b></p></li></ul></td></tr><tr><td id="hl0010086" class="table-align-"><b>IIa</b></td><td id="hl0010088" class="table-align-"><b>C-EO</b></td><td id="hl0010090" class="table-align-"><ul id="hl0010091"><li id="hl0010092"><span class="list-item-label">3.</span><p id="hl0010094"><b>Surgery for anomalous right coronary artery from the PA is reasonable in an asymptomatic adult with ventricular dysfunction or with myocardial ischemia attributed to anomalous right coronary artery from the PA.</b></p></li></ul></td></tr></tbody></table></div></div><p id="hl0010096"><b>Recommendation-Specific Supportive Text</b></p><ul id="hl0010098"><li id="hl0010099"><span class="list-item-label">1.</span><p id="hl0010101">Surgery can include reimplantation of the left coronary artery directly into the aorta with or without an interposition graft. Ligation or closure of the left coronary artery at the level of the PA with coronary artery bypass grafting can also be performed, usually using the left internal mammary artery anastomosed to the left anterior descending.</p></li><li id="hl0010102"><span class="list-item-label">2.</span><p id="hl0010104">Surgery can include reimplantation of the right coronary artery directly into the aorta with or without an interposition graft. Ligation or closure of the right coronary artery at the level of the PA with coronary artery bypass grafting can also be performed, usually using the right internal mammary artery anastomosed to the right coronary or posterior descending coronary artery.</p></li><li id="hl0010105"><span class="list-item-label">3.</span><p id="hl0010107">Surgery to alleviate ischemia or ventricular dysfunction is reasonable if the anomalous coronary artery is thought to be the cause. Surgery can include reimplantation of the right coronary artery directly into the aorta with or without an interposition graft. Ligation or closure of the right coronary artery at the level of the PA with coronary artery bypass grafting can also be performed, usually using the right internal mammary artery anastomosed to the right coronary or posterior descending coronary artery.</p></li></ul></section></section></section></section></div></div>
+
+
+Weight:0
+
+Styleguide Recipes.ContentSample2
+*/
+/** Standalone CSS FILE **/
+/*# sourceMappingURL=maps/glsearch.css.map */

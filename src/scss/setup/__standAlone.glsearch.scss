@@ -1,0 +1,140 @@
+/**  Default Setup  Not sure what this is doing    *********************************/
+/** changing default names to be used with frameworks. **/
+@import "setup/config/__config.base";
+
+.swg-result {
+	font-family: $font_copy;
+
+	@import "base/table";
+	@import "base/table.boot";
+	@import "base/typography";
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: get-themecolor(primary, -4);
+	}
+	h1 {
+		font-size: $font_4;
+	}
+	h2 {
+		font-size: $font_3;
+	}
+	h3 {
+		font-size: $font_2;
+	}
+	h4 {
+		font-size: $font_1;
+	}
+	p {
+		font-size: $font_0;
+		margin-top: $margin_3;
+	}
+	ul {
+		list-style: none;
+		padding: $padding_3 $padding_0;
+		li {
+			margin-bottom: $margin_3;
+			line-height: 1.45;
+		}
+		.list-item-label {
+			font-family: $font_display;
+			display: inline;
+			font-weight: 900;
+			padding-right: 0.5rem;
+		}
+		.list-item-label ~ p {
+			display: inline;
+		}
+	}
+	.inline-table-label,
+	.inline-image-label {
+		margin: 0 $margin_2;
+		font-size: $font_2;
+		font-weight: $font_xbold;
+		font-family: $font_display;
+		color: get-themecolor(primary, -1);
+	}
+	.inline-reference,
+	.table a {
+		color: get-themecolor(primary);
+		&::hover {
+			color: get-themecolor(primary, -2);
+			text-decoration: none;
+		}
+	}
+	.table,
+	.figure {
+		margin: $margin_3 0 $margin_4;
+	}
+	table {
+		thead tr {
+			border-bottom: 2px solid #13121280; //br_black-5
+		}
+		border-bottom: 1px solid #13121280; //br_black-5
+		margin: $margin_2 0 $margin_3;
+		font-family: $font_ui;
+		th {
+			word-break: break-all;
+			vertical-align: bottom;
+		}
+		th > b,
+		td b {
+			font-weight: $font_bold;
+		}
+
+		border-collapse: collapse;
+		td {
+			padding: $padding_2 $padding_3;
+			max-width: 50em;
+			vertical-align: top;
+		}
+		ul {
+			margin: 0;
+			padding: $padding_2 $padding_0;
+		}
+		.table-align-center {
+			text-align: center;
+			background-color: #13121206;
+			font-weight: $font_medium;
+			font-family: $font_accent;
+		}
+	}
+	.table table {
+		display: none;
+		@media #{$medium-up} {
+			display: table;
+		}
+	}
+	@media #{$medium-down} {
+		.table::before {
+			content: "table is removed from mobile view";
+			display: block;
+			color: white;
+			border-radius: $border_radius;
+			padding: $padding_2 $padding_3;
+			background-color: get-themecolor(primary, -1);
+			margin: $margin_3 auto $margin_4;
+            text-align: center;
+		}
+	}
+
+	.inline-table-caption {
+		font-size: $font_n1;
+		color: get-themecolor(secondary, -3);
+	}
+	.inline-image.figure {
+		display: flex;
+		justify-content: center;
+	}
+
+	figure {
+		margin: $margin_3 0;
+		padding: $padding_3;
+		border: 1px solid get-themecolor(primary, 3);
+		color: get-themecolor(primary, -3);
+		width: 100%;
+		max-width: 50em;
+		border-radius: $border_radius;
+	}
+}

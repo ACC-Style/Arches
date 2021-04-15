@@ -1,0 +1,177 @@
+/** Function Test **/
+/**
+ * arches - Global style system focused on utility classes
+ * @version v1.2.0
+ * @link https://github.com/ACC-Style/Arches/
+ */
+/**  Pre Header - modular scale default break points utility    *********************************/
+/**  Version: 1.1.0    *********************************/
+// Consider using https://www.purgecss.com/ to remove styles not used in the project.
+$debug-trace: false !default;
+$name-mode: 'SHORT' !default; // $name-mode: "SHORT","LONG","ALL"
+$ms-base: 1rem !default; // needs to be in rem's
+$colors: ();
+$grays: ();
+$theme-palette: ();
+@import 'helpers/helpers';
+@import 'vendor/modular-scale';
+@import 'setup/config/utility-css.vars';
+@import 'helpers/breakpoint';
+%font-awesome-pro {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 900;
+}
+
+/**Set Active Class**/ 
+ $active-class-name: 'is-active';
+
+/** Utility Class Built on top of Zurb Foundation ^6.6.1  **/ 
+/** Built With Base Branding 1.2.0 **/// Mobile Branding is inline with the ACC.org site. 
+@import "setup/__brand.acc";/** Built With mobile Branding **//**  Default Brands    *********************************/
+/**  Colors  **/
+
+@import 'setup/config/colors';
+/**  Fonts  **/
+@import 'setup/config/fonts';
+/**  Textures  **/
+@import 'setup/config/textures';
+
+/**  Logos  **/
+@import 'setup/config/logo';
+
+$link-color-dark: get-themecolor(accent, -3);
+$link-color-light: get-themecolor(accent, 1);
+// reading-typography
+$headline-color: inherit !default;
+$reading-min:16px;
+$margin_0: get-css-size(margin, 0);
+$margin_1: get-css-size(margin, 1);
+$margin_2: get-css-size(margin, 2);
+$margin_3: get-css-size(margin, 3);
+$margin_4: get-css-size(margin, 4);
+$margin_5: get-css-size(margin, 5);
+$margin_n1: get-css-size(margin, n1);
+$margin_n2: get-css-size(margin, n2);
+$margin_n3: get-css-size(margin, n3);
+$margin_n4: get-css-size(margin, n4);
+$margin_n5: get-css-size(margin, n5);
+$padding_0: get-css-size(padding, 0);
+$padding_1: get-css-size(padding, 1);
+$padding_2: get-css-size(padding, 2);
+$padding_3: get-css-size(padding, 3);
+$padding_4: get-css-size(padding, 4);
+$padding_5: get-css-size(padding, 5);
+$border_square: 0;
+$border_radius: get-css-size(border-radius, radius);
+$border_round: get-css-size(border-radius, round);
+$border_circle: get-css-size(border-radius, circle);
+$border-width_0: get-css-size(border-width, 0);
+$border-width_1: get-css-size(border-width, 1);
+$border-width_2: get-css-size(border-width, 2);
+$border-width_3: get-css-size(border-width, 3);
+$border-width_4: get-css-size(border-width, 4);
+$border-width_5: get-css-size(border-width, 5);
+$font_display: get-css-size(font-family, display);
+$font_accent: get-css-size(font-family, accent);
+$font_ui: get-css-size(font-family, ui);
+$font_copy: get-css-size(font-family, copy);
+$font_mono: get-css-size(font-family, mono);
+$font_6: get-css-size(font-size, 6);
+$font_5: get-css-size(font-size, 5);
+$font_4: get-css-size(font-size, 4);
+$font_3: get-css-size(font-size, 3);
+$font_2: get-css-size(font-size, 2);
+$font_1: get-css-size(font-size, 1);
+$font_0: get-css-size(font-size, 0);
+$font_n1: get-css-size(font-size, n1);
+$font_n2: get-css-size(font-size, n2);
+$font_n3: get-css-size(font-size, n3);
+$font_n4: get-css-size(font-size, n4);
+$font_n5: get-css-size(font-size, n5);
+$font_bold: get-css-size(font-weight, bold);
+$font_medium: get-css-size(font-weight, medium);
+$font_xbold: get-css-size(font-weight, xbold);
+$font_light: get-css-size(font-weight, light);
+$font_regular: get-css-size(font-weight, regular);
+$line-height_0: get-css-size(line-height, 0);
+$line-height_1: get-css-size(line-height, 1);
+$line-height_2: get-css-size(line-height, 2);
+$line-height_3: get-css-size(line-height, 3);
+$line-height_4: get-css-size(line-height, 4);
+$line-height_5: get-css-size(line-height, 5);/**  Zurb Foundation Framework Setup Files. ***************************************/
+@import '../../node_modules/foundation-sites/scss/util/util';
+@import 'setup/config/__config.zurb';
+@import '../../node_modules/foundation-sites/scss/foundation.scss';
+@include foundation-everything();
+
+
+/*
+	Recipes
+
+	Combination of UCs can make complex and rich UI elements.  Here is a collection of curated UI that can be used in projects by just following these patterns.
+
+	Weight: 900
+
+	Styleguide Recipes
+
+*/
+
+
+/* Nav Recipes.00x */
+
+@import "recipes/base/mobile-nav";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/web-footer";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/quicklinks";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/advertisement";
+
+/* content Recipes.100 */
+
+@import "recipes/base/ordered-cards";
+
+/* content Recipes.250 */
+
+@import "recipes/base/GLSEARCH-search-result";/*
+	Mobile Recipes
+
+	The use of Utility Class give us the ability to create much of the UI needed for ACC.org without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of ACC.org
+
+	Weight: 2000
+
+	Styleguide Recipes ACC
+
+*/
+@import "recipes/mobile/_mobile._footer";
+
+// ACC Design Alterations
+@import "base/base";
+@import "components/logo";
+@import "components/interactive-extras";
+@import "styleguide/styleguide";
+@import "styleguide/__basic-html.base";
+@import "containers/containers";
+
+
+@import "components/zurb/table.zurb.override";
+@import "components/zurb/zurb.buttons.override";
+@import "components/zurb/zurb.close-button.override";
+@import "components/zurb/zurb.tabs.override";
+@import "components/zurb/zurb.questions";
+@import "components/zurb/zurb.pagination.override";
+@import "components/zurb/zurb.breadcrumbs";
+@import "styleguide/__basic-html.zurb";
+@import "components/mobile/_mobile.zurb._temp.override";

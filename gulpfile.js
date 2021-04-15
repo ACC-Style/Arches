@@ -182,8 +182,11 @@ var constructFrameworkStyleSheet = function(brand, framework) {
         .src(PATHS.SCSS + "/setup/__globalshame_framework.scss")
         .pipe(clone())
         .pipe(rename(brand + "_" + framework + ".scss"))
-        .pipe(headerFromFile("/recipes/__recipes." + framework + ".scss"))
+        .pipe(headerFromFile("/components/__components." + brand + ".scss"))
         .pipe(headerFromFile("/components/__components." + framework + ".scss"))
+        .pipe(headerFromFile("/components/__components.base.scss"))
+        .pipe(headerFromFile("/recipes/__recipes." + brand + ".scss"))
+        .pipe(headerFromFile("/recipes/__recipes.base.scss"))
         .pipe(headerFromFile("/base/__base." + brand + ".scss"));
     return base;
 };
@@ -193,11 +196,29 @@ var constructUCStyleSheet = function(brand) {
         .pipe(clone())
         .pipe(rename(brand + "_uc.scss"))
         .pipe(headerFromFile("/setup/__utilityclasses.scss"))
-        .pipe(headerFromFile("/components/__components." + brand + ".scss"))
-        .pipe(headerFromFile("/components/__components.base.scss"))
-        .pipe(headerFromFile("/recipes/__recipes." + brand + ".scss"))
-        .pipe(headerFromFile("/recipes/__recipes.base.scss"))
         .pipe(header("/** Base UC File **/"));
+
+};
+var constructStandaloneStyleSheet = function(name) {
+    return gulp.src(PATHS.SCSS + "/setup/__globalshame_uc.scss")
+        .pipe(clone())
+        .pipe(rename(name + ".scss"))
+        .pipe(header("/** Standalone CSS FILE **/"))
+        .pipe(headerFromFile("/styleguide/_"+ name +".scss"))
+        .pipe(headerFromFile("/setup/__standAlone."+ name +".scss"))
+        .pipe((headerFromFile("/setup/config/_var.output.scss")))
+        .pipe(headerFromFile("/setup/__setup.none.scss"))
+        .pipe(headerFromFile("/setup/__brand.none.scss"))
+        .pipe(headerFromFile("/setup/__brand.base.scss"))
+        .pipe(headerFromFile("/setup/__preheader.scss"))
+        .pipe(
+            header("/** Built With Base Branding <%= pkg.version %> **/", {
+                pkg: pkg,
+            })
+        )
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(header("/** Function Test **/\n"))
+        .pipe(gulp.dest(PATHS.SCSS));
 };
 var constructColorStyleSheet = function(brand) {
     return gulp
@@ -217,6 +238,10 @@ var concatCSS = function(brand, framework) {
 var constructSassFiles = function(brand, framework) {
     var uc = constructUCStyleSheet(brand);
     uc = buildbrand(uc, brand, "");
+    if(framework == ""){
+        return uc.pipe(header("/** Function Test **/\n"))
+        .pipe(gulp.dest(PATHS.SCSS));
+    }
     var base = constructFrameworkStyleSheet(brand, framework);
     base = buildbrand(base, brand, framework);
     return merge(base, uc)
@@ -225,7 +250,8 @@ var constructSassFiles = function(brand, framework) {
 };
 var constructMarkdown = function(brand, framework) {
     var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
-    base = markdownbuild(base, brand + "_" + framework);
+    base = framework != ''? markdownbuild(base, brand + "_" + framework): markdownbuild(base, brand);
+
     return merge(base)
         .pipe(
             header(fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md", "utf8"))
@@ -287,7 +313,7 @@ gulp.task("copy-to-styleguide", function() {
 
 gulp.task("styleguide", function() {
     return run(
-        "npm run index && npm run zurb_acc && npm run boot_acc && npm run boot_journal && npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run boot_cardiosmart"
+        "npm run index && npm run zurb_mobile && npm run boot_acc && npm run boot_journal && npm run boot_cvquality &&  npm run layout_demo &&  npm run color_codes && npm run boot_cardiosmart"
     ).exec();
 });
 
@@ -321,7 +347,7 @@ gulp.task(
         function CSS() {
             return runSass("cvquality");
         },
-        function Concat() {
+        function CONCAT() {
             return concatCSS("cvquality", "boot");
         },
         function Markdown() {
@@ -344,7 +370,7 @@ gulp.task(
         function CSS() {
             return runSass("cardiosmart");
         },
-        function Concat() {
+        function CONCAT() {
             return concatCSS("cardiosmart", "boot");
         },
         function Markdown() {
@@ -367,7 +393,7 @@ gulp.task(
         function CSS() {
             return runSass("journal");
         },
-        function Concat() {
+        function CONCAT() {
             return concatCSS("journal", "boot");
         },
         function Markdown() {
@@ -390,7 +416,7 @@ gulp.task(
         function CSS() {
             return runSass("virtual");
         },
-        function Concat() {
+        function CONCAT() {
             return concatCSS("virtual", "boot");
         },
         function Markdown() {
@@ -413,7 +439,7 @@ gulp.task(
         function CSS() {
             return runSass("covid");
         },
-        function Concat() {
+        function CONCAT() {
             return concatCSS("covid", "boot");
         },
         function Markdown() {
@@ -421,7 +447,7 @@ gulp.task(
         },
         "copy-to-dist",
         "copy-to-styleguide",
-        function() {
+        function STYLEGUIDE() {
             return run("npm run boot_covid").exec();
         }
     )
@@ -431,49 +457,44 @@ gulp.task(
 gulp.task(
     "build-acc",
     gulp.series(
-        function buildCSS() {
-            var brand = "acc";
-            var framework_boot = "boot";
-            var framework_zurb = "zurb";
-            var uc = constructUCStyleSheet(brand);
-            uc = buildbrand(uc, brand, "");
-            var base_boot = constructFrameworkStyleSheet(brand, framework_boot);
-            base_boot = buildbrand(base_boot, brand, framework_boot);
-            var base_zurb = constructFrameworkStyleSheet(brand, framework_zurb);
-            base_zurb = buildbrand(base_zurb, brand, framework_zurb);
-            merge(base_boot, base_zurb, uc)
-                .pipe(header("\n"))
-                .pipe(gulp.dest(PATHS.SCSS));
-            return runSass(brand);
+        function SCSS() {
+            return constructSassFiles("acc", "boot");
         },
-        function CONCAT_Boot() {
+        function CSS() {
+            return runSass("acc");
+        },
+        function CONCAT() {
             return concatCSS("acc", "boot");
-        },
-        function CONCAT_zurb() {
-            return concatCSS("acc", "zurb");
         },
         "copy-to-dist",
         "copy-to-styleguide",
         function Markdown() {
-            var brand = "acc";
-            var framework_boot = "boot";
-            var base_boot = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
-            base_boot = markdownbuild(base_boot, brand + "_" + framework_boot);
-            var base_zurb = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
-            base_zurb = markdownbuild(base_zurb, brand + "_" + framework_boot);
-            return merge(base_boot, base_zurb)
-                .pipe(
-                    header(
-                        fs.readFileSync(PATHS.MARKDOWN + "markdown_preheader.md", "utf8")
-                    )
-                )
-                .pipe(gulp.dest(SOURCE.MD));
+            return constructMarkdown("acc", "boot");
         },
-        function runBootStyleguide() {
+        function STYLEGUIDE() {
             return run("npm run boot_acc").exec();
+        }
+    )
+);
+gulp.task(
+    "build-mobile",
+    gulp.series(
+        function SCSS() {
+            return constructSassFiles("mobile", "zurb");
         },
-        function runZurbStyleguide() {
-            return run("npm run zurb_acc").exec();
+        function CSS() {
+            return runSass("mobile");
+        },
+        function CONCAT() {
+            return concatCSS("mobile", "zurb");
+        },
+        "copy-to-dist",
+        "copy-to-styleguide",
+        function Markdown() {
+            return constructMarkdown("mobile", "zurb");
+        },
+        function STYLEGUIDE() {
+            return run("npm run zurb_mobile").exec();
         }
     )
 );
@@ -510,11 +531,32 @@ gulp.task(
         function Markdown() {
             return constructMarkdown("color", "codes");
         },
-        function() {
+        function STYLEGUIDE() {
             return run("npm run color_codes").exec();
         }
     )
 );
+
+gulp.task(
+    "build-glsearch",
+    gulp.series(
+        function SCSS() {
+            return constructStandaloneStyleSheet("glsearch");
+        },
+        function CSS() {
+            return runSass("glsearch");
+        },
+        function Markdown() {
+            return constructMarkdown("glsearch", "");
+        },
+        "copy-to-dist",
+        "copy-to-styleguide",
+        function() {
+            return run("npm run glsearch").exec();
+        }
+    )
+);
+
 
 gulp.task(
     "build-layout_demo",
@@ -542,7 +584,7 @@ gulp.task(
                 )
                 .pipe(gulp.dest(SOURCE.MD));
         },
-        function() {
+        function STYLEGUIDE() {
             return run("npm run layout_demo").exec();
         }
     )
@@ -574,7 +616,7 @@ gulp.task(
                 )
                 .pipe(gulp.dest(SOURCE.MD));
         },
-        function() {
+        function STYLEGUIDE() {
             return run("npm run home").exec();
         }
     )
@@ -584,7 +626,9 @@ gulp.task(
 gulp.task(
     "default",
     gulp.series(
+        "build-home",
         "build-acc",
+        "build-mobile",
         "build-cvquality",
         "build-cardiosmart",
         "build-journal",

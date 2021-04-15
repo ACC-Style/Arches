@@ -3,13 +3,13 @@ Typography
 
 Control size, weight, decoration, white-space, and overflow with these utility classes 
 
-Weight: 110
+Weight: 101
 
 Styleguide UC.Typography
 */
 
 
-/* No styleguide reference. */
+/* No Styleguide reference. */
 
 $white: rgb(246, 246, 246) !default;
 $black: rgb(19, 18, 18) !default;
@@ -41,7 +41,7 @@ $black: rgb(19, 18, 18) !default;
     <div class="uppercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
   </div>
 
-  Styleguide UC.Typography.Font.Family
+  Styleguide UC.Typography.FontFamily
  */
 
 @include loop-style(font-family);
@@ -60,7 +60,7 @@ $black: rgb(19, 18, 18) !default;
     <div class="uppercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
   </div>
 
-  Styleguide UC.Typography.Font.Style
+  Styleguide UC.Typography.Style
  */
 
 .font_normal {
@@ -91,8 +91,9 @@ Markup:
   <div class="text-uppercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
 </div>
 
+Weight: -90
 
-Styleguide UC.Typography.Font.Color
+Styleguide UC.Typography.Color
  */
 
 @each $color-name,
@@ -102,7 +103,7 @@ $hex-value in $theme-palette {
 
 
 /*
-Font Black and White Tranparency
+Font Color: Black & White
 
 black and white fonts can be modified to have levels of transparency between 0-9.
 
@@ -169,8 +170,10 @@ Markup:
   </div>
 </div>
 
+Weight: -91
 
-Styleguide UC.Typography.Font.Color Transparency
+
+Styleguide UC.Typography.Black White
  */
 
 .c_white {
@@ -204,6 +207,8 @@ Styleguide UC.Typography.Font.Color Transparency
     <div class="lowercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
     <div class="uppercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
   </div>
+
+Weight: -80
 
   Styleguide UC.Typography.Weight
  */
@@ -249,7 +254,9 @@ Styleguide UC.Typography.Font.Color Transparency
     <div class="uppercase pre-wrap">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
   </div>
 
-  Styleguide UC.Typography.Font.Size
+  Weight: -100
+
+  Styleguide UC.Typography.FontSize
  */
 
 @include loop-style(font-size);
@@ -288,7 +295,7 @@ Styleguide UC.Typography.Font.Color Transparency
     Quae sapiente reprehenderit explicabo esse consequatur error fugiat. Voluptas odit ipsam architecto quae perspiciatis nostrum autem at. Ut veritatis molestiae distinctio autem repudiandae voluptatem voluptatibus aspernatur.
   </div>
 
-  Styleguide UC.Typography.Text.Wrap
+  Styleguide UC.Typography.TextWrap
  */
 
 .wrap {
@@ -357,7 +364,7 @@ Styleguide UC.Typography.Font.Color Transparency
 	Markup:
 	<div class="{{modifier_class}} p_3 br_solid font_bold br_black-1 br_1 bg bg_primary c_white">text has a decoration of {{modifier_class}} <a>I am a link also decorated</a></div>
 
-	Styleguide UC.Typography.Text.Decoration
+	Styleguide UC.Typography.TextDecoration
 
  */
 
@@ -409,7 +416,7 @@ Styleguide UC.Typography.Font.Color Transparency
 	Markup:
 	<div class="{{modifier_class}} p_3 br_solid font_bold br_black-1 br_1 bg bg_primary c_white">text has shadow of {{modifier_class}}</div>
 
-	Styleguide UC.Typography.Text.Shadow
+	Styleguide UC.Typography.TextShadow
 
  */
 
@@ -431,7 +438,7 @@ Markup:
 <p class="text-indent_3">text that has an indent magnitude of 3 </p>
 </div>
 
-Styleguide UC.Typography.Text.Indent
+Styleguide UC.Typography.TextIndent
 
  */
 
@@ -455,7 +462,7 @@ Styleguide UC.Typography.Text.Indent
     <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 
-  Styleguide UC.Typography.Text.LineHeight
+  Styleguide UC.Typography.LineHeight
  */
 
 @include loop-style(line-height, '', '!important');
@@ -475,7 +482,7 @@ Styleguide UC.Typography.Text.Indent
     <p class="{{modifier_class}} lh_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 
-  Styleguide UC.Typography.Text.Alignment
+  Styleguide UC.Typography.TextAlignment
  */
 
 @include loop-style(text-align, '', '!important');

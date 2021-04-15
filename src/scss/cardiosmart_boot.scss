@@ -58,7 +58,7 @@ $theme-palette: map-merge(
 		success: $green,
 		warning: $alt-orange,
 		alert: $red,
-		navigation: $blue,
+		//navigation: $blue,
 		accent: $orange,
 		info: $alt-grey,
 		highlight: $yellow,
@@ -71,33 +71,34 @@ $active-class-name: 'active';
 $style-definition: map-deep-set($style-definition, 'is-active' 'short-name', '#{$active-class-name}>.a\\3A ');
 $style-definition: map-deep-set($style-definition, 'is-active-self' 'short-name', '#{$active-class-name}.a\\3A ');
 $fonts: (
-	accent: (
-		name: 'Roboto Slab',
-		short-name:"RS",
-		stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
-	),
-	display: (
-		name: 'Maven Pro',
-		short-name:"MP",
-		stack: '"Maven Pro","Muli","Open Sans","system",sans-serif',
-	),
-	copy: (
-		name: 'Muli',
-		short-name:"Mu",
-		stack: '"Muli","Open Sans","system",sans-serif',
-	),
-	ui: (
-		name: 'Open Sans',
-		short-name:"OS",
-		stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-	),
+    accent: (
+        name: 'Roboto Slab',
+        short-name:"RS",
+        stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
+    ),
+    display: (
+        name: 'Maven Pro',
+        short-name:"MP",
+        stack: '"Maven Pro","Muli","Open Sans","system",sans-serif',
+    ),
+    copy: (
+        name: 'Open Sans',
+        short-name:"OS",
+        stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+    ),
+    ui: (
+        name: 'Open Sans',
+        short-name:"OS",
+        stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+    ),
 );
-
 // Reset Values of Utlity-css.vars.scss
-$value-to-unit: map-deep-set($value-to-unit, font-family accent, map-deep-get($fonts, accent stack));
-$value-to-unit: map-deep-set($value-to-unit, font-family display, map-deep-get($fonts, display stack));
-$value-to-unit: map-deep-set($value-to-unit, font-family copy, map-deep-get($fonts, copy stack));
-$value-to-unit: map-deep-set($value-to-unit, font-family ui, map-deep-get($fonts, ui stack));
+$value-to-unit: map-deep-set($value-to-unit, font-family accent, unquote(map-deep-get($fonts, accent, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family display, unquote(map-deep-get($fonts, display, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family copy, unquote(map-deep-get($fonts, copy, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family ui, unquote(map-deep-get($fonts, ui, stack)));
+
+
 
 $font_display: get-css-size(font-family, display);
 $font_accent: get-css-size(font-family, accent);
@@ -105,7 +106,7 @@ $font_ui: get-css-size(font-family, ui);
 $font_copy: get-css-size(font-family, copy);
 $font_mono: get-css-size(font-family, mono);
 
-$global-radus-on: false;
+$global-radius-on: false;
 $global-border-radius: 6px;
 $value-to-unit: map-deep-set($value-to-unit, 'radius' 'radius', $global-border-radius);
 $global-border-round: 25px;
@@ -252,74 +253,250 @@ $line-height_1: get-css-size(line-height, 1);
 $line-height_2: get-css-size(line-height, 2);
 $line-height_3: get-css-size(line-height, 3);
 $line-height_4: get-css-size(line-height, 4);
-$line-height_5: get-css-size(line-height, 5);/*Bootstrap Framework Setup Files.*/
+$line-height_5: get-css-size(line-height, 5);// /*Bootstrap Framework Setup Files.*/
+
+// /*!
+//  * Bootstrap v4.4.1 (https://getbootstrap.com/)
+//  * Copyright 2011-2019 The Bootstrap Authors
+//  * Copyright 2011-2019 Twitter, Inc.
+//  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+//  */
+
+// @import '../../node_modules/bootstrap/scss/functions';
+// @import 'setup/config/__config.boot';
+// @import '../../node_modules/bootstrap/scss/variables';
+// @import '../../node_modules/bootstrap/scss/mixins';
+// @import '../../node_modules/bootstrap/scss/root';
+// @import '../../node_modules/bootstrap/scss/reboot';
+// @import '../../node_modules/bootstrap/scss/type';
+//  @import '../../node_modules/bootstrap/scss/images';
+// // @import '../../node_modules/bootstrap/scss/code';
+// @import '../../node_modules/bootstrap/scss/grid';
+// @import '../../node_modules/bootstrap/scss/tables';
+// @import '../../node_modules/bootstrap/scss/forms';
+// @import '../../node_modules/bootstrap/scss/buttons';
+// @import '../../node_modules/bootstrap/scss/transitions';
+// @import '../../node_modules/bootstrap/scss/dropdown';
+// @import '../../node_modules/bootstrap/scss/button-group';
+// @import '../../node_modules/bootstrap/scss/input-group';
+// @import '../../node_modules/bootstrap/scss/custom-forms';
+// @import '../../node_modules/bootstrap/scss/nav';
+// @import '../../node_modules/bootstrap/scss/navbar';
+// @import '../../node_modules/bootstrap/scss/card';
+// @import '../../node_modules/bootstrap/scss/breadcrumb';
+// @import '../../node_modules/bootstrap/scss/pagination';
+// // @import '../../node_modules/bootstrap/scss/badge';
+// @import '../../node_modules/bootstrap/scss/jumbotron';
+// // @import '../../node_modules/bootstrap/scss/alert';
+// @import '../../node_modules/bootstrap/scss/progress';
+// // @import '../../node_modules/bootstrap/scss/media';
+// @import '../../node_modules/bootstrap/scss/list-group';
+// @import '../../node_modules/bootstrap/scss/close';
+// // @import '../../node_modules/bootstrap/scss/toasts';
+// @import '../../node_modules/bootstrap/scss/modal';
+// @import '../../node_modules/bootstrap/scss/tooltip';
+// @import '../../node_modules/bootstrap/scss/popover';
+// @import '../../node_modules/bootstrap/scss/carousel';
+// @import '../../node_modules/bootstrap/scss/spinners';
+// // @import "../../node_modules/bootstrap/scss/utilities";
+// // @import "print";
+
 
 /*!
- * Bootstrap v4.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-@import '../../node_modules/bootstrap/scss/functions';
-@import 'setup/config/__config.boot';
-@import '../../node_modules/bootstrap/scss/variables';
-@import '../../node_modules/bootstrap/scss/mixins';
-@import '../../node_modules/bootstrap/scss/root';
-@import '../../node_modules/bootstrap/scss/reboot';
-@import '../../node_modules/bootstrap/scss/type';
- @import '../../node_modules/bootstrap/scss/images';
-// @import '../../node_modules/bootstrap/scss/code';
-@import '../../node_modules/bootstrap/scss/grid';
-@import '../../node_modules/bootstrap/scss/tables';
-@import '../../node_modules/bootstrap/scss/forms';
-@import '../../node_modules/bootstrap/scss/buttons';
-@import '../../node_modules/bootstrap/scss/transitions';
-@import '../../node_modules/bootstrap/scss/dropdown';
-@import '../../node_modules/bootstrap/scss/button-group';
-@import '../../node_modules/bootstrap/scss/input-group';
-@import '../../node_modules/bootstrap/scss/custom-forms';
-@import '../../node_modules/bootstrap/scss/nav';
-@import '../../node_modules/bootstrap/scss/navbar';
-@import '../../node_modules/bootstrap/scss/card';
-@import '../../node_modules/bootstrap/scss/breadcrumb';
-@import '../../node_modules/bootstrap/scss/pagination';
-// @import '../../node_modules/bootstrap/scss/badge';
-@import '../../node_modules/bootstrap/scss/jumbotron';
-// @import '../../node_modules/bootstrap/scss/alert';
-@import '../../node_modules/bootstrap/scss/progress';
-// @import '../../node_modules/bootstrap/scss/media';
-@import '../../node_modules/bootstrap/scss/list-group';
-@import '../../node_modules/bootstrap/scss/close';
-// @import '../../node_modules/bootstrap/scss/toasts';
-@import '../../node_modules/bootstrap/scss/modal';
-@import '../../node_modules/bootstrap/scss/tooltip';
-@import '../../node_modules/bootstrap/scss/popover';
-@import '../../node_modules/bootstrap/scss/carousel';
-@import '../../node_modules/bootstrap/scss/spinners';
-// @import "utilities";
-// @import "print";
+// scss-docs-start import-stack
+// Configuration
+@import "../../node_modules/bootstrap/scss/functions";
+@import  './setup/config/_config.boot';
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/accordion";
+@import "../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../node_modules/bootstrap/scss/pagination";
+@import "../../node_modules/bootstrap/scss/badge";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/toasts";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/tooltip";
+@import "../../node_modules/bootstrap/scss/popover";
+@import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/spinners";
+@import "../../node_modules/bootstrap/scss/offcanvas";
+
+// Helpers
+@import "../../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+// @import "../../node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
 @media #{$large-up} {
     body {
         background-image: url('../assets/img/cardiosmart/background-rectangle.jpg');
         background-attachment: fixed;
         background-color: #cad3d0;
     }
-}@import 'base/table.boot';
+}
+
+/*
+	Recipes
+
+	Combination of UCs can make complex and rich UI elements.  Here is a collection of curated UI that can be used in projects by just following these patterns.
+
+	Weight: 900
+
+	Styleguide Recipes
+
+*/
+
+
+/* Nav Recipes.00x */
+
+@import "recipes/base/mobile-nav";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/web-footer";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/quicklinks";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/advertisement";
+
+/* content Recipes.100 */
+
+@import "recipes/base/ordered-cards";
+
+/* content Recipes.250 */
+
+@import "recipes/base/GLSEARCH-search-result";/*
+	CardioSmart Recipes
+
+	The use of Utiltiy Class give us the ablitiy to create much of the UI needed for CardioSmart without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of CardioSmart.
+
+	Weight: 3000
+
+	Styleguide Recipes
+
+*/
+
+@import 'recipes/cardiosmart/_cardiosmart._header';
+
+@import 'recipes/cardiosmart/_cardiosmart._footer';
+
+@import 'recipes/cardiosmart/_cardiosmart._base';
+@import 'recipes/cardiosmart/_cardiosmart._page';
+/*
+	CardioSmart: Pages
+
+	The page is the backbone of the structures through out the website.  There are some swapable content for a page.  Basic content to graphic links build out a page. 
+
+	Weight: 3300
+
+	Styleguide RecipesPages
+
+*/
+@import 'recipes/cardiosmart/_cardiosmart._news';
+@import 'recipes/cardiosmart/_cardiosmart._articles';
+/*
+	CardioSmart: News Articles
+
+	The science and discoveries are always evolving and the news articles are a way for a user to keep up with the latest science. 
+
+	Weight: 3400
+
+	Styleguide RecipesNews
+
+*/
+@import 'recipes/cardiosmart/_cadiosmart._featured-related';
+/*
+	CardioSmart: Related Content
+
+	There are many components that pull in lists, carousels, and featurd presenetations of other assets and or pages because they are related. 
+
+	Weight: 3500
+
+	Styleguide RecipesRelated
+
+*/
+@import 'recipes/cardiosmart/_cardiosmart._patient-story';
+/*
+	CardioSmart: Patient Stories
+
+	The human face of cardiosmart is the stories of people who live and thrive with these conditions.
+
+	Weight: 3600
+
+	Styleguide RecipesPatient
+
+*/
+/*
+	FYHAH
+
+	Find your heart a home is a single page application that is housed in a subdomain of cardiosmart.
+
+	Weight: 5000
+
+	Styleguide RecipesFYHAH
+
+*/
+
+@import 'recipes/cardiosmart/_fyhah.cardiosmart.elements';
+
+/*
+	CHD
+
+	A search systems for clinics that meet the standard.
+
+	Weight: 6000
+
+	Styleguide RecipesCHD
+
+*/
+@import 'recipes/cardiosmart/_chdDirectory.cardiosmart.elements';
+// ACC Design Alterations
+@import "base/base";
+@import "components/logo";
+@import "components/interactive-extras";
+@import "styleguide/styleguide";
+@import "styleguide/__basic-html.base";
+@import "containers/containers";
+
+
+@import 'base/table.boot';
 @import 'styleguide/__basic-html.boot';
 @import 'components/boot/_boot.buttons';
 @import 'components/boot/_boot.carousel.override';
 @import 'components/boot/_boot.navbar.override';
 @import 'components/boot/_boot.collapser.icon';
-/*
-	Bootstrap Recipes
-
-	Combination of UCs and Base Components from the Bootstrap can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to the Bootstrap Components with the Utiltity Classes. 
-
-	Weight: -1
-
-Styleguide  Recipes Bootstrap.Intro
-
-*/
-
-@import "recipes/boot/_boot.basic_nav";
+@import 'components/cardiosmart/_cardiosmart.boot._navbar.override';
+@import 'components/sitefinity/_sitefinity.editor-decorator';
