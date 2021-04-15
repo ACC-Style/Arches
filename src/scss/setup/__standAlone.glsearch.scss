@@ -57,9 +57,9 @@
 	}
 	.inline-reference ,
 	.table a {
-		color: get-themecolor(accent);
+		color: get-themecolor(primary);
 		&::hover {
-			color: get-themecolor(accent, -2);
+			color: get-themecolor(primary, -2);
 			text-decoration: none;
 		}
 	}
@@ -99,6 +99,7 @@
 			background-color: #13121206;
 			font-weight: $font_medium;
 			font-family: $font_accent;
+			box-shadow: unset !important;
 		}
 	}
 	.table{
@@ -119,37 +120,61 @@
 			tr{position:relative;}
 			td:first-child,th:first-child {
 				position: sticky;
-				left: 0rem;
+				left: 1px;
 				top:0;
 				bottom:0;
 				background: white;
-				border-right: 1px solid rgba(get-themecolor(primary,1),10%);
-				max-width: 30vw;
-				box-shadow: 4px 0 5px 0 rgba(get-themecolor(primary,1),10%);
+				border-right: 1px solid rgba(get-themecolor(primary,-2),10%);
+				max-width: 25vw;
+				box-shadow: 4px 0 5px 0 rgba(get-themecolor(primary,-4),10%);
 			}
+			td:nth-child(2),th:nth-child(2) {padding-left:1rem}
 		}
 		> div{		
 			width: calc(100% + 0rem);
 			overflow-x: auto;
-			box-shadow: inset -4px 0 5px 0px rgba(get-themecolor(primary,1),10%);
+			box-shadow: inset -4px 0 5px 0px rgba(get-themecolor(primary,-4),10%);
+			&::-webkit-scrollbar {
+				width: 0.4rem;
+				height: 0.4rem;
+			}
+			/* Track */
+			&::-webkit-scrollbar-track {
+				box-shadow: make-shadow(2, 'inset', #000, 0.2);
+				background-color: rgba(get-themecolor(shade, -3), 0.1);
+			}
+			/* Handle */
+			&::-webkit-scrollbar-thumb {
+				border-radius: get-css-size(border-radius, round);
+				background: get-themecolor(accent, -1);
+				box-shadow: make-shadow(2, 'inset', #000, 0.2);
+			}
+			&::-webkit-scrollbar-thumb:window-inactive {
+				background: rgba(get-themecolor(accent, -1), 0.1);
+			}
+			&::-webkit-scrollbar-track:window-inactive {
+				background: rgba(get-themecolor(shade, -3), 0.1);
+			}
+			
 		}
 		> div:where(.table-footnotes,.inline-table-caption,.inline-table-label){
 			overflow:unset;
 			box-shadow: unset;
 		}
 		table {
-			width:max-content;
+			width:fit-content;
 			td>*{max-width:25em;}
 		}
 		@media #{$medium-up} {
 			table{
+				width:min-content;
 				td>*{max-width:30em;}
 			}
 		}
 
 		@media #{$large-up} {
 			table{
-				width:100%;
+				width:fit-content;
 				td>*{max-width:35em;}
 			}
 		}
@@ -164,7 +189,7 @@
 		color: get-themecolor(secondary, -2);
 	}
 	.superscript-reference,.inline-reference{
-		color: get-themecolor(accent, -1);
+		color: get-themecolor(primary, -1);
 		font-weight: $font_bold;
 		text-decoration: none;
 		padding-right:$padding_2;
