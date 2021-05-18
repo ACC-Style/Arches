@@ -17023,12 +17023,12 @@ Styleguide  Recipes Bootstrap.Carousel
   display: none;
 }
 
-.navbar-primary .nav-item.active, .navbar-primary .nav-item:focus, .navbar-primary .nav-item:hover {
+.navbar-primary .nav-item:hover {
   border-top-color: #e17009;
   border-bottom-color: #fff;
   background-color: #fff;
 }
-.navbar-primary .nav-item.active.nav-link, .navbar-primary .nav-item:focus.nav-link, .navbar-primary .nav-item:hover.nav-link {
+.navbar-primary .nav-item:hover.nav-link {
   color: white;
 }
 .navbar-primary .nav-item .nav-link.show {
@@ -17040,12 +17040,12 @@ Styleguide  Recipes Bootstrap.Carousel
     border-top: 0.25rem #004176 solid;
     border-bottom: 0.25rem #004176 solid;
   }
-  .navbar-primary .nav-item.active, .navbar-primary .nav-item:focus, .navbar-primary .nav-item:hover {
+  .navbar-primary .nav-item:hover {
     border-top-color: #e17009;
     border-bottom-color: #fff;
     background-color: #fff;
   }
-  .navbar-primary .nav-item.active .nav-link, .navbar-primary .nav-item.active .nav-link.show, .navbar-primary .nav-item:focus .nav-link, .navbar-primary .nav-item:focus .nav-link.show, .navbar-primary .nav-item:hover .nav-link, .navbar-primary .nav-item:hover .nav-link.show {
+  .navbar-primary .nav-item:hover .nav-link, .navbar-primary .nav-item:hover .nav-link.show {
     color: #004176;
   }
 }
@@ -17055,30 +17055,14 @@ Styleguide  Recipes Bootstrap.Carousel
     border-top: 0.25rem #004176 solid;
     border-bottom: 0.25rem #004176 solid;
   }
-  .navbar-primary.navbar-expand-lg .nav-item.active, .navbar-primary.navbar-expand-lg .nav-item:focus, .navbar-primary.navbar-expand-lg .nav-item:hover {
+  .navbar-primary.navbar-expand-lg .nav-item:hover {
     border-top-color: #e17009;
     border-bottom-color: #fff;
     background-color: #fff;
   }
-  .navbar-primary.navbar-expand-lg .nav-item.active .nav-link, .navbar-primary.navbar-expand-lg .nav-item:focus .nav-link, .navbar-primary.navbar-expand-lg .nav-item:hover .nav-link {
+  .navbar-primary.navbar-expand-lg .nav-item:hover .nav-link {
     background-color: #fff;
     color: #004176;
-  }
-}
-
-@media only screen and (min-width : 480px) {
-  .navbar-expand-sm .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-}
-@media only screen and (min-width : 768px) {
-  .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-}
-@media only screen and (min-width : 1024px) {
-  .navbar-expand-lg .dropdown:hover > .dropdown-menu {
-    display: block;
   }
 }
 
@@ -17094,11 +17078,11 @@ Styleguide  Recipes Bootstrap.Carousel
   content: "";
 }
 
-.dropdown_column {
-  min-width: 320px;
-  min-width: 20rem;
+@media only screen and (min-width : 768px) {
+  .dropdown_column {
+    min-width: 20rem;
+  }
 }
-
 /* 
 
 Header Nav
@@ -17137,7 +17121,7 @@ Markup:
 				<li class="nav-item flex_auto dropdown">
 					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="#" id="toolDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Tools &amp; Practice Support
 					</a>
-					<div class="dropdown-menu m-x_0:lg m-t_0 m-t_2:lg dropdown-menu-end" aria-labelledby="toolDropdown">
+					<div class="dropdown-menu br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="toolDropdown">
 						{{> "Recipes.BrandedNav.Dropdown.DoubleColumn" }}
 					</div>
 				</li>
@@ -17201,7 +17185,7 @@ Markup:
 				 aria-expanded="false"
 				><i class="far icon-toggle_chevron-up-down"></i> My ACC</a>
 			<div 
-			class="dropdown-menu dropdown-menu-end br_none br_solid:lg m-t_0 m-t_2:lg font_0" aria-labelledby="dropdownMyACC"
+			class="dropdown-menu dropdown-menu-end br_none br_solid:lg m-t_0 m-t_2:lg font_0" aria-labelledby="dropdownMyACC"  
 			>
 				<div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
 					<div class="p-x_2 p-y_0 dropdown_column">
@@ -17264,6 +17248,46 @@ MarkupWrapperClasses:
 
 Styleguide Recipes.BrandedNav.Login
 
+*/
+/*
+Javascript: Snippet to Show on Hover
+
+Description: 
+
+Markup:
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+// make it as accordion for smaller screens
+if (window.innerWidth > 992) {
+	document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
+		everyitem.addEventListener('mouseover', function(e){
+			let el_link = this.querySelector('a[data-bs-toggle]');
+			if(el_link != null){
+				let nextEl = el_link.nextElementSibling;
+				el_link.classList.add('show');
+				nextEl.classList.add('show');
+				nextEl.setAttribute("data-bs-popper", "none")
+			}
+		});
+		everyitem.addEventListener('mouseleave', function(e){
+			let el_link = this.querySelector('a[data-bs-toggle]');
+			if(el_link != null){
+				let nextEl = el_link.nextElementSibling;
+				el_link.classList.remove('show');
+				nextEl.classList.remove('show');
+				nextEl.removeAttribute('data-bs-popper');
+			}
+		})
+	});
+}
+// end if innerWidth
+}); 
+</script>
+
+
+Weight:0
+
+Styleguide Recipes.BrandedNav.JavaScript
 */
 /*
 Responsive Top Nav with Single Layer Nav

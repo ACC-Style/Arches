@@ -7622,7 +7622,7 @@ Styleguide Recipes.InteractiveExtras.Expanded Click Area
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #0000;
+  background-color: transparent;
   content: "";
   pointer-events: auto;
 }
@@ -7631,7 +7631,7 @@ Styleguide Recipes.InteractiveExtras.Expanded Click Area
   background-color: #9acd322e;
 }
 
-.icon-toggle_check:before, .icon-toggle_check-circle:before, .icon-toggle_check-sqaure:before, .icon-toggle_arrow-circle:before, .icon-toggle_caret-circle-right-down:before, .icon-toggle_chevron-double-left-right:before, .icon-toggle_chevron-double-up-down:before, .icon-toggle_chevron-up-down:before, .icon-toggle_plus-minus:before, .icon-toggle_bars-times:before {
+.icon-toggle_plus-minus-sub:before, .icon-toggle_check:before, .icon-toggle_check-circle:before, .icon-toggle_check-sqaure:before, .icon-toggle_arrow-circle:before, .icon-toggle_chevron-double-left-right:before, .icon-toggle_chevron-double-up-down:before, .icon-toggle_chevron-up-down:before, .icon-toggle_plus-minus:before, .icon-toggle_bars-times:before {
   margin: 0 4px;
   margin: 0 0.25rem;
 }
@@ -7642,10 +7642,9 @@ Is Active Toggle
 Many momment there are needs for toggles of icon when the parent is in the state of `active`.  Used in tree navs, dropdowns, and collapsing areas. 
 
 .icon-toggle_plus-minus 					-  Toggle between plus and minus square
-.icon-toggle_chevron-up-down				- 	Toggle a chevro pointing up and then down.
-.icon-toggle_chevron-double-up-down 					-  Toggle the double chevron to point up when active
-.icon-toggle_chevron-double-left-right		- Toggle cheverons left and right
-.icon-toggle_caret-circle-right-down 					-  Toggle the caret to point down when active.
+.icon-toggle_chevron-up-down				- 	Toggle a chevron pointing up and then down.
+.icon-toggle_chevron-double-up-down 		-  Toggle the double chevron to point up when active
+.icon-toggle_chevron-double-left-right		- Toggle chevron left and right
 .icon-toggle_arrow-circle 					-  Toggle the arrow to have a circle when active.
 .icon-toggle_bars-times 					-  Toggle between bars and times
 .icon-toggle_check-sqaure					-  Check Marks toggle on and off
@@ -7707,13 +7706,6 @@ Styleguide Recipes.InteractiveExtras.ToggleIcons
 }
 .active .icon-toggle_chevron-double-left-right:before, .show .icon-toggle_chevron-double-left-right:before, .active > .icon-toggle_chevron-double-left-right:before {
   content: "";
-}
-
-.icon-toggle_caret-circle-right-down:before {
-  content: "";
-}
-.active .icon-toggle_caret-circle-right-down:before, .show .icon-toggle_caret-circle-right-down:before, .active > .icon-toggle_caret-circle-right-down:before {
-  content: "";
 }
 
 .icon-toggle_arrow-circle:before {
@@ -14745,6 +14737,13 @@ Styleguide  Recipes Bootstrap.Carousel
   content: "";
 }
 
+.icon-toggle_plus-minus-sub:before {
+  content: "";
+}
+.collapsed > .icon-toggle_plus-minus-sub:before, .collapsed .icon-toggle_plus-minus-sub:before {
+  content: "";
+}
+
 .navbar {
   font-family: "Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab";
 }
@@ -14768,15 +14767,13 @@ Styleguide  Recipes Bootstrap.Carousel
   display: none;
 }
 
-.navbar-primary .nav-item.active, .navbar-primary .nav-item:focus, .navbar-primary .nav-item:hover {
+.navbar-primary .nav-item .nav-link {
+  color: inherit;
+}
+
+.navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus, .navbar-primary .nav-item:active {
   border-top-color: #16a385;
   border-bottom-color: #fff;
-  background-color: #fff;
-}
-.navbar-primary .nav-item.active.nav-link, .navbar-primary .nav-item:focus.nav-link, .navbar-primary .nav-item:hover.nav-link {
-  color: white;
-}
-.navbar-primary .nav-item .nav-link.show {
   background-color: #fff;
   color: #004176;
 }
@@ -14785,12 +14782,10 @@ Styleguide  Recipes Bootstrap.Carousel
     border-top: 0.25rem #004176 solid;
     border-bottom: 0.25rem #004176 solid;
   }
-  .navbar-primary .nav-item.active, .navbar-primary .nav-item:focus, .navbar-primary .nav-item:hover {
+  .navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus, .navbar-primary .nav-item:active {
     border-top-color: #16a385;
     border-bottom-color: #fff;
     background-color: #fff;
-  }
-  .navbar-primary .nav-item.active .nav-link, .navbar-primary .nav-item.active .nav-link.show, .navbar-primary .nav-item:focus .nav-link, .navbar-primary .nav-item:focus .nav-link.show, .navbar-primary .nav-item:hover .nav-link, .navbar-primary .nav-item:hover .nav-link.show {
     color: #004176;
   }
 }
@@ -14800,30 +14795,11 @@ Styleguide  Recipes Bootstrap.Carousel
     border-top: 0.25rem #004176 solid;
     border-bottom: 0.25rem #004176 solid;
   }
-  .navbar-primary.navbar-expand-lg .nav-item.active, .navbar-primary.navbar-expand-lg .nav-item:focus, .navbar-primary.navbar-expand-lg .nav-item:hover {
+  .navbar-primary.navbar-expand-lg .nav-item:hover, .navbar-primary.navbar-expand-lg .nav-item:focus, .navbar-primary.navbar-expand-lg .nav-item:active {
     border-top-color: #16a385;
     border-bottom-color: #fff;
     background-color: #fff;
-  }
-  .navbar-primary.navbar-expand-lg .nav-item.active .nav-link, .navbar-primary.navbar-expand-lg .nav-item:focus .nav-link, .navbar-primary.navbar-expand-lg .nav-item:hover .nav-link {
-    background-color: #fff;
     color: #004176;
-  }
-}
-
-@media only screen and (min-width : 480px) {
-  .navbar-expand-sm .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-}
-@media only screen and (min-width : 768px) {
-  .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-}
-@media only screen and (min-width : 1024px) {
-  .navbar-expand-lg .dropdown:hover > .dropdown-menu {
-    display: block;
   }
 }
 
@@ -14840,10 +14816,14 @@ Styleguide  Recipes Bootstrap.Carousel
 }
 
 .dropdown_column {
-  min-width: 320px;
-  min-width: 20rem;
+  min-width: 70vw;
 }
 
+@media only screen and (min-width : 768px) {
+  .dropdown_column {
+    min-width: 20rem;
+  }
+}
 /* 
 
 Header Nav
@@ -14851,52 +14831,52 @@ Header Nav
 The Header Nav of ACC.org. <span class="font_n1 font_italic c_warning">This is sample data and might not reflect the full design or content needed in production.</span>
 
 Markup:
-<div class="flex  relative">
-	<nav class="flex_auto navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_1">
+<div class="flex c_white relative">
+	<nav class="flex_auto navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_1 relative">
 		{{> "Recipes.BrandedNav.Hamburger" }}
 		<div class="collapse navbar-collapse" id="navBarMainNav">
 			<ul class="navbar-nav flex flex_row:lg flex_column justify_around w_100">
-				<li class="nav-item flex_shrink">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/" title="Home of the American College of Cardiology"><i class="fas fa-home p-x_3:lg"></i><span class="display_none:lg">&nbsp;Home</span></a>
+				<li class="nav-item relative flex_shrink">
+					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/" title="Home of the American College of Cardiology"><i class="fas fa-home p-x_3:lg"></i><span class="display_none:lg">&nbsp;Home</span></a>
 				</li>
-				<li class="display_none:lg nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources">Guidelines</a>
+				<li class="display_none:lg relative nav-item relative flex_auto">
+					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources">Guidelines</a>
 				</li>
-				<li class="nav-item flex_auto dropdown ">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="/clinical-topics" id="clinicalTopicsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Clinical Topics</a>
+				<li class="nav-item relative flex_auto dropdown ">
+					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="/clinical-topics" id="clinicalTopicsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Clinical Topics</a>
 					<div class="dropdown-menu br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="clinicalTopicsDropdown">
 						{{> "Recipes.BrandedNav.Dropdown.AltContent" }}
 					</div>
 				</li>
-				<li class="nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="#">Latest In Cardiology</a>
+				<li class="nav-item relative flex_auto ">
+					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="#">Latest In Cardiology</a>
 				</li>
-				<li class="nav-item flex_auto dropdown">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="#" id="eduDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>
+				<li class="nav-item relative flex_auto dropdown">
+					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="#" id="eduDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>
 						Education and Meetings
 					</a>
-					<div class="dropdown-menu br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="eduDropdown">
+					<div class="dropdown-menu dropdown-menu-end  br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="eduDropdown">
 						{{> "Recipes.BrandedNav.Dropdown" }}
 					</div>
 				</li>
-				<li class="nav-item flex_auto dropdown">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="#" id="toolDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Tools &amp; Practice Support
+				<li class="nav-item relative flex_auto dropdown">
+					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="#" id="toolDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Tools &amp; Practice Support
 					</a>
-					<div class="dropdown-menu m-x_0:lg m-t_0 m-t_2:lg dropdown-menu-end" aria-labelledby="toolDropdown">
+					<div class="dropdown-menu  dropdown-menu-end br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="toolDropdown">
 						{{> "Recipes.BrandedNav.Dropdown.DoubleColumn" }}
 					</div>
 				</li>
-				<li class="display_none:lg nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/membership" title="Access exclusive member features and groups or learn about ACC membership">Membership</a>
+				<li class="display_none:lg nav-item relative flex_auto ">
+					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/membership" title="Access exclusive member features and groups or learn about ACC membership">Membership</a>
 				</li>
-				<li class="display_none:lg nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/about-acc" title="Learn about the ACC organization">About ACC</a>
+				<li class="display_none:lg nav-item relative flex_auto ">
+					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/about-acc" title="Learn about the ACC organization">About ACC</a>
 				</li>
-				<li class="display_none:lg nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="http://www.onlinejacc.org/" target="_blank" title="JACC.org">JACC</a>
+				<li class="display_none:lg nav-item relative flex_auto ">
+					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="http://www.onlinejacc.org/" target="_blank" title="JACC.org">JACC</a>
 				</li>
-				<li class="display_none:lg nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="http://accscientificsession.acc.org" target="_blank" title="ACC Annual Scientific Session Website">ACC.19</a>
+				<li class="display_none:lg nav-item relative flex_auto ">
+					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="http://accscientificsession.acc.org" target="_blank" title="ACC Annual Scientific Session Website">ACC.19</a>
 				</li>
 			</ul>
 		</div>
@@ -14918,9 +14898,10 @@ Mobile Menu Nav (Hamburger)
 Description: A button that triggers the menu to show or hide  with the site.
 
 Markup:
-<button class="br_solid br_2 br_white-2 collapsed m-l_3 m-y_3 navbar-toggler p_2" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMainNav" aria-controls="navBarMainNav" aria-expanded="false" aria-label="Toggle navigation">
+<div class="relative"><button class="br_solid br_2 br_white-2 collapsed m-l_3 m-y_3 navbar-toggler p_2 expanded-click-area collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMainNav" aria-controls="navBarMainNav" aria-expanded="false" aria-label="Toggle navigation">
 	<i class="icon-toggle_bars-times fas fa a:c_acc-2 c_white"></i><span class="a:c_acc-2 c_white p-x_3 uppercase font_accent">Menu</span>
 </button>
+</div>
 
 MarkupWrapperClasses:
 flex_auto navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_1 show
@@ -14938,15 +14919,15 @@ The ACC.org Nav has a shade nav that houses the login and profile nav with a sha
 Markup:
 <nav class="absolute bg_primary br-t_1 br-b_1  br_primary br_solid br_none flex_shrink font_0 font_1:lg m-l_auto navbar navbar-dark navbar-expand p-y_2 r_0 t_0 relative:lg" >
 	<ul class="navbar-nav">
-		<li class="nav-item dropdown">
-			<a class="nav-link a:c_white h:c_white"
+		<li class="nav-item relative flex_shrink dropdown">
+			<a class="nav-link expanded-click-area a:c_white h:c_white nowrap"
 				 role="button"
 				 id="dropdownMyACC"
 				 data-bs-toggle="dropdown"
 				 aria-expanded="false"
 				><i class="far icon-toggle_chevron-up-down"></i> My ACC</a>
 			<div 
-			class="dropdown-menu dropdown-menu-end br_none br_solid:lg m-t_0 m-t_2:lg font_0" aria-labelledby="dropdownMyACC" data-bs-popper="none"
+			class="dropdown-menu dropdown-menu-end br_none br_solid:lg m-t_0 m-t_2:lg font_0" aria-labelledby="dropdownMyACC"  
 			>
 				<div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
 					<div class="p-x_2 p-y_0 dropdown_column">
@@ -15009,6 +14990,46 @@ MarkupWrapperClasses:
 
 Styleguide Recipes.BrandedNav.Login
 
+*/
+/*
+Javascript: Snippet to Show on Hover
+
+Description: 
+
+Markup:
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+// make it as accordion for smaller screens
+if (window.innerWidth > 992) {
+	document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
+		everyitem.addEventListener('mouseover', function(e){
+			let el_link = this.querySelector('a[data-bs-toggle]');
+			if(el_link != null){
+				let nextEl = el_link.nextElementSibling;
+				el_link.classList.add('show');
+				nextEl.classList.add('show');
+				nextEl.setAttribute("data-bs-popper", "none")
+			}
+		});
+		everyitem.addEventListener('mouseleave', function(e){
+			let el_link = this.querySelector('a[data-bs-toggle]');
+			if(el_link != null){
+				let nextEl = el_link.nextElementSibling;
+				el_link.classList.remove('show');
+				nextEl.classList.remove('show');
+				nextEl.removeAttribute('data-bs-popper');
+			}
+		})
+	});
+}
+// end if innerWidth
+}); 
+</script>
+
+
+Weight:0
+
+Styleguide Recipes.BrandedNav.JavaScript
 */
 /*
 Responsive Top Nav with Single Layer Nav
@@ -15080,11 +15101,11 @@ The Header Nav of ACC.org
 
 Markup:
 <div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
-	<div class="p-x_2 p-y_0 p-y_2:md dropdown_column">
+	<div class="p-x_2 p-y_0 p-y_2:md dropdown_column w_50:md">
 		{{> "Recipes.BrandedNav.Dropdown.List.Simple" }}
 	</div>
 	<div
-		class="p-x_2 p-y_0 p-y_2:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md dropdown_column"
+		class="p-x_2 p-y_0 p-y_2:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md dropdown_column w_50:md"
 	>
 		{{> "Recipes.BrandedNav.Dropdown.List.SubLinks" }}
 	</div>
@@ -15173,14 +15194,14 @@ Description: Simple single layer of links in a drop down
 
 Markup:
 <ul class="ul_none lh_2 m_0 max-w_25 w_100">
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/acute-coronary-syndromes"
 			><span class="text-indent_n1 inline-block m-l_4">Acute Coronary Syndromes</span></span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/anticoagulation-management"
@@ -15188,49 +15209,49 @@ Markup:
 			><span class="text-indent_n1 inline-block m-l_4">Anticoagulation Management</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/arrhythmias-and-clinical-ep"
 			><span class="text-indent_n1 inline-block m-l_4">Arrhythmias and Clinical EP</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/acute-coronary-syndromes/atherosclerotic-disease-cad-pad"
 			><span class="text-indent_n1 inline-block m-l_4">Atherosclerotic Disease (CAD/PAD)</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/cardiac-surgery"
 			><span class="text-indent_n1 inline-block m-l_4">Cardiac Surgery</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/cardio-oncology"
 			><span class="text-indent_n1 inline-block m-l_4">Cardio-Oncology</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/congenital-heart-disease-pediatric-cardiology"
 			><span class="text-indent_n1 inline-block m-l_4">Congenital Heart Disease and Pediatric Cardiology</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/diabetes-and-cardiometabolic-disease"
 			><span class="text-indent_n1 inline-block m-l_4">Diabetes and Cardiometabolic Disease</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/dyslipidemia"
@@ -15238,14 +15259,14 @@ Markup:
 			><span class="text-indent_n1 inline-block m-l_4">Dyslipidemia</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/geriatric-cardiology"
 			><span class="text-indent_n1 inline-block m-l_4">Geriatric Cardiology</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/heart-failure-and-cardiomyopathies"
@@ -15266,127 +15287,148 @@ Dropdown Nav List with Sub Links
 Description: Simple single layer of links in a drop down 
 
 Markup:
-<ul class="ul_none lh_2">
-			<li class="">
-				<span class="toggler"></span>
-				<a
-					class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
-					href="/education-and-meetings/education-catalog<span class="text-indent_n1 inline-block m-l_4">Online Learning Catalog</span></a
-				>
-				<ul class="ul_none lh_3 font-size_down">
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
-							href="/earncredit"
-							><span class="text-indent_n1 inline-block m-l_5">Earn Credit</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
-							href="/education-and-meetings/products-and-resources/board-prep-offerings"
-							title="Board Prep Offerings"
-							><span class="text-indent_n1 inline-block m-l_5">Board Prep Offerings</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
-							href="/education-and-meetings/education-catalog"
-							><span class="text-indent_n1 inline-block m-l_5">View the Entire Catalog</span></a
-						>
-					</li>
-				</ul>
-			</li>
-			<li class="">
-				<span class="toggler"></span>
-				<a
-					class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
-					href="/education-and-meetings/education-catalog<span class="text-indent_n1 inline-block m-l_4">Products</span></a
-				>
-				<ul class="ul_none lh_3 font-size_down">
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/accsap"
-							><span class="text-indent_n1 inline-block m-l_5">ACCSAP</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/accel-audio"
-							><span class="text-indent_n1 inline-block m-l_5">ACCEL</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/cardiosource-plus"
-							><span class="text-indent_n1 inline-block m-l_5">CardioSource Plus for Institutions and Practices</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/cathsap"
-							><span class="text-indent_n1 inline-block m-l_5">CathSAP</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/ecg-drill-and-practice"
-							title="ECG Drill and Practice"
-							><span class="text-indent_n1 inline-block m-l_5">ECG Drill and Practice</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/echosap"
-							><span class="text-indent_n1 inline-block m-l_5">EchoSAP</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/epsap"
-							><span class="text-indent_n1 inline-block m-l_5">EP SAP</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/heart-songs-5"
-							><span class="text-indent_n1 inline-block m-l_5">Heart Songs</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/iscience"
-							><span class="text-indent_n1 inline-block m-l_5">iScience</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/recent-advances-in-clinical-nuclear-cardiology-and-cardiac-ct-mod"
-							><span class="text-indent_n1 inline-block m-l_5">Nuclear Cardiology and Cardiac CT Meeting on Demand</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/rightsteps-optimizing-medical-therapy-for-chronic-heart-failure"
-							><span class="text-indent_n1 inline-block m-l_5">RightSTEPS Optimizing Medical Therapy for Chronic Heart
-							Failure</span></a
-						>
-					</li>
-				</ul>
-			</li>
-		</ul>
+<ul class="ul_none lh_2"
+    id="SubLinkCollapseParent">
+    <li class="m-b_2">
+        <a class="dropdown-item transition_4 wrap"
+           href="/clinical-topics/acute-coronary-syndromes"><span
+                  class="text-indent_n1 inline-block m-l_4">Acute
+                Coronary Syndromes</span></span></a>
+    </li>
+    <li class="m-b_2">
+        <a class="dropdown-item transition_4 wrap"
+           href="/clinical-topics/anticoagulation-management"
+           title="Anticoagulation Management"><span
+                  class="text-indent_n1 inline-block m-l_4">Anticoagulation
+                Management</span></a>
+    </li>
+    <li class="m-b_2">
+        <div
+             class="flex justify_start p-l_4 transition_4 dropdown-item">
+            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit collapsed"
+                    data-bs-toggle="collapse"
+                    role="button"
+                    aria-expanded="true"
+                    aria-controls="learningCollapse"
+                    data-bs-target="#learningCollapse"
+                    onclick="event.stopPropagation()">
+                <i
+                   class="far fa icon-toggle_plus-minus-sub display_none:lg m-l_n2 m-r_2"></i>
+            </button>
+            <a class="flex_grow self_center wrap text-indent_n1 inline-block m-l_4 c_inherit"
+               href="#">Online Learning Catalog</a>
+        </div>
+        <ul class="ul_none lh_3 font-size_down collapse transition_4"
+            id="learningCollapse">
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/earncredit"><span
+                          class="text-indent_n1 inline-block m-l_5">Earn
+                        Credit</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/board-prep-offerings"
+                   title="Board Prep Offerings"><span
+                          class="text-indent_n1 inline-block m-l_5">Board
+                        Prep Offerings</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/education-catalog"><span
+                          class="text-indent_n1 inline-block m-l_5">View
+                        the Entire Catalog</span></a>
+            </li>
+        </ul>
+    </li>
+    <li class="m-b_2">
+        <div
+             class="flex justify_start p-l_4 transition_4 dropdown-item">
+            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit collapsed"
+                    data-bs-toggle="collapse"
+                    role="button"
+                    aria-expanded="true"
+                    aria-controls="productsCollapse"
+                    data-bs-target="#productsCollapse"
+                    onclick="event.stopPropagation()">
+                <i
+                   class="far fa icon-toggle_plus-minus-sub display_none:lg m-l_n2 m-r_2"></i>
+            </button>
+            <a class="flex_grow self_center wrap text-indent_n1 inline-block m-l_4 c_inherit"
+               href="/education-and-meetings/education-catalog">Products</a>
+        </div>
+        <ul class="ul_none lh_3 font-size_down collapse transition_4"
+            id="productsCollapse">
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/accsap"><span
+                          class="text-indent_n1 inline-block m-l_5">ACCSAP</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/accel-audio"><span
+                          class="text-indent_n1 inline-block m-l_5">ACCEL</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/cardiosource-plus"><span
+                          class="text-indent_n1 inline-block m-l_5">CardioSource
+                        Plus for Institutions and
+                        Practices</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/cathsap"><span
+                          class="text-indent_n1 inline-block m-l_5">CathSAP</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/ecg-drill-and-practice"
+                   title="ECG Drill and Practice"><span
+                          class="text-indent_n1 inline-block m-l_5">ECG
+                        Drill and Practice</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/echosap"><span
+                          class="text-indent_n1 inline-block m-l_5">EchoSAP</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/epsap"><span
+                          class="text-indent_n1 inline-block m-l_5">EP
+                        SAP</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/heart-songs-5"><span
+                          class="text-indent_n1 inline-block m-l_5">Heart
+                        Songs</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/iscience"><span
+                          class="text-indent_n1 inline-block m-l_5">iScience</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/recent-advances-in-clinical-nuclear-cardiology-and-cardiac-ct-mod"><span
+                          class="text-indent_n1 inline-block m-l_5">Nuclear
+                        Cardiology and Cardiac CT Meeting on
+                        Demand</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/rightsteps-optimizing-medical-therapy-for-chronic-heart-failure"><span
+                          class="text-indent_n1 inline-block m-l_5">RightSTEPS
+                        Optimizing Medical Therapy for
+                        Chronic Heart
+                        Failure</span></a>
+            </li>
+        </ul>
+    </li>
+</ul>
+
 
 Weight:1005
 

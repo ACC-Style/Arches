@@ -9,10 +9,9 @@ Is Active Toggle
 Many momment there are needs for toggles of icon when the parent is in the state of `#{$active-class-name}`.  Used in tree navs, dropdowns, and collapsing areas. 
 
 .icon-toggle_plus-minus 					-  Toggle between plus and minus square
-.icon-toggle_chevron-up-down				- 	Toggle a chevro pointing up and then down.
-.icon-toggle_chevron-double-up-down 					-  Toggle the double chevron to point up when active
-.icon-toggle_chevron-double-left-right		- Toggle cheverons left and right
-.icon-toggle_caret-circle-right-down 					-  Toggle the caret to point down when active.
+.icon-toggle_chevron-up-down				- 	Toggle a chevron pointing up and then down.
+.icon-toggle_chevron-double-up-down 		-  Toggle the double chevron to point up when active
+.icon-toggle_chevron-double-left-right		- Toggle chevron left and right
 .icon-toggle_arrow-circle 					-  Toggle the arrow to have a circle when active.
 .icon-toggle_bars-times 					-  Toggle between bars and times
 .icon-toggle_check-sqaure					-  Check Marks toggle on and off
@@ -92,15 +91,7 @@ Styleguide Recipes.InteractiveExtras.ToggleIcons
     }
 }
 
-.icon-toggle_caret-circle-right-down:before {
-    @extend %icon-toggle-space;
-    content: '\f32d';
-    .#{$active-class-name} &,
-    .show &,
-    .#{$active-class-name}>& {
-        content: '\f330';
-    }
-}
+
 
 .icon-toggle_arrow-circle:before {
     @extend %icon-toggle-space;
