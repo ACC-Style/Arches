@@ -1090,7 +1090,7 @@ Styleguide UC.Typography.Black White
   color: white !important;
 }
 
-.c_inherit {
+.c_inherit,.c_inherit-all:hover, .c_inherit-all:active, .c_inherit-all:visited, .c_inherit-all:focus, .c_inherit-all {
   color: inherit;
 }
 
@@ -12589,6 +12589,10 @@ a:focus {
 
 .h\:br_acc-n5:hover {
   border-color: #00101e !important;
+}
+
+.h\:c_inherit {
+  color: inherit;
 }
 
 /*
@@ -28381,18 +28385,29 @@ Styleguide  Recipes Bootstrap.Carousel
 }
 
 @media only screen and (min-width : 1024px) {
-  .navbar-primary.navbar-expand-lg .nav-item {
+  .navbar-primary .navbar-nav .nav-item {
     border-top: 0.25rem #004176 solid;
     border-bottom: 0.25rem #004176 solid;
   }
-  .navbar-primary.navbar-expand-lg .nav-item:hover, .navbar-primary.navbar-expand-lg .nav-item:focus, .navbar-primary.navbar-expand-lg .nav-item:active {
+  .navbar-primary .navbar-nav .nav-item .nav-link, .navbar-primary .navbar-nav .nav-item .nav-link:hover, .navbar-primary .navbar-nav .nav-item .nav-link:focus, .navbar-primary .navbar-nav .nav-item .nav-link:active {
+    color: #fff;
+  }
+  .navbar-primary .navbar-nav .nav-item:hover, .navbar-primary .navbar-nav .nav-item:focus, .navbar-primary .navbar-nav .nav-item:active {
     border-top-color: #16a385;
     border-bottom-color: #fff;
     background-color: #fff;
     color: #004176;
   }
+  .navbar-primary .navbar-nav .nav-item:hover .nav-link, .navbar-primary .navbar-nav .nav-item:hover .nav-link:hover, .navbar-primary .navbar-nav .nav-item:hover .nav-link:focus, .navbar-primary .navbar-nav .nav-item:hover .nav-link:active, .navbar-primary .navbar-nav .nav-item:focus .nav-link, .navbar-primary .navbar-nav .nav-item:focus .nav-link:hover, .navbar-primary .navbar-nav .nav-item:focus .nav-link:focus, .navbar-primary .navbar-nav .nav-item:focus .nav-link:active, .navbar-primary .navbar-nav .nav-item:active .nav-link, .navbar-primary .navbar-nav .nav-item:active .nav-link:hover, .navbar-primary .navbar-nav .nav-item:active .nav-link:focus, .navbar-primary .navbar-nav .nav-item:active .nav-link:active {
+    color: #004176;
+  }
 }
 
+@media only screen and (min-width : 1024px) {
+  .collapse.block\:lg {
+    display: block;
+  }
+}
 .dropdown-item {
   color: #157894;
 }
@@ -28758,11 +28773,11 @@ It is easy to add images in replace of text links in the navs.
 
 Markup:
 <div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
-	<div class="p-x_2 p-y_0 p-y_2:md order_2 order_1:md dropdown_column">
+	<div class="p-x_2 p-y_0 p-y_2:md order_2 order_1:md dropdown_column w_50:md">
 				{{> "Recipes.BrandedNav.Dropdown.List.AltContent" }}
 	</div>
 	<div
-		class="p-x_2 p-y_0 p-y_2:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md order_1 order_2:md dropdown_column"
+		class="p-x_2 p-y_0 p-y_2:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md order_1 order_2:md dropdown_column w_50:md"
 	>
 			{{> "Recipes.BrandedNav.Dropdown.List.SubLinks" }}
 	</div>
@@ -28895,7 +28910,7 @@ Markup:
     <li class="m-b_2">
         <div
              class="flex justify_start p-l_4 transition_4 dropdown-item">
-            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit collapsed"
+            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit-all h:undecorated collapsed"
                     data-bs-toggle="collapse"
                     role="button"
                     aria-expanded="true"
@@ -28905,10 +28920,10 @@ Markup:
                 <i
                    class="far fa icon-toggle_plus-minus-sub display_none:lg m-l_n2 m-r_2"></i>
             </button>
-            <a class="flex_grow self_center wrap text-indent_n1 inline-block m-l_4 c_inherit"
+            <a class="flex_grow self_center wrap text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated"
                href="#">Online Learning Catalog</a>
         </div>
-        <ul class="ul_none lh_3 font-size_down collapse transition_4"
+        <ul class="ul_none lh_3 font-size_down collapse transition_4 block:lg"
             id="learningCollapse">
             <li class="">
                 <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
@@ -28934,7 +28949,7 @@ Markup:
     <li class="m-b_2">
         <div
              class="flex justify_start p-l_4 transition_4 dropdown-item">
-            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit collapsed"
+            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit-all h:undecorated collapsed"
                     data-bs-toggle="collapse"
                     role="button"
                     aria-expanded="true"
@@ -28944,10 +28959,10 @@ Markup:
                 <i
                    class="far fa icon-toggle_plus-minus-sub display_none:lg m-l_n2 m-r_2"></i>
             </button>
-            <a class="flex_grow self_center wrap text-indent_n1 inline-block m-l_4 c_inherit"
+            <a class="flex_grow self_center wrap text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated"
                href="/education-and-meetings/education-catalog">Products</a>
         </div>
-        <ul class="ul_none lh_3 font-size_down collapse transition_4"
+        <ul class="ul_none lh_3 font-size_down collapse transition_4 block:lg"
             id="productsCollapse">
             <li class="">
                 <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
