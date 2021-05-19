@@ -204,8 +204,8 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 	}
 	.table{
 		display: block;
-		&::before {
-			font-size: $font_n1;
+		&::before,&::after {
+			font-size: $font_n2;
 			font-family: 'Font Awesome 5 Pro';
 			font-weight: 900;
 			content: "\f060  Tables May Scroll Left to Right  \f061";
@@ -233,6 +233,7 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 		> div{		
 			width: calc(100% + 0rem);
 			overflow-x: auto;
+			height:auto;
 			box-shadow: inset -4px 0 5px 0px rgba(get-themecolor(primary,-4),10%);
 			&::-webkit-scrollbar {
 				width: 0.4rem;
