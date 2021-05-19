@@ -130,12 +130,12 @@
             <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
                     <header class="bg_white kss-section kss-section--depth-3 shadow_1" id="kssref-recipes-brandednav-javascript">
                 <article class="kss-section__content">
-                        <p class="kss-section__source">Source: <span>dist/css/acc_boot_combo.css</span>, line <span>28599</span>
+                        <p class="kss-section__source">Source: <span>dist/css/acc_boot_combo.css</span>, line <span>28626</span>
                         </p>
                     <a class="kss-section__permalink" href="#kssref-recipes-brandednav-javascript">
                         <h3 class="kss-section__item kss-section__item--depth-3">
                             <span class="kss-section__ref">6.1.2</span>
-                            <span class="kss-section__name">Javascript: Snippet to Show on Hover</span>
+                            <span class="kss-section__name">JavaScript: Snippet to Show on Hover</span>
                         </h3>
                     </a>
                         <div class="kss-section__description">
@@ -154,7 +154,7 @@ if (window.innerWidth > 992) {
 		everyitem.addEventListener('mouseover', function(e){
 			let el_link = this.querySelector('a[data-bs-toggle]');
 			if(el_link != null){
-				let nextEl = el_link.nextElementSibling;
+				let nextEl = this.querySelector('.dropdown-menu');
 				el_link.classList.add('show');
 				nextEl.classList.add('show');
 				nextEl.setAttribute("data-bs-popper", "none")
@@ -163,7 +163,7 @@ if (window.innerWidth > 992) {
 		everyitem.addEventListener('mouseleave', function(e){
 			let el_link = this.querySelector('a[data-bs-toggle]');
 			if(el_link != null){
-				let nextEl = el_link.nextElementSibling;
+				let nextEl = this.querySelector('.dropdown-menu');
 				el_link.classList.remove('show');
 				nextEl.classList.remove('show');
 				nextEl.removeAttribute('data-bs-popper');
@@ -186,7 +186,7 @@ if (window.innerWidth &gt; 992) {
 		everyitem.addEventListener(&#x27;mouseover&#x27;, function(e){
 			let el_link &#x3D; this.querySelector(&#x27;a[data-bs-toggle]&#x27;);
 			if(el_link !&#x3D; null){
-				let nextEl &#x3D; el_link.nextElementSibling;
+				let nextEl &#x3D; this.querySelector(&#x27;.dropdown-menu&#x27;);
 				el_link.classList.add(&#x27;show&#x27;);
 				nextEl.classList.add(&#x27;show&#x27;);
 				nextEl.setAttribute(&quot;data-bs-popper&quot;, &quot;none&quot;)
@@ -195,7 +195,7 @@ if (window.innerWidth &gt; 992) {
 		everyitem.addEventListener(&#x27;mouseleave&#x27;, function(e){
 			let el_link &#x3D; this.querySelector(&#x27;a[data-bs-toggle]&#x27;);
 			if(el_link !&#x3D; null){
-				let nextEl &#x3D; el_link.nextElementSibling;
+				let nextEl &#x3D; this.querySelector(&#x27;.dropdown-menu&#x27;);
 				el_link.classList.remove(&#x27;show&#x27;);
 				nextEl.classList.remove(&#x27;show&#x27;);
 				nextEl.removeAttribute(&#x27;data-bs-popper&#x27;);
@@ -213,7 +213,7 @@ if (window.innerWidth &gt; 992) {
 		everyitem.addEventListener(&#x27;mouseover&#x27;, function(e){
 			let el_link &#x3D; this.querySelector(&#x27;a[data-bs-toggle]&#x27;);
 			if(el_link !&#x3D; null){
-				let nextEl &#x3D; el_link.nextElementSibling;
+				let nextEl &#x3D; this.querySelector(&#x27;.dropdown-menu&#x27;);
 				el_link.classList.add(&#x27;show&#x27;);
 				nextEl.classList.add(&#x27;show&#x27;);
 				nextEl.setAttribute(&quot;data-bs-popper&quot;, &quot;none&quot;)
@@ -222,7 +222,7 @@ if (window.innerWidth &gt; 992) {
 		everyitem.addEventListener(&#x27;mouseleave&#x27;, function(e){
 			let el_link &#x3D; this.querySelector(&#x27;a[data-bs-toggle]&#x27;);
 			if(el_link !&#x3D; null){
-				let nextEl &#x3D; el_link.nextElementSibling;
+				let nextEl &#x3D; this.querySelector(&#x27;.dropdown-menu&#x27;);
 				el_link.classList.remove(&#x27;show&#x27;);
 				nextEl.classList.remove(&#x27;show&#x27;);
 				nextEl.removeAttribute(&#x27;data-bs-popper&#x27;);
@@ -242,7 +242,7 @@ if (window.innerWidth &gt; 992) {
 		everyitem.addEventListener(&#x27;mouseover&#x27;, function(e){
 			let el_link &#x3D; this.querySelector(&#x27;a[data-bs-toggle]&#x27;);
 			if(el_link !&#x3D; null){
-				let nextEl &#x3D; el_link.nextElementSibling;
+				let nextEl &#x3D; this.querySelector(&#x27;.dropdown-menu&#x27;);
 				el_link.classList.add(&#x27;show&#x27;);
 				nextEl.classList.add(&#x27;show&#x27;);
 				nextEl.setAttribute(&quot;data-bs-popper&quot;, &quot;none&quot;)
@@ -251,7 +251,7 @@ if (window.innerWidth &gt; 992) {
 		everyitem.addEventListener(&#x27;mouseleave&#x27;, function(e){
 			let el_link &#x3D; this.querySelector(&#x27;a[data-bs-toggle]&#x27;);
 			if(el_link !&#x3D; null){
-				let nextEl &#x3D; el_link.nextElementSibling;
+				let nextEl &#x3D; this.querySelector(&#x27;.dropdown-menu&#x27;);
 				el_link.classList.remove(&#x27;show&#x27;);
 				nextEl.classList.remove(&#x27;show&#x27;);
 				nextEl.removeAttribute(&#x27;data-bs-popper&#x27;);

@@ -21270,14 +21270,14 @@ Styleguide Recipes.InteractiveExtras.ToggleIcons
 .icon-toggle_bars-times:before {
   content: "";
 }
-.active .icon-toggle_bars-times:before, .show .icon-toggle_bars-times:before, .show > .icon-toggle_bars-times:before, .active > .icon-toggle_bars-times:before {
+.active .icon-toggle_bars-times:before, .icon-toggle_bars-times:before.show, .show > .icon-toggle_bars-times:before, .active > .icon-toggle_bars-times:before {
   content: "";
 }
 
 .icon-toggle_plus-minus:before {
   content: "";
 }
-.active .icon-toggle_plus-minus:before, .show .icon-toggle_plus-minus:before, .active > .icon-toggle_plus-minus:before {
+.active .icon-toggle_plus-minus:before, .icon-toggle_plus-minus:before.show, .show > .icon-toggle_plus-minus:before, .active > .icon-toggle_plus-minus:before {
   content: "";
 }
 
@@ -28331,6 +28331,13 @@ Styleguide  Recipes Bootstrap.Carousel
   content: "";
 }
 
+.icon-toggle_plus-minus:before {
+  content: "";
+}
+.show > .icon-toggle_plus-minus:before {
+  content: "";
+}
+
 .icon-toggle_plus-minus-sub:before {
   content: "";
 }
@@ -28342,7 +28349,7 @@ Styleguide  Recipes Bootstrap.Carousel
   font-family: "Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab";
 }
 
-.dropdown-menu {
+.dropdown-menu br-t_0 {
   font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -28416,10 +28423,6 @@ Styleguide  Recipes Bootstrap.Carousel
   color: white;
 }
 
-.show > i.icon-toggle_plus-minus:before, .dropdown:hover i.icon-toggle_plus-minus:before {
-  content: "";
-}
-
 .dropdown_column {
   min-width: 70vw;
 }
@@ -28441,47 +28444,71 @@ Markup:
 		{{> "Recipes.BrandedNav.Hamburger" }}
 		<div class="collapse navbar-collapse" id="navBarMainNav">
 			<ul class="navbar-nav flex flex_row:lg flex_column justify_around w_100">
-				<li class="nav-item relative flex_shrink">
-					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/" title="Home of the American College of Cardiology"><i class="fas fa-home p-x_3:lg"></i><span class="display_none:lg">&nbsp;Home</span></a>
+				<li class="nav-item relative text_left text_center:lg  flex_shrink">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="//www.acc.org/" title="Home of the American College of Cardiology"><i class="fas fa-home p-x_3:lg"></i><span class="display_none:lg">&nbsp;Home</span></a>
 				</li>
-				<li class="display_none:lg relative nav-item relative flex_auto">
-					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources">Guidelines</a>
+				<li class="display_none:lg relative nav-item relative text_left text_center:lg  flex_auto">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources">Guidelines</a>
 				</li>
-				<li class="nav-item relative flex_auto dropdown ">
-					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="/clinical-topics" id="clinicalTopicsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Clinical Topics</a>
-					<div class="dropdown-menu br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="clinicalTopicsDropdown">
+				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown ">
+					<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
+                               id="clinicalTopicsDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-haspopup="true"
+                               aria-expanded="false"><i
+                                   class="far fa icon-toggle_plus-minus m-l_n2 m-r_2 "></i></a>
+                            <a class="nav-link nowrap p-l_0  a:c_white inline-block"
+                               href="/clinical-topics">Clinical
+                                Topics</a>
+					<div class="dropdown-menu br-t_0 br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="clinicalTopicsDropdown">
 						{{> "Recipes.BrandedNav.Dropdown.AltContent" }}
 					</div>
 				</li>
-				<li class="nav-item relative flex_auto ">
-					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="#">Latest In Cardiology</a>
+				<li class="nav-item relative text_left text_center:lg  flex_auto ">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="#">Latest In Cardiology</a>
 				</li>
-				<li class="nav-item relative flex_auto dropdown">
-					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="#" id="eduDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>
-						Education and Meetings
+				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown">
+					<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
+						id="eduDropdown"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false"><i
+							class="far fa icon-toggle_plus-minus m-l_n2 m-r_2 "></i>
 					</a>
-					<div class="dropdown-menu dropdown-menu-end  br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="eduDropdown">
+					<a class="nav-link nowrap p-l_0  a:c_white inline-block"
+						href="/Edu-Edu">Education and Meetings</a>
+					<div class="dropdown-menu br-t_0 dropdown-menu-end  br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="eduDropdown">
 						{{> "Recipes.BrandedNav.Dropdown" }}
 					</div>
 				</li>
-				<li class="nav-item relative flex_auto dropdown">
-					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="#" id="toolDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Tools &amp; Practice Support
+				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown">
+					<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
+						id="toolDropdown"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false"><i
+							class="far fa icon-toggle_plus-minus m-l_n2 m-r_2 "></i>
 					</a>
-					<div class="dropdown-menu  dropdown-menu-end br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="toolDropdown">
+					<a class="nav-link nowrap p-l_0  a:c_white inline-block"
+						href="/Edu-Edu">Tools &amp; Practice Support</a>	
+					<div class="dropdown-menu br-t_0  dropdown-menu-end br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="toolDropdown">
 						{{> "Recipes.BrandedNav.Dropdown.DoubleColumn" }}
 					</div>
 				</li>
-				<li class="display_none:lg nav-item relative flex_auto ">
-					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/membership" title="Access exclusive member features and groups or learn about ACC membership">Membership</a>
+				<li class="display_none:lg nav-item relative text_left text_center:lg  flex_auto ">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="//www.acc.org/membership" title="Access exclusive member features and groups or learn about ACC membership">Membership</a>
 				</li>
-				<li class="display_none:lg nav-item relative flex_auto ">
-					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/about-acc" title="Learn about the ACC organization">About ACC</a>
+				<li class="display_none:lg nav-item relative text_left text_center:lg  flex_auto ">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="//www.acc.org/about-acc" title="Learn about the ACC organization">About ACC</a>
 				</li>
-				<li class="display_none:lg nav-item relative flex_auto ">
-					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="http://www.onlinejacc.org/" target="_blank" title="JACC.org">JACC</a>
+				<li class="display_none:lg nav-item relative text_left text_center:lg  flex_auto ">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="http://www.onlinejacc.org/" target="_blank" title="JACC.org">JACC</a>
 				</li>
-				<li class="display_none:lg nav-item relative flex_auto ">
-					<a class="nav-link expanded-click-area nowrap text_left text_center:lg p-l_4 p-l_0:lg" href="http://accscientificsession.acc.org" target="_blank" title="ACC Annual Scientific Session Website">ACC.19</a>
+				<li class="display_none:lg nav-item relative text_left text_center:lg  flex_auto ">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="http://accscientificsession.acc.org" target="_blank" title="ACC Annual Scientific Session Website">ACC.19</a>
 				</li>
 			</ul>
 		</div>
@@ -28530,9 +28557,9 @@ Markup:
 				 id="dropdownMyACC"
 				 data-bs-toggle="dropdown"
 				 aria-expanded="false"
-				><i class="far icon-toggle_chevron-up-down"></i> My ACC</a>
+				>My ACC <i class="far icon-toggle_chevron-up-down"></i></a>
 			<div 
-			class="dropdown-menu dropdown-menu-end br_none br_solid:lg m-t_0 m-t_2:lg font_0" aria-labelledby="dropdownMyACC"  
+			class="dropdown-menu br-t_0 dropdown-menu-end br_none br_solid:lg m-t_0 m-t_2:lg font_0" aria-labelledby="dropdownMyACC"  
 			>
 				<div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
 					<div class="p-x_2 p-y_0 dropdown_column">
@@ -28582,9 +28609,9 @@ Markup:
 		<li class="nav-item">
 			<a class=" nav-link" href="#"><i class="far fa-shopping-cart"></i></a>
 		</li>
-		<li class="nav-item">
+		<!--<li class="nav-item">
 			<a class=" nav-link" href="#"><i class="fas fa-sign-out-alt"></i></a>
-		</li>
+		</li>-->
 	</ul>
 </nav>
 
@@ -28597,7 +28624,7 @@ Styleguide Recipes.BrandedNav.Login
 
 */
 /*
-Javascript: Snippet to Show on Hover
+JavaScript: Snippet to Show on Hover
 
 Description: 
 
@@ -28610,7 +28637,7 @@ if (window.innerWidth > 992) {
 		everyitem.addEventListener('mouseover', function(e){
 			let el_link = this.querySelector('a[data-bs-toggle]');
 			if(el_link != null){
-				let nextEl = el_link.nextElementSibling;
+				let nextEl = this.querySelector('.dropdown-menu');
 				el_link.classList.add('show');
 				nextEl.classList.add('show');
 				nextEl.setAttribute("data-bs-popper", "none")
@@ -28619,7 +28646,7 @@ if (window.innerWidth > 992) {
 		everyitem.addEventListener('mouseleave', function(e){
 			let el_link = this.querySelector('a[data-bs-toggle]');
 			if(el_link != null){
-				let nextEl = el_link.nextElementSibling;
+				let nextEl = this.querySelector('.dropdown-menu');
 				el_link.classList.remove('show');
 				nextEl.classList.remove('show');
 				nextEl.removeAttribute('data-bs-popper');
@@ -28718,7 +28745,7 @@ Markup:
 
 
 MarkupWrapperClasses:
-    br_none br_solid:lg dropdown-menu m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+    br_none br_solid:lg dropdown-menu br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 Weight: 55
 
@@ -28739,7 +28766,7 @@ Markup:
 
 
 MarkupWrapperClasses:
-    br_none br_solid:lg dropdown-menu m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+    br_none br_solid:lg dropdown-menu br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 Weight: 50
 
@@ -28759,7 +28786,7 @@ Markup:
 </div>
 
 MarkupWrapperClasses:
-	br_none br_solid:lg dropdown-menu m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+	br_none br_solid:lg dropdown-menu br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 Weight: 2
 
@@ -28784,7 +28811,7 @@ Markup:
 </div>
 
 MarkupWrapperClasses:
-	br_none br_solid:lg dropdown-menu m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+	br_none br_solid:lg dropdown-menu br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 
 Weight: 60
