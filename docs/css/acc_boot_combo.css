@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** Function Test **/
 /**
  * arches - Global style system focused on utility classes
@@ -74,19 +75,17 @@ Styleguide UC
 /*
 Anatomy
 
-<h2>Anatomy of a Utility Class Name</h2>
+<h2>Anatomy of a Utility Class</h2>
 The breakdown of the names for UCs follow a structured patter for easy muscle memory learning. 
-
-  Markup:
-  <p class="font_2">All of the Class Names follow this ordered pattern of construction.</p>
-  <ol class="font_1 font_bold m_4 br_solid br_1 br_shade-4 lh_4" style="list-style-position: inside;">
-        <li class="p_2 bg_success-3">State - Hover <em>(Optional)</em></li>
-        <li class="p_2 bg_primary-3">Class Name</li>
-        <li class="p_2 bg_alert-3">Class Name Modifier <em>(Optional)</em></li>
-        <li class="p_2 bg_highlight-3">Value</li>
-        <li class="p_2 bg_alert-3">Value Modifier <em>(Optional)</em></li>
-        <li class="p_2 bg_accent-3">Breakpoint <em>(Optional)</em></li>
-        <li class="p_2 bg_warning-3">*Dividers can be : _ or - depending on usage</li>
+<p class="font_2">All of the Style Names follow this ordered pattern of construction.</p>
+<ol class="font_1 font_bold m-y_4 br_solid br_1 br_shade-4 lh_4 m_0 p_0" style="list-style-position: inside;">
+        <li class="p_3 m_0 bg_success-3">State - Hover <em>(Optional: always ends with a colon)</em></li>
+        <li class="p_3 m_0 bg_primary-3">Style Name</li>
+        <li class="p_3 m_0 bg_alert-3">Style Name Modifier <em>(Optional: always starts with a hyphen)</em></li>
+         <li class="p_3 m_0 bg_warning-3">Divider or Equal To <em>(Optional: if it is a style value pair use the underscore as an equals)</em></li>
+        <li class="p_3 m_0 bg_highlight-3">Value</li>
+        <li class="p_3 m_0 bg_alert-3">Value Modifier <em>(Optional: always starts with a hyphen)</em></li>
+        <li class="p_3 m_0 bg_accent-3">Breakpoint <em>(Optional: always starts with a colon)</em></li>
   </ol>
   <div class="font_2">
       <div class="font_bold font_3">Example 1</div>
@@ -94,35 +93,28 @@ The breakdown of the names for UCs follow a structured patter for easy muscle me
       <div class="h:bg_primary-n3 h:c_white  m-y_4 p_4 br_solid br_shade-3 br_1">I have the class h:bg_primary-n2</div>
       <div class="font_bold font_1">Long Name</div>
       <div class="flex m-t_3">
-            <div class="flex_auto bg_success-3 p_3">hover</div>
-            <div class="flex_auto bg_warning-3 p_3">:</div>
+            <div class="flex_auto bg_success-3 p_3">hover:</div>
             <div class="flex_auto bg_primary-3 p_3">background-color</div>
             <div class="flex_auto bg_warning-3 p_3">_</div>
             <div class="flex_auto bg_highlight-3 p_3">primary</div>
-            <div class="flex_auto bg_warning-3 p_3">-</div>
-            <div class="flex_auto bg_alert-3 p_3">n2</div>
+            <div class="flex_auto bg_alert-3 p_3">Modify Negative 2</div>
       </div>
-      <div class="font_bold font_1">Utiltiy Class</div>
+      <div class="font_bold font_1">Utility Class</div>
       <div class="flex m-t_3">
-        <div class="flex_auto bg_success-3 p_3">h</div>
-        <div class="flex_auto bg_warning-3 p_3">:</div>
+        <div class="flex_auto bg_success-3 p_3">h:</div>
         <div class="flex_auto bg_primary-3 p_3">bg</div>
         <div class="flex_auto bg_warning-3 p_3">_</div>
         <div class="flex_auto bg_highlight-3 p_3">primary</div>
-        <div class="flex_auto bg_warning-3 p_3">-</div>
-        <div class="flex_auto bg_alert-3 p_3">n2</div>
+        <div class="flex_auto bg_alert-3 p_3">-n2</div>
       </div>
-      <ol class="font_0 font_bold c_black m_4 br_solid br_1 br_shade-4 lh_4" style="list-style-position: inside;">
-          <li class="bg_success-3 p_3">'h' => Interaction State </li>
-          <li class="bg_warning-3 p_3">`:`=> Interaction State Divider when use state interaction</li>
-          <li class="bg_primary-3 p_3">'bg' => Class Name</li>
-          <li class="bg_warning-3 p_3">`_` => Value Divider think of this as an equal mark</li>
-          <li class="bg_highlight-3 p_3">`primary` => Value</li>
-          <li class="bg_warning-3 p_3">`-` => Modifier Divider think of this as shift from the value</li>
-          <li class="bg_alert-3 p_3">`n2` => Modifier Values most follow a [n5 , n4, n3, n2, n1, {0 is
+      <ol class="font_0 font_bold c_black m-y_4 br_solid br_1 br_shade-4 lh_4 p_0 m_0" style="list-style-position: inside;">
+          <li class="bg_success-3 p_3 m_0">'h' => Interaction State </li>
+          <li class="bg_primary-3 p_3 m_0">'bg' => Style Name</li>
+          <li class="bg_warning-3 p_3 m_0">`_` => Value Divider think of this as an equal mark</li>
+          <li class="bg_highlight-3 p_3 m_0">`primary` => Value</li>
+          <li class="bg_alert-3 p_3 m_0">`n2` => Modifier Values most follow a [n5 , n4, n3, n2, n1, {0 is
           default} , 1, 2, 3, 4, 5, color names, or shade values]</li>
-          <li class="bg_warning-3 p_3">`:`=> Breakpoint Divider when rule should apply</li>
-          <li class="bg_accent-3 p_3">`lg`=> Breakpoint Value</li>
+          <li class="bg_accent-3 p_3 m_0">`lg`=> Breakpoint Value</li>
       </ol>   
   </div>
   <div class="font_2">
@@ -130,68 +122,270 @@ The breakdown of the names for UCs follow a structured patter for easy muscle me
       <div class="font_1 m-t_2">Add 1 rem of padding to the top when screen is medium and up</div>
       <div class="flex m-t_3">
         <div class="flex_auto bg_primary-3 p_3">padding</div>
-        <div class="flex_auto bg_warning-3 p_3">-</div>
         <div class="flex_auto bg_alert-3 p_3">top</div>
-        <div class="flex_auto bg_warning-3 p_3">_</div>
-        <div class="flex_auto bg_highlight-3 p_3">1 rem = value 4</div>
-        <div class="flex_auto bg_warning-3 p_3">:</div>
-        <div class="flex_auto bg_accent-3 p_3">medium breakpoint</div>
+        <div class="flex_auto bg_warning-3 p_3">Equals</div>
+        <div class="flex_auto bg_highlight-3 p_3">value 4 = 1rem </div>
+        <div class="flex_auto bg_accent-3 p_3">at the medium breakpoint</div>
       </div>
-       <div class="font_bold font_1">Utiltiy Class Example</div>
+       <div class="font_bold font_1">Utility Class Example</div>
             <div class="flex m-t_3"><div class="flex_auto bg_primary-3 p_3">p</div>
-            <div class="flex_auto bg_warning-3 p_3">-</div>
-            <div class="flex_auto bg_alert-3 p_3">t</div>
+            <div class="flex_auto bg_alert-3 p_3">-t</div>
             <div class="flex_auto bg_warning-3 p_3">_</div>
             <div class="flex_auto bg_highlight-3 p_3">4</div>
-            <div class="flex_auto bg_warning-3 p_3">:</div
-            ><div class="flex_auto bg_accent-3 p_3">md</div>
+            <div class="flex_auto bg_accent-3 p_3">:md</div>
         </div>
   </div>
 
  Styleguide UC.Anatomy
 */
 /*
-Short Hand 
+Interaction State
 
-## List of CSS Styles matched to the Utility Class Name
+Pseudo  DOM states
+| states      | Short Name | CSS      | Currently Used                         |
+| ----------- | ---------- | -------- | -------------------------------------- |
+| hover       | h:         | :hover   | Yes                                    |
+| active      | a:         | :active  | <span class="c_warning">Partial</span> |
+| ~~visited~~ | ~~v:~~     | :visited | <span class="c_alert">Not Used</span>  |
+
+
+Weight:0
+
+Styleguide UC.Anatomy.State
+*/
+/*
+Style Names
+
+## List of the short hand for style names
 
 The breakdown of the names for UCs follow a structured patter for easy muscle memory learning. 
-| Style                      | Short Name  | CSS                          |
-| -------------------------- | ----------- | ---------------------------- |
-| margin                     | '.m'        | 'margin'                     |
-| margin-top                 | '.m-t'      | 'margin-top'                 |
-| margin-bottom              | '.m-b'      | 'margin-bottom'              |
-| margin-left                | '.m-l'      | 'margin-left'                |
-| margin-right               | '.m-r'      | 'margin-right'               |
-| overflow                   | '.overflow' | 'overflow'                   |
-| padding                    | '.p'        | 'padding'                    |
-| padding-top                | '.p-t'      | 'padding-top'                |
-| padding-bottom             | '.p-b'      | 'padding-bottom'             |
-| padding-left               | '.p-l'      | 'padding-left'               |
-| padding-right              | '.p-r'      | 'padding-right'              |
-| line-height                | '.lh'       | 'line-height'                |
-| font-size                  | '.font'     | 'font-size'                  |
-| font-family                | '.font'     | 'font-family'                |
-| font-weight                | '.font'     | 'font-weight'                |
-| font-style                 | '.font'     | 'font-style'                 |
-| color                      | '.c'        | 'color'                      |
-| background-color           | '.bg'       | 'background-color'           |
-| border-color               | '.br'       | 'border-color'               |
-| border-radius              | '.br'       | 'border-radius'              |
-| border-top-right-radius    | '.br-tr'    | 'border-top-right-radius'    |
-| border-top-left-radius     | '.br-tl'    | 'border-top-left-radius'     |
-| border-bottom-right-radius | '.br-br'    | 'border-bottom-right-radius' |
-| border-bottom-left-radius  | '.br-bl'    | 'border-bottom-left-radius'  |
-| border-width               | '.br'       | 'border-width'               |
-| border-top-width           | '.br-t'     | 'border-top-width'           |
-| border-right-width         | '.br-r'     | 'border-right-width'         |
-| border-left-width          | '.br-l'     | 'border-left-width'          |
-| border-bottom-width        | '.br-b'     | 'border-bottom-width'        |
-| width                      | '.w'        | 'width'                      |
-| display                    | '.d'        | 'display'                    |
-| max-width                  | '.max-w'    | 'max-width'                  |
+| CSS Style                               | Short Name | has modifier                 | Uses Stepped Value                         |
+| --------------------------------------- | ---------- | ---------------------------- | ------------------------------------------ |
+| background-color                        | .bg        |                              | <i class="fas fa-check"></i> as a modifier |
+| border-color                            | .br        |                              | <i class="fas fa-check"></i> as a modifier |
+| border-radius                           | .br        | <i class="fas fa-check"></i> |                                            |
+| border-width                            | .br        | <i class="fas fa-check"></i> | <i class="fas fa-check"></i>               |
+| color                                   | .c         |                              | <i class="fas fa-check"></i> as a modifier |
+| clear                                   | .clear     |                              |                                            |
+| display                                 | .          |                              |                                            |
+| flex                                    | .flex      |                              |                                            |
+| float                                   | .float     |                              |                                            |
+| font-size                               | .font      |                              | <i class="fas fa-check"></i>               |
+| font-family                             | .font      |                              |                                            |
+| font-weight                             | .font      |                              |                                            |
+| font-style                              | .font      |                              |                                            |
+| height                                  | .h         |                              |                                            |
+| justify-content                         | .justify   |                              |                                            |
+| margin                                  | .m         | <i class="fas fa-check"></i> | <i class="fas fa-check"></i>               |
+| overflow                                | .overflow  |                              |                                            |
+| padding                                 | .p         | <i class="fas fa-check"></i> | <i class="fas fa-check"></i>               |
+| position                                | .          |                              |                                            |
+| <em class="p-l_4 c_primary">top</em>    | .t         |                              | <i class="fas fa-check"></i>               |
+| <em class="p-l_4 c_primary">right</em>  | .r         |                              | <i class="fas fa-check"></i>               |
+| <em class="p-l_4 c_primary">bottom</em> | .b         |                              | <i class="fas fa-check"></i>               |
+| <em class="p-l_4 c_primary">left</em>   | .l         |                              | <i class="fas fa-check"></i>               |
+| line-height                             | .lh        |                              | <i class="fas fa-check"></i>               |
+| width                                   | .w         |                              |                                            |
+| max-width                               | .max-w     |                              |                                            |
 
- Styleguide UC.Shorthand
+ Styleguide UC.Anatomy.Style
+*/
+/*
+Name Modifiers
+
+## List of CSS Style Name Modifiers
+
+The breakdown of the names for UCs follow a structured patter for easy muscle memory learning. 
+| Style        | Short Name | Example                    |
+| ------------ | ---------- | -------------------------- |
+| top          | -t         | margin-top                 |
+| bottom       | -b         | margin-bottom              |
+| left         | -l         | margin-left                |
+| right        | -r         | margin-right               |
+| top-right    | -tr         | border-top-right-radius    |
+| top-left     | -tl         | border-top-left-radius     |
+| bottom-right | -br         | border-bottom-right-radius |
+| bottom-left  | -bl         | border-bottom-left-radius  |
+
+ Styleguide UC.Anatomy.StyleModifiers
+*/
+/*
+Common Values
+
+## List of the positive to negative stepped values
+
+### Values
+
+| Value Postfix | Font Size | Margin, top, left, right, bottom | Padding              | Line Height | border-width | Color Modifier         |
+| ------------- | --------- | -------------------------------- | -------------------- | ----------- | ------------ | ---------------------- |
+| n5            | ms(-5)    | -2 \* X<sup>†</sup>              | N/A                  | N/A         | N/A          | mix(color, black, 90%) |
+| n4            | ms(-4)    | -1 \* X<sup>†</sup>              | N/A                  | N/A         | N/A          | mix(color, black, 70%) |
+| n3            | ms(-3)    | -.5 \* X<sup>†</sup>             | N/A                  | N/A         | N/A          | mix(color, black, 50%) |
+| n2            | ms(-2)    | -.25 \* X<sup>†</sup>            | N/A                  | N/A         | N/A          | mix(color, black, 30%) |
+| n1            | ms(-1)    | -.1 \* X<sup>†</sup>             | N/A                  | N/A         | N/A          | mix(color, black, 10%) |
+| 0             | ms(0)     | 0                                | 0                    | 0           | 0            | color @ 100%           |
+| 1             | ms(1)     | .1 \* X<sup>†</sup>              | .1 \* X<sup>†</sup>  | 1           | 1px          | mix(color, white, 10%) |
+| 2             | ms(2)     | .25 \* X<sup>†</sup>             | .25 \* X<sup>†</sup> | 1.45        | 3px          | mix(color, white, 30%) |
+| 3             | ms(3)     | .5 \* X<sup>†</sup>              | 5 \* X<sup>†</sup>   | 1.65        | 5px          | mix(color, white, 50%) |
+| 4             | ms(4)     | 1 \* X<sup>†</sup>               | 1 \* X<sup>†</sup>   | 1.75        | .5rem        | mix(color, white, 70%) |
+| 5             | ms(5)     | 2 \* X<sup>†</sup>               | 2 \* X<sup>†</sup>   | 2           | 1rem         | mix(color, white, 90%) |
+
+<sup>†</sup> x = global spacing 1 rem
+
+ Styleguide UC.Anatomy.ValuesStepped
+*/
+/*
+Alternate Values
+
+## Alternate Values
+
+#### Border Radius
+
+| Value Postfix | Border Radius Values |
+| ------------- | -------------------- |
+| square        | 0                    |
+| radius        | 5px or Global Radius |
+| round         | 25px                 |
+| circle        | 100%                 |
+
+#### Border Style
+
+| Value Postfix | Border Style Values |
+| ------------- | ------------------- |
+| none          | none                |
+| dashed        | dashed              |
+| solid         | solid               |
+
+#### Display
+
+| Value Postfix | Display      |
+| ------------- | ------------ |
+| none          | none         |
+| block         | block        |
+| inline        | inline       |
+| inline-block  | inline-block |
+| flex          | flex         |
+
+#### Overflow
+
+| Value Postfix | Overflow |
+| ------------- | -------- |
+| auto          | auto     |
+| clip          | clip     |
+| scroll        | scroll   |
+| hidden        | hidden   |
+| ellipsis      | ellipsis |
+| visible       | visible  |
+| unset         | unset    |
+
+#### max-width
+
+| Value Postfix | dimension | Use case            |
+| ------------- | --------- | ------------------- |
+| 5             | 5 rem     |                     |
+| 10            | 10rem     |                     |
+| 15            | 15rem     |                     |
+| 20            | 20rem     | Small Phone Size    |
+| 25            | 25rem     |                     |
+| 30            | 30rem     | Short Readable Zone |
+| 35            | 35rem     | Short Readable Zone |
+| 40            | 40rem     | Short Readable Zone |
+| 45            | 45rem     | Readable Zone       |
+| 50            | 50rem     | Readable Zone       |
+| 55            | 55rem     | Readable Zone       |
+| 60            | 60rem     | Readable Zone       |
+| 65            | 65rem     | Readable Zone       |
+| 70            | 70rem     | Readable Zone       |
+| 75            | 75rem     |                     |
+| 80            | 80rem     |                     |
+| 85            | 85rem     | Max Desktop Range   |
+| 90            | 90rem     | Max Desktop Range   |
+| 95            | 95rem     | Max Desktop Range   |
+
+
+Weight:0
+
+Styleguide UC.Anatomy.ValuesAlternate
+*/
+/*
+Break Points
+
+| break point | Short Name | css             | dimension | Currently Used                  |
+| ----------- | ---------- | --------------- | --------- | ------------------------------- |
+| all sizes   | ''         | min-width: 0em  | 0px       | default                         |
+| ~~small~~   | ':sm'      | min-width: 30em | 480px     | <span class="c_alert">No</span> |
+| medium      | ':md'      | min-width: 40em | 640px     | Yes                             |
+| large       | ':lg'      | min-width: 40em | 1024px    | Yes                             |
+
+
+Weight:900
+
+Styleguide UC.Anatomy.Breakpoints
+*/
+/*
+Extra Credit
+
+## Reserved Names
+
+#### Reserved Words and Modifier Descriptors
+
+These words should be used to describe states and generic elements of the UI and should be used instead of some variation or alternate name.
+
+#### Component Name Modifier
+
+Components styling is most are
+
+-   ** -container ** or UI Name with no modifier (Use instead of holder when items are UI based)
+-   ** -group ** or UI Name with no modifier (Use instead of list, holder, collection when items or repeatable Content)
+-   ** -item ** or UI Name with no modifier (generic child of container or group)
+-   ** -separator ** (a visual treatment or break between items within a container or group )
+
+#### States
+
+-   show
+-   hide
+-   is-active
+-   is-complete
+-   is-disabled
+-   is-current
+-   is-selected
+-   focus
+-   success
+-   hover
+-   warning
+-   alert (Depreciate the use of ‘error’ for the native descriptor from foundation)
+-   primary
+-   secondary
+-   reverse
+
+## Colors
+
+-   State Colors
+    -   -success, -green
+    -   -warning, -orange
+    -   -alert, -red
+    -   -primary, -productColor
+    -   -secondary
+    -   -highlight
+-   Black
+-   White
+-   Black and White have transparencies
+    -   -10 alpha,
+    -   -20 alpha,
+    -   -30 alpha,
+    -   -40 alpha,
+    -   -50 alpha,
+    -   -60 alpha,
+    -   -70 alpha,
+    -   -80 alpha,
+    -   -90 alpha
+
+Markup:
+
+
+Weight:1000
+
+Styleguide UC.Anatomy.ExtraCredit
 */
 .reading-typography h1,
 .reading-typography h2,
