@@ -36,13 +36,19 @@
                         </a>
                     </li>
                     {{/each}}
+                    <li class="br-l_1 br_primary br_solid p_2 self_center ">
+                        <a class="h:bg_black-2 a:bg_accent-5 h:undecorated p_3 br_radius" href="https://acc-style.github.io/IconDictionary/" target="_blank">
+                            <span class="">Icon Dictionary <i class="fas fa-external-link-alt"></i></span>
+                        </a>
+                    </li>
+                    
                 </ul>
             </aside>
     </header>
     <section class= "flex flex_column max-w_90 m_auto ">     
 
         {{#if homepage}}
-            <article class="kss-markdown reading-typography p_4 p-t_2 flex_auto">
+            <article class="kss-markdown reading-typography font-size_up p_4 p-t_2 flex_auto">
                 {{{ homepage }}} </article>
             {{ else }}
             <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
@@ -64,7 +70,7 @@
                         </h{{ depth }}>
                     </a>
                     {{#if description}}
-                        <div class="kss-section__description{{#if deprecated}} state-deprecated{{/if}}{{#if experimental}} state-experimental{{/if}}">
+                        <div class="kss-section__description{{#if deprecated}} state-deprecated{{/if}}{{#if experimental}} state-experimental{{/if}} reading-typography font-size_up ">
                             {{{ description }}}</div>
                     {{/if}}
                     {{#if parameters}}
