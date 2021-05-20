@@ -1,66 +1,77 @@
-<div class='home_arches_nav'><div class="br_1 br_round br_solid br_white-7 p_5 relative shadow_3 m-x_3">
-	<div class="absolute t_0 r_0 l_0 b_0 opacity_7 z_0 br_round bg_center bg_cover" style="background-image:url('img/triangletexture/rainbowtriangles.PNG')"></div>
-		<div class="c_black font_11:lg font_6 font_8:md font_ui lh_1 m-y_4">Arches
-			<span class="block font_1 m-y_2 font_bold opacity_7">Multi Product, Framework, Brand Style System</span>
-		</div>
-	<p class="c_black m-y_3 max-w_65 lh_3">Arches is a central design system for the American College of Cardiology. This system, through some compiler wizardry, builds out to variations using frameworks and product brands to be used across many products built by the ACC.  Arches vanilla is just a Utility Classes and when added to a project with an already established style sheet is made to add new styling features non-destructively. There are also variations of Arches that build on top of the two popular frameworks that currently in use at the College, Twitter Bootstrap, and Zurb Foundation.  A third variation of the Arches product shifts the brand to CVquality with Bootstrap for a base.</p>
-</div>
-<div class="p_5">
-
-## Arches Overview of Variations and Sub Stylesheets
-
-<iframe class="m_4 br_1 br_shade-3 br_solid" width="800" height="450" src="https://whimsical.com/embed/VG8xNLvXFCwSTBQRSsdwBW"></iframe>
+<div class='home_arches_nav'>
+Arches is a central design system for the American College of Cardiology. This system, through some compiler wizardry, builds out to variations using frameworks and product brands to be used across many products built by the ACC.  Arches vanilla is just a Utility Classes and when added to a project with an already established style sheet is made to add new styling features non-destructively. There are also variations of Arches that build on top of the two popular frameworks that currently in use at the College, Twitter Bootstrap, and Zurb Foundation.
 
 ## Utility Classes
 
 Utility classes are a distinct departure from many previous learned CSS theories, but what utility classes allow for is an excellent separation of concerns between the HTML and CSS. The singular focus for utility classes is a single class controls a single style in CSS. Utility Class has significant benefits of reducing scope expansion in the CSS and also gives greater flexibility of crafting user interface components that are currently undefined. Html should continually be written using the best standards for semantics, but it is no longer a concern to follow a components design pattern because it is applicable at the HTML level.
 
-### Naming Convention
+#### Naming Convention
 
-Strathmore does have a learning curve, but to reduce the curve the names follow a strict pattern. State of the elements which then effects a single style at a defined value which only effects at a specific breakpoint. <a href="./Strathmore/#!/section/100"> read more</a>
+Arches does have a learning curve, but to reduce the curve the names follow a strict pattern. <a class="link" href="./section-uc.html"> learn more</a>
 
-#### [pseudo state]:[style name]\_[value+unit]-[modifier]:[break point]
+### Brand Documentation
 
-An example of wanting the text color of an object when hovered to become the primary the color only when the screen is large would be h:c_primary:lg.
+In each brand documentation area you will see direct representations of the styles in actions and predefined patterns used in those properties.
+
+
+| Style                            | Current Use Status   | Notes                                                                         |
+| -------------------------------- | -------------------- | ----------------------------------------------------------------------------- |
+| [ACC Main Site](boot_acc/)       | In Conversion        | Some pages are fully using Arches other are using the Utility Class Override  |
+| [CardioSmart](boot_cardiosmart/) | Fully                | Built on Pure Arches Style Sheets                                             |
+| [CVQuality](boot_cvquality/)     | Documented           | Designs have been documented and branch project started not using Arches now. |
+| [Mobile](zurb_acc/)              | Documented           | Mobile utilize zurb instead of bootstrap because of better mobile support.    |
+| [JACC](boot_journal/)            | Partially Documented | JACC is vendor based and will most likely never be converted.                 |
+| [Virtual](boot_virtual/)         | Retiring             | This documentation was used in 2020 and will be retired.                      |
+### [Color Codes](color_codes/)
+
+The College has used colors to denote many objects across its product lines. Here is the official colors and definitions. 
+
+| Style                                             | Notes                                                                                                                  |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| [Credits](color_codes/section-credit-colors.html) | As an accredited body the college can grant credits to many different types of certifications and professional boards. |
+| [Learning Pathways](color_codes/section-pathway-colors.html) | Color coding the pathway for professional development |
+| [NCDR Registries](color_codes/section-registrycolors.html) | Product colors for the Data Registries |
+| [LOE](color_codes/section-loe-colors.html) &amp; [COR](color_codes/section-cor-colors.html)  | Guidelines use coloring to help professionals quickly understand the  level of evidence and class of recommendation   |
+
 
 ## Definition of Style Short Hand
 
-Strathmore utilizes an abbreviated naming convention for utility classes to save typing for developers and to also reduce overall files size.
+Arches utilizes an abbreviated naming convention for utility classes to save typing for developers and to also reduce overall files size.
 
-| Style                      | Short Name  | CSS                          | Long Nmae                     |
-| -------------------------- | ----------- | ---------------------------- | ----------------------------- |
-| margin                     | '.m'        | 'margin'                     | '.margin'                     |
-| margin-top                 | '.m-t'      | 'margin-top'                 | '.margin-top'                 |
-| margin-bottom              | '.m-b'      | 'margin-bottom'              | '.margin-bottom'              |
-| margin-left                | '.m-l'      | 'margin-left'                | '.margin-left'                |
-| margin-right               | '.m-r'      | 'margin-right'               | '.margin-right'               |
-| overflow                   | '.overflow' | 'overflow'                   | '.overflow'                   |
-| padding                    | '.p'        | 'padding'                    | '.padding'                    |
-| padding-top                | '.p-t'      | 'padding-top'                | '.padding-top'                |
-| padding-bottom             | '.p-b'      | 'padding-bottom'             | '.padding-bottom'             |
-| padding-left               | '.p-l'      | 'padding-left'               | '.padding-left'               |
-| padding-right              | '.p-r'      | 'padding-right'              | '.padding-right'              |
-| line-height                | '.lh'       | 'line-height'                | '.line-height'                |
-| font-size                  | '.font'     | 'font-size'                  | '.font-size'                  |
-| font-family                | '.font'     | 'font-family'                | '.font-family'                |
-| font-weight                | '.font'     | 'font-weight'                | '.font-weight'                |
-| font-style                 | '.font'     | 'font-style'                 | '.font-style'                 |
-| color                      | '.c'        | 'color'                      | '.color'                      |
-| background-color           | '.bg'       | 'background-color'           | '.back'                       |
-| border-color               | '.br'       | 'border-color'               | '.border'                     |
-| border-radius              | '.br'       | 'border-radius'              | '.border-radius'              |
-| border-top-right-radius    | '.br-tr'    | 'border-top-right-radius'    | '.border-top-right-radius'    |
-| border-top-left-radius     | '.br-tl'    | 'border-top-left-radius'     | '.border-top-left-radius'     |
-| border-bottom-right-radius | '.br-br'    | 'border-bottom-right-radius' | '.border-bottom-right-radius' |
-| border-bottom-left-radius  | '.br-bl'    | 'border-bottom-left-radius'  | '.border-bottom-left-radius'  |
-| border-width               | '.br'       | 'border-width'               | '.border-width'               |
-| border-top-width           | '.br-t'     | 'border-top-width'           | '.border-top-width'           |
-| border-right-width         | '.br-r'     | 'border-right-width'         | '.border-right-width'         |
-| border-left-width          | '.br-l'     | 'border-left-width'          | '.border-left-width'          |
-| border-bottom-width        | '.br-b'     | 'border-bottom-width'        | '.border-bottom-width'        |
-| width                      | '.w'        | 'width'                      | '.width'                      |
-| display                    | '.d'        | 'display'                    | '.display'                    |
-| max-width                  | '.max-w'    | 'max-width'                  | '.max-width'                  |
+| Style                      | Short Name  | CSS                          |
+| -------------------------- | ----------- | ---------------------------- |
+| margin                     | '.m'        | 'margin'                     |
+| margin-top                 | '.m-t'      | 'margin-top'                 |
+| margin-bottom              | '.m-b'      | 'margin-bottom'              |
+| margin-left                | '.m-l'      | 'margin-left'                |
+| margin-right               | '.m-r'      | 'margin-right'               |
+| overflow                   | '.overflow' | 'overflow'                   |
+| padding                    | '.p'        | 'padding'                    |
+| padding-top                | '.p-t'      | 'padding-top'                |
+| padding-bottom             | '.p-b'      | 'padding-bottom'             |
+| padding-left               | '.p-l'      | 'padding-left'               |
+| padding-right              | '.p-r'      | 'padding-right'              |
+| line-height                | '.lh'       | 'line-height'                |
+| font-size                  | '.font'     | 'font-size'                  |
+| font-family                | '.font'     | 'font-family'                |
+| font-weight                | '.font'     | 'font-weight'                |
+| font-style                 | '.font'     | 'font-style'                 |
+| color                      | '.c'        | 'color'                      |
+| background-color           | '.bg'       | 'background-color'           |
+| border-color               | '.br'       | 'border-color'               |
+| border-radius              | '.br'       | 'border-radius'              |
+| border-top-right-radius    | '.br-tr'    | 'border-top-right-radius'    |
+| border-top-left-radius     | '.br-tl'    | 'border-top-left-radius'     |
+| border-bottom-right-radius | '.br-br'    | 'border-bottom-right-radius' |
+| border-bottom-left-radius  | '.br-bl'    | 'border-bottom-left-radius'  |
+| border-width               | '.br'       | 'border-width'               |
+| border-top-width           | '.br-t'     | 'border-top-width'           |
+| border-right-width         | '.br-r'     | 'border-right-width'         |
+| border-left-width          | '.br-l'     | 'border-left-width'          |
+| border-bottom-width        | '.br-b'     | 'border-bottom-width'        |
+| width                      | '.w'        | 'width'                      |
+| display                    | '.d'        | 'display'                    |
+| max-width                  | '.max-w'    | 'max-width'                  |
 
 ### pseudo states
 
@@ -235,8 +246,7 @@ Components styling is most are
     -   -80 alpha,
     -   -90 alpha
 
-</div>
-</div>
-<style>
 
-</style>
+## Arches Overview of Variations and Sub Stylesheets
+
+<iframe class="m_4 br_1 br_shade-3 br_solid" width="800" height="450" src="https://whimsical.com/embed/VG8xNLvXFCwSTBQRSsdwBW"></iframe>

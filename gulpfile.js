@@ -606,7 +606,7 @@ gulp.task(
         function() {
             var brand = "home";
             var framework = "arches";
-            var base = gulp.src(PATHS.MARKDOWN + "markdown_footer.md");
+            var base = gulp.src(PATHS.MARKDOWN + "markdown_blank.md");
             base = markdownbuild(base, brand + "_" + framework);
             return merge(base)
                 .pipe(
