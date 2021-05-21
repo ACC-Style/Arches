@@ -67,7 +67,7 @@ Utility Classes
 
 Utility Classes (UCs) are classes that control single styles allowing for quick manipulations of the appearance of the DOM.  When combined with other UCs and toggled with javascripts you can create complex and new UI without the need of writing styles into the system. Examples of some UC built UIs can be found here as recipes. Learn more about UCs in the Introduction section
 
-Weight: 100
+Weight:100
 
 Styleguide UC
 */
@@ -148,8 +148,7 @@ Pseudo  DOM states
 | active      | a:         | :active  | <span class="c_warning">Partial</span> |
 | ~~visited~~ | ~~v:~~     | :visited | <span class="c_alert">Not Used</span>  |
 
-
-Weight:0
+ Weight: 100
 
 Styleguide UC.Anatomy.State
 */
@@ -188,6 +187,8 @@ The breakdown of the names for UCs follow a structured patter for easy muscle me
 | width                                   | .w         |                              |                                            |
 | max-width                               | .max-w     |                              |                                            |
 
+Weight:200
+
  Styleguide UC.Anatomy.Style
 */
 /*
@@ -206,6 +207,8 @@ The breakdown of the names for UCs follow a structured patter for easy muscle me
 | top-left     | -tl         | border-top-left-radius     |
 | bottom-right | -br         | border-bottom-right-radius |
 | bottom-left  | -bl         | border-bottom-left-radius  |
+
+Weight:300
 
  Styleguide UC.Anatomy.StyleModifiers
 */
@@ -231,6 +234,8 @@ Common Values
 | 5             | ms(5)     | 2 \* X<sup>†</sup>               | 2 \* X<sup>†</sup>   | 2           | 1rem         | mix(color, white, 90%) |
 
 <sup>†</sup> x = global spacing 1 rem
+
+Weight:400
 
  Styleguide UC.Anatomy.ValuesStepped
 */
@@ -302,8 +307,7 @@ Alternate Values
 | 90            | 90rem     | Max Desktop Range   |
 | 95            | 95rem     | Max Desktop Range   |
 
-
-Weight:0
+ Weight: 450
 
 Styleguide UC.Anatomy.ValuesAlternate
 */
@@ -317,8 +321,7 @@ Break Points
 | medium      | ':md'      | min-width: 40em | 640px     | Yes                             |
 | large       | ':lg'      | min-width: 40em | 1024px    | Yes                             |
 
-
-Weight:900
+ Weight: 500
 
 Styleguide UC.Anatomy.Breakpoints
 */
@@ -380,10 +383,7 @@ Components styling is most are
     -   -80 alpha,
     -   -90 alpha
 
-Markup:
-
-
-Weight:1000
+ Weight: 1000
 
 Styleguide UC.Anatomy.ExtraCredit
 */
@@ -28863,10 +28863,13 @@ Markup:
 			</div>
 		</li>
 		<li class="nav-item">
-			<a class=" nav-link" href="#"><i class="far fa-shopping-cart"></i></a>
+			<a class=" nav-link nowrap" href="#"><i class="far fa-shopping-cart"></i></a>
 		</li>
 		<!--<li class="nav-item">
-			<a class=" nav-link" href="#"><i class="fas fa-sign-out-alt"></i></a>
+			<a class=" nav-link nowrap" href="#"><i class="fas fa-sign-out-alt"></i></a>
+		</li>-->
+		<!--<li class="nav-item">
+			<a href="@loginlink" class="nav-link nowrap"><i class="fas fa-sign-in-alt"></i> Log in to MyACC </a>
 		</li>-->
 	</ul>
 </nav>
@@ -29192,8 +29195,8 @@ Markup:
     </li>
     <li class="m-b_2">
         <div
-             class="flex justify_start p-l_4 transition_4 dropdown-item">
-            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit-all h:undecorated collapsed"
+             class="flex justify_start transition_4 dropdown-item">
+            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit-all h:undecorated collapsed display_none:lg"
                     data-bs-toggle="collapse"
                     role="button"
                     aria-expanded="true"
@@ -29203,7 +29206,7 @@ Markup:
                 <i
                    class="far fa icon-toggle_plus-minus-sub display_none:lg m-l_n2 m-r_2"></i>
             </button>
-            <a class="flex_grow self_center wrap text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated"
+            <a class="flex_grow self_center wrap w_100 text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated p-r_3"
                href="#">Online Learning Catalog</a>
         </div>
         <ul class="ul_none lh_3 font-size_down collapse transition_4 block:lg"
@@ -29231,8 +29234,8 @@ Markup:
     </li>
     <li class="m-b_2">
         <div
-             class="flex justify_start p-l_4 transition_4 dropdown-item">
-            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit-all h:undecorated collapsed"
+             class="flex justify_start transition_4 dropdown-item">
+            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit-all h:undecorated collapsed display_none:lg"
                     data-bs-toggle="collapse"
                     role="button"
                     aria-expanded="true"
@@ -29242,7 +29245,7 @@ Markup:
                 <i
                    class="far fa icon-toggle_plus-minus-sub display_none:lg m-l_n2 m-r_2"></i>
             </button>
-            <a class="flex_grow self_center wrap text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated"
+            <a class="flex_grow self_center wrap w_100 text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated p-r_3"
                href="/education-and-meetings/education-catalog">Products</a>
         </div>
         <ul class="ul_none lh_3 font-size_down collapse transition_4 block:lg"
@@ -29319,7 +29322,7 @@ Markup:
 
 
 Weight:1005
-
+ flex_grow self_center wrap w_100 text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated p-r_3
 Styleguide Recipes.BrandedNav.Dropdown.List.SubLinks
 */
 /*
