@@ -175,7 +175,7 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 		margin: $margin_2 0 $margin_3;
 		font-family: $font_ui;
 		th {
-			word-break: break-all;
+			word-break: break-word;
 			vertical-align: bottom;
 		}
 		th > b,
@@ -204,31 +204,71 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 	}
 	.table{
 		display: block;
-		&::before,&::after {
-			font-size: $font_n2;
+		&::after{
+			content: "Open Table In New Window";
+			text-transform: none;
+			-webkit-appearance: button;
+			border-width: thin;
+			color: white;
+			font-weight: 500;
+			font-size: 0.8888888889rem;
+			line-height: 1;
+			text-align: center;
+			margin: 0.5rem 2rem ;
+			padding: 0.5rem ;
+			display: inline-block;
+			box-sizing: border-box;
+			width: calc(100% - 4rem);
+			box-shadow: 0 1px 10px hsla(0, 0%, 0%, 0.05), 0 2px 4px rgba(0,0,0,.3), 1px 5px 5px rgba(0,0,0,.01);
+			background-color: #198dae !important;
+			border-style: none;
+			border-radius: 6px;
+			border-color: #0e4e60 !important;
+			transition: all 0.1s;
+			transition-timing-function: ease-out;
+			outline: none;
+			cursor: pointer;
+			&::hover{
+				background-color: #0e4e60 !important;
+			}
+		}
+		&::before{
+			font-size: $font_1;
 			font-family: 'Font Awesome 5 Pro';
 			font-weight: 900;
-			content: "\f060  Tables May Scroll Left to Right  \f061";
 			display: block;
-			border-radius: $border_radius;
-			padding: $padding_2 $padding_3;
-			color: get-themecolor(accent, -1);
-			margin: $margin_3 auto $margin_4;
+			background-color: get-themecolor(warning, 3);
+			border-radius: $border_round;
+			padding: $padding_4 $padding_4;
+			color: $black;
+			margin: $margin_3 0 $margin_4;
 			text-align: center;
+			content: "\f0ce  Table Must be Viewed New Window  \f0ce";
+			width:100%;
+
+	}
+		@media #{$small-up} {
+			&::before {
+				font-size: $font_n1;
+				margin: $margin_3 0 $margin_3;
+				background-color: transparent;
+				color: get-themecolor(accent, -1);
+				content: "\f060  Tables May Scroll Left to Right  \f061";
+			}
 		}
 		table{
 			tr{position:relative;}
-			td:first-child,th:first-child {
-				position: sticky;
-				left: 1px;
-				top:0;
-				bottom:0;
-				background: white;
-				border-right: 1px solid rgba(get-themecolor(primary,-2),10%);
-				max-width: 25vw;
-				box-shadow: 4px 0 5px 0 rgba(get-themecolor(primary,-4),10%);
-			}
-			td:nth-child(2),th:nth-child(2) {padding-left:1rem}
+			// td:first-child,th:first-child {
+			// 	position: sticky;
+			// 	left: 1px;
+			// 	top:0;
+			// 	bottom:0;
+			// 	background: white;
+			// 	border-right: 1px solid rgba(get-themecolor(primary,-2),10%);
+			// 	max-width: 25vw;
+			// 	box-shadow: 4px 0 5px 0 rgba(get-themecolor(primary,-4),10%);
+			// }
+			// td:nth-child(2),th:nth-child(2) {padding-left:1rem}
 		}
 		> div{		
 			width: calc(100% + 0rem);
@@ -263,11 +303,19 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 			box-shadow: unset;
 		}
 		table {
+			display:none;
+			min-width: 100%;
 			width:fit-content;
 			td>*{max-width:25em;}
 		}
+		.table-footnotes,.inline-table-caption,.inline-table-label{
+			display: none;
+		}
+		
 		@media #{$medium-up} {
+			.table-footnotes,.inline-table-caption,.inline-table-label{display: block;}
 			table{
+				display:table;
 				width:min-content;
 				td>*{max-width:30em;}
 			}
