@@ -26,7 +26,7 @@ $navbar-bgcolor_shade: map-get($theme-palette, accent);
 .navbar {
 	font-family: $navbar-font_primary;
 }
-.dropdown-menu br-t_0 {
+.dropdown-menu font_copy br-t_0 {
 	font-family: $navbar-font_shade;
 }
 .nav-link {
@@ -89,27 +89,6 @@ $navbar-bgcolor_shade: map-get($theme-palette, accent);
 	}
 }
 
-// .dropdown {
-// 	&:hover {
-// 		& > .dropdown-menu br-t_0 {
-// 			.navbar-expand-sm & {
-// 				@media #{$small-up} {
-// 					display: block;
-// 				}
-// 			}
-// 			 & {
-// 				@media #{$medium-up} {
-// 					display: block;
-// 				}
-// 			}
-// 			.navbar-expand-lg & {
-// 				@media #{$large-up} {
-// 					display: block;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
 .dropdown-item{
 	color: get-themecolor(primary, -1);
 	&:hover, &:focus {
@@ -145,7 +124,7 @@ Markup:
 				<li class="display_none:lg relative nav-item relative text_left text_center:lg  flex_auto">
 					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources">Guidelines</a>
 				</li>
-				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown ">
+				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown  ">
 <a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
 	id="clinicalTopicsDropdown"
 	role="button"
@@ -156,14 +135,14 @@ Markup:
 <a class="nav-link nowrap p-l_0  a:c_white inline-block"
 	href="/clinical-topics">Clinical
 	Topics</a>
-					<div class="dropdown-menu br-t_0 br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="clinicalTopicsDropdown">
+					<div class="dropdown-menu font_copy br-t_0 br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="clinicalTopicsDropdown">
 						{{> "Recipes.BrandedNav.Dropdown.AltContent" }}
 					</div>
 				</li>
 				<li class="nav-item relative text_left text_center:lg  flex_auto ">
 					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="#">Latest In Cardiology</a>
 				</li>
-				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown">
+				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown ">
 					<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
 						id="eduDropdown"
 						role="button"
@@ -174,11 +153,11 @@ Markup:
 					</a>
 					<a class="nav-link nowrap p-l_0  a:c_white inline-block"
 						href="/Edu-Edu">Education and Meetings</a>
-					<div class="dropdown-menu br-t_0 dropdown-menu-end  br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="eduDropdown">
+					<div class="dropdown-menu font_copy br-t_0 dropdown-menu-end  br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="eduDropdown">
 						{{> "Recipes.BrandedNav.Dropdown" }}
 					</div>
 				</li>
-				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown">
+				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown ">
 					<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
 						id="toolDropdown"
 						role="button"
@@ -189,7 +168,7 @@ Markup:
 					</a>
 					<a class="nav-link nowrap p-l_0  a:c_white inline-block"
 						href="/Edu-Edu">Tools &amp; Practice Support</a>	
-					<div class="dropdown-menu br-t_0  dropdown-menu-end br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="toolDropdown">
+					<div class="dropdown-menu font_copy br-t_0  dropdown-menu-end br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="toolDropdown">
 						{{> "Recipes.BrandedNav.Dropdown.DoubleColumn" }}
 					</div>
 				</li>
@@ -255,7 +234,7 @@ Markup:
 				 aria-expanded="false"
 				>My ACC <i class="far icon-toggle_chevron-up-down"></i></a>
 			<div 
-			class="dropdown-menu br-t_0 dropdown-menu-end br_none br_solid:lg m-t_0 m-t_2:lg font_0" aria-labelledby="dropdownMyACC"  
+			class="dropdown-menu font_copy br-t_0 dropdown-menu-end br_none br_solid:lg m-t_0 m-t_2:lg font_0" aria-labelledby="dropdownMyACC"  
 			>
 				<div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
 					<div class="p-x_2 p-y_0 dropdown_column">
@@ -445,7 +424,7 @@ Markup:
 
 
 MarkupWrapperClasses:
-    br_none br_solid:lg dropdown-menu br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+    br_none br_solid:lg dropdown-menu font_copy br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 Weight: 55
 
@@ -468,7 +447,7 @@ Markup:
 
 
 MarkupWrapperClasses:
-    br_none br_solid:lg dropdown-menu br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+    br_none br_solid:lg dropdown-menu font_copy br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 Weight: 50
 
@@ -488,7 +467,7 @@ Markup:
 </div>
 
 MarkupWrapperClasses:
-	br_none br_solid:lg dropdown-menu br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+	br_none br_solid:lg dropdown-menu font_copy br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 Weight: 2
 
@@ -513,7 +492,7 @@ Markup:
 </div>
 	
 MarkupWrapperClasses:
-	br_none br_solid:lg dropdown-menu br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+	br_none br_solid:lg dropdown-menu font_copy br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 
 Weight: 60

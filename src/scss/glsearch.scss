@@ -205,7 +205,8 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 	.table{
 		display: block;
 		&::after{
-			content: "Open Table In New Window";
+			font-family: 'Font Awesome 5 Pro';
+			content: "Open Table \f08e";
 			text-transform: none;
 			-webkit-appearance: button;
 			border-width: thin;
@@ -247,7 +248,7 @@ $line-height_5: get-css-size(line-height, 5);/**  Default Setup  Not sure what t
 			width:100%;
 
 	}
-		@media #{$small-up} {
+		@media #{$medium-up} {
 			&::before {
 				font-size: $font_n1;
 				margin: $margin_3 0 $margin_3;

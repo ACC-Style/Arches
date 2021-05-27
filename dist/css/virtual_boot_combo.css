@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** Function Test **/
 /**
  * arches - Global style system focused on utility classes
@@ -66,7 +67,7 @@ Utility Classes
 
 Utility Classes (UCs) are classes that control single styles allowing for quick manipulations of the appearance of the DOM.  When combined with other UCs and toggled with javascripts you can create complex and new UI without the need of writing styles into the system. Examples of some UC built UIs can be found here as recipes. Learn more about UCs in the Introduction section
 
-Weight: 100
+Weight:100
 
 Styleguide UC
 */
@@ -74,19 +75,17 @@ Styleguide UC
 /*
 Anatomy
 
-<h2>Anatomy of a Utility Class Name</h2>
+<h2>Anatomy of a Utility Class</h2>
 The breakdown of the names for UCs follow a structured patter for easy muscle memory learning. 
-
-  Markup:
-  <p class="font_2">All of the Class Names follow this ordered pattern of construction.</p>
-  <ol class="font_1 font_bold m_4 br_solid br_1 br_shade-4 lh_4" style="list-style-position: inside;">
-        <li class="p_2 bg_success-3">State - Hover <em>(Optional)</em></li>
-        <li class="p_2 bg_primary-3">Class Name</li>
-        <li class="p_2 bg_alert-3">Class Name Modifier <em>(Optional)</em></li>
-        <li class="p_2 bg_highlight-3">Value</li>
-        <li class="p_2 bg_alert-3">Value Modifier <em>(Optional)</em></li>
-        <li class="p_2 bg_accent-3">Breakpoint <em>(Optional)</em></li>
-        <li class="p_2 bg_warning-3">*Dividers can be : _ or - depending on usage</li>
+<p class="font_2">All of the Style Names follow this ordered pattern of construction.</p>
+<ol class="font_1 font_bold m-y_4 br_solid br_1 br_shade-4 lh_4 m_0 p_0" style="list-style-position: inside;">
+        <li class="p_3 m_0 bg_success-3">State - Hover <em>(Optional: always ends with a colon)</em></li>
+        <li class="p_3 m_0 bg_primary-3">Style Name</li>
+        <li class="p_3 m_0 bg_alert-3">Style Name Modifier <em>(Optional: always starts with a hyphen)</em></li>
+         <li class="p_3 m_0 bg_warning-3">Divider or Equal To <em>(Optional: if it is a style value pair use the underscore as an equals)</em></li>
+        <li class="p_3 m_0 bg_highlight-3">Value</li>
+        <li class="p_3 m_0 bg_alert-3">Value Modifier <em>(Optional: always starts with a hyphen)</em></li>
+        <li class="p_3 m_0 bg_accent-3">Breakpoint <em>(Optional: always starts with a colon)</em></li>
   </ol>
   <div class="font_2">
       <div class="font_bold font_3">Example 1</div>
@@ -94,35 +93,28 @@ The breakdown of the names for UCs follow a structured patter for easy muscle me
       <div class="h:bg_primary-n3 h:c_white  m-y_4 p_4 br_solid br_shade-3 br_1">I have the class h:bg_primary-n2</div>
       <div class="font_bold font_1">Long Name</div>
       <div class="flex m-t_3">
-            <div class="flex_auto bg_success-3 p_3">hover</div>
-            <div class="flex_auto bg_warning-3 p_3">:</div>
+            <div class="flex_auto bg_success-3 p_3">hover:</div>
             <div class="flex_auto bg_primary-3 p_3">background-color</div>
             <div class="flex_auto bg_warning-3 p_3">_</div>
             <div class="flex_auto bg_highlight-3 p_3">primary</div>
-            <div class="flex_auto bg_warning-3 p_3">-</div>
-            <div class="flex_auto bg_alert-3 p_3">n2</div>
+            <div class="flex_auto bg_alert-3 p_3">Modify Negative 2</div>
       </div>
-      <div class="font_bold font_1">Utiltiy Class</div>
+      <div class="font_bold font_1">Utility Class</div>
       <div class="flex m-t_3">
-        <div class="flex_auto bg_success-3 p_3">h</div>
-        <div class="flex_auto bg_warning-3 p_3">:</div>
+        <div class="flex_auto bg_success-3 p_3">h:</div>
         <div class="flex_auto bg_primary-3 p_3">bg</div>
         <div class="flex_auto bg_warning-3 p_3">_</div>
         <div class="flex_auto bg_highlight-3 p_3">primary</div>
-        <div class="flex_auto bg_warning-3 p_3">-</div>
-        <div class="flex_auto bg_alert-3 p_3">n2</div>
+        <div class="flex_auto bg_alert-3 p_3">-n2</div>
       </div>
-      <ol class="font_0 font_bold c_black m_4 br_solid br_1 br_shade-4 lh_4" style="list-style-position: inside;">
-          <li class="bg_success-3 p_3">'h' => Interaction State </li>
-          <li class="bg_warning-3 p_3">`:`=> Interaction State Divider when use state interaction</li>
-          <li class="bg_primary-3 p_3">'bg' => Class Name</li>
-          <li class="bg_warning-3 p_3">`_` => Value Divider think of this as an equal mark</li>
-          <li class="bg_highlight-3 p_3">`primary` => Value</li>
-          <li class="bg_warning-3 p_3">`-` => Modifier Divider think of this as shift from the value</li>
-          <li class="bg_alert-3 p_3">`n2` => Modifier Values most follow a [n5 , n4, n3, n2, n1, {0 is
+      <ol class="font_0 font_bold c_black m-y_4 br_solid br_1 br_shade-4 lh_4 p_0 m_0" style="list-style-position: inside;">
+          <li class="bg_success-3 p_3 m_0">'h' => Interaction State </li>
+          <li class="bg_primary-3 p_3 m_0">'bg' => Style Name</li>
+          <li class="bg_warning-3 p_3 m_0">`_` => Value Divider think of this as an equal mark</li>
+          <li class="bg_highlight-3 p_3 m_0">`primary` => Value</li>
+          <li class="bg_alert-3 p_3 m_0">`n2` => Modifier Values most follow a [n5 , n4, n3, n2, n1, {0 is
           default} , 1, 2, 3, 4, 5, color names, or shade values]</li>
-          <li class="bg_warning-3 p_3">`:`=> Breakpoint Divider when rule should apply</li>
-          <li class="bg_accent-3 p_3">`lg`=> Breakpoint Value</li>
+          <li class="bg_accent-3 p_3 m_0">`lg`=> Breakpoint Value</li>
       </ol>   
   </div>
   <div class="font_2">
@@ -130,68 +122,270 @@ The breakdown of the names for UCs follow a structured patter for easy muscle me
       <div class="font_1 m-t_2">Add 1 rem of padding to the top when screen is medium and up</div>
       <div class="flex m-t_3">
         <div class="flex_auto bg_primary-3 p_3">padding</div>
-        <div class="flex_auto bg_warning-3 p_3">-</div>
         <div class="flex_auto bg_alert-3 p_3">top</div>
-        <div class="flex_auto bg_warning-3 p_3">_</div>
-        <div class="flex_auto bg_highlight-3 p_3">1 rem = value 4</div>
-        <div class="flex_auto bg_warning-3 p_3">:</div>
-        <div class="flex_auto bg_accent-3 p_3">medium breakpoint</div>
+        <div class="flex_auto bg_warning-3 p_3">Equals</div>
+        <div class="flex_auto bg_highlight-3 p_3">value 4 = 1rem </div>
+        <div class="flex_auto bg_accent-3 p_3">at the medium breakpoint</div>
       </div>
-       <div class="font_bold font_1">Utiltiy Class Example</div>
+       <div class="font_bold font_1">Utility Class Example</div>
             <div class="flex m-t_3"><div class="flex_auto bg_primary-3 p_3">p</div>
-            <div class="flex_auto bg_warning-3 p_3">-</div>
-            <div class="flex_auto bg_alert-3 p_3">t</div>
+            <div class="flex_auto bg_alert-3 p_3">-t</div>
             <div class="flex_auto bg_warning-3 p_3">_</div>
             <div class="flex_auto bg_highlight-3 p_3">4</div>
-            <div class="flex_auto bg_warning-3 p_3">:</div
-            ><div class="flex_auto bg_accent-3 p_3">md</div>
+            <div class="flex_auto bg_accent-3 p_3">:md</div>
         </div>
   </div>
 
  Styleguide UC.Anatomy
 */
 /*
-Short Hand 
+Interaction State
 
-## List of CSS Styles matched to the Utility Class Name
+Pseudo  DOM states
+| states      | Short Name | CSS      | Currently Used                         |
+| ----------- | ---------- | -------- | -------------------------------------- |
+| hover       | h:         | :hover   | Yes                                    |
+| active      | a:         | :active  | <span class="c_warning">Partial</span> |
+| ~~visited~~ | ~~v:~~     | :visited | <span class="c_alert">Not Used</span>  |
+
+ Weight: 100
+
+Styleguide UC.Anatomy.State
+*/
+/*
+Style Names
+
+## List of the short hand for style names
 
 The breakdown of the names for UCs follow a structured patter for easy muscle memory learning. 
-| Style                      | Short Name  | CSS                          |
-| -------------------------- | ----------- | ---------------------------- |
-| margin                     | '.m'        | 'margin'                     |
-| margin-top                 | '.m-t'      | 'margin-top'                 |
-| margin-bottom              | '.m-b'      | 'margin-bottom'              |
-| margin-left                | '.m-l'      | 'margin-left'                |
-| margin-right               | '.m-r'      | 'margin-right'               |
-| overflow                   | '.overflow' | 'overflow'                   |
-| padding                    | '.p'        | 'padding'                    |
-| padding-top                | '.p-t'      | 'padding-top'                |
-| padding-bottom             | '.p-b'      | 'padding-bottom'             |
-| padding-left               | '.p-l'      | 'padding-left'               |
-| padding-right              | '.p-r'      | 'padding-right'              |
-| line-height                | '.lh'       | 'line-height'                |
-| font-size                  | '.font'     | 'font-size'                  |
-| font-family                | '.font'     | 'font-family'                |
-| font-weight                | '.font'     | 'font-weight'                |
-| font-style                 | '.font'     | 'font-style'                 |
-| color                      | '.c'        | 'color'                      |
-| background-color           | '.bg'       | 'background-color'           |
-| border-color               | '.br'       | 'border-color'               |
-| border-radius              | '.br'       | 'border-radius'              |
-| border-top-right-radius    | '.br-tr'    | 'border-top-right-radius'    |
-| border-top-left-radius     | '.br-tl'    | 'border-top-left-radius'     |
-| border-bottom-right-radius | '.br-br'    | 'border-bottom-right-radius' |
-| border-bottom-left-radius  | '.br-bl'    | 'border-bottom-left-radius'  |
-| border-width               | '.br'       | 'border-width'               |
-| border-top-width           | '.br-t'     | 'border-top-width'           |
-| border-right-width         | '.br-r'     | 'border-right-width'         |
-| border-left-width          | '.br-l'     | 'border-left-width'          |
-| border-bottom-width        | '.br-b'     | 'border-bottom-width'        |
-| width                      | '.w'        | 'width'                      |
-| display                    | '.d'        | 'display'                    |
-| max-width                  | '.max-w'    | 'max-width'                  |
+| CSS Style                               | Short Name | has modifier                 | Uses Stepped Value                         |
+| --------------------------------------- | ---------- | ---------------------------- | ------------------------------------------ |
+| background-color                        | .bg        |                              | <i class="fas fa-check"></i> as a modifier |
+| border-color                            | .br        |                              | <i class="fas fa-check"></i> as a modifier |
+| border-radius                           | .br        | <i class="fas fa-check"></i> |                                            |
+| border-width                            | .br        | <i class="fas fa-check"></i> | <i class="fas fa-check"></i>               |
+| color                                   | .c         |                              | <i class="fas fa-check"></i> as a modifier |
+| clear                                   | .clear     |                              |                                            |
+| display                                 | .          |                              |                                            |
+| flex                                    | .flex      |                              |                                            |
+| float                                   | .float     |                              |                                            |
+| font-size                               | .font      |                              | <i class="fas fa-check"></i>               |
+| font-family                             | .font      |                              |                                            |
+| font-weight                             | .font      |                              |                                            |
+| font-style                              | .font      |                              |                                            |
+| height                                  | .h         |                              |                                            |
+| justify-content                         | .justify   |                              |                                            |
+| margin                                  | .m         | <i class="fas fa-check"></i> | <i class="fas fa-check"></i>               |
+| overflow                                | .overflow  |                              |                                            |
+| padding                                 | .p         | <i class="fas fa-check"></i> | <i class="fas fa-check"></i>               |
+| position                                | .          |                              |                                            |
+| <em class="p-l_4 c_primary">top</em>    | .t         |                              | <i class="fas fa-check"></i>               |
+| <em class="p-l_4 c_primary">right</em>  | .r         |                              | <i class="fas fa-check"></i>               |
+| <em class="p-l_4 c_primary">bottom</em> | .b         |                              | <i class="fas fa-check"></i>               |
+| <em class="p-l_4 c_primary">left</em>   | .l         |                              | <i class="fas fa-check"></i>               |
+| line-height                             | .lh        |                              | <i class="fas fa-check"></i>               |
+| width                                   | .w         |                              |                                            |
+| max-width                               | .max-w     |                              |                                            |
 
- Styleguide UC.Shorthand
+Weight:200
+
+ Styleguide UC.Anatomy.Style
+*/
+/*
+Name Modifiers
+
+## List of CSS Style Name Modifiers
+
+The breakdown of the names for UCs follow a structured patter for easy muscle memory learning. 
+| Style        | Short Name | Example                    |
+| ------------ | ---------- | -------------------------- |
+| top          | -t         | margin-top                 |
+| bottom       | -b         | margin-bottom              |
+| left         | -l         | margin-left                |
+| right        | -r         | margin-right               |
+| top-right    | -tr         | border-top-right-radius    |
+| top-left     | -tl         | border-top-left-radius     |
+| bottom-right | -br         | border-bottom-right-radius |
+| bottom-left  | -bl         | border-bottom-left-radius  |
+
+Weight:300
+
+ Styleguide UC.Anatomy.StyleModifiers
+*/
+/*
+Common Values
+
+## List of the positive to negative stepped values
+
+### Values
+
+| Value Postfix | Font Size | Margin, top, left, right, bottom | Padding              | Line Height | border-width | Color Modifier         |
+| ------------- | --------- | -------------------------------- | -------------------- | ----------- | ------------ | ---------------------- |
+| n5            | ms(-5)    | -2 \* X<sup>†</sup>              | N/A                  | N/A         | N/A          | mix(color, black, 90%) |
+| n4            | ms(-4)    | -1 \* X<sup>†</sup>              | N/A                  | N/A         | N/A          | mix(color, black, 70%) |
+| n3            | ms(-3)    | -.5 \* X<sup>†</sup>             | N/A                  | N/A         | N/A          | mix(color, black, 50%) |
+| n2            | ms(-2)    | -.25 \* X<sup>†</sup>            | N/A                  | N/A         | N/A          | mix(color, black, 30%) |
+| n1            | ms(-1)    | -.1 \* X<sup>†</sup>             | N/A                  | N/A         | N/A          | mix(color, black, 10%) |
+| 0             | ms(0)     | 0                                | 0                    | 0           | 0            | color @ 100%           |
+| 1             | ms(1)     | .1 \* X<sup>†</sup>              | .1 \* X<sup>†</sup>  | 1           | 1px          | mix(color, white, 10%) |
+| 2             | ms(2)     | .25 \* X<sup>†</sup>             | .25 \* X<sup>†</sup> | 1.45        | 3px          | mix(color, white, 30%) |
+| 3             | ms(3)     | .5 \* X<sup>†</sup>              | 5 \* X<sup>†</sup>   | 1.65        | 5px          | mix(color, white, 50%) |
+| 4             | ms(4)     | 1 \* X<sup>†</sup>               | 1 \* X<sup>†</sup>   | 1.75        | .5rem        | mix(color, white, 70%) |
+| 5             | ms(5)     | 2 \* X<sup>†</sup>               | 2 \* X<sup>†</sup>   | 2           | 1rem         | mix(color, white, 90%) |
+
+<sup>†</sup> x = global spacing 1 rem
+
+Weight:400
+
+ Styleguide UC.Anatomy.ValuesStepped
+*/
+/*
+Alternate Values
+
+## Alternate Values
+
+#### Border Radius
+
+| Value Postfix | Border Radius Values |
+| ------------- | -------------------- |
+| square        | 0                    |
+| radius        | 5px or Global Radius |
+| round         | 25px                 |
+| circle        | 100%                 |
+
+#### Border Style
+
+| Value Postfix | Border Style Values |
+| ------------- | ------------------- |
+| none          | none                |
+| dashed        | dashed              |
+| solid         | solid               |
+
+#### Display
+
+| Value Postfix | Display      |
+| ------------- | ------------ |
+| none          | none         |
+| block         | block        |
+| inline        | inline       |
+| inline-block  | inline-block |
+| flex          | flex         |
+
+#### Overflow
+
+| Value Postfix | Overflow |
+| ------------- | -------- |
+| auto          | auto     |
+| clip          | clip     |
+| scroll        | scroll   |
+| hidden        | hidden   |
+| ellipsis      | ellipsis |
+| visible       | visible  |
+| unset         | unset    |
+
+#### max-width
+
+| Value Postfix | dimension | Use case            |
+| ------------- | --------- | ------------------- |
+| 5             | 5 rem     |                     |
+| 10            | 10rem     |                     |
+| 15            | 15rem     |                     |
+| 20            | 20rem     | Small Phone Size    |
+| 25            | 25rem     |                     |
+| 30            | 30rem     | Short Readable Zone |
+| 35            | 35rem     | Short Readable Zone |
+| 40            | 40rem     | Short Readable Zone |
+| 45            | 45rem     | Readable Zone       |
+| 50            | 50rem     | Readable Zone       |
+| 55            | 55rem     | Readable Zone       |
+| 60            | 60rem     | Readable Zone       |
+| 65            | 65rem     | Readable Zone       |
+| 70            | 70rem     | Readable Zone       |
+| 75            | 75rem     |                     |
+| 80            | 80rem     |                     |
+| 85            | 85rem     | Max Desktop Range   |
+| 90            | 90rem     | Max Desktop Range   |
+| 95            | 95rem     | Max Desktop Range   |
+
+ Weight: 450
+
+Styleguide UC.Anatomy.ValuesAlternate
+*/
+/*
+Break Points
+
+| break point | Short Name | css             | dimension | Currently Used                  |
+| ----------- | ---------- | --------------- | --------- | ------------------------------- |
+| all sizes   | ''         | min-width: 0em  | 0px       | default                         |
+| ~~small~~   | ':sm'      | min-width: 30em | 480px     | <span class="c_alert">No</span> |
+| medium      | ':md'      | min-width: 40em | 640px     | Yes                             |
+| large       | ':lg'      | min-width: 40em | 1024px    | Yes                             |
+
+ Weight: 500
+
+Styleguide UC.Anatomy.Breakpoints
+*/
+/*
+Extra Credit
+
+## Reserved Names
+
+#### Reserved Words and Modifier Descriptors
+
+These words should be used to describe states and generic elements of the UI and should be used instead of some variation or alternate name.
+
+#### Component Name Modifier
+
+Components styling is most are
+
+-   ** -container ** or UI Name with no modifier (Use instead of holder when items are UI based)
+-   ** -group ** or UI Name with no modifier (Use instead of list, holder, collection when items or repeatable Content)
+-   ** -item ** or UI Name with no modifier (generic child of container or group)
+-   ** -separator ** (a visual treatment or break between items within a container or group )
+
+#### States
+
+-   show
+-   hide
+-   is-active
+-   is-complete
+-   is-disabled
+-   is-current
+-   is-selected
+-   focus
+-   success
+-   hover
+-   warning
+-   alert (Depreciate the use of ‘error’ for the native descriptor from foundation)
+-   primary
+-   secondary
+-   reverse
+
+## Colors
+
+-   State Colors
+    -   -success, -green
+    -   -warning, -orange
+    -   -alert, -red
+    -   -primary, -productColor
+    -   -secondary
+    -   -highlight
+-   Black
+-   White
+-   Black and White have transparencies
+    -   -10 alpha,
+    -   -20 alpha,
+    -   -30 alpha,
+    -   -40 alpha,
+    -   -50 alpha,
+    -   -60 alpha,
+    -   -70 alpha,
+    -   -80 alpha,
+    -   -90 alpha
+
+ Weight: 1000
+
+Styleguide UC.Anatomy.ExtraCredit
 */
 .reading-typography h1,
 .reading-typography h2,
@@ -316,6 +510,68 @@ The breakdown of the names for UCs follow a structured patter for easy muscle me
 }
 .reading-typography thead {
   border-bottom: 1px solid #004176;
+}
+
+.reading-typography.font-size_up h1 {
+  font-size: 32.436px;
+  font-size: 2.0272865295rem;
+}
+.reading-typography.font-size_up h2 {
+  font-size: 28.832px;
+  font-size: 1.8020324707rem;
+}
+.reading-typography.font-size_up h3 {
+  font-size: 25.628px;
+  font-size: 1.6018066406rem;
+}
+.reading-typography.font-size_up h4 {
+  font-size: 22.781px;
+  font-size: 1.423828125rem;
+}
+.reading-typography.font-size_up h5,.reading-typography.font-size_up h6 {
+  font-size: 20.25px;
+  font-size: 1.265625rem;
+}
+.reading-typography.font-size_up p,
+.reading-typography.font-size_up ul,
+.reading-typography.font-size_up ol,
+.reading-typography.font-size_up dl,
+.reading-typography.font-size_up table {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.reading-typography.font-size_down h1 {
+  font-size: 25.628px;
+  font-size: 1.6018066406rem;
+}
+.reading-typography.font-size_down h2 {
+  font-size: 22.781px;
+  font-size: 1.423828125rem;
+}
+.reading-typography.font-size_down h3 {
+  font-size: 20.25px;
+  font-size: 1.265625rem;
+}
+.reading-typography.font-size_down h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.reading-typography.font-size_down h5,.reading-typography.font-size_down h6 {
+  font-size: 16px;
+  font-size: 1rem;
+}
+.reading-typography.font-size_down p,
+.reading-typography.font-size_down ul,
+.reading-typography.font-size_down ol,
+.reading-typography.font-size_down dl,
+.reading-typography.font-size_down table {
+  margin-top: 4px;
+  margin-top: 0.25rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+  font-size: 14.222px;
+  font-size: 0.8888888889rem;
 }
 
 /*
@@ -1094,7 +1350,7 @@ Styleguide UC.Typography.Black White
   color: white !important;
 }
 
-.c_inherit {
+.c_inherit,.c_inherit-all:hover, .c_inherit-all:active, .c_inherit-all:visited, .c_inherit-all:focus, .c_inherit-all {
   color: inherit;
 }
 
@@ -12595,6 +12851,10 @@ a:focus {
   border-color: #00101e !important;
 }
 
+.h\:c_inherit {
+  color: inherit;
+}
+
 /*
   Hover: Text Color
 
@@ -13166,6 +13426,34 @@ Styleguide UC.Animation.scale
 
 .origin_l {
   transform-origin: left center;
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.rotate-135 {
+  transform: rotate(135deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.rotate-225 {
+  transform: rotate(225deg);
+}
+
+.rotate-270 {
+  transform: rotate(270deg);
+}
+
+.rotate-315 {
+  transform: rotate(315deg);
 }
 
 /*
@@ -21446,7 +21734,7 @@ Styleguide Recipes.InteractiveExtras.Expanded Click Area
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #0000;
+  background-color: transparent;
   content: "";
   pointer-events: auto;
 }
@@ -21455,7 +21743,7 @@ Styleguide Recipes.InteractiveExtras.Expanded Click Area
   background-color: #9acd322e;
 }
 
-.icon-toggle_check:before, .icon-toggle_check-circle:before, .icon-toggle_check-sqaure:before, .icon-toggle_arrow-circle:before, .icon-toggle_caret-circle-right-down:before, .icon-toggle_chevron-double-left-right:before, .icon-toggle_chevron-double-up-down:before, .icon-toggle_chevron-up-down:before, .icon-toggle_plus-minus:before, .icon-toggle_bars-times:before {
+.icon-toggle_plus-minus-sub:before, .icon-toggle_check:before, .icon-toggle_check-circle:before, .icon-toggle_check-sqaure:before, .icon-toggle_arrow-circle:before, .icon-toggle_chevron-double-left-right:before, .icon-toggle_chevron-double-up-down:before, .icon-toggle_chevron-up-down:before, .icon-toggle_plus-minus:before, .icon-toggle_bars-times:before {
   margin: 0 4px;
   margin: 0 0.25rem;
 }
@@ -21466,10 +21754,9 @@ Is Active Toggle
 Many momment there are needs for toggles of icon when the parent is in the state of `active`.  Used in tree navs, dropdowns, and collapsing areas. 
 
 .icon-toggle_plus-minus 					-  Toggle between plus and minus square
-.icon-toggle_chevron-up-down				- 	Toggle a chevro pointing up and then down.
-.icon-toggle_chevron-double-up-down 					-  Toggle the double chevron to point up when active
-.icon-toggle_chevron-double-left-right		- Toggle cheverons left and right
-.icon-toggle_caret-circle-right-down 					-  Toggle the caret to point down when active.
+.icon-toggle_chevron-up-down				- 	Toggle a chevron pointing up and then down.
+.icon-toggle_chevron-double-up-down 		-  Toggle the double chevron to point up when active
+.icon-toggle_chevron-double-left-right		- Toggle chevron left and right
 .icon-toggle_arrow-circle 					-  Toggle the arrow to have a circle when active.
 .icon-toggle_bars-times 					-  Toggle between bars and times
 .icon-toggle_check-sqaure					-  Check Marks toggle on and off
@@ -21501,14 +21788,14 @@ Styleguide Recipes.InteractiveExtras.ToggleIcons
 .icon-toggle_bars-times:before {
   content: "";
 }
-.active .icon-toggle_bars-times:before, .show .icon-toggle_bars-times:before, .show > .icon-toggle_bars-times:before, .active > .icon-toggle_bars-times:before {
+.active .icon-toggle_bars-times:before, .icon-toggle_bars-times:before.show, .show > .icon-toggle_bars-times:before, .active > .icon-toggle_bars-times:before {
   content: "";
 }
 
 .icon-toggle_plus-minus:before {
   content: "";
 }
-.active .icon-toggle_plus-minus:before, .show .icon-toggle_plus-minus:before, .active > .icon-toggle_plus-minus:before {
+.active .icon-toggle_plus-minus:before, .icon-toggle_plus-minus:before.show, .show > .icon-toggle_plus-minus:before, .active > .icon-toggle_plus-minus:before {
   content: "";
 }
 
@@ -21531,13 +21818,6 @@ Styleguide Recipes.InteractiveExtras.ToggleIcons
 }
 .active .icon-toggle_chevron-double-left-right:before, .show .icon-toggle_chevron-double-left-right:before, .active > .icon-toggle_chevron-double-left-right:before {
   content: "";
-}
-
-.icon-toggle_caret-circle-right-down:before {
-  content: "";
-}
-.active .icon-toggle_caret-circle-right-down:before, .show .icon-toggle_caret-circle-right-down:before, .active > .icon-toggle_caret-circle-right-down:before {
-  content: "";
 }
 
 .icon-toggle_arrow-circle:before {
@@ -28569,11 +28849,25 @@ Styleguide  Recipes Bootstrap.Carousel
   content: "";
 }
 
+.icon-toggle_plus-minus:before {
+  content: "";
+}
+.show > .icon-toggle_plus-minus:before {
+  content: "";
+}
+
+.icon-toggle_plus-minus-sub:before {
+  content: "";
+}
+.collapsed > .icon-toggle_plus-minus-sub:before, .collapsed .icon-toggle_plus-minus-sub:before {
+  content: "";
+}
+
 .navbar {
   font-family: "Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab";
 }
 
-.dropdown-menu {
+.dropdown-menu font_copy br-t_0 {
   font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -28592,15 +28886,13 @@ Styleguide  Recipes Bootstrap.Carousel
   display: none;
 }
 
-.navbar-primary .nav-item:hover {
+.navbar-primary .nav-item .nav-link {
+  color: inherit;
+}
+
+.navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus, .navbar-primary .nav-item:active {
   border-top-color: #00aeef;
   border-bottom-color: #fff;
-  background-color: #fff;
-}
-.navbar-primary .nav-item:hover.nav-link {
-  color: white;
-}
-.navbar-primary .nav-item .nav-link.show {
   background-color: #fff;
   color: #004176;
 }
@@ -28609,32 +28901,38 @@ Styleguide  Recipes Bootstrap.Carousel
     border-top: 0.25rem #004176 solid;
     border-bottom: 0.25rem #004176 solid;
   }
-  .navbar-primary .nav-item:hover {
+  .navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus, .navbar-primary .nav-item:active {
     border-top-color: #00aeef;
     border-bottom-color: #fff;
     background-color: #fff;
-  }
-  .navbar-primary .nav-item:hover .nav-link, .navbar-primary .nav-item:hover .nav-link.show {
     color: #004176;
   }
 }
 
 @media only screen and (min-width : 1024px) {
-  .navbar-primary.navbar-expand-lg .nav-item {
+  .navbar-primary .navbar-nav .nav-item {
     border-top: 0.25rem #004176 solid;
     border-bottom: 0.25rem #004176 solid;
   }
-  .navbar-primary.navbar-expand-lg .nav-item:hover {
+  .navbar-primary .navbar-nav .nav-item .nav-link, .navbar-primary .navbar-nav .nav-item .nav-link:hover, .navbar-primary .navbar-nav .nav-item .nav-link:focus, .navbar-primary .navbar-nav .nav-item .nav-link:active {
+    color: #fff;
+  }
+  .navbar-primary .navbar-nav .nav-item:hover, .navbar-primary .navbar-nav .nav-item:focus, .navbar-primary .navbar-nav .nav-item:active {
     border-top-color: #00aeef;
     border-bottom-color: #fff;
     background-color: #fff;
+    color: #004176;
   }
-  .navbar-primary.navbar-expand-lg .nav-item:hover .nav-link {
-    background-color: #fff;
+  .navbar-primary .navbar-nav .nav-item:hover .nav-link, .navbar-primary .navbar-nav .nav-item:hover .nav-link:hover, .navbar-primary .navbar-nav .nav-item:hover .nav-link:focus, .navbar-primary .navbar-nav .nav-item:hover .nav-link:active, .navbar-primary .navbar-nav .nav-item:focus .nav-link, .navbar-primary .navbar-nav .nav-item:focus .nav-link:hover, .navbar-primary .navbar-nav .nav-item:focus .nav-link:focus, .navbar-primary .navbar-nav .nav-item:focus .nav-link:active, .navbar-primary .navbar-nav .nav-item:active .nav-link, .navbar-primary .navbar-nav .nav-item:active .nav-link:hover, .navbar-primary .navbar-nav .nav-item:active .nav-link:focus, .navbar-primary .navbar-nav .nav-item:active .nav-link:active {
     color: #004176;
   }
 }
 
+@media only screen and (min-width : 1024px) {
+  .collapse.block\:lg {
+    display: block;
+  }
+}
 .dropdown-item {
   color: #003764;
 }
@@ -28643,8 +28941,8 @@ Styleguide  Recipes Bootstrap.Carousel
   color: white;
 }
 
-.show > i.icon-toggle_plus-minus:before, .dropdown:hover i.icon-toggle_plus-minus:before {
-  content: "";
+.dropdown_column {
+  min-width: 70vw;
 }
 
 @media only screen and (min-width : 768px) {
@@ -28659,52 +28957,76 @@ Header Nav
 The Header Nav of ACC.org. <span class="font_n1 font_italic c_warning">This is sample data and might not reflect the full design or content needed in production.</span>
 
 Markup:
-<div class="flex  relative">
-	<nav class="flex_auto navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_1">
+<div class="flex c_white relative">
+	<nav class="flex_auto navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_2 font_1:lg relative">
 		{{> "Recipes.BrandedNav.Hamburger" }}
 		<div class="collapse navbar-collapse" id="navBarMainNav">
 			<ul class="navbar-nav flex flex_row:lg flex_column justify_around w_100">
-				<li class="nav-item flex_shrink">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/" title="Home of the American College of Cardiology"><i class="fas fa-home p-x_3:lg"></i><span class="display_none:lg">&nbsp;Home</span></a>
+				<li class="nav-item relative text_left text_center:lg  flex_shrink">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="//www.acc.org/" title="Home of the American College of Cardiology"><i class="fas fa-home p-x_3:lg"></i><span class="display_none:lg">&nbsp;Home</span></a>
 				</li>
-				<li class="display_none:lg nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources">Guidelines</a>
+				<li class="display_none:lg relative nav-item relative text_left text_center:lg  flex_auto">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources">Guidelines</a>
 				</li>
-				<li class="nav-item flex_auto dropdown ">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="/clinical-topics" id="clinicalTopicsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Clinical Topics</a>
-					<div class="dropdown-menu br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="clinicalTopicsDropdown">
+				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown  ">
+<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
+	id="clinicalTopicsDropdown"
+	role="button"
+	data-bs-toggle="dropdown"
+	aria-haspopup="true"
+	aria-expanded="false"><i
+		class="far fa icon-toggle_plus-minus m-l_n2 m-r_2 "></i></a>
+<a class="nav-link nowrap p-l_0  a:c_white inline-block"
+	href="/clinical-topics">Clinical
+	Topics</a>
+					<div class="dropdown-menu font_copy br-t_0 br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="clinicalTopicsDropdown">
 						{{> "Recipes.BrandedNav.Dropdown.AltContent" }}
 					</div>
 				</li>
-				<li class="nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="#">Latest In Cardiology</a>
+				<li class="nav-item relative text_left text_center:lg  flex_auto ">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="#">Latest In Cardiology</a>
 				</li>
-				<li class="nav-item flex_auto dropdown">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="#" id="eduDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>
-						Education and Meetings
+				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown ">
+					<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
+						id="eduDropdown"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false"><i
+							class="far fa icon-toggle_plus-minus m-l_n2 m-r_2 "></i>
 					</a>
-					<div class="dropdown-menu br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="eduDropdown">
+					<a class="nav-link nowrap p-l_0  a:c_white inline-block"
+						href="/Edu-Edu">Education and Meetings</a>
+					<div class="dropdown-menu font_copy br-t_0 dropdown-menu-end  br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="eduDropdown">
 						{{> "Recipes.BrandedNav.Dropdown" }}
 					</div>
 				</li>
-				<li class="nav-item flex_auto dropdown">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg dropdown-toggle a:c_white" href="#" id="toolDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa icon-toggle_plus-minus display_none:lg m-l_n2 m-r_2"></i>Tools &amp; Practice Support
+				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown ">
+					<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
+						id="toolDropdown"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false"><i
+							class="far fa icon-toggle_plus-minus m-l_n2 m-r_2 "></i>
 					</a>
-					<div class="dropdown-menu br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="toolDropdown">
+					<a class="nav-link nowrap p-l_0  a:c_white inline-block"
+						href="/Edu-Edu">Tools &amp; Practice Support</a>	
+					<div class="dropdown-menu font_copy br-t_0  dropdown-menu-end br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="toolDropdown">
 						{{> "Recipes.BrandedNav.Dropdown.DoubleColumn" }}
 					</div>
 				</li>
-				<li class="display_none:lg nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/membership" title="Access exclusive member features and groups or learn about ACC membership">Membership</a>
+				<li class="display_none:lg nav-item relative text_left text_center:lg  flex_auto ">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="//www.acc.org/membership" title="Access exclusive member features and groups or learn about ACC membership">Membership</a>
 				</li>
-				<li class="display_none:lg nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="//www.acc.org/about-acc" title="Learn about the ACC organization">About ACC</a>
+				<li class="display_none:lg nav-item relative text_left text_center:lg  flex_auto ">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="//www.acc.org/about-acc" title="Learn about the ACC organization">About ACC</a>
 				</li>
-				<li class="display_none:lg nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="http://www.onlinejacc.org/" target="_blank" title="JACC.org">JACC</a>
+				<li class="display_none:lg nav-item relative text_left text_center:lg  flex_auto ">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="http://www.onlinejacc.org/" target="_blank" title="JACC.org">JACC</a>
 				</li>
-				<li class="display_none:lg nav-item flex_auto">
-					<a class="nav-link text_left text_center:lg p-l_4 p-l_0:lg" href="http://accscientificsession.acc.org" target="_blank" title="ACC Annual Scientific Session Website">ACC.19</a>
+				<li class="display_none:lg nav-item relative text_left text_center:lg  flex_auto ">
+					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="http://accscientificsession.acc.org" target="_blank" title="ACC Annual Scientific Session Website">ACC.19</a>
 				</li>
 			</ul>
 		</div>
@@ -28726,9 +29048,10 @@ Mobile Menu Nav (Hamburger)
 Description: A button that triggers the menu to show or hide  with the site.
 
 Markup:
-<button class="br_solid br_2 br_white-2 collapsed m-l_3 m-y_3 navbar-toggler p_2" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMainNav" aria-controls="navBarMainNav" aria-expanded="false" aria-label="Toggle navigation">
+<div class="relative"><button class="br_solid br_2 br_white-2 collapsed m-l_3 m-y_3 navbar-toggler p_2 expanded-click-area collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMainNav" aria-controls="navBarMainNav" aria-expanded="false" aria-label="Toggle navigation">
 	<i class="icon-toggle_bars-times fas fa a:c_acc-2 c_white"></i><span class="a:c_acc-2 c_white p-x_3 uppercase font_accent">Menu</span>
 </button>
+</div>
 
 MarkupWrapperClasses:
 flex_auto navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_1 show
@@ -28746,15 +29069,15 @@ The ACC.org Nav has a shade nav that houses the login and profile nav with a sha
 Markup:
 <nav class="absolute bg_primary br-t_1 br-b_1  br_primary br_solid br_none flex_shrink font_0 font_1:lg m-l_auto navbar navbar-dark navbar-expand p-y_2 r_0 t_0 relative:lg" >
 	<ul class="navbar-nav">
-		<li class="nav-item dropdown">
-			<a class="nav-link a:c_white h:c_white"
+		<li class="nav-item relative flex_shrink dropdown">
+			<a class="nav-link expanded-click-area a:c_white h:c_white nowrap"
 				 role="button"
 				 id="dropdownMyACC"
 				 data-bs-toggle="dropdown"
 				 aria-expanded="false"
-				><i class="far icon-toggle_chevron-up-down"></i> My ACC</a>
+				>My ACC <i class="far icon-toggle_chevron-up-down"></i></a>
 			<div 
-			class="dropdown-menu dropdown-menu-end br_none br_solid:lg m-t_0 m-t_2:lg font_0" aria-labelledby="dropdownMyACC"  
+			class="dropdown-menu font_copy br-t_0 dropdown-menu-end br_none br_solid:lg m-t_0 m-t_2:lg font_0" aria-labelledby="dropdownMyACC"  
 			>
 				<div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
 					<div class="p-x_2 p-y_0 dropdown_column">
@@ -28802,11 +29125,14 @@ Markup:
 			</div>
 		</li>
 		<li class="nav-item">
-			<a class=" nav-link" href="#"><i class="far fa-shopping-cart"></i></a>
+			<a class=" nav-link nowrap" href="#"><i class="far fa-shopping-cart"></i></a>
 		</li>
-		<li class="nav-item">
-			<a class=" nav-link" href="#"><i class="fas fa-sign-out-alt"></i></a>
-		</li>
+		<!--<li class="nav-item">
+			<a class=" nav-link nowrap" href="#"><i class="fas fa-sign-out-alt"></i></a>
+		</li>-->
+		<!--<li class="nav-item">
+			<a href="@loginlink" class="nav-link nowrap"><i class="fas fa-sign-in-alt"></i> Log in to MyACC </a>
+		</li>-->
 	</ul>
 </nav>
 
@@ -28819,7 +29145,7 @@ Styleguide Recipes.BrandedNav.Login
 
 */
 /*
-Javascript: Snippet to Show on Hover
+JavaScript: Snippet to Show on Hover
 
 Description: 
 
@@ -28832,7 +29158,7 @@ if (window.innerWidth > 992) {
 		everyitem.addEventListener('mouseover', function(e){
 			let el_link = this.querySelector('a[data-bs-toggle]');
 			if(el_link != null){
-				let nextEl = el_link.nextElementSibling;
+				let nextEl = this.querySelector('.dropdown-menu');
 				el_link.classList.add('show');
 				nextEl.classList.add('show');
 				nextEl.setAttribute("data-bs-popper", "none")
@@ -28841,7 +29167,7 @@ if (window.innerWidth > 992) {
 		everyitem.addEventListener('mouseleave', function(e){
 			let el_link = this.querySelector('a[data-bs-toggle]');
 			if(el_link != null){
-				let nextEl = el_link.nextElementSibling;
+				let nextEl = this.querySelector('.dropdown-menu');
 				el_link.classList.remove('show');
 				nextEl.classList.remove('show');
 				nextEl.removeAttribute('data-bs-popper');
@@ -28928,11 +29254,11 @@ The Header Nav of ACC.org
 
 Markup:
 <div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
-	<div class="p-x_2 p-y_0 p-y_2:md dropdown_column">
+	<div class="p-x_2 p-y_0 p-y_2:md dropdown_column w_50:md">
 		{{> "Recipes.BrandedNav.Dropdown.List.Simple" }}
 	</div>
 	<div
-		class="p-x_2 p-y_0 p-y_2:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md dropdown_column"
+		class="p-x_2 p-y_0 p-y_2:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md dropdown_column w_50:md"
 	>
 		{{> "Recipes.BrandedNav.Dropdown.List.SubLinks" }}
 	</div>
@@ -28940,7 +29266,7 @@ Markup:
 
 
 MarkupWrapperClasses:
-    br_none br_solid:lg dropdown-menu m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+    br_none br_solid:lg dropdown-menu font_copy br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 Weight: 55
 
@@ -28961,7 +29287,7 @@ Markup:
 
 
 MarkupWrapperClasses:
-    br_none br_solid:lg dropdown-menu m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+    br_none br_solid:lg dropdown-menu font_copy br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 Weight: 50
 
@@ -28981,7 +29307,7 @@ Markup:
 </div>
 
 MarkupWrapperClasses:
-	br_none br_solid:lg dropdown-menu m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+	br_none br_solid:lg dropdown-menu font_copy br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 Weight: 2
 
@@ -28995,18 +29321,18 @@ It is easy to add images in replace of text links in the navs.
 
 Markup:
 <div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
-	<div class="p-x_2 p-y_0 p-y_2:md order_2 order_1:md dropdown_column">
+	<div class="p-x_2 p-y_0 p-y_2:md order_2 order_1:md dropdown_column w_50:md">
 				{{> "Recipes.BrandedNav.Dropdown.List.AltContent" }}
 	</div>
 	<div
-		class="p-x_2 p-y_0 p-y_2:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md order_1 order_2:md dropdown_column"
+		class="p-x_2 p-y_0 p-y_2:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md order_1 order_2:md dropdown_column w_50:md"
 	>
 			{{> "Recipes.BrandedNav.Dropdown.List.SubLinks" }}
 	</div>
 </div>
 
 MarkupWrapperClasses:
-	br_none br_solid:lg dropdown-menu m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
+	br_none br_solid:lg dropdown-menu font_copy br-t_0 m-t_0 m-t_2:lg m-x_0:lg m-x_n4 shadow_overlap-light show relative
 
 
 Weight: 60
@@ -29021,14 +29347,14 @@ Description: Simple single layer of links in a drop down
 
 Markup:
 <ul class="ul_none lh_2 m_0 max-w_25 w_100">
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/acute-coronary-syndromes"
 			><span class="text-indent_n1 inline-block m-l_4">Acute Coronary Syndromes</span></span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/anticoagulation-management"
@@ -29036,49 +29362,49 @@ Markup:
 			><span class="text-indent_n1 inline-block m-l_4">Anticoagulation Management</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/arrhythmias-and-clinical-ep"
 			><span class="text-indent_n1 inline-block m-l_4">Arrhythmias and Clinical EP</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/acute-coronary-syndromes/atherosclerotic-disease-cad-pad"
 			><span class="text-indent_n1 inline-block m-l_4">Atherosclerotic Disease (CAD/PAD)</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/cardiac-surgery"
 			><span class="text-indent_n1 inline-block m-l_4">Cardiac Surgery</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/cardio-oncology"
 			><span class="text-indent_n1 inline-block m-l_4">Cardio-Oncology</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/congenital-heart-disease-pediatric-cardiology"
 			><span class="text-indent_n1 inline-block m-l_4">Congenital Heart Disease and Pediatric Cardiology</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/diabetes-and-cardiometabolic-disease"
 			><span class="text-indent_n1 inline-block m-l_4">Diabetes and Cardiometabolic Disease</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/dyslipidemia"
@@ -29086,14 +29412,14 @@ Markup:
 			><span class="text-indent_n1 inline-block m-l_4">Dyslipidemia</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/geriatric-cardiology"
 			><span class="text-indent_n1 inline-block m-l_4">Geriatric Cardiology</span></a
 		>
 	</li>
-	<li>
+	<li class="m-b_2">
 		<a
 			class="dropdown-item transition_4 wrap"
 			href="/clinical-topics/heart-failure-and-cardiomyopathies"
@@ -29114,129 +29440,154 @@ Dropdown Nav List with Sub Links
 Description: Simple single layer of links in a drop down 
 
 Markup:
-<ul class="ul_none lh_2">
-			<li class="">
-				<span class="toggler"></span>
-				<a
-					class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
-					href="/education-and-meetings/education-catalog<span class="text-indent_n1 inline-block m-l_4">Online Learning Catalog</span></a
-				>
-				<ul class="ul_none lh_3 font-size_down">
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
-							href="/earncredit"
-							><span class="text-indent_n1 inline-block m-l_5">Earn Credit</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
-							href="/education-and-meetings/products-and-resources/board-prep-offerings"
-							title="Board Prep Offerings"
-							><span class="text-indent_n1 inline-block m-l_5">Board Prep Offerings</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
-							href="/education-and-meetings/education-catalog"
-							><span class="text-indent_n1 inline-block m-l_5">View the Entire Catalog</span></a
-						>
-					</li>
-				</ul>
-			</li>
-			<li class="">
-				<span class="toggler"></span>
-				<a
-					class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
-					href="/education-and-meetings/education-catalog<span class="text-indent_n1 inline-block m-l_4">Products</span></a
-				>
-				<ul class="ul_none lh_3 font-size_down">
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/accsap"
-							><span class="text-indent_n1 inline-block m-l_5">ACCSAP</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/accel-audio"
-							><span class="text-indent_n1 inline-block m-l_5">ACCEL</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/cardiosource-plus"
-							><span class="text-indent_n1 inline-block m-l_5">CardioSource Plus for Institutions and Practices</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/cathsap"
-							><span class="text-indent_n1 inline-block m-l_5">CathSAP</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/ecg-drill-and-practice"
-							title="ECG Drill and Practice"
-							><span class="text-indent_n1 inline-block m-l_5">ECG Drill and Practice</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/echosap"
-							><span class="text-indent_n1 inline-block m-l_5">EchoSAP</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/epsap"
-							><span class="text-indent_n1 inline-block m-l_5">EP SAP</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/heart-songs-5"
-							><span class="text-indent_n1 inline-block m-l_5">Heart Songs</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/iscience"
-							><span class="text-indent_n1 inline-block m-l_5">iScience</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/recent-advances-in-clinical-nuclear-cardiology-and-cardiac-ct-mod"
-							><span class="text-indent_n1 inline-block m-l_5">Nuclear Cardiology and Cardiac CT Meeting on Demand</span></a
-						>
-					</li>
-					<li class="">
-						<a
-							class="dropdown-item transition_4 wrap text-indent_n2 p-l_5"
-							href="/education-and-meetings/products-and-resources/rightsteps-optimizing-medical-therapy-for-chronic-heart-failure"
-							><span class="text-indent_n1 inline-block m-l_5">RightSTEPS Optimizing Medical Therapy for Chronic Heart
-							Failure</span></a
-						>
-					</li>
-				</ul>
-			</li>
-		</ul>
+<ul class="ul_none lh_2"
+    id="SubLinkCollapseParent">
+    <li class="m-b_2">
+        <a class="dropdown-item transition_4 wrap"
+           href="/clinical-topics/acute-coronary-syndromes"><span
+                  class="text-indent_n1 inline-block m-l_4">Acute
+                Coronary Syndromes</span></span></a>
+    </li>
+    <li class="m-b_2">
+        <a class="dropdown-item transition_4 wrap"
+           href="/clinical-topics/anticoagulation-management"
+           title="Anticoagulation Management"><span
+                  class="text-indent_n1 inline-block m-l_4">Anticoagulation
+                Management</span></a>
+    </li>
+    <li class="m-b_2">
+        <div
+             class="flex justify_start transition_4 dropdown-item">
+            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit-all h:undecorated collapsed display_none:lg"
+                    data-bs-toggle="collapse"
+                    role="button"
+                    aria-expanded="true"
+                    aria-controls="learningCollapse"
+                    data-bs-target="#learningCollapse"
+                    onclick="event.stopPropagation()">
+                <i
+                   class="far fa icon-toggle_plus-minus-sub display_none:lg m-l_n2 m-r_2"></i>
+            </button>
+            <a class="flex_grow self_center wrap w_100 text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated p-r_3"
+               href="#">Online Learning Catalog</a>
+        </div>
+        <ul class="ul_none lh_3 font-size_down collapse transition_4 block:lg"
+            id="learningCollapse">
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/earncredit"><span
+                          class="text-indent_n1 inline-block m-l_5">Earn
+                        Credit</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/board-prep-offerings"
+                   title="Board Prep Offerings"><span
+                          class="text-indent_n1 inline-block m-l_5">Board
+                        Prep Offerings</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/education-catalog"><span
+                          class="text-indent_n1 inline-block m-l_5">View
+                        the Entire Catalog</span></a>
+            </li>
+        </ul>
+    </li>
+    <li class="m-b_2">
+        <div
+             class="flex justify_start transition_4 dropdown-item">
+            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit-all h:undecorated collapsed display_none:lg"
+                    data-bs-toggle="collapse"
+                    role="button"
+                    aria-expanded="true"
+                    aria-controls="productsCollapse"
+                    data-bs-target="#productsCollapse"
+                    onclick="event.stopPropagation()">
+                <i
+                   class="far fa icon-toggle_plus-minus-sub display_none:lg m-l_n2 m-r_2"></i>
+            </button>
+            <a class="flex_grow self_center wrap w_100 text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated p-r_3"
+               href="/education-and-meetings/education-catalog">Products</a>
+        </div>
+        <ul class="ul_none lh_3 font-size_down collapse transition_4 block:lg"
+            id="productsCollapse">
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/accsap"><span
+                          class="text-indent_n1 inline-block m-l_5">ACCSAP</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/accel-audio"><span
+                          class="text-indent_n1 inline-block m-l_5">ACCEL</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/cardiosource-plus"><span
+                          class="text-indent_n1 inline-block m-l_5">CardioSource
+                        Plus for Institutions and
+                        Practices</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/cathsap"><span
+                          class="text-indent_n1 inline-block m-l_5">CathSAP</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/ecg-drill-and-practice"
+                   title="ECG Drill and Practice"><span
+                          class="text-indent_n1 inline-block m-l_5">ECG
+                        Drill and Practice</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/echosap"><span
+                          class="text-indent_n1 inline-block m-l_5">EchoSAP</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/epsap"><span
+                          class="text-indent_n1 inline-block m-l_5">EP
+                        SAP</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/heart-songs-5"><span
+                          class="text-indent_n1 inline-block m-l_5">Heart
+                        Songs</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/iscience"><span
+                          class="text-indent_n1 inline-block m-l_5">iScience</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/recent-advances-in-clinical-nuclear-cardiology-and-cardiac-ct-mod"><span
+                          class="text-indent_n1 inline-block m-l_5">Nuclear
+                        Cardiology and Cardiac CT Meeting on
+                        Demand</span></a>
+            </li>
+            <li class="">
+                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                   href="/education-and-meetings/products-and-resources/rightsteps-optimizing-medical-therapy-for-chronic-heart-failure"><span
+                          class="text-indent_n1 inline-block m-l_5">RightSTEPS
+                        Optimizing Medical Therapy for
+                        Chronic Heart
+                        Failure</span></a>
+            </li>
+        </ul>
+    </li>
+</ul>
+
 
 Weight:1005
+
+MarkupWrapperClasses:
+ flex_grow self_center wrap w_100 text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated p-r_3
+
 
 Styleguide Recipes.BrandedNav.Dropdown.List.SubLinks
 */

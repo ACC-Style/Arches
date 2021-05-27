@@ -8279,7 +8279,7 @@ Styleguide Recipes.InteractiveExtras.Expanded Click Area
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #0000;
+  background-color: transparent;
   content: "";
   pointer-events: auto;
 }
@@ -8288,7 +8288,7 @@ Styleguide Recipes.InteractiveExtras.Expanded Click Area
   background-color: #9acd322e;
 }
 
-.icon-toggle_check:before, .icon-toggle_check-circle:before, .icon-toggle_check-sqaure:before, .icon-toggle_arrow-circle:before, .icon-toggle_caret-circle-right-down:before, .icon-toggle_chevron-double-left-right:before, .icon-toggle_chevron-double-up-down:before, .icon-toggle_chevron-up-down:before, .icon-toggle_plus-minus:before, .icon-toggle_bars-times:before {
+.icon-toggle_check:before, .icon-toggle_check-circle:before, .icon-toggle_check-sqaure:before, .icon-toggle_arrow-circle:before, .icon-toggle_chevron-double-left-right:before, .icon-toggle_chevron-double-up-down:before, .icon-toggle_chevron-up-down:before, .icon-toggle_plus-minus:before, .icon-toggle_bars-times:before {
   margin: 0 4px;
   margin: 0 0.25rem;
 }
@@ -8299,10 +8299,9 @@ Is Active Toggle
 Many momment there are needs for toggles of icon when the parent is in the state of `is-active`.  Used in tree navs, dropdowns, and collapsing areas. 
 
 .icon-toggle_plus-minus 					-  Toggle between plus and minus square
-.icon-toggle_chevron-up-down				- 	Toggle a chevro pointing up and then down.
-.icon-toggle_chevron-double-up-down 					-  Toggle the double chevron to point up when active
-.icon-toggle_chevron-double-left-right		- Toggle cheverons left and right
-.icon-toggle_caret-circle-right-down 					-  Toggle the caret to point down when active.
+.icon-toggle_chevron-up-down				- 	Toggle a chevron pointing up and then down.
+.icon-toggle_chevron-double-up-down 		-  Toggle the double chevron to point up when active
+.icon-toggle_chevron-double-left-right		- Toggle chevron left and right
 .icon-toggle_arrow-circle 					-  Toggle the arrow to have a circle when active.
 .icon-toggle_bars-times 					-  Toggle between bars and times
 .icon-toggle_check-sqaure					-  Check Marks toggle on and off
@@ -8334,14 +8333,14 @@ Styleguide Recipes.InteractiveExtras.ToggleIcons
 .icon-toggle_bars-times:before {
   content: "";
 }
-.is-active .icon-toggle_bars-times:before, .show .icon-toggle_bars-times:before, .show > .icon-toggle_bars-times:before, .is-active > .icon-toggle_bars-times:before {
+.is-active .icon-toggle_bars-times:before, .icon-toggle_bars-times:before.show, .show > .icon-toggle_bars-times:before, .is-active > .icon-toggle_bars-times:before {
   content: "";
 }
 
 .icon-toggle_plus-minus:before {
   content: "";
 }
-.is-active .icon-toggle_plus-minus:before, .show .icon-toggle_plus-minus:before, .is-active > .icon-toggle_plus-minus:before {
+.is-active .icon-toggle_plus-minus:before, .icon-toggle_plus-minus:before.show, .show > .icon-toggle_plus-minus:before, .is-active > .icon-toggle_plus-minus:before {
   content: "";
 }
 
@@ -8364,13 +8363,6 @@ Styleguide Recipes.InteractiveExtras.ToggleIcons
 }
 .is-active .icon-toggle_chevron-double-left-right:before, .show .icon-toggle_chevron-double-left-right:before, .is-active > .icon-toggle_chevron-double-left-right:before {
   content: "";
-}
-
-.icon-toggle_caret-circle-right-down:before {
-  content: "";
-}
-.is-active .icon-toggle_caret-circle-right-down:before, .show .icon-toggle_caret-circle-right-down:before, .is-active > .icon-toggle_caret-circle-right-down:before {
-  content: "";
 }
 
 .icon-toggle_arrow-circle:before {
