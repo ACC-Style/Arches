@@ -338,15 +338,15 @@ Styleguide CrossDomainDesigns
 Colors
 
 <p>A common practice in CSS color variable names does not describe the color they represent but instead represents its color function.  For example, the global color in the brand "ACC Blue" does not refer to the blue but refers to  "acc." This future-proofs the UI from changes incase the college's branding alters to a different hue. The practice of function naming allows components and designs to flow from one domain to the next, coloring the text, backgrounds, and borders appropriately.  The design colors are Primary, Secondary, Highlight, Info, with a black and white mix.  There is a subset of colors reserved for action colors used in user interaction moments when an application runs validations in each design.  Actions Colors are Alert, Warning, Success. The section "Design Base" within each brand area defines the previously mentioned colors.</p>  
-<div class="flex_row flex ">
-    <div class="flex_auto m_4">
+<div class="flex_row:md flex_column flex gap-x_4 gap-y_4">
+    <div class="flex_auto">
         <h2 class="font_display">ACC.org</h2>
-        <div class="flex flex_column font_display font_2 w_100 c_white font_bold lowercase">
-            <div class="flex_auto  flex flex_row">
+        <div class="flex flex_column font_display font_2:lg font_0 w_100 c_white font_bold lowercase">
+            <div class="flex_auto flex flex_row">
                 <div class="flex_auto p_3 br_3 br_solid br_white w_20" style="background-color:#198dae;">Primary</div>
                 <div class="flex_auto p_3 br_3 br_solid br_white p-b_5 w_10" style="background-color:#676a72;">Secondary</div>
                 <div class="flex_auto w_10 flex flex_column">
-                    <div class="flex_auto p_3 br_3 br_solid br_white " style="background-color: #16a385;">Accent</div>
+                    <div class="flex_auto p_3 br_3 br_solid br_white" style="background-color: #16a385;">Accent</div>
                     <div class="flex_auto flex flex_row">
                         <div class="flex_auto p_3 br_3 br_solid br_white " style="background-color: #7742bd;">Highlight</div>
                         <div class="flex_auto p_3 br_3 br_solid br_white " style="background-color: #a3988c;">Info</div>
@@ -360,9 +360,9 @@ Colors
             </div>
         </div>
     </div>
-    <div class="flex_auto m_4">
+    <div class="flex_auto">
         <h2 class="font_display">CVQUALITY.ORG</h2>
-        <div class="flex flex_column font_display font_2 w_100 c_white font_bold lowercase">
+        <div class="flex flex_column font_display font_2:lg font_0 w_100 c_white font_bold lowercase">
             <div class="flex_auto  flex flex_row">
                 <div class="flex_auto p_3 br_3 br_solid br_white w_20" style="background-color:#0088aa;">Primary</div>
                 <div class="flex_auto p_3 br_3 br_solid br_white p-b_5 w_10" style="background-color:#e87d1e">Secondary</div>
@@ -384,6 +384,11 @@ Colors
 </div>
 
 Weight:0
+
+Experimental: This text shown when the bug might have added this extra class
+
+Deprecated:  This text shown when the bug might have added this extra class
+1/11/20
 
 Styleguide CrossDomainDesigns.Colors
 */

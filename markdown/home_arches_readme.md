@@ -14,7 +14,7 @@ Arches does have a learning curve, but to reduce the curve the names follow a st
 In each brand documentation area you will see direct representations of the styles in actions and predefined patterns used in those properties.
 
 
-| Style                            | Current Use Status   | Notes                                                                         |
+| Brand                            | Current Use Status   | Notes                                                                         |
 | -------------------------------- | -------------------- | ----------------------------------------------------------------------------- |
 | [ACC Main Site](boot_acc/)       | In Conversion        | Some pages are fully using Arches other are using the Utility Class Override  |
 | [CardioSmart](boot_cardiosmart/) | Fully                | Built on Pure Arches Style Sheets                                             |
@@ -22,16 +22,26 @@ In each brand documentation area you will see direct representations of the styl
 | [Mobile](zurb_acc/)              | Documented           | Mobile utilize zurb instead of bootstrap because of better mobile support.    |
 | [JACC](boot_journal/)            | Partially Documented | JACC is vendor based and will most likely never be converted.                 |
 | [Virtual](boot_virtual/)         | Retiring             | This documentation was used in 2020 and will be retired.                      |
+
+### Playgrounds Documentation
+
+There are some playgrounds setup for exploitative design work that are either off shoots of the major brands or are used in some of our third party products. Most of these are pattern only work or extra stylesheets that are product specific. 
+
+| Playground                          | Notes                                                                                                           |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| [Layouts](layout_demo/)             | Educations Systems, Ebiz, and Landing Page                                                                      |
+| [Search W/in Guidelines](glsearch/) | Search within Guidelines content styling and test systems for a seperate add on style sheet for content returns |
+
 ### [Color Codes](color_codes/)
 
 The College has used colors to denote many objects across its product lines. Here is the official colors and definitions. 
 
-| Style                                             | Notes                                                                                                                  |
-| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| [Credits](color_codes/section-credit-colors.html) | As an accredited body the college can grant credits to many different types of certifications and professional boards. |
-| [Learning Pathways](color_codes/section-pathway-colors.html) | Color coding the pathway for professional development |
-| [NCDR Registries](color_codes/section-registrycolors.html) | Product colors for the Data Registries |
-| [LOE](color_codes/section-loe-colors.html) &amp; [COR](color_codes/section-cor-colors.html)  | Guidelines use coloring to help professionals quickly understand the  level of evidence and class of recommendation   |
+| Style                                                                                       | Notes                                                                                                                  |
+| ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| [Credits](color_codes/section-credit-colors.html)                                           | As an accredited body the college can grant credits to many different types of certifications and professional boards. |
+| [Learning Pathways](color_codes/section-pathway-colors.html)                                | Color coding the pathway for professional development                                                                  |
+| [NCDR Registries](color_codes/section-registrycolors.html)                                  | Product colors for the Data Registries                                                                                 |
+| [LOE](color_codes/section-loe-colors.html) &amp; [COR](color_codes/section-cor-colors.html) | Guidelines use coloring to help professionals quickly understand the  level of evidence and class of recommendation    |
 
 
 
