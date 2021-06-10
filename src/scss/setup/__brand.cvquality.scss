@@ -77,15 +77,14 @@ $mix-orange_teal: #acbd65;
 	Markup:
 	<div class="{{modifier_class}} p_3 c_white">Background Color of {{modifier_class}}</div>
 
-	Styleguide Background.Color.Alt
-
+	Styleguide DesignBase.Backgrounds
 */
 /*
 	Border Colors Alt
 
 	These Alternate colors are single use to embelish a design. These colors <strong>DO NOT</strong> have extra modifiers.    
 
-	.br_primary-alt            	- light orange
+	.br_primary-alt            		- light orange
 	.br_mix-teal-orange				-	Mix of 60% Teal And 40% Orange 
 	.br_mix-orange-teal				-	Mix of 60% Orange and 40% Teal 	
 
@@ -93,7 +92,7 @@ $mix-orange_teal: #acbd65;
 	Markup:
 	<div class="{{modifier_class}} br_solid br_4">Border Color of {{modifier_class}}</div>
 
-	Styleguide Border.Color.Alt
+	Styleguide DesignBase.Borders
 
 */
 
@@ -151,6 +150,12 @@ $danger: $error-color;
 $light: $warm-grey-light;
 $dark: $warm-grey-dark;
 
+
+// Set the active state for this framework & brand
+$active-class-name: 'active';
+$style-definition: map-deep-set($style-definition, 'is-active' 'short-name', '#{$active-class-name}>.a\\3A ');
+$style-definition: map-deep-set($style-definition, 'is-active-self' 'short-name', '#{$active-class-name}.a\\3A ');
+
 $fonts: (
 	accent: (
 		name: 'Roboto Slab',
@@ -174,11 +179,14 @@ $fonts: (
 	),
 );
 
+
 // Reset Values of Utlity-css.vars.scss
-$value-to-unit: map-deep-set($value-to-unit, font-family accent, map-deep-get($fonts, accent stack));
-$value-to-unit: map-deep-set($value-to-unit, font-family display, map-deep-get($fonts, display stack));
-$value-to-unit: map-deep-set($value-to-unit, font-family copy, map-deep-get($fonts, copy stack));
-$value-to-unit: map-deep-set($value-to-unit, font-family ui, map-deep-get($fonts, ui stack));
+$value-to-unit: map-deep-set($value-to-unit, font-family accent, unquote(map-deep-get($fonts, accent, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family display, unquote(map-deep-get($fonts, display, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family copy, unquote(map-deep-get($fonts, copy, stack)));
+$value-to-unit: map-deep-set($value-to-unit, font-family ui, unquote(map-deep-get($fonts, ui, stack)));
+
+
 
 $font_display: get-css-size(font-family, display);
 $font_accent: get-css-size(font-family, accent);
@@ -186,31 +194,16 @@ $font_ui: get-css-size(font-family, ui);
 $font_copy: get-css-size(font-family, copy);
 $font_mono: get-css-size(font-family, mono);
 
+
 $global-radius-on: false;
-$global-border-radius: 5px;
+$global-border-radius: 6px;
+$value-to-unit: map-deep-set($value-to-unit, 'radius' 'radius', $global-border-radius);
 $global-border-round: 25px;
+$value-to-unit: map-deep-set($value-to-unit, 'radius' 'round', $global-border-round);
 $basicSizeMultiplier: 1rem;
 
-$grid-breakpoints: (
-	xs: 0,
-	sm: 576px,
-	md: 768px,
-	lg: 1024px,
-	xl: 1200px,
-	xxl: 1400px,
-);
-
-$container-max-widths: (
-	md: 720px,
-	lg: 960px,
-	xl: 1140px,
-	xxl: 1350px,
-);
-
-$tooltip-bg: $dark;
-
-$h1-font-size: map-deep-get($value-to-unit, font-size, 7);
-$h2-font-size: map-deep-get($value-to-unit, font-size, 5);
+$h1-font-size: map-deep-get($value-to-unit, font-size, 5);
+$h2-font-size: map-deep-get($value-to-unit, font-size, 4);
 $h3-font-size: map-deep-get($value-to-unit, font-size, 3);
 $h4-font-size: map-deep-get($value-to-unit, font-size, 2);
 $h5-font-size: map-deep-get($value-to-unit, font-size, 1);
@@ -218,9 +211,67 @@ $h6-font-size: map-deep-get($value-to-unit, font-size, 0);
 
 $font-size-base: $base-font-size-rem; // Assumes the browser default, typically `16px`
 $font-size-lg: map-deep-get($value-to-unit, font-size, 2);
-$font-size-sm: map-deep-get($value-to-unit, font-size, 0);
+$font-size-sm: map-deep-get($value-to-unit, font-size, n1);
+
+
 
 $link-color-dark: get-themecolor(accent, -3);
 $link-color-light: get-themecolor(accent, 1);
 $headline-color: get-themecolor(secondary);
+
 @import 'setup/config/cvquality/cvquality.gradients';
+
+$logo: (
+	primary: (
+		url: '../img/cvquality/cvquality_primaryLogo.svg',
+		alt: 'Logo of the cvquality',
+		aspectratio: 1/3,
+	),
+	primary_alt: (
+		url: '../img/cvquality/cvquality_primaryLogo-alt.svg',
+		alt: 'Logo of the cvquality',
+		aspectratio: 1/3,
+	),
+	condensed: (
+		url: '../img/cvquality/cvquality_mobileLogo.svg',
+		alt: 'Logo of the cvquality',
+		aspectratio: 1/6,
+	),
+	condensed_alt: (
+		url: '../img/cvquality/cvquality_mobileLogo-alt.svg',
+		alt: 'Logo of the cvquality',
+		aspectratio: 1/6,
+	),
+);
+$seal: (
+	normal: (
+		url: '../img/cvquality/cvquality_seal.svg',
+		alt: 'Seal of the cvquality',
+		aspectratio: 1/1,
+	),
+	small: (
+		url: '../img/cvquality/cvquality_sealCondensed.svg',
+		alt: 'Seal of the cvquality',
+		aspectratio: 1/1,
+	),
+	tiny: (
+		url: '../img/cvquality/cvquality_sealCondensed-alt.svg',
+		alt: 'Seal of the cvquality',
+		aspectratio: 1/1,
+	),
+	normal_alt: (
+		url: '../img/cvquality/cvquality_seal-reverse.svg',
+		alt: 'Seal of the cvquality',
+		aspectratio: 1/1,
+	),
+	small_alt: (
+		url: '../img/cvquality/cvquality_sealCondensed-reverse.svg',
+		alt: 'Seal of the cvquality',
+		aspectratio: 1/1,
+	),
+	tiny_alt: (
+		url: '../img/cvquality/cvquality_sealCondensed-alt-reverse.svg',
+		alt: 'Seal of the cvquality',
+		aspectratio: 1/1,
+	),
+);

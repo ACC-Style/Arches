@@ -28,9 +28,6 @@
 </div>
 <div class="p_5">
 
-## Arches Overview of Variations and Sub Stylesheets
-
-<iframe class="m_4 br_1 br_shade-3 br_solid" width="800" height="450" src="https://whimsical.com/embed/VG8xNLvXFCwSTBQRSsdwBW"></iframe>
 
 ## Utility Classes
 

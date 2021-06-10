@@ -7,26 +7,6 @@
  */
 /**  Pre Header - modular scale default break points utility    *********************************/
 /**  Version: 1.1.0    *********************************/
-/*  
-get-themecolor()
-
-Gets a color value that fits into the set color patterns for usage in new css.
-
- $key - The color name to be modified [primary,secondary,etc...]
- $modifier   - The color shift you desire default is 0 but you can pass in [-5,-4,...0,1...4,5]. 
-
- Styleguide: mixins.get-themecolor
-*/
-/*  
-util-style()
-
-Gets utilty style and prints it.
-
- $key - The name of the css class
- $modifier   - the size of the style needed. 
-
- Styleguide: mixins.utlity-style
-*/
 /**Set Active Class**/
 /** No Framework **/
 /** Built With Base Branding 1.2.0 **/
@@ -78,15 +58,14 @@ Gets utilty style and prints it.
 	Markup:
 	<div class="{{modifier_class}} p_3 c_white">Background Color of {{modifier_class}}</div>
 
-	Styleguide Background.Color.Alt
-
+	Styleguide DesignBase.Backgrounds
 */
 /*
 	Border Colors Alt
 
 	These Alternate colors are single use to embelish a design. These colors <strong>DO NOT</strong> have extra modifiers.    
 
-	.br_primary-alt            	- light orange
+	.br_primary-alt            		- light orange
 	.br_mix-teal-orange				-	Mix of 60% Teal And 40% Orange 
 	.br_mix-orange-teal				-	Mix of 60% Orange and 40% Teal 	
 
@@ -94,7 +73,7 @@ Gets utilty style and prints it.
 	Markup:
 	<div class="{{modifier_class}} br_solid br_4">Border Color of {{modifier_class}}</div>
 
-	Styleguide Border.Color.Alt
+	Styleguide DesignBase.Borders
 
 */
 /*
@@ -832,6 +811,18 @@ Styleguide UC.Typography
 
   Styleguide UC.Typography.FontFamily
  */
+.font_accent {
+  font-family: "Roboto Slab","Times New Roman","Lucida Bright",Georgia,"slab",serif;
+}
+
+.font_display {
+  font-family: "Maven Pro",Verdana,Helvetica,sans-serif;;
+}
+
+.font_copy,.font_ui {
+  font-family: "Lato","Open Sans","system-ui",sans-serif;
+}
+
 .font_mono {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
@@ -8965,11 +8956,11 @@ Styleguide UC.Borders.Colors.Black
 }
 
 .br_radius, .btn_acc-primary {
-  border-radius: 0.3333333333rem;
+  border-radius: 6px;
 }
 
 .br_round {
-  border-radius: 1rem;
+  border-radius: 25px;
 }
 
 .br_circle {
@@ -8981,13 +8972,11 @@ Styleguide UC.Borders.Colors.Black
 }
 
 .br-tr_radius {
-  border-top-right-radius: 5.333px;
-  border-top-right-radius: 0.3333333333rem;
+  border-top-right-radius: 6px;
 }
 
 .br-tr_round {
-  border-top-right-radius: 16px;
-  border-top-right-radius: 1rem;
+  border-top-right-radius: 25px;
 }
 
 .br-tr_circle {
@@ -8999,13 +8988,11 @@ Styleguide UC.Borders.Colors.Black
 }
 
 .br-tl_radius {
-  border-top-left-radius: 5.333px;
-  border-top-left-radius: 0.3333333333rem;
+  border-top-left-radius: 6px;
 }
 
 .br-tl_round {
-  border-top-left-radius: 16px;
-  border-top-left-radius: 1rem;
+  border-top-left-radius: 25px;
 }
 
 .br-tl_circle {
@@ -9017,13 +9004,11 @@ Styleguide UC.Borders.Colors.Black
 }
 
 .br-br_radius {
-  border-bottom-right-radius: 5.333px;
-  border-bottom-right-radius: 0.3333333333rem;
+  border-bottom-right-radius: 6px;
 }
 
 .br-br_round {
-  border-bottom-right-radius: 16px;
-  border-bottom-right-radius: 1rem;
+  border-bottom-right-radius: 25px;
 }
 
 .br-br_circle {
@@ -9035,13 +9020,11 @@ Styleguide UC.Borders.Colors.Black
 }
 
 .br-bl_radius {
-  border-bottom-left-radius: 5.333px;
-  border-bottom-left-radius: 0.3333333333rem;
+  border-bottom-left-radius: 6px;
 }
 
 .br-bl_round {
-  border-bottom-left-radius: 16px;
-  border-bottom-left-radius: 1rem;
+  border-bottom-left-radius: 25px;
 }
 
 .br-bl_circle {
@@ -9057,13 +9040,13 @@ Styleguide UC.Borders.Colors.Black
 .radius,
 .radius .switch-paddle,
 .radius .switch-paddle::after {
-  border-radius: 0.3333333333rem;
+  border-radius: 6px;
 }
 
 .round,
 .round .switch-paddle,
 .round .switch-paddle::after {
-  border-radius: 1rem;
+  border-radius: 25px;
 }
 
 .circle,

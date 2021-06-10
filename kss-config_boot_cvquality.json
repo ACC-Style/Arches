@@ -1,7 +1,7 @@
 {
-    "title": "CVquality & Bootstrap",
-    "mask": "cvquality_boot_combo.css",
-    "builder": "michelangelo/kss_styleguide/custom-template/",
+    "title": "CVquality",
+    "mask": "cvquality_boot.css",
+    "builder": "michelangelo/kss_styleguide/brand-template/",
     "source": "./dist/css/",
     "destination": "docs/boot_cvquality/",
     "//": "relative to source.",
@@ -24,11 +24,10 @@
         "../css/color-code_credits.css",
         "../css/color-code_social.css",
         "../css/color-code_registry.css",
-        "../css/cvquality_boot.css",
-        "../css/cvquality_uc.css"
+        "../css/cvquality_boot_combo.css"
     ],
-    "js": ["./js/bootstrap/bootstrap.bundle.js", "./js/toggleActive.js"],
-    "custom": ["MarkupWrapperClasses"],
+    "js": ["../js/bootstrap/bootstrap.bundle.js", "../js/toggleActive.js"],
+    "custom": ["MarkupWrapperClasses","HideCodeBlock"],
     "site_nav": [
         { "title": "Arches", "id": "home_nav", "url": "../" },
 

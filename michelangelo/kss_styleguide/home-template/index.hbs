@@ -12,10 +12,6 @@
           name="generator">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300"
           rel="stylesheet">
-    <link href="css/acc_uc.css"
-          rel="stylesheet">
-    <link href="css/acc_boot.css"
-          rel="stylesheet">
     <link href="kss-assets/vendor/prism.css"
           rel="stylesheet">
     <link href="kss-assets/css/kss.css"
@@ -23,23 +19,28 @@
     {{{ styles }}}
 </head>
 
-<body class="kss-body texture_light">
+<body class="kss-body texture_light font_ui">
     <!-- header. -->
-    <header class="bg_white shadow_overlap-light br_black-1 br_solid br_1 sticky t_0 display_none:md flex flex_inline">
-            <h1 class="self_center m_3">
-                <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">{{ options.title }}</a>
-            </h1>
-            <a class="m-l_auto self_center m_3 kss-header__hamburger-trigger">
-                <div class="kss-header__hamburger"></div>
-            </a>
+    <header
+            class="bg_white shadow_overlap-light br_black-1 br_solid br_1 sticky t_0 display_none:md flex flex_inline">
+        <h1 class="self_center m_3">
+            <a class="undecorated h:undecorated"
+               href="https://acc-style.github.io/Arches/index.html">{{ options.title }}</a>
+        </h1>
+        <a
+           class="m-l_auto self_center m_3 kss-header__hamburger-trigger">
+            <div class="kss-header__hamburger"></div>
+        </a>
     </header>
     <!-- /header. -->
     <!-- navigation. -->
     <!-- /navigation. -->
     <!-- documentation. -->
     <header class="p_4 text_center">
-        <h1 class="font_display font_10 font_light display_none block:md">
-            <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">{{ options.title }}</a>
+        <h1
+            class="font_display font_10 font_light display_none block:md">
+            <a class="undecorated h:undecorated"
+               href="https://acc-style.github.io/Arches/index.html">{{ options.title }}</a>
         </h1>
         <small
                class="font_0 m-t_n3 block m-b_4 font_xbold font_display">Multi
@@ -47,88 +48,95 @@
             College of Cardiology</small>
 
     </header>
-        <section class="display_none block:md">
-            <aside
-                   class="m_auto font_copy display_none block:md">
-                <ul
-                    class="ul_none flex flex_row:md flex_column justify_center br-t_1 br_solid br_black-4 p-y_3 br-b_1 ">
+    <section class="display_none block:md">
+        <aside
+               class="m_auto font_copy display_none block:md">
+            <ul
+                class="ul_none flex flex_row:md flex_column justify_center br-t_1 br_solid br_black-4 p-y_3 br-b_1 ">
+                <li
+                    class=" w_auto:md w_100 p_2 self_center {{#if homepage}}is-active active{{/if}}">
+                    <a class="block inline-block:md undecorated {{#if isActive}}is-active active{{/if}} h:bg_black-2 a:bg_accent a:c_white h:undecorated c_black-8 h:c_black-9 p_3 br_radius nowrap"
+                       href="index.html">
+                        <span class=""><i
+                               class="fas fa-home p-x_2"></i></span>
+                    </a>
+                </li>
+                {{#each menu}}
                     <li
-                        class=" w_auto:md w_100 p_2 self_center {{#if homepage}}is-active active{{/if}}">
-                        <a class="block inline-block:md {{#if isActive}}is-active active{{/if}} h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
-                           href="index.html">
-                            <span class=""><i
-                                   class="fas fa-home p-x_2"></i></span>
+                        class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center {{#if isActive}}is-active active{{/if}}">
+                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated {{#if isActive}}is-active active{{/if}} h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                           href="section-{{ referenceURI }}.html">
+                            <span
+                                  class="">{{ header }}</span>
                         </a>
                     </li>
-                    {{#each menu}}
-                        <li
-                            class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center {{#if isActive}}is-active active{{/if}}">
-                            <a class="block inline-block:md {{#if isActive}}is-active active{{/if}} h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
-                               href="section-{{ referenceURI }}.html">
-                                <span
-                                      class="">{{ header }}</span>
-                            </a>
-                        </li>
-                    {{/each}}
+                {{/each}}
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                       href="https://acc-style.github.io/IconDictionary/"
+                       target="_blank">
+                        <span class="">Icon
+                            Dictionary</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <section
+             class="kss-navigation shadow_overlap-bold display_none:lg p_2 p-x_3 font_ui font_0">
+        <aside class="display_none:md">
+            <ul class="ul_none lh_4">
+                <li
+                    class="{{#if homepage}}is-active active{{/if}} a:bg_accent h:bg_accent-4 relative br_radius p_2 m-b_1">
+                    <a class="{{#if isActive}}is-active active{{/if}}  a:c_white"
+                       href="index.html">
+                        <span class=""><i
+                               class="fas fa-home p-x_2"></i>
+                            Home</span>
+                    </a>
+                </li>
+                {{#each menu}}
                     <li
-                        class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
-                        <a class="block inline-block:md h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
-                           href="https://acc-style.github.io/IconDictionary/"
-                           target="_blank">
-                            <span class="">Icon
-                                Dictionary</span>
+                        class="{{#if isActive}}is-active active{{/if}} a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                        <a class="{{#if isActive}}is-active active{{/if}}  a:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                           href="section-{{ referenceURI }}.html">
+                            <span
+                                  class="">{{ header }}</span>
                         </a>
                     </li>
-                </ul>
-            </aside>
-        </section>
-        <section class="kss-navigation fixed shadow_overlap-bold display_none:lg p_2 p-x_3 font_ui font_0">
-            <aside class="display_none:md">
-                <ul class="ul_none lh_4">
-                    <li
-                        class="{{#if homepage}}is-active active{{/if}} a:bg_accent h:bg_accent-4 relative br_radius p_2 m-b_1">
-                        <a class="{{#if isActive}}is-active active{{/if}}  a:c_white"
-                            href="index.html">
-                            <span class=""><i class="fas fa-home p-x_2"></i> Home</span>
-                        </a>
-                    </li>
-                    {{#each menu}}
-                        <li
-                            class="{{#if isActive}}is-active active{{/if}} a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
-                            <a class="{{#if isActive}}is-active active{{/if}}  a:c_white block inline-block:md flex flex_row h:undecorated flex_nowrap" href="section-{{ referenceURI }}.html">
-                                <span class="">{{ header }}</span>
-                            </a>
-                        </li>
-                        {{#if isActive}}
-                            {{#if children}}
-                                <ul
-                                    class="m-l_4 ul_none lh_3">
-                                    {{#each children}}
-                                        <li
-                                            class="">
-                                            <a class="block inline-block:md flex flex_row h:undecorated flex_nowrap"
-                                                href="section-{{ ../referenceURI }}.html#kssref-{{ referenceURI }}">
-                                                <span
-                                                        class="flex_auto overflow_ellipsis">{{ header }}</span>
-                                            </a>
-                                        </li>
-                                    {{/each}}
-                                </ul>
-                            {{/if}}
-                        {{/if}}
-                    {{/each}}
-                    <li
-                        class="relative br_radius p_2 m-b_1">
-                        <a class=" block inline-block:md flex flex_row h:undecorated flex_nowrap"
-                            href="https://acc-style.github.io/IconDictionary/"
-                            target="_blank">
-                            <span class="">Icon  Dictionary</span>
-                        </a>
-                    </li>
+                    {{#if isActive}}
+                        {{#if children}}
+                            <ul class="m-l_4 ul_none lh_3">
+                                {{#each children}}
+                                    <li
+                                        class="{{#if isGrandChild}}p-l_4 font-size_down lh_2{{else}} font_bold {{/if}}">
+                                        <a class="block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                           href="section-{{ ../referenceURI }}.html#kssref-{{ referenceURI }}">
+                                            <span
+                                                  class="kss-nav__ref flex_shrink p-r_1 font_bold">{{ referenceNumber }}</span>
+                                            <span
+                                                  class="flex_auto overflow_ellipsis">{{ header }}</span>
+                                        </a>
 
-                </ul>
-            </aside>
-        </section>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        {{/if}}
+                    {{/if}}
+                {{/each}}
+                <li class="relative br_radius p_2 m-b_1">
+                    <a class=" block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                       href="https://acc-style.github.io/IconDictionary/"
+                       target="_blank">
+                        <span class="">Icon
+                            Dictionary</span>
+                    </a>
+                </li>
+
+            </ul>
+        </aside>
+    </section>
     <div class="m_auto p-x_4 ">
 
         {{#if homepage}}
@@ -144,7 +152,7 @@
                 <section
                          class="max-w_15 w_20:lg flex_none relative display_none block:md ">
                     <aside class="">
-                        <div >
+                        <div>
                             {{#each menu}}
                                 {{#if isActive}}
                                     <h3>{{ header }}</h3>
@@ -153,13 +161,14 @@
                                             class="m-l_0 ul_none lh_3">
                                             {{#each children}}
                                                 <li
-                                                    class="">
-                                                    <a class="block inline-block:md flex flex_row h:undecorated flex_nowrap"
+                                                    class="{{#if isGrandChild}}p-l_4 font-size_down lh_2{{else}} font_bold {{/if}}">
+                                                    <a class="block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
                                                        href="section-{{ ../referenceURI }}.html#kssref-{{ referenceURI }}">
                                                         <span
                                                               class="flex_auto overflow_ellipsis">{{ header }}</span>
                                                     </a>
                                                 </li>
+
                                             {{/each}}
                                         </ul>
                                     {{/if}}
@@ -168,10 +177,10 @@
                         </div>
                     </aside>
                 </section>
-                <main class="">
+                <main class="w_100 flex_auto">
                     {{#each sections}}
                         {{#if @first}}
-                            <header class="bg_white kss-section kss-section--depth-{{ depth }} br_radius shadow_1"
+                            <header class="bg_white kss-section kss-section--depth-{{ depth }} br_radius shadow_2 br_radius"
                                     id="kssref-{{ referenceURI }}">
                                 {{ else }}
                                 <section class="kss-section bg_white kss-section--depth-{{ depth }} br_radius shadow_1"
@@ -179,8 +188,24 @@
                         {{/if}}
 
                         <article
-                                 class="kss-section__content relative {{#if deprecated}} bg_alert-5{{/if}}{{#if experimental}} bg_warning-5{{/if}}">
-<div class="absolute t_0"></div>.r_4
+                                 class="kss-section__content relative">
+                            <div class="absolute t_0 r_4">
+                                {{#if deprecated}}
+                                    <div
+                                         class="inline-block p_2 bg_alert shadow_overlap-light">
+                                        <i
+                                           class="fas fa-fw fa-exclamation-triangle"></i>
+                                    </div>
+                                {{/if}}
+                                {{#if experimental}}
+                                    <div
+                                         class="inline-block p_2 bg_warning shadow_overlap-light">
+                                        <i
+                                           class="fas fa-fw fa-vial"></i>
+                                    </div>
+                                {{/if}}
+
+                            </div>
 
                             {{#if source.filename}}
                                 <p
@@ -189,6 +214,12 @@
                                     <span>{{ source.filename }}</span>,
                                     line
                                     <span>{{ source.line }}</span>
+                                    |
+                                    {{#if deprecated}} <span
+                                              class="c_alert p-x_2 uppercase">deprecated</span>{{/if}}
+                                    {{#if experimental}}
+                                        <span
+                                              class="c_warning p-x_2 uppercase">experimental</span>{{/if}}
                                 </p>
                             {{/if}}
                             <a class="kss-section__permalink"
@@ -275,7 +306,9 @@
                                 {{/if}}
                             </article>
                             {{#if example}}
-                                <section class="relative">
+
+                                <section
+                                         class="relative {{ hidecodeblock }}">
                                     <article class="kss-section__markup overflow_scroll scrollbar-mini"
                                              style="max-height: 30vh;">
                                         <pre><code class="language-markup"  id="input-{{ referenceURI }}" value='{{ markup }}'>{{ markup }}</code></pre>
@@ -309,19 +342,7 @@
         <script src="kss-assets/vendor/prism.js"></script>
         <script src="kss-assets/js/kss.js"></script>
         <script>
-            function CopyText(id, event) {
-                event.preventDefault();
-                var $htmlCodeInput = document.getElementById(id);
-                /* Select the text field */
-                $htmlCodeInput.select();
-                $htmlCodeInput.setSelectionRange(0, 99999); /*For mobile devices*/
-                $("body").append($htmlCodeInput);
-                /* Copy the text inside the text field */
-                document.execCommand("copy");
 
-                /* Alert the copied text */
-                alert("Copied the text: " + $htmlCodeInput.value);
-            };
         </script>
         {{{ scripts }}}
         <!-- /scripts. -->

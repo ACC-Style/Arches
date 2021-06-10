@@ -38,7 +38,7 @@
 <td>Acute Coronary Syndromes</td>
 </tr>
 <tr>
-<td>.bg_arrthythmias</td>
+<td>.bg_arrhythmias</td>
 <td>Atrial Fibulation, Bradycardia, Supraventricular Tachycardia</td>
 <td>Arrthythmias and Clinical EP</td>
 </tr>

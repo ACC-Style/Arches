@@ -97,8 +97,7 @@ var markdownbuild = function(base, label) {
         .pipe(clone())
         .pipe(rename(label + "_readme.md"))
         .pipe(header(fs.readFileSync(PATHS.MARKDOWN + "partial_" + label + ".md")))
-        .pipe(header(fs.readFileSync(PATHS.MARKDOWN + "markdown_header.md")))
-        .pipe(header("<div class='" + label + "_nav'>"));
+        .pipe(header(fs.readFileSync(PATHS.MARKDOWN + "markdown_header.md")));
     return construct;
 };
 var buildbrand = function(base, brand, framework) {
@@ -338,6 +337,8 @@ gulp.task("quick", gulp.series(
         }
 
 ))
+
+
 gulp.task(
     "build-cvquality",
     gulp.series(
@@ -360,6 +361,7 @@ gulp.task(
         }
     )
 );
+
 
 gulp.task(
     "build-cardiosmart",

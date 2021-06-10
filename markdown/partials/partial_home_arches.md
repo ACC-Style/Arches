@@ -1,4 +1,6 @@
 
+# Welcome to Arches 
+
 Arches is a central design system for the American College of Cardiology. This system, through some compiler wizardry, builds out to variations using frameworks and product brands to be used across many products built by the ACC.  Arches vanilla is just a Utility Classes and when added to a project with an already established style sheet is made to add new styling features non-destructively. There are also variations of Arches that build on top of the two popular frameworks that currently in use at the College, Twitter Bootstrap, and Zurb Foundation.
 
 ## Utility Classes
@@ -46,6 +48,3 @@ The College has used colors to denote many objects across its product lines. Her
 
 
 
-## Arches Overview of Variations and Sub Stylesheets
-
-<iframe class="m_4 br_1 br_shade-3 br_solid" width="800" height="450" src="https://whimsical.com/embed/VG8xNLvXFCwSTBQRSsdwBW"></iframe>
