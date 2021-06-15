@@ -1,0 +1,221 @@
+/*
+Sidebar Nav
+ 
+Description: Side bar for any 3 layer nav on the site. the parent node is from the main nav.
+ 
+Markup:
+ <nav class="nav-sub bg_primary c_white font_ font_ui ">
+    <ul class="ul_none flex_column flex">
+        <li class="nav-item" data-nav="parent">
+            <div class="bg_black-4 "> 
+                <a class="text-shadow_black-1 block w_100 c_white p-y_2 p-x_4 w_100 h:c_white inline-block h:underline self_center">qui libero est</a>
+            </div>
+        </li>
+        <li class="nav-item" data-nav="child-holder"></li>
+            <nav class="nav-sub-child " >
+                    <ul class="ul_none flex_column flex">
+                    <li class="nav-item" data-nav="child">
+                        <div class="flex flex_row">
+                            <div class="spacer flex_none p_2 self_start" ><i class="fas fa-null fa-fw p_2"></i>
+                            </div>
+                            <div class="flex_auto self_center ">
+                                <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block w_100 h:underline self_center a:bg_black-3">quam voluptatem tempora</a>
+                            </div>       
+                        </div>
+                    </li>
+                    <li class="nav-item active" data-nav="child">
+                        <div class="flex flex_row ">
+                            <a class="text-shadow_black-n1 flex_none p_2 h:bg_black-3 collapsed br_white-2 br-r_1 br_solid"
+                            data-bs-toggle="collapse" 
+                            href="#collapseGrandChild" aria-expanded="false" aria-controls="collapseGrandChild"
+                            ><i class="fas fa-plus fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
+                            </a>
+                            <div class="flex_auto self_center">
+                                <a class="text-shadow_black-1 active c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">qui libero est</a>
+                                <nav class="nav-sub-grandchild collapse bg_white-2 font-size_down" id="collapseGrandChild">
+                                    <ul class="ul_none flex_column flex">
+                                        <li class="nav-item" data-nav="grandchild">
+                                            <div class="flex flex_row gap-x_3">
+                                                <div class="spacer flex_none self_start" ><i class="fas fa-null fa-fw "></i>
+                                                </div>
+                                                <div class="flex_auto self_center">
+                                                    <a class="text-shadow_black-1 c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center">aut labore similique</a>
+                                                </div>       
+                                            </div>
+                                        </li>
+                                        <li class="nav-item" data-nav="grandchild">
+                                            <div class="flex flex_row gap-x_3">
+                                                <div class="spacer flex_none self_start" ><i class="fas fa-null fa-fw "></i>
+                                                </div>
+                                                <div class="flex_auto self_center">
+                                                    <a class="text-shadow_black-1 c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center">in officia nulla</a>
+                                                </div>       
+                                            </div>
+                                        </li>
+                                        <li class="nav-item" data-nav="grandchild">
+                                            <div class="flex flex_row">
+                                                <a class="text-shadow_black-n1 flex_none p_2 h:bg_black-3 collapsed br_white-2 br-r_1 br_solid"
+                                                data-bs-toggle="collapse" 
+                                                href="#collapseGreatGrandChild" aria-expanded="false" aria-controls="collapseGreatGrandChild"
+                                                ><i class="fas fa-plus fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
+                                                </a>
+                                                <div class="flex_auto self_center">
+                                                    <a class="text-shadow_black-1 c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center active a:bg_black-3">voluptates fuga quis</a>
+                                                    <nav class="nav-sub-GreatGrandChild collapse bg_white-2" id="collapseGreatGrandChild">
+                                                        <ul class="ul_none flex_column flex">
+                                                            <li class="nav-item " data-nav="greatgrandchild">
+                                                                <div class="flex flex_row "><div class="flex_auto self_center ">
+                                                                        <a class="text-shadow_black-1  a:bg_black-3 c_white-9 p-y_2 p-r_3 p-l_4 w_100 h:c_white inline-block h:underline self_center">numquam ea exercitationem</a>
+                                                                    </div>       
+                                                                </div>
+                                                            </li>
+                                                            <li class="nav-item" data-nav="greatgrandchild">
+                                                                <div class="flex flex_row">
+                                                                    <div class="flex_auto self_center">
+                                                                        <a class="text-shadow_black-1 active a:bg_black-3 c_white-9 p-y_2 p-r_3 p-l_4 w_100 h:c_white inline-block h:underline self_center">consectetur sequi autem</a>
+                                                                    </div>       
+                                                                </div>
+                                                            </li>
+                                                            <li class="nav-item" data-nav="greatgrandchild">
+                                                                <div class="flex flex_row">
+                                                                    <div class="flex_auto self_center">
+                                                                        <a class="text-shadow_black-1  a:bg_black-3 c_white-9 p-y_2 p-r_3 p-l_4 w_100 h:c_white inline-block h:underline self_center">tempore explicabo eos</a>
+                                                                    </div>       
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </div>  
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>   
+                    </li>
+                    <li class="nav-item" data-nav="child">
+                        <div class="flex flex_row a:bg_black-3">
+                            <div class="spacer flex_none p_2 self_start" ><i class="fas fa-null fa-fw p_2"></i>
+                            </div>
+                            <div class="flex_auto self_center ">
+                                <a class="text-shadow_black-1  a:bg_black-3 c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center">expedita velit vero</a>
+                            </div>       
+                        </div>
+                    </li>
+                    <li class="nav-item " data-nav="child">
+                        <div class="flex flex_row ">
+                            <a class="text-shadow_black-n1 flex_none p_2 h:bg_black-3 collapsed br_white-2 br-r_1 br_solid"
+                            data-bs-toggle="collapse" 
+                            href="#collapseSecondGrandChild" aria-expanded="false" aria-controls="collapseSecondGrandChild"
+                            ><i class="fas fa-plus fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
+                            </a>
+                            <div class="flex_auto self_center">
+                                <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">sed neque sed</a>
+                                <nav class="nav-sub-grandchild collapse bg_white-2 font-size_down" id="collapseSecondGrandChild">
+                                    <ul class="ul_none flex_column flex">
+                                        <li class="nav-item" data-nav="grandchild">
+                                            <div class="flex flex_row gap-x_3">
+                                                <div class="spacer flex_none self_start" ><i class="fas fa-null fa-fw "></i>
+                                                </div>
+                                                <div class="flex_auto self_center">
+                                                    <a class="text-shadow_black-1 c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center">est dolores ipsa</a>
+                                                </div>       
+                                            </div>
+                                        </li>
+                                        <li class="nav-item" data-nav="grandchild">
+                                            <div class="flex flex_row gap-x_3">
+                                                <div class="spacer flex_none self_start" ><i class="fas fa-null fa-fw "></i>
+                                                </div>
+                                                <div class="flex_auto self_center">
+                                                    <a class="text-shadow_black-1 c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center">ab debitis voluptatibus</a>
+                                                </div>       
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>   
+                    </li>
+                    <li class="nav-item" data-nav="child">
+                        <div class="flex flex_row a:bg_black-3">
+                            <div class="spacer flex_none p_2 self_start" ><i class="fas fa-null fa-fw p_2"></i>
+                            </div>
+                            <div class="flex_auto self_center ">
+                                <a class="text-shadow_black-1  a:bg_black-3 c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center">reprehenderit quas beatae</a>
+                            </div>       
+                        </div>
+                    </li>
+                    <li class="nav-item" data-nav="child">
+                        <div class="flex flex_row a:bg_black-3">
+                            <div class="spacer flex_none p_2 self_start" ><i class="fas fa-null fa-fw p_2"></i>
+                            </div>
+                            <div class="flex_auto self_center ">
+                                <a class="text-shadow_black-1  a:bg_black-3 c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center">sed qui inventore</a>
+                            </div>       
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </li>
+    </ul>
+</nav>
+ 
+Weight:0
+
+MarkupWrapperClasses: max-w_25 m_auto 
+
+Experimental: This item is not finalized and might be subject to change
+ 
+Styleguide Bootstrap.Sidebar
+*/
+
+/*
+Sidebar Nav: Child Nav
+ 
+Description: 
+ 
+Markup:
+
+ 
+Weight:5
+ 
+Styleguide Bootstrap.Sidebar.Child
+*/
+/*
+Sidebar Nav: Child Nav (Active)
+ 
+Description: 
+ 
+Markup:
+
+ 
+Weight:5
+ 
+Styleguide Bootstrap.Sidebar.Child.Active
+*/
+
+/*
+Sidebar Nav: Grandchild Nav
+ 
+Description: 
+ 
+Markup:
+
+ 
+Weight:10
+ 
+Styleguide Bootstrap.Sidebar.Grandchild (Active)
+*/
+
+/*
+Sidebar Nav: Grandchild Nav 
+ 
+Description: 
+ 
+Markup:
+
+ 
+Weight:10
+ 
+Styleguide Bootstrap.Sidebar.Grandchild.Active
+*/

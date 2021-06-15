@@ -2092,6 +2092,27 @@
 
    */
   /*
+  Rotation
+
+  .rotate_45              - Rotate by 45 degrees
+  .rotate_90              - Rotate by 90 degrees
+  .rotate_135             - Rotate by 135 degrees
+  .rotate_180              - Rotate by 180 degrees
+  .rotate_225              - Rotate by 225 degrees
+  .rotate_270              - Rotate by 270 degrees
+  .rotate_315              - Rotate by 315 degrees
+
+  Description: rotation through transform. Transform doesn't modify the displacement of the flow.  This also have an active class modifier
+
+  Markup:
+  <i class="font_10 fa-user {{modifier_class}}"></i>
+
+
+  Weight:0
+
+  Styleguide UC.Rotate
+  */
+  /*
   Blend
 
   Giving greater Manipulation of colors with the use of blending modes. 
@@ -7171,13 +7192,13 @@
   box-shadow: inset 2px 2px 8px 1px rgba(0, 0, 0, 0.65);
 }
 #acc_arches_override .shadow_emboss-light {
-  box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.12), inset 2px 2px 3px 0px rgba(18, 56, 136, 0.09), inset -2px -2px 3px 0px rgba(145,112,19,0.09);
+  box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.06), inset 2px 2px 3px 0px rgba(18, 56, 136, 0.045), inset -2px -2px 3px 0px rgba(145,112,19,0.045);
 }
 #acc_arches_override .shadow_emboss-bold {
-  box-shadow: inset 2px 3px 10px 0px rgba(0,0,0,0.26), inset 4px 4px 13px 0px rgba(11,20,28,0.13), inset -2px -2px 9px 0px rgba(145,112,19,0.09), inset 2px 1px 5px 4px rgba(0,0,0,0.18);
+  box-shadow: inset 2px 3px 10px 0px rgba(0,0,0,0.13), inset 4px 4px 13px 0px rgba(11,20,28,0.07), inset -2px -2px 9px 0px rgba(145,112,19,0.04), inset 2px 1px 5px 4px rgba(0,0,0,0.9);
 }
 #acc_arches_override .shadow_bevel-light {
-  box-shadow: -2px -2px 4px rgba(255, 255, 255, 0.05), -2px -2px 3px rgba(255,255,255, 0.25), 2px 3.5px 5.5px rgba(0, 0, 0, 0.132), 0 6.4px 13.1px rgba(0, 0, 0, 0.041), 0 16px 19px rgba(0, 0, 0, 0.07);
+  box-shadow: -2px -2px 2px rgba(255, 255, 255, .05 ), -2px -2px 3px rgba(255, 255, 255, .14 ), 2px 3.5px 5.5px rgba(0, 0, 0, .07), 0 6.4px 9.1px rgba(0, 0, 0, .02), 0 16px 9px rgb(0, 0, 0, .02);
 }
 #acc_arches_override .shadow_bevel-bold {
   box-shadow: -2px -2px 4px hsla(0, 0%, 82.4%, 0.05), -2px -2px 3px hsla(0, 0%, 46.7%, 0.07), 1px 2.5px 4.5px rgba(0, 0, 0, 0.4), 0 6.4px 12.1px rgba(0, 0, 0, 0.14), 0 16px 19px rgba(0,0,0,.07);
@@ -10931,6 +10952,36 @@
 #acc_arches_override .h\:br_transparent:hover {
   border-color: transparent !important;
 }
+#acc_arches_override .a\:br_dotted:active {
+  border-style: dotted !important;
+}
+#acc_arches_override .a\:br_dashed:active {
+  border-style: dashed !important;
+}
+#acc_arches_override .a\:br_solid:active {
+  border-style: solid !important;
+}
+#acc_arches_override .a\:br_none:active {
+  border-style: none !important;
+}
+#acc_arches_override .a\:br_transparent:active {
+  border-color: transparent !important;
+}
+#acc_arches_override .active > .a\:br_dotted {
+  border-style: dotted !important;
+}
+#acc_arches_override .active > .a\:br_dashed {
+  border-style: dashed !important;
+}
+#acc_arches_override .active > .a\:br_solid {
+  border-style: solid !important;
+}
+#acc_arches_override .active > .a\:br_none {
+  border-style: none !important;
+}
+#acc_arches_override .active > .a\:br_transparent {
+  border-color: transparent !important;
+}
 #acc_arches_override .cursor_pointer {
   cursor: pointer;
 }
@@ -11030,25 +11081,39 @@
 #acc_arches_override .origin_l {
   transform-origin: left center;
 }
-#acc_arches_override .rotate-45 {
+#acc_arches_override .active.a\:rotate_45,
+#acc_arches_override .active > .a\:rotate_45,
+#acc_arches_override :not(.collapsed) > .a\:rotate_45 {
   transform: rotate(45deg);
 }
-#acc_arches_override .rotate-90 {
+#acc_arches_override .active.a\:rotate_90,
+#acc_arches_override .active > .a\:rotate_90,
+#acc_arches_override :not(.collapsed) > .a\:rotate_90 {
   transform: rotate(90deg);
 }
-#acc_arches_override .rotate-135 {
+#acc_arches_override .active.a\:rotate_135,
+#acc_arches_override .active > .a\:rotate_135,
+#acc_arches_override :not(.collapsed) > .a\:rotate_135 {
   transform: rotate(135deg);
 }
-#acc_arches_override .rotate-180 {
+#acc_arches_override .active.a\:rotate_180,
+#acc_arches_override .active > .a\:rotate_180,
+#acc_arches_override :not(.collapsed) > .a\:rotate_180 {
   transform: rotate(180deg);
 }
-#acc_arches_override .rotate-225 {
+#acc_arches_override .active.a\:rotate_225,
+#acc_arches_override .active > .a\:rotate_225,
+#acc_arches_override :not(.collapsed) > .a\:rotate_225 {
   transform: rotate(225deg);
 }
-#acc_arches_override .rotate-270 {
+#acc_arches_override .active.a\:rotate_270,
+#acc_arches_override .active > .a\:rotate_270,
+#acc_arches_override :not(.collapsed) > .a\:rotate_270 {
   transform: rotate(270deg);
 }
-#acc_arches_override .rotate-315 {
+#acc_arches_override .active.a\:rotate_315,
+#acc_arches_override .active > .a\:rotate_315,
+#acc_arches_override :not(.collapsed) > .a\:rotate_315 {
   transform: rotate(315deg);
 }
 #acc_arches_override .bg-blend_normal {
