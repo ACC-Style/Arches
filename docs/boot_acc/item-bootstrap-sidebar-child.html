@@ -205,24 +205,24 @@
                                     Source:
                                     <span>dist/css/acc_boot.css</span>,
                                     line
-                                    <span>6707</span>
-                                    |
+                                    <span>6580</span>
                                     
-
                                 </p>
                             <a class="kss-section__permalink"
                                href="#kssref-bootstrap-sidebar-child">
                                 <h3
                                      class="kss-section__item c_primary kss-section__item--depth-3">
                                     <span
-                                          class="kss-section__ref">4.3.1</span>
+                                          class="kss-section__ref">4.3.4</span>
                                     <span
-                                          class="kss-section__name">Sidebar Nav: Child Nav</span>
+                                          class="kss-section__name">Child NavItem</span>
                                 </h3>
                             </a>
                                 <div
                                      class="kss-section__description reading-typography font-size_up overflow_auto ">
-                                    <p>Description:</p>
+                                    <div class="font_n1">
+                                    </div>
+                                    <p>Description: Child and Grandchild nav items are built the same way with a spacer with or without a toggle depending on if they have children.</p>
 
                                 </div>
                         </article>
@@ -231,27 +231,111 @@
                                 <h1
                                     class="kss-modifiers__heading">
                                     Example
-                                                                    </h1>
+                                    s
+                                </h1>
+                                    <h2
+                                        class="kss-modifiers__name">
+                                        Default styling</h2>
                                 <div
                                      class="kss-modifiers__example">
                                     <div
-                                         class="">
-                                        Markup:
+                                         class="bg_primary c_white font_ui ul_none">
+                                        <li class="nav-item [modifier class]" data-nav="child">
+    <div class="flex flex_row">
+        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
+        </div>
+        <div class="flex_auto self_center">
+            <a class="text-shadow_black-1 [modifier class] c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
+        </div>
+    </div>
+</li>
                                     </div>
                                 </div>
+                                    <div
+                                         class="">
+                                            <article
+                                                     class="kss-modifiers__modifier">
+                                                <h2
+                                                    class="kss-modifiers__name">
+                                                    default
+                                                </h2>
+                                                <p
+                                                   class="kss-modifiers__description">
+                                                    No added class
+                                                </p>
+                                                <div
+                                                     class="kss-modifiers__example bg_primary c_white font_ui ul_none">
+                                                    <li class="nav-item default" data-nav="child">
+    <div class="flex flex_row">
+        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
+        </div>
+        <div class="flex_auto self_center">
+            <a class="text-shadow_black-1 default c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
+        </div>
+    </div>
+</li>
+                                                </div>
+                                            </article>
+                                            <article
+                                                     class="kss-modifiers__modifier">
+                                                <h2
+                                                    class="kss-modifiers__name">
+                                                    active
+                                                </h2>
+                                                <p
+                                                   class="kss-modifiers__description">
+                                                    Nav Item changes its decoration if this the page the user is on.
+                                                </p>
+                                                <div
+                                                     class="kss-modifiers__example bg_primary c_white font_ui ul_none">
+                                                    <li class="nav-item active" data-nav="child">
+    <div class="flex flex_row">
+        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
+        </div>
+        <div class="flex_auto self_center">
+            <a class="text-shadow_black-1 active c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
+        </div>
+    </div>
+</li>
+                                                </div>
+                                            </article>
+                                    </div>
                             </article>
-
                                 <section
                                          class="relative ">
                                     <article class="kss-section__markup overflow_scroll scrollbar-mini"
                                              style="max-height: 30vh;">
-                                        <pre><code class="language-markup"  id="input-bootstrap-sidebar-child" value='Markup:'>Markup:</code></pre>
+                                        <pre><code class="language-markup"  id="input-bootstrap-sidebar-child" value='&lt;li class&#x3D;&quot;nav-item [modifier class]&quot; data-nav&#x3D;&quot;child&quot;&gt;
+    &lt;div class&#x3D;&quot;flex flex_row&quot;&gt;
+        &lt;div class&#x3D;&quot;text-shadow_black-n1 flex_none p_2&quot;&gt;&lt;i class&#x3D;&quot;fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex_auto self_center&quot;&gt;
+            &lt;a class&#x3D;&quot;text-shadow_black-1 [modifier class] c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3&quot;&gt;Child Link&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/li&gt;'>&lt;li class&#x3D;&quot;nav-item [modifier class]&quot; data-nav&#x3D;&quot;child&quot;&gt;
+    &lt;div class&#x3D;&quot;flex flex_row&quot;&gt;
+        &lt;div class&#x3D;&quot;text-shadow_black-n1 flex_none p_2&quot;&gt;&lt;i class&#x3D;&quot;fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex_auto self_center&quot;&gt;
+            &lt;a class&#x3D;&quot;text-shadow_black-1 [modifier class] c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3&quot;&gt;Child Link&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/li&gt;</code></pre>
                                     </article>
                                     <input class="display_none text-input html-code-input"
                                            type="text"
                                            name=""
                                            id="input-bootstrap-sidebar-child"
-                                           value='Markup:'>
+                                           value='&lt;li class&#x3D;&quot;nav-item [modifier class]&quot; data-nav&#x3D;&quot;child&quot;&gt;
+    &lt;div class&#x3D;&quot;flex flex_row&quot;&gt;
+        &lt;div class&#x3D;&quot;text-shadow_black-n1 flex_none p_2&quot;&gt;&lt;i class&#x3D;&quot;fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex_auto self_center&quot;&gt;
+            &lt;a class&#x3D;&quot;text-shadow_black-1 [modifier class] c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3&quot;&gt;Child Link&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/li&gt;'>
                                     <a class="absolute bg_shade-3 br_1 br_black-3 br_radius br_solid font_medium h:bg_shade-1 m-r_3 p-x_4 p-y_3 r_3 shadow_overlap-light t_3"
                                        onclick="CopyText( '#input-bootstrap-sidebar-child',event )"><i
                                            class="far fa-copy"></i>

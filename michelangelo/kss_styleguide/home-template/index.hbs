@@ -242,7 +242,15 @@
                             </a>
                             {{#if description}}
                                 <div
-                                     class="kss-section__description{{#if deprecated}}{{/if}}{{#if experimental}}{{/if}} reading-typography font-size_up overflow_auto ">
+                                     class="kss-section__description reading-typography font-size_up overflow_auto ">
+                                    <div class="font_n1">
+                                    {{#if deprecated}}
+                                        <span class="bg_alert-n1 c_white m-x_2 inline-block p-x_3 p_2 br_round uppercase">deprecated</span>
+                                    {{/if}}
+                                    {{#if experimental}}
+                                        <span class="bg_warning-n1 c_white m-x_2 inline-block p-x_4 p_2 br_round uppercase">experimental</span>
+                                    {{/if}}
+                                    </div>
                                     {{{ description }}}
                                 </div>
                             {{/if}}
@@ -290,7 +298,7 @@
                                 </div>
                                 {{#if modifiers}}
                                     <div
-                                         class="{{markupwrapperclasses}}">
+                                         class="">
                                         {{#each modifiers}}
                                             <article
                                                      class="kss-modifiers__modifier">
@@ -303,7 +311,7 @@
                                                     {{{ description }}}
                                                 </p>
                                                 <div
-                                                     class="kss-modifiers__example">
+                                                     class="kss-modifiers__example {{markupwrapperclasses}}">
                                                     {{{ markup }}}
                                                 </div>
                                             </article>
