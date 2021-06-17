@@ -4,47 +4,42 @@
 <head>
     <title>{{ options.title }}</title>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1"
-          name="viewport">
-    <meta content="yes"
-          name="mobile-web-app-capable">
-    <meta content="kss-node"
-          name="generator">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300"
-          rel="stylesheet">
-    <link href="kss-assets/vendor/prism.css"
-          rel="stylesheet">
-    <link href="kss-assets/css/kss.css"
-          rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="kss-node" name="generator">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet">
+    <link href="kss-assets/vendor/prism.css" rel="stylesheet">
+    <link href="kss-assets/css/kss.css" rel="stylesheet">
     {{{ styles }}}
 </head>
 
 <body class="kss-body texture_light font_ui">
     <!-- header. -->
     <section class="display_none block:md">
-<aside class="m_auto font_ui font_n1 display_none block:md bg_secondary-n2 br_solid br_black-4 p-y_3 br-b_1 shadow_emboss-light">
-    <ul class="ul_none flex flex_row:md flex_column justify_center ">
-        <li class="w_auto:md w_100 md p_2 self_center">
-            <span class="block inline-block:md c_white-8 undecorated p_2 nowrap uppercase font_xbold">Brands</span>
-        </li>
-        {{#each options.site_nav }}
-            <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center {{#if isActive}}is-active active{{/if}}">
-                <a class="
+        <aside class="m_auto font_ui font_n1 display_none block:md bg_secondary-n2 br_solid br_black-4 p-y_3 br-b_1 shadow_emboss-light">
+            <ul class="ul_none flex flex_row:md flex_column justify_center ">
+                <li class="w_auto:md w_100 md p_2 self_center">
+                    <span class="block inline-block:md c_white-8 undecorated p_2 nowrap uppercase font_xbold">Brands</span>
+                </li>
+                {{#each options.site_nav }}
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center {{#if isActive}}is-active active{{/if}}">
+                        <a class="
                 {{#if isActive}}is-active active font_bold{{/if}} 
                 block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
                 a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="{{ url }}" id="{{ id }}">{{ title }}</a>
-        {{/each}}
-    </ul>
-</aside>
+                    </li>
+                {{/each}}
+                <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center">
+                    <a class=" block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="https://acc-style.github.io/origami6/?path=/story/introduction--page" id="origami"><i class="fas fa-paper-plane p-r_3"></i><span>Project Origami</span></a>
+                </li>
+            </ul>
+        </aside>
     </section>
-    <header
-            class="bg_white shadow_overlap-light br_black-1 br_solid br_1 sticky t_0 display_none:md flex flex_inline z_5">
+    <header class="bg_white shadow_overlap-light br_black-1 br_solid br_1 sticky t_0 display_none:md flex flex_inline z_5">
         <h1 class="self_center m_3">
-            <a class="undecorated h:undecorated"
-               href="https://acc-style.github.io/Arches/index.html">Arches</a>: {{ options.title }}
+            <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">Arches</a>: {{ options.title }}
         </h1>
-        <a
-           class="m-l_auto self_center m_3 kss-header__hamburger-trigger">
+        <a class="m-l_auto self_center m_3 kss-header__hamburger-trigger">
             <div class="kss-header__hamburger"></div>
         </a>
     </header>
@@ -53,141 +48,101 @@
     <!-- /navigation. -->
     <!-- documentation. -->
     <header class="p_4 text_center">
-        <h1
-            class="font_display font_10 font_light display_none block:md">
-             <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">Arches:</a>{{ options.title }}
+        <h1 class="font_display font_10 font_light display_none block:md">
+            <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">Arches:</a>{{ options.title }}
         </h1>
-        <small
-               class="font_0 m-t_n3 block m-b_4 font_xbold font_display display_none block:md">Multi
-            Product Brand Style System by the American
-            College of Cardiology</small>
-
+        <small class="font_0 m-t_n3 block m-b_4 font_xbold font_display display_none block:md">Multi Product Brand Style System by the American College of Cardiology</small>
     </header>
     <section class="display_none block:md">
-        <aside
-               class="m_auto font_copy display_none block:md sticky t_0">
-            <ul
-                class="ul_none flex flex_row:md flex_column justify_center br-t_1 br_solid br_black-4 p-y_3 br-b_1 ">
-                <li
-                    class=" w_auto:md w_100 p_2 self_center ">
-                    <a class="block inline-block:md undecorated  bg_primary-n1 h:bg_primary-n3 h:undecorated c_white p_3 br_radius nowrap"
-                       href="https://acc-style.github.io/Arches/index.html">
-                        <span class=""><i
-                               class="fas fa-chevron-left p-x_2"></i> Arches</span>
+        <aside class="m_auto font_copy display_none block:md sticky t_0">
+            <ul class="ul_none flex flex_row:md flex_column justify_center br-t_1 br_solid br_black-4 p-y_3 br-b_1 ">
+                <li class=" w_auto:md w_100 p_2 self_center ">
+                    <a class="block inline-block:md undecorated  bg_primary-n1 h:bg_primary-n3 h:undecorated c_white p_3 br_radius nowrap" href="https://acc-style.github.io/Arches/index.html">
+                        <span class=""><i class="fas fa-chevron-left p-x_2"></i> Arches</span>
                     </a>
                 </li>
-                <li
-                    class=" w_auto:md w_100 p_2 self_center {{#if homepage}}is-active active{{/if}}">
-                    <a class="block inline-block:md undecorated {{#if isActive}}is-active active{{/if}} h:bg_black-2 a:bg_accent a:c_white h:undecorated c_black-8 h:c_black-9 p_3 br_radius nowrap"
-                       href="index.html">
-                        <span class=""><i
-                               class="fas fa-home p-x_2"></i></span>
+                <li class=" w_auto:md w_100 p_2 self_center {{#if homepage}}is-active active{{/if}}">
+                    <a class="block inline-block:md undecorated {{#if isActive}}is-active active{{/if}} h:bg_black-2 a:bg_accent a:c_white h:undecorated c_black-8 h:c_black-9 p_3 br_radius nowrap" href="index.html">
+                        <span class=""><i class="fas fa-home p-x_2"></i></span>
                     </a>
                 </li>
                 {{#each menu}}
-                    <li
-                        class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center {{#if isActive}}is-active active{{/if}}">
-                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated {{#if isActive}}is-active active{{/if}} h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
-                           href="section-{{ referenceURI }}.html">
-                            <span
-                                  class="">{{ header }}</span>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center {{#if isActive}}is-active active{{/if}}">
+                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated {{#if isActive}}is-active active{{/if}} h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap" href="section-{{ referenceURI }}.html">
+                            <span class="">{{ header }}</span>
                         </a>
                     </li>
                 {{/each}}
             </ul>
         </aside>
     </section>
-    <section
-             class="bg_secondary-n3 display_none:lg font_0 font_ui kss-navigation kss-state-active overflow_auto p-b_2 p-x_3 scrollbar-mini shadow_emboss-light shadow_overlap-bold" style="padding-top:70px">
+    <section id="MobleNav"  class="bg_secondary-n3 display_none:lg font_0 font_ui kss-navigation kss-state-active overflow_auto p-b_2 p-x_3 scrollbar-mini shadow_emboss-light shadow_overlap-bold" style="padding-top:70px">
         <aside class="display_none:md flex flex_column-reverse">
-                        
             <ul class="block flex flex_column ul_none w_100 ul_none lh_3" id="sitenav">
                 {{#each options.site_nav }}
                     <li class="flex_auto {{#if isActive}}is-active active{{/if}} m-b_2">
                         <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="{{ url }}" id="{{ id }}">{{ title }}</a>
                     </li>
                     {{#if isActive}}
-                    <li class="flex_auto m-y_2 p_3 bg_black-5 br_radius p_3 shadow_emboss-light">
-                        <ul class="block flex flex_column ul_none w_100 ul_none lh_3">
-                            <li
-                                class="{{#if ../homepage}}is-active active{{/if}} m-b_2 a:bg_accent h:bg_black-5 relative br_radius p_2 m-b_1">
-                                <a class="{{#if ../homepage}}is-active active{{/if}}  a:c_white c_white-8 h:c_white"
-                                href="index.html">
-                                    <span class=""><i
-                                        class="fas fa-home p-x_2"></i>
-                                        Home</span>
-                                </a>
-                            </li>
-                            {{#each ../menu}}
-                                <li
-                                    class="{{#if isActive}}is-active active{{/if}} m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
-                                    <a class="{{#if isActive}}is-active active{{/if}} a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
-                                    href="section-{{ referenceURI }}.html">
-                                        <span
-                                            class="">{{ header }}</span>
+                        <li class="flex_auto m-y_2 p_3 bg_black-5 br_radius p_3 shadow_emboss-light">
+                            <ul class="block flex flex_column ul_none w_100 ul_none lh_3">
+                                <li class="{{#if ../homepage}}is-active active{{/if}} m-b_2 a:bg_accent h:bg_black-5 relative br_radius p_2 m-b_1">
+                                    <a class="{{#if ../homepage}}is-active active{{/if}}  a:c_white c_white-8 h:c_white" href="index.html">
+                                        <span class=""><i class="fas fa-home p-x_2"></i> Home</span>
                                     </a>
                                 </li>
-                                {{#if isActive}}
-                                    {{#if children}}
-                                        <ul class="m-l_4 ul_none lh_3">
-                                            {{#each children}}
-                                                <li
-                                                    class="{{#if isGrandChild}} p-l_4 font-size_down lh_3 {{else}} font_bold {{/if}} m-b_2">
-                                                    <a class="block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap   c_white-8 h:c_white"
-                                                    href="section-{{ ../referenceURI }}.html#kssref-{{ referenceURI }}">
-                                                        <span
-                                                            class="kss-nav__ref flex_shrink p-r_3 font_bold">{{ referenceNumber }}</span>
-                                                        <span
-                                                            class="flex_auto overflow_ellipsis">{{ header }}</span>
-                                                    </a>
-
-                                                </li>
-                                            {{/each}}
-                                        </ul>
+                                {{#each ../menu}}
+                                    <li class="{{#if isActive}}is-active active{{/if}} m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                                        <a class="{{#if isActive}}is-active active{{/if}} a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-{{ referenceURI }}.html">
+                                            <span class="">{{ header }}</span>
+                                        </a>
+                                    </li>
+                                    {{#if isActive}}
+                                        {{#if children}}
+                                            <ul class="m-l_4 ul_none lh_3">
+                                                {{#each children}}
+                                                    <li class="{{#if isGrandChild}} p-l_4 font-size_down lh_3 {{else}} font_bold {{/if}} m-b_2">
+                                                        <a class="block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap   c_white-8 h:c_white" href="section-{{ ../referenceURI }}.html#kssref-{{ referenceURI }}">
+                                                            <span class="kss-nav__ref flex_shrink p-r_3 font_bold">{{ referenceNumber }}</span> <span class="flex_auto overflow_ellipsis">{{ header }}</span>
+                                                        </a>
+                                                    </li>
+                                                {{/each}}
+                                            </ul>
+                                        {{/if}}
                                     {{/if}}
-                                {{/if}}
-                            {{/each}}
-                        </ul>
-                    </li>
+                                {{/each}}
+                            </ul>
+                        </li>
                     {{/if}}
                 {{/each}}
+                <li class="flex_auto m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="https://acc-style.github.io/origami6/?path=/story/introduction--page" id="origami"><i class="fas fa-paper-plane p-r_3"></i><span>Project Origami</span></a>
+                </li>
             </ul>
-
-
         </aside>
     </section>
     <div class="m_auto p-x_4 ">
-
         {{#if homepage}}
-            <article
-                     class="kss-markdown reading-typography font-size_up p_4 p-t_2 flex_auto max-w_90 m_auto">
+            <article class="kss-markdown reading-typography font-size_up p_4 p-t_2 flex_auto max-w_90 m_auto">
                 {{{ homepage }}}
             </article>
             {{ else }}
             <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
-
-            <div
-                 class="flex flex_column flex_row:md gap-x_5 p-t_4 max-w_90 m_auto">
-                <section
-                         class="max-w_15 w_20:lg flex_none relative display_none block:md">
+            <div class="flex flex_column flex_row:md gap-x_5 p-t_4 max-w_90 m_auto">
+                <section class="max-w_15 w_20:lg flex_none relative display_none block:md">
                     <aside class="sticky t_0">
                         <div>
                             {{#each menu}}
                                 {{#if isActive}}
                                     <h3>{{ header }}</h3>
                                     {{#if children}}
-                                        <ul
-                                            class="m-l_0 ul_none lh_2">
+                                        <ul class="m-l_0 ul_none lh_2">
                                             {{#each children}}
-                                                <li
-                                                    class="{{#if isGrandChild}}p-l_4 font-size_down lh_2 {{else}} font_bold {{/if}}">
-                                                    <a class="block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
-                                                       href="section-{{ ../referenceURI }}.html#kssref-{{ referenceURI }}">
-                                                        <span
-                                                              class="flex_auto overflow_ellipsis">{{ header }}</span>
+                                                <li class="{{#if isGrandChild}}p-l_4 font-size_down lh_2 {{else}} font_bold {{/if}}">
+                                                    <a class="block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-{{ ../referenceURI }}.html#kssref-{{ referenceURI }}">
+                                                        <span class="flex_auto overflow_ellipsis">{{ header }}</span>
                                                     </a>
                                                 </li>
-
                                             {{/each}}
                                         </ul>
                                     {{/if}}
@@ -199,65 +154,42 @@
                 <main class="w_100 flex_auto">
                     {{#each sections}}
                         {{#if @first}}
-                            <header class="bg_white kss-section kss-section--depth-{{ depth }} br_radius shadow_2 br_radius"
-                                    id="kssref-{{ referenceURI }}">
+                            <header class="bg_white kss-section kss-section--depth-{{ depth }} br_radius shadow_2 br_radius" id="kssref-{{ referenceURI }}">
                                 {{ else }}
-                                <section class="kss-section bg_white kss-section--depth-{{ depth }} br_radius shadow_1"
-                                         id="kssref-{{ referenceURI }}">
+                                <section class="kss-section bg_white kss-section--depth-{{ depth }} br_radius shadow_1" id="kssref-{{ referenceURI }}">
                         {{/if}}
-
-                        <article
-                                 class="kss-section__content relative">
+                        <article class="kss-section__content relative">
                             <div class="absolute t_0 r_4">
                                 {{#if deprecated}}
-                                    <div
-                                         class="inline-block p_2 bg_alert shadow_overlap-light">
-                                        <i
-                                           class="fas fa-fw fa-exclamation-triangle"></i>
+                                    <div class="inline-block p_2 bg_alert shadow_overlap-light">
+                                        <i class="fas fa-fw fa-exclamation-triangle"></i>
                                     </div>
                                 {{/if}}
                                 {{#if experimental}}
-                                    <div
-                                         class="inline-block p_2 bg_warning shadow_overlap-light">
-                                        <i
-                                           class="fas fa-fw fa-vial"></i>
+                                    <div class="inline-block p_2 bg_warning shadow_overlap-light">
+                                        <i class="fas fa-fw fa-vial"></i>
                                     </div>
                                 {{/if}}
-
                             </div>
-
                             {{#if source.filename}}
-                                <p
-                                   class="kss-section__source font_n3">
-                                    Source:
-                                    <span>{{ source.filename }}</span>,
-                                    line
-                                    <span>{{ source.line }}</span>
-                                    
+                                <p class="kss-section__source font_n3"> Source: <span>{{ source.filename }}</span>, line <span>{{ source.line }}</span>
                                 </p>
                             {{/if}}
-                            <a class="kss-section__permalink"
-                               href="#kssref-{{ referenceURI }}">
-                                <h{{ depth
-                                     }}
-                                     class="kss-section__item c_primary kss-section__item--depth-{{ depth }}">
-                                    <span
-                                          class="kss-section__ref">{{ referenceNumber }}</span>
-                                    <span
-                                          class="kss-section__name">{{ header }}</span>
-                                </h{{ depth
-                                      }}>
+                            <a class="kss-section__permalink" href="#kssref-{{ referenceURI }}">
+                                <h{{ depth }} class="kss-section__item c_primary kss-section__item--depth-{{ depth }}">
+                                    <span class="kss-section__ref">{{ referenceNumber }}</span>
+                                    <span class="kss-section__name">{{ header }}</span>
+                                </h{{ depth }}>
                             </a>
                             {{#if description}}
-                                <div
-                                     class="kss-section__description reading-typography font-size_up overflow_auto ">
+                                <div class="kss-section__description reading-typography font-size_up overflow_auto ">
                                     <div class="font_n1">
-                                    {{#if deprecated}}
-                                        <span class="bg_alert-n1 c_white m-x_2 inline-block p-x_3 p_2 br_round uppercase">deprecated</span>
-                                    {{/if}}
-                                    {{#if experimental}}
-                                        <span class="bg_warning-n1 c_white m-x_2 inline-block p-x_4 p_2 br_round uppercase">experimental</span>
-                                    {{/if}}
+                                        {{#if deprecated}}
+                                            <span class="bg_alert-n1 c_white m-x_2 inline-block p-x_3 p_2 br_round uppercase">deprecated</span>
+                                        {{/if}}
+                                        {{#if experimental}}
+                                            <span class="bg_warning-n1 c_white m-x_2 inline-block p-x_4 p_2 br_round uppercase">experimental</span>
+                                        {{/if}}
                                     </div>
                                     {{{ description }}}
                                 </div>
@@ -265,61 +197,40 @@
                             {{#if parameters}}
                                 <ul class="kss-parameters">
                                     {{#each parameters}}
-                                        <li
-                                            class="kss-parameters__item">
-                                            <p
-                                               class="kss-parameters__description">
-                                                {{{ description }}}
-                                                {{#if defaultValue}}
-                                                    Defaults
-                                                    to:
-                                                    <code>{{ defaultValue }}</code>
+                                        <li class="kss-parameters__item">
+                                            <p class="kss-parameters__description">
+                                                {{{ description }}} {{#if defaultValue}} Defaults to: <code>{{ defaultValue }}</code>
                                                 {{/if}}
                                             </p>
-                                            <code
-                                                  class="kss-parameters__name">{{ name }}</code>
+                                            <code class="kss-parameters__name">{{ name }}</code>
                                         </li>
                                     {{/each}}
                                 </ul>
                             {{/if}}
                         </article>
                         {{#if example}}
-                            <article
-                                     class="kss-section__modifiers">
-                                <h1
-                                    class="kss-modifiers__heading">
-                                    Example
-                                    {{#if modifiers}}s
-                                    {{/if}}
+                            <article class="kss-section__modifiers">
+                                <h1 class="kss-modifiers__heading"> Example {{#if modifiers}}s {{/if}}
                                 </h1>
                                 {{#if modifiers}}
-                                    <h2
-                                        class="kss-modifiers__name">
-                                        Default styling</h2>
+                                    <h2 class="kss-modifiers__name"> Default styling</h2>
                                 {{/if}}
-                                <div
-                                     class="kss-modifiers__example">
-                                    <div
-                                         class="{{markupwrapperclasses}}">
+                                <div class="kss-modifiers__example">
+                                    <div class="{{markupwrapperclasses}}">
                                         {{{ markup }}}
                                     </div>
                                 </div>
                                 {{#if modifiers}}
-                                    <div
-                                         class="">
+                                    <div class="">
                                         {{#each modifiers}}
-                                            <article
-                                                     class="kss-modifiers__modifier">
-                                                <h2
-                                                    class="kss-modifiers__name">
+                                            <article class="kss-modifiers__modifier">
+                                                <h2 class="kss-modifiers__name">
                                                     {{ name }}
                                                 </h2>
-                                                <p
-                                                   class="kss-modifiers__description">
+                                                <p class="kss-modifiers__description">
                                                     {{{ description }}}
                                                 </p>
-                                                <div
-                                                     class="kss-modifiers__example {{../markupwrapperclasses}}">
+                                                <div class="kss-modifiers__example {{../markupwrapperclasses}}">
                                                     {{{ markup }}}
                                                 </div>
                                             </article>
@@ -328,21 +239,12 @@
                                 {{/if}}
                             </article>
                             {{#if example}}
-                                <section
-                                         class="relative {{ hidecodeblock }}">
-                                    <article class="kss-section__markup overflow_scroll scrollbar-mini"
-                                             style="max-height: 30vh;">
+                                <section class="relative {{ hidecodeblock }}">
+                                    <article class="kss-section__markup overflow_scroll scrollbar-mini" style="max-height: 30vh;">
                                         <pre><code class="language-markup"  id="input-{{ referenceURI }}" value='{{ markup }}'>{{ markup }}</code></pre>
                                     </article>
-                                    <input class="display_none text-input html-code-input"
-                                           type="text"
-                                           name=""
-                                           id="input-{{ referenceURI }}"
-                                           value='{{ markup }}'>
-                                    <a class="absolute bg_shade-3 br_1 br_black-3 br_radius br_solid font_medium h:bg_shade-1 m-r_3 p-x_4 p-y_3 r_3 shadow_overlap-light t_3"
-                                       onclick="CopyText( '#input-{{ referenceURI }}',event )"><i
-                                           class="far fa-copy"></i>
-                                        Copy</a>
+                                    <input class="display_none text-input html-code-input" type="text" name="" id="input-{{ referenceURI }}" value='{{ markup }}'>
+                                    <a class="absolute bg_shade-3 br_1 br_black-3 br_radius br_solid font_medium h:bg_shade-1 m-r_3 p-x_4 p-y_3 r_3 shadow_overlap-light t_3" onclick="CopyText( '#input-{{ referenceURI }}',event )"><i class="far fa-copy"></i> Copy</a>
                                 </section>
                             {{/if}}
                         {{/if}}
@@ -356,7 +258,6 @@
             </div>
         {{/if}}
         </section>
-
         <!-- /documentation. -->
         <!-- scripts. -->
         <script src="kss-assets/vendor/jquery.js"></script>
