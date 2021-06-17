@@ -454,7 +454,28 @@ gulp.task(
         }
     )
 );
-
+gulp.task(
+    "build-uc",
+    gulp.series(
+        function SCSS() {
+            return constructSassFiles("acc", "boot");
+        },
+        function CSS() {
+            return runSass("acc");
+        },
+        function CONCAT() {
+            return concatCSS("acc", "boot");
+        },
+        "copy-to-dist",
+        "copy-to-styleguide",
+        function Markdown() {
+            return constructMarkdown("acc", "boot");
+        },
+        function STYLEGUIDE() {
+            return run("npm run uc").exec();
+        }
+    )
+);
 
 gulp.task(
     "build-acc",
