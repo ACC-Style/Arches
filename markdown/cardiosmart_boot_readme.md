@@ -26,7 +26,3 @@ Arches variation for CardioSmart is based on Bootstrap 4. Click below to see the
 | .bg_pericardial | No Related Topic | Pericardial Disease |
 | .bg_pulmonary | No Related Topic | Pulmonary Hypertension and Venous Thromboembolism |
 | .bg_special | No Related Topic | Special |
-</div>
-<style>
-
-</style>
