@@ -1,0 +1,52 @@
+/*
+Marker
+
+Markers classes change the styles and looks of the the list item maker.  Marker must attach to the parent UL or Ol and will not style the grand children.
+
+.marker_primary - primary colored list markers.
+.marker_secondary - secondary colored list markers.
+.marker_accent - accent colored list markers.
+.marker_alert - alert colored list markers.
+.marker_warning - warning colored list markers.
+.marker_success - success colored list markers.
+.marker_highlight - highlight colored list markers.
+.marker_black - black colored list markers.
+.marker_white - white colored list markers.
+
+Markup:
+<ul class="{{ modifier_class }}">
+    <li>List Item Text</li>
+    <li>List Item Text</li>
+    <li>List Item Text
+    <ul class="">
+        <li>List Item Grand Children</li>
+        <li>List Item Grand Children</li>
+
+    </ul>
+    </li>
+</ul>
+<ol class="{{ modifier_class }}">
+    <li>List Item Text</li>
+    <li>List Item Text</li>
+    <li>List Item Text</li>
+</ol>
+ 
+MarkupWrapperClasses: bg_black-2 p_5
+
+Weight:10
+ 
+Styleguide List.Marker
+*/
+
+
+@each $name,$color in $theme-palette {
+    .marker_#{$name} > *::marker{
+        color:$color;
+    }   
+}
+.marker_black > *::marker{
+    color:$black;
+}   
+.marker_white > *::marker{
+    color:$white;
+}   

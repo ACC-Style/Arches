@@ -469,7 +469,7 @@ gulp.task(
         "copy-to-dist",
         "copy-to-styleguide",
         function Markdown() {
-            return constructMarkdown("acc", "boot");
+            return constructMarkdown("acc", "uc");
         },
         function STYLEGUIDE() {
             return run("npm run uc").exec();

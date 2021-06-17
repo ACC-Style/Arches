@@ -1,0 +1,44 @@
+/*
+List
+ 
+Description: A major part of the construction of the web and the content of the web are lists.
+
+Weight: 110
+ 
+Styleguide List
+*/
+/*
+  List Type
+
+  Change the type of a list.
+
+  .ul_none            -  none
+  .ul_bullet          -  bullet          
+  .ul_square          -  square      
+
+  Markup:
+  <div class="font_normal font_1 p_3">
+    <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
+    <ul class="{{modifier_class}}">
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    </ul>
+  </div>
+
+Weight: 0
+
+  Styleguide List.Type
+ */
+
+// list with no decoration shouldn't have a padding
+.ul_none {
+    padding: 0;
+    margin: 0;
+}
+
+@include loop-style(list-type, '', '!important');
+@import 'marker';
+@import 'counters';

@@ -3,7 +3,17 @@
 @import 'reading-typography';
 @import 'typography';
 // 105 spacing
-@import 'spacing';
+@import '_layout-spacing';
+/*
+Layout 
+
+Padding, Margins, and Positions are the most common usage for Utility Classes.  Layout UC's are responsive and can be postfixed with `:md` and with `:lg` to have finer control on the spacing of objects.
+
+Weight: 120
+
+Styleguide Layouts
+*/
+
 // 106 display
 // 106 display.type
 // 106 display.vertical alignment
@@ -17,6 +27,16 @@
 @import 'width';
 @import 'height';
 // 110
+
+/*
+Decorator 
+
+Colors, textures, logos and other design flourishes.
+
+Weight: 125
+
+Styleguide Decorator
+*/
 
 // 120 background
 // 120 background.Color -100
@@ -46,35 +66,41 @@
 @import 'blend';
 
 
+/*
+Interaction
 
+Modify how the user gets feed back of changes from hover effects to active states and how things animate or select.
+
+Weight: 1000
+
+Styleguide Interaction.States
+*/
 /*
 States
 
 Prefixed before class rules the h: for hover or a: for active class allows for some dynamics with very little efforts. 
 
 
-Weight: 200
+Weight: -100
 
-Styleguide States
+Styleguide Interaction.States
 */
 
 // 150 counters
-@import 'counters';
+@import '_lists.scss';
+
 @import 'print';
-
-
-.user-select_all{
-    user-select: all
-} 
-.user-select_none{
-    user-select: none
-} 
-.user-select_auto{
-    user-select: auto
-} 
-.user-select_text{
-    user-select: text
-} 
+@import 'user-select';
+@import 'cursor';
+/*
+Extras
+ 
+Extras include user modification and other classes that modify the user interactions and experiences 
+ 
+Weight: 1000
+ 
+Styleguide Interaction.User
+*/
 
 .btn_acc-primary{
     @extend .ease_out !optional;
@@ -97,3 +123,4 @@ Styleguide States
     @extend .h\:c_white !optional;
     @extend .font_2\:md !optional;
  }
+ 

@@ -1,19 +1,19 @@
 /*
 Hover
 
-Decorate containers and text to show user intereaction with simple hover, and focus effects. 
+Decorate containers and text to show user interaction with simple hover, and focus effects. 
 
 
 Weight: 130
 
-Styleguide States.Hover
+Styleguide Interaction.States.Hover
 */
 /* No styleguide reference. */
 
 /*
-  Hover:Background Color
+  Hover: Background Color
  
-  hovers can easily be added to objects by adding `hover:` or `h:` in front of the background color utility like `h:bg_primary`
+  hovers can easily be added to objects by adding `h:` in front of the background color utility like `h:bg_primary`
 
   bg_alert              - background color modified light to dark
   bg_primary              - background color modified light to dark
@@ -40,7 +40,7 @@ Styleguide States.Hover
 
   Weight: 30
  
-  Styleguide States.Hover.background
+  Styleguide Interaction.States.Hover.background
  
  */
 a:focus {
@@ -75,7 +75,7 @@ a:focus {
 /*
   Hover: Text Color
  
-  hovers can easily be added to change the text color by adding `hover:` or `h:` in front of the text color utility like `h:primary`
+  Hovers can easily be added to change the text color by adding `h:` in front of the text color utility like `h:primary`
 
   c_primary              - text color modified light to dark
   c_shade              - text color modified light to dark
@@ -102,7 +102,7 @@ a:focus {
 
   Weight: 10
  
-  Styleguide States.Hover.text
+  Styleguide Interaction.States.Hover.text
  
  */
 
@@ -117,14 +117,14 @@ a:focus {
 	color: $black !important;
 }
 
-.hover\:underline,
+
 .h\:underline {
 	&:hover,
 	&:focus {
 		text-decoration: underline;
 	}
 }
-.hover\:underline-none,
+
 .h\:underline-none,
 .h\:undecorated {
 	&:hover,
@@ -132,7 +132,7 @@ a:focus {
 		text-decoration: none !important;
 	}
 }
-.hover\:dashed,
+
 .h\:dashed {
 	&:hover,
 	&:focus {
@@ -140,7 +140,7 @@ a:focus {
 		text-decoration-style: dashed;
 	}
 }
-.hover\:double,
+
 .h\:double {
 	&:hover,
 	&:focus {
@@ -148,7 +148,7 @@ a:focus {
 		text-decoration-style: double;
 	}
 }
-.hover\:dotted,
+
 .h\:dotted {
 	&:hover,
 	&:focus {
@@ -158,9 +158,9 @@ a:focus {
 }
 
 /*
-  Hover: Underline 
+  Hover:  Underline 
  
-  Sometimes is is needed to add an underline on a peice of text when it hovers adding `hover:` or `h:` infront of the type of underline you would like gives that type of underline to the text when hoverd.
+  Sometimes is is needed to add an underline on a piece of text when it hovers adding `h:` in front of the type of underline you would like gives that type of underline to the text when hovered.
 
   underline.c_primary - classic anchor text
   dotted.c_warning - great for popups or hint text
@@ -180,7 +180,7 @@ a:focus {
 
   Weight: 20
 
-  Styleguide States.Hover.underlines
+  Styleguide Interaction.States.Hover.underlines
   
   */
 
@@ -200,9 +200,9 @@ a:focus {
 @include loop-transparent(background-transparent, black, '', '!important', true);
 
 /*
-Hover: Background Black and White Opacity 
+Hover:  Background Black and White Opacity 
 
-black and white overlays can be added to hovers easily by adding `hover:` in front of black or white  with the level of opacity needed.
+black and white overlays can be added to hovers easily by adding `h:` in front of black or white  with the level of opacity needed.
 
 bg_white              - text color modified light to dark
 bg_black              - text color modified light to dark
@@ -224,12 +224,12 @@ Markup:
 
 Weight: 50
 
-Styleguide States.Hover.opacity.whiteblack
+Styleguide Interaction.States.Hover.opacity.whiteblack
  
  */
 
 /*
-Opacity: Hover to Full Opacity
+Hover: Full Opacity
 
 Set the Opacity of an object to 100% while hovered.
 
@@ -250,7 +250,7 @@ Markup:
 
 Weight: 60
 
-Styleguide States.Hover.opacity
+Styleguide Interaction.States.Hover.opacity
 
 */
 #{class-name-constructor(opacity,"", "","hover")},
@@ -260,7 +260,7 @@ Styleguide States.Hover.opacity
 }
 
 /*
-  Hover:Border Color
+  Hover:  Border Color
  
   hovers can easily effect the border style to toggle between styles.  Very useful fo toggling from a border type to none or vice versa. 
 | Class          | Effect                                                                                      |
@@ -282,7 +282,7 @@ Markup:
 
 Weight: 40
 
-Styleguide States.Hover.borders
+Styleguide Interaction.States.Hover.borders
 
 */
 #{ class-name-constructor(border-style,dotted,"","hover")} {
@@ -299,76 +299,4 @@ Styleguide States.Hover.borders
 }
 #{ class-name-constructor(border-color,transparent,"","hover")} {
 	border-color: transparent !important;
-}
-
-#{ class-name-constructor(border-style,dotted,"","active")} {
-	border-style: dotted !important;
-}
-#{ class-name-constructor(border-style,dashed,"","active")} {
-	border-style: dashed !important;
-}
-#{ class-name-constructor(border-style,solid,"","active")} {
-	border-style: solid !important;
-}
-#{ class-name-constructor(border-style,none,"","active")} {
-	border-style: none !important;
-}
-#{ class-name-constructor(border-color,transparent,"","active")} {
-	border-color: transparent !important;
-}
-
-
-#{ class-name-constructor(border-style,dotted,"","is-active")} {
-	border-style: dotted !important;
-}
-#{ class-name-constructor(border-style,dashed,"","is-active")} {
-	border-style: dashed !important;
-}
-#{ class-name-constructor(border-style,solid,"","is-active")} {
-	border-style: solid !important;
-}
-#{ class-name-constructor(border-style,none,"","is-active")} {
-	border-style: none !important;
-}
-#{ class-name-constructor(border-color,transparent,"","is-active")} {
-	border-color: transparent !important;
-}
-
-
-// @each $color-name, $hex-value in $theme-palette {
-// 	@include color-loop(border-color, $color-name, $hex-value);
-// }
-
-/*
-  Hover:Border Color
- 
-  hovers can easily effect the border style to toggle between styles.  Very useful fo toggling from a border type to none or vice versa. 
-| Class          | Effect                                                                                      |
-| -------------- | ------------------------------------------------------------------------------------------- |
-| cursor_pointer        | pointer                                                                     |
-| cursor_not-allowed      | no touch                                                                   |
-| cursor_grab      | open hand                                                                   |
-| cursor_grabbing      | closed hand                                                                   |
-| cursor_wait | spinning ball |
-
-
-Weight: 100
-
-Styleguide States.Hover.cursor
-
-*/
-.cursor_pointer {
-	cursor: pointer;
-}
-.cursor_not-allowed {
-	cursor: not-allowed;
-}
-.cursor_grab {
-	cursor: grab;
-}
-.cursor_grabbing {
-	cursor: grabbing;
-}
-.cursor_wait {
-	cursor: wait;
 }

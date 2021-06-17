@@ -7,7 +7,20 @@ Weight: 101
 
 Styleguide Typography
 */
+/*
+Font
 
+Weight: 0
+
+Styleguide Typography.Font
+*/
+/*
+Text
+
+Weight: 1
+
+Styleguide Typography.Text
+*/
 
 /* No Styleguide reference. */
 
@@ -41,7 +54,7 @@ $black: rgb(19, 18, 18) !default;
     <div class="uppercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
   </div>
 
-  Styleguide Typography.FontFamily
+  Styleguide Typography.Font.Family
  */
 
 @include loop-style(font-family);
@@ -61,7 +74,7 @@ $black: rgb(19, 18, 18) !default;
     <div class="uppercase">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
   </div>
 
-  Styleguide Typography.Style
+  Styleguide Typography.Font.Style
  */
 
 .font_normal {
@@ -94,7 +107,7 @@ Markup:
 
 Weight: -90
 
-Styleguide Typography.Color
+Styleguide Typography.Font.Color
  */
 
 @each $color-name,
@@ -174,7 +187,7 @@ Markup:
 Weight: -91
 
 
-Styleguide Typography.Black White
+Styleguide Typography.Font.Color.Black&White
  */
 
 .c_white {
@@ -215,7 +228,7 @@ Styleguide Typography.Black White
 
 Weight: -80
 
-  Styleguide Typography.Weight
+  Styleguide Typography.Font.Weight
  */
 
 @include loop-style(font-weight, '', '!important');
@@ -261,7 +274,7 @@ Weight: -80
 
   Weight: -100
 
-  Styleguide Typography.FontSize
+  Styleguide Typography.Font.Size
  */
 
 @include loop-style(font-size);
@@ -289,7 +302,7 @@ Weight: -80
 /*
   Text Wrap
 
-  <div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>You canalter the wrapping style with these UCs.
+  <div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div> You can alter the wrapping style with these UCs.
 
   .wrap           - alter the wrapping style to wrap
   .pre-wrap       - alter the wrapping style to pre-wrap    
@@ -300,7 +313,7 @@ Weight: -80
     Quae sapiente reprehenderit explicabo esse consequatur error fugiat. Voluptas odit ipsam architecto quae perspiciatis nostrum autem at. Ut veritatis molestiae distinctio autem repudiandae voluptatem voluptatibus aspernatur.
   </div>
 
-  Styleguide Typography.TextWrap
+  Styleguide Typography.Text.Wrap
  */
 
 .wrap {
@@ -361,7 +374,7 @@ Weight: -80
   .dotted			            - dotted underline the text
   .double                 - double underline the text
   .dashed                 - dashed underline the text
-  .undecorated            - unset the decoration of peice of text     
+  .undecorated            - unset the decoration of the text     
   .uppercase              - uppercase the text    
   .lowercase              - lowercase the text
   .capitalize             - capitalize the text
@@ -369,7 +382,7 @@ Weight: -80
 	Markup:
 	<div class="{{modifier_class}} p_3 br_solid font_bold br_black-1 br_1 bg bg_primary c_white">text has a decoration of {{modifier_class}} <a>I am a link also decorated</a></div>
 
-	Styleguide Typography.TextDecoration
+	Styleguide Typography.Text.Decoration
 
  */
 
@@ -421,7 +434,7 @@ Weight: -80
 	Markup:
 	<div class="{{modifier_class}} p_3 br_solid font_bold br_black-1 br_1 bg bg_primary c_white">text has shadow of {{modifier_class}}</div>
 
-	Styleguide Typography.TextShadow
+	Styleguide Typography.Text.Shadow
 
  */
 
@@ -430,20 +443,23 @@ Weight: -80
 /*
 Text Indent
 
-indent text needs to have a mondifier to like `text-indent_2
+Indent text needs to have a modifier to like `text-indent_2
+
+text-indent_n3       - text-indent of  negative 3 rem
+text-indent_n2       - text-indent of  negative 2 rem
+text-indent_n1       - text-indent of  negative 1 rem
+text-indent_0       - text-indent  of   positive 0 rem
+text-indent_1       - text-indent  of   positive 1 rem
+text-indent_2       - text-indent  of   positive 2 rem
+text-indent_3       - text-indent  of   positive 3 rem
 
 Markup:
 <div class="font_normal font_1 m-x_5 br_solid br-l_1 br_black-4">
-<p class="text-indent_n3">text that has an indent magnitude of n3 </p>
-<p class="text-indent_n2">text that has an indent magnitude of n2 </p>
-<p class="text-indent_n1">text that has an indent magnitude of n1 </p>
-<p class="text-indent_0">text that has an indent magnitude of 0 </p>
-<p class="text-indent_1">text that has an indent magnitude of 1 </p>
-<p class="text-indent_2">text that has an indent magnitude of 2 </p>
-<p class="text-indent_3">text that has an indent magnitude of 3 </p>
+<p class="">text that has no indent/p>
+<p class="{{modifier_class}}">text that has an indent magnitude of {{modifier_class}} </p>
 </div>
 
-Styleguide Typography.TextIndent
+Styleguide Typography.Text.Indent
 
  */
 
@@ -452,7 +468,7 @@ Styleguide Typography.TextIndent
 /*
   Line Height
 
-  Change the linehieght of text with `lh_x`.
+  Change the line height of text with `lh_x`.
 
   .lh_0             -  0
   .lh_1             -  1           
@@ -467,7 +483,7 @@ Styleguide Typography.TextIndent
     <p class="{{modifier_class}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 
-  Styleguide Typography.LineHeight
+  Styleguide Typography.Text.LineHeight
  */
 
 @include loop-style(line-height, '', '!important');
@@ -487,7 +503,7 @@ Styleguide Typography.TextIndent
     <p class="{{modifier_class}} lh_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 
-  Styleguide Typography.TextAlignment
+  Styleguide Typography.Text.Alignment
  */
 
 @include loop-style(text-align, '', '!important');
@@ -500,34 +516,3 @@ Styleguide Typography.TextIndent
 }
 
 
-/*
-  List Type
-
-  Change the type of a list.
-
-  .ul_none            -  none
-  .ul_bullet          -  bullet          
-  .ul_square          -  square      
-
-  Markup:
-  <div class="font_normal font_1 p_3">
-    <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
-    <ul class="{{modifier_class}}">
-    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-    </ul>
-  </div>
-
-  Styleguide Typography.list
- */
-
-// list with no decoration shouldn't have a padding
-.ul_none {
-    padding: 0;
-    margin: 0;
-}
-
-@include loop-style(list-type, '', '!important');
