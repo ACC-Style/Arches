@@ -1,4 +1,4 @@
-/** Test 7 **/
+/** Function Test **/
 /**
  * arches - Global style system focused on utility classes
  * @version v1.2.0
@@ -76,7 +76,7 @@ $theme-palette: map-merge(
         success: $green,
         warning: $orange,
         alert: $red,
-        navigation: $blue,
+        //navigation: $blue,
         accent: $bright-cyan,
         info: $info-color,
         highlight: #febf13,
@@ -87,18 +87,22 @@ $theme-palette: map-merge(
 $fonts: (
     accent: (
         name: 'Roboto Slab',
-        stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
+        short-name:'RS'
+        stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif,"slab"',
     ),
     display: (
         name: 'Libre Franklin',
+        short-name:'LF'
         stack: '"Libre Franklin","Muli","Open Sans","system",sans-serif',
     ),
     copy: (
         name: 'Open Sans',
+        short-name:'OS'
         stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     ),
     ui: (
         name: 'Open Sans',
+        short-name:'OS'
         stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     ),
 );
@@ -154,7 +158,7 @@ $font_mono: get-css-size(font-family, mono);
 
 // reset all weigths 
 
-$global-radus-on: false;
+$global-radius-on: false;
 $global-border-radius: 6px;
 $value-to-unit: map-deep-set($value-to-unit, 'radius' 'radius', $global-border-radius);
 $global-border-round: 25px;
@@ -180,7 +184,8 @@ $font_medium: get-css-size(font-weight, medium);
 $font_xbold: get-css-size(font-weight, xbold);
 $font_light: get-css-size(font-weight, light);
 $font_regular: get-css-size(font-weight, regular);
-/** Built With covid Branding **//**  Default Brands    *********************************/
+
+$headline-color:get-themecolor(primary,-1);/** Built With covid Branding **//**  Default Brands    *********************************/
 /**  Colors  **/
 
 @import 'setup/config/colors';
@@ -194,53 +199,165 @@ $font_regular: get-css-size(font-weight, regular);
 
 $link-color-dark: get-themecolor(accent, -3);
 $link-color-light: get-themecolor(accent, 1);
-/*Bootstrap Framework Setup Files.*/
+// reading-typography
+$headline-color: inherit !default;
+$reading-min:16px;
+$margin_0: get-css-size(margin, 0);
+$margin_1: get-css-size(margin, 1);
+$margin_2: get-css-size(margin, 2);
+$margin_3: get-css-size(margin, 3);
+$margin_4: get-css-size(margin, 4);
+$margin_5: get-css-size(margin, 5);
+$margin_n1: get-css-size(margin, n1);
+$margin_n2: get-css-size(margin, n2);
+$margin_n3: get-css-size(margin, n3);
+$margin_n4: get-css-size(margin, n4);
+$margin_n5: get-css-size(margin, n5);
+$padding_0: get-css-size(padding, 0);
+$padding_1: get-css-size(padding, 1);
+$padding_2: get-css-size(padding, 2);
+$padding_3: get-css-size(padding, 3);
+$padding_4: get-css-size(padding, 4);
+$padding_5: get-css-size(padding, 5);
+$border_square: 0;
+$border_radius: get-css-size(border-radius, radius);
+$border_round: get-css-size(border-radius, round);
+$border_circle: get-css-size(border-radius, circle);
+$border-width_0: get-css-size(border-width, 0);
+$border-width_1: get-css-size(border-width, 1);
+$border-width_2: get-css-size(border-width, 2);
+$border-width_3: get-css-size(border-width, 3);
+$border-width_4: get-css-size(border-width, 4);
+$border-width_5: get-css-size(border-width, 5);
+$font_display: get-css-size(font-family, display);
+$font_accent: get-css-size(font-family, accent);
+$font_ui: get-css-size(font-family, ui);
+$font_copy: get-css-size(font-family, copy);
+$font_mono: get-css-size(font-family, mono);
+$font_6: get-css-size(font-size, 6);
+$font_5: get-css-size(font-size, 5);
+$font_4: get-css-size(font-size, 4);
+$font_3: get-css-size(font-size, 3);
+$font_2: get-css-size(font-size, 2);
+$font_1: get-css-size(font-size, 1);
+$font_0: get-css-size(font-size, 0);
+$font_n1: get-css-size(font-size, n1);
+$font_n2: get-css-size(font-size, n2);
+$font_n3: get-css-size(font-size, n3);
+$font_n4: get-css-size(font-size, n4);
+$font_n5: get-css-size(font-size, n5);
+$font_bold: get-css-size(font-weight, bold);
+$font_medium: get-css-size(font-weight, medium);
+$font_xbold: get-css-size(font-weight, xbold);
+$font_light: get-css-size(font-weight, light);
+$font_regular: get-css-size(font-weight, regular);
+$line-height_0: get-css-size(line-height, 0);
+$line-height_1: get-css-size(line-height, 1);
+$line-height_2: get-css-size(line-height, 2);
+$line-height_3: get-css-size(line-height, 3);
+$line-height_4: get-css-size(line-height, 4);
+$line-height_5: get-css-size(line-height, 5);// /*Bootstrap Framework Setup Files.*/
+
+// /*!
+//  * Bootstrap v4.4.1 (https://getbootstrap.com/)
+//  * Copyright 2011-2019 The Bootstrap Authors
+//  * Copyright 2011-2019 Twitter, Inc.
+//  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+//  */
+
+// @import '../../node_modules/bootstrap/scss/functions';
+// @import 'setup/config/__config.boot';
+// @import '../../node_modules/bootstrap/scss/variables';
+// @import '../../node_modules/bootstrap/scss/mixins';
+// @import '../../node_modules/bootstrap/scss/root';
+// @import '../../node_modules/bootstrap/scss/reboot';
+// @import '../../node_modules/bootstrap/scss/type';
+//  @import '../../node_modules/bootstrap/scss/images';
+// // @import '../../node_modules/bootstrap/scss/code';
+// @import '../../node_modules/bootstrap/scss/grid';
+// @import '../../node_modules/bootstrap/scss/tables';
+// @import '../../node_modules/bootstrap/scss/forms';
+// @import '../../node_modules/bootstrap/scss/buttons';
+// @import '../../node_modules/bootstrap/scss/transitions';
+// @import '../../node_modules/bootstrap/scss/dropdown';
+// @import '../../node_modules/bootstrap/scss/button-group';
+// @import '../../node_modules/bootstrap/scss/input-group';
+// @import '../../node_modules/bootstrap/scss/custom-forms';
+// @import '../../node_modules/bootstrap/scss/nav';
+// @import '../../node_modules/bootstrap/scss/navbar';
+// @import '../../node_modules/bootstrap/scss/card';
+// @import '../../node_modules/bootstrap/scss/breadcrumb';
+// @import '../../node_modules/bootstrap/scss/pagination';
+// // @import '../../node_modules/bootstrap/scss/badge';
+// @import '../../node_modules/bootstrap/scss/jumbotron';
+// // @import '../../node_modules/bootstrap/scss/alert';
+// @import '../../node_modules/bootstrap/scss/progress';
+// // @import '../../node_modules/bootstrap/scss/media';
+// @import '../../node_modules/bootstrap/scss/list-group';
+// @import '../../node_modules/bootstrap/scss/close';
+// // @import '../../node_modules/bootstrap/scss/toasts';
+// @import '../../node_modules/bootstrap/scss/modal';
+// @import '../../node_modules/bootstrap/scss/tooltip';
+// @import '../../node_modules/bootstrap/scss/popover';
+// @import '../../node_modules/bootstrap/scss/carousel';
+// @import '../../node_modules/bootstrap/scss/spinners';
+// // @import "../../node_modules/bootstrap/scss/utilities";
+// // @import "print";
+
 
 /*!
- * Bootstrap v4.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-@import '../../node_modules/bootstrap/scss/functions';
-@import 'setup/config/__config.boot';
-@import '../../node_modules/bootstrap/scss/variables';
-@import '../../node_modules/bootstrap/scss/mixins';
-@import '../../node_modules/bootstrap/scss/root';
-@import '../../node_modules/bootstrap/scss/reboot';
-@import '../../node_modules/bootstrap/scss/type';
-// @import '../../node_modules/bootstrap/scss/images';
-// @import '../../node_modules/bootstrap/scss/code';
-@import '../../node_modules/bootstrap/scss/grid';
-@import '../../node_modules/bootstrap/scss/tables';
-@import '../../node_modules/bootstrap/scss/forms';
-@import '../../node_modules/bootstrap/scss/buttons';
-@import '../../node_modules/bootstrap/scss/transitions';
-@import '../../node_modules/bootstrap/scss/dropdown';
-@import '../../node_modules/bootstrap/scss/button-group';
-@import '../../node_modules/bootstrap/scss/input-group';
-@import '../../node_modules/bootstrap/scss/custom-forms';
-@import '../../node_modules/bootstrap/scss/nav';
-@import '../../node_modules/bootstrap/scss/navbar';
-@import '../../node_modules/bootstrap/scss/card';
-@import '../../node_modules/bootstrap/scss/breadcrumb';
-@import '../../node_modules/bootstrap/scss/pagination';
-// @import '../../node_modules/bootstrap/scss/badge';
-@import '../../node_modules/bootstrap/scss/jumbotron';
-// @import '../../node_modules/bootstrap/scss/alert';
-@import '../../node_modules/bootstrap/scss/progress';
-// @import '../../node_modules/bootstrap/scss/media';
-// @import '../../node_modules/bootstrap/scss/list-group';
-@import '../../node_modules/bootstrap/scss/close';
-// @import '../../node_modules/bootstrap/scss/toasts';
-@import '../../node_modules/bootstrap/scss/modal';
-@import '../../node_modules/bootstrap/scss/tooltip';
-@import '../../node_modules/bootstrap/scss/popover';
-@import '../../node_modules/bootstrap/scss/carousel';
-@import '../../node_modules/bootstrap/scss/spinners';
-// @import "utilities";
-// @import "print";
+// scss-docs-start import-stack
+// Configuration
+@import "../../node_modules/bootstrap/scss/functions";
+@import  './setup/config/_config.boot';
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/accordion";
+@import "../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../node_modules/bootstrap/scss/pagination";
+@import "../../node_modules/bootstrap/scss/badge";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/toasts";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/tooltip";
+@import "../../node_modules/bootstrap/scss/popover";
+@import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/spinners";
+@import "../../node_modules/bootstrap/scss/offcanvas";
+
+// Helpers
+@import "../../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+// @import "../../node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
 /*
 Branded Header
  
@@ -287,21 +404,64 @@ Styleguide Virtual Recipes.Header
 
 
 
+/* Nav Recipes.00x */
+
+@import "recipes/base/mobile-nav";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/web-footer";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/quicklinks";
+
+/* Nav Recipes.04x */
+
+@import "recipes/base/advertisement";
+
+/* content Recipes.100 */
+
+@import "recipes/base/ordered-cards";
+
+/* content Recipes.250 */
+
+// Depreciated 2020
+
+// @import "recipes/base/GLSEARCH-search-result";
+
+/*
+On Demand
+ 
+Description: All videos and presentations after a publication is in the On Demand Area. 
+
+Weight: 0
+ 
+Styleguide Virtual Recipes.OnDemand
+*/
+
+
+@import 'recipes/virtual/_virtual.ondemand-light';
+@import 'recipes/virtual/_virtual.ondemand-dark';
+@import 'recipes/virtual/_virtual.live';
+@import 'recipes/virtual/virtual.external-resource';// ACC Design Alterations
+@import "base/base";
+@import "components/logo";
+@import "components/interactive-extras";
+@import "styleguide/styleguide";
+@import "styleguide/__basic-html.base";
+@import "containers/containers";
+
+
 @import 'base/table.boot';
 @import 'styleguide/__basic-html.boot';
-@import 'components/boot/_boot.buttons';
+@import 'components/boot/_boot.buttons.override';
 @import 'components/boot/_boot.carousel.override';
 @import 'components/boot/_boot.navbar.override';
 @import 'components/boot/_boot.collapser.icon';
-/*
-	Bootstrap Recipes
-
-	Combination of UCs and Base Components from the Bootstrap can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to the Bootstrap Components with the Utiltity Classes. 
-
-	Weight: -1
-
-Styleguide  Bootstrap.Intro
-
-*/
-
-@import "recipes/boot/_boot.basic_nav";
+@import 'components/virtual/virtual.umbrella_nav';
+@import 'components/virtual/virtual.locked_graphic';
+@import 'components/covid/covid.channels';
+@import 'components/virtual/virtual.texture_ondemand';
+@import 'components/virtual/virtual.boot._navbar.override';
+@import 'components/sitefinity/sitefinity.editor-decorator';
