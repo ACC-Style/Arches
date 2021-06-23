@@ -9582,7 +9582,7 @@ Styleguide Interaction.States.Active
 /*
 active Full Opacity
 
-<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div><strong>`.active .a:opacity`</strong> Set the Opacity of an objects children to 100% when it has the class is-active. 
+<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the `active` state.</span></div><strong>`.active .a:opacity`</strong> Set the Opacity of an objects children to 100% when it has the class is-active. 
 
 Markup:
 <div class="flex p_4 bg_primary is-active_toggle-function ">
@@ -13170,7 +13170,7 @@ Styleguide Interaction.Animation.transition
   transition: all 0.35s;
 }
 
-.transition_4 {
+.transition_4, *[data-bs-toggle=collapse] .a\:rotation {
   transition: all 0.5s;
 }
 
@@ -13309,65 +13309,122 @@ Styleguide Interaction.Animation.scale
   transform-origin: left center;
 }
 
+.rotate_45 {
+  transform: rotate(45deg);
+}
+
+.rotate_90 {
+  transform: rotate(90deg);
+}
+
+.rotate_135 {
+  transform: rotate(135deg);
+}
+
+.rotate_180 {
+  transform: rotate(180deg);
+}
+
+.rotate_225 {
+  transform: rotate(225deg);
+}
+
+.rotate_270 {
+  transform: rotate(270deg);
+}
+
+.rotate_315 {
+  transform: rotate(315deg);
+}
+
 .active.a\:rotate_45,
-.active > .a\:rotate_45,
-:not(.collapsed) > .a\:rotate_45 {
+.active > .a\:rotate_45 {
   transform: rotate(45deg);
 }
 .active.a\:rotate_90,
-.active > .a\:rotate_90,
-:not(.collapsed) > .a\:rotate_90 {
+.active > .a\:rotate_90 {
   transform: rotate(90deg);
 }
 .active.a\:rotate_135,
-.active > .a\:rotate_135,
-:not(.collapsed) > .a\:rotate_135 {
+.active > .a\:rotate_135 {
   transform: rotate(135deg);
 }
 .active.a\:rotate_180,
-.active > .a\:rotate_180,
-:not(.collapsed) > .a\:rotate_180 {
+.active > .a\:rotate_180 {
   transform: rotate(180deg);
 }
 .active.a\:rotate_225,
-.active > .a\:rotate_225,
-:not(.collapsed) > .a\:rotate_225 {
+.active > .a\:rotate_225 {
   transform: rotate(225deg);
 }
 .active.a\:rotate_270,
-.active > .a\:rotate_270,
-:not(.collapsed) > .a\:rotate_270 {
+.active > .a\:rotate_270 {
   transform: rotate(270deg);
 }
 .active.a\:rotate_315,
-.active > .a\:rotate_315,
-:not(.collapsed) > .a\:rotate_315 {
+.active > .a\:rotate_315 {
   transform: rotate(315deg);
 }
 
 /*
+
 Rotation
 
 Rotation through transform. Transform doesn't modify the displacement of the flow.  This also have an active class modifier
 
-.rotate_45              - Rotate by 45 degrees
-.rotate_90              - Rotate by 90 degrees
-.rotate_135             - Rotate by 135 degrees
-.rotate_180              - Rotate by 180 degrees
-.rotate_225              - Rotate by 225 degrees
-.rotate_270              - Rotate by 270 degrees
-.rotate_315              - Rotate by 315 degrees
-
+rotate_45               - Rotate by 45 degrees
+rotate_90               - Rotate by 90 degrees
+rotate_135              - Rotate by 135 degrees
+rotate_180              - Rotate by 180 degrees
+rotate_225              - Rotate by 225 degrees
+rotate_270              - Rotate by 270 degrees
+rotate_315              - Rotate by 315 degrees
 
 
 Markup:
-<i class="font_10 fa-user {{modifier_class}}"></i>
+<i class="font_10 fas fa fa-user {{modifier_class}}"></i>
 
 
 Weight: 100
 
 Styleguide Interaction.Animation.Rotation
 */
+/*
+
+Rotation on Active
+
+ Add in the `a:` in front of these classes gives you the rotation only when the item is active.<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 ">These classes are effected by the parent having `active` state.</span></div>
+
+rotate_45               - Rotate by 45 degrees
+rotate_90               - Rotate by 90 degrees
+rotate_135              - Rotate by 135 degrees
+rotate_180              - Rotate by 180 degrees
+rotate_225              - Rotate by 225 degrees
+rotate_270              - Rotate by 270 degrees
+rotate_315              - Rotate by 315 degrees
+
+
+Markup:
+<span><i class="font_10 fas fa fa-user a:{{modifier_class}}"></i> Not Active </span>
+<span><i class="active font_10 fas fa fa-user a:{{modifier_class}}"></i> Active </span>
+
+Weight: 100
+
+Styleguide Interaction.Animation.RotationActive
+*/
+*[data-bs-toggle=collapse] .a\:rotation.fa-times, *[data-bs-toggle=collapse] .a\:rotation.fa-chevron-up, *[data-bs-toggle=collapse] .a\:rotation.fa-minus.rotate_90 {
+  transform: rotate(0deg);
+}
+*[data-bs-toggle=collapse].collapsed .a\:rotation.fa-times, *[data-bs-toggle=collapse].show .a\:rotation.fa-times {
+  transform: rotate(135deg);
+}
+*[data-bs-toggle=collapse].collapsed .a\:rotation.fa-chevron-up, *[data-bs-toggle=collapse].show .a\:rotation.fa-chevron-up {
+  transform: rotate(180deg);
+}
+*[data-bs-toggle=collapse].collapsed .a\:rotation.fa-minus.rotate_90, *[data-bs-toggle=collapse].show .a\:rotation.fa-minus.rotate_90 {
+  transform: rotate(90deg);
+}
+
 .bg-blend_normal {
   background-blend-mode: normal;
 }
@@ -20548,12 +20605,12 @@ Description: Side bar for any 3 layer nav on the site. the parent node is from t
 Markup:
 <nav class="nav-sub bg_primary c_white font_0 font_ui ">
     <ul class="ul_none flex_column flex">
-        {{> "Bootstrap.Sidebar.Parent"}}
-        {{> "Bootstrap.Sidebar.Child"}}
-        {{> "Bootstrap.Sidebar.ChildWithChildren"}}
-        {{> "Bootstrap.Sidebar.Child"}}
-        {{> "Bootstrap.Sidebar.Child"}}
-        {{> "Bootstrap.Sidebar.ChildWithGrandChildren"}}
+        {{> "Navigation.Sidebar.Parent"}}
+        {{> "Navigation.Sidebar.Child"}}
+        {{> "Navigation.Sidebar.ChildWithChildren"}}
+        {{> "Navigation.Sidebar.Child"}}
+        {{> "Navigation.Sidebar.Child"}}
+        {{> "Navigation.Sidebar.ChildWithGrandChildren"}}
     </ul>
 </nav>
 
@@ -20561,9 +20618,10 @@ Weight:-1000
 
 MarkupWrapperClasses: max-w_25 m_auto 
 
-Experimental: This item is not finalized and might be subject to change
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
 
-Styleguide Bootstrap.Sidebar
+
+Styleguide Navigation.Sidebar
 */
 /*
 Parent NavItem
@@ -20581,7 +20639,7 @@ Weight: -100
 
 MarkupWrapperClasses: bg_primary c_white font_ui ul_none
 
-Styleguide Bootstrap.Sidebar.Parent
+Styleguide Navigation.Sidebar.Parent
 */
 /*
 Child NavItem
@@ -20594,7 +20652,7 @@ active      -  Nav Item changes its decoration if this the page the user is on.
 Markup:
 <li class="nav-item {{modifier_class}}" data-nav="child">
     <div class="flex flex_row">
-        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
+        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotation c_white"></i>
         </div>
         <div class="flex_auto self_center">
             <a class="text-shadow_black-1 {{modifier_class}} c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
@@ -20606,48 +20664,29 @@ Weight: 10
 
 MarkupWrapperClasses: bg_primary c_white font_ui ul_none
 
-Styleguide Bootstrap.Sidebar.Child
+Styleguide Navigation.Sidebar.Child
 */
 /*
 Toggle Child
 
 Description: Toggle elements are set to active if the attached node or its children are active. If the toggle is active the collapsed children navigation are open by default.
 
-active -  shade the toggle
+default     -  the toggle when it doesn't have an active class still shades on hover
+active      -  shade the toggle
 
 Markup:
-<div class="{{modifier_class}} br-r_1 br_solid br_white-2 flex flex_column flex_none justify_start text-shadow_black-n1">
-    <div class="a:bg_black-3 h:bg_black-4 flex_none p_2"   data-bs-toggle="collapse" data-bs-target=".childNavCollapse" aria-controls=".childNavCollapse" aria-expanded="false">
-        <i class="a:rotate_135 c_white fa-fw fa-plus fas self_center text_center transition_4"></i>
-    </div>
+<div class="{{modifier_class}} br-r_1 br_solid br_white-2 flex flex_column flex_none justify_start text-shadow_black-n1 c_white">
+    {{> "Navigation.Toggle.Advanced" modifier_class=".childNavCollapse" }}
 </div>
 
 Weight: -10
 
-MarkupWrapperClasses: bg_primary c_white font_ui ul_none
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
 
-Styleguide Bootstrap.Sidebar.ChildToggle
-*/
-/*
-Toggle GrandChild
-
-Description: Toggle elements are set to active if the attached node or its children are active. If the toggle is active the collapsed children navigation are open by default.
-
-active -  shade the toggle
-
-
-Markup:
-<div class="{{ modifier_class }} br-r_1 br_solid br_white-2 flex flex_column flex_none justify_start text-shadow_black-n1">
-    <div class="a:bg_black-3 h:bg_black-4 flex_none p_2 " data-bs-toggle="collapse" data-bs-target=".grandChildNavCollapse" aria-controls=".grandChildNavCollapse" aria-expanded="true">
-        <i class="a:rotate_135 c_white fa-fw fa-plus fas self_center text_center transition_4"></i>
-    </div>
-</div>
-
-Weight: -10
 
 MarkupWrapperClasses: bg_primary c_white font_ui ul_none
 
-Styleguide Bootstrap.Sidebar.GrandChildToggle
+Styleguide Navigation.Sidebar.ChildToggle
 */
 /*
 Child NavItem With Children
@@ -20658,15 +20697,15 @@ Description: Child and Grandchild nav items are built the same way with a spacer
 Markup:
 <li class="nav-item {{modifier_class}}" data-nav="child">
     <div class="flex flex_row">
-        {{> "Bootstrap.Sidebar.ChildToggle" modifier_class="collapsed"}}
+        {{> "Navigation.Sidebar.ChildToggle" modifier_class="collapsed"}}
         <div class="flex_auto self_center">
             <a class="text-shadow_black-1 {{modifier_class}} c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child with Children Links</a>
             <nav class="nav-sub-child bg_white-2 font-size_down collapse childNavCollapse" >
                 <ul class="ul_none flex_column flex">
-                    {{> "Bootstrap.Sidebar.Child" }}
-                    {{> "Bootstrap.Sidebar.Child" }}
-                    {{> "Bootstrap.Sidebar.Child" }}
-                    {{> "Bootstrap.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
                 </ul>
             </nav>
         </div>
@@ -20675,9 +20714,12 @@ Markup:
 
 Weight: 15
 
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+
 MarkupWrapperClasses: bg_primary c_white font_ui ul_none
 
-Styleguide Bootstrap.Sidebar.ChildWithChildren
+Styleguide Navigation.Sidebar.ChildWithChildren
 */
 /*
 Child NavItem With Grand Children
@@ -20687,26 +20729,26 @@ Description: Child and Grandchild nav items are built the same way with a spacer
 Markup:
 <li class="nav-item active" data-nav="child">
     <div class="flex flex_row">
-        {{> "Bootstrap.Sidebar.ChildToggle"  modifier_class="active"}}
+        {{> "Navigation.Sidebar.ChildToggle"  modifier_class="active"}}
         <div class="flex_auto self_center">
             <a class="text-shadow_black-1 active c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child with Children Links</a>
             <nav class="nav-sub-child bg_white-2 font-size_down collapse childNavCollapse show">
                 <ul class="ul_none flex_column flex">
-                    {{> "Bootstrap.Sidebar.Child" }}
-                    {{> "Bootstrap.Sidebar.Child" }}
-                    {{> "Bootstrap.Sidebar.Child" }}
-                    {{> "Bootstrap.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
                     <li class="nav-item  active " data-nav="grandchild">
                         <div class="flex flex_row">
-                            {{> "Bootstrap.Sidebar.GrandChildToggle"  modifier_class="active"}}
+                            {{> "Navigation.Sidebar.ChildToggle"  modifier_class="active"}}
                             <div class="flex_auto self_center">
                                 <a class="text-shadow_black-1 active c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child with Children Links</a>
-                                <nav class="nav-sub-child bg_white-2 collapse show grandChildNavCollapse">
+                                <nav class="nav-sub-child bg_white-2 collapse show childNavCollapse">
                                     <ul class="ul_none flex_column flex">
-                                        {{> "Bootstrap.Sidebar.GreatGrandchild"  }}
-                                        {{> "Bootstrap.Sidebar.GreatGrandchild" }}
-                                        {{> "Bootstrap.Sidebar.GreatGrandchild"  modifier_class="active"}}
-                                        {{> "Bootstrap.Sidebar.GreatGrandchild" }}
+                                        {{> "Navigation.Sidebar.GreatGrandchild"  }}
+                                        {{> "Navigation.Sidebar.GreatGrandchild" }}
+                                        {{> "Navigation.Sidebar.GreatGrandchild"  modifier_class="active"}}
+                                        {{> "Navigation.Sidebar.GreatGrandchild" }}
                                     </ul>
                                 </nav>
                             </div>
@@ -20722,7 +20764,9 @@ Weight: 15
 
 MarkupWrapperClasses: bg_primary c_white font_ui ul_none
 
-Styleguide Bootstrap.Sidebar.ChildWithGrandChildren
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+Styleguide Navigation.Sidebar.ChildWithGrandChildren
 */
 /*
 Great Grandchild NavItem
@@ -20745,204 +20789,117 @@ Weight: 100
 
 MarkupWrapperClasses: bg_primary c_white font_ui ul_none
 
-Styleguide Bootstrap.Sidebar.GreatGrandchild
+Styleguide Navigation.Sidebar.GreatGrandchild
 */
 /*
-Sidebar Nav Compiled
+Bootstrap Toggle Rotation
 
-Description: 
+The toggles for bootstrap collapses use a `+` icon that twists to an `x` when the elements doesn't have `collapsed` or `show` as a class. to reduce confusion the class has a set rotation and speed attached to it. `a:rotation` is applied to the tow specific icons `fa-times` and `fa-chevron-up` only.<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 sg">These classes are effected by the parent having `collapsed` state.</span></div>
+
+not-collapsed                   - when class is added it rotates the icon into position
+collapsed                       - when class is added it rotates the icon into position
 
 Markup:
-<div class="max-w_25 m_auto">
-    <nav class="nav-sub bg_primary c_white font_0 font_ui ">
-        <ul class="ul_none flex_column flex">
-            <li class="nav-item font-size_up" data-nav="parent">
-                <div class="bg_black-4 ">
-                    <a class="text-shadow_black-1 block w_100 c_white p-y_2 p-x_4 w_100 h:c_white inline-block h:underline self_center">Parent Link: Tree starts from this node</a>
-                </div>
-            </li>
-            <li class="nav-item " data-nav="child">
-                <div class="flex flex_row">
-                    <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
-                    </div>
-                    <div class="flex_auto self_center">
-                        <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item " data-nav="child">
-                <div class="flex flex_row">
-                    <div class="collapsed br-r_1 br_solid br_white-2 flex flex_column flex_none justify_start text-shadow_black-n1">
-                        <div class="a:bg_black-3 h:bg_black-4 flex_none p_2" data-bs-toggle="collapse" data-bs-target="#childNavCollapse" aria-controls="#childNavCollapse" aria-expanded="true">
-                            <i class="a:rotate_135 c_white fa-fw fa-plus fas self_center text_center transition_4"></i>
-                        </div>
-                    </div>
-                    <div class="flex_auto self_center">
-                        <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child with Children Links</a>
-                        <nav class="nav-sub-child bg_white-2 font-size_down collapse" id="childNavCollapse" style="">
-                            <ul class="ul_none flex_column flex">
-                                <li class="nav-item " data-nav="child">
-                                    <div class="flex flex_row">
-                                        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
-                                        </div>
-                                        <div class="flex_auto self_center">
-                                            <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item " data-nav="child">
-                                    <div class="flex flex_row">
-                                        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
-                                        </div>
-                                        <div class="flex_auto self_center">
-                                            <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item " data-nav="child">
-                                    <div class="flex flex_row">
-                                        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
-                                        </div>
-                                        <div class="flex_auto self_center">
-                                            <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item " data-nav="child">
-                                    <div class="flex flex_row">
-                                        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
-                                        </div>
-                                        <div class="flex_auto self_center">
-                                            <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item " data-nav="child">
-                <div class="flex flex_row">
-                    <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
-                    </div>
-                    <div class="flex_auto self_center">
-                        <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item " data-nav="child">
-                <div class="flex flex_row">
-                    <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
-                    </div>
-                    <div class="flex_auto self_center">
-                        <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item active" data-nav="child">
-                <div class="flex flex_row">
-                    <div class="active br-r_1 br_solid br_white-2 flex flex_column flex_none justify_start text-shadow_black-n1">
-                        <div class="a:bg_black-3 h:bg_black-4 flex_none p_2" data-bs-toggle="collapse" data-bs-target="#childNavCollapse2" aria-controls="childNavCollapse2" aria-expanded="true">
-                            <i class="a:rotate_135 c_white fa-fw fa-plus fas self_center text_center transition_4"></i>
-                        </div>
-                    </div>
-                    <div class="flex_auto self_center">
-                        <a class="text-shadow_black-1 active c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child with Children Links</a>
-                        <nav class="nav-sub-child bg_white-2 font-size_down  collapse show" id="childNavCollapse2" style="">
-                            <ul class="ul_none flex_column flex">
-                                <li class="nav-item " data-nav="child">
-                                    <div class="flex flex_row">
-                                        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
-                                        </div>
-                                        <div class="flex_auto self_center">
-                                            <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item " data-nav="child">
-                                    <div class="flex flex_row">
-                                        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
-                                        </div>
-                                        <div class="flex_auto self_center">
-                                            <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item " data-nav="child">
-                                    <div class="flex flex_row">
-                                        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
-                                        </div>
-                                        <div class="flex_auto self_center">
-                                            <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item " data-nav="child">
-                                    <div class="flex flex_row">
-                                        <div class="text-shadow_black-n1 flex_none p_2"><i class="fas fa-spacer fa-fw p_2 transition_4 a:rotate_135 c_white"></i>
-                                        </div>
-                                        <div class="flex_auto self_center">
-                                            <a class="text-shadow_black-1  c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item  active " data-nav="grandchild">
-                                    <div class="flex flex_row">
-                                        <div class="active br-r_1 br_solid br_white-2 flex flex_column flex_none justify_start text-shadow_black-n1">
-                                            <div class="a:bg_black-3 h:bg_black-4 flex_none p_2" data-bs-toggle="collapse" data-bs-target="#grandChildNavCollapse" aria-controls=#grandChildNavCollapse" aria-expanded="false">
-                                                <i class="a:rotate_135 c_white fa-fw fa-plus fas self_center text_center transition_4"></i>
-                                            </div>
-                                        </div>
-                                        <div class="flex_auto self_center">
-                                            <a class="text-shadow_black-1 active c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child with Children Links</a>
-                                            <nav class="nav-sub-child bg_white-2 grandChildNavCollapse collapse" id="grandChildNavCollapse" style="">
-                                                <ul class="ul_none flex_column flex">
-                                                    <li class="nav-item  " data-nav="greatgrandchild">
-                                                        <div class="flex flex_row">
-                                                            <div class="flex_auto self_center">
-                                                                <a class="  text-shadow_black-1  a:bg_black-3 c_white-9 p-y_2 p-r_3 p-l_4 w_100 h:c_white inline-block h:underline self_center">Great Grand Child Links</a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="nav-item  " data-nav="greatgrandchild">
-                                                        <div class="flex flex_row">
-                                                            <div class="flex_auto self_center">
-                                                                <a class="  text-shadow_black-1  a:bg_black-3 c_white-9 p-y_2 p-r_3 p-l_4 w_100 h:c_white inline-block h:underline self_center">Great Grand Child Links</a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="nav-item active " data-nav="greatgrandchild">
-                                                        <div class="flex flex_row">
-                                                            <div class="flex_auto self_center">
-                                                                <a class=" active text-shadow_black-1  a:bg_black-3 c_white-9 p-y_2 p-r_3 p-l_4 w_100 h:c_white inline-block h:underline self_center">Great Grand Child Links</a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="nav-item " data-nav="greatgrandchild">
-                                                        <div class="flex flex_row">
-                                                            <div class="flex_auto self_center">
-                                                                <a class="  text-shadow_black-1  a:bg_black-3 c_white-9 p-y_2 p-r_3 p-l_4 w_100 h:c_white inline-block h:underline self_center">Great Grand Child Links</a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </nav>
+<div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <i class="a:rotation c_primary fa-fw fa-times fas self_center text_center"></i>
+</div>
+<div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <i class="a:rotation c_primary fa-fw fa-chevron-up fas self_center text_center"></i>
 </div>
 
-Weight:0
 
-Styleguide Bootstrap.Sidebar.Compiled
+Weight: 100
+
+Styleguide Navigation.Toggle.RotationSimpleIcon
+
+*/
+/*
+Stacked Rotation Toggle
+
+Description: The toggles for bootstrap collapses use a `+` icon that twists to an `-` when the elements doesn't have `collapsed` or `show` as a class.<div class="p-t_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 sg">These classes are effected by the parent having `collapsed` state.</span></div>
+
+not-collapsed                   - when class is added it rotates the icon into position
+collapsed                       - when class is added it rotates the icon into position
+
+Markup:
+<div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-minus fa-stack-1x"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+        </span>
+</div>
+<div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-square fa-stack-2x c_black"></i>
+        <i class="fas fa-minus fa-stack-1x c_white"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x  c_white"></i>
+        </span>
+</div>
+
+Weight:100
+
+Styleguide Navigation.Toggle.Rotation.RotationStackedIcon
+*/
+/*
+Collapse Toggle
+
+Toggle elements of a collapse with user feed back of the icon rotating.
+
+#targetName -  the name of the target of the collapse
+
+Markup:
+<div class="a:bg_black-3 h:bg_black-4 flex_none p_2" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}" aria-expanded="true">
+        <i class="a:rotation fa-fw fa-times fas self_center text_center"></i>
+</div>
+
+Weight: -10
+
+MarkupWrapperClasses: bg_white font_ui flex c_primary
+
+Styleguide Navigation.Toggle
+*/
+/*
+Collapse Toggle Advanced
+
+Toggle elements of a collapse with user feed back of the icon morphing.
+
+#targetName -  the name of the target of the collapse
+
+Markup:
+<div class="flex_none" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}">
+        <span class="fa-stack">
+        <i class="fas fa-minus fa-stack-1x"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+        </span>
+</div>
+
+Weight: 50
+
+MarkupWrapperClasses: bg_white font_ui flex c_primary
+
+Styleguide Navigation.Toggle.Advanced
+*/
+/*
+Collapse Toggle Advanced with Square
+
+Toggle elements of a collapse with user feed back of the icon morphing.
+
+#targetName -  the name of the target of the collapse
+
+Markup:
+<div class="flex_none" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}">
+        <span class="fa-stack">
+        <i class="fas fa-square fa-stack-2x"></i>
+        <i class="fas fa-minus fa-stack-1x c_white"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x  c_white"></i>
+        </span>
+</div>
+
+Weight: 55
+
+MarkupWrapperClasses: bg_white font_ui flex c_primary
+
+Styleguide Navigation.Toggle.AdvancedSquare
 */
 /*
 ACC.org Footer
@@ -21343,23 +21300,55 @@ Styleguide Recipes.Footer.Complete
 
 */
 /*
-Page Hub 
+Page Hub
 
 A collection of links that collapses the children of the nav item.
 
 Markup:
-<ul class="c_primary font_ui ul_none font_2">
+<nav class="flex flex_row:md flex_column gap-x_4">
+    <div class="flex flex_column gap-y_4 flex_none:md w_50:md">
+    {{> "Navigation.PageHub.Group"}}
+    {{> "Navigation.PageHub.Group"}}
+    {{> "Navigation.PageHub.Group"}}
+    </div>
+    <div class="flex flex_column gap-y_4 flex_none:md w_50:md">
+    {{> "Navigation.PageHub.Group"}}
+    {{> "Navigation.PageHub.Group"}}
+    {{> "Navigation.PageHub.Group"}}
+    </div>
+</nav>
+
+Weight: 0
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+Styleguide Navigation.PageHub
+*/
+/*
+Page Hub Group
+
+A collection of links that collapses the children of the nav item.
+
+Markup:
+<ul class="c_primary font_copy ul_none font_1">
     <li class="nav-item active" data-nav="child">
         <div class="flex flex_row">
-            {{> "Recipes.PageHub.Toggle" }}
+              <div class="flex flex_column flex_none font-size_down p-y_2 justify_start c_primary h:c_primary-n3 br_radius h:bg_primary-5" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+                <div class="flex_none" >
+                        <span class="fa-stack">
+                        <i class="fas fa-minus fa-stack-1x"></i>
+                        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+                        </span>
+                </div>
+            </div>
             <div class="flex_auto self_center">
-                <a class="active p-y_2 p-x_3 w_100 inline-block h:underline self_center font-size_up">Parent Nav</a>
-                <nav class="nav-sub-child font-size_down collapse" id="pageHubChild">
-                    <ul class="ul_none flex_column flex">
-                        {{> "Recipes.PageHub.ChildrenLink" }}
-                        {{> "Recipes.PageHub.ChildrenLink" }}
-                        {{> "Recipes.PageHub.ChildrenLink" }}
-                        {{> "Recipes.PageHub.ChildrenLink" }}
+                <a class="active p-y_2 w_100 inline-block h:underline self_center font-size_up font_medium p-l_3">Parent Nav</a>
+                <nav class="nav-sub-child font-size_down collapse " id="pageHubChild">
+                    <ul class="ul_none flex_column flex br-l_1 br_solid br_primary-5  m-t_3 p-l_3">
+                        {{> "Navigation.PageHub.ChildrenLink" modifier_class="Child Link"}}
+                        {{> "Navigation.PageHub.ChildrenLink" modifier_class="Lorem ipsum dolor sit amet"}}
+                        {{> "Navigation.PageHub.ChildrenLink" modifier_class="Consectetur adipisicing elit"}}
+                        {{> "Navigation.PageHub.ChildrenLink" modifier_class="voluptatum culpa porro sunt?"}}
                     </ul>
                 </nav>
             </div>
@@ -21367,25 +21356,24 @@ Markup:
     </li>
 </ul>
 
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
 Weight: 0
 
-
-
-Styleguide Recipes.PageHub
+Styleguide Navigation.PageHub.Group
 */
 /*
 Page Hub Children
 
 Child link item for the page hub. 
 
+Child Link      - Text of the link
+
 Markup:
 <li class="nav-item" data-nav="child">
     <div class="flex flex_row"> 
-        <div class="flex_none p_2">
-            <i class="fas fa-spacer fa-fw p_2"></i>
-        </div>
-        <div class="flex_auto self_center">
-            <a class="self_center">Child Links</a>
+        <div class="flex_auto self_center p-l_3">
+            <a class="c_primary h:c_primary-n2 h:underline link self_center">{{ modifier_class}}</a>
         </div>
     </div>
 </li>
@@ -21394,26 +21382,7 @@ MarkupWrapperClasses: c_primary font_ui ul_none
 
 Weight:0
 
-Styleguide Recipes.PageHub.ChildrenLink
-*/
-/*
-Toggle
-
-Description: The Toggle element that collapses the child
-
-
-Markup:
-<div class="br-r_1 br_solid br_primary-5 flex flex_column flex_none justify_start text-shadow_black-n1" >
-    <div class="flex_none p_2 collapsed" aria-expanded="true" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild" >
-        <i class="a:rotate_135 c_primary fa-fw fa-plus fas self_center text_center transition_4"></i>
-    </div>
-</div>
-
-Weight: -10
-
-MarkupWrapperClasses: c_primary font_ui ul_none
-
-Styleguide  Recipes.PageHub.Toggle
+Styleguide Navigation.PageHub.ChildrenLink
 */
 body {
   font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;

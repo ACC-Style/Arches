@@ -9582,7 +9582,7 @@ Styleguide Interaction.States.Active
 /*
 active Full Opacity
 
-<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div><strong>`.active .a:opacity`</strong> Set the Opacity of an objects children to 100% when it has the class is-active. 
+<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the `active` state.</span></div><strong>`.active .a:opacity`</strong> Set the Opacity of an objects children to 100% when it has the class is-active. 
 
 Markup:
 <div class="flex p_4 bg_primary is-active_toggle-function ">
@@ -13170,7 +13170,7 @@ Styleguide Interaction.Animation.transition
   transition: all 0.35s;
 }
 
-.transition_4 {
+.transition_4, *[data-bs-toggle=collapse] .a\:rotation {
   transition: all 0.5s;
 }
 
@@ -13309,65 +13309,122 @@ Styleguide Interaction.Animation.scale
   transform-origin: left center;
 }
 
+.rotate_45 {
+  transform: rotate(45deg);
+}
+
+.rotate_90 {
+  transform: rotate(90deg);
+}
+
+.rotate_135 {
+  transform: rotate(135deg);
+}
+
+.rotate_180 {
+  transform: rotate(180deg);
+}
+
+.rotate_225 {
+  transform: rotate(225deg);
+}
+
+.rotate_270 {
+  transform: rotate(270deg);
+}
+
+.rotate_315 {
+  transform: rotate(315deg);
+}
+
 .active.a\:rotate_45,
-.active > .a\:rotate_45,
-:not(.collapsed) > .a\:rotate_45 {
+.active > .a\:rotate_45 {
   transform: rotate(45deg);
 }
 .active.a\:rotate_90,
-.active > .a\:rotate_90,
-:not(.collapsed) > .a\:rotate_90 {
+.active > .a\:rotate_90 {
   transform: rotate(90deg);
 }
 .active.a\:rotate_135,
-.active > .a\:rotate_135,
-:not(.collapsed) > .a\:rotate_135 {
+.active > .a\:rotate_135 {
   transform: rotate(135deg);
 }
 .active.a\:rotate_180,
-.active > .a\:rotate_180,
-:not(.collapsed) > .a\:rotate_180 {
+.active > .a\:rotate_180 {
   transform: rotate(180deg);
 }
 .active.a\:rotate_225,
-.active > .a\:rotate_225,
-:not(.collapsed) > .a\:rotate_225 {
+.active > .a\:rotate_225 {
   transform: rotate(225deg);
 }
 .active.a\:rotate_270,
-.active > .a\:rotate_270,
-:not(.collapsed) > .a\:rotate_270 {
+.active > .a\:rotate_270 {
   transform: rotate(270deg);
 }
 .active.a\:rotate_315,
-.active > .a\:rotate_315,
-:not(.collapsed) > .a\:rotate_315 {
+.active > .a\:rotate_315 {
   transform: rotate(315deg);
 }
 
 /*
+
 Rotation
 
 Rotation through transform. Transform doesn't modify the displacement of the flow.  This also have an active class modifier
 
-.rotate_45              - Rotate by 45 degrees
-.rotate_90              - Rotate by 90 degrees
-.rotate_135             - Rotate by 135 degrees
-.rotate_180              - Rotate by 180 degrees
-.rotate_225              - Rotate by 225 degrees
-.rotate_270              - Rotate by 270 degrees
-.rotate_315              - Rotate by 315 degrees
-
+rotate_45               - Rotate by 45 degrees
+rotate_90               - Rotate by 90 degrees
+rotate_135              - Rotate by 135 degrees
+rotate_180              - Rotate by 180 degrees
+rotate_225              - Rotate by 225 degrees
+rotate_270              - Rotate by 270 degrees
+rotate_315              - Rotate by 315 degrees
 
 
 Markup:
-<i class="font_10 fa-user {{modifier_class}}"></i>
+<i class="font_10 fas fa fa-user {{modifier_class}}"></i>
 
 
 Weight: 100
 
 Styleguide Interaction.Animation.Rotation
 */
+/*
+
+Rotation on Active
+
+ Add in the `a:` in front of these classes gives you the rotation only when the item is active.<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 ">These classes are effected by the parent having `active` state.</span></div>
+
+rotate_45               - Rotate by 45 degrees
+rotate_90               - Rotate by 90 degrees
+rotate_135              - Rotate by 135 degrees
+rotate_180              - Rotate by 180 degrees
+rotate_225              - Rotate by 225 degrees
+rotate_270              - Rotate by 270 degrees
+rotate_315              - Rotate by 315 degrees
+
+
+Markup:
+<span><i class="font_10 fas fa fa-user a:{{modifier_class}}"></i> Not Active </span>
+<span><i class="active font_10 fas fa fa-user a:{{modifier_class}}"></i> Active </span>
+
+Weight: 100
+
+Styleguide Interaction.Animation.RotationActive
+*/
+*[data-bs-toggle=collapse] .a\:rotation.fa-times, *[data-bs-toggle=collapse] .a\:rotation.fa-chevron-up, *[data-bs-toggle=collapse] .a\:rotation.fa-minus.rotate_90 {
+  transform: rotate(0deg);
+}
+*[data-bs-toggle=collapse].collapsed .a\:rotation.fa-times, *[data-bs-toggle=collapse].show .a\:rotation.fa-times {
+  transform: rotate(135deg);
+}
+*[data-bs-toggle=collapse].collapsed .a\:rotation.fa-chevron-up, *[data-bs-toggle=collapse].show .a\:rotation.fa-chevron-up {
+  transform: rotate(180deg);
+}
+*[data-bs-toggle=collapse].collapsed .a\:rotation.fa-minus.rotate_90, *[data-bs-toggle=collapse].show .a\:rotation.fa-minus.rotate_90 {
+  transform: rotate(90deg);
+}
+
 .bg-blend_normal {
   background-blend-mode: normal;
 }
@@ -20992,16 +21049,6 @@ html.is-reveal-open body {
   }
 }
 
-/*
-	Recipes
-
-	Combination of UCs can make complex and rich UI elements.  Here is a collection of curated UI that can be used in projects by just following these patterns.
-
-	Weight: 900
-
-	Styleguide Recipes
-
-*/
 /* Nav Recipes.00x */
 /*
     Mobile Nav
@@ -21404,16 +21451,6 @@ Markup:
 Styleguide Recipes.Ordered Cards
 */
 /* content Recipes.250 */
-/*
-	Mobile Recipes
-
-	The use of Utility Class give us the ability to create much of the UI needed for ACC.org without expanding on the base of the styles that are written.  Included are patterns to create some of the complex UI inside of ACC.org
-
-	Weight: 2000
-
-	Styleguide Recipes ACC
-
-*/
 body {
   font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;

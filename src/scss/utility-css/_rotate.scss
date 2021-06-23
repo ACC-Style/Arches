@@ -1,60 +1,146 @@
+.rotate_45 {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.rotate_90 {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.rotate_135 {
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+.rotate_180 {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.rotate_225 {
+	-webkit-transform: rotate(225deg);
+	transform: rotate(225deg);
+}
+
+.rotate_270 {
+	-webkit-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+
+.rotate_315 {
+	-webkit-transform: rotate(315deg);
+	transform: rotate(315deg);
+}
+
 .active.a\:,
-.active > .a\:,
-:not(.collapsed) > .a\:{
-        &rotate_45 {
-                -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-        }
+.active > .a\: {
+	&rotate_45 {
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
 
-        &rotate_90 {
-                -webkit-transform: rotate(90deg);
-                transform: rotate(90deg);
-        }
+	&rotate_90 {
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
 
-        &rotate_135 {
-                -webkit-transform: rotate(135deg);
-                transform: rotate(135deg);
-        }
-        &rotate_180 {
-                -webkit-transform: rotate(180deg);
-                transform: rotate(180deg);
-        }
+	&rotate_135 {
+		-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+	&rotate_180 {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
 
-        &rotate_225 {
-                -webkit-transform: rotate(225deg);
-                transform: rotate(225deg);
-        }
+	&rotate_225 {
+		-webkit-transform: rotate(225deg);
+		transform: rotate(225deg);
+	}
 
-        &rotate_270 {
-                -webkit-transform: rotate(270deg);
-                transform: rotate(270deg);
-        }
+	&rotate_270 {
+		-webkit-transform: rotate(270deg);
+		transform: rotate(270deg);
+	}
 
-        &rotate_315 {
-                -webkit-transform: rotate(315deg);
-                transform: rotate(315deg);
-        }
+	&rotate_315 {
+		-webkit-transform: rotate(315deg);
+		transform: rotate(315deg);
+	}
 }
 /*
+
 Rotation
 
 Rotation through transform. Transform doesn't modify the displacement of the flow.  This also have an active class modifier
- 
-.rotate_45              - Rotate by 45 degrees
-.rotate_90              - Rotate by 90 degrees
-.rotate_135             - Rotate by 135 degrees
-.rotate_180              - Rotate by 180 degrees
-.rotate_225              - Rotate by 225 degrees
-.rotate_270              - Rotate by 270 degrees
-.rotate_315              - Rotate by 315 degrees
+
+rotate_45               - Rotate by 45 degrees
+rotate_90               - Rotate by 90 degrees
+rotate_135              - Rotate by 135 degrees
+rotate_180              - Rotate by 180 degrees
+rotate_225              - Rotate by 225 degrees
+rotate_270              - Rotate by 270 degrees
+rotate_315              - Rotate by 315 degrees
 
 
- 
 Markup:
-<i class="font_10 fa-user {{modifier_class}}"></i>
+<i class="font_10 fas fa fa-user {{modifier_class}}"></i>
 
  
 Weight: 100
  
 Styleguide Interaction.Animation.Rotation
 */
+/*
+
+Rotation on Active
+
+ Add in the `a:` in front of these classes gives you the rotation only when the item is active.<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 ">These classes are effected by the parent having `#{$active-class-name}` state.</span></div>
+
+rotate_45               - Rotate by 45 degrees
+rotate_90               - Rotate by 90 degrees
+rotate_135              - Rotate by 135 degrees
+rotate_180              - Rotate by 180 degrees
+rotate_225              - Rotate by 225 degrees
+rotate_270              - Rotate by 270 degrees
+rotate_315              - Rotate by 315 degrees
+
+
+Markup:
+<span><i class="font_10 fas fa fa-user a:{{modifier_class}}"></i> Not Active </span>
+<span><i class="active font_10 fas fa fa-user a:{{modifier_class}}"></i> Active </span>
+ 
+Weight: 100
+ 
+Styleguide Interaction.Animation.RotationActive
+*/
+
+*[data-bs-toggle="collapse"] {
+	.a\:rotation {
+		&.fa-times,
+		&.fa-chevron-up,
+		&.fa-minus.rotate_90 {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		@extend .transition_4 !optional;
+	}
+	&.collapsed .a\:rotation,
+	&.show .a\:rotation {
+		&.fa-times {
+			-webkit-transform: rotate(135deg);
+			transform: rotate(135deg);
+		}
+		&.fa-chevron-up {
+			-webkit-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+		&.fa-minus.rotate_90 {
+			-webkit-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+	}
+}
+
+
+

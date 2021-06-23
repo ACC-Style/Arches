@@ -138,7 +138,7 @@
             </ul>
         </aside>
     </section>
-    <section id="MobleNav"  class="bg_secondary-n3 display_none:lg font_0 font_ui kss-navigation kss-state-active overflow_auto p-b_2 p-x_3 scrollbar-mini shadow_emboss-light shadow_overlap-bold" style="padding-top:70px">
+    <section id="MobleNav" class="bg_secondary-n3 display_none:lg font_0 font_ui kss-navigation kss-state-active overflow_auto p-b_2 p-x_3 scrollbar-mini shadow_overlap-bold" style="padding-top:70px">
         <aside class="display_none:md flex flex_column-reverse">
             <ul class="block flex flex_column ul_none w_100 ul_none lh_3" id="sitenav">
                     <li class="flex_auto  m-b_2">
@@ -205,7 +205,7 @@
                     </aside>
                 </section>
                 <main class="w_100 flex_auto">
-                            <header class="bg_white kss-section kss-section--depth-3 br_radius shadow_2 br_radius" id="kssref-edu-headers-images">
+                            <header class="bg_white kss-section kss-section--depth-3 br_radius shadow_overlap-light br_radius" id="kssref-edu-headers-images">
                         <article class="kss-section__content relative">
                             <div class="absolute t_0 r_4">
                             </div>
@@ -230,21 +230,31 @@
                                     </div>
                                 </div>
                             </article>
-                                <section class="relative ">
-                                    <article class="kss-section__markup overflow_scroll scrollbar-mini" style="max-height: 30vh;">
-                                        <pre><code class="language-markup"  id="input-edu-headers-images" value='&lt;h1 class&#x3D;&quot;font_display c_acc font_5 p-x_4:lg p-x_3&quot;&gt;
+                                <section class="relative  br-t_1 br_solid br_black-2 bg_black-1 shadow_n1 texture_light">
+                                    <main class="kss-section__markup overflow_scroll scrollbar-mini collapse transition_3" id="collapse-edu-headers-images">
+                                        <pre><code class="language-markup"  id="code-edu-headers-images" value='&lt;h1 class&#x3D;&quot;font_display c_acc font_5 p-x_4:lg p-x_3&quot;&gt;
     &lt;i class&#x3D;&quot;far fa-images p-r_3&quot;&gt;&lt;/i&gt;
     Images
 &lt;/h1&gt;'>&lt;h1 class&#x3D;&quot;font_display c_acc font_5 p-x_4:lg p-x_3&quot;&gt;
     &lt;i class&#x3D;&quot;far fa-images p-r_3&quot;&gt;&lt;/i&gt;
     Images
 &lt;/h1&gt;</code></pre>
-                                    </article>
-                                    <input class="display_none text-input html-code-input" type="text" name="" id="input-edu-headers-images" value='&lt;h1 class&#x3D;&quot;font_display c_acc font_5 p-x_4:lg p-x_3&quot;&gt;
+                                        <input class="display_none text-input html-code-input" type="text" name="" id="input-edu-headers-images" value='&lt;h1 class&#x3D;&quot;font_display c_acc font_5 p-x_4:lg p-x_3&quot;&gt;
     &lt;i class&#x3D;&quot;far fa-images p-r_3&quot;&gt;&lt;/i&gt;
     Images
 &lt;/h1&gt;'>
-                                    <a class="absolute bg_shade-3 br_1 br_black-3 br_radius br_solid font_medium h:bg_shade-1 m-r_3 p-x_4 p-y_3 r_3 shadow_overlap-light t_3" onclick="CopyText( '#input-edu-headers-images',event )"><i class="far fa-copy"></i> Copy</a>
+                                    </main>
+                                    <header class="flex_row flex shadow_n1 br-br_radius br-bl_radius">
+                                        <div class="flex flex_row flex_auto collapsed h:bg_black-7 br-bl_radius c_black-8 h:c_white" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapse-edu-headers-images" aria-controls="#collapse-edu-headers-images">
+                                            <div class="flex_none p_2 font_1">
+                                                <i class="a:rotation fa-fw fa-chevron-up fas self_center text_center"></i>
+                                            </div>
+                                            <div class="flex_auto flex flex_row">
+                                                <h4 class="font_0 font_bold flex_auto p-l_2 self_center m_0 text_left">Code Sample</h4>
+                                            </div>
+                                        </div>
+                                        <a class="bg_primary br_1 br_black-3 br_solid c_white flex_none font_medium font_ui h:bg_primary-n2 h:undecorated m-l_auto p-x_3 p-y_2 br-br_radius" onclick="CopyCode( 'input-edu-headers-images')"><i class="fas fa-copy"></i> Copy Code</a>
+                                    </header>
                                 </section>
                             </header>
                 </main>
@@ -256,7 +266,22 @@
         <script src="kss-assets/vendor/prism.js"></script>
         <script src="kss-assets/js/kss.js"></script>
         <script>
+            var CopyCode = function ($id) {
+                var copyTextarea = document.getElementById($id);
+                console.log($id);
+                copyTextarea.classList.remove('display_none');
+                copyTextarea.focus();
+                copyTextarea.select();
 
+                try {
+                    var successful = document.execCommand('copy');
+                    var msg = successful ? 'successful' : 'unsuccessful';
+                    console.log('Copying text command was ' + msg);
+                } catch (err) {
+                    console.log('Oops, unable to copy');
+                }
+                copyTextarea.classList.add('display_none');
+            };
         </script>
         <script src="./js/bootstrap/bootstrap.js"></script>
 <script src="./js/toggleActive.js"></script>

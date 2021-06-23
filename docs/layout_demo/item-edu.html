@@ -138,7 +138,7 @@
             </ul>
         </aside>
     </section>
-    <section id="MobleNav"  class="bg_secondary-n3 display_none:lg font_0 font_ui kss-navigation kss-state-active overflow_auto p-b_2 p-x_3 scrollbar-mini shadow_emboss-light shadow_overlap-bold" style="padding-top:70px">
+    <section id="MobleNav" class="bg_secondary-n3 display_none:lg font_0 font_ui kss-navigation kss-state-active overflow_auto p-b_2 p-x_3 scrollbar-mini shadow_overlap-bold" style="padding-top:70px">
         <aside class="display_none:md flex flex_column-reverse">
             <ul class="block flex flex_column ul_none w_100 ul_none lh_3" id="sitenav">
                     <li class="flex_auto  m-b_2">
@@ -610,7 +610,7 @@
                     </aside>
                 </section>
                 <main class="w_100 flex_auto">
-                            <header class="bg_white kss-section kss-section--depth-1 br_radius shadow_2 br_radius" id="kssref-edu">
+                            <header class="bg_white kss-section kss-section--depth-1 br_radius shadow_overlap-light br_radius" id="kssref-edu">
                         <article class="kss-section__content relative">
                             <div class="absolute t_0 r_4">
                             </div>
@@ -631,7 +631,22 @@
         <script src="kss-assets/vendor/prism.js"></script>
         <script src="kss-assets/js/kss.js"></script>
         <script>
+            var CopyCode = function ($id) {
+                var copyTextarea = document.getElementById($id);
+                console.log($id);
+                copyTextarea.classList.remove('display_none');
+                copyTextarea.focus();
+                copyTextarea.select();
 
+                try {
+                    var successful = document.execCommand('copy');
+                    var msg = successful ? 'successful' : 'unsuccessful';
+                    console.log('Copying text command was ' + msg);
+                } catch (err) {
+                    console.log('Oops, unable to copy');
+                }
+                copyTextarea.classList.add('display_none');
+            };
         </script>
         <script src="./js/bootstrap/bootstrap.js"></script>
 <script src="./js/toggleActive.js"></script>

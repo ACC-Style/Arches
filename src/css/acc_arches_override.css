@@ -1619,7 +1619,7 @@
   /*
   active Full Opacity
 
-  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the "is-active" state.</span></div><strong>`.active .a:opacity`</strong> Set the Opacity of an objects children to 100% when it has the class is-active. 
+  <div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Click the areas below to toggle the `active` state.</span></div><strong>`.active .a:opacity`</strong> Set the Opacity of an objects children to 100% when it has the class is-active. 
 
   Markup:
   <div class="flex p_4 bg_primary is-active_toggle-function ">
@@ -2055,27 +2055,50 @@
 
    */
   /*
+
   Rotation
 
   Rotation through transform. Transform doesn't modify the displacement of the flow.  This also have an active class modifier
 
-  .rotate_45              - Rotate by 45 degrees
-  .rotate_90              - Rotate by 90 degrees
-  .rotate_135             - Rotate by 135 degrees
-  .rotate_180              - Rotate by 180 degrees
-  .rotate_225              - Rotate by 225 degrees
-  .rotate_270              - Rotate by 270 degrees
-  .rotate_315              - Rotate by 315 degrees
-
+  rotate_45               - Rotate by 45 degrees
+  rotate_90               - Rotate by 90 degrees
+  rotate_135              - Rotate by 135 degrees
+  rotate_180              - Rotate by 180 degrees
+  rotate_225              - Rotate by 225 degrees
+  rotate_270              - Rotate by 270 degrees
+  rotate_315              - Rotate by 315 degrees
 
 
   Markup:
-  <i class="font_10 fa-user {{modifier_class}}"></i>
+  <i class="font_10 fas fa fa-user {{modifier_class}}"></i>
 
 
   Weight: 100
 
   Styleguide Interaction.Animation.Rotation
+  */
+  /*
+
+  Rotation on Active
+
+   Add in the `a:` in front of these classes gives you the rotation only when the item is active.<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 ">These classes are effected by the parent having `active` state.</span></div>
+
+  rotate_45               - Rotate by 45 degrees
+  rotate_90               - Rotate by 90 degrees
+  rotate_135              - Rotate by 135 degrees
+  rotate_180              - Rotate by 180 degrees
+  rotate_225              - Rotate by 225 degrees
+  rotate_270              - Rotate by 270 degrees
+  rotate_315              - Rotate by 315 degrees
+
+
+  Markup:
+  <span><i class="font_10 fas fa fa-user a:{{modifier_class}}"></i> Not Active </span>
+  <span><i class="active font_10 fas fa fa-user a:{{modifier_class}}"></i> Active </span>
+
+  Weight: 100
+
+  Styleguide Interaction.Animation.RotationActive
   */
   /*
   Text Blend 
@@ -11025,7 +11048,7 @@
 #acc_arches_override .transition_3 {
   transition: all 0.35s;
 }
-#acc_arches_override .transition_4 {
+#acc_arches_override .transition_4, #acc_arches_override *[data-bs-toggle=collapse] .a\:rotation {
   transition: all 0.5s;
 }
 #acc_arches_override .transition_5 {
@@ -11091,40 +11114,66 @@
 #acc_arches_override .origin_l {
   transform-origin: left center;
 }
+#acc_arches_override .rotate_45 {
+  transform: rotate(45deg);
+}
+#acc_arches_override .rotate_90 {
+  transform: rotate(90deg);
+}
+#acc_arches_override .rotate_135 {
+  transform: rotate(135deg);
+}
+#acc_arches_override .rotate_180 {
+  transform: rotate(180deg);
+}
+#acc_arches_override .rotate_225 {
+  transform: rotate(225deg);
+}
+#acc_arches_override .rotate_270 {
+  transform: rotate(270deg);
+}
+#acc_arches_override .rotate_315 {
+  transform: rotate(315deg);
+}
 #acc_arches_override .active.a\:rotate_45,
-#acc_arches_override .active > .a\:rotate_45,
-#acc_arches_override :not(.collapsed) > .a\:rotate_45 {
+#acc_arches_override .active > .a\:rotate_45 {
   transform: rotate(45deg);
 }
 #acc_arches_override .active.a\:rotate_90,
-#acc_arches_override .active > .a\:rotate_90,
-#acc_arches_override :not(.collapsed) > .a\:rotate_90 {
+#acc_arches_override .active > .a\:rotate_90 {
   transform: rotate(90deg);
 }
 #acc_arches_override .active.a\:rotate_135,
-#acc_arches_override .active > .a\:rotate_135,
-#acc_arches_override :not(.collapsed) > .a\:rotate_135 {
+#acc_arches_override .active > .a\:rotate_135 {
   transform: rotate(135deg);
 }
 #acc_arches_override .active.a\:rotate_180,
-#acc_arches_override .active > .a\:rotate_180,
-#acc_arches_override :not(.collapsed) > .a\:rotate_180 {
+#acc_arches_override .active > .a\:rotate_180 {
   transform: rotate(180deg);
 }
 #acc_arches_override .active.a\:rotate_225,
-#acc_arches_override .active > .a\:rotate_225,
-#acc_arches_override :not(.collapsed) > .a\:rotate_225 {
+#acc_arches_override .active > .a\:rotate_225 {
   transform: rotate(225deg);
 }
 #acc_arches_override .active.a\:rotate_270,
-#acc_arches_override .active > .a\:rotate_270,
-#acc_arches_override :not(.collapsed) > .a\:rotate_270 {
+#acc_arches_override .active > .a\:rotate_270 {
   transform: rotate(270deg);
 }
 #acc_arches_override .active.a\:rotate_315,
-#acc_arches_override .active > .a\:rotate_315,
-#acc_arches_override :not(.collapsed) > .a\:rotate_315 {
+#acc_arches_override .active > .a\:rotate_315 {
   transform: rotate(315deg);
+}
+#acc_arches_override *[data-bs-toggle=collapse] .a\:rotation.fa-times, #acc_arches_override *[data-bs-toggle=collapse] .a\:rotation.fa-chevron-up, #acc_arches_override *[data-bs-toggle=collapse] .a\:rotation.fa-minus.rotate_90 {
+  transform: rotate(0deg);
+}
+#acc_arches_override *[data-bs-toggle=collapse].collapsed .a\:rotation.fa-times, #acc_arches_override *[data-bs-toggle=collapse].show .a\:rotation.fa-times {
+  transform: rotate(135deg);
+}
+#acc_arches_override *[data-bs-toggle=collapse].collapsed .a\:rotation.fa-chevron-up, #acc_arches_override *[data-bs-toggle=collapse].show .a\:rotation.fa-chevron-up {
+  transform: rotate(180deg);
+}
+#acc_arches_override *[data-bs-toggle=collapse].collapsed .a\:rotation.fa-minus.rotate_90, #acc_arches_override *[data-bs-toggle=collapse].show .a\:rotation.fa-minus.rotate_90 {
+  transform: rotate(90deg);
 }
 #acc_arches_override .bg-blend_normal {
   background-blend-mode: normal;
