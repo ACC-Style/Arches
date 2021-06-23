@@ -5,7 +5,7 @@ In content accordions are styled differently to User interface accordions.  The 
  
 Markup:
 <div class="relative">
-    <header id="accordion_header" class="flex flex_row sticky t_n2 bg_white shadow_overlap-light br_solid br_1 br_black-2 z_3 ">
+    <header id="accordion_header" class="flex flex_row sticky t_n2 bg_white shadow_overlap-light br_solid br_1 br_black-2 z_2 ">
         <div class="h:bg_primary-5 m_2 c_primary h:c_primary-n2 br_radius">
             {{> "Navigation.Toggle.Advanced" modifier_class="#content_accordion"}}
         </div>
@@ -15,7 +15,7 @@ Markup:
             </div>
         </div>
     </header>
-    <main id="content_accordion" class="bg_black-_05 br-bl_radius br-br_radius m-x_3 p_4 reading-typography shadow_emboss-light tab-content"  aria-labelledby="accordion_header m-x_3" >
+    <main id="content_accordion" class="bg_black-_05 br-bl_radius br-br_radius m-x_0 m-x_3:md p_3 p_4:md reading-typography shadow_emboss-light tab-content transition_4"  aria-labelledby="accordion_header m-x_3" >
     {{> HTML.Typography.Sample }}
     </main>
 </div>
@@ -31,13 +31,46 @@ Styleguide  Containers.Accordion
 */
 
 /*
-Accordion Nested
+Accordion Child
+ 
+Description: Sometimes the content needs be collapsed at a secondary level to make it scannable. 
+ 
+Markup:
+<div class="relative m-b_2">
+    <header id="accordion_header-child" class="flex flex_row sticky t_5 bg_white shadow_bevel-light br_radius br_solid br_1 br_black-2 z_3 ">
+        <div class="h:bg_primary-4 m_2 c_primary h:c_primary-n3 br_radius">
+            {{> "Navigation.Toggle" modifier_class="#content_accordion-child"}}
+        </div>
+        <div class=" flex_auto flex flex_row justify_center p-y_2">
+            <div class="flex_auto self_center reading-typography no-margins">
+                <h4> Nested Accordion Header Level 4</h4>
+            </div>
+        </div>
+    </header>
+    <main id="content_accordion-child" class="bg_black-1 m-t_3 br_radius p-t_3 p-x_3 p-x_4:md p-b_4 reading-typography tab-content transition_4 shadow_emboss-light"  aria-labelledby="accordion_header-child" >
+    {{> HTML.Typography.Sample }}
+    </main>
+</div>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+ 
+Weight:0
+ 
+Styleguide Containers.Accordion.Child
+*/
+
+
+/*
+Accordion Nested Example
  
 In content accordions are styled differently to User interface accordions.  The text of the header should allow for header tags to be added so the style should respond to the surrounding typography sizes.
  
 Markup:
 <div class="relative">
-    <header id="accordion_header-nested" class="flex flex_row sticky t_n2 bg_white shadow_overlap-light br_solid br_1 br_black-2 z_3 ">
+    <header id="accordion_header-nested" class="flex flex_row sticky t_n2 bg_white shadow_overlap-light br_solid br_1 br_black-2 z_2 ">
         <div class="h:bg_primary-5 m_2 c_primary h:c_primary-n2 br_radius">
             {{> "Navigation.Toggle.Advanced" modifier_class="#content_accordion-parent"}}
         </div>
@@ -47,37 +80,15 @@ Markup:
             </div>
         </div>
     </header>
-    <main id="content_accordion-parent" class="bg_black-_05 br-bl_radius br-br_radius m-x_3 p_4 reading-typography shadow_emboss-light tab-content"  aria-labelledby="accordion_header-nested" >
-        <div class="relative m-b_2">
-            <header id="accordion_header-nested-child1" class="flex flex_row sticky t_5 bg_white shadow_bevel-light br_radius br_solid br_1 br_black-2 z_4 ">
-                <div class="h:bg_primary-4 m_2 c_primary h:c_primary-n3 br_radius">
-                    {{> "Navigation.Toggle" modifier_class="#content_accordion-nested-1"}}
-                </div>
-                <div class=" flex_auto flex flex_row justify_center p-y_2">
-                    <div class="flex_auto self_center reading-typography no-margins">
-                        <h4> Nested Accordion Header Level 4</h4>
-                    </div>
-                </div>
-            </header>
-            <main id="content_accordion-nested-1" class="bg_black-1 m-t_3 p-t_3 br_radius p_4 reading-typography tab-content transition_4 shadow_emboss-light"  aria-labelledby="accordion_header-nested-child1" >
-            {{> HTML.Typography.Sample }}
-            </main>
-        </div>
-        <div class="relative m-b_2">
-            <header id="accordion_header-nested-child1" class="flex flex_row sticky t_5 bg_white shadow_bevel-light br_radius br_solid br_1 br_black-2 z_4 ">
-                <div class="h:bg_primary-4 m_2 c_primary h:c_primary-n3 br_radius">
-                    {{> "Navigation.Toggle" modifier_class="#content_accordion-nested-1"}}
-                </div>
-                <div class=" flex_auto flex flex_row justify_center p-y_2">
-                    <div class="flex_auto self_center reading-typography no-margins">
-                        <h4> Nested Accordion Header Level 4</h4>
-                    </div>
-                </div>
-            </header>
-            <main id="content_accordion-nested-1" class="bg_black-1 m-t_3 p-t_3 br_radius p_4 reading-typography tab-content transition_4 shadow_emboss-light"  aria-labelledby="accordion_header-nested-child1" >
-            {{> HTML.Typography.Sample }}
-            </main>
-        </div>
+    <main id="content_accordion-parent" class="bg_black-_05 br-bl_radius br-br_radius m-x_3:md p_3 p_4:md reading-typography shadow_emboss-light tab-content transition_4"  aria-labelledby="accordion_header-nested" >
+        <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+        elit. Aenean commodo ligula eget dolor. Aenean massa. 
+        Cum sociis natoque penatibus et magnis dis parturient 
+        montes, nascetur ridiculus mus. Donec quam felis, 
+        ultricies nec, pellentesque eu, pretium quis, sem.</p>    
+        {{> Containers.Accordion.Child }}
+        {{> Containers.Accordion.Child }}
     </main>
 </div>
 

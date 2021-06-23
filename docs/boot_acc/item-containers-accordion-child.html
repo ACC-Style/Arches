@@ -118,7 +118,7 @@
                         <span class=""><i class="fas fa-chevron-left p-x_2"></i> Arches</span>
                     </a>
                 </li>
-                <li class=" w_auto:md w_100 p_2 self_center is-active active">
+                <li class=" w_auto:md w_100 p_2 self_center ">
                     <a class="block inline-block:md undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated c_black-8 h:c_black-9 p_3 br_radius nowrap" href="index.html">
                         <span class=""><i class="fas fa-home p-x_2"></i></span>
                     </a>
@@ -170,8 +170,8 @@
                     </li>
                         <li class="flex_auto m-y_2 p_3 bg_black-5 br_radius p_3 shadow_emboss-light">
                             <ul class="block flex flex_column ul_none w_100 ul_none lh_3">
-                                <li class="is-active active m-b_2 a:bg_accent h:bg_black-5 relative br_radius p_2 m-b_1">
-                                    <a class="is-active active  a:c_white c_white-8 h:c_white" href="index.html">
+                                <li class=" m-b_2 a:bg_accent h:bg_black-5 relative br_radius p_2 m-b_1">
+                                    <a class="  a:c_white c_white-8 h:c_white" href="index.html">
                                         <span class=""><i class="fas fa-home p-x_2"></i> Home</span>
                                     </a>
                                 </li>
@@ -229,13 +229,179 @@
         </aside>
     </section>
     <div class="m_auto p-x_4 ">
-            <article class="kss-markdown reading-typography font-size_up p_4 p-t_2 flex_auto max-w_90 m_auto">
-                <h1>ACC.org</h1>
-<h4>Mobile and Web Applications</h4>
-<p>Arches variation for ACC is based on Bootstrap 5. Click below to see the documentation for bootstrap.</p>
-<p><a class="br_radius bg_primary btn btn-primary c_white" href="https://getbootstrap.com/" role="button" >Bootstrap</a></p>
+            <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
+            <div class="flex flex_column flex_row:md gap-x_5 p-t_4 max-w_90 m_auto">
+                <section class="max-w_15 w_20:lg flex_none relative display_none block:md">
+                    <aside class="sticky t_0">
+                        <div>
+                        </div>
+                    </aside>
+                </section>
+                <main class="w_100 flex_auto">
+                            <header class="bg_white kss-section kss-section--depth-3 br_radius shadow_overlap-light br_radius" id="kssref-containers-accordion-child">
+                        <article class="kss-section__content relative">
+                            <div class="absolute t_0 r_4">
+                                    <div class="inline-block p_2 bg_warning shadow_overlap-light">
+                                        <i class="fas fa-fw fa-vial"></i>
+                                    </div>
+                                    <div class="inline-block p_2 bg_highlight c_white shadow_overlap-light">
+                                        <i class="fas fa-fw fa-comment-alt"></i>
+                                    </div>
+                            </div>
+                                <p class="kss-section__source font_n3"> Source: <span>dist/css/acc_boot.css</span>, line <span>6870</span>
+                                </p>
+                            <a class="kss-section__permalink" href="#kssref-containers-accordion-child">
+                                <h3 class="kss-section__item c_primary kss-section__item--depth-3">
+                                    <span class="kss-section__ref">3.1.1</span>
+                                    <span class="kss-section__name">Accordion Child</span>
+                                </h3>
+                            </a>
+                                <div class="kss-section__description reading-typography font-size_up overflow_auto ">
+                                    <div class="font_n1">
+                                            <span class="bg_warning-n1 c_white m-x_2 inline-block p-x_4 p_2 br_round uppercase">experimental</span>
+                                    </div>
+                                    <p>Description: Sometimes the content needs be collapsed at a secondary level to make it scannable.</p>
+<p>Experimental: This design is currently being reworked and might possibly change. (June 2021)</p>
 
-            </article>
+                                </div>
+                        </article>
+                            <div class="bg_highlight-4 block c_black c_white inline-block p-y_3 p-x_4 w_100">
+                                <h5 class="font_bold m_0 c_black">NOTE:</h5>
+                                Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly.
+                            </div>
+                            <article class="kss-section__modifiers">
+                                <h1 class="kss-modifiers__heading"> Example 
+                                </h1>
+                                <div class="kss-modifiers__example">
+                                    <div class="">
+                                        <div class="relative m-b_2">
+    <header id="accordion_header-child" class="flex flex_row sticky t_5 bg_white shadow_bevel-light br_radius br_solid br_1 br_black-2 z_3 ">
+        <div class="h:bg_primary-4 m_2 c_primary h:c_primary-n3 br_radius">
+            <div class="flex_none p_2" data-bs-toggle="collapse" data-bs-target="#content_accordion-child" aria-controls="#content_accordion-child" aria-expanded="true">
+                    <i class="a:rotation fa-fw fa-times fas self_center text_center"></i>
+            </div>        </div>
+        <div class=" flex_auto flex flex_row justify_center p-y_2">
+            <div class="flex_auto self_center reading-typography no-margins">
+                <h4> Nested Accordion Header Level 4</h4>
+            </div>
+        </div>
+    </header>
+    <main id="content_accordion-child" class="bg_black-1 m-t_3 br_radius p-t_3 p-x_3 p-x_4:md p-b_4 reading-typography tab-content transition_4 shadow_emboss-light"  aria-labelledby="accordion_header-child" >
+    <h2>HTML Ipsum Presents</h2>
+    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+    <h2>Header Level 2</h2>
+    <ol>
+       <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+       <li>Aliquam tincidunt mauris eu risus.</li>
+    </ol>
+    <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+    <h3>Header Level 3</h3>
+    <ul>
+       <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+       <li>Aliquam tincidunt mauris eu risus.</li>
+    </ul>    </main>
+</div>
+                                    </div>
+                                </div>
+                            </article>
+                                <section class="relative  br-t_1 br_solid br_black-2 bg_black-1 shadow_n1 texture_light">
+                                    <main class="kss-section__markup overflow_scroll scrollbar-mini collapse transition_3" id="collapse-containers-accordion-child">
+                                        <pre><code class="language-markup"  id="code-containers-accordion-child" value='&lt;div class&#x3D;&quot;relative m-b_2&quot;&gt;
+    &lt;header id&#x3D;&quot;accordion_header-child&quot; class&#x3D;&quot;flex flex_row sticky t_5 bg_white shadow_bevel-light br_radius br_solid br_1 br_black-2 z_3 &quot;&gt;
+        &lt;div class&#x3D;&quot;h:bg_primary-4 m_2 c_primary h:c_primary-n3 br_radius&quot;&gt;
+            &lt;div class&#x3D;&quot;flex_none p_2&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#content_accordion-child&quot; aria-controls&#x3D;&quot;#content_accordion-child&quot; aria-expanded&#x3D;&quot;true&quot;&gt;
+                    &lt;i class&#x3D;&quot;a:rotation fa-fw fa-times fas self_center text_center&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;        &lt;/div&gt;
+        &lt;div class&#x3D;&quot; flex_auto flex flex_row justify_center p-y_2&quot;&gt;
+            &lt;div class&#x3D;&quot;flex_auto self_center reading-typography no-margins&quot;&gt;
+                &lt;h4&gt; Nested Accordion Header Level 4&lt;/h4&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main id&#x3D;&quot;content_accordion-child&quot; class&#x3D;&quot;bg_black-1 m-t_3 br_radius p-t_3 p-x_3 p-x_4:md p-b_4 reading-typography tab-content transition_4 shadow_emboss-light&quot;  aria-labelledby&#x3D;&quot;accordion_header-child&quot; &gt;
+    &lt;h2&gt;HTML Ipsum Presents&lt;/h2&gt;
+    &lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, &lt;code&gt;commodo vitae&lt;/code&gt;, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. &lt;a href&#x3D;&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis. Ut felis.&lt;/p&gt;
+    &lt;h2&gt;Header Level 2&lt;/h2&gt;
+    &lt;ol&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;blockquote&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.&lt;/p&gt;&lt;/blockquote&gt;
+    &lt;h3&gt;Header Level 3&lt;/h3&gt;
+    &lt;ul&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+    &lt;/ul&gt;    &lt;/main&gt;
+&lt;/div&gt;'>&lt;div class&#x3D;&quot;relative m-b_2&quot;&gt;
+    &lt;header id&#x3D;&quot;accordion_header-child&quot; class&#x3D;&quot;flex flex_row sticky t_5 bg_white shadow_bevel-light br_radius br_solid br_1 br_black-2 z_3 &quot;&gt;
+        &lt;div class&#x3D;&quot;h:bg_primary-4 m_2 c_primary h:c_primary-n3 br_radius&quot;&gt;
+            &lt;div class&#x3D;&quot;flex_none p_2&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#content_accordion-child&quot; aria-controls&#x3D;&quot;#content_accordion-child&quot; aria-expanded&#x3D;&quot;true&quot;&gt;
+                    &lt;i class&#x3D;&quot;a:rotation fa-fw fa-times fas self_center text_center&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;        &lt;/div&gt;
+        &lt;div class&#x3D;&quot; flex_auto flex flex_row justify_center p-y_2&quot;&gt;
+            &lt;div class&#x3D;&quot;flex_auto self_center reading-typography no-margins&quot;&gt;
+                &lt;h4&gt; Nested Accordion Header Level 4&lt;/h4&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main id&#x3D;&quot;content_accordion-child&quot; class&#x3D;&quot;bg_black-1 m-t_3 br_radius p-t_3 p-x_3 p-x_4:md p-b_4 reading-typography tab-content transition_4 shadow_emboss-light&quot;  aria-labelledby&#x3D;&quot;accordion_header-child&quot; &gt;
+    &lt;h2&gt;HTML Ipsum Presents&lt;/h2&gt;
+    &lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, &lt;code&gt;commodo vitae&lt;/code&gt;, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. &lt;a href&#x3D;&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis. Ut felis.&lt;/p&gt;
+    &lt;h2&gt;Header Level 2&lt;/h2&gt;
+    &lt;ol&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;blockquote&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.&lt;/p&gt;&lt;/blockquote&gt;
+    &lt;h3&gt;Header Level 3&lt;/h3&gt;
+    &lt;ul&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+    &lt;/ul&gt;    &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+                                        <input class="display_none text-input html-code-input" type="text" name="" id="input-containers-accordion-child" value='&lt;div class&#x3D;&quot;relative m-b_2&quot;&gt;
+    &lt;header id&#x3D;&quot;accordion_header-child&quot; class&#x3D;&quot;flex flex_row sticky t_5 bg_white shadow_bevel-light br_radius br_solid br_1 br_black-2 z_3 &quot;&gt;
+        &lt;div class&#x3D;&quot;h:bg_primary-4 m_2 c_primary h:c_primary-n3 br_radius&quot;&gt;
+            &lt;div class&#x3D;&quot;flex_none p_2&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#content_accordion-child&quot; aria-controls&#x3D;&quot;#content_accordion-child&quot; aria-expanded&#x3D;&quot;true&quot;&gt;
+                    &lt;i class&#x3D;&quot;a:rotation fa-fw fa-times fas self_center text_center&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;        &lt;/div&gt;
+        &lt;div class&#x3D;&quot; flex_auto flex flex_row justify_center p-y_2&quot;&gt;
+            &lt;div class&#x3D;&quot;flex_auto self_center reading-typography no-margins&quot;&gt;
+                &lt;h4&gt; Nested Accordion Header Level 4&lt;/h4&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main id&#x3D;&quot;content_accordion-child&quot; class&#x3D;&quot;bg_black-1 m-t_3 br_radius p-t_3 p-x_3 p-x_4:md p-b_4 reading-typography tab-content transition_4 shadow_emboss-light&quot;  aria-labelledby&#x3D;&quot;accordion_header-child&quot; &gt;
+    &lt;h2&gt;HTML Ipsum Presents&lt;/h2&gt;
+    &lt;p&gt;&lt;strong&gt;Pellentesque habitant morbi tristique&lt;/strong&gt; senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. &lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, &lt;code&gt;commodo vitae&lt;/code&gt;, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. &lt;a href&#x3D;&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis. Ut felis.&lt;/p&gt;
+    &lt;h2&gt;Header Level 2&lt;/h2&gt;
+    &lt;ol&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;blockquote&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.&lt;/p&gt;&lt;/blockquote&gt;
+    &lt;h3&gt;Header Level 3&lt;/h3&gt;
+    &lt;ul&gt;
+       &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+       &lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+    &lt;/ul&gt;    &lt;/main&gt;
+&lt;/div&gt;'>
+                                    </main>
+                                    <header class="flex_row flex shadow_n1 br-br_radius br-bl_radius">
+                                        <div class="flex flex_row flex_auto collapsed h:bg_black-7 br-bl_radius c_black-8 h:c_white" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapse-containers-accordion-child" aria-controls="#collapse-containers-accordion-child">
+                                            <div class="flex_none p_2 font_1">
+                                                <i class="a:rotation fa-fw fa-chevron-up fas self_center text_center"></i>
+                                            </div>
+                                            <div class="flex_auto flex flex_row">
+                                                <h4 class="font_0 font_bold flex_auto p-l_2 self_center m_0 text_left">Code Sample</h4>
+                                            </div>
+                                        </div>
+                                        <a class="bg_primary br_1 br_black-3 br_solid c_white flex_none font_medium font_ui h:bg_primary-n2 h:undecorated m-l_auto p-x_3 p-y_2 br-br_radius" onclick="CopyCode( 'input-containers-accordion-child')"><i class="fas fa-copy"></i> Copy Code</a>
+                                    </header>
+                                </section>
+                            </header>
+                </main>
+            </div>
         </section>
         <!-- /documentation. -->
         <!-- scripts. -->
