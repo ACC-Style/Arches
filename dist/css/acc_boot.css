@@ -6345,6 +6345,37 @@ Styleguide  Bootstrap.Pagination
 
 */
 /*
+Tabs
+
+Description: A simple way to show small groups of content that should have the same level of reading hierarchy.  
+
+Markup:
+<nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light" id="tabContentLight" role="tablist">
+    <ul class="flex_column flex_row:md  nav">
+        {{> "Containers.Tabs.Tabs.LinkActive" }}
+        {{> "Containers.Tabs.Tabs.Link" }}
+        {{> "Containers.Tabs.Tabs.LinkDisabled" }}
+        </li>
+    </ul>
+</nav>
+<div class="bg_black-_05 br-bl_radius br-br_radius m-x_3 p_4 reading-typography shadow_emboss-light tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
+        <h2 class="capitalize"> consectetur adipisicing elit </h2>
+        Lorem ipsum dolor sit amet. Quisquam maxime consectetur, nisi sed ea perspiciatis a sit porro laboriosam ab sequi est quas optio dolorum at maiores quis incidunt inventore.</div>
+    <div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
+        <h2 class="capitalize">Lorem ipsum dolor sit </h2>
+        Amet consectetur adipisicing elit. Vero enim provident consequuntur perspiciatis. Eligendi placeat consequuntur veniam quidem temporibus labore quisquam commodi rem error cumque fugit suscipit nulla, excepturi eos.</div>
+</div>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+Weight:0
+
+Styleguide Containers.Tabs
+*/
+/*
 Simple Tabs
 
 Simple in page tabs 
@@ -6352,15 +6383,15 @@ Simple in page tabs
 Markup:
 <nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light">
     <ul class="flex_column flex_row:md  nav">
-        {{> "Bootstrap.Tabs.LinkActive" }}
-        {{> "Bootstrap.Tabs.Link" }}
-        {{> "Bootstrap.Tabs.Link" }}
-        {{> "Bootstrap.Tabs.LinkDisabled" }}
+        {{> "Containers.Tabs.Tabs.LinkActive" }}
+        {{> "Containers.Tabs.Tabs.Link" }}
+        {{> "Containers.Tabs.Tabs.Link" }}
+        {{> "Containers.Tabs.Tabs.LinkDisabled" }}
         </li>
     </ul>
 </nav>
 
-Styleguide  Bootstrap.Tabs
+Styleguide  Containers.Tabs.Tabs
 
 */
 /*
@@ -6372,17 +6403,17 @@ Markup:
 <div class="m-y_4 bg_acc p_4" id="nav_jump">
     <nav class="bg_black-2 c_white br_3 br_radius br_solid br_white-5 font_0 font_bold font_ui p-x_0 p-x_4:md shadow_overlap-light">
         <ul class="flex_column flex_row:md ul_none nav">
-        {{> "Bootstrap.TabsDark.LinkActive" }}
-        {{> "Bootstrap.TabsDark.Link" }}
-        {{> "Bootstrap.TabsDark.Link" }}
-        {{> "Bootstrap.TabsDark.LinkDisabled" }}
+        {{> "Containers.Tabs.TabsDark.LinkActive" }}
+        {{> "Containers.Tabs.TabsDark.Link" }}
+        {{> "Containers.Tabs.TabsDark.Link" }}
+        {{> "Containers.Tabs.TabsDark.LinkDisabled" }}
         </ul>
     </nav>
 </div>
 
 Weight: 0
 
-Styleguide  Bootstrap.TabsDark
+Styleguide  Containers.Tabs.TabsDark
 */
 /*
 Tab Dark: Active
@@ -6400,7 +6431,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_acc br_3 br_radius 
 
 Weight:0
 
-Styleguide  Bootstrap.TabsDark.LinkActive
+Styleguide  Containers.Tabs.TabsDark.LinkActive
 */
 /*
 Tab Dark: Basic
@@ -6420,7 +6451,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_acc br_3 br_radius 
 Weight:0
 
 
-Styleguide  Bootstrap.TabsDark.Link
+Styleguide  Containers.Tabs.TabsDark.Link
 */
 /*
 Tab Dark: Disabled
@@ -6439,7 +6470,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_acc br_3 br_radius 
 Weight:0
 
 
-Styleguide  Bootstrap.TabsDark.LinkDisabled
+Styleguide  Containers.Tabs.TabsDark.LinkDisabled
 */
 /*
 Tab: Active
@@ -6458,7 +6489,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_black-2 br_3 br_rad
 
 Weight:0
 
-Styleguide  Bootstrap.Tabs.LinkActive
+Styleguide  Containers.Tabs.Tabs.LinkActive
 */
 /*
 Tab: Basic
@@ -6477,7 +6508,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_black-2 br_3 br_rad
 
 Weight:0
 
-Styleguide  Bootstrap.Tabs.Link
+Styleguide  Containers.Tabs.Tabs.Link
 */
 /*
 Tab: Disabled
@@ -6493,35 +6524,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_black-2 br_3 br_rad
 
 Weight:0
 
-Styleguide  Bootstrap.Tabs.LinkDisabled
-*/
-/*
-Tab with Content
-
-Description: 
-
-Markup:
-<nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light" id="tabContentLight" role="tablist">
-    <ul class="flex_column flex_row:md  nav">
-        {{> "Bootstrap.Tabs.LinkActive" }}
-        {{> "Bootstrap.Tabs.Link" }}
-        {{> "Bootstrap.Tabs.LinkDisabled" }}
-        </li>
-    </ul>
-</nav>
-<div class="bg_black-_05 br-bl_radius br-br_radius m-x_3 p_4 reading-typography shadow_emboss-light tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
-        <h2 class="capitalize"> consectetur adipisicing elit </h2>
-        Lorem ipsum dolor sit amet. Quisquam maxime consectetur, nisi sed ea perspiciatis a sit porro laboriosam ab sequi est quas optio dolorum at maiores quis incidunt inventore.</div>
-    <div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
-        <h2 class="capitalize">Lorem ipsum dolor sit </h2>
-        Amet consectetur adipisicing elit. Vero enim provident consequuntur perspiciatis. Eligendi placeat consequuntur veniam quidem temporibus labore quisquam commodi rem error cumque fugit suscipit nulla, excepturi eos.</div>
-</div>
-
-
-Weight:0
-
-Styleguide Bootstrap.TabsContent
+Styleguide  Containers.Tabs.Tabs.LinkDisabled
 */
 /*
 Sidebar Nav
@@ -6543,6 +6546,8 @@ Markup:
 Weight:-1000
 
 MarkupWrapperClasses: max-w_25 m_auto 
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
 
 Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
 
@@ -6722,8 +6727,8 @@ Bootstrap Toggle Rotation
 
 The toggles for bootstrap collapses use a `+` icon that twists to an `x` when the elements doesn't have `collapsed` or `show` as a class. to reduce confusion the class has a set rotation and speed attached to it. `a:rotation` is applied to the tow specific icons `fa-times` and `fa-chevron-up` only.<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 sg">These classes are effected by the parent having `collapsed` state.</span></div>
 
-not-collapsed                   - when class is added it rotates the icon into position
-collapsed                       - when class is added it rotates the icon into position
+expanded                  - when the associated content is expanded the toggle will look like this
+collapsed                       - when the associated content is collapsed the class is added to the toggle and it will look like this. 
 
 Markup:
 <div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
@@ -6732,22 +6737,6 @@ Markup:
 <div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
         <i class="a:rotation c_primary fa-fw fa-chevron-up fas self_center text_center"></i>
 </div>
-
-
-Weight: 100
-
-Styleguide Navigation.Toggle.RotationSimpleIcon
-
-*/
-/*
-Stacked Rotation Toggle
-
-Description: The toggles for bootstrap collapses use a `+` icon that twists to an `-` when the elements doesn't have `collapsed` or `show` as a class.<div class="p-t_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 sg">These classes are effected by the parent having `collapsed` state.</span></div>
-
-not-collapsed                   - when class is added it rotates the icon into position
-collapsed                       - when class is added it rotates the icon into position
-
-Markup:
 <div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
         <span class="fa-stack fa-2x">
         <i class="fas fa-minus fa-stack-1x"></i>
@@ -6762,19 +6751,21 @@ Markup:
         </span>
 </div>
 
-Weight:100
 
-Styleguide Navigation.Toggle.Rotation.RotationStackedIcon
+Weight: 100
+
+Styleguide Navigation.Toggle.Rotation
+
 */
 /*
-Collapse Toggle
+Toggle 
 
 Toggle elements of a collapse with user feed back of the icon rotating.
 
 #targetName -  the name of the target of the collapse
 
 Markup:
-<div class="a:bg_black-3 h:bg_black-4 flex_none p_2" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}" aria-expanded="true">
+<div class="flex_none p_2" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}" aria-expanded="true">
         <i class="a:rotation fa-fw fa-times fas self_center text_center"></i>
 </div>
 
@@ -6783,6 +6774,24 @@ Weight: -10
 MarkupWrapperClasses: bg_white font_ui flex c_primary
 
 Styleguide Navigation.Toggle
+*/
+/*
+Toggle Chevron
+
+Toggle elements of a collapse with user feed back of the icon rotating.
+
+#targetName -  the name of the target of the collapse
+
+Markup:
+<div class="a:bg_black-3 h:bg_black-4 flex_none p_2" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}" aria-expanded="true">
+        <i class="a:rotation fa-fw fa-chevron-up fas self_center text_center"></i>
+</div>
+
+Weight: -80
+
+MarkupWrapperClasses: bg_white font_ui flex c_primary
+
+Styleguide Navigation.Toggle.Chevron
 */
 /*
 Collapse Toggle Advanced
@@ -6799,7 +6808,7 @@ Markup:
         </span>
 </div>
 
-Weight: 50
+Weight: -100
 
 MarkupWrapperClasses: bg_white font_ui flex c_primary
 
@@ -6821,11 +6830,102 @@ Markup:
         </span>
 </div>
 
-Weight: 55
+Weight: -90
 
 MarkupWrapperClasses: bg_white font_ui flex c_primary
 
 Styleguide Navigation.Toggle.AdvancedSquare
+*/
+/*
+Accordion
+
+In content accordions are styled differently to User interface accordions.  The text of the header should allow for header tags to be added so the style should respond to the surrounding typography sizes.
+
+Markup:
+<div class="relative">
+    <header id="accordion_header" class="flex flex_row sticky t_0 bg_white shadow_overlap-light br_solid br_1 br_black-2 z_3 ">
+        <div class="h:bg_primary-5 m_2 c_primary h:c_primary-n2 br_radius">
+            {{> "Navigation.Toggle.Advanced" modifier_class="#content_accordion"}}
+        </div>
+        <div class=" font-size_up flex_auto flex flex_row justify_center p-y_2">
+            <div class="flex_auto self_center reading-typography no-margins">
+               <h3> Accordion Header Level 3</h3>
+            </div>
+        </div>
+    </header>
+    <main id="content_accordion" class="bg_black-_05 br-bl_radius br-br_radius m-x_3 p_4 reading-typography shadow_emboss-light tab-content"  aria-labelledby="accordion_header m-x_3" >
+    {{> HTML.Typography.Sample }}
+    </main>
+</div>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+
+Weight:0
+
+Styleguide  Containers.Accordion
+*/
+/*
+Accordion Nested
+
+In content accordions are styled differently to User interface accordions.  The text of the header should allow for header tags to be added so the style should respond to the surrounding typography sizes.
+
+Markup:
+<div class="relative">
+    <header id="accordion_header-nested" class="flex flex_row sticky t_0 bg_white shadow_overlap-light br_solid br_1 br_black-2 z_3 ">
+        <div class="h:bg_primary-5 m_2 c_primary h:c_primary-n2 br_radius">
+            {{> "Navigation.Toggle.Advanced" modifier_class="#content_accordion-parent"}}
+        </div>
+        <div class=" font-size_up flex_auto flex flex_row justify_center p-y_2">
+            <div class="flex_auto self_center reading-typography no-margins">
+               <h3> Accordion Header Level 3</h3>
+            </div>
+        </div>
+    </header>
+    <main id="content_accordion-parent" class="bg_black-_05 br-bl_radius br-br_radius m-x_3 p_4 reading-typography shadow_emboss-light tab-content"  aria-labelledby="accordion_header-nested" >
+        <div class="relative m-b_2">
+            <header id="accordion_header-nested-child1" class="flex flex_row sticky t_5 bg_white shadow_bevel-light br_radius br_solid br_1 br_black-2 z_4 ">
+                <div class="h:bg_primary-4 m_2 c_primary h:c_primary-n3 br_radius">
+                    {{> "Navigation.Toggle" modifier_class="#content_accordion-nested-1"}}
+                </div>
+                <div class=" flex_auto flex flex_row justify_center p-y_2">
+                    <div class="flex_auto self_center reading-typography no-margins">
+                        <h4> Nested Accordion Header Level 4</h4>
+                    </div>
+                </div>
+            </header>
+            <main id="content_accordion-nested-1" class="bg_black-1 m-t_3 p-t_3 br_radius p_4 reading-typography tab-content transition_4 shadow_emboss-light"  aria-labelledby="accordion_header-nested-child1" >
+            {{> HTML.Typography.Sample }}
+            </main>
+        </div>
+        <div class="relative m-b_2">
+            <header id="accordion_header-nested-child1" class="flex flex_row sticky t_5 bg_white shadow_bevel-light br_radius br_solid br_1 br_black-2 z_4 ">
+                <div class="h:bg_primary-4 m_2 c_primary h:c_primary-n3 br_radius">
+                    {{> "Navigation.Toggle" modifier_class="#content_accordion-nested-1"}}
+                </div>
+                <div class=" flex_auto flex flex_row justify_center p-y_2">
+                    <div class="flex_auto self_center reading-typography no-margins">
+                        <h4> Nested Accordion Header Level 4</h4>
+                    </div>
+                </div>
+            </header>
+            <main id="content_accordion-nested-1" class="bg_black-1 m-t_3 p-t_3 br_radius p_4 reading-typography tab-content transition_4 shadow_emboss-light"  aria-labelledby="accordion_header-nested-child1" >
+            {{> HTML.Typography.Sample }}
+            </main>
+        </div>
+    </main>
+</div>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+
+Weight:0
+
+Styleguide  Containers.Accordion.Nested
 */
 /*
 ACC.org Footer
@@ -7247,6 +7347,8 @@ Markup:
 Weight: 0
 
 Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+Experimental: This design is currently being reworked and might possibly change. (June 23rd 2021)
 
 Styleguide Navigation.PageHub
 */
@@ -12386,7 +12488,7 @@ Styleguide HTML
 
 Reading Typography
 
-Reading typography is a container class to opt into an override of the basic typography from arches. Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves reading typography lacking. Most ways typogrpahy content is added to a site is devoid of hooks to add styles to an element so work around that restriction and to unified styling across reading experiances the "reading-typography" class is used on the parrent container.  Please note that the reading typography can still look a bit different look depending on the brand or the framework.  
+Reading typography is a container class to opt into an override of the basic typography from arches. Basic Typography is un-styled and rely on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves reading typography lacking. Most ways typography content is added to a site is devoid of hooks to add styles to an element so work around that restriction and to unified styling across reading experiences the "reading-typography" class is used on the parent container.  Please note that the reading typography can still look a bit different look depending on the brand or the framework.  
 
 Markup:
 <section class="max-w_65 reading-typography">
@@ -12476,6 +12578,34 @@ Weight: -9
 HideCodeBlock: display_none 
 
 Styleguide HTML.Typography
+
+*/
+/*
+
+Sample Typography
+
+This text is used as a lorem content in many of our containers.  
+
+Markup:
+<h1>HTML Ipsum Presents</h1>
+<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+<h2>Header Level 2</h2>
+<ol>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ol>
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+<h3>Header Level 3</h3>
+<ul>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ul>
+
+Weight: -9
+
+HideCodeBlock: display_none 
+
+Styleguide HTML.Typography.Sample
 
 */
 /*

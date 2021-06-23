@@ -1,3 +1,34 @@
+/*
+Tabs
+ 
+Description: A simple way to show small groups of content that should have the same level of reading hierarchy.  
+ 
+Markup:
+<nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light" id="tabContentLight" role="tablist">
+    <ul class="flex_column flex_row:md  nav">
+        {{> "Containers.Tabs.Tabs.LinkActive" }}
+        {{> "Containers.Tabs.Tabs.Link" }}
+        {{> "Containers.Tabs.Tabs.LinkDisabled" }}
+        </li>
+    </ul>
+</nav>
+<div class="bg_black-_05 br-bl_radius br-br_radius m-x_3 p_4 reading-typography shadow_emboss-light tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
+        <h2 class="capitalize"> consectetur adipisicing elit </h2>
+        Lorem ipsum dolor sit amet. Quisquam maxime consectetur, nisi sed ea perspiciatis a sit porro laboriosam ab sequi est quas optio dolorum at maiores quis incidunt inventore.</div>
+    <div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
+        <h2 class="capitalize">Lorem ipsum dolor sit </h2>
+        Amet consectetur adipisicing elit. Vero enim provident consequuntur perspiciatis. Eligendi placeat consequuntur veniam quidem temporibus labore quisquam commodi rem error cumque fugit suscipit nulla, excepturi eos.</div>
+</div>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+Weight:0
+ 
+Styleguide Containers.Tabs
+*/
 
 /*
 Simple Tabs
@@ -7,15 +38,15 @@ Simple in page tabs
 Markup:
 <nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light">
     <ul class="flex_column flex_row:md  nav">
-        {{> "Bootstrap.Tabs.LinkActive" }}
-        {{> "Bootstrap.Tabs.Link" }}
-        {{> "Bootstrap.Tabs.Link" }}
-        {{> "Bootstrap.Tabs.LinkDisabled" }}
+        {{> "Containers.Tabs.Tabs.LinkActive" }}
+        {{> "Containers.Tabs.Tabs.Link" }}
+        {{> "Containers.Tabs.Tabs.Link" }}
+        {{> "Containers.Tabs.Tabs.LinkDisabled" }}
         </li>
     </ul>
 </nav>
 
-Styleguide  Bootstrap.Tabs
+Styleguide  Containers.Tabs.Tabs
 
 */
 
@@ -28,18 +59,20 @@ Markup:
 <div class="m-y_4 bg_acc p_4" id="nav_jump">
     <nav class="bg_black-2 c_white br_3 br_radius br_solid br_white-5 font_0 font_bold font_ui p-x_0 p-x_4:md shadow_overlap-light">
         <ul class="flex_column flex_row:md ul_none nav">
-        {{> "Bootstrap.TabsDark.LinkActive" }}
-        {{> "Bootstrap.TabsDark.Link" }}
-        {{> "Bootstrap.TabsDark.Link" }}
-        {{> "Bootstrap.TabsDark.LinkDisabled" }}
+        {{> "Containers.Tabs.TabsDark.LinkActive" }}
+        {{> "Containers.Tabs.TabsDark.Link" }}
+        {{> "Containers.Tabs.TabsDark.Link" }}
+        {{> "Containers.Tabs.TabsDark.LinkDisabled" }}
         </ul>
     </nav>
 </div>
 
 Weight: 0
 
-Styleguide  Bootstrap.TabsDark
+Styleguide  Containers.Tabs.TabsDark
 */
+
+
 
 /*
 Tab Dark: Active
@@ -57,7 +90,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_acc br_3 br_radius 
 
 Weight:0
 
-Styleguide  Bootstrap.TabsDark.LinkActive
+Styleguide  Containers.Tabs.TabsDark.LinkActive
 */
 
 /*
@@ -78,7 +111,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_acc br_3 br_radius 
 Weight:0
 
 
-Styleguide  Bootstrap.TabsDark.Link
+Styleguide  Containers.Tabs.TabsDark.Link
 */
 
 /*
@@ -98,7 +131,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_acc br_3 br_radius 
 Weight:0
 
 
-Styleguide  Bootstrap.TabsDark.LinkDisabled
+Styleguide  Containers.Tabs.TabsDark.LinkDisabled
 */
 
 
@@ -120,7 +153,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_black-2 br_3 br_rad
 
 Weight:0
 
-Styleguide  Bootstrap.Tabs.LinkActive
+Styleguide  Containers.Tabs.Tabs.LinkActive
 */
 
 /*
@@ -140,7 +173,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_black-2 br_3 br_rad
 
 Weight:0
 
-Styleguide  Bootstrap.Tabs.Link
+Styleguide  Containers.Tabs.Tabs.Link
 */
 
 /*
@@ -157,35 +190,7 @@ MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_black-2 br_3 br_rad
 
 Weight:0
 
-Styleguide  Bootstrap.Tabs.LinkDisabled
+Styleguide  Containers.Tabs.Tabs.LinkDisabled
 */
 
 
-/*
-Tab with Content
- 
-Description: 
- 
-Markup:
-<nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light" id="tabContentLight" role="tablist">
-    <ul class="flex_column flex_row:md  nav">
-        {{> "Bootstrap.Tabs.LinkActive" }}
-        {{> "Bootstrap.Tabs.Link" }}
-        {{> "Bootstrap.Tabs.LinkDisabled" }}
-        </li>
-    </ul>
-</nav>
-<div class="bg_black-_05 br-bl_radius br-br_radius m-x_3 p_4 reading-typography shadow_emboss-light tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
-        <h2 class="capitalize"> consectetur adipisicing elit </h2>
-        Lorem ipsum dolor sit amet. Quisquam maxime consectetur, nisi sed ea perspiciatis a sit porro laboriosam ab sequi est quas optio dolorum at maiores quis incidunt inventore.</div>
-    <div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
-        <h2 class="capitalize">Lorem ipsum dolor sit </h2>
-        Amet consectetur adipisicing elit. Vero enim provident consequuntur perspiciatis. Eligendi placeat consequuntur veniam quidem temporibus labore quisquam commodi rem error cumque fugit suscipit nulla, excepturi eos.</div>
-</div>
-
- 
-Weight:0
- 
-Styleguide Bootstrap.TabsContent
-*/

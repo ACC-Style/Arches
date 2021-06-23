@@ -134,6 +134,11 @@
                         </a>
                     </li>
                     <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap" href="section-containers.html">
+                            <span class="">Containers</span>
+                        </a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
                         <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap" href="section-navigation.html">
                             <span class="">Navigation</span>
                         </a>
@@ -178,6 +183,11 @@
                                     <li class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
                                         <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-html.html">
                                             <span class="">Basic HTML</span>
+                                        </a>
+                                    </li>
+                                    <li class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                                        <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-containers.html">
+                                            <span class="">Containers</span>
                                         </a>
                                     </li>
                                     <li class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
@@ -232,13 +242,180 @@
                         <article class="kss-section__content relative">
                             <div class="absolute t_0 r_4">
                             </div>
+                                <p class="kss-section__source font_n3"> Source: <span>dist/css/acc_boot.css</span>, line <span>6725</span>
+                                </p>
                             <a class="kss-section__permalink" href="#kssref-navigation-toggle-rotation">
                                 <h3 class="kss-section__item c_primary kss-section__item--depth-3">
-                                    <span class="kss-section__ref">3.1.1</span>
-                                    <span class="kss-section__name">Navigation.Toggle.Rotation</span>
+                                    <span class="kss-section__ref">4.1.4</span>
+                                    <span class="kss-section__name">Bootstrap Toggle Rotation</span>
                                 </h3>
                             </a>
+                                <div class="kss-section__description reading-typography font-size_up overflow_auto ">
+                                    <div class="font_n1">
+                                    </div>
+                                    <p>The toggles for bootstrap collapses use a <code>+</code> icon that twists to an <code>x</code> when the elements doesn't have <code>collapsed</code> or <code>show</code> as a class. to reduce confusion the class has a set rotation and speed attached to it. <code>a:rotation</code> is applied to the tow specific icons <code>fa-times</code> and <code>fa-chevron-up</code> only.<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 sg">These classes are effected by the parent having <code>collapsed</code> state.</span></div></p>
+
+                                </div>
                         </article>
+                            <article class="kss-section__modifiers">
+                                <h1 class="kss-modifiers__heading"> Example s 
+                                </h1>
+                                    <h2 class="kss-modifiers__name"> Default styling</h2>
+                                <div class="kss-modifiers__example">
+                                    <div class="">
+                                        <div class="flex_none p_2 [modifier class]" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <i class="a:rotation c_primary fa-fw fa-times fas self_center text_center"></i>
+</div>
+<div class="flex_none p_2 [modifier class]" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <i class="a:rotation c_primary fa-fw fa-chevron-up fas self_center text_center"></i>
+</div>
+<div class="flex_none p_2 [modifier class]" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-minus fa-stack-1x"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+        </span>
+</div>
+<div class="flex_none p_2 [modifier class]" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-square fa-stack-2x c_black"></i>
+        <i class="fas fa-minus fa-stack-1x c_white"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x  c_white"></i>
+        </span>
+</div>
+                                    </div>
+                                </div>
+                                    <div class="">
+                                            <article class="kss-modifiers__modifier">
+                                                <h2 class="kss-modifiers__name">
+                                                    expanded
+                                                </h2>
+                                                <p class="kss-modifiers__description">
+                                                    when the associated content is expanded the toggle will look like this
+                                                </p>
+                                                <div class="kss-modifiers__example ">
+                                                    <div class="flex_none p_2 expanded" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <i class="a:rotation c_primary fa-fw fa-times fas self_center text_center"></i>
+</div>
+<div class="flex_none p_2 expanded" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <i class="a:rotation c_primary fa-fw fa-chevron-up fas self_center text_center"></i>
+</div>
+<div class="flex_none p_2 expanded" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-minus fa-stack-1x"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+        </span>
+</div>
+<div class="flex_none p_2 expanded" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-square fa-stack-2x c_black"></i>
+        <i class="fas fa-minus fa-stack-1x c_white"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x  c_white"></i>
+        </span>
+</div>
+                                                </div>
+                                            </article>
+                                            <article class="kss-modifiers__modifier">
+                                                <h2 class="kss-modifiers__name">
+                                                    collapsed
+                                                </h2>
+                                                <p class="kss-modifiers__description">
+                                                    when the associated content is collapsed the class is added to the toggle and it will look like this.
+                                                </p>
+                                                <div class="kss-modifiers__example ">
+                                                    <div class="flex_none p_2 collapsed" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <i class="a:rotation c_primary fa-fw fa-times fas self_center text_center"></i>
+</div>
+<div class="flex_none p_2 collapsed" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <i class="a:rotation c_primary fa-fw fa-chevron-up fas self_center text_center"></i>
+</div>
+<div class="flex_none p_2 collapsed" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-minus fa-stack-1x"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+        </span>
+</div>
+<div class="flex_none p_2 collapsed" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-square fa-stack-2x c_black"></i>
+        <i class="fas fa-minus fa-stack-1x c_white"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x  c_white"></i>
+        </span>
+</div>
+                                                </div>
+                                            </article>
+                                    </div>
+                            </article>
+                                <section class="relative  br-t_1 br_solid br_black-2 bg_black-1 shadow_n1 texture_light">
+                                    <main class="kss-section__markup overflow_scroll scrollbar-mini collapse transition_3" id="collapse-navigation-toggle-rotation">
+                                        <pre><code class="language-markup"  id="code-navigation-toggle-rotation" value='&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;i class&#x3D;&quot;a:rotation c_primary fa-fw fa-times fas self_center text_center&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;i class&#x3D;&quot;a:rotation c_primary fa-fw fa-chevron-up fas self_center text_center&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;span class&#x3D;&quot;fa-stack fa-2x&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;span class&#x3D;&quot;fa-stack fa-2x&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-square fa-stack-2x c_black&quot;&gt;&lt;/i&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x c_white&quot;&gt;&lt;/i&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x  c_white&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+&lt;/div&gt;'>&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;i class&#x3D;&quot;a:rotation c_primary fa-fw fa-times fas self_center text_center&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;i class&#x3D;&quot;a:rotation c_primary fa-fw fa-chevron-up fas self_center text_center&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;span class&#x3D;&quot;fa-stack fa-2x&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;span class&#x3D;&quot;fa-stack fa-2x&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-square fa-stack-2x c_black&quot;&gt;&lt;/i&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x c_white&quot;&gt;&lt;/i&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x  c_white&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                                        <input class="display_none text-input html-code-input" type="text" name="" id="input-navigation-toggle-rotation" value='&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;i class&#x3D;&quot;a:rotation c_primary fa-fw fa-times fas self_center text_center&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;i class&#x3D;&quot;a:rotation c_primary fa-fw fa-chevron-up fas self_center text_center&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;span class&#x3D;&quot;fa-stack fa-2x&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;flex_none p_2 [modifier class]&quot; aria-expanded&#x3D;&quot;false&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#pageHubChild&quot; aria-controls&#x3D;&quot;#pageHubChild&quot;&gt;
+        &lt;span class&#x3D;&quot;fa-stack fa-2x&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-square fa-stack-2x c_black&quot;&gt;&lt;/i&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x c_white&quot;&gt;&lt;/i&gt;
+        &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x  c_white&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+&lt;/div&gt;'>
+                                    </main>
+                                    <header class="flex_row flex shadow_n1 br-br_radius br-bl_radius">
+                                        <div class="flex flex_row flex_auto collapsed h:bg_black-7 br-bl_radius c_black-8 h:c_white" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapse-navigation-toggle-rotation" aria-controls="#collapse-navigation-toggle-rotation">
+                                            <div class="flex_none p_2 font_1">
+                                                <i class="a:rotation fa-fw fa-chevron-up fas self_center text_center"></i>
+                                            </div>
+                                            <div class="flex_auto flex flex_row">
+                                                <h4 class="font_0 font_bold flex_auto p-l_2 self_center m_0 text_left">Code Sample</h4>
+                                            </div>
+                                        </div>
+                                        <a class="bg_primary br_1 br_black-3 br_solid c_white flex_none font_medium font_ui h:bg_primary-n2 h:undecorated m-l_auto p-x_3 p-y_2 br-br_radius" onclick="CopyCode( 'input-navigation-toggle-rotation')"><i class="fas fa-copy"></i> Copy Code</a>
+                                    </header>
+                                </section>
                             </header>
                 </main>
             </div>

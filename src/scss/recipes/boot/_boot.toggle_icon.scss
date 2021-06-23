@@ -3,8 +3,8 @@ Bootstrap Toggle Rotation
 
 The toggles for bootstrap collapses use a `+` icon that twists to an `x` when the elements doesn't have `collapsed` or `show` as a class. to reduce confusion the class has a set rotation and speed attached to it. `a:rotation` is applied to the tow specific icons `fa-times` and `fa-chevron-up` only.<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 sg">These classes are effected by the parent having `collapsed` state.</span></div>
 
-not-collapsed                   - when class is added it rotates the icon into position
-collapsed                       - when class is added it rotates the icon into position
+expanded                  - when the associated content is expanded the toggle will look like this
+collapsed                       - when the associated content is collapsed the class is added to the toggle and it will look like this. 
 
 Markup:
 <div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
@@ -13,22 +13,6 @@ Markup:
 <div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
         <i class="a:rotation c_primary fa-fw fa-chevron-up fas self_center text_center"></i>
 </div>
-
-
-Weight: 100
-
-Styleguide Navigation.Toggle.RotationSimpleIcon
-
-*/
-/*
-Stacked Rotation Toggle
- 
-Description: The toggles for bootstrap collapses use a `+` icon that twists to an `-` when the elements doesn't have `collapsed` or `show` as a class.<div class="p-t_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 sg">These classes are effected by the parent having `collapsed` state.</span></div>
-
-not-collapsed                   - when class is added it rotates the icon into position
-collapsed                       - when class is added it rotates the icon into position
-
-Markup:
 <div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
         <span class="fa-stack fa-2x">
         <i class="fas fa-minus fa-stack-1x"></i>
@@ -42,21 +26,23 @@ Markup:
         <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x  c_white"></i>
         </span>
 </div>
- 
-Weight:100
- 
-Styleguide Navigation.Toggle.Rotation.RotationStackedIcon
+
+
+Weight: 100
+
+Styleguide Navigation.Toggle.Rotation
+
 */
 
 /*
-Collapse Toggle
+Toggle 
  
 Toggle elements of a collapse with user feed back of the icon rotating.
 
 #targetName -  the name of the target of the collapse
  
 Markup:
-<div class="a:bg_black-3 h:bg_black-4 flex_none p_2" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}" aria-expanded="true">
+<div class="flex_none p_2" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}" aria-expanded="true">
         <i class="a:rotation fa-fw fa-times fas self_center text_center"></i>
 </div>
  
@@ -66,7 +52,24 @@ MarkupWrapperClasses: bg_white font_ui flex c_primary
  
 Styleguide Navigation.Toggle
 */
+/*
+Toggle Chevron
+ 
+Toggle elements of a collapse with user feed back of the icon rotating.
 
+#targetName -  the name of the target of the collapse
+ 
+Markup:
+<div class="a:bg_black-3 h:bg_black-4 flex_none p_2" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}" aria-expanded="true">
+        <i class="a:rotation fa-fw fa-chevron-up fas self_center text_center"></i>
+</div>
+ 
+Weight: -80
+
+MarkupWrapperClasses: bg_white font_ui flex c_primary
+ 
+Styleguide Navigation.Toggle.Chevron
+*/
 /*
 Collapse Toggle Advanced
  
@@ -82,7 +85,7 @@ Markup:
         </span>
 </div>
  
-Weight: 50
+Weight: -100
 
 MarkupWrapperClasses: bg_white font_ui flex c_primary
  
@@ -105,7 +108,7 @@ Markup:
         </span>
 </div>
  
-Weight: 55
+Weight: -90
 
 MarkupWrapperClasses: bg_white font_ui flex c_primary
  
