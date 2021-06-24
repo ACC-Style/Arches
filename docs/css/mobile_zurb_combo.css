@@ -31,8 +31,7 @@ html {
 }
 
 /**  Textures  **/
-.texture-dynamic, .texture_cross, .disabled,
-.disabled:hover, .texture_disabled, .texture_dust, .texture_dark, .texture_medium, .texture_light {
+.disabled, .disabled > *, .texture-dynamic, .texture_cross, .texture_disabled, .texture_dust, .texture_dark, .texture_medium, .texture_light {
   background-attachment: local;
   background-origin: border-box;
   background-position: top right;
@@ -480,6 +479,14 @@ Styleguide Anatomy.ExtraCredit
 }
 .reading-typography thead {
   border-bottom: 1px solid #157894;
+}
+.reading-typography.no-margins h1,
+.reading-typography.no-margins h2,
+.reading-typography.no-margins h3,
+.reading-typography.no-margins h4,
+.reading-typography.no-margins h5,
+.reading-typography.no-margins h6 {
+  margin: 0 !important;
 }
 
 .reading-typography.font-size_up h1 {
@@ -8351,8 +8358,7 @@ Styleguide Decorator.Background.Textures
   background-image: url("../img/dust.png");
 }
 
-.texture_disabled,.disabled,
-.disabled:hover {
+.texture_disabled {
   background-image: url("../img/cross_disabled.png");
 }
 
@@ -13105,6 +13111,41 @@ Styleguide Interaction.States.Hover.borders
 
 .h\:br_transparent:hover {
   border-color: transparent !important;
+}
+
+/*
+Disabled
+
+Description: The antithesis of active or hover is disabled.  combined with the standard for background and color UI elements styled with `disable` look very inactive and untouchable
+
+Markup:
+
+
+Weight:0
+
+Styleguide Recipes.
+*/
+.disabled, .disabled > * {
+  background-image: url("../img/cross_disabled.png");
+  cursor: not-allowed;
+}
+.disabled.c_disabled, .disabled.c_disabled:hover, .disabled > *.c_disabled, .disabled > *.c_disabled:hover {
+  color: rgba(19, 18, 18, 0.5) !important;
+}
+.disabled.bg_disabled, .disabled.bg_disabled:hover, .disabled > *.bg_disabled, .disabled > *.bg_disabled:hover {
+  background-color: rgba(19, 18, 18, 0.1) !important;
+}
+.disabled.c_disabled-inverted, .disabled.c_disabled-inverted:hover, .disabled > *.c_disabled-inverted, .disabled > *.c_disabled-inverted:hover {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.disabled.bg_disabled-inverted, .disabled.bg_disabled-inverted:hover, .disabled > *.bg_disabled-inverted, .disabled > *.bg_disabled-inverted:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.disabled.opacity_disabled, .disabled.opacity_disabled:hover, .disabled > *.opacity_disabled, .disabled > *.opacity_disabled:hover {
+  opacity: 0.5 !important;
+}
+.disabled:hover, .disabled *:hover, .disabled > *:hover, .disabled > * *:hover {
+  text-decoration: none;
 }
 
 /*
@@ -26522,7 +26563,7 @@ Styleguide HTML
 
 Reading Typography
 
-Reading typography is a container class to opt into an override of the basic typography from arches. Basic Typography is unstyled and relys on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves reading typography lacking. Most ways typogrpahy content is added to a site is devoid of hooks to add styles to an element so work around that restriction and to unified styling across reading experiances the "reading-typography" class is used on the parrent container.  Please note that the reading typography can still look a bit different look depending on the brand or the framework.  
+Reading typography is a container class to opt into an override of the basic typography from arches. Basic Typography is un-styled and rely on the most basic styles from the browser stylesheets so there is less overriding when making UI but it leaves reading typography lacking. Most ways typography content is added to a site is devoid of hooks to add styles to an element so work around that restriction and to unified styling across reading experiences the "reading-typography" class is used on the parent container.  Please note that the reading typography can still look a bit different look depending on the brand or the framework.  
 
 Markup:
 <section class="max-w_65 reading-typography">
@@ -26612,6 +26653,34 @@ Weight: -9
 HideCodeBlock: display_none 
 
 Styleguide HTML.Typography
+
+*/
+/*
+
+Sample Typography
+
+This text is used as a lorem content in many of our containers.  
+
+Markup:
+<h2>HTML Ipsum Presents</h2>
+<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+<h2>Header Level 2</h2>
+<ol>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ol>
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+<h3>Header Level 3</h3>
+<ul>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ul>
+
+Weight: -9
+
+HideCodeBlock: display_none 
+
+Styleguide HTML.Typography.Sample
 
 */
 /*
