@@ -1,0 +1,172 @@
+/*
+UI Tabs
+ 
+The application systems of acc.org have tabs that sometimes overrun the tabs space areas because they need to show many options.
+ 
+Markup:
+<div class="br_solid br_1 br_black-3">
+    <nav class="flex flex_row font_ui relative" id="tabContentLight" role="tablist">
+        <ul class="flex flex_auto flex_nowrap flex_row:md nav overflow_hidden font-size_up ul_none">
+            {{> "Containers.UITabs.Tabs.LinkActive" }}
+            {{> "Containers.UITabs.Tabs" }}
+            {{> "Containers.UITabs.Tabs.LinkDisabled" }}
+        </ul>
+    </nav>
+    <div class="p_4 reading-typography tab-content br-t_1 br_solid br_black-3" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="ActiveLinkUI" role="tabpanel" aria-labelledby="ActiveLinkUI">
+            {{> HTML.Typography.Sample }}
+        </div>
+        <div class="tab-pane fade" id="LinkUI" role="tabpanel" aria-labelledby="LinkUI">
+            {{> HTML.Typography.Sample }}
+        </div>
+    </div>
+</div>
+
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+Weight:0
+ 
+Styleguide Containers.UITabs
+*/
+
+/*
+UI Tabs Overflow
+ 
+The application systems of acc.org have tabs that sometimes overrun the tabs space areas because they need to show many options.
+ 
+Markup:
+<div class="br_solid br_1 br_black-3">
+    <nav class="flex flex_row font_ui relative" id="tabOverflow" role="tablist"> 
+        <a class="disabled flex_row flex text_center bg_disabled bg_white br-r_1 br_black-3 br_solid c_black-8 c_disabled flex_auto flex_none h:bg_black-3 h:c_black h:undecorated nav-item opacity_disabled p-x_4:md p_3 relative text_center z_3">
+                <i class="flex_auto self_center far fa-chevron-left"></i>
+        </a>
+        <ul class="flex flex_auto flex_nowrap flex_row:md nav overflow_hidden font-size_up ul_none">
+            {{> "Containers.UITabs.Tabs.LinkActive" }}
+            {{> "Containers.UITabs.Tabs" }}
+            {{> "Containers.UITabs.Tabs" }}
+            {{> "Containers.UITabs.Tabs" }}
+            {{> "Containers.UITabs.Tabs" }}
+            {{> "Containers.UITabs.Tabs" }}
+            {{> "Containers.UITabs.Tabs.LinkDisabled" }}
+        </ul>
+        <a class="disabled flex_row flex text_center bg_disabled bg_white br-l_1 br_black-3 br_solid c_black-8 c_disabled flex_auto flex_none h:bg_black-3 h:c_black h:undecorated nav-item opacity_disabled p-x_4:md p_3 relative text_center z_3">
+                <i class="flex_auto self_center far fa-chevron-right"></i>
+        </a>
+    </nav>
+    <div class="p_4 reading-typography tab-content br-t_1 br_solid br_black-3" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="ActiveLinkUI" role="tabpanel" aria-labelledby="ActiveLinkUI">
+            {{> HTML.Typography.Sample }}
+        </div>
+        <div class="tab-pane fade" id="LinkUI" role="tabpanel" aria-labelledby="LinkUI">
+            {{> HTML.Typography.Sample }}
+        </div>
+    </div>
+</div>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Custom JavaScript is needed to make this scroll back and forth, and will need to have disables applied when overflow has reached a max or min. 
+
+Weight:0
+ 
+Styleguide Containers.UITabs.Overflow
+*/
+
+
+
+/*
+Tab: Default
+
+Description: Active State of Tab.  Add and remove the `active is-active` class from the li-tag toggle the active effect
+
+Markup:
+<li class=" nav-item relative p_3 p-x_4:md h:bg_black-3 br-l_1 br_black-3 br_solid flex_grow text_center bg_disabled opacity_disabled a:bg_accent-n1">
+    <a 
+        id="LinkUI-tab" data-bs-toggle="tab" data-bs-target="#LinkUI"  role="tab" aria-controls="LinkUI" aria-selected="true"
+        class="c_disabled h:undecorated expanded-click-area c_black-8 a:c_white-9 h:c_black " 
+        href="#">Link</a>
+</li>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+MarkupWrapperClasses: flex ul_none
+
+Weight:0
+
+Styleguide  Containers.UITabs.Tabs
+*/
+
+/*
+Tab: Active
+
+Description: Active State of Dark Tab.  Add and remove the `active is-active` class from the li-tag toggle the active effect
+
+Markup:
+<li class="active nav-item relative p_3 p-x_4:md h:bg_black-3 br-l_1 br_black-3 br_solid flex_grow text_center bg_disabled opacity_disabled a:bg_accent-n1">
+    <a 
+        id="ActiveLinkUI-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#ActiveLinkUI"
+        role="tab"
+        aria-controls="ActiveLinkUI"
+        aria-selected="true"
+        class="c_disabled h:undecorated expanded-click-area c_black-8 a:c_white-9 h:c_black " 
+        href="#">Active</a>
+</li>
+
+MarkupWrapperClasses: flex ul_none
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+Weight:0
+
+Styleguide  Containers.UITabs.Tabs.LinkActive
+*/
+
+
+
+/*
+Tab: Disabled
+
+Description: Disabled decorations is a swap of many of the decoration classes with the removal of the hover and active classes.
+
+Markup:
+<li class="disabled nav-item relative p_3 p-x_4:md h:bg_black-3 br-l_1 br_black-3 br_solid flex_grow text_center bg_disabled opacity_disabled a:bg_accent-n1">
+    <a class="c_disabled h:undecorated expanded-click-area c_black-8 a:c_white-9 h:c_black "
+        href="#"
+        tabindex="-1"
+        aria-disabled="true">
+        Disabled</a>
+</li>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+MarkupWrapperClasses: flex ul_none
+
+Weight:0
+
+Styleguide  Containers.UITabs.Tabs.LinkDisabled
+*/
+
+
+/*
+Scroll Overflow Script
+ 
+Description: Javascript is needed to make the scrolls work on the page
+ 
+Markup:
+
+ 
+Weight:0
+ 
+Styleguide  Containers.UITabs.Script
+*/

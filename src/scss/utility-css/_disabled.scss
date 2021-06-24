@@ -1,0 +1,35 @@
+/*
+Disabled
+ 
+Description: The antithesis of active or hover is disabled.  combined with the standard for background and color UI elements styled with `disable` look very inactive and untouchable
+ 
+Markup:
+
+ 
+Weight:0
+ 
+Styleguide Recipes.
+*/
+
+.disabled, .disabled > *{
+    @include texture-disabled;
+    &.c_disabled, &.c_disabled:hover{
+      color: rgba( $black, get-css-size(opacity, 5)) !important;
+    }
+    &.bg_disabled, &.bg_disabled:hover{
+      background-color: rgba( $black, get-css-size(opacity, 2)) !important;
+    }
+    &.c_disabled-inverted, &.c_disabled-inverted:hover{
+      color: rgba( $white, get-css-size(opacity, 5)) !important;
+    }
+    &.bg_disabled-inverted, &.bg_disabled-inverted:hover{
+      background-color: rgba( $white, get-css-size(opacity, 2)) !important;
+    }
+    &.opacity_disabled,&.opacity_disabled:hover{
+      opacity: get-css-size(opacity, 5) !important
+    }
+    cursor: not-allowed;
+    &:hover, & *:hover{
+      text-decoration: none;
+    }
+  }
