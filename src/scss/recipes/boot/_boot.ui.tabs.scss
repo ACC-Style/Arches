@@ -6,7 +6,7 @@ The application systems of acc.org have tabs that sometimes overrun the tabs spa
 Markup:
 <div class="br_solid br_1 br_black-3">
     <nav class="flex flex_row font_ui relative" id="tabContentLight" role="tablist">
-        <ul class="flex flex_auto flex_nowrap flex_row:md nav overflow_hidden font-size_up ul_none">
+        <ul class="flex flex_auto flex_nowrap flex_row:md flex_column nav overflow_hidden font-size_up ul_none">
             {{> "Containers.UITabs.Tabs.LinkActive" }}
             {{> "Containers.UITabs.Tabs" }}
             {{> "Containers.UITabs.Tabs.LinkDisabled" }}
@@ -83,11 +83,10 @@ Tab: Default
 Description: Active State of Tab.  Add and remove the `active is-active` class from the li-tag toggle the active effect
 
 Markup:
-<li class=" nav-item relative p_3 p-x_4:md h:bg_black-3 br-l_1 br_black-3 br_solid flex_grow text_center bg_disabled opacity_disabled a:bg_accent-n1">
-    <a 
-        id="LinkUI-tab" data-bs-toggle="tab" data-bs-target="#LinkUI"  role="tab" aria-controls="LinkUI" aria-selected="true"
-        class="c_disabled h:undecorated expanded-click-area c_black-8 a:c_white-9 h:c_black " 
-        href="#">Link</a>
+<li id="LinkUI-tab" data-bs-toggle="tab" data-bs-target="#LinkUI"  role="tab" aria-controls="LinkUI" aria-selected="true" class=" nav-item relative p_3 p-x_4:md h:bg_black-3 br-l_1 br_black-3 br_solid flex_grow text_center bg_disabled opacity_disabled a:bg_accent-n1">
+    <span 
+         class="c_disabled h:undecorated expanded-click-area c_black-8 a:c_white-9 h:c_black " 
+        >Link</span>
 </li>
 
 Experimental: This design is currently being reworked and might possibly change. (June 2021)
