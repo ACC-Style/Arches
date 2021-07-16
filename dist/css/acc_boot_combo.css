@@ -1698,6 +1698,22 @@ Weight: -80
   font-size: calc(1em /1.125);
 }
 
+.font-size_up-1 {
+  font-size: calc(1em * 1.125* 1.125);
+}
+
+.font-size_down-1 {
+  font-size: calc(1em / 1.125 / 1.125);
+}
+
+.font-size_up-2 {
+  font-size: calc(1em * 1.125 * 1.125 * 1.125);
+}
+
+.font-size_down-2 {
+  font-size: calc(1em / 1.125 / 1.125 / 1.125);
+}
+
 /*
   Text Wrap
 
@@ -20648,7 +20664,7 @@ The application systems of acc.org have tabs that sometimes overrun the tabs spa
 Markup:
 <div class="br_solid br_1 br_black-3">
     <nav class="flex flex_row font_ui relative" id="tabContentLight" role="tablist">
-        <ul class="flex flex_auto flex_nowrap flex_row:md nav overflow_hidden font-size_up ul_none">
+        <ul class="flex flex_auto flex_nowrap flex_row:md flex_column nav overflow_hidden font-size_up ul_none">
             {{> "Containers.UITabs.Tabs.LinkActive" }}
             {{> "Containers.UITabs.Tabs" }}
             {{> "Containers.UITabs.Tabs.LinkDisabled" }}

@@ -7,6 +7,19 @@
 ////
 
 $global-font-size: 100% !default;
+/*
+strip-unit()
+
+Description: Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+
+$num 		- 	@param {Number}  Number to strip unit from.
+@returns 	-  	{Number} The same number, sans unit.
+
+Weight:0
+
+Styleguide: SCSS.strip-unit
+*/
+
 
 /// Removes the unit (e.g. px, em, rem) from a value, returning the number only.
 ///
@@ -17,12 +30,29 @@ $global-font-size: 100% !default;
 	@return $num / ($num * 0 + 1);
 }
 
+
+
+/*
+rem-calc()
+
+Description: Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+
+$values		-   @param {Number|List} One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
+$base		-   @param {Number} [null]: The base value to use when calculating the `rem`. If you're using Foundation out of the box, this is 16px. If this parameter is `null`, the function will reference the `$global-font-size` variable as the base.
+@returns 	-  	{List} The same number, sans unit.
+
+Weight:0
+
+Styleguide: SCSS.rem-calc
+*/
+
 /// Converts one or more pixel values into matching rem values.
 ///
 /// @param {Number|List} $values - One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
 /// @param {Number} $base [null] - The base value to use when calculating the `rem`. If you're using Foundation out of the box, this is 16px. If this parameter is `null`, the function will reference the `$global-font-size` variable as the base.
 ///
 /// @returns {List} A list of converted values.
+
 @function rem-calc($values, $base: null) {
 	$rem-values: ();
 	$count: length($values);
