@@ -1,3 +1,4 @@
+@use "sass:math";
 $grid-column-count: 12;
 $optimal-characters: 65;
 $active-class-name: "is-active" !default;
@@ -11,7 +12,7 @@ $ms-ratio: $major-second;
 $ms-ratio-sm: $major-second;
 $ms-ratio-md: $minor-third;
 $ms-ratio-lg: $fourth;
-$vertical-space: $baseline-modifier * $ms-base / $ms-base * 1rem;
+$vertical-space: math.div($baseline-modifier * $ms-base, $ms-base) * 1rem;
 $breakpoints: (
 	xsm: 0,
 	sm: 480px,
@@ -26,7 +27,7 @@ $container-max-widths: (
 	lg: 960px,
 	xl: 1140px,
 );
-$global-border-radius: 1rem / 3 !default;
+$global-border-radius: math.div(1rem, 3) !default;
 $global-border-round: 1rem !default;
 $basicSizeMultiplier: 1rem;
 $bp-label_small: "\\3A sm";
@@ -383,17 +384,17 @@ $value-to-unit: (
 		monospace},
 	),
 	grid: (
-		1: 1 / 12 * 100%,
-		2: 1/6 * 100%,
-		3: 1/4 * 100%,
-		4: 1/3 * 100%,
-		5: 5/12 * 100%,
-		6: 1/2 * 100%,
-		7: 7/12 * 100%,
-		8: 2/3 * 100%,
-		9: 3/4 * 100%,
-		10: 5/6 * 100%,
-		11: 11/12 * 100%,
+		1: math.div(1, 12) * 100%,
+		2: math.div(1, 6) * 100%,
+		3: 1*0.25 * 100%,
+		4: math.div(1, 3) * 100%,
+		5: math.div(5, 12) * 100%,
+		6: 1*0.5 * 100%,
+		7: math.div(7, 12) * 100%,
+		8: math.div(2, 3) * 100%,
+		9: 3*0.25 * 100%,
+		10: math.div(5, 6) * 100%,
+		11: math.div(11, 12) * 100%,
 		12: 1 * 100%,
 	),
 	max-width: (

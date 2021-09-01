@@ -33,6 +33,7 @@ $theme-palette: ();
 
 /** Utility Class Built on top of Bootstrap ^4.4.1 **/ 
 /** Built With Base Branding 1.2.0 **//**  ACC Brands    *********************************/
+@use "sass:math";
 
 $teal: #009db1;
 $dark-blue: #015697;
@@ -129,54 +130,54 @@ $logo: (
 	primary: (
 		url: '../img/cardiosmart/cardiosmart_primaryLogo.svg',
 		alt: 'Logo of the CardioSmart',
-		aspectratio: .333,// 1/3 removing division symbols
+		aspectratio: math.div(1, 3),
 	),
 	primary_alt: (
 		url: '../img/cardiosmart/cardiosmart_primaryLogo-alt.svg',
 		alt: 'Logo of the CardioSmart',
-		aspectratio: .333,// 1/3 removing division symbols
+		aspectratio: math.div(1, 3),
 	),
 	condensed: (
 		url: '../img/cardiosmart/cardiosmart_mobileLogo.svg',
 		alt: 'Logo of the CardioSmart',
-		aspectratio: .1666,// 1/6 removing division symbols
+		aspectratio: math.div(1, 6),
 	),
 	condensed_alt: (
 		url: '../img/cardiosmart/cardiosmart_mobileLogo-alt.svg',
 		alt: 'Logo of the CardioSmart',
-		aspectratio: .1666,// 1/6 removing division symbols
+		aspectratio: math.div(1, 6),
 	),
 );
 $seal: (
 	normal: (
 		url: '../img/cardiosmart/cardiosmart_seal.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1,
+		aspectratio: math.div(1, 1),
 	),
 	small: (
 		url: '../img/cardiosmart/cardiosmart_sealCondensed.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1,
+		aspectratio: math.div(1, 1),
 	),
 	tiny: (
 		url: '../img/cardiosmart/cardiosmart_sealCondensed-alt.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1,
+		aspectratio: math.div(1, 1),
 	),
 	normal_alt: (
 		url: '../img/cardiosmart/cardiosmart_seal-reverse.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1,
+		aspectratio: math.div(1, 1),
 	),
 	small_alt: (
 		url: '../img/cardiosmart/cardiosmart_sealCondensed-reverse.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1,
+		aspectratio: math.div(1, 1),
 	),
 	tiny_alt: (
 		url: '../img/cardiosmart/cardiosmart_sealCondensed-alt-reverse.svg',
 		alt: 'Seal of the CardioSmart',
-		aspectratio: 1,
+		aspectratio: math.div(1, 1),
 	),
 );
 

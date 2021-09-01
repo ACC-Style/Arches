@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @function modifierClassList($property, $string) {
 	$comment: "";
 	@each $key, $value in map-deep-get($style-definition,$property,unit){ 
@@ -20,7 +22,7 @@
 		}@else{
 			$table:	#{$table} + "<tr><td class='c_primary-n2'> #{ class-name-constructor($CSS-property,$unit)}</td><td class='text_right'> #{ map-deep-get($style-definition,$CSS-property,  css-style)} :</td><td> #{ $value }";
 			@if($CSS-property == font-size ){
-				$table:#{$table} + " #{ ( $value/1rem ) * 16px} ";
+				$table:#{$table} + " #{  math.div($value, 1rem)  * 16px} ";
 			}
 			$table:#{$table} + " </td></tr> ";
 		}

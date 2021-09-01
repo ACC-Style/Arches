@@ -216,7 +216,6 @@ var constructStandaloneStyleSheet = function(name) {
             })
         )
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(header("/** Function Test **/\n"))
         .pipe(gulp.dest(PATHS.SCSS));
 };
 var constructColorStyleSheet = function(brand) {

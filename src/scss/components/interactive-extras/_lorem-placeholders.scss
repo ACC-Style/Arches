@@ -41,6 +41,8 @@ Markup:
 
 Styleguide Recipes.InteractiveExtras.Placeholder Aspect Ratio
 */
+@use "sass:math";
+
 div[class*='aspect_'],
 .lorem-loader {
 	width: 100%;
@@ -59,28 +61,28 @@ div[class*='aspect_'],
 	}
 }
 .aspect_2x1:before {
-	padding-top: 2/1 * 100%;
+	padding-top: math.div(2, 1) * 100%;
 }
 .aspect_1x1:before {
-	padding-top: 1/1 * 100%;
+	padding-top: math.div(1, 1) * 100%;
 }
 .aspect_1x2:before {
-	padding-top: 1/2 * 100%;
+	padding-top: 1*0.5 * 100%;
 }
 .aspect_4x3:before {
-	padding-top: 3/4 * 100%;
+	padding-top: 3*0.25 * 100%;
 }
 .aspect_3x2:before {
-	padding-top: 2/3 * 100%;
+	padding-top: math.div(2, 3) * 100%;
 }
 .aspect_16x9:before {
-	padding-top: 9/16 * 100%;
+	padding-top: math.div(9, 16) * 100%;
 }
 .aspect_21x9:before {
-	padding-top: 9/21 * 100%;
+	padding-top: math.div(9, 21) * 100%;
 }
 .aspect_4x1:before {
-	padding-top: 1/4 * 100%;
+	padding-top: 1*0.25 * 100%;
 }
 .lorem-loader {
 	color: #fff;

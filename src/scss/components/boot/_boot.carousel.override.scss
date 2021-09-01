@@ -70,6 +70,8 @@ Markup:
 Styleguide  Bootstrap.Carousel
 
 */
+@use "sass:math";
+
 $carousel-control-font-size: ms(1);
 .carousel-alt {
 	max-width: 630px;
@@ -82,7 +84,7 @@ $carousel-control-font-size: ms(1);
 		display: block;
 		content: "";
 		width: 100%;
-		padding-top: 2 / 3 * 100%;
+		padding-top: math.div(2, 3) * 100%;
 	}
 
 	> .carousel-inner {
@@ -136,7 +138,7 @@ $carousel-control-font-size: ms(1);
 			max-width: 900px;
 
 			&:before {
-				padding-top: 7 / 15 * 100%;
+				padding-top: math.div(7, 15) * 100%;
 			}
 
 			.carousel-inner {
@@ -278,16 +280,16 @@ $carousel-control-font-size: ms(1);
 		.fas {
 			width: $carousel-control-font-size * 1.5;
 			height: $carousel-control-font-size * 1.5;
-			margin-top: $carousel-control-font-size / -2;
+			margin-top: math.div($carousel-control-font-size, -2);
 			font-size: $carousel-control-font-size * 1.5;
 		}
 	}
 
 	.carousel-control-prev .fa {
-		margin-left: $carousel-control-font-size / -2;
+		margin-left: math.div($carousel-control-font-size, -2);
 	}
 
 	.carousel-control-next .fa {
-		margin-right: $carousel-control-font-size / -2;
+		margin-right: math.div($carousel-control-font-size, -2);
 	}
 }
