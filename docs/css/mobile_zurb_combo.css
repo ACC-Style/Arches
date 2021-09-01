@@ -17,10 +17,10 @@
 /**  Fonts  **/
 /* Define the "system" font family */
 @font-face {
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-  font-family: system;
   font-style: normal;
   font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  font-family: system;
 }
 html {
   -webkit-font-smoothing: antialiased;
@@ -32,10 +32,10 @@ html {
 
 /**  Textures  **/
 .disabled, .disabled > *, .texture-dynamic, .texture_cross, .texture_disabled, .texture_dust, .texture_dark, .texture_medium, .texture_light {
-  background-attachment: local;
-  background-origin: border-box;
   background-position: top right;
   background-repeat: repeat;
+  background-origin: border-box;
+  background-attachment: local;
 }
 
 /**  Logos  **/
@@ -576,9 +576,9 @@ Styleguide Typography.Text
 */
 /* No Styleguide reference. */
 .font_unset {
-  font-size: unset;
   font-style: unset;
   font-weight: unset;
+  font-size: unset;
   text-align: unset;
   text-decoration: unset;
   text-transform: unset;
@@ -1698,6 +1698,22 @@ Weight: -80
   font-size: calc(1em /1.125);
 }
 
+.font-size_up-1 {
+  font-size: calc(1em * 1.125* 1.125);
+}
+
+.font-size_down-1 {
+  font-size: calc(1em / 1.125 / 1.125);
+}
+
+.font-size_up-2 {
+  font-size: calc(1em * 1.125 * 1.125 * 1.125);
+}
+
+.font-size_down-2 {
+  font-size: calc(1em / 1.125 / 1.125 / 1.125);
+}
+
 /*
   Text Wrap
 
@@ -1795,8 +1811,6 @@ Weight: -80
   .wb_unset {
     word-break: unset;
   }
-}
-@media only screen and (min-width : 1024px) {
   .wb_break-all {
     word-break: break-all;
   }
@@ -1816,6 +1830,8 @@ Weight: -80
   .wb_unset {
     word-break: unset;
   }
+}
+@media only screen and (min-width : 1024px) {
 }
 /*
 	Text Decoration
@@ -14037,7 +14053,6 @@ Styleguide Interaction.User.UserSelect
 .user-select_all {
   -webkit-user-select: all;
      -moz-user-select: all;
-      -ms-user-select: all;
           user-select: all;
 }
 
@@ -14111,6 +14126,9 @@ Weight: 1000
 
 Styleguide Interaction.User
 */
+.updateDecoration {
+  background-color: #c9b3e5 !important;
+}
 /*# sourceMappingURL=maps/mobile_uc.css.map */
 
 @charset "UTF-8";
@@ -14158,13 +14176,13 @@ a.link-light[href$=".mov"]:before,
 .reading-typography a[href$=".mp4"]:before,
 .reading-typography a[href$=".mov"]:before {
   -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
   display: inline-block;
-  font-family: "Font Awesome 5 Pro";
   font-style: normal;
   font-variant: normal;
   font-weight: 900;
   line-height: 1;
-  text-rendering: auto;
+  font-family: "Font Awesome 5 Pro";
 }
 
 /**Set Active Class**/
@@ -14177,10 +14195,10 @@ a.link-light[href$=".mov"]:before,
 /**  Fonts  **/
 /* Define the "system" font family */
 @font-face {
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-  font-family: system;
   font-style: normal;
   font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  font-family: system;
 }
 html {
   -webkit-font-smoothing: antialiased;
@@ -14192,10 +14210,10 @@ html {
 
 /**  Textures  **/
 .pagination .disabled:hover {
-  background-attachment: local;
-  background-origin: border-box;
   background-position: top right;
   background-repeat: repeat;
+  background-origin: border-box;
+  background-attachment: local;
 }
 
 /**  Logos  **/
@@ -14208,7 +14226,7 @@ html {
  */
 /**
  * Foundation for Sites
- * Version 6.6.3
+ * Version 6.7.0
  * https://get.foundation
  * Licensed under MIT Open Source
  */
@@ -14241,8 +14259,8 @@ hr {
 }
 
 pre {
-  font-family: monospace, monospace;
   font-size: 1em;
+  font-family: monospace, monospace;
 }
 
 a {
@@ -14264,8 +14282,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
   font-size: 1em;
+  font-family: monospace, monospace;
 }
 
 small {
@@ -14298,9 +14316,9 @@ optgroup,
 select,
 textarea {
   margin: 0;
-  font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
+  font-family: inherit;
 }
 
 button,
@@ -14415,9 +14433,9 @@ body {
   padding: 0;
   background: white;
   color: #131212;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
 
 img {
@@ -14488,11 +14506,11 @@ textarea {
 
 [type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color],
 textarea {
+  box-sizing: border-box;
+  display: block;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  box-sizing: border-box;
-  display: block;
   width: 100%;
   height: 39px;
   height: 2.4375rem;
@@ -14505,11 +14523,11 @@ textarea {
   background-color: white;
   box-shadow: inset 0 1px 2px rgba(19, 18, 18, 0.1);
   color: #131212;
-  font-family: inherit;
+  font-weight: normal;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: normal;
   line-height: 1.5;
+  font-family: inherit;
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 }
 [type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus,
@@ -14595,9 +14613,9 @@ label {
   display: block;
   margin: 0;
   color: #131212;
+  font-weight: normal;
   font-size: 14px;
   font-size: 0.875rem;
-  font-weight: normal;
   line-height: 1.8;
 }
 label.middle {
@@ -14605,15 +14623,16 @@ label.middle {
   margin: 0 0 1rem;
   padding: 9px 0;
   padding: 0.5625rem 0;
+  line-height: 1.5;
 }
 
 .help-text {
   margin-top: -8px;
   margin-top: -0.5rem;
   color: #131212;
+  font-style: italic;
   font-size: 13px;
   font-size: 0.8125rem;
-  font-style: italic;
 }
 
 .input-group {
@@ -14724,19 +14743,19 @@ select {
   padding-right: 1.5rem;
   border: 1px solid #cacaca;
   border-radius: 0px;
-  background-color: white;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
-  background-origin: content-box;
   background-position: right -16px center;
   background-position: right -1rem center;
-  background-repeat: no-repeat;
   background-size: 9px 6px;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-color: white;
   color: #131212;
-  font-family: inherit;
+  font-weight: normal;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: normal;
   line-height: 1.5;
+  font-family: inherit;
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 }
 @media screen and (min-width: 0\0 ) {
@@ -14791,9 +14810,9 @@ select:not([multiple]) {
   margin-top: -0.5rem;
   margin-bottom: 16px;
   margin-bottom: 1rem;
+  font-weight: bold;
   font-size: 12px;
   font-size: 0.75rem;
-  font-weight: bold;
 }
 .form-error.is-visible {
   display: block;
@@ -14823,11 +14842,11 @@ td {
 }
 
 p {
+  text-rendering: optimizeLegibility;
   margin-bottom: 16px;
   margin-bottom: 1rem;
   font-size: inherit;
   line-height: 1.6;
-  text-rendering: optimizeLegibility;
 }
 
 em,
@@ -14857,11 +14876,11 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
+  text-rendering: optimizeLegibility;
   color: inherit;
-  font-family: "Maven Pro", "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  text-rendering: optimizeLegibility;
+  font-family: "Maven Pro", "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
 h1 small, .h1 small,
 h2 small, .h2 small,
@@ -15093,8 +15112,8 @@ ul.no-bullet, ol.no-bullet {
   border: 1px solid #cacaca;
   background-color: #e6e6e6;
   color: #131212;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
 }
 
 .code-block {
@@ -15163,11 +15182,11 @@ ul.no-bullet, ol.no-bullet {
 
 @media print {
   * {
-    -webkit-print-color-adjust: economy;
-            color-adjust: economy;
     background: transparent !important;
     box-shadow: none !important;
     color: black !important;
+    -webkit-print-color-adjust: economy;
+            color-adjust: economy;
     text-shadow: none !important;
   }
 
@@ -16097,8 +16116,6 @@ h3 {
     margin-right: 0;
     margin-left: 0;
   }
-}
-@media print, screen and (min-width: 40em) {
   .medium-margin-collapse > .small-1 {
     width: 8.3333333333%;
   }
@@ -16135,8 +16152,6 @@ h3 {
   .medium-margin-collapse > .small-12 {
     width: 100%;
   }
-}
-@media print, screen and (min-width: 40em) {
   .medium-margin-collapse > .medium-1 {
     width: 8.3333333333%;
   }
@@ -16173,6 +16188,10 @@ h3 {
   .medium-margin-collapse > .medium-12 {
     width: 100%;
   }
+}
+@media print, screen and (min-width: 40em) {
+}
+@media print, screen and (min-width: 40em) {
 }
 @media print, screen and (min-width: 64em) {
   .medium-margin-collapse > .large-1 {
@@ -16229,8 +16248,6 @@ h3 {
     margin-right: 0;
     margin-left: 0;
   }
-}
-@media print, screen and (min-width: 64em) {
   .large-margin-collapse > .small-1 {
     width: 8.3333333333%;
   }
@@ -16267,8 +16284,6 @@ h3 {
   .large-margin-collapse > .small-12 {
     width: 100%;
   }
-}
-@media print, screen and (min-width: 64em) {
   .large-margin-collapse > .medium-1 {
     width: 8.3333333333%;
   }
@@ -16305,8 +16320,6 @@ h3 {
   .large-margin-collapse > .medium-12 {
     width: 100%;
   }
-}
-@media print, screen and (min-width: 64em) {
   .large-margin-collapse > .large-1 {
     width: 8.3333333333%;
   }
@@ -16343,9 +16356,6 @@ h3 {
   .large-margin-collapse > .large-12 {
     width: 100%;
   }
-}
-
-@media print, screen and (min-width: 64em) {
   .large-padding-collapse {
     margin-right: 0;
     margin-left: 0;
@@ -16354,6 +16364,15 @@ h3 {
     padding-right: 0;
     padding-left: 0;
   }
+}
+@media print, screen and (min-width: 64em) {
+}
+@media print, screen and (min-width: 64em) {
+}
+@media print, screen and (min-width: 64em) {
+}
+
+@media print, screen and (min-width: 64em) {
 }
 
 .small-offset-0 {
@@ -17394,10 +17413,10 @@ h3 {
   padding: 0.85em 1em;
   border: 1px solid transparent;
   border-radius: 0px;
-  font-family: "Maven Pro", "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1;
+  font-family: "Maven Pro", "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -17712,9 +17731,9 @@ h3 {
   height: 0;
   margin-left: 1em;
   float: right;
-  border: inset 0.4em;
+  border-width: 0.4em;
   border-bottom-width: 0;
-  border-top-style: solid;
+  border-style: solid;
   border-color: white transparent transparent;
   content: "";
 }
@@ -17810,7 +17829,6 @@ a.button:hover, a.button:focus {
 }
 .button-group.expanded .button {
   flex: 1 1 0px;
-  margin-right: 0;
 }
 .button-group.primary .button, .button-group.primary .button.disabled, .button-group.primary .button[disabled], .button-group.primary .button.disabled:hover, .button-group.primary .button[disabled]:hover, .button-group.primary .button.disabled:focus, .button-group.primary .button[disabled]:focus {
   background-color: #198dae;
@@ -18093,7 +18111,6 @@ a.button:hover, a.button:focus {
 }
 .button-group.stacked.expanded .button, .button-group.stacked-for-small.expanded .button, .button-group.stacked-for-medium.expanded .button {
   flex: 1 1 0px;
-  margin-right: 0;
 }
 @media print, screen and (min-width: 40em) {
   .button-group.stacked-for-small .button {
@@ -18268,9 +18285,9 @@ a.button:hover, a.button:focus {
   margin: 0;
   transform: translate(-50%, -50%);
   color: white;
+  font-weight: bold;
   font-size: 12px;
   font-size: 0.75rem;
-  font-weight: bold;
   white-space: nowrap;
 }
 
@@ -18374,9 +18391,9 @@ a.button:hover, a.button:focus {
   margin-bottom: 1rem;
   outline: 0;
   color: white;
+  font-weight: bold;
   font-size: 14px;
   font-size: 0.875rem;
-  font-weight: bold;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -18713,8 +18730,8 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   position: relative;
   margin: 0 12px;
   margin: 0 0.75rem;
-  color: #cacaca;
   content: "/";
+  color: #cacaca;
   opacity: 1;
 }
 .breadcrumbs a {
@@ -18812,8 +18829,8 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 
 .card {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
   margin-bottom: 16px;
   margin-bottom: 1rem;
   overflow: hidden;
@@ -18946,8 +18963,8 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 .pagination .ellipsis::after {
   padding: 3px 10px;
   padding: 0.1875rem 0.625rem;
-  color: #131212;
   content: "…";
+  color: #131212;
 }
 
 .has-tip {
@@ -18978,10 +18995,10 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   bottom: 100%;
   width: 0;
   height: 0;
-  border: inset 12px;
-  border: inset 0.75rem;
+  border-width: 12px;
+  border-width: 0.75rem;
   border-top-width: 0;
-  border-bottom-style: solid;
+  border-style: solid;
   border-color: transparent transparent #131212;
   content: "";
 }
@@ -18995,10 +19012,10 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   bottom: auto;
   width: 0;
   height: 0;
-  border: inset 12px;
-  border: inset 0.75rem;
+  border-width: 12px;
+  border-width: 0.75rem;
   border-bottom-width: 0;
-  border-top-style: solid;
+  border-style: solid;
   border-color: #131212 transparent transparent;
   content: "";
 }
@@ -19011,10 +19028,10 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   left: 100%;
   width: 0;
   height: 0;
-  border: inset 12px;
-  border: inset 0.75rem;
+  border-width: 12px;
+  border-width: 0.75rem;
   border-right-width: 0;
-  border-left-style: solid;
+  border-style: solid;
   border-color: transparent transparent transparent #131212;
   content: "";
 }
@@ -19029,10 +19046,10 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   left: auto;
   width: 0;
   height: 0;
-  border: inset 12px;
-  border: inset 0.75rem;
+  border-width: 12px;
+  border-width: 0.75rem;
   border-left-width: 0;
-  border-right-style: solid;
+  border-style: solid;
   border-color: transparent #131212 transparent transparent;
   content: "";
 }
@@ -19409,8 +19426,22 @@ a.thumbnail image {
   flex-direction: column;
   flex-wrap: nowrap;
 }
+.menu.vertical.icon-top li a img,
+.menu.vertical.icon-top li a i,
+.menu.vertical.icon-top li a svg, .menu.vertical.icon-bottom li a img,
+.menu.vertical.icon-bottom li a i,
+.menu.vertical.icon-bottom li a svg {
+  text-align: left;
+}
 .menu.expanded li {
   flex: 1 1 0px;
+}
+.menu.expanded.icon-top li a img,
+.menu.expanded.icon-top li a i,
+.menu.expanded.icon-top li a svg, .menu.expanded.icon-bottom li a img,
+.menu.expanded.icon-bottom li a i,
+.menu.expanded.icon-bottom li a svg {
+  text-align: left;
 }
 .menu.simple {
   align-items: center;
@@ -19456,42 +19487,50 @@ a.thumbnail image {
 .menu.icons a,.menu.icon-top a, .menu.icon-right a, .menu.icon-bottom a, .menu.icon-left a {
   display: flex;
 }
-.menu.icon-left li a {
+.menu.icon-left li a, .menu.nested.icon-left li a {
   flex-flow: row nowrap;
 }
 .menu.icon-left li a img,
 .menu.icon-left li a i,
-.menu.icon-left li a svg {
+.menu.icon-left li a svg, .menu.nested.icon-left li a img,
+.menu.nested.icon-left li a i,
+.menu.nested.icon-left li a svg {
   margin-right: 4px;
   margin-right: 0.25rem;
 }
-.menu.icon-right li a {
+.menu.icon-right li a, .menu.nested.icon-right li a {
   flex-flow: row nowrap;
 }
 .menu.icon-right li a img,
 .menu.icon-right li a i,
-.menu.icon-right li a svg {
+.menu.icon-right li a svg, .menu.nested.icon-right li a img,
+.menu.nested.icon-right li a i,
+.menu.nested.icon-right li a svg {
   margin-left: 4px;
   margin-left: 0.25rem;
 }
-.menu.icon-top li a {
+.menu.icon-top li a, .menu.nested.icon-top li a {
   flex-flow: column nowrap;
 }
 .menu.icon-top li a img,
 .menu.icon-top li a i,
-.menu.icon-top li a svg {
+.menu.icon-top li a svg, .menu.nested.icon-top li a img,
+.menu.nested.icon-top li a i,
+.menu.nested.icon-top li a svg {
   -ms-grid-row-align: stretch;
       align-self: stretch;
   margin-bottom: 4px;
   margin-bottom: 0.25rem;
   text-align: center;
 }
-.menu.icon-bottom li a {
+.menu.icon-bottom li a, .menu.nested.icon-bottom li a {
   flex-flow: column nowrap;
 }
 .menu.icon-bottom li a img,
 .menu.icon-bottom li a i,
-.menu.icon-bottom li a svg {
+.menu.icon-bottom li a svg, .menu.nested.icon-bottom li a img,
+.menu.nested.icon-bottom li a i,
+.menu.nested.icon-bottom li a svg {
   -ms-grid-row-align: stretch;
       align-self: stretch;
   margin-bottom: 4px;
@@ -19516,7 +19555,11 @@ a.thumbnail image {
   display: block;
   text-align: right;
 }
-.menu.align-right.vertical li .submenu li {
+.menu.align-right.vertical li .submenu li,.menu.align-right.icon-top li a img,
+.menu.align-right.icon-top li a i,
+.menu.align-right.icon-top li a svg, .menu.align-right.icon-bottom li a img,
+.menu.align-right.icon-bottom li a i,
+.menu.align-right.icon-bottom li a svg {
   text-align: right;
 }
 .menu.align-right .nested {
@@ -19629,9 +19672,9 @@ a.thumbnail image {
   width: 0;
   height: 0;
   margin-top: -3px;
-  border: inset 6px;
+  border-width: 6px;
   border-bottom-width: 0;
-  border-top-style: solid;
+  border-style: solid;
   border-color: #198dae transparent transparent;
   content: "";
 }
@@ -19673,9 +19716,9 @@ a.thumbnail image {
   width: 0;
   height: 0;
   margin: auto;
-  border: inset 6px;
+  border-width: 6px;
   border-bottom-width: 0;
-  border-top-style: solid;
+  border-style: solid;
   border-color: #198dae transparent transparent;
   content: "";
 }
@@ -19754,9 +19797,9 @@ a.thumbnail image {
   right: 1rem;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border-width: 6px;
   border-right-width: 0;
-  border-left-style: solid;
+  border-style: solid;
   border-color: transparent transparent transparent #198dae;
   content: "";
 }
@@ -19764,22 +19807,21 @@ a.thumbnail image {
   left: auto;
 }
 .drilldown.align-right .is-drilldown-submenu-parent > a::after {
-  display: block;
   right: auto;
   left: 16px;
   left: 1rem;
 }
 .drilldown.align-right .is-drilldown-submenu-parent > a::after,.drilldown .js-drilldown-back > a::before {
+  display: block;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border-width: 6px;
   border-left-width: 0;
-  border-right-style: solid;
+  border-style: solid;
   border-color: transparent #198dae transparent transparent;
   content: "";
 }
 .drilldown .js-drilldown-back > a::before {
-  display: block;
   display: inline-block;
   margin-right: 12px;
   margin-right: 0.75rem;
@@ -19808,9 +19850,9 @@ a.thumbnail image {
   width: 0;
   height: 0;
   margin-top: -3px;
-  border: inset 6px;
+  border-width: 6px;
   border-bottom-width: 0;
-  border-top-style: solid;
+  border-style: solid;
   border-color: #198dae transparent transparent;
   content: "";
 }
@@ -19854,9 +19896,9 @@ a.thumbnail image {
   left: 5px;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border-width: 6px;
   border-left-width: 0;
-  border-right-style: solid;
+  border-style: solid;
   border-color: transparent #198dae transparent transparent;
   content: "";
 }
@@ -19864,9 +19906,9 @@ a.thumbnail image {
   display: block;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border-width: 6px;
   border-right-width: 0;
-  border-left-style: solid;
+  border-style: solid;
   border-color: transparent transparent transparent #198dae;
   content: "";
 }
@@ -19892,9 +19934,9 @@ a.thumbnail image {
     width: 0;
     height: 0;
     margin-top: -3px;
-    border: inset 6px;
+    border-width: 6px;
     border-bottom-width: 0;
-    border-top-style: solid;
+    border-style: solid;
     border-color: #198dae transparent transparent;
     content: "";
   }
@@ -19919,9 +19961,9 @@ a.thumbnail image {
     left: 5px;
     width: 0;
     height: 0;
-    border: inset 6px;
+    border-width: 6px;
     border-left-width: 0;
-    border-right-style: solid;
+    border-style: solid;
     border-color: transparent #198dae transparent transparent;
     content: "";
   }
@@ -19929,9 +19971,9 @@ a.thumbnail image {
     display: block;
     width: 0;
     height: 0;
-    border: inset 6px;
+    border-width: 6px;
     border-right-width: 0;
-    border-left-style: solid;
+    border-style: solid;
     border-color: transparent transparent transparent #198dae;
     content: "";
   }
@@ -19958,9 +20000,9 @@ a.thumbnail image {
     width: 0;
     height: 0;
     margin-top: -3px;
-    border: inset 6px;
+    border-width: 6px;
     border-bottom-width: 0;
-    border-top-style: solid;
+    border-style: solid;
     border-color: #198dae transparent transparent;
     content: "";
   }
@@ -19985,9 +20027,9 @@ a.thumbnail image {
     left: 5px;
     width: 0;
     height: 0;
-    border: inset 6px;
+    border-width: 6px;
     border-left-width: 0;
-    border-right-style: solid;
+    border-style: solid;
     border-color: transparent #198dae transparent transparent;
     content: "";
   }
@@ -19995,9 +20037,9 @@ a.thumbnail image {
     display: block;
     width: 0;
     height: 0;
-    border: inset 6px;
+    border-width: 6px;
     border-right-width: 0;
-    border-left-style: solid;
+    border-style: solid;
     border-color: transparent transparent transparent #198dae;
     content: "";
   }
@@ -20061,9 +20103,9 @@ a.thumbnail image {
   left: 5px;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border-width: 6px;
   border-left-width: 0;
-  border-right-style: solid;
+  border-style: solid;
   border-color: transparent #198dae transparent transparent;
   content: "";
 }
@@ -20071,9 +20113,9 @@ a.thumbnail image {
   display: block;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border-width: 6px;
   border-right-width: 0;
-  border-left-style: solid;
+  border-style: solid;
   border-color: transparent transparent transparent #198dae;
   content: "";
 }
@@ -20519,18 +20561,18 @@ html.is-reveal-open body {
     width: 30%;
     max-width: 87.5rem;
   }
-}
-@media print, screen and (min-width: 40em) {
   .reveal.small {
     width: 50%;
     max-width: 87.5rem;
   }
-}
-@media print, screen and (min-width: 40em) {
   .reveal.large {
     width: 90%;
     max-width: 87.5rem;
   }
+}
+@media print, screen and (min-width: 40em) {
+}
+@media print, screen and (min-width: 40em) {
 }
 .reveal.full {
   top: 0;
@@ -20973,6 +21015,10 @@ html.is-reveal-open body {
 
 .invisible {
   visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }
 
 @media print, screen and (max-width: 39.99875em) {
@@ -21493,9 +21539,9 @@ Styleguide Recipes.Ordered Cards
 */
 /* content Recipes.250 */
 body {
-  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
+  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 h1,
@@ -21504,8 +21550,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Maven Pro","Muli","Open Sans","system",sans-serif;
   font-weight: 400;
+  font-family: "Maven Pro","Muli","Open Sans","system",sans-serif;
 }
 
 h6 {
@@ -21543,9 +21589,9 @@ legend,
 fieldset,
 button {
   color: currentColor;
-  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
+  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 input,
@@ -21727,9 +21773,9 @@ Styleguide HTML.BasicTable
 
 */
 table {
-  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
+  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 table caption {
   padding: 8px;
@@ -21786,10 +21832,10 @@ Styleguide DesignBase.Logos
 [class*=logo_],
 [class*=seal_] {
   overflow: hidden;
-  background-color: transparent;
   background-position: center center;
-  background-repeat: no-repeat;
   background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
   text-indent: -9999px;
 }
 [class*=logo_]:before,
@@ -22167,7 +22213,7 @@ a.link-light:hover,
 a.link[href$=".pdf"]:before,
 a.link-light[href$=".pdf"]:before,
 .reading-typography a[href$=".pdf"]:before {
-  content: "";
+  content: "\f1c1";
 }
 a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before,
 a.link-light[href$=".doc"]:before,
@@ -22176,19 +22222,19 @@ a.link-light[href$=".txt"]:before,
 .reading-typography a[href$=".doc"]:before,
 .reading-typography a[href$=".docx"]:before,
 .reading-typography a[href$=".txt"]:before {
-  content: "";
+  content: "\f1c2";
 }
 a.link[href$=".zip"]:before,
 a.link-light[href$=".zip"]:before,
 .reading-typography a[href$=".zip"]:before {
-  content: "";
+  content: "\f1c6";
 }
 a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before {
-  content: "";
+  content: "\f685";
 }
 a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before,
 a.link-light[href$=".csv"]:before,
@@ -22197,14 +22243,14 @@ a.link-light[href$=".xlsx"]:before,
 .reading-typography a[href$=".csv"]:before,
 .reading-typography a[href$=".xls"]:before,
 .reading-typography a[href$=".xlsx"]:before {
-  content: "";
+  content: "\f0ce";
 }
 a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
 a.link-light[href$=".mp4"]:before,
 a.link-light[href$=".mov"]:before,
 .reading-typography a[href$=".mp4"]:before,
 .reading-typography a[href$=".mov"]:before {
-  content: "";
+  content: "\f03d";
 }
 a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after,
 a.link-light[target=_blank]:after,
@@ -22213,22 +22259,22 @@ a.link-light[href^=https][target=_blank]:after,
 .reading-typography a[target=_blank]:after,
 .reading-typography a[href^=http][target=_blank]:after,
 .reading-typography a[href^=https][target=_blank]:after {
-  content: "";
+  content: "\f14c";
 }
 a.link[href^="mailto:"]:after,
 a.link-light[href^="mailto:"]:after,
 .reading-typography a[href^="mailto:"]:after {
-  content: "";
+  content: "\f1fa";
 }
 a.link[href^="tel:"]:after,
 a.link-light[href^="tel:"]:after,
 .reading-typography a[href^="tel:"]:after {
-  content: "";
+  content: "\f095";
 }
 a.link[href^="fax:"]:after,
 a.link-light[href^="fax:"]:after,
 .reading-typography a[href^="fax:"]:after {
-  content: "";
+  content: "\f1ac";
 }
 
 /*
@@ -22311,66 +22357,66 @@ Markup:
 Styleguide Recipes.InteractiveExtras.ToggleIcons
 */
 .icon-toggle_bars-times:before {
-  content: "";
+  content: "\f0c9";
 }
 .is-active .icon-toggle_bars-times:before, .icon-toggle_bars-times:before.show, .show > .icon-toggle_bars-times:before, .is-active > .icon-toggle_bars-times:before {
-  content: "";
+  content: "\f2d3";
 }
 
 .icon-toggle_plus-minus:before {
-  content: "";
+  content: "\f0fe";
 }
 .is-active .icon-toggle_plus-minus:before, .icon-toggle_plus-minus:before.show, .show > .icon-toggle_plus-minus:before, .is-active > .icon-toggle_plus-minus:before {
-  content: "";
+  content: "\f146";
 }
 
 .icon-toggle_chevron-up-down:before {
-  content: "";
+  content: "\f106";
 }
 .is-active .icon-toggle_chevron-up-down:before, .show .icon-toggle_chevron-up-down:before, .is-active > .icon-toggle_chevron-up-down:before {
-  content: "";
+  content: "\f107";
 }
 
 .icon-toggle_chevron-double-up-down:before {
-  content: "";
+  content: "\f103";
 }
 .is-active .icon-toggle_chevron-double-up-down:before, .show .icon-toggle_chevron-double-up-down:before, .is-active > .icon-toggle_chevron-double-up-down:before {
-  content: "";
+  content: "\f325";
 }
 
 .icon-toggle_chevron-double-left-right:before {
-  content: "";
+  content: "\f324";
 }
 .is-active .icon-toggle_chevron-double-left-right:before, .show .icon-toggle_chevron-double-left-right:before, .is-active > .icon-toggle_chevron-double-left-right:before {
-  content: "";
+  content: "\f323";
 }
 
 .icon-toggle_arrow-circle:before {
-  content: "";
+  content: "\f061";
 }
 .is-active .icon-toggle_arrow-circle:before, .show .icon-toggle_arrow-circle:before, .is-active > .icon-toggle_arrow-circle:before {
-  content: "";
+  content: "\f0a9";
 }
 
 .icon-toggle_check-sqaure:before {
-  content: "";
+  content: "\f0c8";
 }
 .is-active .icon-toggle_check-sqaure:before, .show .icon-toggle_check-sqaure:before, .is-active > .icon-toggle_check-sqaure:before {
-  content: "";
+  content: "\f14a";
 }
 
 .icon-toggle_check-circle:before {
-  content: "";
+  content: "\f111";
 }
 .is-active .icon-toggle_check-circle:before, .show .icon-toggle_check-circle:before, .is-active > .icon-toggle_check-circle:before {
-  content: "";
+  content: "\f058";
 }
 
 .icon-toggle_check:before {
   content: "";
 }
 .is-active .icon-toggle_check:before, .show .icon-toggle_check:before, .is-active > .icon-toggle_check:before {
-  content: "";
+  content: "\f00c";
 }
 
 /*
@@ -22779,7 +22825,7 @@ $credit-CNErx                   - #52549e; CNErx: Continuing Nursing Education P
 $credit-COP                     - #775891; COP: Certificate of Participation  
 $credit-CPE                     - #992e2e; CPE: Continuing Pharmacy Education 
 $credit-ECME                    - #d16528; ECME: European Board for Accreditation in Cardiology (EBAC) External CME Credit
-$credit-IPCE                    - #6f3db1; IPCE: Interprofessional Continuing Education Credit
+$credit-IPCE                    - #6c36b3; IPCE: Interprofessional Continuing Education Credit
 $credit-MOCII                   - #9a1267; MOC II: ABIM MOC Part II  
 $credit-MOCIV                   - #d3248d; MOC IV: ABIM MOC Part IV    
 

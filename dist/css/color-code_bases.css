@@ -15,10 +15,10 @@
 /**  Fonts  **/
 /* Define the "system" font family */
 @font-face {
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-  font-family: system;
   font-style: normal;
   font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  font-family: system;
 }
 html {
   -webkit-font-smoothing: antialiased;
@@ -1176,8 +1176,8 @@ Credit Type Color codes in the ACC have a specific color coding.
 
 $credit-AAPA                    - #e8c536; AAPA: American Academy of Physician Assistants (AAPA) Category 1 CME Credit  
 $credit-ABP                     - #007a5b; ABP: American Board of Pediatrics   
-$credit-ABPMOCII                     - #0b6d4c; ABP-MOC 2: American Board of Pediatrics MOC 2  
-$credit-ABPMOCIV                     - #105a3b; ABP-MOC 4: American Board of Pediatrics MOC 4 
+$credit-ABPMOCII                - #0b6d4c; ABP-MOC 2: American Board of Pediatrics MOC 2  
+$credit-ABPMOCIV                - #105a3b; ABP-MOC 4: American Board of Pediatrics MOC 4 
 $credit-ATCEU                   - #775744; ATCEU: Athletic Trainer Continuing Education Unit   
 $credit-CE                      - #a8a8a8; CE: Continuing CCA\Tech Education  
 $credit-CME                     - #00a15b; CME: AMA PRA Category 1TM Credit(s)    
@@ -1186,9 +1186,10 @@ $credit-CNErx                   - #52549e; CNErx: Continuing Nursing Education P
 $credit-COP                     - #775891; COP: Certificate of Participation  
 $credit-CPE                     - #992e2e; CPE: Continuing Pharmacy Education 
 $credit-ECME                    - #d16528; ECME: European Board for Accreditation in Cardiology (EBAC) External CME Credit
-$credit-IPCE                    - #6f3db1; IPCE: Interprofessional Continuing Education Credit
+$credit-IPCE                    - #6c36b3; IPCE: Interprofessional Continuing Education Credit
 $credit-MOCII                   - #9a1267; MOC II: ABIM MOC Part II  
 $credit-MOCIV                   - #d3248d; MOC IV: ABIM MOC Part IV   
+$credit-ACHE                    - #9733a5; ACHE: American College of Healthcare Education
 
 Weight: 2000
 
@@ -2484,6 +2485,92 @@ Font, Border and Background Colors using MOCIV
 </div>
 
 Styleguide Credit Colors.MOCIV
+*/
+/*
+
+ACHE
+
+Font, Border and Background Colors using ACHE
+
+<h3>Border Color `br_ACHE-x`</h3>
+<div class="p_4 _3 flex">
+    <div class="br_ACHE-5 p_3 br_solid br_0 text_center br-t_4 c_black flex_auto">br 5</div>
+    <div class="br_ACHE-4 p_3 br_solid br_0 text_center br-t_4 c_black flex_auto">br 4</div>
+    <div class="br_ACHE-3 p_3 br_solid br_0 text_center br-t_4 c_black flex_auto">br 3</div>
+    <div class="br_ACHE-2 p_3 br_solid br_0 text_center br-t_4 c_black flex_auto">br 2</div>
+    <div class="br_ACHE-1 p_3 br_solid br_0 text_center br-t_4 c_black flex_auto">br 1</div>
+    <div class="br_ACHE-0 p_3 br_solid br_0 text_center br-t_4 c_black flex_auto">br 0</div>
+    <div class="br_ACHE-n1 p_3 br_solid br_0 text_center br-t_4 c_black flex_auto">br n1</div>
+    <div class="br_ACHE-n2 p_3 br_solid br_0 text_center br-t_4 c_black flex_auto">br n2</div>
+    <div class="br_ACHE-n3 p_3 br_solid br_0 text_center br-t_4 c_black flex_auto">br n3</div>
+    <div class="br_ACHE-n4 p_3 br_solid br_0 text_center br-t_4 c_black flex_auto">br n4</div>
+    <div class="br_ACHE-n5 p_3 br_solid br_0 text_center br-t_4 c_black flex_auto">br n5</div>
+</div>
+<h3>Background Color `bg_ACHE-x`</h3>
+<div class="flex">
+    <div class="bg_white flex_auto text_center p_2 p-y_5 ">white</div>
+    <div class="bg_ACHE-5 flex_auto text_center p_2 p-y_5">5</div>
+    <div class="bg_ACHE-4 flex_auto text_center p_2 p-y_5">4</div>
+    <div class="bg_ACHE-3 flex_auto text_center p_2 p-y_5">3</div>
+    <div class="bg_ACHE-2 flex_auto text_center p_2 p-y_5">2</div>
+    <div class="bg_ACHE-1 flex_auto text_center c_white p_2 p-y_5">1</div>
+    <div class="bg_ACHE-0 flex_auto text_center c_white p_2 p-y_5">0</div>
+    <div class="bg_ACHE-n1 flex_auto text_center c_white p_2 p-y_5">n1</div>
+    <div class="bg_ACHE-n2 flex_auto text_center c_white p_2 p-y_5">n2</div>
+    <div class="bg_ACHE-n3 flex_auto text_center c_white p_2 p-y_5">n3</div>
+    <div class="bg_ACHE-n4 flex_auto text_center c_white p_2 p-y_5">n4</div>
+    <div class="bg_ACHE-n5 flex_auto text_center c_white p_2 p-y_5">n5</div>
+    <div class="bg_black flex_auto text_center c_white p_2 p-y_5">black</div>
+</div>
+<h3>Font Color `c_ACHE-x`</h3>
+<div class="font_2 bg_shade-3">
+    <div class="c_ACHE-5 text_left br_solid br_0 br-b_1 br_white-3 font_display flex">
+        <div class="flex_auto p_5 p-y_2">modified level 5 of the font color.</div>
+        <div class="flex_auto p_5 p-y_2 bg_shade-n3">modified level 5 of the font color.</div>
+    </div>
+    <div class="c_ACHE-4 text_left br_solid br_0 br-b_1 br_white-3 font_display flex">
+        <div class="flex_auto p_5 p-y_2">modified level 4 of the font color.</div>
+        <div class="flex_auto p_5 p-y_2 bg_shade-n3">modified level 4 of the font color.</div>
+    </div>
+    <div class="c_ACHE-3 text_left br_solid br_0 br-b_1 br_white-3 font_display flex">
+        <div class="flex_auto p_5 p-y_2">modified level 3 of the font color.</div>
+        <div class="flex_auto p_5 p-y_2 bg_shade-n3">modified level 3 of the font color.</div>
+    </div>
+    <div class="c_ACHE-2 text_left br_solid br_0 br-b_1 br_white-3 font_display flex">
+        <div class="flex_auto p_5 p-y_2">modified level 2 of the font color.</div>
+        <div class="flex_auto p_5 p-y_2 bg_shade-n3">modified level 2 of the font color.</div>
+    </div>
+    <div class="c_ACHE-1 text_left br_solid br_0 br-b_1 br_white-3 font_display flex">
+        <div class="flex_auto p_5 p-y_2">modified level 1 of the font color.</div>
+        <div class="flex_auto p_5 p-y_2 bg_shade-n3">modified level 1 of the font color.</div>
+    </div>
+    <div class="c_ACHE-0 text_left br_solid br_0 br-b_1 br_white-3 font_display flex">
+        <div class="flex_auto p_5 p-y_2">modified level 0 of the font color.</div>
+        <div class="flex_auto p_5 p-y_2 bg_shade-n3">modified level 0 of the font color.</div>
+    </div>
+    <div class="c_ACHE-n1 text_left br_solid br_0 br-b_1 br_white-3 font_display flex">
+        <div class="flex_auto p_5 p-y_2">modified level n1 of the font color.</div>
+        <div class="flex_auto p_5 p-y_2 bg_shade-n3">modified level n1 of the font color.</div>
+    </div>
+    <div class="c_ACHE-n2 text_left br_solid br_0 br-b_1 br_white-3 font_display flex">
+        <div class="flex_auto p_5 p-y_2">modified level n2 of the font color.</div>
+        <div class="flex_auto p_5 p-y_2 bg_shade-n3">modified level n2 of the font color.</div>
+    </div>
+    <div class="c_ACHE-n3 text_left br_solid br_0 br-b_1 br_white-3 font_display flex">
+        <div class="flex_auto p_5 p-y_2">modified level n3 of the font color.</div>
+        <div class="flex_auto p_5 p-y_2 bg_shade-n3">modified level n3 of the font color.</div>
+    </div>
+    <div class="c_ACHE-n4 text_left br_solid br_0 br-b_1 br_white-3 font_display flex">
+        <div class="flex_auto p_5 p-y_2">modified level n4 of the font color.</div>
+        <div class="flex_auto p_5 p-y_2 bg_shade-n3">modified level n4 of the font color.</div>
+    </div>
+    <div class="c_ACHE-n5 text_left br_solid br_0 br-b_1 br_white-3 font_display flex">
+        <div class="flex_auto p_5 p-y_2">modified level n5 of the font color.</div>
+        <div class="flex_auto p_5 p-y_2 bg_shade-n3">modified level n5 of the font color.</div>
+    </div>
+</div>
+
+Styleguide Credit Colors.ACHE
 */
 /*
 
@@ -3916,4 +4003,7 @@ Font, Border and Background Colors using DIABETES
 Styleguide RegistryColors.DIABETES
 */
 /** Base UC File **/
+.updateDecoration {
+  background-color: #d5c3ed !important;
+}
 /*# sourceMappingURL=maps/color-code_bases.css.map */

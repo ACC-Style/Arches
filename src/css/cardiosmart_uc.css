@@ -17,10 +17,10 @@
 /**  Fonts  **/
 /* Define the "system" font family */
 @font-face {
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-  font-family: system;
   font-style: normal;
   font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  font-family: system;
 }
 html {
   -webkit-font-smoothing: antialiased;
@@ -32,10 +32,10 @@ html {
 
 /**  Textures  **/
 .disabled, .disabled > *, .texture-dynamic, .texture_cross, .texture_disabled, .texture_dust, .texture_dark, .texture_medium, .texture_light {
-  background-attachment: local;
-  background-origin: border-box;
   background-position: top right;
   background-repeat: repeat;
+  background-origin: border-box;
+  background-attachment: local;
 }
 
 /**  Logos  **/
@@ -576,9 +576,9 @@ Styleguide Typography.Text
 */
 /* No Styleguide reference. */
 .font_unset {
-  font-size: unset;
   font-style: unset;
   font-weight: unset;
+  font-size: unset;
   text-align: unset;
   text-decoration: unset;
   text-transform: unset;
@@ -1698,6 +1698,22 @@ Weight: -80
   font-size: calc(1em /1.125);
 }
 
+.font-size_up-1 {
+  font-size: calc(1em * 1.125* 1.125);
+}
+
+.font-size_down-1 {
+  font-size: calc(1em / 1.125 / 1.125);
+}
+
+.font-size_up-2 {
+  font-size: calc(1em * 1.125 * 1.125 * 1.125);
+}
+
+.font-size_down-2 {
+  font-size: calc(1em / 1.125 / 1.125 / 1.125);
+}
+
 /*
   Text Wrap
 
@@ -1795,8 +1811,6 @@ Weight: -80
   .wb_unset {
     word-break: unset;
   }
-}
-@media only screen and (min-width : 1024px) {
   .wb_break-all {
     word-break: break-all;
   }
@@ -1816,6 +1830,8 @@ Weight: -80
   .wb_unset {
     word-break: unset;
   }
+}
+@media only screen and (min-width : 1024px) {
 }
 /*
 	Text Decoration
@@ -14037,7 +14053,6 @@ Styleguide Interaction.User.UserSelect
 .user-select_all {
   -webkit-user-select: all;
      -moz-user-select: all;
-      -ms-user-select: all;
           user-select: all;
 }
 
@@ -14111,4 +14126,7 @@ Weight: 1000
 
 Styleguide Interaction.User
 */
+.updateDecoration {
+  background-color: #fbeab9 !important;
+}
 /*# sourceMappingURL=maps/cardiosmart_uc.css.map */
