@@ -168,6 +168,11 @@ var buildbrand = function(base, brand, framework) {
     }
     construct
         .pipe(headerFromFile("/setup/__preheader.scss"))
+        .pipe(
+            header(
+                "\n/** /setup/__preheader.scss **/ \n"
+            )
+        )
         .pipe(header(banner, { pkg: pkg }));
     return construct;
 };
@@ -237,13 +242,13 @@ var constructSassFiles = function(brand, framework) {
     var uc = constructUCStyleSheet(brand);
     uc = buildbrand(uc, brand, "");
     if(framework == ""){
-        return uc.pipe(header("/** Function Test **/\n"))
+        return uc.pipe(header(""))
         .pipe(gulp.dest(PATHS.SCSS));
     }
     var base = constructFrameworkStyleSheet(brand, framework);
     base = buildbrand(base, brand, framework);
     return merge(base, uc)
-        .pipe(header("/** Function Test **/\n"))
+        .pipe(header(""))
         .pipe(gulp.dest(PATHS.SCSS));
 };
 var constructMarkdown = function(brand, framework) {

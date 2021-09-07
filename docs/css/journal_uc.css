@@ -1,17 +1,15 @@
 @charset "UTF-8";
-/** Function Test **/
 /**
  * arches - Global style system focused on utility classes
- * @version v1.2.0
+ * @version v1.02.0
  * @link https://github.com/ACC-Style/Arches/
  */
-/**  Pre Header - modular scale default break points utility    *********************************/
-/**  Version: 1.1.0    *********************************/
+/** /setup/__preheader.scss **/
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 /**Set Active Class**/
 /** No Framework **/
-/** Built With Base Branding 1.2.0 **/
+/** Built With Base Branding 1.02.0 **/
 /**  ACC Brands    *********************************/
 /* latin-ext */
 @font-face {
@@ -5016,7 +5014,6 @@ Styleguide Layouts
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
 }
 
@@ -5058,7 +5055,6 @@ Styleguide Layouts
   }
 
   .grid\:md {
-    display: -ms-grid;
     display: grid;
   }
 
@@ -5100,7 +5096,6 @@ Styleguide Layouts
   }
 
   .grid\:lg {
-    display: -ms-grid;
     display: grid;
   }
 
@@ -5292,8 +5287,7 @@ Styleguide Layouts.z-index
 }
 
 .self_center {
-  -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .self_baseline {
@@ -5301,8 +5295,7 @@ Styleguide Layouts.z-index
 }
 
 .self_stretch {
-  -ms-grid-row-align: stretch;
-      align-self: stretch;
+  align-self: stretch;
 }
 
 .justify_start {
@@ -5475,8 +5468,7 @@ Styleguide Layouts.z-index
   }
 
   .self_center\:md {
-    -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
   }
 
   .self_baseline\:md {
@@ -5484,8 +5476,7 @@ Styleguide Layouts.z-index
   }
 
   .self_stretch\:md {
-    -ms-grid-row-align: stretch;
-        align-self: stretch;
+    align-self: stretch;
   }
 
   .justify_start\:md {
@@ -5658,8 +5649,7 @@ Styleguide Layouts.z-index
   }
 
   .self_center\:lg {
-    -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
   }
 
   .self_baseline\:lg {
@@ -5667,8 +5657,7 @@ Styleguide Layouts.z-index
   }
 
   .self_stretch\:lg {
-    -ms-grid-row-align: stretch;
-        align-self: stretch;
+    align-self: stretch;
   }
 
   .justify_start\:lg {
@@ -6006,134 +5995,108 @@ Styleguide  Layouts.Grid.Template
   }
 }
 .span-column_2\:lg {
-  -ms-grid-column-span: 1;
   grid-column: span 1;
 }
 
 .span-row_2\:lg {
-  -ms-grid-row-span: 1;
   grid-row: span 1;
 }
 
 .span-column_3\:lg {
-  -ms-grid-column-span: 1;
   grid-column: span 1;
 }
 
 .span-row_3\:lg {
-  -ms-grid-row-span: 1;
   grid-row: span 1;
 }
 
 .span-column_2\:md {
-  -ms-grid-column-span: 1;
   grid-column: span 1;
 }
 
 .span-row_2\:md {
-  -ms-grid-row-span: 1;
   grid-row: span 1;
 }
 
 .span-column_3\:md {
-  -ms-grid-column-span: 1;
   grid-column: span 1;
 }
 
 .span-row_3\:md {
-  -ms-grid-row-span: 1;
   grid-row: span 1;
 }
 
 .span-column_1 {
-  -ms-grid-column-span: 1;
   grid-column: span 1;
 }
 
 .span-row_1 {
-  -ms-grid-row-span: 1;
   grid-row: span 1;
 }
 
 .span-column_2 {
-  -ms-grid-column-span: 2;
   grid-column: span 2;
 }
 
 .span-row_2 {
-  -ms-grid-row-span: 2;
   grid-row: span 2;
 }
 
 .span-column_3 {
-  -ms-grid-column-span: 3;
   grid-column: span 3;
 }
 
 .span-row_3 {
-  -ms-grid-row-span: 3;
   grid-row: span 3;
 }
 
 @media only screen and (min-width : 768px) {
   .span-column_1\:md {
-    -ms-grid-column-span: 1;
     grid-column: span 1;
   }
 
   .span-row_1\:md {
-    -ms-grid-row-span: 1;
     grid-row: span 1;
   }
 
   .span-column_2\:md {
-    -ms-grid-column-span: 2;
     grid-column: span 2;
   }
 
   .span-row_2\:md {
-    -ms-grid-row-span: 2;
     grid-row: span 2;
   }
 
   .span-column_3\:md {
-    -ms-grid-column-span: 3;
     grid-column: span 3;
   }
 
   .span-row_3\:md {
-    -ms-grid-row-span: 3;
     grid-row: span 3;
   }
 }
 @media only screen and (min-width : 1024px) {
   .span-column_1\:lg {
-    -ms-grid-column-span: 1;
     grid-column: span 1;
   }
 
   .span-row_1\:lg {
-    -ms-grid-row-span: 1;
     grid-row: span 1;
   }
 
   .span-column_2\:lg {
-    -ms-grid-column-span: 2;
     grid-column: span 2;
   }
 
   .span-row_2\:lg {
-    -ms-grid-row-span: 2;
     grid-row: span 2;
   }
 
   .span-column_3\:lg {
-    -ms-grid-column-span: 3;
     grid-column: span 3;
   }
 
   .span-row_3\:lg {
-    -ms-grid-row-span: 3;
     grid-row: span 3;
   }
 }
@@ -14111,21 +14074,18 @@ Styleguide Interaction.User.UserSelect
 .user-select_none {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
 .user-select_auto {
   -webkit-user-select: auto;
      -moz-user-select: auto;
-      -ms-user-select: auto;
           user-select: auto;
 }
 
 .user-select_text {
   -webkit-user-select: text;
      -moz-user-select: text;
-      -ms-user-select: text;
           user-select: text;
 }
 

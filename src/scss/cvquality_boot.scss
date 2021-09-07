@@ -1,12 +1,14 @@
-/** Function Test **/
 /**
  * arches - Global style system focused on utility classes
- * @version v1.2.0
+ * @version v1.02.0
  * @link https://github.com/ACC-Style/Arches/
  */
-/**  Pre Header - modular scale default break points utility    *********************************/
-/**  Version: 1.1.0    *********************************/
+
+/** /setup/__preheader.scss **/ 
+@use "sass:math";
+
 // Consider using https://www.purgecss.com/ to remove styles not used in the project.
+
 $debug-trace: false !default;
 $name-mode: 'SHORT' !default; // $name-mode: "SHORT","LONG","ALL"
 $ms-base: 1rem !default; // needs to be in rem's
@@ -32,7 +34,7 @@ $theme-palette: ();
  $active-class-name: 'active';
 
 /** Utility Class Built on top of Bootstrap ^4.4.1 **/ 
-/** Built With Base Branding 1.2.0 **//**  ACC Brands    *********************************/
+/** Built With Base Branding 1.02.0 **//**  CV Quality Brands    *********************************/
 $teal: #0088aa;
 $green-blue: #16a385;
 $grey-secondary: #8a817f;
@@ -259,54 +261,54 @@ $logo: (
 	primary: (
 		url: '../img/cvquality/cvquality_primaryLogo.svg',
 		alt: 'Logo of the cvquality',
-		aspectratio: 1/3,
+		aspectratio: math.div(1, 3),
 	),
 	primary_alt: (
 		url: '../img/cvquality/cvquality_primaryLogo-alt.svg',
 		alt: 'Logo of the cvquality',
-		aspectratio: 1/3,
+		aspectratio: math.div(1, 3),
 	),
 	condensed: (
 		url: '../img/cvquality/cvquality_mobileLogo.svg',
 		alt: 'Logo of the cvquality',
-		aspectratio: 1/6,
+		aspectratio: math.div(1, 6),
 	),
 	condensed_alt: (
 		url: '../img/cvquality/cvquality_mobileLogo-alt.svg',
 		alt: 'Logo of the cvquality',
-		aspectratio: 1/6,
+		aspectratio: math.div(1, 6),
 	),
 );
 $seal: (
 	normal: (
 		url: '../img/cvquality/cvquality_seal.svg',
 		alt: 'Seal of the cvquality',
-		aspectratio: 1/1,
+		aspectratio: math.div(1, 1),
 	),
 	small: (
 		url: '../img/cvquality/cvquality_sealCondensed.svg',
 		alt: 'Seal of the cvquality',
-		aspectratio: 1/1,
+		aspectratio: math.div(1, 1),
 	),
 	tiny: (
 		url: '../img/cvquality/cvquality_sealCondensed-alt.svg',
 		alt: 'Seal of the cvquality',
-		aspectratio: 1/1,
+		aspectratio: math.div(1, 1),
 	),
 	normal_alt: (
 		url: '../img/cvquality/cvquality_seal-reverse.svg',
 		alt: 'Seal of the cvquality',
-		aspectratio: 1/1,
+		aspectratio: math.div(1, 1),
 	),
 	small_alt: (
 		url: '../img/cvquality/cvquality_sealCondensed-reverse.svg',
 		alt: 'Seal of the cvquality',
-		aspectratio: 1/1,
+		aspectratio: math.div(1, 1),
 	),
 	tiny_alt: (
 		url: '../img/cvquality/cvquality_sealCondensed-alt-reverse.svg',
 		alt: 'Seal of the cvquality',
-		aspectratio: 1/1,
+		aspectratio: math.div(1, 1),
 	),
 );
 /** Built With cvquality Branding **//**  Default Brands    *********************************/

@@ -1,12 +1,10 @@
 @charset "UTF-8";
-/** Function Test **/
 /**
  * arches - Global style system focused on utility classes
- * @version v1.2.0
+ * @version v1.02.0
  * @link https://github.com/ACC-Style/Arches/
  */
-/**  Pre Header - modular scale default break points utility    *********************************/
-/**  Version: 1.1.0    *********************************/
+/** /setup/__preheader.scss **/
 .carousel-alt.chevron-on .carousel-indicators li.active:before, .icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
@@ -54,7 +52,7 @@ a.link-light[href$=".mov"]:before,
 
 /**Set Active Class**/
 /** Utility Class Built on top of Bootstrap ^4.4.1 **/
-/** Built With Base Branding 1.2.0 **/
+/** Built With Base Branding 1.02.0 **/
 /**  ACC Brands    *********************************/
 /** Built With cardiosmart Branding **/
 /**  Default Brands    *********************************/
@@ -2061,10 +2059,6 @@ progress {
   color: #a1a0a0;
   opacity: 1;
 }
-.form-control:-ms-input-placeholder {
-  color: #a1a0a0;
-  opacity: 1;
-}
 .form-control::placeholder {
   color: #a1a0a0;
   opacity: 1;
@@ -2533,19 +2527,10 @@ textarea.form-control-lg {
 .form-floating > .form-control::-moz-placeholder {
   color: transparent;
 }
-.form-floating > .form-control:-ms-input-placeholder {
-  color: transparent;
-}
 .form-floating > .form-control::placeholder {
   color: transparent;
 }
 .form-floating > .form-control:not(:-moz-placeholder-shown) {
-  padding-top: 26px;
-  padding-top: 1.625rem;
-  padding-bottom: 10px;
-  padding-bottom: 0.625rem;
-}
-.form-floating > .form-control:not(:-ms-input-placeholder) {
   padding-top: 26px;
   padding-top: 1.625rem;
   padding-bottom: 10px;
@@ -2570,10 +2555,6 @@ textarea.form-control-lg {
   padding-bottom: 0.625rem;
 }
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
-  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
-  opacity: 0.65;
-}
-.form-floating > .form-control:not(:-ms-input-placeholder) ~ label {
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
   opacity: 0.65;
 }
@@ -2841,7 +2822,6 @@ textarea.form-control-lg {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .btn:hover {
@@ -5007,7 +4987,6 @@ textarea.form-control-lg {
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -6099,8 +6078,7 @@ textarea.form-control-lg {
 
 .hstack,.vstack {
   display: flex;
-  -ms-grid-row-align: stretch;
-      align-self: stretch;
+  align-self: stretch;
 }
 
 .vstack {
@@ -6139,8 +6117,7 @@ textarea.form-control-lg {
 
 .vr {
   display: inline-block;
-  -ms-grid-row-align: stretch;
-      align-self: stretch;
+  align-self: stretch;
   width: 1px;
   min-height: 1em;
   background-color: currentColor;
