@@ -1,0 +1,88 @@
+
+
+
+
+//  Grave Yard Designs
+
+
+
+
+
+
+/*
+Branded Header
+ 
+This is a templated banner that uses as the central branding of a conference product. 
+ 
+Markup:
+<div class="brand-header"></div>
+ 
+
+ 
+Styleguide  Graveyard.Header
+*/
+
+
+/*
+Branded Header Overrides
+ 
+This is a templated banner that uses as the central branding of a conference product. 
+
+acc21   - Annual Scientific Session 2021
+ah20    - Care of the Athletic Heart
+ada20   - ADA/Siegfried Conf
+ 
+Markup:
+<div id="{{modifier_class}}" class="brand-header"></div><br>
+<style>
+.brand-header {
+    height: 160px;
+    width: 100%;
+    background-color: #002d5b;
+    background-image: url('../img/virtual/header.backgroundTexture.sm.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+@media #{$medium-up} {
+    .brand-header {
+        height: 160px;
+        width: 100%;
+        background-image: url('../img/virtual/header.mainLogo.md.png'), url('../img/virtual/header.secondary.md.png'), url('../img/virtual/header.img.md.png'), url('../img/virtual/header.backgroundTexture.png');
+        background-size: contain, contain, contain, cover;
+        background-position: left center, right center, 27% center, center center;
+        background-size: contain, contain, contain, cover;
+        background-repeat: no-repeat;
+    }
+}
+@media #{$xlarge-up} {
+    .brand-header {
+        height: 240px;
+        width: 100%;
+        background-image: url('../img/virtual/header.mainLogo.lg.png'), url('../img/virtual/header.secondary.lg.png'), url('../img/virtual/header.img.lg.png'), url('../img/virtual/header.backgroundTexture.png');
+        background-position: left center, right center, 14% center, center center;
+    }
+}
+ #{"#"+"{{modifier_class}}"}.brand-header {
+     background-image: url('../img/{{modifier_class}}/header.backgroundTexture.sm.png');
+}
+@media #{$medium-up} {
+    #{"#"+"{{modifier_class}}"}.brand-header {
+        background-image: url('../img/{{modifier_class}}/header.mainLogo.md.png'),
+            url('../img/{{modifier_class}}/header.secondary.md.png'),
+            url('../img/{{modifier_class}}/header.img.md.png'),
+            url('../img/{{modifier_class}}/header.backgroundTexture.png');
+    }
+}
+@media #{$xlarge-up} {
+     #{"#"+"{{modifier_class}}"}.brand-header {
+        background-image: url('../img/{{modifier_class}}/header.mainLogo.lg.png'),
+            url('../img/{{modifier_class}}/header.secondary.lg.png'),
+            url('../img/{{modifier_class}}/header.img.lg.png'),
+            url('../img/{{modifier_class}}/header.backgroundTexture.png');
+    }
+}
+</style>
+
+ 
+Styleguide Graveyard.Header.Overrides
+*/

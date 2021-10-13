@@ -1,22 +1,56 @@
+@import 'recipes/virtual/data/virtual.data';
+
+// data values 
+
+@import 'recipes/virtual/virtual.locked_graphic';
+@import 'recipes/virtual/virtual.boot._navbar.override';
+@import 'recipes/virtual/virtual.brand_header';
+// @import 'recipes/sitefinity/sitefinity.editor-decorator';
+@import 'recipes/virtual/virtual.evergreen_content';
+@import 'recipes/virtual/virtual.extras';
+@import 'recipes/virtual/virtual.ondemand';
+
 /*
+
 On Demand
  
 Description: All videos and presentations after a publication is in the On Demand Area. 
 
 Weight: 0
  
-Styleguide Virtual Recipes.OnDemand
+Styleguide Recipes Virtual.Block Design.OnDemand
+
 */
-.texture_ondemand{
-        background-image: url('../img/virtual/slidebackground.png');
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: center;
 
-}
 
-@import 'recipes/virtual/_virtual.ondemand';
+/*
+Block Designs
+
+For small conferences that have a small amount of content is recommended to use the Block Designs. When sessions are lower then 10 in count, the Block Designs are recommended.
+
+Weight: 0
+ 
+Styleguide Recipes Virtual.Block Design
+*/
+
 @import 'recipes/virtual/_virtual.live';
-@import 'recipes/virtual/_virtual.data';
-@import 'recipes/virtual/_virtual.attachments';
-@import 'recipes/virtual/virtual.extras';
+
+
+
+
+
+
+/*
+
+Retired Designs
+
+The virtual product has evolved from its original form, and has made some designs that are no longer available or in use.  This area is the graveyard for those designs. 
+
+Styleguide  Graveyard
+*/
+
+@import 'recipes/virtual/graveyard/virtual.channels';
+@import 'recipes/virtual/graveyard/virtual.brand_header';
+@import 'recipes/virtual/graveyard/virtual.lobby';
+@import 'recipes/virtual/graveyard/virtual.umbrella_nav';
+

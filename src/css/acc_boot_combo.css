@@ -8292,7 +8292,7 @@ Lorem + Aspect Ratio
 
 To create an image placeholder use the lorem-loader plus an aspect of the intended image on th parent container while waiting for the image.The placeholder will be a 100% of the container so size the container properly. 
 
-.aspect_1x2			- lock image to a 1 to 2 ratio
+.aspect_8x10			- lock image to a 8 to 10 ratio
 .aspect_1x1			- lock image to a 1 to 1 ratio
 .aspect_2x1			- lock image to a 2 to 1 ratio
 .aspect_3x2			- lock image to a 3 to 2 ratio   
@@ -8308,12 +8308,10 @@ Markup:
 
 Styleguide Recipes.InteractiveExtras.Placeholder Aspect Ratio
 */
-div[class*=aspect_],
 .lorem-loader {
   width: 100%;
   overflow: hidden;
 }
-div[class*=aspect_]:before,
 .lorem-loader:before {
   width: 1px;
   height: 0;
@@ -8321,43 +8319,42 @@ div[class*=aspect_]:before,
   float: left;
   content: "";
 }
-div[class*=aspect_]:after,
 .lorem-loader:after {
   display: table;
   clear: both;
   content: "";
 }
 
-.aspect_2x1:before {
-  padding-top: 200%;
+.aspect_8x10 {
+  aspect-ratio: 8 / 10;
 }
 
-.aspect_1x1:before {
-  padding-top: 100%;
+.aspect_1x1 {
+  aspect-ratio: 1 / 1;
 }
 
-.aspect_1x2:before {
-  padding-top: 50%;
+.aspect_2x1 {
+  aspect-ratio: 2 / 1;
 }
 
-.aspect_4x3:before {
-  padding-top: 75%;
+.aspect_4x3 {
+  aspect-ratio: 4 / 3;
 }
 
-.aspect_3x2:before {
-  padding-top: 66.6666666667%;
+.aspect_3x2 {
+  aspect-ratio: 3 / 2;
 }
 
-.aspect_16x9:before {
-  padding-top: 56.25%;
+.aspect_16x9 {
+  aspect-ratio: 16 / 9;
 }
 
-.aspect_21x9:before {
-  padding-top: 42.8571428571%;
+.aspect_21x9 {
+  aspect-ratio: 21 / 9;
 }
 
-.aspect_4x1:before {
-  padding-top: 25%;
+.aspect_4x1 {
+  aspect-ratio: 4 / 1;
 }
 
 .lorem-loader {

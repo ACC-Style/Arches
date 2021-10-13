@@ -1,13 +1,3 @@
-/*
-Live Videos
- 
-Description: All videos and presentations presented to be in a live more impactful way.  
-
-Weight: 1
- 
-Styleguide Virtual Recipes.Live Video
-*/
-
 
 /*
 Video Block (Light) 
@@ -25,30 +15,29 @@ Markup:
     <div class="relative">
         <div class="block:lg p-x_5:md">
             <div class="m_auto m_auto:md self_center text_center max-w_20">
-                <div class="aspect_3x2 bg_cover bg_no-repeat bg_black generic_video br_1 br_radius br_solid br_black-3 flex_shrink relative shadow_3 text_center thumb {{modifier_class}}">
+                <a class="aspect_3x2:lg  block aspect_21x9 aspect_16x9:md bg_top bg_cover bg_no-repeat bg_black generic_video br_1 br_radius br_solid br_black-3 flex_shrink relative shadow_3 text_center c_white-6 h:c_white {{modifier_class}}">
                     <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
                         <i class="absolute c_white-9 fa-play-circle text-shadow_black-1 fas flex_auto font_5 font_10:md self_center text_center w_100"></i>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="c_primary-n4 flex_auto font_1 font_display font_medium">
-            <div class="lh_2 m-t_2 p_3 p-y_2"> <a href="https://acc.mediasite.com/mediasite/Play/b0d6b0f045624569828072d2f2eefdc41d" class="expanded-click-area">101. Coronary Artery Disease - Challenges in 2020: Cardiovascular Update For the Clinician I -- A Symposium by Valentin Fuster, MD, PhD, MACC</a></div>
+            <div class="lh_2 m-t_2 p_3 p-y_2">
+                <a href="#" class="">
+                    <span class="block lh_1"><strong class="font_accent">{{> "Data.Agenda.ID" }}</strong> {{> "Data.Session.Title" }}</span>
+                </a>
+                <span class="block font-size_down lh_1">{{> "Data.Session.Subtitle" }}</span>          
+                <span class="font-size_down-2 c_secondary-n3  block">{{> "Data.Faculty.FullName" }} <span class="font_italic"> - {{> "Data.Faculty.Role" }}</span></span>
+            </div>
         </div>
     </div>
-    <div class="br-t_1 br_dotted br_black-3 c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
+    <div class="br-t_1 br_dotted br_black-3 c_black flex flex_wrap flex_column gap-y_3 flex_row:md font_n2 justify_between m-t_2 p-t_2">
         <div class="flex_shrink block text_left p-r_4 m-r_4 ">
             <a href="#modal-extra" class="block h:undecorated uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
         </div>
-        <div class="flex_grow uppercase text_right">
-            <ul class="m-t_n2 ul_none">
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_COP br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop </li>
-            </ul>
+        <div class="flex_auto m-l_auto:md self_center">
+             {{> "Recipes Virtual.Extras.Credit Dots" }}
         </div>
     </div>
 </article>
@@ -59,7 +48,7 @@ MarkupWrapperClasses:
 
 Weight: 0
  
-Styleguide Virtual Recipes.Live Video.Channels
+Styleguide Recipes Virtual.Block Design.Live Video
 */
 
 /*
@@ -69,30 +58,31 @@ Description:
  
 Markup:
     <article class="c_black flex flex_column flex_row:md">
-        <div class="block:lg flex_grow max-w_30:md p-x_5:md w_100 w_50:md m_auto m_0:md">
+        <div class="block:lg flex_grow max-w_30:md p-x_5:lg p-x_4:md p-x_3 m-b_3 m-b_0:md w_100 w_50:md m_auto m_0:md">
             <div class="m_auto m_auto:md self_center text_center">
-                <div class="generic_video bg_cover bg_no-repeat aspect_3x2 bg_black br_1 br_radius br_solid br_black-3 flex_shrink relative shadow_3 text_center thumb">
+                <a class="aspect_3x2:lg  block aspect_21x9 aspect_16x9:md bg_top bg_cover bg_no-repeat bg_black generic_video br_1 br_radius br_solid br_black-3 flex_shrink relative shadow_3 text_center c_white-6 h:c_white ">
                     <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
                         <i class="absolute c_white-9 fa-play-circle text-shadow_black-1 fas flex_auto font_10:md font_5 opacity_9 self_center text_center w_100"></i>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
-        <div class="c_primary-n4 flex_auto font_1 font_2:md font_display font_medium">
-            <div class="lh_2 m-t_2 p-y_2 p_3 relative"> <a href="https://acc.mediasite.com/mediasite/Play/b0d6b0f045624569828072d2f2eefdc41d" class="expanded-click-area">101. Coronary Artery Disease - Challenges in 2020: Cardiovascular Update For the Clinician I -- A Symposium by Valentin Fuster, MD, PhD, MACC</a></div>
-            <div class="br-t_1 br_dotted br_black-3 c_black flex flex_wrap justify_between m-t_2 p-t_2">
-                <div class="flex_shrink block font_n2  text_left p-r_4 m-r_4 ">
-                    <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+        <div class="flex_auto">
+            <div class="c_primary-n4 flex_auto font_1 font_2:md font_display font_medium">
+                <div class="lh_2 m-t_2 p_3 p-y_2">
+                    <a href="#" class="">
+                        <span class="block lh_1"><strong class="font_accent">{{> "Data.Agenda.ID" }}</strong> {{> "Data.Session.Title" }}</span>
+                    </a>
+                    <span class="block font-size_down lh_1">{{> "Data.Session.Subtitle" }}</span>          
+                    <span class="font-size_down-2 c_secondary-n3  block">{{> "Data.Faculty.FullName" }} <span class="font_italic"> - {{> "Data.Faculty.Role" }}</span></span>
                 </div>
-                <div class="flex_grow uppercase text_right">
-                    <ul class="m-t_n2 ul_none">
-                        <li class="inline-block lh_0 p-l_3 font_n2">
-                            <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme </li>
-                        <li class="inline-block lh_0 p-l_3 font_n2">
-                            <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne </li>
-                        <li class="inline-block lh_0 p-l_3 font_n2">
-                            <span class="bg_COP br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop </li>
-                    </ul>
+            </div>
+            <div class="br-t_1 br_dotted br_black-3 c_black flex flex_wrap flex_column gap-y_3 flex_row:md font_n2 justify_between m-t_2 p-t_2">
+                <div class="flex_shrink block text_left p-r_4 m-r_4 ">
+                    <a href="#modal-extra" class="block h:undecorated uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+                </div>
+                <div class="flex_auto m-l_auto:md self_center">
+                    {{> "Recipes Virtual.Extras.Credit Dots" }}
                 </div>
             </div>
         </div>
@@ -104,66 +94,10 @@ max-w_70
  
 Weight: 10
  
-Styleguide Virtual Recipes.Live Video.Horizontal
+Styleguide Recipes Virtual.Block Design.Live Video.Horizontal
 */
 
 
-/*
-Date Time Sperators
- 
-Description: Sessions are divided by date time markers that have been set to east coast time with a refernce to GMT. 
- 
-Markup:
-<div class="br-t_2 br_dotted br_secondary-2 font_ui m-b_4 m-t_5 m-x_3 w_100">
-   <div class="font_0 font_1:md lh_0 m-x_auto m_auto p-x_4 text_center">
-      <div class="bg_white inline-block m-t_n4 m-x_auto max-w_25 p-t_3 text_center texture_light w_100"><strong class="c_secondary block">Live: June 20 , 11:15 – 11:45 A.M. <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></strong>
-         <span class="font_regular inline-block font-size_down font_italic m-t_2 c_black-8"><em class="fas fa-clock c_black-5 p-r_3"></em>3:15 - 3:45 P.M. <abbr title="Greenwich Mean Time">GMT</abbr></span>
-         <strong class="c_black m-t_2 inline-block font-size_down">On Demand After: 11:45 A.M.</strong></div>
-   </div>
-</div>
-
-MarkupWrapperClasses:
-    p_4 texture_light
- 
-Weight: 100
- 
-Styleguide Virtual Recipes.Live Video.Date Time Dividers
-*/
 
 
-/*
-Channel Overrides 
- 
-Description: Conferences can overrid the basic brand with there own branding for channels. 
 
-ah20   - Care of the Athletic Heart
-covid20   - SUMMER COVID-19 EDUCATION SERIES
-ada20   - ADA Siegfried Conference
- 
-Markup:
-<div class="{{modifier_class}}">
-{{> "Virtual Recipes.Live Video.Channels.Banners" modifier_class="generic"}}
-<div class="p_4 grid template-x_25 gap-x_5 gap-y_4 ">
-{{> "Virtual Recipes.Live Video.Channels" modifier_class="generic_video"}}
-{{> "Virtual Recipes.Live Video.Channels" modifier_class="generic_video-nolabel"}}
-{{> "Virtual Recipes.Locked Graphic" modifier_class="generic_video-nolabel"}}
-</div>
-<style>
-.{{modifier_class}} .generic_video{
-	background-image: url("../img/{{modifier_class}}/channels/generic/videoThumbnail.png");}
-.{{modifier_class}} .generic_video-nolabel{
-	background-image: url("../img/{{modifier_class}}/channels/generic/videoThumbnailNoLabel.png");
-}
-.{{modifier_class}} .generic_banner{
-	background-image: 
-		url("../img/{{modifier_class}}/channels/generic/categoryLabel.png"),
-		url("../img/{{modifier_class}}/channels/generic/categoryBanner.png") ;
-}
-</style>
-</div>
-
-
-Weight: 1000
- 
-Styleguide Virtual Recipes.Live Video.Override
-*/

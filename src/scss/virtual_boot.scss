@@ -35,6 +35,7 @@ $theme-palette: ();
 
 /** Utility Class Built on top of Bootstrap ^4.4.1 **/ 
 /** Built With Base Branding 1.02.0 **//**  ACC Brands    *********************************/
+
 $teal: #198dae;
 $green-blue: #16a385;
 $dark-grey: #676a72;
@@ -49,17 +50,11 @@ $acc-blue: #004176;
 $white: rgb(255, 255, 255);
 $black: rgb(19, 18, 18);
 $real-black: #000;
-
-// COLORS
-$cyan: #007dc2;
-$bright-cyan: #00aeef;
-$info-color: #0ec5a3;
-$highlight-color: #fbae00;
 // Currently Un used in the design but part of bootstrap.
-$indigo: #6610f2;
+$indigo: #6610f2 !default;
 $pink: #e83e8c !default;
 $yellow: #ffc107 !default;
-
+$cyan: #17a2b8 !default;
 $gray-100: mix($white, $black, 10%);
 $gray-200: mix($white, $black, 20%);
 $gray-300: mix($white, $black, 30%);
@@ -69,46 +64,43 @@ $gray-600: mix($white, $black, 60%);
 $gray-700: mix($white, $black, 70%);
 $gray-800: mix($white, $black, 80%);
 $gray-900: mix($white, $black, 90%);
-
 $theme-palette: map-merge(
     $theme-palette,
     (
-        primary: $acc-blue,
-        secondary: $cyan,
+        primary: $teal,
+        secondary: $dark-grey,
         success: $green,
         warning: $orange,
         alert: $red,
         //navigation: $blue,
-        accent: $bright-cyan,
-        info: $info-color,
-        highlight: $highlight-color,
+        accent: $green-blue,
+        info: $alt-grey,
+        highlight: $purple,
         acc: $acc-blue,
     )
 );
-
 $fonts: (
     accent: (
         name: 'Roboto Slab',
-        short-name:'RS',
+        short-name:"RS",
         stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab"',
     ),
     display: (
-        name: 'Libre Franklin',
-        short-name:'LF',
-        stack: '"Libre Franklin","Muli","Open Sans","system",sans-serif',
+        name: 'Maven Pro',
+        short-name:"MP",
+        stack: '"Maven Pro","Muli","Open Sans","system",sans-serif',
     ),
     copy: (
         name: 'Open Sans',
-        short-name:'OS',
-        stack: '"Open Sans","system",sans-serif',
+        short-name:"OS",
+        stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     ),
     ui: (
         name: 'Open Sans',
-        short-name:'OS',
+        short-name:"OS",
         stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     ),
 );
-
 // Reset Values of Utlity-css.vars.scss
 $value-to-unit: map-deep-set($value-to-unit, font-family accent, unquote(map-deep-get($fonts, accent, stack)));
 $value-to-unit: map-deep-set($value-to-unit, font-family display, unquote(map-deep-get($fonts, display, stack)));
@@ -117,17 +109,17 @@ $value-to-unit: map-deep-set($value-to-unit, font-family ui, unquote(map-deep-ge
 
 
 
-$font_accent: get-css-size(font-family, accent);
 $font_display: get-css-size(font-family, display);
+$font_accent: get-css-size(font-family, accent);
 $font_ui: get-css-size(font-family, ui);
 $font_copy: get-css-size(font-family, copy);
 $font_mono: get-css-size(font-family, mono);
-
 $global-radius-on: false;
 $global-border-radius: 6px;
 $value-to-unit: map-deep-set($value-to-unit, 'radius' 'radius', $global-border-radius);
 $global-border-round: 25px;
 $value-to-unit: map-deep-set($value-to-unit, 'radius' 'round', $global-border-round);
+
 $basicSizeMultiplier: 1rem;
 
 $h1-font-size: map-deep-get($value-to-unit, font-size, 5);
@@ -136,14 +128,12 @@ $h3-font-size: map-deep-get($value-to-unit, font-size, 3);
 $h4-font-size: map-deep-get($value-to-unit, font-size, 2);
 $h5-font-size: map-deep-get($value-to-unit, font-size, 1);
 $h6-font-size: map-deep-get($value-to-unit, font-size, 0);
-
 $font-size-base: $base-font-size-rem; // Assumes the browser default, typically `16px`
 $font-size-lg: map-deep-get($value-to-unit, font-size, 2);
 $font-size-sm: map-deep-get($value-to-unit, font-size, n1);
-
-$link-color-dark: get-themecolor(accent, -2);
-$link-color-light: get-themecolor(accent, 2);
-$headline-color: get-themecolor(primary);
+$link-color-dark: get-themecolor(accent, -3);
+$link-color-light: get-themecolor(accent, 1);
+$headline-color: get-themecolor(primary, -1);
 /** Built With virtual Branding **//**  Default Brands    *********************************/
 /**  Colors  **/
 
@@ -317,89 +307,9 @@ $line-height_5: get-css-size(line-height, 5);// /*Bootstrap Framework Setup File
 // Utilities
 // @import "../../node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
-/*
-Branded Header
- 
-This is a templated banner that uses as the central branding of a conference product. 
- 
-Markup:
-<div class="brand-header"></div>
- 
-Weight: -1100
- 
-Styleguide Virtual Recipes.Header
-*/
-
-.brand-header {
-    height: 160px;
-    width: 100%;
-    background-color: #002d5b;
-    background-image: url('../img/virtual/header.backgroundTexture.sm.png');
-    background-repeat: no-repeat;
-    background-position: center top;
-}
-
-@media #{$medium-up} {
-    .brand-header {
-        height: 160px;
-        width: 100%;
-        background-image: url('../img/virtual/header.mainLogo.md.png'), url('../img/virtual/header.secondary.md.png'), url('../img/virtual/header.img.md.png'), url('../img/virtual/header.backgroundTexture.png');
-        background-size: contain, contain, contain, cover;
-        background-position: left center, right center, 27% center, center center;
-        background-size: contain, contain, contain, cover;
-        background-repeat: no-repeat;
-    }
-}
-
-@media #{$xlarge-up} {
-    .brand-header {
-        height: 240px;
-        width: 100%;
-        background-image: url('../img/virtual/header.mainLogo.lg.png'), url('../img/virtual/header.secondary.lg.png'), url('../img/virtual/header.img.lg.png'), url('../img/virtual/header.backgroundTexture.png');
-        background-position: left center, right center, 14% center, center center;
-    }
-}
 
 
-
-
-/*
-Branded Header Overrides
- 
-This is a templated banner that uses as the central branding of a conference product. 
-
-acc21   - Annual Scientific Session 2021
-ah20    - Care of the Athletic Heart
-ada20   - ADA/Siegfried Conf
- 
-Markup:
-<div id="{{modifier_class}}" class="brand-header"></div><br>
-<style>
- #{"#"+"{{modifier_class}}"}.brand-header {
-     background-image: url('../img/{{modifier_class}}/header.backgroundTexture.sm.png');
-}
-@media #{$medium-up} {
-    #{"#"+"{{modifier_class}}"}.brand-header {
-        background-image: url('../img/{{modifier_class}}/header.mainLogo.md.png'),
-            url('../img/{{modifier_class}}/header.secondary.md.png'),
-            url('../img/{{modifier_class}}/header.img.md.png'),
-            url('../img/{{modifier_class}}/header.backgroundTexture.png');
-    }
-}
-@media #{$xlarge-up} {
-     #{"#"+"{{modifier_class}}"}.brand-header {
-        background-image: url('../img/{{modifier_class}}/header.mainLogo.lg.png'),
-            url('../img/{{modifier_class}}/header.secondary.lg.png'),
-            url('../img/{{modifier_class}}/header.img.lg.png'),
-            url('../img/{{modifier_class}}/header.backgroundTexture.png');
-    }
-}
-</style>
-
-Weight: 0
- 
-Styleguide Virtual Recipes.Header.Overrides
-*//* Nav Recipes.00x */
+/* Nav Recipes.00x */
 
 @import "recipes/base/mobile-nav";
 
@@ -425,28 +335,62 @@ Styleguide Virtual Recipes.Header.Overrides
 
 // @import "recipes/base/GLSEARCH-search-result";
 
+@import 'recipes/virtual/data/virtual.data';
+
+// data values 
+
+@import 'recipes/virtual/virtual.locked_graphic';
+@import 'recipes/virtual/virtual.boot._navbar.override';
+@import 'recipes/virtual/virtual.brand_header';
+// @import 'recipes/sitefinity/sitefinity.editor-decorator';
+@import 'recipes/virtual/virtual.evergreen_content';
+@import 'recipes/virtual/virtual.extras';
+@import 'recipes/virtual/virtual.ondemand';
+
 /*
+
 On Demand
  
 Description: All videos and presentations after a publication is in the On Demand Area. 
 
 Weight: 0
  
-Styleguide Virtual Recipes.OnDemand
+Styleguide Recipes Virtual.Block Design.OnDemand
+
 */
-.texture_ondemand{
-        background-image: url('../img/virtual/slidebackground.png');
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: center;
 
-}
 
-@import 'recipes/virtual/_virtual.ondemand';
+/*
+Block Designs
+
+For small conferences that have a small amount of content is recommended to use the Block Designs. When sessions are lower then 10 in count, the Block Designs are recommended.
+
+Weight: 0
+ 
+Styleguide Recipes Virtual.Block Design
+*/
+
 @import 'recipes/virtual/_virtual.live';
-@import 'recipes/virtual/_virtual.data';
-@import 'recipes/virtual/_virtual.attachments';
-@import 'recipes/virtual/virtual.extras';
+
+
+
+
+
+
+/*
+
+Retired Designs
+
+The virtual product has evolved from its original form, and has made some designs that are no longer available or in use.  This area is the graveyard for those designs. 
+
+Styleguide  Graveyard
+*/
+
+@import 'recipes/virtual/graveyard/virtual.channels';
+@import 'recipes/virtual/graveyard/virtual.brand_header';
+@import 'recipes/virtual/graveyard/virtual.lobby';
+@import 'recipes/virtual/graveyard/virtual.umbrella_nav';
+
 // ACC Design Alterations
 @import "base/base";
 @import "components/logo";
@@ -462,12 +406,6 @@ Styleguide Virtual Recipes.OnDemand
 @import 'components/boot/_boot.carousel.override';
 @import 'components/boot/_boot.navbar.override';
 @import 'components/boot/_boot.collapser.icon';
-@import 'components/virtual/virtual.lobby';
-@import 'components/virtual/virtual.umbrella_nav';
+@import 'components/virtual/virtual.player_graphic';
 @import 'components/virtual/virtual.locked_graphic';
-@import 'components/virtual/virtual.texture_ondemand';
-@import 'components/virtual/virtual.boot._navbar.override';
-@import 'components/virtual/virtual.channels';
-@import 'components/sitefinity/sitefinity.editor-decorator';
-
-
+@import 'components/virtual/virtual.ondemand_graphic';

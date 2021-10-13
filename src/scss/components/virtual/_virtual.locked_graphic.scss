@@ -1,21 +1,3 @@
-/*
-Locking Graphics
- 
-Showing assets before they are interactable is needed  
- 
-Markup:
-<div class="locked_graphic">{{> "Virtual Recipes.Live Video.Channels" modifier_class="generic_video"}}</div></div>
-
-MarkupWrapperClasses:
-max-w_30
-
-Weight: 1000
- 
-Styleguide Virtual Recipes.Locked Graphic
-*/
-
-
-
 .locked_graphic {
     filter: grayscale(1) contrast(0.5) brightness(1.1) opacity(.7);
 }
@@ -24,7 +6,6 @@ Styleguide Virtual Recipes.Locked Graphic
 
 }
 .locked_graphic *[class*=" h:"],.locked_graphic *[class*=" h:"]:hover{
-        background:transparent !important;
         text-decoration:none !important;
         opacity:1 !important;}
 
