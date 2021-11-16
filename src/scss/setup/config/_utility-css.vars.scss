@@ -467,6 +467,13 @@ $value-to-unit: (
 		4: 5000,
 		5: 9999,
 	),
+	isolation:(
+		isolate: isolate,
+		auto: auto,
+		inherit: inherit,
+		revert: revert,
+		unset: unset,
+	),
 	shadow: (
 		0: make-shadow(3, "drop", #000, 0.4),
 		1: make-shadow(1, "drop", #000, 0.1),
@@ -1102,6 +1109,15 @@ $style-definition: (
 		),
 		long-name: ".z-index",
 		unit: z-index,
+
+	),
+	isolation: (
+		short-name: ".isolation",
+		css-style: (
+			"isolation",
+		),
+		long-name: ".isolation",
+		unit: isolation,
 
 	),
 );

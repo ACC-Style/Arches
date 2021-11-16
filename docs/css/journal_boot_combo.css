@@ -5146,6 +5146,26 @@ Styleguide Layouts.z-index
   z-index: 9999;
 }
 
+.isolation_isolate {
+  isolation: isolate;
+}
+
+.isolation_auto {
+  isolation: auto;
+}
+
+.isolation_inherit {
+  isolation: inherit;
+}
+
+.isolation_revert {
+  isolation: revert;
+}
+
+.isolation_unset {
+  isolation: unset;
+}
+
 .vertical-align_top {
   vertical-align: top;
 }
@@ -20412,7 +20432,7 @@ Address and contact information for Heart House
 
 Markup:
 <section class="address c_white">
-    <h3 class=font_accent font_1 m-b_0 font_normal font_regular">American College of Cardiology</h3>
+    <h3 class="font_accent font_1 m-b_0 font_normal font_regular">American College of Cardiology</h3>
     <address>
         <!-- http://microformats.org/wiki/hcard -->
         <h4 class="m-b_0 font_bold font_copy font_normal font_1 m-t_4">Heart House</h4>
@@ -20474,7 +20494,7 @@ Markup:
     <h2 class="font_2 font_3:lg font_display p-t_2 m-b_0:md m-b_2 br_none:md ">
         <span class="toggle display_none:md ">
         <i class="fas fa-minus-square c_white-8 p-r_4"></i></span>
-        <a class="c_highlight h:c_secondary-3" href="">Conditions &amp; Topics</a>
+        <a class="c_accent h:c_secondary-3" href="">Conditions &amp; Topics</a>
     </h2>
     <ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none a:_block">
         <li class="text-indent_n1 p-l_4">
@@ -20507,7 +20527,7 @@ Links to the other major products in the ACC portfolio
 Markup:
 <!-- ACC Product Links -->
 <section class="acc-websites flex_auto">
-        <h3 class="font_0 font_1:md c_white font_regular font_accent: m-b_3 m-b_4:lg m-t_4:lg m-t_5 text_center text_left:lg w_100">
+        <h3 class="font_0 font_1:md c_white font_regular font_accent m-b_3 m-b_4:lg m-t_4:lg m-t_5 text_center text_left:lg w_100">
             Transforming Education to Knowledge</h3>
         <ul class="ul_none lh_2 font_0">
             <li class="c_white">
@@ -20563,7 +20583,7 @@ The college has a collection of social or secondary platforms we interact with.
 
 Markup:
 <!-- Social -->
-<h4 class="c_white font_regular font_accent: m-b_3 m-b_4:lg text_center text_left:lg">Stay Connected
+<h4 class="c_white font_regular font_accent m-b_3 m-b_4:lg text_center text_left:lg">Stay Connected
 </h4>
 <ul class="flex social-bar ul_none c_white h:c_white m_0">
     <li class="flex_auto m-r_2"><a href="https://twitter.com/accintouch" target="_blank" class="bg_twitter social-bar--button block m-b_0 p_3 c_white-8 h:c_white text_center h:bg_primary-n1"><i class="fab fa-twitter-square"></i></a></li>
@@ -21385,7 +21405,7 @@ Deprecated:  This set of components was never fully utilized and will be removed
 */
 /*
 
-Lorem + Aspect Ratio
+Aspect Ratio
 
 To create an image placeholder use the lorem-loader plus an aspect of the intended image on th parent container while waiting for the image.The placeholder will be a 100% of the container so size the container properly. 
 
@@ -21405,10 +21425,12 @@ Markup:
 
 Styleguide Recipes.InteractiveExtras.Placeholder Aspect Ratio
 */
+div[class*=aspect_],
 .lorem-loader {
   width: 100%;
   overflow: hidden;
 }
+div[class*=aspect_]:before,
 .lorem-loader:before {
   width: 1px;
   height: 0;
@@ -21416,6 +21438,7 @@ Styleguide Recipes.InteractiveExtras.Placeholder Aspect Ratio
   float: left;
   content: "";
 }
+div[class*=aspect_]:after,
 .lorem-loader:after {
   display: table;
   clear: both;
@@ -21454,6 +21477,72 @@ Styleguide Recipes.InteractiveExtras.Placeholder Aspect Ratio
   aspect-ratio: 4 / 1;
 }
 
+@media only screen and (min-width : 768px) {
+  .aspect_8x10\:md {
+    aspect-ratio: 8 / 10;
+  }
+
+  .aspect_1x1\:md {
+    aspect-ratio: 1 / 1;
+  }
+
+  .aspect_2x1\:md {
+    aspect-ratio: 2 / 1;
+  }
+
+  .aspect_4x3\:md {
+    aspect-ratio: 4 / 3;
+  }
+
+  .aspect_3x2\:md {
+    aspect-ratio: 3 / 2;
+  }
+
+  .aspect_16x9\:md {
+    aspect-ratio: 16 / 9;
+  }
+
+  .aspect_21x9\:md {
+    aspect-ratio: 21 / 9;
+  }
+
+  .aspect_4x1\:md {
+    aspect-ratio: 4 / 1;
+  }
+}
+@media only screen and (min-width : 1024px) {
+  .aspect_8x10\:lg {
+    aspect-ratio: 8 / 10;
+  }
+
+  .aspect_1x1\:lg {
+    aspect-ratio: 1 / 1;
+  }
+
+  .aspect_2x1\:lg {
+    aspect-ratio: 2 / 1;
+  }
+
+  .aspect_4x3\:lg {
+    aspect-ratio: 4 / 3;
+  }
+
+  .aspect_3x2\:lg {
+    aspect-ratio: 3 / 2;
+  }
+
+  .aspect_16x9\:lg {
+    aspect-ratio: 16 / 9;
+  }
+
+  .aspect_21x9\:lg {
+    aspect-ratio: 21 / 9;
+  }
+
+  .aspect_4x1\:lg {
+    aspect-ratio: 4 / 1;
+  }
+}
 .lorem-loader {
   -webkit-animation: Gradient 3s ease infinite;
   -moz-animation: Gradient 3s ease infinite;
