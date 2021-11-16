@@ -819,6 +819,18 @@
 
   */
   /*
+  Isolation
+
+  Altering the isolation of an object to create more complicated UI and Layouts when dealing with z-index.  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .isolation_isolate</td><td class='text_right'> isolation :</td><td> isolate </td></tr> <tr><td class='c_primary-n2'> .isolation_auto</td><td class='text_right'> isolation :</td><td> auto </td></tr> <tr><td class='c_primary-n2'> .isolation_inherit</td><td class='text_right'> isolation :</td><td> inherit </td></tr> <tr><td class='c_primary-n2'> .isolation_revert</td><td class='text_right'> isolation :</td><td> revert </td></tr> <tr><td class='c_primary-n2'> .isolation_unset</td><td class='text_right'> isolation :</td><td> unset </td></tr> </tbody></table> 
+
+
+  Markup:
+  <div></div>
+
+  Styleguide Layouts.Isolation
+
+  */
+  /*
   	Vertical Align
 
   	Quickly alter the vertical alignment of the child. Cation the vertical only works on valid combinations. 
@@ -5772,6 +5784,18 @@
 #acc_arches_override .z_5 {
   z-index: 9999;
 }
+#acc_arches_override .vertical-align_top {
+  vertical-align: top;
+}
+#acc_arches_override .vertical-align_middle {
+  vertical-align: middle;
+}
+#acc_arches_override .vertical-align_bottom {
+  vertical-align: bottom;
+}
+#acc_arches_override .vertical-align_baseline {
+  vertical-align: baseline;
+}
 #acc_arches_override .isolation_isolate {
   isolation: isolate;
 }
@@ -5786,18 +5810,6 @@
 }
 #acc_arches_override .isolation_unset {
   isolation: unset;
-}
-#acc_arches_override .vertical-align_top {
-  vertical-align: top;
-}
-#acc_arches_override .vertical-align_middle {
-  vertical-align: middle;
-}
-#acc_arches_override .vertical-align_bottom {
-  vertical-align: bottom;
-}
-#acc_arches_override .vertical-align_baseline {
-  vertical-align: baseline;
 }
 #acc_arches_override .flex > * {
   box-sizing: border-box;
