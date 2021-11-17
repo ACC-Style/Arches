@@ -6164,6 +6164,179 @@ Styleguide Layouts.Display.overflow
 }
 
 /*
+Aspect Ratio
+
+Aspect Ratio lets you define the ratio of width to height of the container.  This is a great utility for images, videos, icons and layouts that need to conform to a ratio shape as it responds. It will set the object to 100% width of the container.  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .aspect_8x10</td><td class='text_right'> aspect-ratio :</td><td> 8 / 10 </td></tr> <tr><td class='c_primary-n2'> .aspect_1x1</td><td class='text_right'> aspect-ratio :</td><td> 1 / 1 </td></tr> <tr><td class='c_primary-n2'> .aspect_2x1</td><td class='text_right'> aspect-ratio :</td><td> 2 / 1 </td></tr> <tr><td class='c_primary-n2'> .aspect_4x3</td><td class='text_right'> aspect-ratio :</td><td> 4 / 3 </td></tr> <tr><td class='c_primary-n2'> .aspect_3x4</td><td class='text_right'> aspect-ratio :</td><td> 3 / 4 </td></tr> <tr><td class='c_primary-n2'> .aspect_3x2</td><td class='text_right'> aspect-ratio :</td><td> 3 / 2 </td></tr> <tr><td class='c_primary-n2'> .aspect_16x9</td><td class='text_right'> aspect-ratio :</td><td> 16 / 9 </td></tr> <tr><td class='c_primary-n2'> .aspect_21x9</td><td class='text_right'> aspect-ratio :</td><td> 21 / 9 </td></tr> <tr><td class='c_primary-n2'> .aspect_4x1</td><td class='text_right'> aspect-ratio :</td><td> 4 / 1 </td></tr> <tr><td class='c_primary-n2'> .aspect_leaderboard</td><td class='text_right'> aspect-ratio :</td><td> 720 / 90 </td></tr> <tr><td class='c_primary-n2'> .aspect_skyscraper</td><td class='text_right'> aspect-ratio :</td><td> 160 / 600 </td></tr> <tr><td class='c_primary-n2'> .aspect_bigbox</td><td class='text_right'> aspect-ratio :</td><td> 300 / 250 </td></tr> <tr><td class='c_primary-n2'> .aspect_billboard</td><td class='text_right'> aspect-ratio :</td><td> 970 / 250 </td></tr> </tbody></table> 
+
+
+
+Styleguide Layouts.AspectRatio
+
+*/
+[class*=aspect_] {
+  width: 100%;
+  overflow: hidden;
+}
+
+.aspect_8x10 {
+  aspect-ratio: 8 / 10;
+}
+
+.aspect_1x1 {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect_2x1 {
+  aspect-ratio: 2 / 1;
+}
+
+.aspect_4x3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect_3x4 {
+  aspect-ratio: 3 / 4;
+}
+
+.aspect_3x2 {
+  aspect-ratio: 3 / 2;
+}
+
+.aspect_16x9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect_21x9 {
+  aspect-ratio: 21 / 9;
+}
+
+.aspect_4x1 {
+  aspect-ratio: 4 / 1;
+}
+
+.aspect_leaderboard {
+  aspect-ratio: 720 / 90;
+}
+
+.aspect_skyscraper {
+  aspect-ratio: 160 / 600;
+}
+
+.aspect_bigbox {
+  aspect-ratio: 300 / 250;
+}
+
+.aspect_billboard {
+  aspect-ratio: 970 / 250;
+}
+
+@media only screen and (min-width : 768px) {
+  .aspect_8x10\:md {
+    aspect-ratio: 8 / 10;
+  }
+
+  .aspect_1x1\:md {
+    aspect-ratio: 1 / 1;
+  }
+
+  .aspect_2x1\:md {
+    aspect-ratio: 2 / 1;
+  }
+
+  .aspect_4x3\:md {
+    aspect-ratio: 4 / 3;
+  }
+
+  .aspect_3x4\:md {
+    aspect-ratio: 3 / 4;
+  }
+
+  .aspect_3x2\:md {
+    aspect-ratio: 3 / 2;
+  }
+
+  .aspect_16x9\:md {
+    aspect-ratio: 16 / 9;
+  }
+
+  .aspect_21x9\:md {
+    aspect-ratio: 21 / 9;
+  }
+
+  .aspect_4x1\:md {
+    aspect-ratio: 4 / 1;
+  }
+
+  .aspect_leaderboard\:md {
+    aspect-ratio: 720 / 90;
+  }
+
+  .aspect_skyscraper\:md {
+    aspect-ratio: 160 / 600;
+  }
+
+  .aspect_bigbox\:md {
+    aspect-ratio: 300 / 250;
+  }
+
+  .aspect_billboard\:md {
+    aspect-ratio: 970 / 250;
+  }
+}
+@media only screen and (min-width : 1024px) {
+  .aspect_8x10\:lg {
+    aspect-ratio: 8 / 10;
+  }
+
+  .aspect_1x1\:lg {
+    aspect-ratio: 1 / 1;
+  }
+
+  .aspect_2x1\:lg {
+    aspect-ratio: 2 / 1;
+  }
+
+  .aspect_4x3\:lg {
+    aspect-ratio: 4 / 3;
+  }
+
+  .aspect_3x4\:lg {
+    aspect-ratio: 3 / 4;
+  }
+
+  .aspect_3x2\:lg {
+    aspect-ratio: 3 / 2;
+  }
+
+  .aspect_16x9\:lg {
+    aspect-ratio: 16 / 9;
+  }
+
+  .aspect_21x9\:lg {
+    aspect-ratio: 21 / 9;
+  }
+
+  .aspect_4x1\:lg {
+    aspect-ratio: 4 / 1;
+  }
+
+  .aspect_leaderboard\:lg {
+    aspect-ratio: 720 / 90;
+  }
+
+  .aspect_skyscraper\:lg {
+    aspect-ratio: 160 / 600;
+  }
+
+  .aspect_bigbox\:lg {
+    aspect-ratio: 300 / 250;
+  }
+
+  .aspect_billboard\:lg {
+    aspect-ratio: 970 / 250;
+  }
+}
+/*
 Width 
 
 Control some basics of the design with max-width and width.   
@@ -22381,127 +22554,11 @@ Markup:
 
 Styleguide Recipes.InteractiveExtras.Placeholder Aspect Ratio
 */
-div[class*=aspect_],
-.lorem-loader {
-  width: 100%;
-  overflow: hidden;
-}
-div[class*=aspect_]:before,
-.lorem-loader:before {
-  width: 1px;
-  height: 0;
-  margin-left: -1px;
-  float: left;
-  content: "";
-}
-div[class*=aspect_]:after,
-.lorem-loader:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.aspect_8x10 {
-  aspect-ratio: 8 / 10;
-}
-
-.aspect_1x1 {
-  aspect-ratio: 1 / 1;
-}
-
-.aspect_2x1 {
-  aspect-ratio: 2 / 1;
-}
-
-.aspect_4x3 {
-  aspect-ratio: 4 / 3;
-}
-
-.aspect_3x2 {
-  aspect-ratio: 3 / 2;
-}
-
-.aspect_16x9 {
-  aspect-ratio: 16 / 9;
-}
-
-.aspect_21x9 {
-  aspect-ratio: 21 / 9;
-}
-
-.aspect_4x1 {
-  aspect-ratio: 4 / 1;
-}
-
-@media only screen and (min-width : 768px) {
-  .aspect_8x10\:md {
-    aspect-ratio: 8 / 10;
-  }
-
-  .aspect_1x1\:md {
-    aspect-ratio: 1 / 1;
-  }
-
-  .aspect_2x1\:md {
-    aspect-ratio: 2 / 1;
-  }
-
-  .aspect_4x3\:md {
-    aspect-ratio: 4 / 3;
-  }
-
-  .aspect_3x2\:md {
-    aspect-ratio: 3 / 2;
-  }
-
-  .aspect_16x9\:md {
-    aspect-ratio: 16 / 9;
-  }
-
-  .aspect_21x9\:md {
-    aspect-ratio: 21 / 9;
-  }
-
-  .aspect_4x1\:md {
-    aspect-ratio: 4 / 1;
-  }
-}
-@media only screen and (min-width : 1024px) {
-  .aspect_8x10\:lg {
-    aspect-ratio: 8 / 10;
-  }
-
-  .aspect_1x1\:lg {
-    aspect-ratio: 1 / 1;
-  }
-
-  .aspect_2x1\:lg {
-    aspect-ratio: 2 / 1;
-  }
-
-  .aspect_4x3\:lg {
-    aspect-ratio: 4 / 3;
-  }
-
-  .aspect_3x2\:lg {
-    aspect-ratio: 3 / 2;
-  }
-
-  .aspect_16x9\:lg {
-    aspect-ratio: 16 / 9;
-  }
-
-  .aspect_21x9\:lg {
-    aspect-ratio: 21 / 9;
-  }
-
-  .aspect_4x1\:lg {
-    aspect-ratio: 4 / 1;
-  }
-}
 .lorem-loader {
   -webkit-animation: Gradient 3s ease infinite;
   -moz-animation: Gradient 3s ease infinite;
+  width: 100%;
+  overflow: hidden;
   background: linear-gradient(-45deg, #b5b5b5, #d0d0d0);
   background-size: 400% 400%;
   color: #fff;

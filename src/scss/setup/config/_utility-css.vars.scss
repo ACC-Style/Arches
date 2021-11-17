@@ -1,4 +1,6 @@
 @use "sass:math";
+@use "sass:list";
+
 $grid-column-count: 12;
 $optimal-characters: 65;
 $active-class-name: "is-active" !default;
@@ -36,6 +38,21 @@ $bp-label_large: "\\3A lg";
 $bp-label_xlarge: "\\3A xl";
 // styleguide:ignore:start
 $value-to-unit: (
+	aspect-ratio:(
+		8x10:list.slash( 8,10 ),
+		1x1:list.slash( 1 , 1 ),
+		2x1:list.slash( 2,1 ),
+		4x3:list.slash( 4,3 ),
+		3x4:list.slash( 3,4 ),
+		3x2:list.slash( 3,2 ),
+		16x9:list.slash( 16 , 9 ),
+		21x9:list.slash( 21,9 ),
+		4x1:list.slash( 4 , 1 ),
+		leaderboard:list.slash( 720, 90 ),
+		skyscraper:list.slash( 160, 600 ),	
+		bigbox:list.slash( 300, 250 ),		
+		billboard:list.slash( 970, 250 ),
+	),
 	size: (
 		0: 0,
 		n5: -2 * $basicSizeMultiplier,
@@ -502,7 +519,17 @@ $value-to-unit: (
 			"-1px -2px 4px rgba(0,0,0,.08), 0 1px 10px hsla(0, 0%, 0%, 0.06), 0 3px 4px rgba(0,0,0,.5), 1px 5px 5px rgba(0,0,0,.03)",
 	),
 );
+
+
 $style-definition: (
+	aspect-ratio: (
+		short-name: ".aspect",
+		css-style: (
+			"aspect-ratio",
+		),
+		long-name: ".aspect-ratio",
+		unit: "aspect-ratio",
+	),
 	background-color: (
 		short-name: ".bg",
 		css-style: (

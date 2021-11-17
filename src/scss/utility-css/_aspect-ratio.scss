@@ -1,0 +1,21 @@
+/*
+Aspect Ratio
+
+Aspect Ratio lets you define the ratio of width to height of the container.  This is a great utility for images, videos, icons and layouts that need to conform to a ratio shape as it responds. It will set the object to 100% width of the container.  #{modifierClassTable(aspect-ratio)} 
+
+
+
+Styleguide Layouts.AspectRatio
+
+*/
+[class *= 'aspect_']{
+	width: 100%;
+	overflow: hidden;
+}
+@include loop-style(aspect-ratio);
+@media #{$medium-up} {
+	@include loop-style(aspect-ratio, $bp-label_medium);
+}
+@media #{$large-up} {
+	@include loop-style(aspect-ratio, $bp-label_large);
+}
