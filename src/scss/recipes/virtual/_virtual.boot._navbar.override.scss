@@ -4,71 +4,86 @@ Header Nav
 The header nav for the website. 
  
 Markup:
-<div class="fixed b_0 flex l_0 r_0 relative:md z_4 bg_acc justify_center">
-    <nav class="flex_auto max-w_90 font_0 font_1:md font_2:lg font_display font_medium m-l_0 navbar navbar-dark navbar-expand-lg p_0 text_center:lg text_left">
-        <ul class="br_none collapsed flex font_1 justify_between lh_0  navbar-toggler shadow_overlap-light text_center ul_none w_100">
-        <li class="flex_auto h:bg_acc-n2">
-            <a class="a:bg_secondary c_white block p-x_2 p-y_4 font_medium  text_center" href="/" target="_self">
-                <i class="fa-fw fa-home-heart fas inline-block m_auto p_2"></i>
-                <span class="block font_n1 text_center">Home</span>
-            </a>
-        </li>
-        <li class="flex_auto h:bg_acc-n2">
-            <a class="a:bg_secondary c_white block p-x_2 p-y_4 font_medium  text_center" href="/on-demand" target="_self">
-                <i class="fa-fw  fa-pause-circle fas inline-block m_auto p_2"></i>
-                <span class="block font_n1 text_center">On Demand</span>
-            </a>
-        </li>
-        <li class="flex_auto h:bg_acc-n2">
-            <a class="a:bg_secondary c_white block p-x_2 p-y_4 font_medium  text_center" href="/eabstracts" target="_blank">
-                <i class="fa-fw  fa-presentation fas inline-block m_auto p_2"></i>
-                <span class="block font_n1 text_center">eAbstracts</span>
-            </a>
-        </li>
-            <li class="flex_grow bg_secondary h:bg_secondary-n2">
-                <a class="c_white block p-x_4 p-y_4 text_center bg_transparent br_0" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
-                    <i class="fa-fw fas inline-block m_auto p_2 fa-ellipsis-h-alt"></i><span class="block font_n1 text_center">More</span>
+<div class="sticky t_0 flex l_0 r_0 relative:md z_4 bg_acc justify_center">
+    <nav class="flex_auto max-w_90 font_n1 font_1:md font_2:lg font_display font_medium m-l_0 navbar navbar-dark navbar-expand-lg p_0 text_center:lg text_left">
+        <!-- Primary Nav that expands on mobile and reveals extra nav items when on desktop. -->
+        <ul class="navbar-nav flex flex_row w_100">
+            <li class="nav-item flex_auto { active }">
+                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_center  text-shadow_black-1 { active }" href="/" target="_self">
+                    <i class="font-size_up fa-fw fas inline-block m_auto fa-home-heart display_none:lg"></i>
+                    <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Home</span>
                 </a>
             </li>
+            <li class="nav-item flex_auto">
+                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_center text-shadow_black-1 " href="/program" target="_self">
+                    <i class="font-size_up fa-fw fas inline-block m_auto fa-calendar-alt display_none:lg"></i>
+                    <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Program</span>
+                </a>
+            </li>
+            <li class="nav-item flex_auto ">
+                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_center  text-shadow_black-1 { disabled cursor_not-allowed  bg_secondary c_secondary-3 opacity_7 }" href="/faculty" target="_blank">
+                    <i class="font-size_up fa-fw fas inline-block m_auto fa-users display_none:lg"></i>
+                    <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Faculty</span>
+                </a>
+            </li>
+            <!-- menu toggle for mobile -->
+            <li class="nav-item flex_auto  block display_none:lg">
+                <a class="bg_secondary h:bg_secondary-n2 nav-link font_medium h:c_white text_center text-shadow_black-1" aria-expanded="false" aria-label="Toggle Extra Nav"
+                 data-bs-toggle="collapse" data-bs-target="#ExpandingMobileMenu" aria-controls="ExpandingMobileMenu"
+                >
+                    <i class="font-size_up fa-fw fas inline-block m_auto p_2 fa-ellipsis-h-alt"></i>
+                    <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">More</span>
+                </a>
+            </li>
+            <!-- menu items that hide when in mobile under the expanded area -->
+            <li class="nav-item flex_auto display_none block:lg">
+                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
+                        <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">About</span>
+                    </a>
+                </li>
+                <li class="nav-item flex_auto display_none block:lg">
+                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/expo" target="_self">
+                       <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Expo</span>
+                    </a>
+                </li>
+                <li class="nav-item flex_auto display_none block:lg">
+                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/engage" target="_self">
+                        <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Engage</span>
+                    </a>
+                </li>
+                <li class="nav-item flex_auto display_none block:lg">
+                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/engage" target="_self">
+                        <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Credits</span>
+                    </a>
+                </li>
         </ul>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav flex w_100">
-            <li class="nav-item flex_auto display_none block:lg">
-                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 active" href="/" target="_self">
-                    <i class="fa-fw fas fa-home-heart"></i>
-                </a>
-            </li>
-            <li class="nav-item flex_auto display_none block:lg">
-                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/on-demand" target="_self">
-                    On Demand
-                </a>
-            </li>
-            <li class="nav-item flex_auto display_none block:lg">
-                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/eabstracts" target="_blank">
-                    eAbstracts
-                </a>
-            </li>
-            <li class="nav-item flex_auto">
-                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
-                    Convocation
-                </a>
-            </li>
-            <li class="nav-item flex_auto">
-                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/expo" target="_self">
-                    Expo
-                </a>
-            </li>
-            <li class="nav-item flex_auto">
-                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/engage" target="_self">
-                    Engage
-                </a>
-            </li>
-            </ul>
+        <!-- Expanding Mobile Menu -->
+        <div class="collapse navbar-collapse" id="ExpandingMobileMenu">
+            <ul class="navbar-nav flex shadow_emboss-light flex_column w_100 font_1 bg_black-2 display_none:lg" >
+                <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
+                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
+                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/credits" target="_self">
+                        Credits
+                    </a>
+                </li>
+                <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
+                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/expo" target="_self">
+                        Expo
+                    </a>
+                </li>
+                <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
+                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/engage" target="_self">
+                        Engage
+                    </a>
+                </li>
+            </ul> 
         </div>
     </nav>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
  
 Weight: 0
  

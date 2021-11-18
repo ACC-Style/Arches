@@ -11515,7 +11515,7 @@ Styleguide Interaction.States.Hover
   Styleguide Interaction.States.Hover.background
 
  */
-a:focus {
+a:focus-visible {
   color: unset;
 }
 
@@ -11524,8 +11524,8 @@ a:focus {
   cursor: pointer;
   transition: all ease-out 0.2s;
 }
-*[class*="hover:"]:focus,
-*[class*="h:"]:focus {
+*[class*="hover:"]:focus-visible,
+*[class*="h:"]:focus-visible {
   border-color: inherit;
   background-color: inherit;
   color: inherit;
@@ -30049,7 +30049,7 @@ Styleguide  Bootstrap.Carousel
   color: inherit;
 }
 
-.navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus, .navbar-primary .nav-item:active {
+.navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus-visible, .navbar-primary .nav-item:active {
   border-top-color: #16a385;
   border-bottom-color: #fff;
   background-color: #fff;
@@ -30060,7 +30060,7 @@ Styleguide  Bootstrap.Carousel
     border-top: 0.25rem #004176 solid;
     border-bottom: 0.25rem #004176 solid;
   }
-  .navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus, .navbar-primary .nav-item:active {
+  .navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus-visible, .navbar-primary .nav-item:active {
     border-top-color: #16a385;
     border-bottom-color: #fff;
     background-color: #fff;
@@ -30073,29 +30073,29 @@ Styleguide  Bootstrap.Carousel
     border-top: 0.25rem #004176 solid;
     border-bottom: 0.25rem #004176 solid;
   }
-  .navbar-primary .navbar-nav .nav-item .nav-link, .navbar-primary .navbar-nav .nav-item .nav-link:hover, .navbar-primary .navbar-nav .nav-item .nav-link:focus, .navbar-primary .navbar-nav .nav-item .nav-link:active {
+  .navbar-primary .navbar-nav .nav-item .nav-link, .navbar-primary .navbar-nav .nav-item .nav-link:hover, .navbar-primary .navbar-nav .nav-item .nav-link:focus-visible, .navbar-primary .navbar-nav .nav-item .nav-link:active {
     color: #fff;
   }
-  .navbar-primary .navbar-nav .nav-item:hover, .navbar-primary .navbar-nav .nav-item:focus, .navbar-primary .navbar-nav .nav-item:active {
+  .navbar-primary .navbar-nav .nav-item:hover, .navbar-primary .navbar-nav .nav-item:focus-visible, .navbar-primary .navbar-nav .nav-item:active {
     border-top-color: #16a385;
     border-bottom-color: #fff;
     background-color: #fff;
     color: #004176;
   }
-  .navbar-primary .navbar-nav .nav-item:hover .nav-link, .navbar-primary .navbar-nav .nav-item:hover .nav-link:hover, .navbar-primary .navbar-nav .nav-item:hover .nav-link:focus, .navbar-primary .navbar-nav .nav-item:hover .nav-link:active, .navbar-primary .navbar-nav .nav-item:focus .nav-link, .navbar-primary .navbar-nav .nav-item:focus .nav-link:hover, .navbar-primary .navbar-nav .nav-item:focus .nav-link:focus, .navbar-primary .navbar-nav .nav-item:focus .nav-link:active, .navbar-primary .navbar-nav .nav-item:active .nav-link, .navbar-primary .navbar-nav .nav-item:active .nav-link:hover, .navbar-primary .navbar-nav .nav-item:active .nav-link:focus, .navbar-primary .navbar-nav .nav-item:active .nav-link:active {
+  .navbar-primary .navbar-nav .nav-item:hover .nav-link, .navbar-primary .navbar-nav .nav-item:hover .nav-link:hover, .navbar-primary .navbar-nav .nav-item:hover .nav-link:focus-visible, .navbar-primary .navbar-nav .nav-item:hover .nav-link:active, .navbar-primary .navbar-nav .nav-item:focus-visible .nav-link, .navbar-primary .navbar-nav .nav-item:focus-visible .nav-link:hover, .navbar-primary .navbar-nav .nav-item:focus-visible .nav-link:focus-visible, .navbar-primary .navbar-nav .nav-item:focus-visible .nav-link:active, .navbar-primary .navbar-nav .nav-item:active .nav-link, .navbar-primary .navbar-nav .nav-item:active .nav-link:hover, .navbar-primary .navbar-nav .nav-item:active .nav-link:focus-visible, .navbar-primary .navbar-nav .nav-item:active .nav-link:active {
     color: #004176;
-  }
-  .collapse.block\:lg {
-    display: block;
   }
 }
 
 @media only screen and (min-width : 1024px) {
+  .collapse.block\:lg {
+    display: block;
+  }
 }
 .dropdown-item {
   color: #157894;
 }
-.dropdown-item:hover, .dropdown-item:focus {
+.dropdown-item:hover, .dropdown-item:focus-visible {
   background-color: #16a385;
   color: white;
 }
