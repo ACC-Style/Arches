@@ -1,7 +1,19 @@
 /*
+Agenda Item
+ 
+Description:
+Agenda items are sessions that are scheduled for a specific date, location, and time.
+ 
+Weight:0
+ 
+Styleguide Data.Agenda
+*/
+
+/*
 Agenda ID
  
-Description: The ID given to an Agenda. This number is unique to the Agenda and is incremented for each new Agenda created.
+Description:
+The ID given to an Agenda. This number is unique to the Agenda and is incremented for each new Agenda created.
  
 Markup:
 101
@@ -10,32 +22,53 @@ Weight:1
  
 Styleguide Data.Agenda.ID
 */
+
 /*
 Live Time
  
-Description: The time at which a Agenda is live.
+Description:
+The time at which a Agenda is live.
  
-Markup: Saturday, Nov 20, 2021 @ 11:15 – 11:45 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr>
+Markup: @ 11:15 AM – 11:45 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr>
 
- 
+FORMAT: 12 hour with AM/PM and Abbreviation of Timezone.
+
 Weight:0
  
 Styleguide Data.Agenda.LiveTime
 */
 
 /*
-Agenda On Demand Release Time
+Live Date
  
-Description: There is usually a delay to when recording will make it to on demand. This is the time that recording will be available.
+Description:
+There is usually a delay to when recording will make it to on demand. This is the time that recording will be available.
+ 
+Markup: Saturday, Nov 20, 2021 
+
+FORMAT: Day-of-Week, Month-Abbreviation  Day, Year
+
+Weight:0
+ 
+Styleguide Data.Agenda.LiveDate
+*/
+
+/*
+On Demand Release Date and Time
+ 
+Description:
+There is usually a delay to when recording will make it to on demand. This is the time that recording will be available.
  
 Markup: Saturday, Nov 20, 2021 @ 8:00 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr>
 
+FORMAT: Day-of-Week, Month-Abbreviation  Day, Year @ Hour:Minute AM/PM Abbreviation-of-Timezone
  
 Weight:0
  
 Styleguide Data.Agenda.onDemandReleaseTime
 */
 
+ 
 
 
 /*
@@ -53,7 +86,8 @@ Styleguide Data.Session.Subtitle
 /*
 Session Title
  
-Description: The title of a Session.
+Description:
+The title of a Session.
  
 Markup:
 Cardiovascular Update for the Clinician III
@@ -62,10 +96,26 @@ Weight:0
  
 Styleguide Data.Session.Title
 */
+
+/*
+Lorem Ipsum
+ 
+Description:
+The title of a Session.
+ 
+Markup:
+{{modifier_class}}
+ 
+Weight:0
+ 
+Styleguide Data.LoremIpsum
+*/
+
 /*
 Session Number
  
-Description: The ID given to a session
+Description:
+The ID given to a session
  
 Markup:
 3652
@@ -82,11 +132,7 @@ Session Description
 The description of a session.
  
 Markup:
-<p> Electrical Disorders - Rhythm and Conduction Disorders. Aut corrupti nesciunt natus nisi maxime cupiditate iusto et dolores.</p>
-<ul>
-    <li>quam suscipit neque</li>
-    <li>rerum eius vel</li>
-</ul>
+<p>Maxime et ea adipisci voluptas. Omnis nobis recusandae alias eius sed ipsam aut. Ipsam dolore qui. Soluta laudantium quae assumenda ipsa tempore voluptas et culpa. Et praesentium quasi. Quas ratione vero aspernatur.</p>
  
 Weight:0
  
@@ -96,10 +142,12 @@ Styleguide Data.Session.Subtitle
 
 
 
+
 /*
 Presentation 
  
-Description: A presentation
+Description:
+A presentation
 
 Weight:0
  
@@ -108,7 +156,8 @@ Styleguide Data.Presentation
 /*
 Presentation Subtitle
  
-Description: The subtitle of a presentation
+Description:
+The subtitle of a presentation
  
 Markup:Drug Coated Balloons
 
@@ -120,20 +169,34 @@ Styleguide Data.Presentation.Subtitle
 /*
 Presentation Title
  
-Description: The title of a presentation
+Description:
+The title of a presentation
  
 Markup:
-Status and Future of the Technology
+New York Cardiovascular Symposium 2021 Welcome Video and Introduction of Session and Faculty
  
 Weight:0
  
 Styleguide Data.Presentation.Title
 */
+/*
+Presentation Live Time
 
+Description:
+The Live Time of a Presentation
+
+Markup:
+11:45 – 11:49 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr>
+
+Weight:0
+ 
+Styleguide Data.Presentation.LiveTime
+*/
 /*
 Presentation ID
  
-Description: Unique system generated identifier for a presentation.
+Description:
+Unique system generated identifier for a presentation.
  
 Markup:
 15612
@@ -147,7 +210,8 @@ Styleguide Data.Presentation.ID
 /*
 Faculty 
  
-Description: An educator who created or participated in a presentation
+Description:
+An educator who created or participated in a presentation
 
 Weight:50
  
@@ -156,32 +220,106 @@ Styleguide Data.Faculty
 
 
 /*
-Faculty Full Name
+Photo
  
-Description: The full name of the faculty member
+Description:
+A photo of the faculty member
  
-Markup: Dr Pepper Soda
- 
+Markup:
+<img
+    class="aspect_1x1 w_100"
+    src="https://i.pravatar.cc/300"
+    alt="{{> "Data.Faculty.FullName" }}"
+/>
+
+MarkupWrapperClasses: max-w_30
+
+FORMAT: 300px by 300px
+
 Weight:0
+
+Styleguide Data.Faculty.Photo
+*/
+
+/*
+Full Name
+ 
+Description:
+The full name of the faculty member
+ 
+Markup: Pepper H. Soda, MD, FACC
+ 
+
+FORMAT: First Name MI (if known) Last Name, Optional Degree, Optional ACC Member Type
+
+Weight:0
+
+
  
 Styleguide Data.Faculty.FullName
 */
+
 /*
-Faculty Location
+Location
  
-Description: The location of the faculty member
+Description:
+The location of the faculty member
+ 
+Markup: New York, NY, USA
+ 
+Weight:0
+
+FORMAT: City, State, Country |  if the country is the same as the conference country the country can be dropped. 
+
+Styleguide Data.Faculty.Location
+*/
+
+/*
+Institution
+ 
+Description:
+the roles of the faculty member within the session
  
 Markup:
-Dr Pepper Soda
+Mount Sugarloaf Hospital
  
 Weight:0
  
-Styleguide Data.Faculty.Location
+Styleguide Data.Faculty.Institution
 */
 /*
-Faculty Role
+Institutional Title
  
-Description: the roles of the faculty member within the session
+Description:
+the roles of the faculty member within the session
+ 
+Markup:
+Physician-in-Chief
+ 
+Weight:0
+ 
+Styleguide Data.Faculty.InstitutionTitle
+*/
+
+/*
+Twitter Handle
+ 
+Description:
+The handle of the faculty member on twitter
+ 
+Markup:
+Tweat_DrSoda
+ 
+Weight:0
+ 
+Styleguide Data.Faculty.TwitterHandle
+*/
+
+/*
+Role
+ 
+Description:
+the roles of the faculty member within the session
  
 Markup:
 Co-Chair
@@ -191,12 +329,27 @@ Weight:0
 Styleguide Data.Faculty.Role
 */
 /*
-Faculty ID
+Bio
  
-Description: this id can both be used to link to the faculty member's page, the member's image, and disclosures
+Description:
+simple html text that describes the faculty member
  
 Markup:
-1221
+<p>Omnis laboriosam vero dolorum harum nihil debitis placeat eligendi. Molestiae voluptatibus nemo eveniet. Vero ipsum eius. Alias sapiente quidem dolore dolorem atque alias est.</p>
+ 
+Weight:0
+ 
+Styleguide Data.Faculty.Bio
+*/
+
+/*
+Identification Number
+ 
+Description:
+this id can both be used to link to the faculty member's page, the member's image, and disclosures
+ 
+Markup:
+122154254
  
 Weight:0
  

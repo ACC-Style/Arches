@@ -21,8 +21,11 @@ Markup:
         <div class="br-b_1 br_solid br_primary-n1">
             <div class="p_4 p-b_2 flex flex_column flex_row:lg">
                 <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block"><span class="font_bold p-r_3">101</span>Nothing Left Behind: Drug Coated Balloon in Coronary Intervention</span>
-                    <span class="c_accent  font-size_down-1">Sunday, November 2, 2021  @ 5:10  - 6:10 PM</span>
+                    <span class="block">
+                        <strong class="font_bold p-r_3">{{> "Data.Agenda.ID" }}</strong>
+                        {{> "Data.Session.Title" }}
+                    </span>
+                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate" }}  {{> "Data.Agenda.LiveTime" }}</span>
                 </h3>
                 <div class="flex_grow m-l_auto:lg">
                     <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
@@ -33,15 +36,10 @@ Markup:
             </div>
             <h4 class="font-size_up p-x_4 c_primary font_medium">Presentations</h4>
             <ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9 font_ui">
-                    <span class="font-size_up-1 block font_display">Drug Coated Balloons: Present Status and Future of the Technology </span>
-                    <span class="font-size-down opacity_7">Drs. Scheller (Germany), Park (Korea), Qiu (China)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">11:15 – 11:45 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
                 <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white">
-                    <span class="font-size_up-1 block font_display">Intravascular Imaging or Physiology to Optimize the Effect of Drug Coated Balloon </span>
-                    <span class="font-size-down opacity_7 font_ui">Park (Korea)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">11:45 – 11:49 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
+                    <span class="font-size_up-1 block font_display">{{> "Data.Presentation.Title" }}</span>
+                    <span class="font-size-down opacity_7 font_ui"><strong class="c_primary">{{> "Data.Faculty.Role" }}:</strong>{{> "Data.Faculty.FullName" }} ({{> "Data.Faculty.Location" }})</span>
+                    <span class="font-size-down-1 opacity_6 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
                 </li>
                 <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
                     <span class="font-size_up-1 block font_display">Antiplatelet Regimen After Drug Coated Balloon </span>
@@ -91,7 +89,7 @@ Markup:
         <div class="br-b_1 br_primary-n1 br_solid">
             <div class="p_4 p-b_2 flex flex_column flex_row:lg">
                 <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_1 p-r_4:lg">
-                    <span class="block c_black-6 uppercase font_bold font-size_down-1"> Session I: Evolving New Frontiers of Imaging Ready for Practice</span><span class="block font-size_up-1 font_display lh_1">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of session and faculty by Dr. Itchhaporia </span><span class="block c_black font-size_down-1 font_ui lh_3 opacity_7">Dipti Itchhaporia, MD, FACC (Chair)</span>
+                    <span class="block c_black-6 uppercase font_bold font-size_down-1"> Session I: Evolving New Frontiers of Imaging Ready for Practice</span><span class="block font-size_up-1 font_display lh_1">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of session and Faculty by Dr. Itchhaporia </span><span class="block c_black font-size_down-1 font_ui lh_3 opacity_7">Dipti Itchhaporia, MD, FACC (Chair)</span>
                 </h3>
                 <div class="flex_grow m-l_auto:lg">
                     <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
@@ -133,4 +131,50 @@ Weight: 10
  
 Styleguide Recipes Virtual.Sessions.Simple On Demand
 
+*/
+
+/*
+Player
+ 
+Description: 
+ 
+Markup:
+<div class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3">
+    <div class="flex_auto w_100">
+        <div class="player hd full">
+            <div class="bg_acc aspect_16x9 c_white text_center flex justify_center">VIDEO</div>
+            <header class="font_3 font_display c_primary-n1 p-y_3">
+                {{> "Data.Session.Title"}}
+                <span class="block font-size_down-2 lh_1"><strong>{{> "Data.Faculty.Role"}}:</strong> {{> "Data.Faculty.FullName"}} </span>
+            </header>
+        </div>
+    </div>
+    <div class="flex_auto max-w_25 w_100">
+        <div class="br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column" id="panel-chat" style="height:100%">
+            <div class="panel-heading">
+                <h4 class="panel-title font_bold font_display c_primary">Live Chat</h4>
+                <p class="welcome">Welcome <b> Matt Watier </b></p>
+            </div>
+            <div id="wrapper" class="scrollbar-mini p-r_3 reading-typography panel-body loading-log shadow_emboss-light flex_auto m-b_4 br_radius br_1 br_solid br_black-2 p_3"> LOG DATA </div>
+            <div class="panel-footer flex_none m-t_auto">
+                <form name="message" action="">
+                    <div class="form-group flex flex_row nowrap">
+                        <input name="usermsg" type="text" id="usermsg" class="form-control br-br_square br-tr_square flex_auto" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAUBJREFUOBGVVE2ORUAQLvIS4gwzEysHkHgnkMiEc4zEJXCMNwtWTmDh3UGcYoaFhZUFCzFVnu4wIaiE+vvq6+6qTgthGH6O4/jA7x1OiCAIPwj7CoLgSXDxSjEVzAt9k01CBKdWfsFf/2WNuEwc2YqigKZpK9glAlVVwTTNbQJZlnlCkiTAZnF/mePB2biRdhwHdF2HJEmgaRrwPA+qqoI4jle5/8XkXzrCFoHg+/5ICdpm13UTho7Q9/0WnsfwiL/ouHwHrJgQR8WEwVG+oXpMPaDAkdzvd7AsC8qyhCiKJjiRnCKwbRsMw9hcQ5zv9maSBeu6hjRNYRgGFuKaCNwjkjzPoSiK1d1gDDecQobOBwswzabD/D3Np7AHOIrvNpHmPI+Kc2RZBm3bcp8wuwSIot7QQ0PznoR6wYSK0Xb/AGVLcWwc7Ng3AAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                        <input name="submitmsg" type="submit" id="submitmsg" value="Add" class="btn btn-primary br-tl_square br-bl_square flex_none">
+                        <input type="hidden" name="user_client_portal_reg_id" id="user_client_portal_reg_id" value="10">
+                        <input type="hidden" name="chat_id" id="chat_id" value="2">
+                        <input type="hidden" name="client_portal_presentation_id" id="client_portal_presentation_id" value="2">
+                        <input type="hidden" name="client_portal_id" id="client_portal_id" value="1">
+                        <input type="hidden" name="screen_name" id="screen_name" value=" Matt   Watier ">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+Weight:0
+ 
+Styleguide Recipes Virtual.Player
 */

@@ -448,7 +448,7 @@ Styleguide Anatomy.ExtraCredit
   margin-top: 8px;
   margin-top: 0.5rem;
 }
-.reading-typography accr {
+.reading-typography abbr {
   border-bottom: 1px dotted #16a385;
 }
 .reading-typography hr {
@@ -20841,9 +20841,20 @@ Styleguide Recipes.Ordered Cards
 */
 /* content Recipes.250 */
 /*
+Agenda Item
+
+Description:
+Agenda items are sessions that are scheduled for a specific date, location, and time.
+
+Weight:0
+
+Styleguide Data.Agenda
+*/
+/*
 Agenda ID
 
-Description: The ID given to an Agenda. This number is unique to the Agenda and is incremented for each new Agenda created.
+Description:
+The ID given to an Agenda. This number is unique to the Agenda and is incremented for each new Agenda created.
 
 Markup:
 101
@@ -20855,22 +20866,40 @@ Styleguide Data.Agenda.ID
 /*
 Live Time
 
-Description: The time at which a Agenda is live.
+Description:
+The time at which a Agenda is live.
 
-Markup: Saturday, Nov 20, 2021 @ 11:15 – 11:45 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr>
+Markup: @ 11:15 AM – 11:45 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr>
 
+FORMAT: 12 hour with AM/PM and Abbreviation of Timezone.
 
 Weight:0
 
 Styleguide Data.Agenda.LiveTime
 */
 /*
-Agenda On Demand Release Time
+Live Date
 
-Description: There is usually a delay to when recording will make it to on demand. This is the time that recording will be available.
+Description:
+There is usually a delay to when recording will make it to on demand. This is the time that recording will be available.
+
+Markup: Saturday, Nov 20, 2021 
+
+FORMAT: Day-of-Week, Month-Abbreviation  Day, Year
+
+Weight:0
+
+Styleguide Data.Agenda.LiveDate
+*/
+/*
+On Demand Release Date and Time
+
+Description:
+There is usually a delay to when recording will make it to on demand. This is the time that recording will be available.
 
 Markup: Saturday, Nov 20, 2021 @ 8:00 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr>
 
+FORMAT: Day-of-Week, Month-Abbreviation  Day, Year @ Hour:Minute AM/PM Abbreviation-of-Timezone
 
 Weight:0
 
@@ -20891,7 +20920,8 @@ Styleguide Data.Session.Subtitle
 /*
 Session Title
 
-Description: The title of a Session.
+Description:
+The title of a Session.
 
 Markup:
 Cardiovascular Update for the Clinician III
@@ -20901,9 +20931,23 @@ Weight:0
 Styleguide Data.Session.Title
 */
 /*
+Lorem Ipsum
+
+Description:
+The title of a Session.
+
+Markup:
+{{modifier_class}}
+
+Weight:0
+
+Styleguide Data.LoremIpsum
+*/
+/*
 Session Number
 
-Description: The ID given to a session
+Description:
+The ID given to a session
 
 Markup:
 3652
@@ -20918,11 +20962,7 @@ Session Description
 The description of a session.
 
 Markup:
-<p> Electrical Disorders - Rhythm and Conduction Disorders. Aut corrupti nesciunt natus nisi maxime cupiditate iusto et dolores.</p>
-<ul>
-    <li>quam suscipit neque</li>
-    <li>rerum eius vel</li>
-</ul>
+<p>Maxime et ea adipisci voluptas. Omnis nobis recusandae alias eius sed ipsam aut. Ipsam dolore qui. Soluta laudantium quae assumenda ipsa tempore voluptas et culpa. Et praesentium quasi. Quas ratione vero aspernatur.</p>
 
 Weight:0
 
@@ -20931,7 +20971,8 @@ Styleguide Data.Session.Subtitle
 /*
 Presentation 
 
-Description: A presentation
+Description:
+A presentation
 
 Weight:0
 
@@ -20940,7 +20981,8 @@ Styleguide Data.Presentation
 /*
 Presentation Subtitle
 
-Description: The subtitle of a presentation
+Description:
+The subtitle of a presentation
 
 Markup:Drug Coated Balloons
 
@@ -20952,19 +20994,34 @@ Styleguide Data.Presentation.Subtitle
 /*
 Presentation Title
 
-Description: The title of a presentation
+Description:
+The title of a presentation
 
 Markup:
-Status and Future of the Technology
+New York Cardiovascular Symposium 2021 Welcome Video and Introduction of Session and Faculty
 
 Weight:0
 
 Styleguide Data.Presentation.Title
 */
 /*
+Presentation Live Time
+
+Description:
+The Live Time of a Presentation
+
+Markup:
+11:45 – 11:49 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr>
+
+Weight:0
+
+Styleguide Data.Presentation.LiveTime
+*/
+/*
 Presentation ID
 
-Description: Unique system generated identifier for a presentation.
+Description:
+Unique system generated identifier for a presentation.
 
 Markup:
 15612
@@ -20976,39 +21033,109 @@ Styleguide Data.Presentation.ID
 /*
 Faculty 
 
-Description: An educator who created or participated in a presentation
+Description:
+An educator who created or participated in a presentation
 
 Weight:50
 
 Styleguide Data.Faculty
 */
 /*
-Faculty Full Name
+Photo
 
-Description: The full name of the faculty member
+Description:
+A photo of the faculty member
 
-Markup: Dr Pepper Soda
+Markup:
+<img
+    class="aspect_1x1 w_100"
+    src="https://i.pravatar.cc/300"
+    alt="{{> "Data.Faculty.FullName" }}"
+/>
+
+MarkupWrapperClasses: max-w_30
+
+FORMAT: 300px by 300px
 
 Weight:0
+
+Styleguide Data.Faculty.Photo
+*/
+/*
+Full Name
+
+Description:
+The full name of the faculty member
+
+Markup: Pepper H. Soda, MD, FACC
+
+
+FORMAT: First Name MI (if known) Last Name, Optional Degree, Optional ACC Member Type
+
+Weight:0
+
+
 
 Styleguide Data.Faculty.FullName
 */
 /*
-Faculty Location
+Location
 
-Description: The location of the faculty member
+Description:
+The location of the faculty member
 
-Markup:
-Dr Pepper Soda
+Markup: New York, NY, USA
 
 Weight:0
+
+FORMAT: City, State, Country |  if the country is the same as the conference country the country can be dropped. 
 
 Styleguide Data.Faculty.Location
 */
 /*
-Faculty Role
+Institution
 
-Description: the roles of the faculty member within the session
+Description:
+the roles of the faculty member within the session
+
+Markup:
+Mount Sugarloaf Hospital
+
+Weight:0
+
+Styleguide Data.Faculty.Institution
+*/
+/*
+Institutional Title
+
+Description:
+the roles of the faculty member within the session
+
+Markup:
+Physician-in-Chief
+
+Weight:0
+
+Styleguide Data.Faculty.InstitutionTitle
+*/
+/*
+Twitter Handle
+
+Description:
+The handle of the faculty member on twitter
+
+Markup:
+Tweat_DrSoda
+
+Weight:0
+
+Styleguide Data.Faculty.TwitterHandle
+*/
+/*
+Role
+
+Description:
+the roles of the faculty member within the session
 
 Markup:
 Co-Chair
@@ -21018,12 +21145,26 @@ Weight:0
 Styleguide Data.Faculty.Role
 */
 /*
-Faculty ID
+Bio
 
-Description: this id can both be used to link to the faculty member's page, the member's image, and disclosures
+Description:
+simple html text that describes the faculty member
 
 Markup:
-1221
+<p>Omnis laboriosam vero dolorum harum nihil debitis placeat eligendi. Molestiae voluptatibus nemo eveniet. Vero ipsum eius. Alias sapiente quidem dolore dolorem atque alias est.</p>
+
+Weight:0
+
+Styleguide Data.Faculty.Bio
+*/
+/*
+Identification Number
+
+Description:
+this id can both be used to link to the faculty member's page, the member's image, and disclosures
+
+Markup:
+122154254
 
 Weight:0
 
@@ -21611,8 +21752,11 @@ Markup:
         <div class="br-b_1 br_solid br_primary-n1">
             <div class="p_4 p-b_2 flex flex_column flex_row:lg">
                 <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block"><span class="font_bold p-r_3">101</span>Nothing Left Behind: Drug Coated Balloon in Coronary Intervention</span>
-                    <span class="c_accent  font-size_down-1">Sunday, November 2, 2021  @ 5:10  - 6:10 PM</span>
+                    <span class="block">
+                        <strong class="font_bold p-r_3">{{> "Data.Agenda.ID" }}</strong>
+                        {{> "Data.Session.Title" }}
+                    </span>
+                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate" }}  {{> "Data.Agenda.LiveTime" }}</span>
                 </h3>
                 <div class="flex_grow m-l_auto:lg">
                     <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
@@ -21623,15 +21767,10 @@ Markup:
             </div>
             <h4 class="font-size_up p-x_4 c_primary font_medium">Presentations</h4>
             <ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9 font_ui">
-                    <span class="font-size_up-1 block font_display">Drug Coated Balloons: Present Status and Future of the Technology </span>
-                    <span class="font-size-down opacity_7">Drs. Scheller (Germany), Park (Korea), Qiu (China)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">11:15 – 11:45 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
                 <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white">
-                    <span class="font-size_up-1 block font_display">Intravascular Imaging or Physiology to Optimize the Effect of Drug Coated Balloon </span>
-                    <span class="font-size-down opacity_7 font_ui">Park (Korea)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">11:45 – 11:49 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
+                    <span class="font-size_up-1 block font_display">{{> "Data.Presentation.Title" }}</span>
+                    <span class="font-size-down opacity_7 font_ui"><strong class="c_primary">{{> "Data.Faculty.Role" }}:</strong>{{> "Data.Faculty.FullName" }} ({{> "Data.Faculty.Location" }})</span>
+                    <span class="font-size-down-1 opacity_6 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
                 </li>
                 <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
                     <span class="font-size_up-1 block font_display">Antiplatelet Regimen After Drug Coated Balloon </span>
@@ -21680,7 +21819,7 @@ Markup:
         <div class="br-b_1 br_primary-n1 br_solid">
             <div class="p_4 p-b_2 flex flex_column flex_row:lg">
                 <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_1 p-r_4:lg">
-                    <span class="block c_black-6 uppercase font_bold font-size_down-1"> Session I: Evolving New Frontiers of Imaging Ready for Practice</span><span class="block font-size_up-1 font_display lh_1">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of session and faculty by Dr. Itchhaporia </span><span class="block c_black font-size_down-1 font_ui lh_3 opacity_7">Dipti Itchhaporia, MD, FACC (Chair)</span>
+                    <span class="block c_black-6 uppercase font_bold font-size_down-1"> Session I: Evolving New Frontiers of Imaging Ready for Practice</span><span class="block font-size_up-1 font_display lh_1">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of session and Faculty by Dr. Itchhaporia </span><span class="block c_black font-size_down-1 font_ui lh_3 opacity_7">Dipti Itchhaporia, MD, FACC (Chair)</span>
                 </h3>
                 <div class="flex_grow m-l_auto:lg">
                     <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
@@ -21722,6 +21861,51 @@ Weight: 10
 
 Styleguide Recipes Virtual.Sessions.Simple On Demand
 
+*/
+/*
+Player
+
+Description: 
+
+Markup:
+<div class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3">
+    <div class="flex_auto w_100">
+        <div class="player hd full">
+            <div class="bg_acc aspect_16x9 c_white text_center flex justify_center">VIDEO</div>
+            <header class="font_4 font_display c_primary-n1 p-y_3">
+                {{> "Data.Session.Title"}}
+                <span class="block font-size_down-2 lh_1"><strong>{{> "Data.Faculty.Role"}}:</strong> {{> "Data.Faculty.FullName"}} </span>
+            </header>
+        </div>
+    </div>
+    <div class="flex_auto max-w_25 w_100">
+        <div class="br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column" id="panel-chat" style="height:100%">
+            <div class="panel-heading">
+                <h4 class="panel-title font_bold font_display c_primary">Live Chat</h4>
+                <p class="welcome">Welcome <b> Matt Watier </b></p>
+            </div>
+            <div id="wrapper" class="scrollbar-mini p-r_3 reading-typography panel-body loading-log shadow_emboss-light flex_auto m-b_4 br_radius br_1 br_solid br_black-2 p_3"> LOG DATA </div>
+            <div class="panel-footer flex_none m-t_auto">
+                <form name="message" action="">
+                    <div class="form-group flex flex_row nowrap">
+                        <input name="usermsg" type="text" id="usermsg" class="form-control br-br_square br-tr_square flex_auto" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAUBJREFUOBGVVE2ORUAQLvIS4gwzEysHkHgnkMiEc4zEJXCMNwtWTmDh3UGcYoaFhZUFCzFVnu4wIaiE+vvq6+6qTgthGH6O4/jA7x1OiCAIPwj7CoLgSXDxSjEVzAt9k01CBKdWfsFf/2WNuEwc2YqigKZpK9glAlVVwTTNbQJZlnlCkiTAZnF/mePB2biRdhwHdF2HJEmgaRrwPA+qqoI4jle5/8XkXzrCFoHg+/5ICdpm13UTho7Q9/0WnsfwiL/ouHwHrJgQR8WEwVG+oXpMPaDAkdzvd7AsC8qyhCiKJjiRnCKwbRsMw9hcQ5zv9maSBeu6hjRNYRgGFuKaCNwjkjzPoSiK1d1gDDecQobOBwswzabD/D3Np7AHOIrvNpHmPI+Kc2RZBm3bcp8wuwSIot7QQ0PznoR6wYSK0Xb/AGVLcWwc7Ng3AAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                        <input name="submitmsg" type="submit" id="submitmsg" value="Add" class="btn btn-primary br-tl_square br-bl_square flex_none">
+                        <input type="hidden" name="user_client_portal_reg_id" id="user_client_portal_reg_id" value="10">
+                        <input type="hidden" name="chat_id" id="chat_id" value="2">
+                        <input type="hidden" name="client_portal_presentation_id" id="client_portal_presentation_id" value="2">
+                        <input type="hidden" name="client_portal_id" id="client_portal_id" value="1">
+                        <input type="hidden" name="screen_name" id="screen_name" value=" Matt   Watier ">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+Weight:0
+
+Styleguide Recipes Virtual.Player
 */
 /*
 
@@ -21838,6 +22022,56 @@ max-w_70
 Weight: 10
 
 Styleguide Recipes Virtual.Block Design.Live Video.Horizontal
+*/
+/*
+Faculty
+
+Description: Faculty are the people who are responsible for the design and development of the sessions used in an event. They can take many roles in the session or presentation, such as: chair, panelist, presenter, facilitator, or even a author. There can be many faculty members to a single presentation.
+
+Weight:0
+
+Styleguide Recipes Virtual.Faculty
+*/
+/*
+With Photo Full Data
+
+Description: The most basic way we represent a faculty.
+
+Markup:
+<section
+	class="br-b_1 br_black-3 br_dashed flex flex_column flex_row:md p-b_4 m-b_4 font_0 gap-x_5:lg gap-x_4"
+>
+	<div
+		class="flex_auto m-x_0:md m-x_auto max-w_15 w_100 br_radius shadow_overlap-light overflow_hidden"
+	>
+    {{> "Data.Faculty.Photo" }}
+	</div>
+	<div class="flex_auto flex_column justify_start">
+		<h2 class="m-b_0 speaker_name font_display font-size_up-2 lh_2 c_primary"> {{> "Data.Faculty.FullName" }}</h2>
+		<ul class="speaker_metadata ul_none font_copy">
+            <!-- This is a repeated snippet -->
+            <li class="c_black-8 lh_1 m_0 m-b_2"> <span class="font_bold">{{> "Data.Faculty.InstitutionTitle" }}</span>, {{> "Data.Faculty.Institution" }} </li>
+            </ul>
+            <span class="block c_black-6 font-size_down-1 lh_0">{{> Data.Faculty.Location }}</span>
+        <div class="speaker_bio reading-typography max-w_50 font-size_down-1">
+            <!-- This content can container html -->
+            {{> Data.Faculty.Bio }}
+        </div>   
+        <div>
+            <a class="bg_secondary br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/{{> Data.Faculty.TwitterHandle }}" target="_blank">
+                <i class="br-r_1 br-white-5 br_solid fa-twitter fab m-l_n2 m-r_4 m-y_n2 p-r_3 p-y_2"></i>
+                <i class="fas fa-at"></i>
+                {{> Data.Faculty.TwitterHandle }}
+            </a>
+        </div>     
+	</div>
+</section>
+
+FORMAT: this element uses data that has strict data formatting requirements. See the data tab for more information.
+
+Weight:0
+
+Styleguide Recipes Virtual.Faculty.Simple Photo
 */
 /*
 
