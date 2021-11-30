@@ -8,78 +8,22 @@ Markup:
     <nav class="flex_auto max-w_90 font_n1 font_1:md font_2:lg font_display font_medium m-l_0 navbar navbar-dark navbar-expand-lg p_0 text_center:lg text_left">
         <!-- Primary Nav that expands on mobile and reveals extra nav items when on desktop. -->
         <ul class="navbar-nav flex flex_row w_100">
-            <li class="nav-item flex_auto { active }">
-                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_center  text-shadow_black-1 { active }" href="/" target="_self">
-                    <i class="font-size_up fa-fw fas inline-block m_auto fa-home-heart display_none:lg"></i>
-                    <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Home</span>
-                </a>
-            </li>
-            <li class="nav-item flex_auto">
-                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_center text-shadow_black-1 " href="/program" target="_self">
-                    <i class="font-size_up fa-fw fas inline-block m_auto fa-calendar-alt display_none:lg"></i>
-                    <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Program</span>
-                </a>
-            </li>
-            <li class="nav-item flex_auto ">
-                <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_center  text-shadow_black-1 { disabled cursor_not-allowed  bg_secondary c_secondary-3 opacity_7 }" href="/faculty" target="_blank">
-                    <i class="font-size_up fa-fw fas inline-block m_auto fa-users display_none:lg"></i>
-                    <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Faculty</span>
-                </a>
-            </li>
+            {{> "Recipes Virtual.HeaderNav.Active" }}
+            {{> "Recipes Virtual.HeaderNav.MobileButton"}}
+            {{> "Recipes Virtual.HeaderNav.Disabled"}}
             <!-- menu toggle for mobile -->
-            <li class="nav-item flex_auto  block display_none:lg">
-                <a class="bg_secondary h:bg_secondary-n2 nav-link font_medium h:c_white text_center text-shadow_black-1" aria-expanded="false" aria-label="Toggle Extra Nav"
-                 data-bs-toggle="collapse" data-bs-target="#ExpandingMobileMenu" aria-controls="ExpandingMobileMenu"
-                >
-                    <i class="font-size_up fa-fw fas inline-block m_auto p_2 fa-ellipsis-h-alt"></i>
-                    <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">More</span>
-                </a>
-            </li>
+            {{> "Recipes Virtual.HeaderNav.MobileToggle"}}
             <!-- menu items that hide when in mobile under the expanded area -->
-            <li class="nav-item flex_auto display_none block:lg">
-                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
-                        <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">About</span>
-                    </a>
-                </li>
-                <li class="nav-item flex_auto display_none block:lg">
-                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/expo" target="_self">
-                       <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Expo</span>
-                    </a>
-                </li>
-                <li class="nav-item flex_auto display_none block:lg">
-                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/engage" target="_self">
-                        <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Engage</span>
-                    </a>
-                </li>
-                <li class="nav-item flex_auto display_none block:lg">
-                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/engage" target="_self">
-                        <span class="block lh_0 p-y_0 p-y_2:md p-y_3:lg text_center">Credits</span>
-                    </a>
-                </li>
+            {{> "Recipes Virtual.HeaderNav.MobileHidden" }}
+            {{> "Recipes Virtual.HeaderNav.MobileHiddenDisabled" }}
+            {{> "Recipes Virtual.HeaderNav.MobileHidden" }}
         </ul>
         <!-- Expanding Mobile Menu -->
         <div class="collapse navbar-collapse" id="ExpandingMobileMenu">
             <ul class="navbar-nav flex shadow_emboss-light flex_column w_100 font_1 bg_black-2 display_none:lg" >
-                <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
-                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
-                        About
-                    </a>
-                </li>
-                <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
-                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/credits" target="_self">
-                        Credits
-                    </a>
-                </li>
-                <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
-                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/expo" target="_self">
-                        Expo
-                    </a>
-                </li>
-                <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
-                    <a class="a:bg_secondary nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/engage" target="_self">
-                        Engage
-                    </a>
-                </li>
+                {{> "Recipes Virtual.HeaderNav.ExpandMobileLinks" }}
+                {{> "Recipes Virtual.HeaderNav.ExpandMobileLinksDisabled" }}
+                {{> "Recipes Virtual.HeaderNav.ExpandMobileLinks" }}
             </ul> 
         </div>
     </nav>
@@ -87,5 +31,165 @@ Markup:
  
 Weight: 0
  
-Styleguide Recipes Virtual.Brand Area.HeaderNav
+Styleguide Recipes Virtual.HeaderNav
 */
+
+/*
+Mobile Button  Header Nav
+ 
+Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
+ 
+Markup:
+<li class="nav-item flex_auto">
+    <a class="a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/program" target="_self">
+        <!-- icon is needed for the Mobile Button Nav -->
+        <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-calendar-alt display_none:lg"></i>
+        <span class="block lh_0 p-y_0 p-y_2:md text_center">Nav Link</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight: 0
+ 
+Styleguide Recipes Virtual.HeaderNav.MobileButton
+*/
+
+/*
+Mobile Toggle Header Nav
+ 
+Toggle button for the expanding mobile menu.
+ 
+Markup:
+<li class="nav-item flex_auto  block display_none:lg">
+    <a class="bg_secondary h:bg_secondary-n2 flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 font_medium h:c_white text-shadow_black-1 h:c_white justify_center nav-link text_center p-y_3:md" aria-expanded="false" aria-label="Toggle Extra Nav" data-bs-toggle="collapse" data-bs-target="#ExpandingMobileMenu" aria-controls="ExpandingMobileMenu"
+    >
+        <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-ellipsis-h-alt"></i>
+        <span class="block lh_0 p-y_0 p-y_2:md text_center">More</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight: 0
+ 
+Styleguide Recipes Virtual.HeaderNav.MobileToggle
+*/
+
+
+/*
+Mobile Hidden Header Nav
+ 
+Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
+ 
+Markup:
+<li class="nav-item flex_auto display_none block:lg">
+    <a class="a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/convocation" target="_self">
+        <span class="block lh_0 p-y_0 p-y_2:md text_center">Nav Link</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight: 0
+ 
+Styleguide Recipes Virtual.HeaderNav.MobileHidden
+*/
+
+/*
+Mobile Hidden Header Nav Disabled
+ 
+Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
+ 
+Markup:
+<li class="nav-item flex_auto display_none block:lg">
+    <a class="a:bg_accent [ bg_secondary-2 c_secondary-3 disabled  ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/convocation" target="_self">
+        <span class="block lh_0 p-y_0 p-y_2:md text_center"><i class="fas fa-lock p-r_3"></i>Nav Link</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight: 0
+ 
+Styleguide Recipes Virtual.HeaderNav.MobileHiddenDisabled
+*/
+
+
+/*
+Expanded Mobile Nav List
+ 
+Header Nav in mobile view has an expanded more list that hides the secondary nav items. 
+ 
+Markup:
+<li class="nav-item flex_auto br-b_1 br_solid br_black-2">
+    <a class="a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
+        Mobile Nav Link
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight: 0
+ 
+Styleguide Recipes Virtual.HeaderNav.ExpandMobileLinks
+*/
+
+/*
+Expanded Mobile Nav List Disabled
+ 
+Header Nav in mobile view has an expanded more list that hides the secondary nav items. 
+ 
+Markup:
+<li class="nav-item flex_auto br-b_1 br_solid br_black-2">
+    <a class=" [ bg_secondary-2 c_secondary-3 disabled ]  a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg" href="/convocation" target="_self">
+        <i class="fas fa-lock p-l_3"></i> Mobile Nav Link
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight: 0
+ 
+Styleguide Recipes Virtual.HeaderNav.ExpandMobileLinksDisabled
+*/
+/*
+Nav Active
+ 
+Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
+ 
+Markup:
+<li class="nav-item flex_auto [ active ]">
+    <a class="[ active ][ text-shadow_black-1 ] a:bg_accent flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/" target="_self">
+        <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-home-heart display_none:lg"></i>
+        <span class="block lh_0 p-y_0 p-y_2:md text_center">Active</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight: -1
+ 
+Styleguide Recipes Virtual.HeaderNav.Active
+*/
+/*
+Nav Disabled
+ 
+Disabled Header Nav is used when the conference site is open but all pages should be accessible. This is limited to the early stages of the conference before the site is fully open.
+ 
+Markup:
+<li class="nav-item flex_auto ">
+    <a class="[ bg_secondary-2 c_secondary-3 disabled ] a:bg_accent flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/faculty" target="_blank">
+        <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-users display_none:lg"></i>
+        <span class="block lh_0 p-y_0 p-y_2:md  text_center"><i class="fas fa-lock p-r_3"></i>Faculty</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight: 10
+ 
+Styleguide Recipes Virtual.HeaderNav.Disabled
+*/
+
+

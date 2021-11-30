@@ -10,9 +10,12 @@ Weight:0
  
 Styleguide Recipes.
 */
+.disabled{
+  @include texture-disabled;
+}
 
 .disabled, .disabled > *{
-    @include texture-disabled;
+
     &.c_disabled, &.c_disabled:hover{
       color: rgba( $black, get-css-size(opacity, 5)) !important;
     }

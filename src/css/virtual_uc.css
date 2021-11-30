@@ -29,7 +29,7 @@ html {
 }
 
 /**  Textures  **/
-.disabled, .disabled > *, .texture-dynamic, .texture_cross, .texture_disabled, .texture_dust, .texture_dark, .texture_medium, .texture_light {
+.disabled, .texture-dynamic, .texture_cross, .texture_disabled, .texture_dust, .texture_dark, .texture_medium, .texture_light {
   background-position: top right;
   background-repeat: repeat;
   background-origin: border-box;
@@ -13325,8 +13325,11 @@ Weight:0
 
 Styleguide Recipes.
 */
-.disabled, .disabled > * {
+.disabled {
   background-image: url("../img/cross_disabled.png");
+}
+
+.disabled, .disabled > * {
   cursor: not-allowed;
 }
 .disabled.c_disabled, .disabled.c_disabled:hover, .disabled > *.c_disabled, .disabled > *.c_disabled:hover {

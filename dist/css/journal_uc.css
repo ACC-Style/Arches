@@ -49,7 +49,7 @@ html {
 }
 
 /**  Textures  **/
-.disabled, .disabled > *, .texture-dynamic, .texture_cross, .texture_disabled, .texture_dust, .texture_dark, .texture_medium, .texture_light {
+.disabled, .texture-dynamic, .texture_cross, .texture_disabled, .texture_dust, .texture_dark, .texture_medium, .texture_light {
   background-position: top right;
   background-repeat: repeat;
   background-origin: border-box;
@@ -468,7 +468,7 @@ Styleguide Anatomy.ExtraCredit
   margin-top: 8px;
   margin-top: 0.5rem;
 }
-.reading-typography accr {
+.reading-typography abbr {
   border-bottom: 1px dotted #16a385;
 }
 .reading-typography hr {
@@ -7791,17 +7791,17 @@ flex bg_shade-5 p_2 texture_light
 Styleguide Decorator.Background.Color.Shades
 
  */
-.bg_tansparent {
+.bg_transparent {
   background-color: transparent !important;
 }
 
 @media only screen and (min-width : 768px) {
-  .bg_tansparent {
+  .bg_transparent {
     background-color: transparent !important;
   }
 }
 @media only screen and (min-width : 1024px) {
-  .bg_tansparent {
+  .bg_transparent {
     background-color: transparent !important;
   }
 }
@@ -13377,8 +13377,11 @@ Weight:0
 
 Styleguide Recipes.
 */
-.disabled, .disabled > * {
+.disabled {
   background-image: url("../img/cross_disabled.png");
+}
+
+.disabled, .disabled > * {
   cursor: not-allowed;
 }
 .disabled.c_disabled, .disabled.c_disabled:hover, .disabled > *.c_disabled, .disabled > *.c_disabled:hover {
