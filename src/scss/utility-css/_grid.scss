@@ -16,33 +16,55 @@ Weight: 0
  
 Styleguide  Layouts.Grid.Gap
 */
-@include loop-style(grid-column-gap, "", "!important");
+.grid{
+	grid-auto-flow: row;
+}
+@include loop-style(grid-template-columns,"","");
+@include loop-style(grid-template-rows,"","");
+@include loop-style(grid-gap,"","");
+@include loop-style(grid-column-gap,"","");
+@include loop-style(grid-row-gap,"","");
+
+@include loop-style(grid-column-start,"","");
+@include loop-style(grid-column-end,"","");
+@include loop-style(grid-row-start,"","");
+@include loop-style(grid-row-end,"","");
+
 @media #{$medium-up} {
-	@include loop-style(grid-column-gap, $bp-label_medium, "!important");
+	@include loop-style(grid-template-columns, $bp-label_medium,"");
+	@include loop-style(grid-template-rows, $bp-label_medium,"");
+	@include loop-style(grid-gap, $bp-label_medium, "");
+	@include loop-style(grid-row-gap, $bp-label_medium, "");
+	@include loop-style(grid-column-gap, $bp-label_medium, "");
+
+	@include loop-style(grid-column-start, $bp-label_medium,"");
+	@include loop-style(grid-column-end, $bp-label_medium,"");
+	@include loop-style(grid-row-start, $bp-label_medium,"");
+	@include loop-style(grid-row-end, $bp-label_medium,"");
 }
 
 @media #{$large-up} {
-	@include loop-style(grid-column-gap, $bp-label_large, "!important");
-}
+	@include loop-style(grid-template-columns, $bp-label_large,"");
+	@include loop-style(grid-template-rows, $bp-label_large,"");
+	@include loop-style(grid-gap, $bp-label_large, "");
+	@include loop-style(grid-row-gap, $bp-label_large, "");
+	@include loop-style(grid-column-gap, $bp-label_large, "");
 
-@include loop-style(grid-row-gap, "", "!important");
-@media #{$medium-up} {
-	@include loop-style(grid-row-gap, $bp-label_medium, "!important");
-}
-
-@media #{$large-up} {
-	@include loop-style(grid-row-gap, $bp-label_large, "!important");
+	@include loop-style(grid-column-start, $bp-label_large,"");
+	@include loop-style(grid-column-end, $bp-label_large,"");
+	@include loop-style(grid-row-start, $bp-label_large,"");
+	@include loop-style(grid-row-end, $bp-label_large,"");
 }
 /*
 Grid Column Template
  
 Description: Grid Template
 
-.template-x_20		-  grid layouts that are responsive and hold a certian size when able.
-.template-x_25		-  grid layouts that are responsive and hold a certian size when able.
-.template-x_30		-  grid layouts that are responsive and hold a certian size when able.
-.template-x_35		-  grid layouts that are responsive and hold a certian size when able.
-.template-x_40		-  grid layouts that are responsive and hold a certian size when able.
+.template-x_20		-  grid layouts that are responsive and hold a certain size when able.
+.template-x_25		-  grid layouts that are responsive and hold a certain size when able.
+.template-x_30		-  grid layouts that are responsive and hold a certain size when able.
+.template-x_35		-  grid layouts that are responsive and hold a certain size when able.
+.template-x_40		-  grid layouts that are responsive and hold a certain size when able.
  
 Markup:
 <div></div>
@@ -52,6 +74,9 @@ Weight: 0
  
 Styleguide  Layouts.Grid.Template
 */
+.col-2x {
+	grid-template-columns: repeat(2,1fr);
+}
 .template-x_15 {
 	grid-template-columns: repeat(auto-fill,50%);
 }
@@ -96,88 +121,5 @@ Styleguide  Layouts.Grid.Template
 	}
 	.template-x_40 {
 		grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
-	}
-}
-
-.span-column_2\:lg {
-	grid-column: span 1;
-}
-.span-row_2\:lg {
-	grid-row: span 1;
-}
-.span-column_3\:lg {
-	grid-column: span 1;
-}
-.span-row_3\:lg {
-	grid-row: span 1;
-}
-.span-column_2\:md {
-	grid-column: span 1;
-}
-.span-row_2\:md {
-	grid-row: span 1;
-}
-.span-column_3\:md {
-	grid-column: span 1;
-}
-.span-row_3\:md {
-	grid-row: span 1;
-}
-.span-column_1 {
-	grid-column: span 1;
-}
-.span-row_1 {
-	grid-row: span 1;
-}
-.span-column_2 {
-	grid-column: span 2;
-}
-.span-row_2 {
-	grid-row: span 2;
-}
-.span-column_3 {
-	grid-column: span 3;
-}
-.span-row_3 {
-	grid-row: span 3;
-}
-@media #{$medium-up} {
-	.span-column_1\:md {
-		grid-column: span 1;
-	}
-	.span-row_1\:md {
-		grid-row: span 1;
-	}
-	.span-column_2\:md {
-		grid-column: span 2;
-	}
-	.span-row_2\:md {
-		grid-row: span 2;
-	}
-	.span-column_3\:md {
-		grid-column: span 3;
-	}
-	.span-row_3\:md {
-		grid-row: span 3;
-	}
-}
-@media #{$large-up} {
-	.span-column_1\:lg {
-		grid-column: span 1;
-	}
-	.span-row_1\:lg {
-		grid-row: span 1;
-	}
-	.span-column_2\:lg {
-		grid-column: span 2;
-	}
-	.span-row_2\:lg {
-		grid-row: span 2;
-	}
-	.span-column_3\:lg {
-		grid-column: span 3;
-	}
-	.span-row_3\:lg {
-		grid-row: span 3;
 	}
 }

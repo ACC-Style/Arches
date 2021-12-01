@@ -414,6 +414,22 @@ $value-to-unit: (
 		11: math.div(11, 12) * 100%,
 		12: 1 * 100%,
 	),
+	grid-template: (
+		1: 1fr,
+		2: repeat(2, 1fr),
+		3: repeat(3, 1fr),
+		4: repeat(4, 1fr),
+		5: repeat(5, 1fr),
+		6: repeat(6, 1fr),
+	),
+	grid-position: (
+		1: 1,
+		2: 2,
+		3: 3,
+		4: 4,
+		5: 5,
+		6: 6,
+	),
 	max-width: (
 		0: 0,
 		5: 5rem,
@@ -860,6 +876,14 @@ $style-definition: (
 		long-name: ".margin-right",
 		unit: "size",
 	),
+	grid-gap: (
+		short-name: ".gap",
+		css-style: (
+			"grid-gap",
+		),
+		long-name: ".grid-gap",
+		unit: "size-positive",
+	),
 	grid-column-gap: (
 		short-name: ".gap-x",
 		css-style: (
@@ -1146,6 +1170,54 @@ $style-definition: (
 		long-name: ".isolation",
 		unit: isolation,
 
+	),
+	grid-template-columns: (
+		short-name: ".grid-col",
+		css-style: (
+			"grid-template-columns",
+		),
+		long-name: ".grid-template-columns",
+		unit: grid-template,
+	),	
+	grid-template-rows: (
+		short-name: ".grid-row",
+		css-style: (
+			"grid-template-rows",
+		),
+		long-name: ".grid-template-rows",
+		unit: grid-template,
+	),
+	grid-column-start: (
+		short-name: ".col-start",
+		css-style: (
+			"grid-column-start",
+		),
+		long-name: ".grid-column-start",
+		unit: grid-position,
+	),
+	grid-row-start: (
+		short-name: ".row-start",
+		css-style: (
+			"grid-row-start",
+		),
+		long-name: ".grid-row-start",
+		unit: grid-position,
+	),
+	grid-column-end: (
+		short-name: ".col-end",
+		css-style: (
+			"grid-column-end",
+		),
+		long-name: ".grid-column-end",
+		unit: grid-position,
+	),
+	grid-row-end: (
+		short-name: ".row-end",
+		css-style: (
+			"grid-row-end",
+		),
+		long-name: ".grid-row-end",
+		unit: grid-position,
 	),
 );
 
