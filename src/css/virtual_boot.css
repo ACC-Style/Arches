@@ -7230,7 +7230,7 @@ Simple Credit Dots
 When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
 
 Markup:
-<ul class="m-t_n2 ul_none uppercase flex_wrap flex_row flex justify_end:md justify_start gap-x_3">
+<ul class="flex flex_row flex_wrap gap-x_3 justify_end:md justify_start self_center ul_none uppercase">
     <li class="inline-block lh_0">
         <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_2" style=" height: 1em; width: 1em;"></span> cme </li>
     <li class="inline-block lh_0">
@@ -7770,53 +7770,69 @@ Weight: 0
 Styleguide Recipes Virtual.Block Design
 */
 /*
+Video Block Dual Channel
+
+Description: These video blocks are used in combination with grid templates and dividers. 
+
+
+Markup:
+{{> "Recipes Virtual.Extras.Date Time Dividers"}}
+<section class=" p_4 grid template-x_25 gap-x_5 gap-y_4">
+    {{> "Recipes Virtual.Block Design.Live Video"}}
+    {{> "Recipes Virtual.Block Design.Live Video"}}
+</section>
+
+
+
+
+
+Weight: 0
+
+Styleguide Recipes Virtual.Block Design.Channels
+*/
+/*
 Video Block (Light) 
 
 Description: These video blocks are used in combination with grid templates and dividers. 
 
-generic_video           - the default chanel for videos. 
-generic_video-nolabel   - the default chanel for videos with no label. 
-track1_video            - track 1 videos will have these decorations. 
-track2_video            - track 2 videos will have these decorations. 
-track3_video            - track 3 videos will have these decorations. 
 
 Markup:
-<article class="c_black">
-    <div class="relative">
-        <div class="block:lg p-x_5:md">
-            <div class="m_auto m_auto:md self_center text_center max-w_20">
-                <a class="aspect_3x2:lg  block aspect_21x9 aspect_16x9:md bg_top bg_cover bg_no-repeat bg_black generic_video br_1 br_radius br_solid br_black-3 flex_shrink relative shadow_3 text_center c_white-6 h:c_white {{modifier_class}}">
-                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
-                        <i class="absolute c_white-9 fa-play-circle text-shadow_black-1 fas flex_auto font_5 font_10:md self_center text_center w_100"></i>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="c_primary-n4 flex_auto font_1 font_display font_medium">
-            <div class="lh_2 m-t_2 p_3 p-y_2">
-                <a href="#" class="">
-                    <span class="block lh_1"><strong class="font_accent">{{> "Data.Agenda.ID" }}</strong> {{> "Data.Session.Title" }}</span>
-                </a>
-                <span class="block font-size_down lh_1">{{> "Data.Session.Subtitle" }}</span>          
-                <span class="font-size_down-2 c_secondary-n3  block">{{> "Data.Faculty.FullName" }} <span class="font_italic"> - {{> "Data.Faculty.Role" }}</span></span>
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
+    <div class="br_1 br_radius br_solid br_black-2 flex flex_column font_ui m-x_n2 relative shadow_overlap-light">
+        <header class="flex flex_row justify_center m-t_n4 p-x_4">
+            <div class="bg_primary aspect_16x9:md aspect_21x9 bg-blend_luminosity bg_cover bg_no-repeat br_2 br_radius br_solid br_white br_white-9 flex flex_shrink grid justify_center m-t_n5 max-w_15 max-w_20:md relative shadow_3 text_center texture_ondemand thumb">
+                    <i class="absolute c_white-9 fa-play fas flex_auto font_4 font_5:lg self_center text_center w_100"></i>
+                </div>
+        </header>
+        <div class="br-b_1 br_primary-1 br_solid flex_auto font_regular lh_2 m-b_n1 p-b_3 p-b_4:md">
+            <div class="p-x_4 relative p-y_2 p-y_3:md p-x_5:lg">
+                <div class="block lh_2 font-size_up p-y_3 font_display" ><strong class="font_accent">{{> "Data.Agenda.ID" }}</strong> {{> "Data.Session.Title" }}</div>
+                <div class="flex flex_row gap-x_3 gap-y_2 flex_wrap z_3">
+                <a href="" class="btn btn-secondary flex_none"><i class="fas fa-heart"></i></a>
+                <a href="" class="btn btn-primary flex_auto">Watch</a>
+                <a href="" class="br_radius btn btn-secondary btn-sm flex_auto font-size_down-1 w_100">Show Details</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="br-t_1 br_dotted br_black-3 c_black flex flex_wrap flex_column gap-y_3 flex_row:md font_n2 justify_between m-t_2 p-t_2">
-        <div class="flex_shrink block text_left p-r_4 m-r_4 ">
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex_shrink block  text_left p-r_4 m-r_4 ">
             <a href="#modal-extra" class="block h:undecorated uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
         </div>
-        <div class="flex_auto m-l_auto:md self_center">
-             {{> "Recipes Virtual.Extras.Credit Dots" }}
+        <div class="flex flex_grow justify_end text_right uppercase">
+            {{> "Recipes Virtual.Extras.Credit Dots" }}
         </div>
     </div>
 </article>
+
 
 MarkupWrapperClasses:
     p_4 grid template-x_25 gap-x_5 gap-y_4
 
 
 Weight: 0
+
+FORMAT: this element uses data that has strict data formatting requirements. See the data tab for more information.
 
 Styleguide Recipes Virtual.Block Design.Live Video
 */
@@ -7942,6 +7958,52 @@ Markup:
 Weight: 100
 
 Styleguide Graveyard.Live Video.Channels.Banners
+*/
+/*
+Video Block (Light) 
+
+Description: These video blocks are used in combination with grid templates and dividers. 
+
+generic_video           - the default chanel for videos. 
+generic_video-nolabel   - the default chanel for videos with no label. 
+track1_video            - track 1 videos will have these decorations. 
+track2_video            - track 2 videos will have these decorations. 
+track3_video            - track 3 videos will have these decorations. 
+
+
+Markup:
+    <article class="c_black">
+    <div class="relative">
+        <div class="block:lg p-x_5:md">
+            <div class="m_auto m_auto:md self_center text_center max-w_20">
+                <a class="aspect_4x3:lg  block aspect_21x9 aspect_16x9:md bg_top bg_cover bg_no-repeat bg_black generic_video br_1 br_radius br_solid br_black-3 flex_shrink relative shadow_3 text_center c_white-6 h:c_white {{modifier_class}}">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
+                        <i class="absolute c_white-9 fa-play-circle text-shadow_black-1 fas flex_auto font_5 font_10:md self_center text_center w_100"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="c_primary-n4 flex_auto font_1 font_display font_medium">
+            <div class="lh_2 m-t_2 p_3 p-y_2">
+                <a href="#" class="">
+                    <span class="block lh_1"><strong class="font_accent">{{> "Data.Agenda.ID" }}</strong> {{> "Data.Session.Title" }}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="br-t_1 br_dotted br_black-3 c_black flex flex_wrap flex_column gap-y_3 flex_row:md font_n2 justify_between m-t_2 p-t_2">
+        <div class="flex_shrink block text_left p-r_4 m-r_4 ">
+            <a href="#modal-extra" class="block h:undecorated uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+        </div>
+        <div class="flex_auto m-l_auto:md self_center">
+             {{> "Recipes Virtual.Extras.Credit Dots" }}
+        </div>
+    </div>
+</article>
+
+Weight: 100
+
+Styleguide Graveyard.Live Video
 */
 /*
 Branded Header
