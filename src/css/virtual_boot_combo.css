@@ -22715,10 +22715,11 @@ Markup:
 MarkupWrapperClasses:
 max-w_70
 
+deprecated:
 
 Weight: 10
 
-Styleguide Recipes Virtual.Block Design.Live Video.Horizontal
+Styleguide Graveyard.Block Design.Live Video.Horizontal
 */
 /*
 Five Channel Max
@@ -22839,38 +22840,51 @@ Markup:
 	class="flex flex_column p-b_4 m-b_4 font_0 gap-x_5:lg gap-x_4"
 >
 	<div
-		class="flex_auto m-x_0:md m-x_auto max-w_15 w_100 {{ modifier_class }} shadow_overlap-light overflow_hidden"
+		class=" flex_auto m-x_0:md m-x_auto max-w_15 w_100 shadow_overlap-light overflow_hidden m-b_4 {{ modifier_class }} self_center "
 	>
     {{> "Data.Faculty.Photo" }}
 	</div>
 	<div class="flex_auto flex_column justify_start">
 		<h2 class="m-b_0 speaker_name font_display font-size_up-2 lh_2 c_primary"> {{> "Data.Faculty.FullName" }}</h2>
-		<ul class="speaker_metadata ul_none font_copy">
+		<ul class="speaker_metadata ul_none font_copy font-size_down">
             <!-- This is a repeated snippet -->
             <li class="c_black-8 lh_1 m_0 m-b_2">{{> "Data.Faculty.Title" }}</li>
             </ul>
-            <span class="block c_black-6 font-size_down-1 lh_0">{{> Data.Faculty.Location }}</span>
+            <span class="block c_black-6 font-size_down-2 lh_0 font_italic">{{> Data.Faculty.Location }}</span>
         <div class="speaker_bio reading-typography max-w_50 font-size_down-1">
             <!-- This content can container html -->
             {{> Data.Faculty.Bio }}
         </div>   
-        <div>
-            <a class="bg_secondary br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/{{> Data.Faculty.TwitterHandle }}" target="_blank">
-                <i class="br-r_1 br-white-5 br_solid fa-twitter fab m-l_n2 m-r_4 m-y_n2 p-r_3 p-y_2"></i>
-                <i class="fas fa-at"></i>
-                {{> Data.Faculty.TwitterHandle }}
-            </a>
+        <div class="grid justify_center">
+            {{> "Recipes Virtual.Faculty.TwitterButton"}}
         </div>     
 	</div>
 </section>
 
-MarkupWrapperClasses: grid_3 grid 
+MarkupWrapperClasses: grid-col_4 grid 
 
 FORMAT: This element uses data that has strict data formatting requirements. See the data tab for more information.
 
 Weight:0
 
 Styleguide Recipes Virtual.Faculty.PhotosHorizontal
+*/
+/*
+Twitter Button
+
+Description: When a faculty member has a twitter handle, we can display a twitter button.
+
+Markup:
+<a class="bg_twitter br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/{{> Data.Faculty.TwitterHandle }}" target="_blank">
+    <i class="br-r_1 br-white-5 br_solid fa-twitter fab m-l_n2 m-r_3 m-y_n2 p-r_3 p-r_3:lg p-y_2"></i>
+    <i class="fa-at fas opacity_8 p-r_1"></i>
+    {{> Data.Faculty.TwitterHandle }}
+</a>
+
+
+Weight:0
+
+Styleguide Recipes Virtual.Faculty.TwitterButton
 */
 /*
 Full Data with Photo
@@ -22882,28 +22896,24 @@ Markup:
 	class="flex flex_column flex_row:md p-b_4 m-b_4 font_0 gap-x_5:lg gap-x_4"
 >
 	<div
-		class="flex_auto m-x_0:md m-x_auto max-w_15 w_100 br_radius shadow_overlap-light overflow_hidden"
+		class="flex_auto m-x_0:md m-x_auto max-w_15 w_100 br_radius shadow_overlap-light overflow_hidden m-b_4"
 	>
     {{> "Data.Faculty.Photo" }}
 	</div>
 	<div class="flex_auto flex_column justify_start">
 		<h2 class="m-b_0 speaker_name font_display font-size_up-2 lh_2 c_primary"> {{> "Data.Faculty.FullName" }}</h2>
-		<ul class="speaker_metadata ul_none font_copy">
+		<ul class="speaker_metadata ul_none font_copy font-size_down">
             <!-- This is a repeated snippet -->
             <li class="c_black-8 lh_1 m_0 m-b_2">{{> "Data.Faculty.Title" }}</li>
             </ul>
-            <span class="block c_black-6 font-size_down-1 lh_0">{{> Data.Faculty.Location }}</span>
+            <span class="block c_black-6 font-size_down-2 lh_0 font_italic">{{> Data.Faculty.Location }}</span>
         <div class="speaker_bio reading-typography max-w_50 font-size_down-1">
             <!-- This content can container html -->
             {{> Data.Faculty.Bio }}
         </div>   
-        <div>
-            <a class="bg_secondary br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/{{> Data.Faculty.TwitterHandle }}" target="_blank">
-                <i class="br-r_1 br-white-5 br_solid fa-twitter fab m-l_n2 m-r_4 m-y_n2 p-r_3 p-y_2"></i>
-                <i class="fas fa-at"></i>
-                {{> Data.Faculty.TwitterHandle }}
-            </a>
-        </div>     
+        <div class="grid justify_center">
+            {{> "Recipes Virtual.Faculty.TwitterButton"}}
+        </div>    
 	</div>
 </section>
 
@@ -22924,22 +22934,18 @@ Markup:
 >
 	<div class="flex_auto flex_column justify_start">
 		<h2 class="m-b_0 speaker_name font_display font-size_up-2 lh_2 c_primary"> {{> "Data.Faculty.FullName" }}</h2>
-		<ul class="speaker_metadata ul_none font_copy">
+		<ul class="speaker_metadata ul_none font_copy font-size_down">
             <!-- This is a repeated snippet -->
             <li class="c_black-8 lh_1 m_0 m-b_2">{{> "Data.Faculty.Title" }}</li>
             </ul>
-            <span class="block c_black-6 font-size_down-1 lh_0">{{> Data.Faculty.Location }}</span>
+            <span class="block c_black-6 font-size_down-2 lh_0 font_italic">{{> Data.Faculty.Location }}</span>
         <div class="speaker_bio reading-typography max-w_50 font-size_down-1">
             <!-- This content can container html -->
             {{> Data.Faculty.Bio }}
         </div>   
-        <div>
-            <a class="bg_secondary br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/{{> Data.Faculty.TwitterHandle }}" target="_blank">
-                <i class="br-r_1 br-white-5 br_solid fa-twitter fab m-l_n2 m-r_4 m-y_n2 p-r_3 p-y_2"></i>
-                <i class="fas fa-at"></i>
-                {{> Data.Faculty.TwitterHandle }}
-            </a>
-        </div>     
+        <div class="grid justify_center">
+            {{> "Recipes Virtual.Faculty.TwitterButton"}}
+        </div>      
 	</div>
 </section>
 
