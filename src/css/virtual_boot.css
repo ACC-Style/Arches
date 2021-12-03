@@ -6559,6 +6559,8 @@ Markup: @ 11:15 a.m. – 11:45 p.m <abbr title="EASTERN TIME, UTC -4">EDT</abbr>
 
 FORMAT: 12 hour with 'a.m.'/'p.m' and Abbreviation of Timezone.
 
+NOTE: The 'a.m.'/'p.m.' if the same should only occur on the last time mark.  11:15 a.m. - 11:30 a.m. should be shortened to 11:15  - 11:30 a.m.
+
 Weight:0
 
 Styleguide Data.Agenda.LiveTime
@@ -6585,11 +6587,27 @@ There is usually a delay to when recording will make it to on demand. This is th
 
 Markup: Saturday, Nov. 20, 2021 @ 8:00 p.m. <abbr title="EASTERN TIME, UTC -4">EDT</abbr>
 
-FORMAT: Day-of-Week, Month-Abbreviation.  Day, Year @ Hour:Minute 'a.m.'/'p.m' Abbreviation-of-Timezone.  Use the simple abbreviation for the timezone without Daylight Savings Time. IE: ET not EDT.
+FORMAT: Day-of-Week, Month-Abbreviation.  Day, Year @ Hour:Minute 'a.m.'/'p.m' Abbreviation-of-Timezone.  
+
+NOTE:  Use the simple abbreviation for the timezone without Daylight Savings Time. IE: ET not EDT or EST.
 
 Weight:0
 
 Styleguide Data.Agenda.onDemandReleaseTime
+*/
+/*
+Session 
+
+A Session is a specific time slot in an Agenda. This could be either a single presentation or a series of presentations.
+
+Markup:
+Electrical Disorders - Rhythm and Conduction Disorders
+
+Experiential: This is not an approved data point.
+
+Weight:100
+
+Styleguide Data.Session
 */
 /*
 Session Subtitle
@@ -6599,7 +6617,9 @@ The subtitle of a Session.
 Markup:
 Electrical Disorders - Rhythm and Conduction Disorders
 
-Weight:0
+Experiential: This is not an approved data point.
+
+Weight:2
 
 Styleguide Data.Session.Subtitle
 */
@@ -6612,25 +6632,12 @@ The title of a Session.
 Markup:
 Cardiovascular Update for the Clinician III
 
-Weight:0
+Weight:1
 
 Styleguide Data.Session.Title
 */
 /*
-Lorem Ipsum
-
-Description:
-The title of a Session.
-
-Markup:
-{{modifier_class}}
-
-Weight:0
-
-Styleguide Data.LoremIpsum
-*/
-/*
-Session Number
+Session Identifier
 
 Description:
 The ID given to a session
@@ -6638,7 +6645,7 @@ The ID given to a session
 Markup:
 3652
 
-Weight:1
+Weight:0
 
 Styleguide Data.Session.ID
 */
@@ -6650,32 +6657,31 @@ The description of a session.
 Markup:
 <p>Maxime et ea adipisci voluptas. Omnis nobis recusandae alias eius sed ipsam aut. Ipsam dolore qui. Soluta laudantium quae assumenda ipsa tempore voluptas et culpa. Et praesentium quasi. Quas ratione vero aspernatur.</p>
 
-Weight:0
+Weight:3
 
-Styleguide Data.Session.Subtitle
+Styleguide Data.Session.Description
 */
 /*
 Presentation 
 
 Description:
-A presentation
+A presentation is a single part of education that can not be subdivided.
 
 Weight:0
 
 Styleguide Data.Presentation
 */
 /*
-Presentation Subtitle
+Presentation Description
 
 Description:
-The subtitle of a presentation
+The Description of a presentation
 
 Markup:Drug Coated Balloons
 
+Weight:500
 
-Weight:0
-
-Styleguide Data.Presentation.Subtitle
+Styleguide Data.Presentation.Description
 */
 /*
 Presentation Title
@@ -6698,6 +6704,11 @@ The Live Time of a Presentation
 
 Markup:
 11:45 – 11:49 a.m. <abbr title="EASTERN DAYLIGHT TIME, UTC -4">ET</abbr>
+
+FORMAT: 12 hour with 'a.m.'/'p.m' and Abbreviation of Timezone.
+
+NOTE: The 'a.m.'/'p.m.' if the same should only occur on the last time mark.  11:15 a.m. - 11:30 a.m. should be shortened to 11:15  - 11:30 a.m.
+
 
 Weight:0
 
@@ -6722,7 +6733,7 @@ Faculty
 Description:
 An educator who created or participated in a presentation
 
-Weight:50
+Weight:1000
 
 Styleguide Data.Faculty
 */
@@ -6771,22 +6782,58 @@ Markup: New York, NY, USA
 
 Weight:0
 
-FORMAT: City, State, Country |  if the conference country is USA you can drop the country if it is USA. 
+FORMAT: City, State, Country
+
+NOTE:  if the conference country is USA you can drop the country if it is USA.
 
 Styleguide Data.Faculty.Location
 */
 /*
-Institution
+Title
 
 Description:
 the roles of the faculty member within the session
 
 Markup:
-Mount Sugarloaf Hospital
+{{> "Data.Faculty.Title.InstitutionTitle" }}, {{> "Data.Faculty.Title.InstitutionDivision" }}, {{> "Data.Faculty.Title.Institution" }}
 
-Weight:0
 
-Styleguide Data.Faculty.Institution
+
+FORMAT: Institution Title, Institution Division, Institution
+
+NOTE: This format is currently not being enforced.
+
+EXPERIMENTAL: This is not an approved data point.
+
+Weight:100
+
+Styleguide Data.Faculty.Title
+*/
+/*
+Institution
+
+Description:
+Institution of the faculty member where they hold a title
+
+Markup:
+Mount SugarLoaf Hospital
+
+Weight:101
+
+Styleguide Data.Faculty.Title.Institution
+*/
+/*
+Institution Division
+
+Description:
+The Division of the Institution of the faculty member where they hold a title
+
+Markup:
+Mount SugarLoaf Hospital
+
+Weight:102
+
+Styleguide Data.Faculty.Title.InstitutionDivision
 */
 /*
 Institutional Title
@@ -6797,9 +6844,9 @@ the roles of the faculty member within the session
 Markup:
 Physician-in-Chief
 
-Weight:0
+Weight:103
 
-Styleguide Data.Faculty.InstitutionTitle
+Styleguide Data.Faculty.Title.InstitutionTitle
 */
 /*
 Twitter Handle
@@ -8058,16 +8105,20 @@ Weight:0
 Styleguide Recipes Virtual.Faculty
 */
 /*
-With Photo Full Data
+Full Data with Photo
 
 Description: The most basic way we represent a faculty.
 
+br_radius - The border radius of the image.
+br_round  - The border radius of the image.
+br_circle - The border radius of the image.
+
 Markup:
 <section
-	class="br-b_1 br_black-3 br_dashed flex flex_column flex_row:md p-b_4 m-b_4 font_0 gap-x_5:lg gap-x_4"
+	class="flex flex_column p-b_4 m-b_4 font_0 gap-x_5:lg gap-x_4"
 >
 	<div
-		class="flex_auto m-x_0:md m-x_auto max-w_15 w_100 br_radius shadow_overlap-light overflow_hidden"
+		class="flex_auto m-x_0:md m-x_auto max-w_15 w_100 {{ modifier_class }} shadow_overlap-light overflow_hidden"
 	>
     {{> "Data.Faculty.Photo" }}
 	</div>
@@ -8075,7 +8126,7 @@ Markup:
 		<h2 class="m-b_0 speaker_name font_display font-size_up-2 lh_2 c_primary"> {{> "Data.Faculty.FullName" }}</h2>
 		<ul class="speaker_metadata ul_none font_copy">
             <!-- This is a repeated snippet -->
-            <li class="c_black-8 lh_1 m_0 m-b_2"> <span class="font_bold">{{> "Data.Faculty.InstitutionTitle" }}</span>, {{> "Data.Faculty.Institution" }} </li>
+            <li class="c_black-8 lh_1 m_0 m-b_2">{{> "Data.Faculty.Title" }}</li>
             </ul>
             <span class="block c_black-6 font-size_down-1 lh_0">{{> Data.Faculty.Location }}</span>
         <div class="speaker_bio reading-typography max-w_50 font-size_down-1">
@@ -8092,11 +8143,90 @@ Markup:
 	</div>
 </section>
 
-FORMAT: this element uses data that has strict data formatting requirements. See the data tab for more information.
+MarkupWrapperClasses: grid_3 grid 
+
+FORMAT: This element uses data that has strict data formatting requirements. See the data tab for more information.
 
 Weight:0
 
-Styleguide Recipes Virtual.Faculty.Simple Photo
+Styleguide Recipes Virtual.Faculty.PhotosHorizontal
+*/
+/*
+Full Data with Photo
+
+Description: The most basic way we represent a faculty.
+
+Markup:
+<section
+	class="flex flex_column flex_row:md p-b_4 m-b_4 font_0 gap-x_5:lg gap-x_4"
+>
+	<div
+		class="flex_auto m-x_0:md m-x_auto max-w_15 w_100 br_radius shadow_overlap-light overflow_hidden"
+	>
+    {{> "Data.Faculty.Photo" }}
+	</div>
+	<div class="flex_auto flex_column justify_start">
+		<h2 class="m-b_0 speaker_name font_display font-size_up-2 lh_2 c_primary"> {{> "Data.Faculty.FullName" }}</h2>
+		<ul class="speaker_metadata ul_none font_copy">
+            <!-- This is a repeated snippet -->
+            <li class="c_black-8 lh_1 m_0 m-b_2">{{> "Data.Faculty.Title" }}</li>
+            </ul>
+            <span class="block c_black-6 font-size_down-1 lh_0">{{> Data.Faculty.Location }}</span>
+        <div class="speaker_bio reading-typography max-w_50 font-size_down-1">
+            <!-- This content can container html -->
+            {{> Data.Faculty.Bio }}
+        </div>   
+        <div>
+            <a class="bg_secondary br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/{{> Data.Faculty.TwitterHandle }}" target="_blank">
+                <i class="br-r_1 br-white-5 br_solid fa-twitter fab m-l_n2 m-r_4 m-y_n2 p-r_3 p-y_2"></i>
+                <i class="fas fa-at"></i>
+                {{> Data.Faculty.TwitterHandle }}
+            </a>
+        </div>     
+	</div>
+</section>
+
+FORMAT: This element uses data that has strict data formatting requirements. See the data tab for more information.
+
+Weight:0
+
+Styleguide Recipes Virtual.Faculty.Photos
+*/
+/*
+Full Data Without Photo
+
+Description: The most basic way we represent a faculty.
+
+Markup:
+<section
+	class="flex flex_column flex_row:md p-b_4 m-b_4 font_0 gap-x_5:lg gap-x_4"
+>
+	<div class="flex_auto flex_column justify_start">
+		<h2 class="m-b_0 speaker_name font_display font-size_up-2 lh_2 c_primary"> {{> "Data.Faculty.FullName" }}</h2>
+		<ul class="speaker_metadata ul_none font_copy">
+            <!-- This is a repeated snippet -->
+            <li class="c_black-8 lh_1 m_0 m-b_2">{{> "Data.Faculty.Title" }}</li>
+            </ul>
+            <span class="block c_black-6 font-size_down-1 lh_0">{{> Data.Faculty.Location }}</span>
+        <div class="speaker_bio reading-typography max-w_50 font-size_down-1">
+            <!-- This content can container html -->
+            {{> Data.Faculty.Bio }}
+        </div>   
+        <div>
+            <a class="bg_secondary br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/{{> Data.Faculty.TwitterHandle }}" target="_blank">
+                <i class="br-r_1 br-white-5 br_solid fa-twitter fab m-l_n2 m-r_4 m-y_n2 p-r_3 p-y_2"></i>
+                <i class="fas fa-at"></i>
+                {{> Data.Faculty.TwitterHandle }}
+            </a>
+        </div>     
+	</div>
+</section>
+
+FORMAT: This element uses data that has strict data formatting requirements. See the data tab for more information.
+
+Weight:0
+
+Styleguide Recipes Virtual.Faculty.NoPhotos
 */
 /*
 
@@ -9232,7 +9362,7 @@ a.link-light[href^=https][target=_blank]:after,
 a.link[href^="mailto:"]:after,
 a.link-light[href^="mailto:"]:after,
 .reading-typography a[href^="mailto:"]:after {
-  content: "\f1fa";
+  content: "\f0e0";
 }
 a.link[href^="tel:"]:after,
 a.link-light[href^="tel:"]:after,

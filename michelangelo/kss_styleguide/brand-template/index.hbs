@@ -221,12 +221,6 @@
                                 </ul>
                             {{/if}}
                         </article>
-                        {{#if note}}
-                            <div class="bg_highlight-4 block c_black c_white inline-block p-y_3 p-x_4 w_100">
-                                <h5 class="font_bold m_0 c_black">NOTE:</h5>
-                                {{{note}}}
-                            </div>
-                        {{/if}}
                         {{#if example}}
                             <article class="kss-section__modifiers">
                                 <h1 class="kss-modifiers__heading"> Example {{#if modifiers}}s {{/if}}
@@ -262,6 +256,12 @@
                             <div class="bg_accent-4 block c_black c_white inline-block p-y_3 p-x_4 w_100">
                                 <h5 class="font_bold m_0 c_black inline-block">FORMAT:</h5>
                                 {{{format}}}
+                            </div>
+                        {{/if}}
+                        {{#if note}}
+                            <div class="bg_highlight-4 block c_black c_white inline-block p-y_3 p-x_4 w_100">
+                                <h5 class="font_bold m_0 c_black">NOTE:</h5>
+                                {{{note}}}
                             </div>
                         {{/if}}
                         {{#if example}}

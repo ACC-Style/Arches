@@ -1,3 +1,5 @@
+%Data.Agenda {
+}
 /*
 Agenda Item
  
@@ -8,7 +10,8 @@ Weight:0
  
 Styleguide Data.Agenda
 */
-
+%Data.Agenda.ID {
+}
 /*
 Agenda ID
  
@@ -22,7 +25,8 @@ Weight:1
  
 Styleguide Data.Agenda.ID
 */
-
+%Data.Agenda.LiveTime {
+}
 /*
 Live Time
  
@@ -33,11 +37,14 @@ Markup: @ 11:15 a.m. – 11:45 p.m <abbr title="EASTERN TIME, UTC -4">EDT</abbr>
 
 FORMAT: 12 hour with 'a.m.'/'p.m' and Abbreviation of Timezone.
 
+NOTE: The 'a.m.'/'p.m.' if the same should only occur on the last time mark.  11:15 a.m. - 11:30 a.m. should be shortened to 11:15  - 11:30 a.m.
+
 Weight:0
  
 Styleguide Data.Agenda.LiveTime
 */
-
+%Data.Agenda.LiveDate {
+}
 /*
 Live Date
  
@@ -52,7 +59,8 @@ Weight:0
  
 Styleguide Data.Agenda.LiveDate
 */
-
+%Data.Agenda.onDemandReleaseTime {
+}
 /*
 On Demand Release Date and Time
  
@@ -61,16 +69,33 @@ There is usually a delay to when recording will make it to on demand. This is th
  
 Markup: Saturday, Nov. 20, 2021 @ 8:00 p.m. <abbr title="EASTERN TIME, UTC -4">EDT</abbr>
 
-FORMAT: Day-of-Week, Month-Abbreviation.  Day, Year @ Hour:Minute 'a.m.'/'p.m' Abbreviation-of-Timezone.  Use the simple abbreviation for the timezone without Daylight Savings Time. IE: ET not EDT.
- 
+FORMAT: Day-of-Week, Month-Abbreviation.  Day, Year @ Hour:Minute 'a.m.'/'p.m' Abbreviation-of-Timezone.  
+
+NOTE:  Use the simple abbreviation for the timezone without Daylight Savings Time. IE: ET not EDT or EST.
+
 Weight:0
  
 Styleguide Data.Agenda.onDemandReleaseTime
 */
-
+%Data.Session {
+}
+/*
+Session 
  
+A Session is a specific time slot in an Agenda. This could be either a single presentation or a series of presentations.
+ 
+Markup:
+Electrical Disorders - Rhythm and Conduction Disorders
 
+Experiential: This is not an approved data point.
 
+Weight:100
+ 
+Styleguide Data.Session
+*/
+
+%Data.Session.Subtitle {
+}
 /*
 Session Subtitle
  
@@ -78,11 +103,15 @@ The subtitle of a Session.
  
 Markup:
 Electrical Disorders - Rhythm and Conduction Disorders
- 
-Weight:0
+
+Experiential: This is not an approved data point.
+
+Weight:2
  
 Styleguide Data.Session.Subtitle
 */
+%Data.Session.Title {
+}
 /*
 Session Title
  
@@ -92,27 +121,15 @@ The title of a Session.
 Markup:
 Cardiovascular Update for the Clinician III
  
-Weight:0
+Weight:1
  
 Styleguide Data.Session.Title
 */
 
+%Data.Session.ID {
+}
 /*
-Lorem Ipsum
- 
-Description:
-The title of a Session.
- 
-Markup:
-{{modifier_class}}
- 
-Weight:0
- 
-Styleguide Data.LoremIpsum
-*/
-
-/*
-Session Number
+Session Identifier
  
 Description:
 The ID given to a session
@@ -120,12 +137,13 @@ The ID given to a session
 Markup:
 3652
  
-Weight:1
+Weight:0
  
 Styleguide Data.Session.ID
 */
 
-
+%Data.Session.Subtitle {
+}
 /*
 Session Description
  
@@ -134,38 +152,42 @@ The description of a session.
 Markup:
 <p>Maxime et ea adipisci voluptas. Omnis nobis recusandae alias eius sed ipsam aut. Ipsam dolore qui. Soluta laudantium quae assumenda ipsa tempore voluptas et culpa. Et praesentium quasi. Quas ratione vero aspernatur.</p>
  
-Weight:0
+Weight:3
  
-Styleguide Data.Session.Subtitle
+Styleguide Data.Session.Description
 */
 
-
-
-
+%Data.Presentation {
+}
 
 /*
 Presentation 
- 
+
 Description:
-A presentation
+A presentation is a single part of education that can not be subdivided.
 
 Weight:0
- 
+
 Styleguide Data.Presentation
 */
+%Data.Presentation.Description {
+}
+
 /*
-Presentation Subtitle
+Presentation Description
  
 Description:
-The subtitle of a presentation
+The Description of a presentation
  
 Markup:Drug Coated Balloons
-
  
-Weight:0
+Weight:500
  
-Styleguide Data.Presentation.Subtitle
+Styleguide Data.Presentation.Description
 */
+
+%Data.Presentation.Title {
+}
 /*
 Presentation Title
  
@@ -179,6 +201,8 @@ Weight:0
  
 Styleguide Data.Presentation.Title
 */
+%Data.Presentation.LiveTime {
+}
 /*
 Presentation Live Time
 
@@ -188,10 +212,17 @@ The Live Time of a Presentation
 Markup:
 11:45 – 11:49 a.m. <abbr title="EASTERN DAYLIGHT TIME, UTC -4">ET</abbr>
 
+FORMAT: 12 hour with 'a.m.'/'p.m' and Abbreviation of Timezone.
+
+NOTE: The 'a.m.'/'p.m.' if the same should only occur on the last time mark.  11:15 a.m. - 11:30 a.m. should be shortened to 11:15  - 11:30 a.m.
+
+
 Weight:0
  
 Styleguide Data.Presentation.LiveTime
 */
+%Data.Presentation.ID {
+}
 /*
 Presentation ID
  
@@ -205,19 +236,21 @@ Weight:0
  
 Styleguide Data.Presentation.ID
 */
-
-
+%Data.Faculty {
+}
 /*
 Faculty 
- 
+
 Description:
 An educator who created or participated in a presentation
 
-Weight:50
- 
+Weight:1000
+
 Styleguide Data.Faculty
 */
 
+%Data.Faculty.Photo {
+}
 
 /*
 Photo
@@ -240,7 +273,8 @@ Weight:0
 
 Styleguide Data.Faculty.Photo
 */
-
+%Data.Faculty.FullName {
+}
 /*
 Full Name
  
@@ -255,7 +289,8 @@ Weight:0
  
 Styleguide Data.Faculty.FullName
 */
-
+%Data.Faculty.Location {
+}
 /*
 Location
  
@@ -266,24 +301,67 @@ Markup: New York, NY, USA
  
 Weight:0
 
-FORMAT: City, State, Country |  if the conference country is USA you can drop the country if it is USA. 
+FORMAT: City, State, Country
+
+NOTE:  if the conference country is USA you can drop the country if it is USA.
 
 Styleguide Data.Faculty.Location
 */
-
+%Data.Faculty.Title {
+}
 /*
-Institution
+Title
  
 Description:
 the roles of the faculty member within the session
  
 Markup:
-Mount Sugarloaf Hospital
+{{> "Data.Faculty.Title.InstitutionTitle" }}, {{> "Data.Faculty.Title.InstitutionDivision" }}, {{> "Data.Faculty.Title.Institution" }}
  
-Weight:0
- 
-Styleguide Data.Faculty.Institution
+
+
+FORMAT: Institution Title, Institution Division, Institution
+
+NOTE: This format is currently not being enforced.
+
+EXPERIMENTAL: This is not an approved data point.
+
+Weight:100
+
+Styleguide Data.Faculty.Title
 */
+%Data.Faculty.Institution {
+}
+/*
+Institution
+ 
+Description:
+Institution of the faculty member where they hold a title
+ 
+Markup:
+Mount SugarLoaf Hospital
+ 
+Weight:101
+ 
+Styleguide Data.Faculty.Title.Institution
+*/
+%Data.Faculty.InstitutionDivision {
+}
+/*
+Institution Division
+ 
+Description:
+The Division of the Institution of the faculty member where they hold a title
+ 
+Markup:
+Mount SugarLoaf Hospital
+ 
+Weight:102
+ 
+Styleguide Data.Faculty.Title.InstitutionDivision
+*/
+%Data.Faculty.InstitutionTitle {
+}
 /*
 Institutional Title
  
@@ -293,11 +371,12 @@ the roles of the faculty member within the session
 Markup:
 Physician-in-Chief
  
-Weight:0
+Weight:103
  
-Styleguide Data.Faculty.InstitutionTitle
+Styleguide Data.Faculty.Title.InstitutionTitle
 */
-
+%Data.Faculty.TwitterHandle {
+}
 /*
 Twitter Handle
  
@@ -312,6 +391,8 @@ Weight:0
 Styleguide Data.Faculty.TwitterHandle
 */
 
+%Data.Faculty.Role {
+}
 /*
 Role
  
@@ -325,6 +406,8 @@ Weight:0
  
 Styleguide Data.Faculty.Role
 */
+%Data.Faculty.Bio {
+}
 /*
 Bio
  
@@ -338,7 +421,8 @@ Weight:0
  
 Styleguide Data.Faculty.Bio
 */
-
+%Data.Faculty.ID {
+}
 /*
 Identification Number
  
