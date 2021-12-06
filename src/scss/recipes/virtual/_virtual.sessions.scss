@@ -1,3 +1,4 @@
+%Recipes Virtual.Sessions{}
 /*
 Sessions
  
@@ -9,6 +10,7 @@ Weight:10
  
 Styleguide Recipes Virtual.Sessions
 */
+%Recipes Virtual.Sessions.Simple{}
 /*
 
 Simple
@@ -18,10 +20,11 @@ Description: When the count of sessions is lower then 10 in count, the Simple De
 Markup:
 <article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
     <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
-        <div class="br-b_1 br_solid br_primary-n1">
+        <div class="br-b_1 br_solid br_primary-2">
+            {{>"Recipes Virtual.CategoryFlags"}}
             <div class="p_4 p-b_2 flex flex_column flex_row:lg">
                 <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block">
+                    <span class="block font-size_up-1 font_display lh_1">
                         <strong class="font_bold p-r_3">{{> "Data.Agenda.ID" }}</strong>
                         {{> "Data.Session.Title" }}
                     </span>
@@ -77,6 +80,22 @@ Styleguide Recipes Virtual.Sessions.Simple
 
 */
 
+
+%Recipes Virtual.CategoryFlags{}
+/*
+Category Flags
+ 
+Description: A graphic treatment for the category flags which are tags applied like channel and type.
+ 
+Markup:
+<div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white">{{>"Data.Agenda.ChannelName"}}</div>
+
+ 
+Weight:0
+ 
+Styleguide Recipes Virtual.CategoryFlags
+*/
+
 /*
 
 Simple: On Demand
@@ -86,9 +105,10 @@ Description: When the count of sessions is lower then 10 in count, the Simple De
 Markup:
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black font_0 m-b_4 shadow_overlap-light">
     <div class="br-tl_radius br-tr_radius br_1 br_black-3 br_solid flex flex_column font_ui m-t_n2 relative shadow_2">
-        <div class="br-b_1 br_primary-n1 br_solid">
+        <div class="br-b_1 br_primary-2 br_solid">
+            <!-- {{>"Recipes Virtual.CategoryFlags"}} -->
             <div class="p_4 p-b_2 flex flex_column flex_row:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_1 p-r_4:lg">
+                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2  p-r_4:lg">
                     <span class="block c_black-6 uppercase font_bold font-size_down-1"> Session I: Evolving New Frontiers of Imaging Ready for Practice</span><span class="block font-size_up-1 font_display lh_1">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of session and Faculty by Dr. Itchhaporia </span><span class="block c_black font-size_down-1 font_ui lh_3 opacity_7">Dipti Itchhaporia, MD, FACC (Chair)</span>
                 </h3>
                 <div class="flex_grow m-l_auto:lg">
@@ -190,7 +210,7 @@ Markup:
         </h3>
         <div class="self_start"><a title="download attachments" class="bg_secondary nowrap text_center br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/Tweat_DrSoda" target="_blank"> <i class="far fa-paperclip"></i><span class="display_none inline-block:md"> Attachments</span> </a></div>
 </header>
-<article class="flex flex_row:md flex_column gap-x_4 gap-y_3 p-t_3 b-t_5 br-b_1 br_solid br_primary-n1 order_3">
+<article class="flex flex_row:md flex_column gap-x_4 gap-y_3 p-t_3 b-t_5 br-b_1 br_solid br_primary-2 order_3">
     <section class="flex_auto w_100">
         <div class="">
             <h4 class="font-size_up p-x_3 c_primary font_medium">Presentations</h4>

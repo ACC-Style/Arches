@@ -20868,7 +20868,7 @@ textarea.form-control-lg {
 
     Styleguide Recipes.mobile nav
 */
-/* Nav Recipes.04x */
+/* Recipes.40 */
 .address {
   font-style: unset;
 }
@@ -20913,7 +20913,9 @@ textarea.form-control-lg {
  {{> "Recipes.Footer.Cite" }}
 </div>
 
-    Styleguide Recipes.Footer
+Weight: 40
+
+Styleguide Recipes.Footer
 */
 /*
 Sub Footer
@@ -21138,14 +21140,14 @@ texture_dark p_4 max-w_40
 Styleguide Recipes.Footer.Social
 
 */
-/* Nav Recipes.04x */
+/* Nav Recipes.50 */
 /*
     Quick Utility Links
 
    Quick Links are only text links that are used for special cross marketing to sister sites and utility pages like about, home, extra.  
 
     Markup:
-<nav data-attr="utlity-nav">
+<nav data-attr="utility-nav">
 	<ul class="flex ul_none justify_end">
 		<li class="p-x_3 flex_shrink">
 			<a class="h:underline c_primary h:c_secondary-n1"
@@ -21182,6 +21184,8 @@ Styleguide Recipes.Footer.Social
 	</ul>
 </nav>
 
+Weight:50
+
 
     Styleguide Recipes.Utility Links
 */
@@ -21205,6 +21209,37 @@ MarkupWrapperClasses:
 Styleguide Recipes.Advertisement
 */
 /* content Recipes.100 */
+/*
+Cookie Banner
+
+Description: This page is the root of the page.  The cookie banner was used to display a message to the user that the site uses cookies.  The user can click on the banner to dismiss the message.<ul>
+    <li>The system will present the learner with a pop-up banner that appears when first accessing the site, which will include text, links and an Accept/OK button.  </li>
+    <li>The system will allow the user to dismiss the pop up by clicking the Accept/OK button</li>
+    <li>The system will allow the ACC Admin to "reset" the pop up banner, which will show it to all users and require them to click accept again to dismiss it.  </li>
+    <li>The system will track and record the users date/time when they accepted the pop up.  </li>
+</ul>
+
+Markup:
+<div class="'fixed' b_0 r_0 l_0 grid justify-content-center bg_acc opacity_8 z_5">
+    <div class="flex_row flex">
+        <div class="flex_auto c_white p_3 p_4:md">
+            <h1>This site uses cookies to improve your experience. </h1>
+            <p>By continuing to use our site, you agree to our <a target="_blank" class="link c_white underline h:undecorated" href="https://www.acc.org/footer-pages/cookie-policy" target="_blank">Cookie Policy</a>, <a target="_blank" class="link c_white underline h:undecorated" href="https://www.acc.org/footer-pages/privacy-policy">Privacy Policy</a> and <a target="_blank" class="link c_white underline h:undecorated" href="https://www.acc.org/footer-pages/terms-and-conditions">Terms of Service</a></p></div>
+        <div class="flex_auto grid text_center justify_center">
+            <a class="btn btn-primary self_center p-x_5 shadow_overlap-light">OK</a>
+        </div>
+    </div>
+</div>
+
+MarkupWrapperClasses: relative
+
+NOTE: This design needs to have the 'fixed' class changed to fixed  in the parent container of the attached code when in real implementations.  'fixed' is used in the documentation page so it would not break free of the documentation area into the bottom of the browser page.
+
+Weight:100
+
+Styleguide Recipes.CookieBanner
+*/
+/* content Recipes.150 */
 /*
 Ordered Cards
 
@@ -21244,6 +21279,8 @@ Markup:
    </div>
 </div>
 
+Weight: 150
+
 Styleguide Recipes.Ordered Cards
 */
 /* content Recipes.250 */
@@ -21269,6 +21306,20 @@ Markup:
 Weight:1
 
 Styleguide Data.Agenda.ID
+*/
+/*
+Channel Name
+
+Description:
+A channel is a visible category that an Agenda Item belongs to.
+
+Markup:
+Navigating Health Care Economics 
+
+
+Weight:1
+
+Styleguide Data.Agenda.ChannelName
 */
 /*
 Live Time
@@ -21841,25 +21892,101 @@ Description: This is the logged in header brand area.
 
 Markup:
 <div class="relative">
-    <div class="absolute b_4 r_4 l_4 b_auto:lg t_4:lg r_4:lg r_4:md l_auto:md b_4:md t_4:md justify_center flex flex_row flex_column:md flex_row:lg gap-x_4 gap-y_4">
-        <div class="bg_secondary-2 br_1 br_black-3 br_radius br_solid:lg br_none c_white font_medium font_ui gap-x_3 inline-block inline-flex justify_end m-x_2 p_2:lg p_0 relative shadow_overlap-light">
-            <span class="font_bold font_ui self_center vertical-align_middle display_none inline:md p-x_3">User Name</span>
-            <a class="btn bg_accent-n1 h:bg_accent-n3 br_solid br_black-2 br_1 c_white  h:c_white uppercase shadow_overlap-light font_ui font_bold" href="#">Log Out <i class="fas fa-sign-out p-l_2"></i></a>
-        </div>
-    </div> 
+    {{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
     <picture class="w_100">
-        <source class="w_100" srcset="https://via.placeholder.com/1440x200.png?text=Banner+Graphic+Desktop+Large" media="(min-width: 1200px)">
-        <source class="w_100" srcset="https://via.placeholder.com/1200x200.png?text=Banner+Graphic+Desktop" media="(min-width: 1024px)">
-        <source class="w_100" srcset="https://via.placeholder.com/768x200.png?text=Banner+Graphic+Tablet" media="(min-width: 768px)">
-        <source class="w_100" srcset="https://via.placeholder.com/600x250.png?text=Banner+Graphic+Mobile" media="(min-width: 400px)"> <source class="w_100" srcset="https://via.placeholder.com/400x300.png?text=Banner+Graphic+Mobile" media="(min-width: 400px)">
-        <img src="https://via.placeholder.com/400x300.png?text=Banner+Graphic+Mobile" class="w_100" alt="">
+        <source class="w_100" srcset="https://via.placeholder.com/1440x200.png?text=Desktop+Large" media="(min-width: 1200px)">
+        <source class="w_100" srcset="https://via.placeholder.com/1200x200.png?text=Desktop" media="(min-width: 1024px)">
+        <source class="w_100" srcset="https://via.placeholder.com/768x200.png?text=Tablet" media="(min-width: 768px)">
+        <source class="w_100" srcset="https://via.placeholder.com/600x250.png?text=Mobile" media="(min-width: 400px)"> <source class="w_100" srcset="https://via.placeholder.com/400x300.png?text=Mobile" media="(min-width: 400px)">
+        <img src="https://via.placeholder.com/400x300.png?text=Mobile" class="w_100" alt="">
     </picture>
 </div>
 
 
 Weight: -999
 
-Styleguide Recipes Virtual.Brand Area.Logged In
+Styleguide Recipes Virtual.BrandArea.LoggedIn
+
+*/
+/*
+Logged Buttons
+
+Description: The logged in buttons. 
+
+Markup:
+<div class="absolute b_4 r_4 l_4 b_auto:lg t_4:lg r_4:lg r_4:md l_auto:md b_4:md t_4:md justify_center flex flex_row flex_column:md flex_row:lg gap-x_4 gap-y_4">
+    <div class="bg_secondary-2 br_1 br_black-3 br_radius br_solid:lg br_none c_white font_medium font_ui gap-x_3 inline-block inline-flex justify_end m-x_2 p_2:lg p_0 relative shadow_overlap-light">
+        <span class="font_bold font_ui self_center vertical-align_middle display_none inline:md p-x_3">User Name</span>
+        <a class="btn bg_accent-n1 h:bg_accent-n3 br_solid br_black-2 br_1 c_white  h:c_white uppercase shadow_overlap-light font_ui font_bold" href="#">Log Out <i class="fas fa-sign-out p-l_2"></i></a>
+    </div>
+</div> 
+
+Weight:0
+
+Styleguide Recipes Virtual.BrandArea.LoggedIn.Button
+*/
+/*
+
+Unsafe Area
+
+Description: Because the UI is floats on top of the images there are area that are unsafe to contain text. 
+
+Markup:
+<div class="relative m-t_4 overflow-hidden" style="width:1400px">
+ {{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
+<div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
+	<img
+		class="w_100"
+		src="https://via.placeholder.com/1440x200.png?text=Desktop+Large+1440x200"
+	/>
+</div>
+<div class="relative m-t_4  overflow-hidden" style="width:1200px">
+ {{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
+<div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
+	<img
+		class="w_100"
+		src="https://via.placeholder.com/1200x200.png?text=Desktop+1200x200"
+	/>
+</div>
+<div class="relative m-t_4  overflow-hidden" style="width:768px">
+ {{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
+<div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
+	<img
+		class="w_100"
+		src="https://via.placeholder.com/768x200.png?text=Tablet+768x200"
+	/>
+</div>
+<div class="relative m-t_4  overflow-hidden"  style="width:600px">
+<div class="absolute r_4 l_auto b_4 t_auto justify_center flex flex_column gap-x_4 gap-y_4">
+     <div class="bg_secondary-2 br_1 br_black-3 br_radius br_solid:lg br_none c_white font_medium font_ui gap-x_3 inline-block inline-flex justify_end m-x_2 p_2:lg p_0 relative shadow_overlap-light">
+         <span class="font_bold font_ui self_center vertical-align_middle display_none inline:md p-x_3">User Name</span>
+         <a class="btn bg_accent-n1 h:bg_accent-n3 br_solid br_black-2 br_1 c_white  h:c_white uppercase shadow_overlap-light font_ui font_bold" href="#">Log Out <i class="fas fa-sign-out p-l_2"></i></a>
+     </div>
+ </div>
+<div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center l_0 text_center" style="height:100px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
+	<img
+		class="w_100"
+		src="https://via.placeholder.com/600x250.png?text=Mobile+600x250"
+	/>
+</div>
+<div class="relative m-t_4  overflow-hidden" style="width:400px">
+<div class="absolute b_4 r_4 l_4 justify_center flex flex_row flex_column gap-x_4 gap-y_4">
+     <div class="bg_secondary-2 br_1 br_black-3 br_radius br_solid:lg br_none c_white font_medium font_ui gap-x_3 inline-block inline-flex justify_end m-x_2 p_2:lg p_0 relative shadow_overlap-light">
+         <span class="font_bold font_ui self_center vertical-align_middle display_none inline:md p-x_3">User Name</span>
+         <a class="btn bg_accent-n1 h:bg_accent-n3 br_solid br_black-2 br_1 c_white  h:c_white uppercase shadow_overlap-light font_ui font_bold" href="#">Log Out <i class="fas fa-sign-out p-l_2"></i></a>
+     </div>
+ </div>
+<div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center l_0 text_center" style="height:100px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
+	<img
+		class="w_100"
+		src="https://via.placeholder.com/400x300.png?text=Mobile+400x300"	
+	/>
+</div>
+
+
+Weight: -999
+
+Styleguide Recipes Virtual.BrandArea.UnSAFE
 
 */
 /*
@@ -21875,18 +22002,18 @@ Markup:
         <a class="btn bg_primary-n1 h:bg_primary-n3 br_solid br_black-2 br_1 c_white h:c_white uppercase shadow_overlap-light font_ui font_bold" href="#">Register</a>
    </div>
     <picture class="w_100">
-        <source class="w_100" srcset="https://via.placeholder.com/1440x200.png?text=Banner+Graphic+Desktop+Large" media="(min-width: 1200px)">
-        <source class="w_100" srcset="https://via.placeholder.com/1200x200.png?text=Banner+Graphic+Desktop" media="(min-width: 1024px)">
-        <source class="w_100" srcset="https://via.placeholder.com/768x200.png?text=Banner+Graphic+Tablet" media="(min-width: 768px)">
-        <source class="w_100" srcset="https://via.placeholder.com/600x250.png?text=Banner+Graphic+Mobile" media="(min-width: 400px)"> <source class="w_100" srcset="https://via.placeholder.com/400x300.png?text=Banner+Graphic+Mobile" media="(min-width: 400px)">
-        <img src="https://via.placeholder.com/400x300.png?text=Banner+Graphic+Mobile" class="w_100" alt="">
+        <source class="w_100" srcset="https://via.placeholder.com/1440x200.png?text=Desktop+Large" media="(min-width: 1200px)">
+        <source class="w_100" srcset="https://via.placeholder.com/1200x200.png?text=Desktop" media="(min-width: 1024px)">
+        <source class="w_100" srcset="https://via.placeholder.com/768x200.png?text=Tablet" media="(min-width: 768px)">
+        <source class="w_100" srcset="https://via.placeholder.com/600x250.png?text=Mobile" media="(min-width: 400px)"> <source class="w_100" srcset="https://via.placeholder.com/400x300.png?text=Mobile" media="(min-width: 400px)">
+        <img src="https://via.placeholder.com/400x300.png?text=Mobile" class="w_100" alt="">
     </picture>
 </div>
 
 
 Weight: -1000
 
-Styleguide Recipes Virtual.Brand Area.Logged Out
+Styleguide Recipes Virtual.BrandArea.Logged Out
 
 */
 /*
@@ -22294,10 +22421,11 @@ Description: When the count of sessions is lower then 10 in count, the Simple De
 Markup:
 <article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
     <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
-        <div class="br-b_1 br_solid br_primary-n1">
+        <div class="br-b_1 br_solid br_primary-2">
+            {{>"Recipes Virtual.CategoryFlags"}}
             <div class="p_4 p-b_2 flex flex_column flex_row:lg">
                 <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block">
+                    <span class="block font-size_up-1 font_display lh_1">
                         <strong class="font_bold p-r_3">{{> "Data.Agenda.ID" }}</strong>
                         {{> "Data.Session.Title" }}
                     </span>
@@ -22353,6 +22481,19 @@ Styleguide Recipes Virtual.Sessions.Simple
 
 */
 /*
+Category Flags
+
+Description: A graphic treatment for the category flags which are tags applied like channel and type.
+
+Markup:
+<div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white">{{>"Data.Agenda.ChannelName"}}</div>
+
+
+Weight:0
+
+Styleguide Recipes Virtual.CategoryFlags
+*/
+/*
 
 Simple: On Demand
 
@@ -22361,9 +22502,10 @@ Description: When the count of sessions is lower then 10 in count, the Simple De
 Markup:
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black font_0 m-b_4 shadow_overlap-light">
     <div class="br-tl_radius br-tr_radius br_1 br_black-3 br_solid flex flex_column font_ui m-t_n2 relative shadow_2">
-        <div class="br-b_1 br_primary-n1 br_solid">
+        <div class="br-b_1 br_primary-2 br_solid">
+            <!-- {{>"Recipes Virtual.CategoryFlags"}} -->
             <div class="p_4 p-b_2 flex flex_column flex_row:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_1 p-r_4:lg">
+                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2  p-r_4:lg">
                     <span class="block c_black-6 uppercase font_bold font-size_down-1"> Session I: Evolving New Frontiers of Imaging Ready for Practice</span><span class="block font-size_up-1 font_display lh_1">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of session and Faculty by Dr. Itchhaporia </span><span class="block c_black font-size_down-1 font_ui lh_3 opacity_7">Dipti Itchhaporia, MD, FACC (Chair)</span>
                 </h3>
                 <div class="flex_grow m-l_auto:lg">
@@ -22464,7 +22606,7 @@ Markup:
         </h3>
         <div class="self_start"><a title="download attachments" class="bg_secondary nowrap text_center br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/Tweat_DrSoda" target="_blank"> <i class="far fa-paperclip"></i><span class="display_none inline-block:md"> Attachments</span> </a></div>
 </header>
-<article class="flex flex_row:md flex_column gap-x_4 gap-y_3 p-t_3 b-t_5 br-b_1 br_solid br_primary-n1 order_3">
+<article class="flex flex_row:md flex_column gap-x_4 gap-y_3 p-t_3 b-t_5 br-b_1 br_solid br_primary-2 order_3">
     <section class="flex_auto w_100">
         <div class="">
             <h4 class="font-size_up p-x_3 c_primary font_medium">Presentations</h4>
@@ -22676,52 +22818,6 @@ Styleguide Recipes Virtual.Block Design.FooterButtonsNoDetails
 
 */
 /*
-Live Video Horizontal
-
-Description: 
-
-Markup:
-    <article class="c_black flex flex_column flex_row:md">
-        <div class="block:lg flex_grow max-w_30:md p-x_5:lg p-x_4:md p-x_3 m-b_3 m-b_0:md w_100 w_50:md m_auto m_0:md">
-            <div class="m_auto m_auto:md self_center text_center">
-                <a class="aspect_3x2:lg  block aspect_21x9 aspect_16x9:md bg_top bg_cover bg_no-repeat bg_black generic_video br_1 br_radius br_solid br_black-3 flex_shrink relative shadow_3 text_center c_white-6 h:c_white ">
-                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
-                        <i class="absolute c_white-9 fa-play-circle text-shadow_black-1 fas flex_auto font_10:md font_5 opacity_9 self_center text_center w_100"></i>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="flex_auto">
-            <div class="c_primary-n4 flex_auto font_1 font_2:md font_display font_medium">
-                <div class="lh_2 m-t_2 p_3 p-y_2">
-                    <a href="#" class="">
-                        <span class="block lh_1"><strong class="font_accent">{{> "Data.Agenda.ID" }}</strong> {{> "Data.Session.Title" }}</span>
-                    </a>
-                    <span class="block font-size_down lh_1">{{> "Data.Session.Subtitle" }}</span>          
-                    <span class="font-size_down-2 c_secondary-n3  block">{{> "Data.Faculty.FullName" }} <span class="font_italic"> - {{> "Data.Faculty.Role" }}</span></span>
-                </div>
-            </div>
-            <div class="br-t_1 br_dotted br_black-3 c_black flex flex_wrap flex_column gap-y_3 flex_row:md font_n2 justify_between m-t_2 p-t_2">
-                <div class="flex_shrink block text_left p-r_4 m-r_4 ">
-                    <a href="#modal-extra" class="block h:undecorated uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
-                </div>
-                <div class="flex_auto m-l_auto:md self_center">
-                    {{> "Recipes Virtual.Extras.Credit Dots" }}
-                </div>
-            </div>
-        </div>
-    </article>
-
-MarkupWrapperClasses:
-max-w_70
-
-deprecated:
-
-Weight: 10
-
-Styleguide Graveyard.Block Design.Live Video.Horizontal
-*/
-/*
 Five Channel Max
 
 Description: 
@@ -22911,7 +23007,7 @@ Markup:
             <!-- This content can container html -->
             {{> Data.Faculty.Bio }}
         </div>   
-        <div class="grid justify_center">
+        <div class="grid justify_start">
             {{> "Recipes Virtual.Faculty.TwitterButton"}}
         </div>    
 	</div>
@@ -22943,7 +23039,7 @@ Markup:
             <!-- This content can container html -->
             {{> Data.Faculty.Bio }}
         </div>   
-        <div class="grid justify_center">
+        <div class="grid justify_start">
             {{> "Recipes Virtual.Faculty.TwitterButton"}}
         </div>      
 	</div>
@@ -22954,6 +23050,93 @@ FORMAT: This element uses data that has strict data formatting requirements. See
 Weight:0
 
 Styleguide Recipes Virtual.Faculty.NoPhotos
+*/
+/*
+Workshops
+
+Description: A collection of Workshops that are available for the user to select from.
+
+Weight:10
+
+Styleguide Recipes Virtual.Workshops
+*/
+/*
+
+Simple
+
+Description: Simple Design for Workshops. 
+
+Markup:
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black font_0 m-b_4 shadow_overlap-light">
+    <div class="br-tl_radius br-tr_radius br_1 br_black-3 br_solid flex flex_column font_ui m-t_n2 relative shadow_2">
+        <div class="br-b_1 br_primary-2 br_solid">
+            {{>"Recipes Virtual.CategoryFlags"}}
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap_4">
+                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 flex_auto p-r_4:lg">
+                    <span class="block font-size_up-1 font_display lh_1">
+                        <!--
+                            <strong class="font_bold p-r_3 font_accent">{{> "Data.Agenda.ID" }}</strong>
+                        -->
+                        {{> "Data.Session.Title" }}
+                    </span>
+                    <!-- Time & Date Stamp -->
+                    <!-- 
+                        <span class="c_accent font-size_down-1">
+                            {{> "Data.Agenda.LiveDate" }}  {{> "Data.Agenda.LiveTime" }}
+                        </span>
+                    -->
+                </h3>
+                {{>"Recipes Virtual.Workshops.Button"}}
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+    <div class="flex_auto">
+        <a href="#modal-extra" class="block h:underline uppercase font_bold" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+    </div>
+    <div class="flex_grow uppercase m-l_auto">
+            <ul class="ul_none font_n2 text_right">
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_MOCIV br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> moc
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_AAPA br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> aapa
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_ECME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> ecme
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
+
+
+Weight: 10
+
+Styleguide Recipes Virtual.Workshops.Simple
+*/
+/*
+Workshops Button
+
+Description: Workshops are interactive buttons that open a webex page and have the call to action "Join Now".
+
+Markup:
+<footer class="flex flex_auto flex_wrap gap_3 m_auto m-t_auto max-w_15 p-b_4 p-b_4:lg w_100">
+        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 [active]"><i class="fas fa-heart"></i></a>
+        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="" target="blank" class="btn btn-primary flex_auto">Join Now</a>
+        <a href="" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">show details</a>
+</footer>
+
+Weight:0
+
+Styleguide Recipes Virtual.Workshops.Button
 */
 /*
 
@@ -23114,6 +23297,8 @@ Markup:
 
 Weight: 10000
 
+Deprecated: Old Designs from Virtual 2020
+
 Styleguide Graveyard.Lobby
 
 */
@@ -23147,6 +23332,8 @@ Markup:
 
 
 Weight: 100
+
+Deprecated: Old Designs from Virtual 2020
 
 Styleguide Graveyard.Lobby.Cards
 
@@ -23200,6 +23387,8 @@ Markup:
 
 Weight: 150
 
+Deprecated: Old Designs from Virtual 2020
+
 Styleguide Graveyard.Lobby.Cards.ACC20
 
 */
@@ -23243,6 +23432,8 @@ Markup:
 
 
 Weight: 200
+
+Deprecated: Old Designs from Virtual 2020
 
 Styleguide Graveyard.Lobby.Cards.CVCOVID
 
@@ -23295,6 +23486,8 @@ Markup:
 
 
 Weight: 250
+
+Deprecated: Old Designs from Virtual 2020
 
 Styleguide Graveyard.Lobby.Cards.AH20
 
@@ -23383,6 +23576,52 @@ Styleguide Graveyard.Conference Navigation
   background-color: #002d5b;
 }
 
+/*
+Live Video Horizontal
+
+Description: 
+
+Markup:
+    <article class="c_black flex flex_column flex_row:md">
+        <div class="block:lg flex_grow max-w_30:md p-x_5:lg p-x_4:md p-x_3 m-b_3 m-b_0:md w_100 w_50:md m_auto m_0:md">
+            <div class="m_auto m_auto:md self_center text_center">
+                <a class="aspect_3x2:lg  block aspect_21x9 aspect_16x9:md bg_top bg_cover bg_no-repeat bg_black generic_video br_1 br_radius br_solid br_black-3 flex_shrink relative shadow_3 text_center c_white-6 h:c_white ">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100">
+                        <i class="absolute c_white-9 fa-play-circle text-shadow_black-1 fas flex_auto font_10:md font_5 opacity_9 self_center text_center w_100"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="flex_auto">
+            <div class="c_primary-n4 flex_auto font_1 font_2:md font_display font_medium">
+                <div class="lh_2 m-t_2 p_3 p-y_2">
+                    <a href="#" class="">
+                        <span class="block lh_1"><strong class="font_accent">{{> "Data.Agenda.ID" }}</strong> {{> "Data.Session.Title" }}</span>
+                    </a>
+                    <span class="block font-size_down lh_1">{{> "Data.Session.Subtitle" }}</span>          
+                    <span class="font-size_down-2 c_secondary-n3  block">{{> "Data.Faculty.FullName" }} <span class="font_italic"> - {{> "Data.Faculty.Role" }}</span></span>
+                </div>
+            </div>
+            <div class="br-t_1 br_dotted br_black-3 c_black flex flex_wrap flex_column gap-y_3 flex_row:md font_n2 justify_between m-t_2 p-t_2">
+                <div class="flex_shrink block text_left p-r_4 m-r_4 ">
+                    <a href="#modal-extra" class="block h:undecorated uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+                </div>
+                <div class="flex_auto m-l_auto:md self_center">
+                    {{> "Recipes Virtual.Extras.Credit Dots" }}
+                </div>
+            </div>
+        </div>
+    </article>
+
+MarkupWrapperClasses:
+max-w_70
+
+Deprecated: Old Designs from Virtual 2020
+
+Weight: 10
+
+Styleguide Graveyard.Block Design.Live Video.Horizontal
+*/
 body {
   font-size: 16px;
   font-size: 1rem;

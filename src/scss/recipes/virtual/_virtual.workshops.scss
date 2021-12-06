@@ -1,0 +1,89 @@
+/*
+Workshops
+ 
+Description: A collection of Workshops that are available for the user to select from.
+  
+Weight:10
+ 
+Styleguide Recipes Virtual.Workshops
+*/
+/*
+
+Simple
+ 
+Description: Simple Design for Workshops. 
+
+Markup:
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black font_0 m-b_4 shadow_overlap-light">
+    <div class="br-tl_radius br-tr_radius br_1 br_black-3 br_solid flex flex_column font_ui m-t_n2 relative shadow_2">
+        <div class="br-b_1 br_primary-2 br_solid">
+            {{>"Recipes Virtual.CategoryFlags"}}
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap_4">
+                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 flex_auto p-r_4:lg">
+                    <span class="block font-size_up-1 font_display lh_1">
+                        <!--
+                            <strong class="font_bold p-r_3 font_accent">{{> "Data.Agenda.ID" }}</strong>
+                        -->
+                        {{> "Data.Session.Title" }}
+                    </span>
+                    <!-- Time & Date Stamp -->
+                    <!-- 
+                        <span class="c_accent font-size_down-1">
+                            {{> "Data.Agenda.LiveDate" }}  {{> "Data.Agenda.LiveTime" }}
+                        </span>
+                    -->
+                </h3>
+                {{>"Recipes Virtual.Workshops.Button"}}
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+    <div class="flex_auto">
+        <a href="#modal-extra" class="block h:underline uppercase font_bold" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+    </div>
+    <div class="flex_grow uppercase m-l_auto">
+            <ul class="ul_none font_n2 text_right">
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_MOCIV br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> moc
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_AAPA br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> aapa
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_ECME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> ecme
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
+
+
+Weight: 10
+ 
+Styleguide Recipes Virtual.Workshops.Simple
+*/
+
+
+/*
+Workshops Button
+ 
+Description: Workshops are interactive buttons that open a webex page and have the call to action "Join Now".
+ 
+Markup:
+<footer class="flex flex_auto flex_wrap gap_3 m_auto m-t_auto max-w_15 p-b_4 p-b_4:lg w_100">
+        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 [active]"><i class="fas fa-heart"></i></a>
+        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="" target="blank" class="btn btn-primary flex_auto">Join Now</a>
+        <a href="" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">show details</a>
+</footer>
+ 
+Weight:0
+ 
+Styleguide Recipes Virtual.Workshops.Button
+*/
