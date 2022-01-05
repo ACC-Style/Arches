@@ -22,6 +22,7 @@ var fs = require("fs");
 var pkg = require("./package.json");
 var run = require("gulp-run");
 var pkg = require("./package.json");
+var watch = require("gulp-watch");
 
 var banner = [
     "/**",
@@ -261,6 +262,11 @@ var constructMarkdown = function(brand, framework) {
         )
         .pipe(gulp.dest(SOURCE.MD));
 };
+gulp.task("watch-virtual", function() {
+    gulp.watch(PATHS.SCSS + "/**/*.scss", gulp.series(
+        "build-virtual",
+    ));
+});
 gulp.task("fontawesome", function() {
     console.log("Gulp Font Awesome Tasks");
     console.log("Gulp: Going to the store node_modules to pick up some fonts.");
