@@ -478,7 +478,7 @@ Styleguide Anatomy.ExtraCredit
 .reading-typography img {
   width: 100%;
   margin: 0;
-  border: 1px solid #004176;
+  border: 0px none;
 }
 .reading-typography p,
 .reading-typography ul,
@@ -1359,7 +1359,7 @@ Styleguide Typography.Font.Color.Black&White
   color: white !important;
 }
 
-.c_inherit,.c_inherit-all:hover, .c_inherit-all:active, .c_inherit-all:visited, .c_inherit-all:focus, .c_inherit-all {
+.c_inherit,.h\:c_inherit:hover,.c_inherit-all:hover, .c_inherit-all:active, .c_inherit-all:visited, .c_inherit-all:focus, .c_inherit-all {
   color: inherit;
 }
 
@@ -14757,6 +14757,28 @@ Styleguide Interaction.States.Hover.cursor
   cursor: wait;
 }
 
+/*
+Content Query
+
+Description: A mass improvement on how to design components with alteration based on the context rather than the page width. 
+
+Markup:
+<script>
+const supportsContainerQueries = "container" in document.documentElement.style;
+if (!supportsContainerQueries) {
+  import("https://cdn.skypack.dev/container-query-polyfill");
+}
+</script>
+
+NOTE: this is not supported in any browser and will only work with the polyfill.
+
+Experimental: Only supported via the polyfill.
+
+Weight:123
+
+Styleguide Layouts.ContentQuery
+
+*/
 /*
 Extras
 
