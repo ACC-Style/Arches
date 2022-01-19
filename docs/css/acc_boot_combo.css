@@ -458,7 +458,7 @@ Styleguide Anatomy.ExtraCredit
 .reading-typography img {
   width: 100%;
   margin: 0;
-  border: 1px solid #198dae;
+  border: 0px none;
 }
 .reading-typography p,
 .reading-typography ul,
@@ -1335,7 +1335,7 @@ Styleguide Typography.Font.Color.Black&White
   color: white !important;
 }
 
-.c_inherit,.c_inherit-all:hover, .c_inherit-all:active, .c_inherit-all:visited, .c_inherit-all:focus, .c_inherit-all {
+.c_inherit,.h\:c_inherit:hover,.c_inherit-all:hover, .c_inherit-all:active, .c_inherit-all:visited, .c_inherit-all:focus, .c_inherit-all {
   color: inherit;
 }
 
@@ -20867,7 +20867,7 @@ textarea.form-control-lg {
 
     Styleguide Recipes.mobile nav
 */
-/* Nav Recipes.04x */
+/* Recipes.40 */
 .address {
   font-style: unset;
 }
@@ -20912,7 +20912,9 @@ textarea.form-control-lg {
  {{> "Recipes.Footer.Cite" }}
 </div>
 
-    Styleguide Recipes.Footer
+Weight: 40
+
+Styleguide Recipes.Footer
 */
 /*
 Sub Footer
@@ -21137,14 +21139,14 @@ texture_dark p_4 max-w_40
 Styleguide Recipes.Footer.Social
 
 */
-/* Nav Recipes.04x */
+/* Nav Recipes.50 */
 /*
     Quick Utility Links
 
    Quick Links are only text links that are used for special cross marketing to sister sites and utility pages like about, home, extra.  
 
     Markup:
-<nav data-attr="utlity-nav">
+<nav data-attr="utility-nav">
 	<ul class="flex ul_none justify_end">
 		<li class="p-x_3 flex_shrink">
 			<a class="h:underline c_primary h:c_secondary-n1"
@@ -21181,6 +21183,8 @@ Styleguide Recipes.Footer.Social
 	</ul>
 </nav>
 
+Weight:50
+
 
     Styleguide Recipes.Utility Links
 */
@@ -21204,6 +21208,37 @@ MarkupWrapperClasses:
 Styleguide Recipes.Advertisement
 */
 /* content Recipes.100 */
+/*
+Cookie Banner
+
+Description: This page is the root of the page.  The cookie banner was used to display a message to the user that the site uses cookies.  The user can click on the banner to dismiss the message.<ul>
+    <li>The system will present the learner with a pop-up banner that appears when first accessing the site, which will include text, links and an Accept/OK button.  </li>
+    <li>The system will allow the user to dismiss the pop up by clicking the Accept/OK button</li>
+    <li>The system will allow the ACC Admin to "reset" the pop up banner, which will show it to all users and require them to click accept again to dismiss it.  </li>
+    <li>The system will track and record the users date/time when they accepted the pop up.  </li>
+</ul>
+
+Markup:
+<div class="'fixed' b_0 r_0 l_0 grid justify-content-center bg_acc opacity_8 z_5">
+    <div class="flex_row flex">
+        <div class="flex_auto c_white p_3 p_4:md">
+            <h1>This site uses cookies to improve your experience. </h1>
+            <p>By continuing to use our site, you agree to our <a target="_blank" class="link c_white underline h:undecorated" href="https://www.acc.org/footer-pages/cookie-policy" target="_blank">Cookie Policy</a>, <a target="_blank" class="link c_white underline h:undecorated" href="https://www.acc.org/footer-pages/privacy-policy">Privacy Policy</a> and <a target="_blank" class="link c_white underline h:undecorated" href="https://www.acc.org/footer-pages/terms-and-conditions">Terms of Service</a></p></div>
+        <div class="flex_auto grid text_center justify_center">
+            <a class="btn btn-primary self_center p-x_5 shadow_overlap-light">OK</a>
+        </div>
+    </div>
+</div>
+
+MarkupWrapperClasses: relative
+
+NOTE: This design needs to have the 'fixed' class changed to fixed  in the parent container of the attached code when in real implementations.  'fixed' is used in the documentation page so it would not break free of the documentation area into the bottom of the browser page.
+
+Weight:100
+
+Styleguide Recipes.CookieBanner
+*/
+/* content Recipes.150 */
 /*
 Ordered Cards
 
@@ -21242,6 +21277,8 @@ Markup:
       </div>
    </div>
 </div>
+
+Weight: 150
 
 Styleguide Recipes.Ordered Cards
 */

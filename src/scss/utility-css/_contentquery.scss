@@ -1,0 +1,21 @@
+/*
+Content Query
+ 
+Description: A mass improvement on how to design components with alteration based on the context rather than the page width. 
+ 
+Markup:
+<script>
+const supportsContainerQueries = "container" in document.documentElement.style;
+if (!supportsContainerQueries) {
+  import("https://cdn.skypack.dev/container-query-polyfill");
+}
+</script>
+
+NOTE: this is not supported in any browser and will only work with the polyfill.
+EXPERIMENTAL: True
+
+Weight:0
+ 
+Styleguide Layouts.ContentQuery
+
+*/
