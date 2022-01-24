@@ -7137,14 +7137,14 @@ Locking Graphics
 Showing assets before they are intractable is needed  
 
 Markup:
-<div class="locked_graphic">{{> "Recipes Virtual.Block Design.Live Video"}}</div>
+<div class="locked_graphic">{{> "Program.Block.Live Video"}}</div>
 
 MarkupWrapperClasses:
 gap_5 grid justify_around p_4 p_5 grid-col_1 grid-col_2:md
 
 Weight: 1000
 
-Styleguide Recipes Virtual.Block Design.Live Video.Locked Graphic
+Styleguide Program.Block.LiveVideo.Locked Graphic
 */
 /*
 Header Nav
@@ -7156,22 +7156,22 @@ Markup:
     <nav class="flex_auto max-w_90 font_n1 font_1:md font_2:lg font_display font_medium m-l_0 navbar navbar-dark navbar-expand-lg p_0 text_center:lg text_left">
         <!-- Primary Nav that expands on mobile and reveals extra nav items when on desktop. -->
         <ul class="navbar-nav flex flex_row w_100">
-            {{> "Recipes Virtual.HeaderNav.Active" }}
-            {{> "Recipes Virtual.HeaderNav.MobileButton"}}
-            {{> "Recipes Virtual.HeaderNav.Disabled"}}
+            {{> "PageLayout.HeaderNav.Active" }}
+            {{> "PageLayout.HeaderNav.MobileButton"}}
+            {{> "PageLayout.HeaderNav.Disabled"}}
             <!-- menu toggle for mobile -->
-            {{> "Recipes Virtual.HeaderNav.MobileToggle"}}
+            {{> "PageLayout.HeaderNav.MobileToggle"}}
             <!-- menu items that hide when in mobile under the expanded area -->
-            {{> "Recipes Virtual.HeaderNav.MobileHidden" }}
-            {{> "Recipes Virtual.HeaderNav.MobileHiddenDisabled" }}
-            {{> "Recipes Virtual.HeaderNav.MobileHidden" }}
+            {{> "PageLayout.HeaderNav.MobileHidden" }}
+            {{> "PageLayout.HeaderNav.MobileHiddenDisabled" }}
+            {{> "PageLayout.HeaderNav.MobileHidden" }}
         </ul>
         <!-- Expanding Mobile Menu -->
         <div class="collapse navbar-collapse" id="ExpandingMobileMenu">
             <ul class="navbar-nav flex shadow_emboss-light flex_column w_100 font_1 bg_black-2 display_none:lg" >
-                {{> "Recipes Virtual.HeaderNav.ExpandMobileLinks" }}
-                {{> "Recipes Virtual.HeaderNav.ExpandMobileLinksDisabled" }}
-                {{> "Recipes Virtual.HeaderNav.ExpandMobileLinks" }}
+                {{> "PageLayout.HeaderNav.ExpandMobileLinks" }}
+                {{> "PageLayout.HeaderNav.ExpandMobileLinksDisabled" }}
+                {{> "PageLayout.HeaderNav.ExpandMobileLinks" }}
             </ul> 
         </div>
     </nav>
@@ -7179,7 +7179,7 @@ Markup:
 
 Weight: 0
 
-Styleguide Recipes Virtual.HeaderNav
+Styleguide PageLayout.HeaderNav
 */
 /*
 Mobile Button  Header Nav
@@ -7199,7 +7199,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide Recipes Virtual.HeaderNav.MobileButton
+Styleguide PageLayout.HeaderNav.MobileButton
 */
 /*
 Mobile Toggle Header Nav
@@ -7219,7 +7219,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide Recipes Virtual.HeaderNav.MobileToggle
+Styleguide PageLayout.HeaderNav.MobileToggle
 */
 /*
 Mobile Hidden Header Nav
@@ -7237,7 +7237,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide Recipes Virtual.HeaderNav.MobileHidden
+Styleguide PageLayout.HeaderNav.MobileHidden
 */
 /*
 Mobile Hidden Header Nav Disabled
@@ -7255,7 +7255,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide Recipes Virtual.HeaderNav.MobileHiddenDisabled
+Styleguide PageLayout.HeaderNav.MobileHiddenDisabled
 */
 /*
 Expanded Mobile Nav List
@@ -7273,7 +7273,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide Recipes Virtual.HeaderNav.ExpandMobileLinks
+Styleguide PageLayout.HeaderNav.ExpandMobileLinks
 */
 /*
 Expanded Mobile Nav List Disabled
@@ -7291,7 +7291,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide Recipes Virtual.HeaderNav.ExpandMobileLinksDisabled
+Styleguide PageLayout.HeaderNav.ExpandMobileLinksDisabled
 */
 /*
 Nav Active
@@ -7310,7 +7310,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: -1
 
-Styleguide Recipes Virtual.HeaderNav.Active
+Styleguide PageLayout.HeaderNav.Active
 */
 /*
 Nav Disabled
@@ -7329,7 +7329,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 10
 
-Styleguide Recipes Virtual.HeaderNav.Disabled
+Styleguide PageLayout.HeaderNav.Disabled
 */
 /*
 
@@ -7340,7 +7340,7 @@ Conferences can have a header branding area which gives the design team the abil
 
 Weight: -999
 
-Styleguide Recipes Virtual.Brand Area
+Styleguide PageLayout.BrandArea
 
 */
 /*
@@ -7351,7 +7351,7 @@ Description: This is the logged in header brand area.
 
 Markup:
 <div class="relative">
-    {{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
+    {{> "PageLayout.BrandArea.LoggedIn.Button"}}
     <picture class="w_100">
         <source class="w_100" srcset="https://via.placeholder.com/1440x200.png?text=Desktop+Large" media="(min-width: 1200px)">
         <source class="w_100" srcset="https://via.placeholder.com/1200x200.png?text=Desktop" media="(min-width: 1024px)">
@@ -7361,10 +7361,11 @@ Markup:
     </picture>
 </div>
 
+MarkupWrapperClasses: relative 
 
 Weight: -999
 
-Styleguide Recipes Virtual.BrandArea.LoggedIn
+Styleguide PageLayout.BrandArea.LoggedIn
 
 */
 /*
@@ -7380,11 +7381,11 @@ Markup:
     </div>
 </div> 
 
-MarkupWrapperClasses:relative
+MarkupWrapperClasses: relative 
 
 Weight:0
 
-Styleguide Recipes Virtual.BrandArea.LoggedIn.Button
+Styleguide PageLayout.BrandArea.LoggedIn.Button
 */
 /*
 
@@ -7394,7 +7395,7 @@ Description: Because the UI is floats on top of the images there are area that a
 
 Markup:
 <div class="relative m-t_4 overflow-hidden" style="width:1400px">
-{{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
+{{> "PageLayout.BrandArea.LoggedIn.Button"}}
 <div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
 	<img
 		class="w_100"
@@ -7402,7 +7403,7 @@ Markup:
 	/>
 </div>
 <div class="relative m-t_4  overflow-hidden" style="width:1200px">
- {{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
+ {{> "PageLayout.BrandArea.LoggedIn.Button"}}
 <div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
 	<img
 		class="w_100"
@@ -7410,7 +7411,7 @@ Markup:
 	/>
 </div>
 <div class="relative m-t_4  overflow-hidden" style="width:768px">
- {{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
+ {{> "PageLayout.BrandArea.LoggedIn.Button"}}
 <div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
 	<img
 		class="w_100"
@@ -7444,10 +7445,11 @@ Markup:
 	/>
 </div>
 
+MarkupWrapperClasses: relative 
 
 Weight: -999
 
-Styleguide Recipes Virtual.BrandArea.UnSAFE
+Styleguide PageLayout.BrandArea.UnSAFE
 
 */
 /*
@@ -7471,10 +7473,11 @@ Markup:
     </picture>
 </div>
 
+MarkupWrapperClasses: relative 
 
 Weight: -1000
 
-Styleguide Recipes Virtual.BrandArea.Logged Out
+Styleguide PageLayout.BrandArea.LoggedOut
 
 */
 /*
@@ -7487,8 +7490,8 @@ Markup:
             </h2><div class="font_0 font_copy"><p>This section of Care of the Athletic Heart 2020 Virtual contains certified education content. If a session offers credit, it is indicated. Credit information and disclosures may be accessed by selecting the below button.
                 </p><p><strong class="font_bold">Credit must be claimed by
 						December 31, 2020, 5:00 PM ET. </strong>You may only complete the evaluation and credit claim once; therefore, please do not proceed until you have finished your participation in the certified content for which you wish to claim credit.
-                </p></div><a data-sf-ec-immutable="" class="btn br_radius max-w_20 m_auto m-b_3 block shadow_overlap-light btn-primary" href="https://www.surveys.acc.org/se/0B87B74405A4790B" target="_blank">Evaluation &amp; Credit Claim</a>
- <a href="/docs/default-source/filesah20/2020-athletic-heart---virtual-website---credit-info.pdf?sfvrsn=7d17aae2_2" class="btn br_radius max-w_20 m_auto m-b_3 block shadow_overlap-light btn-primary" target="_blank">Credit Information &amp; Disclosures</a>
+                </p></div><a  class="btn br_radius max-w_20 m_auto m-b_3 block shadow_overlap-light btn-primary" href="#" target="_blank">Evaluation &amp; Credit Claim</a>
+ <a href="#" class="btn br_radius max-w_20 m_auto m-b_3 block shadow_overlap-light btn-primary" target="_blank">Credit Information &amp; Disclosures</a>
  </div>
 
  MarkupWrapperClasses:
@@ -7496,16 +7499,16 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Extras.Credits
+Styleguide PageContent.Evergreen.Credits
 */
 /*
 Extras
 
 Description: There are parts of the conference site that are just extras that are decorators or extra elements, links, and content that are wrapped in to make the site feel more robust. 
 
-Weight: 10000
+Weight: 200000
 
-Styleguide Recipes Virtual.Extras
+Styleguide PageExtras
 */
 /*
 External Resource
@@ -7522,7 +7525,7 @@ Markup:
  gap-x_4 gap-y_4 grid template-x_30
 
 
-Styleguide Recipes Virtual.Extras.External Resource
+Styleguide PageExtras.External Resource
 */
 /*
 Date Time Separators
@@ -7542,12 +7545,14 @@ Markup:
     </div>
 </div>
 
+FORMAT: This element uses data that has strict data formatting requirements. See the data tab for more information.
+
 MarkupWrapperClasses:
     p_4 
 
 Weight: 100
 
-Styleguide Recipes Virtual.Extras.Date Time Dividers
+Styleguide PageExtras.Date Time Dividers
 */
 /*
 Twitter Tag
@@ -7559,7 +7564,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Extras.TwitterTag
+Styleguide PageExtras.TwitterTag
 */
 /*
 Call-to-Action Card
@@ -7575,7 +7580,7 @@ Markup:
 
 Weight:100
 
-Styleguide Recipes Virtual.Extras.Call To Action
+Styleguide PageExtras.Call To Action
 */
 /*
 Simple Credit Dots
@@ -7592,11 +7597,11 @@ Markup:
         <span class="bg_COP br_1 br_black-3 br_circle br_solid inline-block m-r_2" style=" height: 1em; width: 1em;"></span> cop </li>
 </ul>
 
-Note: This patter requires the inclusion of the credit color stylesheets.
+Note: This pattern requires the inclusion of the credit color stylesheets.
 
 Weight:0
 
-Styleguide Recipes Virtual.Extras.Credit Dots
+Styleguide PageExtras.CreditDots
 
 */
 /*
@@ -7634,7 +7639,7 @@ Markup:
 
  Weight: 200
 
-Styleguide Recipes Virtual.Extras.Attachments
+Styleguide PageExtras.Attachments
 */
 /*
 Video Block
@@ -7686,7 +7691,7 @@ MarkupWrapperClasses:
 
 Weight: -1000
 
-Styleguide Recipes Virtual.Block Design.OnDemand.Video
+Styleguide Program.Block.OnDemand.Video
 */
 /*
 Slides Block
@@ -7719,7 +7724,7 @@ Markup:
             <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
         </div>
         <div class="flex_grow">
-            {{> "Recipes Virtual.Extras.Credit Dots" }}
+            {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
@@ -7730,7 +7735,7 @@ MarkupWrapperClasses:
 
 Weight: -800
 
-Styleguide Recipes Virtual.Block Design.OnDemand.Slides
+Styleguide Program.Block.OnDemand.Slides
 */
 /*
 eAbstract
@@ -7765,7 +7770,7 @@ Markup:
             <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
         </div>
         <div class="flex_grow m-l_auto">
-             {{> "Recipes Virtual.Extras.Credit Dots" }}
+             {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
@@ -7777,7 +7782,7 @@ MarkupWrapperClasses:
 
 Weight: -700
 
-Styleguide Recipes Virtual.Block Design.OnDemand.eAbstract
+Styleguide Program.Block.OnDemand.eAbstract
 */
 /*
 Journal Block
@@ -7807,7 +7812,7 @@ Markup:
             <span class="block uppercase" >Published: June 15, 2020</span>
         </div>
         <div class="flex_grow m-l_auto">
-             {{> "Recipes Virtual.Extras.Credit Dots" }}
+             {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
@@ -7818,7 +7823,7 @@ p_4 bg_white
 
 Weight: 100
 
-Styleguide Recipes Virtual.Block Design.OnDemand.Journals
+Styleguide Program.Block.OnDemand.Journals
 */
 /*
 Resource Package
@@ -7848,7 +7853,7 @@ Markup:
             <span class="block uppercase" >Published: June 15, 2020</span>
         </div>
         <div class="flex_grow m-l_auto">
-             {{> "Recipes Virtual.Extras.Credit Dots" }}
+             {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
@@ -7860,7 +7865,7 @@ p_4 bg_white
 
 Weight: 200
 
-Styleguide Recipes Virtual.Block Design.OnDemand.Resource
+Styleguide Program.Block.OnDemand.Resource
 */
 /*
 Sessions
@@ -7871,7 +7876,7 @@ Description: The session is the main content item of virtual conferences.  These
 
 Weight:10
 
-Styleguide Recipes Virtual.Sessions
+Styleguide Program.Sessions
 */
 /*
 
@@ -7883,7 +7888,7 @@ Markup:
 <article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
     <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
         <div class="br-b_1 br_solid br_primary-2">
-            {{>"Recipes Virtual.CategoryFlags"}}
+            {{>"PageExtras.CategoryFlags"}}
             <div class="p_4 p-b_2 flex flex_column flex_row:lg">
                 <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
                     <span class="block font-size_up-1 font_display lh_1">
@@ -7938,7 +7943,7 @@ Markup:
 
 Weight: 10
 
-Styleguide Recipes Virtual.Sessions.Simple
+Styleguide Program.Sessions.Simple
 
 */
 /*
@@ -7952,19 +7957,19 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.CategoryFlags
+Styleguide PageExtras.CategoryFlags
 */
 /*
 
-Simple: On Demand
+On Demand
 
-Description: When the count of sessions is lower then 10 in count, the Simple Design is recommended the difference between live and on demand is that ondemand presents at presentation level and not session. 
+Description: When the count of sessions is lower then 10 in count, the Simple Design is recommended the difference between live and on demand. 
 
 Markup:
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black font_0 m-b_4 shadow_overlap-light">
     <div class="br-tl_radius br-tr_radius br_1 br_black-3 br_solid flex flex_column font_ui m-t_n2 relative shadow_2">
         <div class="br-b_1 br_primary-2 br_solid">
-            <!-- {{>"Recipes Virtual.CategoryFlags"}} -->
+            <!-- {{>"PageExtras.CategoryFlags"}} -->
             <div class="p_4 p-b_2 flex flex_column flex_row:lg">
                 <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2  p-r_4:lg">
                     <span class="block c_black-6 uppercase font_bold font-size_down-1"> Session I: Evolving New Frontiers of Imaging Ready for Practice</span><span class="block font-size_up-1 font_display lh_1">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of session and Faculty by Dr. Itchhaporia </span><span class="block c_black font-size_down-1 font_ui lh_3 opacity_7">Dipti Itchhaporia, MD, FACC (Chair)</span>
@@ -8007,115 +8012,8 @@ Markup:
 
 Weight: 10
 
-Styleguide Recipes Virtual.Sessions.Simple On Demand
+Styleguide Program.Sessions.OnDemand
 
-*/
-/*
-Player
-
-Description: 
-
-Markup:
-<div class="flex_column flex">
-<section class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3 order_2 order_1:md">
-    <div class="flex_auto w_100">
-        <div class="player hd full">
-            <div class="bg_acc aspect_4x3 c_white text_center flex justify_center">VIDEO</div>
-        </div>
-    </div>
-    <div class="flex_auto max-w_25:lg max-w_20:md w_100 ">
-        <div class="br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column" id="panel-chat" style="height:100%">
-            <div class="panel-heading bg_transparent">
-                <h4 class="panel-title font_bold font_display c_primary">Live Chat</h4>
-                <p class="welcome">Welcome <b> Matt Watier </b></p>
-            </div>
-            <div id="wrapper" class="br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light">
-                <div class="load-log p_3 absolute t_0 r_0 l_0 b_0 overflow_unset" data-log-id="2">
-                    <div class="msgln">(1:44 PM) <b> Lovely Day </b>: Chat<br></div>
-                    <div class="msgln">(2:13 PM) <b> Lovely Day </b>: Chat some more<br></div>
-                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
-                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
-                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
-                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.<br></div>
-                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.<br></div>
-                    <div class="msgln">(2:19 PM) <b> Lovely Day </b>: Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.<br></div>
-                    <div class="msgln">(3:48 PM) <b> Lovely Day </b>: test<br></div>
-                    <div class="msgln">(3:50 PM) <b> Matt Watier </b>: hello<br></div>
-                </div>
-            </div>
-            <div class="panel-footer flex_none m-t_auto">
-                <form name="message" action="">
-                    <div class="form-group flex flex_row nowrap">
-                        <input name="usermsg" type="text" id="usermsg" class="form-control br-br_square br-tr_square flex_auto" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-                        <input name="submitmsg" type="submit" id="submitmsg" value="Add" class="btn btn-primary br-tl_square br-bl_square flex_none">
-                        <input type="hidden" name="user_client_portal_reg_id" id="user_client_portal_reg_id" value="10">
-                        <input type="hidden" name="chat_id" id="chat_id" value="2">
-                        <input type="hidden" name="client_portal_presentation_id" id="client_portal_presentation_id" value="2">
-                        <input type="hidden" name="client_portal_id" id="client_portal_id" value="1">
-                        <input type="hidden" name="screen_name" id="screen_name" value=" Matt   Watier ">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<header class="flex flex_row font_0 font_1:md font_3:lg order_1 order_2:md p-y_3">
-    <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
-            <span class="block">
-                <strong class="font_bold p-r_3">101</strong> Cardiovascular Update for the Clinician III </span>
-            <span class="c_accent font-size_down-2 lh_0 inline-block">Saturday, Nov 20, 2021 @ 11:15 AM – 11:45 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-        </h3>
-        <div class="self_start"><a title="download attachments" class="bg_secondary nowrap text_center br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/Tweat_DrSoda" target="_blank"> <i class="far fa-paperclip"></i><span class="display_none inline-block:md"> Attachments</span> </a></div>
-</header>
-<article class="flex flex_row:md flex_column gap-x_4 gap-y_3 p-t_3 b-t_5 br-b_1 br_solid br_primary-2 order_3">
-    <section class="flex_auto w_100">
-        <div class="">
-            <h4 class="font-size_up p-x_3 c_primary font_medium">Presentations</h4>
-            <ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white">
-                    <span class="font-size_up-1 block font_display">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of Session and Faculty</span>
-                    <span class="font-size-down opacity_7 font_ui"><strong class="c_primary">Co-Chair:</strong>Pepper H. Soda, MD, FACC (New York, NY, USA)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">11:45 – 11:49 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
-                    <span class="font-size_up-1 block font_display">Antiplatelet Regimen After Drug Coated Balloon </span>
-                    <span class="font-size-down opacity_7 font_ui">Chen (China)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">12:00 – 12:45 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
-                    <span class="font-size_up-1 block font_display">Case: Drug Coated Balloon in De Novo Ostial Left Anterior Descending Artery </span>
-                    <span class="font-size-down opacity_7 font_ui">Qiu (China)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">12:45 – 1:00 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <aside class="flex_auto max-w_25:lg max-w_20:md w_100 uppercase">
-        <h4 class="font-size_up p-x_3 c_primary font_medium">Credits</h4>
-        <ul class="br-t_1 br_primary br_solid flex_wrap font_n1 gap-x_4 gap-y_3 p-x_3 p-y_3 p_0 ul_none">
-            <li class="inline-block lh_0 p-l_3">
-                <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
-            </li>
-            <li class="inline-block lh_0 p-l_3">
-                <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne
-            </li>
-            <li class="inline-block lh_0 p-l_3">
-                <span class="bg_MOCIV br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> moc
-            </li>
-            <li class="inline-block lh_0 p-l_3">
-                <span class="bg_AAPA br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> aapa
-            </li>
-            <li class="inline-block lh_0 p-l_3">
-                <span class="bg_ECME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> ecme
-            </li>
-        </ul>
-    </aside>
-</article>
-</div>
-
-Weight:0
-
-Styleguide Recipes Virtual.Player
 */
 /*
 Image and content
@@ -8139,262 +8037,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Content.ImageContentSimple
-*/
-/*
-Sessions
-
-Description: The session is the main content item of virtual conferences.  These element are represented differently depending on the amount of sessions and presentation are in the conference. Sessions are a collection of presentations. 
-
-
-
-Weight:10
-
-Styleguide Recipes Virtual.Sessions
-*/
-/*
-
-Simple
-
-Description: When the count of sessions is lower then 10 in count, the Simple Design is recommended. 
-
-Markup:
-<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
-    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
-        <div class="br-b_1 br_solid br_primary-2">
-            {{>"Recipes Virtual.CategoryFlags"}}
-            <div class="p_4 p-b_2 flex flex_column flex_row:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block font-size_up-1 font_display lh_1">
-                        <strong class="font_bold p-r_3">{{> "Data.Agenda.ID" }}</strong>
-                        {{> "Data.Session.Title" }}
-                    </span>
-                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate" }}  {{> "Data.Agenda.LiveTime" }}</span>
-                </h3>
-                <div class="flex_grow m-l_auto:lg">
-                    <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
-                        <a href="" class="btn btn-primary h:bg_secondary-n3 z_5">Watch </a>
-                        <a href="" class="btn btn-secondary z_5 a:bg_alert h:bg_alert-n3 { active }"><i class="fas fa-heart c_white"></i></a>
-                    </div>
-                </div>
-            </div>
-            <h4 class="font-size_up p-x_4 c_primary font_medium">Presentations</h4>
-            <ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white">
-                    <span class="font-size_up-1 block font_display">{{> "Data.Presentation.Title" }}</span>
-                    <span class="font-size-down opacity_7 font_ui"><strong class="c_primary">{{> "Data.Faculty.Role" }}:</strong>{{> "Data.Faculty.FullName" }} ({{> "Data.Faculty.Location" }})</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
-                </li>
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
-                    <span class="font-size_up-1 block font_display">Antiplatelet Regimen After Drug Coated Balloon </span>
-                    <span class="font-size-down opacity_7 font_ui">Chen (China)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">12:00 – 12:45 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
-                    <span class="font-size_up-1 block font_display">Case: Drug Coated Balloon in De Novo Ostial Left Anterior Descending Artery </span>
-                    <span class="font-size-down opacity_7 font_ui">Qiu (China)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">12:45 – 1:00 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
-            </ul>        
-        </div>
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex_auto"> <a href="#modal-extra" class="block h:underline uppercase font_bold" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
-        </div>
-        <div class="flex_grow uppercase m-l_auto">
-            <ul class="ul_none font_n2 text_right">
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_COP br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop
-                </li>
-            </ul>
-        </div>
-    </div>
-</article>
-
-
-Weight: 10
-
-Styleguide Recipes Virtual.Sessions.Simple
-
-*/
-/*
-Category Flags
-
-Description: A graphic treatment for the category flags which are tags applied like channel and type.
-
-Markup:
-<div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white">{{>"Data.Agenda.ChannelName"}}</div>
-
-
-Weight:0
-
-Styleguide Recipes Virtual.CategoryFlags
-*/
-/*
-
-Simple: On Demand
-
-Description: When the count of sessions is lower then 10 in count, the Simple Design is recommended the difference between live and on demand is that ondemand presents at presentation level and not session. 
-
-Markup:
-<article class="br-t_3 br_primary-2 br_radius br_solid c_black font_0 m-b_4 shadow_overlap-light">
-    <div class="br-tl_radius br-tr_radius br_1 br_black-3 br_solid flex flex_column font_ui m-t_n2 relative shadow_2">
-        <div class="br-b_1 br_primary-2 br_solid">
-            <!-- {{>"Recipes Virtual.CategoryFlags"}} -->
-            <div class="p_4 p-b_2 flex flex_column flex_row:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2  p-r_4:lg">
-                    <span class="block c_black-6 uppercase font_bold font-size_down-1"> Session I: Evolving New Frontiers of Imaging Ready for Practice</span><span class="block font-size_up-1 font_display lh_1">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of session and Faculty by Dr. Itchhaporia </span><span class="block c_black font-size_down-1 font_ui lh_3 opacity_7">Dipti Itchhaporia, MD, FACC (Chair)</span>
-                </h3>
-                <div class="flex_grow m-l_auto:lg">
-                    <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
-                        <a href="" class="btn btn-primary h:bg_secondary-n3 z_5">Watch </a>
-                        <a href="" class="btn btn-secondary z_5 a:bg_alert h:bg_alert-n3 { active }"><i class="fas fa-heart c_white"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-    <div class="flex_auto">
-        <a href="#modal-extra" class="block h:underline uppercase font_bold" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
-    </div>
-    <div class="flex_grow uppercase m-l_auto">
-            <ul class="ul_none font_n2 text_right">
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_MOCIV br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> moc
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_AAPA br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> aapa
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_ECME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> ecme
-                </li>
-            </ul>
-        </div>
-    </div>
-</article>
-
-
-Weight: 10
-
-Styleguide Recipes Virtual.Sessions.Simple On Demand
-
-*/
-/*
-Player
-
-Description: 
-
-Markup:
-<div class="flex_column flex">
-<section class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3 order_2 order_1:md">
-    <div class="flex_auto w_100">
-        <div class="player hd full">
-            <div class="bg_acc aspect_4x3 c_white text_center flex justify_center">VIDEO</div>
-        </div>
-    </div>
-    <div class="flex_auto max-w_25:lg max-w_20:md w_100 ">
-        <div class="br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column" id="panel-chat" style="height:100%">
-            <div class="panel-heading bg_transparent">
-                <h4 class="panel-title font_bold font_display c_primary">Live Chat</h4>
-                <p class="welcome">Welcome <b> Matt Watier </b></p>
-            </div>
-            <div id="wrapper" class="br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light">
-                <div class="load-log p_3 absolute t_0 r_0 l_0 b_0 overflow_unset" data-log-id="2">
-                    <div class="msgln">(1:44 PM) <b> Lovely Day </b>: Chat<br></div>
-                    <div class="msgln">(2:13 PM) <b> Lovely Day </b>: Chat some more<br></div>
-                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
-                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
-                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
-                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.<br></div>
-                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.<br></div>
-                    <div class="msgln">(2:19 PM) <b> Lovely Day </b>: Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.<br></div>
-                    <div class="msgln">(3:48 PM) <b> Lovely Day </b>: test<br></div>
-                    <div class="msgln">(3:50 PM) <b> Matt Watier </b>: hello<br></div>
-                </div>
-            </div>
-            <div class="panel-footer flex_none m-t_auto">
-                <form name="message" action="">
-                    <div class="form-group flex flex_row nowrap">
-                        <input name="usermsg" type="text" id="usermsg" class="form-control br-br_square br-tr_square flex_auto" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-                        <input name="submitmsg" type="submit" id="submitmsg" value="Add" class="btn btn-primary br-tl_square br-bl_square flex_none">
-                        <input type="hidden" name="user_client_portal_reg_id" id="user_client_portal_reg_id" value="10">
-                        <input type="hidden" name="chat_id" id="chat_id" value="2">
-                        <input type="hidden" name="client_portal_presentation_id" id="client_portal_presentation_id" value="2">
-                        <input type="hidden" name="client_portal_id" id="client_portal_id" value="1">
-                        <input type="hidden" name="screen_name" id="screen_name" value=" Matt   Watier ">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<header class="flex flex_row font_0 font_1:md font_3:lg order_1 order_2:md p-y_3">
-    <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
-            <span class="block">
-                <strong class="font_bold p-r_3">101</strong> Cardiovascular Update for the Clinician III </span>
-            <span class="c_accent font-size_down-2 lh_0 inline-block">Saturday, Nov 20, 2021 @ 11:15 AM – 11:45 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-        </h3>
-        <div class="self_start"><a title="download attachments" class="bg_secondary nowrap text_center br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/Tweat_DrSoda" target="_blank"> <i class="far fa-paperclip"></i><span class="display_none inline-block:md"> Attachments</span> </a></div>
-</header>
-<article class="flex flex_row:md flex_column gap-x_4 gap-y_3 p-t_3 b-t_5 br-b_1 br_solid br_primary-2 order_3">
-    <section class="flex_auto w_100">
-        <div class="">
-            <h4 class="font-size_up p-x_3 c_primary font_medium">Presentations</h4>
-            <ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white">
-                    <span class="font-size_up-1 block font_display">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of Session and Faculty</span>
-                    <span class="font-size-down opacity_7 font_ui"><strong class="c_primary">Co-Chair:</strong>Pepper H. Soda, MD, FACC (New York, NY, USA)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">11:45 – 11:49 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
-                    <span class="font-size_up-1 block font_display">Antiplatelet Regimen After Drug Coated Balloon </span>
-                    <span class="font-size-down opacity_7 font_ui">Chen (China)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">12:00 – 12:45 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
-                    <span class="font-size_up-1 block font_display">Case: Drug Coated Balloon in De Novo Ostial Left Anterior Descending Artery </span>
-                    <span class="font-size-down opacity_7 font_ui">Qiu (China)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">12:45 – 1:00 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <aside class="flex_auto max-w_25:lg max-w_20:md w_100 uppercase">
-        <h4 class="font-size_up p-x_3 c_primary font_medium">Credits</h4>
-        <ul class="br-t_1 br_primary br_solid flex_wrap font_n1 gap-x_4 gap-y_3 p-x_3 p-y_3 p_0 ul_none">
-            <li class="inline-block lh_0 p-l_3">
-                <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
-            </li>
-            <li class="inline-block lh_0 p-l_3">
-                <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne
-            </li>
-            <li class="inline-block lh_0 p-l_3">
-                <span class="bg_MOCIV br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> moc
-            </li>
-            <li class="inline-block lh_0 p-l_3">
-                <span class="bg_AAPA br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> aapa
-            </li>
-            <li class="inline-block lh_0 p-l_3">
-                <span class="bg_ECME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> ecme
-            </li>
-        </ul>
-    </aside>
-</article>
-</div>
-
-Weight:0
-
-Styleguide Recipes Virtual.Player
+Styleguide PageContent.ImageContentSimple
 */
 /*
 Awards
@@ -8402,9 +8045,9 @@ Awards
 Description: Awards are blocks design to display the awards for the conference.
 
 
-Weight:0
+Weight:100000
 
-Styleguide Recipes Virtual.Awards
+Styleguide Awards
 */
 /*
 Awardee
@@ -8436,7 +8079,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Awards.Awardee
+Styleguide Awards.Awardee
 */
 /*
 Awardee Standard
@@ -8468,7 +8111,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Awards.AwardeeStandard
+Styleguide Awards.AwardeeStandard
 */
 /*
 Awardee Condensed
@@ -8500,7 +8143,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Awards.AwardeeCondensed
+Styleguide Awards.AwardeeCondensed
 */
 /*
 Awardee Ultra Condensed
@@ -8530,16 +8173,16 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Awards.AwardeeUltraCondensed
+Styleguide Awards.AwardeeUltraCondensed
 */
 /*
-Award Premiere Tier 
+Award Premiere Tier Stacked
 
 Awards are blocks design to display the awards for the conference.
 
 Markup:
 <div data-name="award__container" class="{{ modifier_class }} max-w_30 flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
-    {{> "Recipes Virtual.Awards.Awardee" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
+    {{> "Awards.Awardee" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
     <div data-name="award__detail" class="font_0">    
         <div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
             {{> "Data.Award.Title" }}
@@ -8553,7 +8196,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Awards.Premiere Tier Award
+Styleguide Awards.PremiereColumn
 */
 /*
 Award Premiere Tier Row 
@@ -8563,7 +8206,7 @@ Awards are blocks design to display the awards for the conference.
 
 Markup:
 <div data-name="award__container" class="{{ modifier_class }} flex_row:md flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
-    {{> "Recipes Virtual.Awards.Awardee" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
+    {{> "Awards.Awardee" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
     <div data-name="award__detail" class="font_0">    
         <div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
             {{> "Data.Award.Title" }}
@@ -8577,7 +8220,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Awards.Premiere Tier Award Row
+Styleguide Awards.PremiereRow
 */
 /*
 Award + Status
@@ -8589,22 +8232,22 @@ Markup:
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Column]</h2>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column max-w_20 relative br_black-1 br_solid br_1">
     <div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div> 
-    {{> "Recipes Virtual.Awards.AwardeeStandard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+    {{> "Awards.AwardeeStandard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
 </div>
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
     <div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div> 
-    {{> "Recipes Virtual.Awards.AwardeeStandard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+    {{> "Awards.AwardeeStandard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
 </div>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
     <div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div> 
-    {{> "Recipes Virtual.Awards.AwardeeStandard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+    {{> "Awards.AwardeeStandard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
 </div>
 
 
 Weight:0
 
-Styleguide Recipes Virtual.Awards.Status
+Styleguide Awards.Status
 */
 /*
 Award Condensed
@@ -8615,20 +8258,20 @@ Awards are blocks design to display the awards for the conference.
 Markup:
 <h2 class="font_2:lg font_1 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Column]</h2>
 <div data-name="award__container" class="flex bg_black-1 p_4 flex_column max-w_15 relative">
-    {{> "Recipes Virtual.Awards.AwardeeCondensed" modifier_class="flex_column font_0" }}
+    {{> "Awards.AwardeeCondensed" modifier_class="flex_column font_0" }}
 </div>
 <h2 class="font_2:lg font_1 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
 <div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
-    {{> "Recipes Virtual.Awards.AwardeeCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+    {{> "Awards.AwardeeCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </div>
 <div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
-    {{> "Recipes Virtual.Awards.AwardeeCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+    {{> "Awards.AwardeeCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </div>
 
 
 Weight: 100
 
-Styleguide Recipes Virtual.Awards.Condensed
+Styleguide Awards.Condensed
 */
 /*
 Award Ultra Condensed
@@ -8640,17 +8283,180 @@ Markup:
 <h3 class="font_1:lg font_0 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }}</h3>
 <ul class="ul_none">
 <li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
-    {{> "Recipes Virtual.Awards.AwardeeUltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+    {{> "Awards.AwardeeUltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </li>
 <li data-name="award__container" class="p-y_3">
-    {{> "Recipes Virtual.Awards.AwardeeUltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+    {{> "Awards.AwardeeUltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </li>
 </ul>
 
 
 Weight: 100
 
-Styleguide Recipes Virtual.Awards.UltraCondensed
+Styleguide Awards.UltraCondensed
+*/
+/*
+Session
+
+Description: 
+
+Markup:
+<div class="flex_column flex">
+<section class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3 order_2 order_1:md">
+    <div class="flex_auto w_100">
+        <div class="player hd full">
+            <div class="bg_acc aspect_4x3 c_white text_center  justify_center flex items_center">VIDEO</div>
+        </div>
+    </div>
+    <div class="flex_auto max-w_25:lg max-w_20:md w_100 ">
+        <div class="br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column" id="panel-chat" style="height:100%">
+            <div class="panel-heading bg_transparent">
+                <h4 class="panel-title font_bold font_display c_primary">Live Chat</h4>
+                <p class="welcome">Welcome <b> Matt Watier </b></p>
+            </div>
+            <div id="wrapper" class="br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light">
+                <div class="load-log p_3 absolute t_0 r_0 l_0 b_0 overflow_unset" data-log-id="2">
+                    <div class="msgln">(1:44 PM) <b> Lovely Day </b>: Chat<br></div>
+                    <div class="msgln">(2:13 PM) <b> Lovely Day </b>: Chat some more<br></div>
+                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
+                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
+                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
+                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.<br></div>
+                    <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.<br></div>
+                    <div class="msgln">(2:19 PM) <b> Lovely Day </b>: Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.<br></div>
+                    <div class="msgln">(3:48 PM) <b> Lovely Day </b>: test<br></div>
+                    <div class="msgln">(3:50 PM) <b> Matt Watier </b>: hello<br></div>
+                </div>
+            </div>
+            <div class="panel-footer flex_none m-t_auto">
+                <form name="message" action="">
+                    <div class="form-group flex flex_row nowrap">
+                        <input name="usermsg" type="text" id="usermsg" class="form-control br-br_square br-tr_square flex_auto" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                        <input name="submitmsg" type="submit" id="submitmsg" value="Add" class="btn btn-primary br-tl_square br-bl_square flex_none">
+                        <input type="hidden" name="user_client_portal_reg_id" id="user_client_portal_reg_id" value="10">
+                        <input type="hidden" name="chat_id" id="chat_id" value="2">
+                        <input type="hidden" name="client_portal_presentation_id" id="client_portal_presentation_id" value="2">
+                        <input type="hidden" name="client_portal_id" id="client_portal_id" value="1">
+                        <input type="hidden" name="screen_name" id="screen_name" value=" Matt   Watier ">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<header class="flex flex_row font_0 font_1:md font_3:lg order_1 order_2:md p-y_3">
+    <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
+            <span class="block">
+                <strong class="font_bold p-r_3">101</strong> Cardiovascular Update for the Clinician III </span>
+            <span class="c_accent font-size_down-2 lh_0 inline-block">Saturday, Nov 20, 2021 @ 11:15 AM – 11:45 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
+        </h3>
+        <div class="self_start"><a title="download attachments" class="bg_secondary nowrap text_center br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/Tweat_DrSoda" target="_blank"> <i class="far fa-paperclip"></i><span class="display_none inline-block:md"> Attachments</span> </a></div>
+</header>
+<article class="flex flex_row:md flex_column gap-x_4 gap-y_3 p-t_3 b-t_5 br-b_1 br_solid br_primary-2 order_3">
+    <section class="flex_auto w_100">
+        <div class="">
+            <h4 class="font-size_up p-x_3 c_primary-n2 font_medium">Presentations</h4>
+            <ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
+                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white">
+                    <span class="font-size_up-1 block font_display">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of Session and Faculty</span>
+                    <span class="font-size-down opacity_7 font_ui"><strong class="c_primary">Co-Chair:</strong>Pepper H. Soda, MD, FACC (New York, NY, USA)</span>
+                    <span class="font-size-down-1 opacity_6 font_italic block">11:45 – 11:49 AM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
+                </li>
+                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
+                    <span class="font-size_up-1 block font_display">Antiplatelet Regimen After Drug Coated Balloon </span>
+                    <span class="font-size-down opacity_7 font_ui">Chen (China)</span>
+                    <span class="font-size-down-1 opacity_6 font_italic block">12:00 – 12:45 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
+                </li>
+                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
+                    <span class="font-size_up-1 block font_display">Case: Drug Coated Balloon in De Novo Ostial Left Anterior Descending Artery </span>
+                    <span class="font-size-down opacity_7 font_ui">Qiu (China)</span>
+                    <span class="font-size-down-1 opacity_6 font_italic block">12:45 – 1:00 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <aside class="flex_auto max-w_20:md max-w_25:lg w_100">
+        <h4 class="font-size_up p-x_3 c_black-6 font_medium"><i class="fas fa-file-certificate p-r_3"></i> credits</h4>
+        <div class="p-y_3 br-t_1  br_primary-2 br_solid ">
+            {{> "PageExtras.CreditDots"}}
+        </div>
+        <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
+        <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7">
+           Word 1, Word 2
+        </div>
+        <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
+        <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7">
+           voluptas, aliquam, distinctio
+        </div>
+    </aside>
+</article>
+</div>
+
+Weight:0
+
+Styleguide Player.Session
+*/
+/*
+Abstracts & Posters
+
+Description: 
+
+Markup:
+<div class="flex_column flex">
+    <header class="flex flex_row font_0 font_1:md font_3:lg order_1 p-y_3">
+        <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
+            <span class="block">
+                <strong class="font_bold p-r_3">{{>"Data.Session.ID"}}</strong> {{> "Data.Session.Title"}}
+            </span>
+            <span class="c_black-6 flex flex_row font_1 items_center justify_start m-t_3">
+                <div class="font-size_down-1 inline-block isolation_isolate m-x_3 p-t_2 relative">
+                    <i class="c_acc fa-bookmark fas font-size_up-2 font_10 relative text-shadow_black-1 z_1"></i>
+                    <span class="absolute b_0 flex font-size_down-2 font_bold items_center justify_center l_0 r_0 t_0 z_2"><i class="c_white-6 fa-star fas font-size_down-2 text-shadow_white-n1"></i></span>
+                </div>
+                <strong class="font-size_down-1 font_copy"> Top Ten | Special Category</strong>
+            </span>
+        </h3>
+        <div class="self_start"><a title="download attachments" class="bg_secondary nowrap text_center br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/Tweat_DrSoda" target="_blank"> <i class="far fa-paperclip"></i><span class="display_none inline-block:md"> Attachments</span> </a></div>
+    </header>
+    <section class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3 order_2 order_1:md">
+        <div class="flex_auto w_100">
+            <div class="player hd full">
+                <div class="bg_acc aspect_4x3 c_white text_center  justify_center flex items_center">PDF EMBED</div>
+            </div>
+        </div>
+        <div class="flex flex_auto flex_column gap_4 max-w_20:md max-w_25:lg w_100">
+            <div class="bg_primary-4 aspect_16x9 br_radius c_white text_center  justify_center flex items_center">Video EMBED</div>
+            <div class="bg_secondary-3 aspect_4x1 br_radius c_white text_center  justify_center flex items_center">Audio EMBED</div>
+            <aside class="flex_auto font_n1">
+                <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-file-certificate p-r_3"></i> credits</h4>
+                <div class="br-t_1  br_primary-2 br_solid p-y_3">
+                    {{> "PageExtras.CreditDots"}}
+                </div>
+                <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
+                <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7">
+                   Word 1, Word 2
+                </div>
+                <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
+                <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7">
+                   voluptas, aliquam, distinctio
+                </div>
+            </aside>
+        </div>
+    </section>
+</div>
+
+Weight:1000
+
+Styleguide Player.Abstract
+*/
+/*
+Block Designs
+
+For small conferences that have a small amount of content is recommended to use the Block Designs. When sessions are lower then 10 in count, the Block Designs are recommended.
+
+Weight: 0
+
+Styleguide Program.Block
 */
 /*
 
@@ -8660,17 +8466,8 @@ Description: All videos and presentations after a publication is in the On Deman
 
 Weight: 0
 
-Styleguide Recipes Virtual.Block Design.OnDemand
+Styleguide Program.Block.OnDemand
 
-*/
-/*
-Block Designs
-
-For small conferences that have a small amount of content is recommended to use the Block Designs. When sessions are lower then 10 in count, the Block Designs are recommended.
-
-Weight: 0
-
-Styleguide Recipes Virtual.Block Design
 */
 /*
 Video Block Dual Channel
@@ -8679,20 +8476,20 @@ Description: These video blocks are used in combination with grid templates and 
 
 
 Markup:
-{{> "Recipes Virtual.Extras.Date Time Dividers" }}
+{{> "PageExtras.Date Time Dividers" }}
 <section class="gap_5 grid justify_around p_4 p_5 grid-col_1 grid-col_2:md">
-    {{> "Recipes Virtual.Block Design.Live Video" }}
-    {{> "Recipes Virtual.Block Design.Live Video" }}
+    {{> "Program.Block.Live Video" }}
+    {{> "Program.Block.Live Video" }}
 </section>
-{{> "Recipes Virtual.Extras.Date Time Dividers" }}
+{{> "PageExtras.Date Time Dividers" }}
 <section class="gap_5 grid justify_around p_4 p_5 grid-col_1">
-    {{> "Recipes Virtual.Block Design.Live Video" }}
+    {{> "Program.Block.Live Video" }}
 </section>
 
 
 Weight: 0
 
-Styleguide Recipes Virtual.Block Design.Channels
+Styleguide Program.Block.Channels
 */
 /*
 Video Block Session
@@ -8703,15 +8500,15 @@ Description: These video blocks are used in combination with grid templates and 
 Markup:
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Recipes Virtual.Block Design.HeaderThubnail" }}
+        {{> "Program.Block.HeaderThubnail" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 "><strong class="font_accent">{{> "Data.Agenda.ID" }}</strong> {{> "Data.Session.Title" }}</h2>
         </main>
-       {{> "Recipes Virtual.Block Design.FooterButtons" }}
+       {{> "Program.Block.FooterButtons" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "Recipes Virtual.Extras.Credit Dots" }}
+        {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
@@ -8724,7 +8521,7 @@ Weight: 0
 
 FORMAT: this element uses data that has strict data formatting requirements. See the data tab for more information.
 
-Styleguide Recipes Virtual.Block Design.Live Video
+Styleguide Program.Block.Live Video
 */
 /*
 Video Block Presentation
@@ -8735,16 +8532,16 @@ Description: These video blocks are used in combination with grid templates and 
 Markup:
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Recipes Virtual.Block Design.HeaderThubnail" }}
+        {{> "Program.Block.HeaderThubnail" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">{{> "Data.Session.Title" }}</h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>{{> "Data.Faculty.FullName" }}</li><li> {{> "Data.Faculty.FullName" }}</li> </ul>
         </main>
-       {{> "Recipes Virtual.Block Design.FooterButtonsNoDetails" }}
+       {{> "Program.Block.FooterButtonsNoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "Recipes Virtual.Extras.Credit Dots" }}
+        {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
@@ -8758,7 +8555,7 @@ Weight: 0
 
 FORMAT: this element uses data that has strict data formatting requirements. See the data tab for more information.
 
-Styleguide Recipes Virtual.Block Design.Presentation
+Styleguide Program.Block.Presentation
 */
 /*
 Video Block Header
@@ -8777,7 +8574,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Block Design.HeaderThubnail
+Styleguide Program.Block.HeaderThubnail
 */
 /*
 Video Block Footer
@@ -8794,7 +8591,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Block Design.FooterButtons
+Styleguide Program.Block.FooterButtons
 */
 /*
 Video Block Footer No Details
@@ -8810,7 +8607,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Block Design.FooterButtonsNoDetails
+Styleguide Program.Block.FooterButtonsNoDetails
 
 */
 /*
@@ -8820,85 +8617,85 @@ Description:
 Block Designs are Great for a few channels but there is a maximum of 5 channels without the design crushing too much.
 
 Markup: 
-{{> "Recipes Virtual.Extras.Date Time Dividers" }}
+{{> "PageExtras.Date Time Dividers" }}
 <section class="gap_4 grid justify_around p-y_4 p-y_5 grid-col_1 grid-col_5:md">
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Recipes Virtual.Block Design.HeaderThubnail"  modifier_class="bg_primary"}}
+        {{> "Program.Block.HeaderThubnail"  modifier_class="bg_primary"}}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">Planning for the Inevitable: Workforce and Patient Access Challenges </h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>{{> "Data.Faculty.FullName" }}</li><li>Frederic R. Simmons</li> </ul>
         </main>
-       {{> "Recipes Virtual.Block Design.FooterButtonsNoDetails" }}
+       {{> "Program.Block.FooterButtonsNoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "Recipes Virtual.Extras.Credit Dots" }}
+        {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
 <!----------------------------------------------------------- AREA BREAK ---------------------------------------------------------->
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Recipes Virtual.Block Design.HeaderThubnail"  modifier_class="bg_accent" }}
+        {{> "Program.Block.HeaderThubnail"  modifier_class="bg_accent" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">
             Reducing Care Variation</h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Steven M. Bradley, MD, FACC</li><li> Suzette Jaskie, MBA </li> </ul>
         </main>
-       {{> "Recipes Virtual.Block Design.FooterButtonsNoDetails" }}
+       {{> "Program.Block.FooterButtonsNoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "Recipes Virtual.Extras.Credit Dots" }}
+        {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
 <!----------------------------------------------------------- AREA BREAK ---------------------------------------------------------->
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Recipes Virtual.Block Design.HeaderThubnail"  modifier_class="bg_highlight" }}
+        {{> "Program.Block.HeaderThubnail"  modifier_class="bg_highlight" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">Maintaining the Viability of Your Nuclear Cardiology Program (Joint Society Session with ASNC)</h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Dennis Calnon</li><li>  David C. Konur, FACHE  </li> </ul>
         </main>
-       {{> "Recipes Virtual.Block Design.FooterButtonsNoDetails" }}
+       {{> "Program.Block.FooterButtonsNoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "Recipes Virtual.Extras.Credit Dots" }}
+        {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
 <!----------------------------------------------------------- AREA 2 ---------------------------------------------------------->
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Recipes Virtual.Block Design.HeaderThubnail" modifier_class="bg_warning" }}
+        {{> "Program.Block.HeaderThubnail" modifier_class="bg_warning" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">Academic Compensation Models: From APPs to Professors  </h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>David Brody, MPA;</li><li> {{> "Data.Faculty.FullName" }}</li> </ul>
         </main>
-       {{> "Recipes Virtual.Block Design.FooterButtonsNoDetails" }}
+       {{> "Program.Block.FooterButtonsNoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "Recipes Virtual.Extras.Credit Dots" }}
+        {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
 <!----------------------------------------------------------- AREA 2 ---------------------------------------------------------->
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Recipes Virtual.Block Design.HeaderThubnail" modifier_class="bg_success" }}
+        {{> "Program.Block.HeaderThubnail" modifier_class="bg_success" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">Managing Change in Graduate Medical Education  </h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Lisa A. Mendes, MD, FACC</li><li> Gaby Weissman, MD, FACC</li> <li><strong>Moderator</strong>Allison Bailie</li></ul>
         </main>
-       {{> "Recipes Virtual.Block Design.FooterButtonsNoDetails" }}
+       {{> "Program.Block.FooterButtonsNoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "Recipes Virtual.Extras.Credit Dots" }}
+        {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
@@ -8907,7 +8704,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Block Design.Max Channels
+Styleguide Program.Block.Max Channels
 */
 /*
 Sponsor
@@ -8943,7 +8740,7 @@ MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 gap_4 bg_black
 
 Weight:0
 
-Styleguide Recipes Virtual.Sponsor.Grid
+Styleguide Sponsor.Grid
 */
 /*
 Faculty
@@ -8952,7 +8749,7 @@ Description: Faculty are the people who are responsible for the design and devel
 
 Weight:0
 
-Styleguide Recipes Virtual.Faculty
+Styleguide Faculty
 */
 /*
 Full Data with Photo
@@ -8984,7 +8781,7 @@ Markup:
             {{> Data.Faculty.Bio }}
         </div>   
         <div class="grid justify_center">
-            {{> "Recipes Virtual.Faculty.TwitterButton"}}
+            {{> "Faculty.TwitterButton"}}
         </div>     
 	</div>
 </section>
@@ -8995,7 +8792,7 @@ FORMAT: This element uses data that has strict data formatting requirements. See
 
 Weight:0
 
-Styleguide Recipes Virtual.Faculty.PhotosHorizontal
+Styleguide Faculty.PhotosHorizontal
 */
 /*
 Twitter Button
@@ -9012,7 +8809,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Faculty.TwitterButton
+Styleguide Faculty.TwitterButton
 */
 /*
 Full Data with Photo
@@ -9040,7 +8837,7 @@ Markup:
             {{> Data.Faculty.Bio }}
         </div>   
         <div class="grid justify_start">
-            {{> "Recipes Virtual.Faculty.TwitterButton"}}
+            {{> "Faculty.TwitterButton"}}
         </div>    
 	</div>
 </section>
@@ -9049,7 +8846,7 @@ FORMAT: This element uses data that has strict data formatting requirements. See
 
 Weight:0
 
-Styleguide Recipes Virtual.Faculty.Photos
+Styleguide Faculty.Photos
 */
 /*
 Full Data Without Photo
@@ -9072,7 +8869,7 @@ Markup:
             {{> Data.Faculty.Bio }}
         </div>   
         <div class="grid justify_start">
-            {{> "Recipes Virtual.Faculty.TwitterButton"}}
+            {{> "Faculty.TwitterButton"}}
         </div>      
 	</div>
 </section>
@@ -9081,7 +8878,7 @@ FORMAT: This element uses data that has strict data formatting requirements. See
 
 Weight:0
 
-Styleguide Recipes Virtual.Faculty.NoPhotos
+Styleguide Faculty.NoPhotos
 */
 /*
 Workshops
@@ -9090,7 +8887,7 @@ Description: A collection of Workshops that are available for the user to select
 
 Weight:10
 
-Styleguide Recipes Virtual.Workshops
+Styleguide Program.Sessions.Workshops
 */
 /*
 
@@ -9102,7 +8899,7 @@ Markup:
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black font_0 m-b_4 shadow_overlap-light">
     <div class="br-tl_radius br-tr_radius br_1 br_black-3 br_solid flex flex_column font_ui m-t_n2 relative shadow_2">
         <div class="br-b_1 br_primary-2 br_solid">
-            {{>"Recipes Virtual.CategoryFlags"}}
+            {{>"PageExtras.CategoryFlags"}}
             <div class="p_4 p-b_2 flex flex_column flex_row:lg gap_4">
                 <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 flex_auto p-r_4:lg">
                     <span class="block font-size_up-1 font_display lh_1">
@@ -9118,7 +8915,7 @@ Markup:
                         </span>
                     -->
                 </h3>
-                {{>"Recipes Virtual.Workshops.Button"}}
+                {{>"Program.Sessions.Workshops.Button"}}
             </div>
         </div>
     </div>
@@ -9151,7 +8948,7 @@ Markup:
 
 Weight: 10
 
-Styleguide Recipes Virtual.Workshops.Simple
+Styleguide Program.Sessions.Workshops.Simple
 */
 /*
 Workshops Button
@@ -9168,7 +8965,7 @@ Markup:
 
 Weight:0
 
-Styleguide Recipes Virtual.Workshops.Button
+Styleguide Program.Sessions.Workshops.Button
 */
 /*
 
@@ -9176,7 +8973,7 @@ Retired Designs
 
 The virtual product has evolved from its original form, and has made some designs that are no longer available or in use.  This area is the graveyard for those designs. 
 
-Weight: 9000 
+Weight: 400000
 
 Styleguide  Graveyard
 */
@@ -9196,7 +8993,7 @@ Markup:
 
 Weight: 100
 
-Styleguide Graveyard.Live Video.Channels.Banners
+Styleguide Graveyard.LiveVideo.Channels.Banners
 */
 /*
 Video Block (Light) 
@@ -9235,7 +9032,7 @@ Markup:
             <a href="#modal-extra" class="block h:undecorated uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
         </div>
         <div class="flex_auto m-l_auto:md self_center">
-             {{> "Recipes Virtual.Extras.Credit Dots" }}
+             {{> "PageExtras.CreditDots" }}
         </div>
     </div>
 </article>
@@ -9639,7 +9436,7 @@ Markup:
                     <a href="#modal-extra" class="block h:undecorated uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
                 </div>
                 <div class="flex_auto m-l_auto:md self_center">
-                    {{> "Recipes Virtual.Extras.Credit Dots" }}
+                    {{> "PageExtras.CreditDots" }}
                 </div>
             </div>
         </div>
@@ -9652,7 +9449,7 @@ Deprecated: Old Designs from Virtual 2020
 
 Weight: 10
 
-Styleguide Graveyard.Block Design.Live Video.Horizontal
+Styleguide Graveyard.Block.LiveVideo.Horizontal
 */
 /*
 
@@ -10725,7 +10522,7 @@ Styleguide Recipes.InteractiveExtras.Stars
 
  Arches is design inspired by a pad of paper in the hand.  Subtle Textures and Layer shadows keep the readablity very high. 
 
- Weight: -50
+ Weight: -1000
 
  Styleguide DesignBase
 */
@@ -14750,7 +14547,7 @@ Basic HTML
 
 The Arches Design System, at its core, is a Utility Class Styling Design.  It is built not to prescribe the design of the HTML and components but to paint with classes to create complicated UI without having to create more styles.  Arches rely on the browser or branding defaults for basic HTML styling.  Below is a kitchen sink of HTML elements so you can see how this variation look without further alteration from adding classes. There is No basic styling around the pure DOM with the utility class only, and there is improved styling as you add Bootstrap or Foundation.  
 
-Weight: -10
+Weight: -100
 
 Styleguide HTML
 */
@@ -15026,7 +14823,7 @@ Bootstrap
 
 Bootstrap 5 is a complete UI framework with many features. Please familiarize yourself with bootstrap framework as you build. It will give you access to grid, forms and other UI items. https://getbootstrap.com/
 
-Weight: 1000
+Weight: -50
 
 Styleguide  Bootstrap
 */
@@ -17268,32 +17065,6 @@ Markup:
 Weight: 1000
 
 Styleguide  Bootstrap.Components
-*/
-/*
-Buttons
-
-Basic Buttons
-
-default		            - Medium buttons (default)
-.btn-primary	            - Primary Class Button (default)
-.btn-secondary 	            - Second Class Button
-.btn-accent             - Button for call out acctions
-.btn-success                - Success State.
-.btn-danger                  - Alert State.
-.btn-warning	            - Warning State
-.clear		            - All button states can become hollow
-.radius		            - Give the button softer corners
-.shadow.clear		    - Give a button a shadow
-.btn-sm		            - Small buttons
-.btn-lg		            - Large buttons
-.disabled	            - Disabled buttons
-
-Markup:
-<a class="btn btn-primary {{modifier_class}}" href="#">{{modifier_class}} button</a>
-<button class="btn btn-primary {{modifier_class}}" href="#">{{modifier_class}} button</button>
-
- Styleguide  Bootstrap.Button
-
 */
 .btn {
   font-weight: 500;

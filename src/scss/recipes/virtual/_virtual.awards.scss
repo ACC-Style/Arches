@@ -4,9 +4,9 @@ Awards
 Description: Awards are blocks design to display the awards for the conference.
  
 
-Weight:0
+Weight:100000
  
-Styleguide Recipes Virtual.Awards
+Styleguide Awards
 */
 
 
@@ -40,7 +40,7 @@ Markup:
  
 Weight:0
  
-Styleguide Recipes Virtual.Awards.Awardee
+Styleguide Awards.Awardee
 */
 
 /*
@@ -73,7 +73,7 @@ Markup:
  
 Weight:0
  
-Styleguide Recipes Virtual.Awards.AwardeeStandard
+Styleguide Awards.AwardeeStandard
 */
 
 
@@ -107,7 +107,7 @@ Markup:
  
 Weight:0
  
-Styleguide Recipes Virtual.Awards.AwardeeCondensed
+Styleguide Awards.AwardeeCondensed
 */
 
 /*
@@ -138,7 +138,7 @@ Markup:
  
 Weight:0
  
-Styleguide Recipes Virtual.Awards.AwardeeUltraCondensed
+Styleguide Awards.AwardeeUltraCondensed
 */
 
 
@@ -150,7 +150,7 @@ Awards are blocks design to display the awards for the conference.
  
 Markup:
 <div data-name="award__container" class="{{ modifier_class }} max-w_30 flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
-    {{> "Recipes Virtual.Awards.Awardee" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
+    {{> "Awards.Awardee" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
     <div data-name="award__detail" class="font_0">    
         <div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
             {{> "Data.Award.Title" }}
@@ -164,7 +164,7 @@ Markup:
 
 Weight:0
  
-Styleguide Recipes Virtual.Awards.PremiereColumn
+Styleguide Awards.PremiereColumn
 */
 
 /*
@@ -175,7 +175,7 @@ Awards are blocks design to display the awards for the conference.
  
 Markup:
 <div data-name="award__container" class="{{ modifier_class }} flex_row:md flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
-    {{> "Recipes Virtual.Awards.Awardee" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
+    {{> "Awards.Awardee" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
     <div data-name="award__detail" class="font_0">    
         <div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
             {{> "Data.Award.Title" }}
@@ -189,7 +189,7 @@ Markup:
 
 Weight:0
  
-Styleguide Recipes Virtual.Awards.PremiereRow
+Styleguide Awards.PremiereRow
 */
 
 /*
@@ -202,22 +202,22 @@ Markup:
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Column]</h2>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column max-w_20 relative br_black-1 br_solid br_1">
     <div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div> 
-    {{> "Recipes Virtual.Awards.AwardeeStandard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+    {{> "Awards.AwardeeStandard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
 </div>
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
     <div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div> 
-    {{> "Recipes Virtual.Awards.AwardeeStandard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+    {{> "Awards.AwardeeStandard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
 </div>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
     <div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div> 
-    {{> "Recipes Virtual.Awards.AwardeeStandard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+    {{> "Awards.AwardeeStandard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
 </div>
 
 
 Weight:0
  
-Styleguide Recipes Virtual.Awards.Status
+Styleguide Awards.Status
 */
 
 /*
@@ -229,20 +229,20 @@ Awards are blocks design to display the awards for the conference.
 Markup:
 <h2 class="font_2:lg font_1 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Column]</h2>
 <div data-name="award__container" class="flex bg_black-1 p_4 flex_column max-w_15 relative">
-    {{> "Recipes Virtual.Awards.AwardeeCondensed" modifier_class="flex_column font_0" }}
+    {{> "Awards.AwardeeCondensed" modifier_class="flex_column font_0" }}
 </div>
 <h2 class="font_2:lg font_1 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
 <div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
-    {{> "Recipes Virtual.Awards.AwardeeCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+    {{> "Awards.AwardeeCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </div>
 <div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
-    {{> "Recipes Virtual.Awards.AwardeeCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+    {{> "Awards.AwardeeCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </div>
 
 
 Weight: 100
  
-Styleguide Recipes Virtual.Awards.Condensed
+Styleguide Awards.Condensed
 */
 
 /*
@@ -255,15 +255,15 @@ Markup:
 <h3 class="font_1:lg font_0 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }}</h3>
 <ul class="ul_none">
 <li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
-    {{> "Recipes Virtual.Awards.AwardeeUltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+    {{> "Awards.AwardeeUltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </li>
 <li data-name="award__container" class="p-y_3">
-    {{> "Recipes Virtual.Awards.AwardeeUltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+    {{> "Awards.AwardeeUltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </li>
 </ul>
 
 
 Weight: 100
  
-Styleguide Recipes Virtual.Awards.UltraCondensed
+Styleguide Awards.UltraCondensed
 */

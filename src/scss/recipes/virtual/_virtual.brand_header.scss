@@ -7,7 +7,7 @@ Conferences can have a header branding area which gives the design team the abil
 
 Weight: -999
 
-Styleguide Recipes Virtual.Brand Area
+Styleguide PageLayout.BrandArea
 
 */
 
@@ -19,7 +19,7 @@ Description: This is the logged in header brand area.
  
 Markup:
 <div class="relative">
-    {{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
+    {{> "PageLayout.BrandArea.LoggedIn.Button"}}
     <picture class="w_100">
         <source class="w_100" srcset="https://via.placeholder.com/1440x200.png?text=Desktop+Large" media="(min-width: 1200px)">
         <source class="w_100" srcset="https://via.placeholder.com/1200x200.png?text=Desktop" media="(min-width: 1024px)">
@@ -29,10 +29,11 @@ Markup:
     </picture>
 </div>
 
+MarkupWrapperClasses: relative 
  
 Weight: -999
 
-Styleguide Recipes Virtual.BrandArea.LoggedIn
+Styleguide PageLayout.BrandArea.LoggedIn
 
 */
 
@@ -49,11 +50,11 @@ Markup:
     </div>
 </div> 
  
-MarkupWrapperClasses:relative
+MarkupWrapperClasses: relative 
 
 Weight:0
  
-Styleguide Recipes Virtual.BrandArea.LoggedIn.Button
+Styleguide PageLayout.BrandArea.LoggedIn.Button
 */
 
 /*
@@ -64,7 +65,7 @@ Description: Because the UI is floats on top of the images there are area that a
  
 Markup:
 <div class="relative m-t_4 overflow-hidden" style="width:1400px">
-{{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
+{{> "PageLayout.BrandArea.LoggedIn.Button"}}
 <div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
 	<img
 		class="w_100"
@@ -72,7 +73,7 @@ Markup:
 	/>
 </div>
 <div class="relative m-t_4  overflow-hidden" style="width:1200px">
- {{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
+ {{> "PageLayout.BrandArea.LoggedIn.Button"}}
 <div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
 	<img
 		class="w_100"
@@ -80,7 +81,7 @@ Markup:
 	/>
 </div>
 <div class="relative m-t_4  overflow-hidden" style="width:768px">
- {{> "Recipes Virtual.BrandArea.LoggedIn.Button"}}
+ {{> "PageLayout.BrandArea.LoggedIn.Button"}}
 <div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
 	<img
 		class="w_100"
@@ -114,10 +115,11 @@ Markup:
 	/>
 </div>
 
+MarkupWrapperClasses: relative 
  
 Weight: -999
 
-Styleguide Recipes Virtual.BrandArea.UnSAFE
+Styleguide PageLayout.BrandArea.UnSAFE
 
 */
 
@@ -142,9 +144,10 @@ Markup:
     </picture>
 </div>
 
- 
+MarkupWrapperClasses: relative 
+
 Weight: -1000
 
-Styleguide Recipes Virtual.BrandArea.Logged Out
+Styleguide PageLayout.BrandArea.LoggedOut
 
 */
