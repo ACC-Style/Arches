@@ -14305,7 +14305,7 @@ Styleguide List
   .ul_bullet          -  bullet          
   .ul_square          -  square      
 
-  Markup:
+Markup:
   <div class="font_normal font_1 p_3">
     <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
     <ul class="{{modifier_class}}">
@@ -14315,15 +14315,18 @@ Styleguide List
     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
     </ul>
-  </div>
+</div>
 
 Weight: 0
 
   Styleguide List.Type
  */
-.ul_none {
+.ul_none, [class^=ul_inline] {
   margin: 0;
   padding: 0;
+}
+
+.ul_none {
   list-style-type: none !important;
 }
 
@@ -14370,7 +14373,6 @@ Markup:
     <ul class="">
         <li>List Item Grand Children</li>
         <li>List Item Grand Children</li>
-
     </ul>
     </li>
 </ul>
@@ -14595,6 +14597,76 @@ Styleguide List.counters
   line-height: 0;
   text-align: center;
   vertical-align: top;
+}
+
+/*
+Inline Lists
+
+Inline Lists are for separated items on a single line.
+
+.ul_inline-comma            -  wrapping line of text that is separated by commas
+.ul_inline-semicolon          -  wrapping line of text that is separated by semicolons          
+.ul_inline-pipe          -  wrapping line of text that is separated by pipes     
+
+Markup:
+<div class="font_normal font_1 p_3">
+  <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
+  <ul class="{{modifier_class}}">
+    <li>Evelyn Watsica II</li>
+    <li>Linda Lang</li>
+    <li>Laurie Greenfelder</li>
+    <li>Katie Wiegand</li>
+    <li>Brittany Conn</li>
+  </ul>
+</div>
+<style>
+[class^="ul_inline"] > li:last-child::after {
+    content:"" !important;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+}
+</style>
+
+
+NOTE: The limitations of the styleguide around compound pseudo selector :not(:last-child):after means a trailing divider shows up in documentation but not in production applications. Added a workaround to hide the divider via the following style tag in the example.  This is not necessary in production applications.
+
+
+Weight: 1000
+
+Styleguide List.InlineType
+
+*/
+[class^=ul_inline] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  justify-items: center;
+  list-style: none;
+}
+[class^=ul_inline] > li {
+  flex: 0 1 auto;
+}
+[class^=ul_inline] > li:not(:last-child)::after {
+  -webkit-padding-start: 0.1em;
+          padding-inline-start: 0.1em;
+  -webkit-padding-end: 0.5em;
+          padding-inline-end: 0.5em;
+  opacity: 0.6;
+}
+
+.ul_inline-comma > li:not(:last-child)::after {
+  content: ",";
+}
+
+.ul_inline-semicolon > li:not(:last-child)::after {
+  content: ";";
+}
+
+.ul_inline-pipe > li:not(:last-child)::after {
+  -webkit-padding-start: 0.5em;
+          padding-inline-start: 0.5em;
+  content: "|";
 }
 
 .display_none\:screen {
@@ -23209,7 +23281,7 @@ Styleguide Recipes.InteractiveExtras.Stars
 
  Arches is design inspired by a pad of paper in the hand.  Subtle Textures and Layer shadows keep the readablity very high. 
 
- Weight: -50
+ Weight: -1000
 
  Styleguide DesignBase
 */
@@ -27234,7 +27306,7 @@ Basic HTML
 
 The Arches Design System, at its core, is a Utility Class Styling Design.  It is built not to prescribe the design of the HTML and components but to paint with classes to create complicated UI without having to create more styles.  Arches rely on the browser or branding defaults for basic HTML styling.  Below is a kitchen sink of HTML elements so you can see how this variation look without further alteration from adding classes. There is No basic styling around the pure DOM with the utility class only, and there is improved styling as you add Bootstrap or Foundation.  
 
-Weight: -10
+Weight: -100
 
 Styleguide HTML
 */
