@@ -21880,21 +21880,6 @@ Styleguide Data.Award.Description
 
 */
 /*
-Locking Graphics
-
-Showing assets before they are intractable is needed  
-
-Markup:
-<div class="locked_graphic">{{> "Program.Block.Live Video"}}</div>
-
-MarkupWrapperClasses:
-gap_5 grid justify_around p_4 p_5 grid-col_1 grid-col_2:md
-
-Weight: 1000
-
-Styleguide Program.Block.LiveVideo.Locked Graphic
-*/
-/*
 Header Nav
 
 The header nav for the website. 
@@ -22259,26 +22244,9 @@ Weight: 200000
 Styleguide PageExtras
 */
 /*
-External Resource
-
-Description: External Sections of content that are helpful to cross promote with in a conferences. 
-
-Markup:
-<article class="aspect_21x9 bg-blend_luminosity bg_cover bg_no-repeat bg_primary-2 br_1 br_black-3 br_radius br_solid flex_shrink generic_video generic_video-nolabel h:bg_secondary-n2 relative shadow_3 text_center c_primary"><em class="opacity_5 absolute t_1 r_2 fas font_4 fa-external-link-square-alt"></em><a data-sf-ec-immutable="" class="block font_7 font_6:md font_9:lg font_display font_xbold h:undecorated m_0 p_4 p_5:lg text_left uppercase" style="line-height: .85em" href="https://www.acc.org/latest-in-cardiology/features/accs-coronavirus-disease-2019-covid-19-hub?_ga=2.121293644.574512269.1591713176-49927898.1591404069#sort=%40fcommonsortdate90022%20descending" target="_blank"><span class="font_3 font_4:md m_0 m-l_0 m-b_n2 lh_0 block m-b_2">ACC’s</span>
- <span class=" block"><span class="nowrap">COVID-19</span> HUB</span>
- </a>
- </article>
-
- MarkupWrapperClasses:
- gap-x_4 gap-y_4 grid template-x_30
-
-
-Styleguide PageExtras.External Resource
-*/
-/*
 Date Time Separators
 
-Description: Sessions are divided by date time markers that have been set to east coast time with a refernce to GMT. 
+Sessions are divided by date time markers that have been set to east coast time with a refernce to GMT. 
 
 Markup:
 <div class="flex_row:md flex flex_column">
@@ -22300,35 +22268,7 @@ MarkupWrapperClasses:
 
 Weight: 100
 
-Styleguide PageExtras.Date Time Dividers
-*/
-/*
-Twitter Tag
-
-Description: Every conference has a common #tag structure asking user to join in to the conversation.; 
-
-Markup:
-<div class="socialTag float_right text_right"><div class="c_secondary font_1">Join The Conversation</div><div class="c_primary font_xbold font_3 font_display"><em class="fas fa-hashtag"></em>ACCAthleticHeart  <em class="fab fa-twitter"></em></div></div>
-
-Weight:0
-
-Styleguide PageExtras.TwitterTag
-*/
-/*
-Call-to-Action Card
-
-Description: Some content areas are chunked out to drive usage through a call to action card.
-
-Markup:
-<div class="br_radius flex flex_column justify_between p-x_5:lg p_4 shadow_overlap-light br_black-3 br_solid br_1">
-<h2 class="font_bold c_primary m-t_0 block">Member Section</h2>
-<p class="lh_3">Connect with ACC’s Sports and Exercise Member Section, THE home for sports and exercise professionals within the ACC, advocating for and advancing the priorities of the community, and serving as a College-wide resource for issues related to sports and exercise professionals.  </p>   
-<a class="block br_radius btn btn-block btn-lg btn-secondary btn_lg m-b_3 m_auto shadow_overlap-light w_100">Call to Action</a>
-</div>    
-
-Weight:100
-
-Styleguide PageExtras.Call To Action
+Styleguide PageExtras.Program.DateTimeDividers
 */
 /*
 Simple Credit Dots
@@ -22349,8 +22289,21 @@ Note: This pattern requires the inclusion of the credit color stylesheets.
 
 Weight:0
 
-Styleguide PageExtras.CreditDots
+Styleguide PageExtras.Program.CreditDots
 
+*/
+/*
+Category Flags
+
+Description: A graphic treatment for the category flags which are tags applied like channel and type.
+
+Markup:
+<div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white">{{>"Data.Agenda.ChannelName"}}</div>
+
+
+Weight:0
+
+Styleguide PageExtras.Program.CategoryFlags
 */
 /*
 Attachments Modal
@@ -22387,380 +22340,104 @@ Markup:
 
  Weight: 200
 
-Styleguide PageExtras.Attachments
+Styleguide PageExtras.Program.Attachments
 */
 /*
-Video Block
+Video Header Thumb
 
-Description: These video blocks are used in combination with grid templates and dividers. 
+Description: The header is just a bit of design flair that can be colored, background swapped out and also the icon can be changed to the content of the presentation.
+
+bg_primary  -  is the default background color
+bg_accent   -  any background color can be swapped out
 
 Markup:
-<article class="c_black m-b_4 m-b_5:md m-t_0:md m-t_4 m-t_5:lg">
-    <div class="br_1 br_radius br_solid br_black-2 flex flex_column flex_column:lg flex_row:md font_ui h:bg_black-2 m-x_n2 relative" style="height: 100%">
-        <div class="display_none:lg flex_none justify_center p-l_4:md p-y_3" style="width: 4rem">
-            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width: 3rem">
-                <div class="pathwayColor{ bg_primary } flex_shrink relative aspect_1x1 shadow_3 text_center texture_ondemand thumb [ bg-blend_multiply bg_center bg_contain bg_no-repeat  ][ br_2 br_black-3 br_radius br_solid ]">
-                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-play fas flex_auto font_2 self_center text_center w_100"></em></div>
-                </div>
-            </div>
+<header class="flex flex_none flex_row justify_center m-t_n4:lg p-x_4">
+    <div class="aspect_21x9:md aspect_16x9 bg-blend_multiply bg_primary bg_cover bg_no-repeat {{ modifier_class }} br_2 br_radius br_solid br_white br_white-9 flex flex_shrink grid justify_center m-t_n5 max-w_15 max-w_20:md relative shadow_3 text_center texture_ondemand thumb">
+            <i class="absolute c_white-9 fa-play fas flex_auto font_4 font_5:lg self_center text_center w_100"></i>
         </div>
-        <div class="block:lg display_none m-t_n5 m-x_5 p-x_5">
-            <div class="m-t_n5 m_auto m_auto:md self_center text_center">
-                <div class="aspect_21x9 bg-blend_overlay bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_black-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
-                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-play fas flex_auto font_5 self_center text_center w_100"></em></div>
-                </div>
-            </div>
-        </div>
-        <div class="flex_auto [ c_primary-n4  font_0 font_1:md font_copy font_regular lh_2 ][ p-b_3 p-b_4:md ]">
-            <div class="p-t_2 p_4 relative p-y_0 p-y_3:md p-x_5:lg"><a class="expanded-click-area h:undecorated p-b_3" target="_blank" href="/docs/default-source/filesah20/eabstracts/chowdhury-anabolic-androgenic-1130-279.pdf?sfvrsn=2518b85a_2">Anabolic-Androgenic Steroid Abuse: A Potential Cause of Myocardial Infarction in Young Patients</a></div>
-        </div>
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
-        <div class="flex_shrink block  text_left p-r_4 m-r_4 ">
-            <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
-        </div>
-        <div class="flex_grow uppercase text_right">
-            <ul class="m-t_n2 ul_none">
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_COP br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop </li>
-            </ul>
-        </div>
-    </div>
-</article>
-
-
-MarkupWrapperClasses:
-    p_4 bg_white grid template-x_25 gap-x_5 gap-y_4
-
-
-Weight: -1000
-
-Styleguide Program.Block.OnDemand.Video
-*/
-/*
-Slides Block
-
-Description: These slide blocks are used in combination with grid templates and dividers. 
-
-Markup:
-<article  class="c_black m-b_4 m-b_5:md m-t_0:md m-t_4 m-t_5:lg">
-    <div class="br_1 br_radius br_solid br_black-2 flex flex_column flex_column:lg flex_row:md font_ui h:bg_black-2 m-x_n2 relative" style="height: 100%">
-        <div class="display_none:lg flex_none justify_center p-l_4:md p-y_3" style="width: 4rem">
-            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width: 3rem">
-                <div class="pathwayColor{ bg_primary } flex_shrink relative aspect_1x1 shadow_3 text_center texture_ondemand thumb [ bg-blend_multiply bg_center bg_contain bg_no-repeat  ][ br_2 br_black-3 br_radius br_solid ]">
-                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-presentation fas flex_auto font_2 self_center text_center w_100"></em></div>
-                </div>
-            </div>
-        </div>
-        <div class="block:lg display_none m-t_n5 m-x_5 p-x_5">
-            <div class="m-t_n5 m_auto m_auto:md self_center text_center max-w_20">
-                <div class="aspect_21x9 bg-blend_overlay bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_black-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
-                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-presentation fas flex_auto font_5 self_center text_center w_100"></em></div>
-                </div>
-            </div>
-        </div>
-        <div class="flex_auto [ c_primary-n4  font_0 font_1:md font_copy font_regular lh_2 ][ p-b_3 p-b_4:md ]">
-            <div class="p-t_2 p_4 p-y_0 p-y_3:md p-x_5:lg"><a class="expanded-click-area h:undecorated p-b_3" target="_blank" href="/docs/default-source/filesah20/eabstracts/chowdhury-anabolic-androgenic-1130-279.pdf?>Anabolic-Androgenic Steroid Abuse: A Potential Cause of Myocardial Infarction in Young Patients</a></div>
-        </div>
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
-        <div class="flex_shrink block  text_left p-r_4 m-r_4 ">
-            <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
-        </div>
-        <div class="flex_grow">
-            {{> "PageExtras.CreditDots" }}
-        </div>
-    </div>
-</article>
-
-MarkupWrapperClasses:
-    p_4 bg_white grid template-x_25 gap-x_5 gap-y_4
-
-
-Weight: -800
-
-Styleguide Program.Block.OnDemand.Slides
-*/
-/*
-eAbstract
-
-eAbstracts  are used in combination with grid templates and dividers. 
-
-Markup:
-<article  class="c_black m-b_4 m-b_5:md m-t_0:md m-t_4 m-t_5:lg">
-    <div class="br_1 br_radius br_solid br_black-2 flex flex_column flex_column:lg flex_row:md font_ui h:bg_black-2 m-x_n2 relative" style="height: 100%">
-        <div class="display_none:lg flex_none justify_center p-l_4:md p-y_3" style="width: 4rem">
-            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width: 3rem">
-                <div class="pathwayColor{ bg_primary } flex_shrink relative aspect_1x1 shadow_3 text_center texture_ondemand thumb [ bg-blend_multiply bg_center bg_contain bg_no-repeat  ][ br_2 br_black-3 br_radius br_solid ]">
-                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-user-chart fas flex_auto font_2 self_center text_center w_100"></em></div>
-                </div>
-            </div>
-        </div>
-        <div class="block:lg display_none m-t_n5 m-x_5 p-x_5">
-            <div class="m-t_n5 m_auto m_auto:md self_center text_center">
-                <div class="aspect_21x9 bg-blend_overlay bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_black-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
-                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-user-chart fas flex_auto font_5 self_center text_center w_100"></em></div>
-                </div>
-            </div>
-        </div>
-        <div class="flex_auto [ c_primary-n4  font_0 font_1:md font_copy font_regular lh_2 ][ p-b_3 p-b_4:md p-l_0:lg p-l_4:md ]">
-            <div class="p-t_2 p_4  p-y_0 p-y_3:md p-x_5:lg">
-                <a class="expanded-click-area h:undecorated p-b_3" target="_blank" href="/docs/default-source/filesah20/eabstracts/chowdhury-anabolic-androgenic-1130-279.pdf?sfvrsn=2518b85a_2">Anabolic-Androgenic Steroid Abuse: A Potential Cause of Myocardial Infarction in Young Patients</a>
-            </div>
-        </div>
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
-        <div class="flex_shrink block  text_left p-r_4 m-r_4 ">
-            <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
-        </div>
-        <div class="flex_grow m-l_auto">
-             {{> "PageExtras.CreditDots" }}
-        </div>
-    </div>
-</article>
-
-
-MarkupWrapperClasses:
-    p_4 bg_white grid template-x_25 gap-x_5 gap-y_4
-
-
-Weight: -700
-
-Styleguide Program.Block.OnDemand.eAbstract
-*/
-/*
-Journal Block
-
-Description: These slide blocks are used in combination with grid templates and dividers. 
-
-Markup:
-<article  class="c_black m-b_4 m-t_5 m-t_0:md m-t_2:lg ">
-    <div class="br_1 br_radius br_solid br_black-2 flex flex_column flex_row:md font_ui h:bg_black-2 m-x_n2 relative">
-        <div class="flex_none justify_center p-l_4:md p-y_3" style="width:4rem;">
-            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width:3rem;">
-                <div class="pathwayColor{ bg_primary } flex_shrink relative aspect_1x1 shadow_3 text_center texture_ondemand thumb [ bg-blend_multiply bg_center bg_contain bg_no-repeat  ][ br_2 br_black-3 br_radius br_solid ]">
-                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-book-open fas flex_auto font_2 self_center text_center w_100"></em></div>
-                </div>
-            </div>
-        </div>
-        <div class="flex_auto [ c_primary-n4  font_0 font_1:md font_copy font_regular lh_2 ][  p-x_3 p-b_0:lg p-b_3 p-l_4:lg p-l_4:md ]" >
-            <div class="m-t_2 p_3 p-y_2"><a class="expanded-click-area h:undecorated" target="_blank" href="https://virtual.acc.org/docs/default-source/filesah20/journal/10-dias_exercise-training-for-patients-with-hypertrophic-cardiomyopathy.pdf?sfvrsn=fa018194_2" sfref="[documents%7COpenAccessDataProvider]c9ef138c-5f43-4524-8a51-d06907c828dc">Exercise Training for Patients With Hypertrophic Cardio myopathy: JACC Review Topic of the Week </a>
-            </div>
-        </div>
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
-        <div class="flex_shrink block font_bold text_left p-r_3 m-r_3 br-r_1 br_black-3 br_solid">
-            <a href="#modal-disclosures" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures">Article</a>
-        </div>
-        <div class="flex_shrink block font_italic  text_left">
-            <span class="block uppercase" >Published: June 15, 2020</span>
-        </div>
-        <div class="flex_grow m-l_auto">
-             {{> "PageExtras.CreditDots" }}
-        </div>
-    </div>
-</article>
-
-
-MarkupWrapperClasses:
-p_4 bg_white
-
-Weight: 100
-
-Styleguide Program.Block.OnDemand.Journals
-*/
-/*
-Resource Package
-
-Description: These slide blocks are used in combination with grid templates and dividers. 
-
-Markup:
-<article  class="c_black m-b_4 m-t_5 m-t_0:md m-t_2:lg ">
-    <div class="br_1 br_radius br_solid br_black-2 flex flex_column flex_row:md font_ui h:bg_black-2 m-x_n2 relative">
-        <div class="flex_none justify_center p-l_4:md p-y_3" style="width:4rem;">
-            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width:3rem;">
-                <div class="aspect_1x1 bg-blend_multiply bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_black-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
-                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><i class="flex_auto c_white-9 fa-file-archive fas font_2 self_center text_center w_100"></i></div>
-                </div>
-            </div>
-        </div>
-        <div class="flex_auto [ c_primary-n4  font_0 font_1:md font_copy font_regular lh_2 ][  p-x_3 p-b_0:lg p-b_3 p-l_4:lg p-l_4:md ]" >
-            <div class="m-t_2 p_3 p-y_2"><a class="expanded-click-area h:undecorated" target="_blank" href="https://virtual.acc.org/docs/default-source/filesah20/journal/10-dias_exercise-training-for-patients-with-hypertrophic-cardiomyopathy.pdf?sfvrsn=fa018194_2" sfref="[documents%7COpenAccessDataProvider]c9ef138c-5f43-4524-8a51-d06907c828dc">Exercise Training for Patients With Hypertrophic Cardio myopathy: JACC Review Topic of the Week </a>
-            </div>
-        </div>
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
-        <div class="flex_shrink block font_bold text_left p-r_3 m-r_3 br-r_1 br_black-3 br_solid">
-            <a href="#modal-disclosures" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures">Article</a>
-        </div>
-        <div class="flex_shrink block font_italic  text_left">
-            <span class="block uppercase" >Published: June 15, 2020</span>
-        </div>
-        <div class="flex_grow m-l_auto">
-             {{> "PageExtras.CreditDots" }}
-        </div>
-    </div>
-</article>
-
-
-
-MarkupWrapperClasses:
-p_4 bg_white
-
-Weight: 200
-
-Styleguide Program.Block.OnDemand.Resource
-*/
-/*
-Sessions
-
-Description: The session is the main content item of virtual conferences.  These element are represented differently depending on the amount of sessions and presentation are in the conference. Sessions are a collection of presentations. 
-
-
-
-Weight:10
-
-Styleguide Program.Sessions
-*/
-/*
-
-Simple
-
-Description: When the count of sessions is lower then 10 in count, the Simple Design is recommended. 
-
-Markup:
-<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
-    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
-        <div class="br-b_1 br_solid br_primary-2">
-            {{>"PageExtras.CategoryFlags"}}
-            <div class="p_4 p-b_2 flex flex_column flex_row:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block font-size_up-1 font_display lh_1">
-                        <strong class="font_bold p-r_3">{{> "Data.Agenda.ID" }}</strong>
-                        {{> "Data.Session.Title" }}
-                    </span>
-                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate" }}  {{> "Data.Agenda.LiveTime" }}</span>
-                </h3>
-                <div class="flex_grow m-l_auto:lg">
-                    <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
-                        <a href="" class="btn btn-primary h:bg_secondary-n3 z_5">Watch </a>
-                        <a href="" class="btn btn-secondary z_5 a:bg_alert h:bg_alert-n3 { active }"><i class="fas fa-heart c_white"></i></a>
-                    </div>
-                </div>
-            </div>
-            <h4 class="font-size_up p-x_4 c_primary font_medium">Presentations</h4>
-            <ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white">
-                    <span class="font-size_up-1 block font_display">{{> "Data.Presentation.Title" }}</span>
-                    <span class="font-size-down opacity_7 font_ui"><strong class="c_primary">{{> "Data.Faculty.Role" }}:</strong>{{> "Data.Faculty.FullName" }} ({{> "Data.Faculty.Location" }})</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
-                </li>
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
-                    <span class="font-size_up-1 block font_display">Antiplatelet Regimen After Drug Coated Balloon </span>
-                    <span class="font-size-down opacity_7 font_ui">Chen (China)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">12:00 – 12:45 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
-                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
-                    <span class="font-size_up-1 block font_display">Case: Drug Coated Balloon in De Novo Ostial Left Anterior Descending Artery </span>
-                    <span class="font-size-down opacity_7 font_ui">Qiu (China)</span>
-                    <span class="font-size-down-1 opacity_6 font_italic block">12:45 – 1:00 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
-                </li>
-            </ul>        
-        </div>
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex_auto"> <a href="#modal-extra" class="block h:underline uppercase font_bold" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
-        </div>
-        <div class="flex_grow uppercase m-l_auto">
-            <ul class="ul_none font_n2 text_right">
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_COP br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop
-                </li>
-            </ul>
-        </div>
-    </div>
-</article>
-
-
-Weight: 10
-
-Styleguide Program.Sessions.Simple
-
-*/
-/*
-Category Flags
-
-Description: A graphic treatment for the category flags which are tags applied like channel and type.
-
-Markup:
-<div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white">{{>"Data.Agenda.ChannelName"}}</div>
-
+</header>
 
 Weight:0
 
-Styleguide PageExtras.CategoryFlags
+Styleguide PageExtras.Program.HeaderThumbnail
 */
 /*
+Favorite Button
 
-On Demand
+The favorite button is a simple icon that can be used to add or remove a favorite. This button reflects the state of the favorite.
 
-Description: When the count of sessions is lower then 10 in count, the Simple Design is recommended the difference between live and on demand. 
+active   - when the favorite is active
 
 Markup:
-<article class="br-t_3 br_primary-2 br_radius br_solid c_black font_0 m-b_4 shadow_overlap-light">
-    <div class="br-tl_radius br-tr_radius br_1 br_black-3 br_solid flex flex_column font_ui m-t_n2 relative shadow_2">
-        <div class="br-b_1 br_primary-2 br_solid">
-            <!-- {{>"PageExtras.CategoryFlags"}} -->
-            <div class="p_4 p-b_2 flex flex_column flex_row:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2  p-r_4:lg">
-                    <span class="block c_black-6 uppercase font_bold font-size_down-1"> Session I: Evolving New Frontiers of Imaging Ready for Practice</span><span class="block font-size_up-1 font_display lh_1">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of session and Faculty by Dr. Itchhaporia </span><span class="block c_black font-size_down-1 font_ui lh_3 opacity_7">Dipti Itchhaporia, MD, FACC (Chair)</span>
-                </h3>
-                <div class="flex_grow m-l_auto:lg">
-                    <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
-                        <a href="" class="btn btn-primary h:bg_secondary-n3 z_5">Watch </a>
-                        <a href="" class="btn btn-secondary z_5 a:bg_alert h:bg_alert-n3 { active }"><i class="fas fa-heart c_white"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-    <div class="flex_auto">
-        <a href="#modal-extra" class="block h:underline uppercase font_bold" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
-    </div>
-    <div class="flex_grow uppercase m-l_auto">
-            <ul class="ul_none font_n2 text_right">
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_MOCIV br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> moc
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_AAPA br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> aapa
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_ECME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> ecme
-                </li>
-            </ul>
-        </div>
-    </div>
-</article>
+<a href="" aria-label="mark as favorite" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 {{ modifier_class }}" ><i class="fas fa-heart"></i></a>
+
+Weight:0
+
+Styleguide PageExtras.Program.ActionButtons.Favorite
+*/
+/*
+Action Buttons
+
+The footer has a couple of buttons and a link to the presentation details.
+
+Watch   - when the main asset of the loaded page is a video or live stream.
+Join    - when the main asset of the loaded page is an online meeting or webinar.
+Listen  - when the main asset of the loaded page is a podcast or audio.
+View    - when the main asset of the loaded page is a graphic, pdf, or slide deck.
 
 
-Weight: 10
+Markup:
+<aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+      <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+        {{> "PageExtras.Program.ActionButtons.Favorite" modifier_class="[active]"}}
+        <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
+      </nav>
+      <a href="" aria-label="show or hide details"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">Show Details</a>
+      <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
+</aside>
 
-Styleguide Program.Sessions.OnDemand
+Weight:0
+
+Styleguide PageExtras.Program.ActionButtons
+*/
+/*
+Action Buttons No Details
+
+Description: The footer has a couple of buttons and a link to the presentation details.
+
+Markup:
+<aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+      <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+        {{> "PageExtras.Program.ActionButtons.Favorite" modifier_class="[active]"}}
+        <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
+      </nav>
+      <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
+</aside>
+
+Weight:0
+
+Styleguide PageExtras.Program.ActionButtons.NoDetails
+
+*/
+/*
+Action Buttons Only
+
+Description: The footer has a couple of buttons and a link to the presentation details.
+
+Markup:
+<aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+      <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+        {{> "PageExtras.Program.ActionButtons.Favorite" modifier_class="[active]"}}
+        <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
+      </nav>
+</aside>
+
+Weight:0
+
+Styleguide PageExtras.Program.ActionButtons.Only
 
 */
 /*
@@ -22786,6 +22463,45 @@ Markup:
 Weight:0
 
 Styleguide PageContent.ImageContentSimple
+*/
+/*
+Call-to-Action Card
+
+Description: Some content areas are chunked out to drive usage through a call to action card.
+
+Markup:
+<div class="br_radius flex flex_column justify_between p-x_5:lg p_4 shadow_overlap-light br_black-3 br_solid br_1">
+<h2 class="font_bold c_primary m-t_0 block">Member Section</h2>
+<p class="lh_3">Connect with ACC’s Sports and Exercise Member Section, THE home for sports and exercise professionals within the ACC, advocating for and advancing the priorities of the community, and serving as a College-wide resource for issues related to sports and exercise professionals.  </p>   
+<a class="block br_radius btn btn-block btn-lg btn-secondary btn_lg m-b_3 m_auto shadow_overlap-light w_100">Call to Action</a>
+</div>    
+
+Weight:100
+
+Styleguide  PageContent.Call To Action
+*/
+/*
+External Resource
+
+External Sections of content that are helpful to cross promote other products from the conferences. 
+
+primary    -  Change the color of the block to primary.
+accent    -  Change the color of the block to accent.
+
+
+Markup:
+<article class="aspect_21x9 bg-blend_luminosity relative bg_cover bg_no-repeat bg_{{ modifier_class }}-2 br_1 br_black-3 br_radius br_solid flex_shrink generic_video generic_video-nolabel h:bg_secondary-n2 relative shadow_3 text_center c_{{ modifier_class }}-4">
+    <em class="opacity_5 absolute t_1 r_2 fas font_4 fa-external-link-square-alt"></em>
+    <a class="block font_7 font_6:md font_9:lg font_display font_xbold h:undecorated m_0 p_4 p_5:lg text_left uppercase c_inherit expanded-click-area" style="line-height: .85em" href="https://www.acc.org/latest-in-cardiology/features/accs-coronavirus-disease-2019-covid-19-hub?_ga=2.121293644.574512269.1591713176-49927898.1591404069#sort=%40fcommonsortdate90022%20descending" target="_blank"><span class="font_3 font_4:md m_0 m-l_0 m-b_n2 lh_0 block m-b_2">ACC’s</span>
+    <span class=" block">COVID-19 HUB</span>
+ </a>
+ </article>
+
+ MarkupWrapperClasses:
+ gap-x_4 gap-y_4 grid template-x_30
+
+
+Styleguide PageContent.External Resource
 */
 /*
 Awards
@@ -23126,7 +22842,7 @@ Markup:
     <aside class="flex_auto max-w_20:md max-w_25:lg w_100">
         <h4 class="font-size_up p-x_3 c_black-6 font_medium"><i class="fas fa-file-certificate p-r_3"></i> credits</h4>
         <div class="p-y_3 br-t_1  br_primary-2 br_solid ">
-            {{> "PageExtras.CreditDots"}}
+            {{> "PageExtras.Program.CreditDots"}}
         </div>
         <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
         <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7">
@@ -23178,7 +22894,7 @@ Markup:
             <aside class="flex_auto font_n1">
                 <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-file-certificate p-r_3"></i> credits</h4>
                 <div class="br-t_1  br_primary-2 br_solid p-y_3">
-                    {{> "PageExtras.CreditDots"}}
+                    {{> "PageExtras.Program.CreditDots"}}
                 </div>
                 <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
                 <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7">
@@ -23198,15 +22914,6 @@ Weight:1000
 Styleguide Player.Abstract
 */
 /*
-Block Designs
-
-For small conferences that have a small amount of content is recommended to use the Block Designs. When sessions are lower then 10 in count, the Block Designs are recommended.
-
-Weight: 0
-
-Styleguide Program.Block
-*/
-/*
 
 On Demand
 
@@ -23214,245 +22921,8 @@ Description: All videos and presentations after a publication is in the On Deman
 
 Weight: 0
 
-Styleguide Program.Block.OnDemand
+Styleguide Program.OnDemand
 
-*/
-/*
-Video Block Dual Channel
-
-Description: These video blocks are used in combination with grid templates and dividers. 
-
-
-Markup:
-{{> "PageExtras.Date Time Dividers" }}
-<section class="gap_5 grid justify_around p_4 p_5 grid-col_1 grid-col_2:md">
-    {{> "Program.Block.Live Video" }}
-    {{> "Program.Block.Live Video" }}
-</section>
-{{> "PageExtras.Date Time Dividers" }}
-<section class="gap_5 grid justify_around p_4 p_5 grid-col_1">
-    {{> "Program.Block.Live Video" }}
-</section>
-
-
-Weight: 0
-
-Styleguide Program.Block.Channels
-*/
-/*
-Video Block Session
-
-Description: These video blocks are used in combination with grid templates and dividers. 
-
-
-Markup:
-<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
-        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Program.Block.HeaderThubnail" }}
-        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
-            <h2 class="font-size_up font_display lh_2 "><strong class="font_accent">{{> "Data.Agenda.ID" }}</strong> {{> "Data.Session.Title" }}</h2>
-        </main>
-       {{> "Program.Block.FooterButtons" }}
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.CreditDots" }}
-        </div>
-    </div>
-</article>
-
-MarkupWrapperClasses:
-    gap_5 grid justify_around p_4 p_5 grid-col_1 grid-col_2:md
-
-
-Weight: 0
-
-FORMAT: this element uses data that has strict data formatting requirements. See the data tab for more information.
-
-Styleguide Program.Block.Live Video
-*/
-/*
-Video Block Presentation
-
-Description: These video blocks are used in combination with grid templates and dividers. 
-
-
-Markup:
-<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
-        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Program.Block.HeaderThubnail" }}
-        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
-            <h2 class="font-size_up font_display lh_2 ">{{> "Data.Session.Title" }}</h2>
-            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>{{> "Data.Faculty.FullName" }}</li><li> {{> "Data.Faculty.FullName" }}</li> </ul>
-        </main>
-       {{> "Program.Block.FooterButtonsNoDetails" }}
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.CreditDots" }}
-        </div>
-    </div>
-</article>
-
-
-MarkupWrapperClasses:
-    gap_5 grid justify_around p_4 p_5 grid-col_1 grid-col_2:md
-
-
-Weight: 0
-
-FORMAT: this element uses data that has strict data formatting requirements. See the data tab for more information.
-
-Styleguide Program.Block.Presentation
-*/
-/*
-Video Block Header
-
-Description: The header is just a bit of design flair that can be colored, background swapped out and also the icon can be changed to the content of the presentation.
-
-bg_primary  -  is the default background color
-bg_accent   -  any background color can be swapped out
-
-Markup:
-<header class="flex flex_none flex_row justify_center m-t_n4:lg p-x_4">
-    <div class="aspect_21x9:md aspect_16x9 bg-blend_multiply bg_primary bg_cover bg_no-repeat {{ modifier_class }} br_2 br_radius br_solid br_white br_white-9 flex flex_shrink grid justify_center m-t_n5 max-w_15 max-w_20:md relative shadow_3 text_center texture_ondemand thumb">
-            <i class="absolute c_white-9 fa-play fas flex_auto font_4 font_5:lg self_center text_center w_100"></i>
-        </div>
-</header>
-
-Weight:0
-
-Styleguide Program.Block.HeaderThubnail
-*/
-/*
-Video Block Footer
-
-Description: The footer has a couple of buttons and a link to the presentation details.
-
-Markup:
-<footer class="flex flex_none flex_wrap gap_3 m_auto m-t_auto max-w_35 p-b_4 p-b_4:lg w_100">
-        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 [active]"><i class="fas fa-heart"></i></a>
-        <a href="" class="btn btn-primary flex_auto">Watch</a>
-        <a href="" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">Show Presentation Details</a>
-        <a href="" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
-</footer>
-
-Weight:0
-
-Styleguide Program.Block.FooterButtons
-*/
-/*
-Video Block Footer No Details
-
-Description: The footer has a couple of buttons and a link to the presentation details.
-
-Markup:
-<footer class="flex flex_none flex_wrap gap_3 m_auto m-t_auto max-w_35 p-b_4 p-b_4:lg w_100">
-        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 [active]"><i class="fas fa-heart"></i></a>
-        <a href="" class="btn btn-primary flex_auto">Watch</a>
-        <a href="" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
-</footer>
-
-Weight:0
-
-Styleguide Program.Block.FooterButtonsNoDetails
-
-*/
-/*
-Five Channel Max
-
-Description: 
-Block Designs are Great for a few channels but there is a maximum of 5 channels without the design crushing too much.
-
-Markup: 
-{{> "PageExtras.Date Time Dividers" }}
-<section class="gap_4 grid justify_around p-y_4 p-y_5 grid-col_1 grid-col_5:md">
-<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
-        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Program.Block.HeaderThubnail"  modifier_class="bg_primary"}}
-        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
-            <h2 class="font-size_up font_display lh_2 ">Planning for the Inevitable: Workforce and Patient Access Challenges </h2>
-            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>{{> "Data.Faculty.FullName" }}</li><li>Frederic R. Simmons</li> </ul>
-        </main>
-       {{> "Program.Block.FooterButtonsNoDetails" }}
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.CreditDots" }}
-        </div>
-    </div>
-</article>
-<!----------------------------------------------------------- AREA BREAK ---------------------------------------------------------->
-<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
-        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Program.Block.HeaderThubnail"  modifier_class="bg_accent" }}
-        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
-            <h2 class="font-size_up font_display lh_2 ">
-            Reducing Care Variation</h2>
-            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Steven M. Bradley, MD, FACC</li><li> Suzette Jaskie, MBA </li> </ul>
-        </main>
-       {{> "Program.Block.FooterButtonsNoDetails" }}
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.CreditDots" }}
-        </div>
-    </div>
-</article>
-<!----------------------------------------------------------- AREA BREAK ---------------------------------------------------------->
-<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
-        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Program.Block.HeaderThubnail"  modifier_class="bg_highlight" }}
-        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
-            <h2 class="font-size_up font_display lh_2 ">Maintaining the Viability of Your Nuclear Cardiology Program (Joint Society Session with ASNC)</h2>
-            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Dennis Calnon</li><li>  David C. Konur, FACHE  </li> </ul>
-        </main>
-       {{> "Program.Block.FooterButtonsNoDetails" }}
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.CreditDots" }}
-        </div>
-    </div>
-</article>
-<!----------------------------------------------------------- AREA 2 ---------------------------------------------------------->
-<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
-        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Program.Block.HeaderThubnail" modifier_class="bg_warning" }}
-        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
-            <h2 class="font-size_up font_display lh_2 ">Academic Compensation Models: From APPs to Professors  </h2>
-            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>David Brody, MPA;</li><li> {{> "Data.Faculty.FullName" }}</li> </ul>
-        </main>
-       {{> "Program.Block.FooterButtonsNoDetails" }}
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.CreditDots" }}
-        </div>
-    </div>
-</article>
-<!----------------------------------------------------------- AREA 2 ---------------------------------------------------------->
-<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
-        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "Program.Block.HeaderThubnail" modifier_class="bg_success" }}
-        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
-            <h2 class="font-size_up font_display lh_2 ">Managing Change in Graduate Medical Education  </h2>
-            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Lisa A. Mendes, MD, FACC</li><li> Gaby Weissman, MD, FACC</li> <li><strong>Moderator</strong>Allison Bailie</li></ul>
-        </main>
-       {{> "Program.Block.FooterButtonsNoDetails" }}
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.CreditDots" }}
-        </div>
-    </div>
-</article>
-</section>
-
-
-Weight:0
-
-Styleguide Program.Block.Max Channels
 */
 /*
 Sponsor
@@ -23629,91 +23099,57 @@ Weight:0
 Styleguide Faculty.NoPhotos
 */
 /*
-Workshops
 
-Description: A collection of Workshops that are available for the user to select from.
+Library
 
-Weight:10
+The virtual library designs for the online video playing portal. 
 
-Styleguide Program.Sessions.Workshops
+Weight: 0 
+
+Styleguide  Library
 */
 /*
+Navigation
 
-Simple
-
-Description: Simple Design for Workshops. 
-
-Markup:
-<article class="br-t_3 br_primary-2 br_radius br_solid c_black font_0 m-b_4 shadow_overlap-light">
-    <div class="br-tl_radius br-tr_radius br_1 br_black-3 br_solid flex flex_column font_ui m-t_n2 relative shadow_2">
-        <div class="br-b_1 br_primary-2 br_solid">
-            {{>"PageExtras.CategoryFlags"}}
-            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap_4">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 flex_auto p-r_4:lg">
-                    <span class="block font-size_up-1 font_display lh_1">
-                        <!--
-                            <strong class="font_bold p-r_3 font_accent">{{> "Data.Agenda.ID" }}</strong>
-                        -->
-                        {{> "Data.Session.Title" }}
-                    </span>
-                    <!-- Time & Date Stamp -->
-                    <!-- 
-                        <span class="c_accent font-size_down-1">
-                            {{> "Data.Agenda.LiveDate" }}  {{> "Data.Agenda.LiveTime" }}
-                        </span>
-                    -->
-                </h3>
-                {{>"Program.Sessions.Workshops.Button"}}
-            </div>
-        </div>
-    </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-    <div class="flex_auto">
-        <a href="#modal-extra" class="block h:underline uppercase font_bold" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
-    </div>
-    <div class="flex_grow uppercase m-l_auto">
-            <ul class="ul_none font_n2 text_right">
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_MOCIV br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> moc
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_AAPA br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> aapa
-                </li>
-                <li class="inline-block lh_0 p-l_3">
-                    <span class="bg_ECME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> ecme
-                </li>
-            </ul>
-        </div>
-    </div>
-</article>
-
-
-Weight: 10
-
-Styleguide Program.Sessions.Workshops.Simple
-*/
-/*
-Workshops Button
-
-Description: Workshops are interactive buttons that open a webex page and have the call to action "Join Now".
+Sidebar that expands to show the text of it's icons. 
 
 Markup:
-<footer class="flex flex_auto flex_wrap gap_3 m_auto m-t_auto max-w_15 p-b_4 p-b_4:lg w_100">
-        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 [active]"><i class="fas fa-heart"></i></a>
-        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
-        <a href="" target="blank" class="btn btn-primary flex_auto">Join Now</a>
-        <a href="" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">show details</a>
-</footer>
+<nav id="navigation" class="absolute {fixed} t_0 l_0 b_0 bg_black-3 flex flex_column justify_between p-t_0 p-b_3 p-l_3 p-r_3 p-b_4:md p-t_4:md p-r_0:md font_3:lg font_2 ">
+<ul class="flex flex_column ul_none">{{> "Library.Navigation.NavItem"}}</ul>
+<ul class="flex flex_column ul_none">{{> "Library.Navigation.NavItem"}}</ul>
+</nav>
+<script>
+let nav = document.getElementById("navigation");
+navigation.addEventListener("mouseenter", function() {
+  navigation.classList.add("hover");
+  let navItems = navigation.querySelectorAll(".nav-item");
+  navItems.forEach(function(navItem) {
+    navItem.querySelector(".label").classList.add("inline-block");
+    navItem.querySelector(".label").classList.remove("display_none:md");
+  });
+});
+</script>
+
+
+MarkupWrapperClasses: h_50 relative p-l_5 bg_black-_05 w_100
+
+NOTE: this pattern is using absolute positioning but in production it should be fixed.
 
 Weight:0
 
-Styleguide Program.Sessions.Workshops.Button
+Styleguide Library.Navigation
+*/
+/*
+Nav Item
+
+The Nav Items are icons but on hover they expand to show the text of the icon.
+
+Markup:
+<li class="nav-item br_radius h:bg_white p-r_4 m-r_n4 c_black h:c_primary"><a class="p_3 c_inherit"><i class="icon fas faw fa-plus "></i><span class="label display_none:md">Text</span></a></li>
+
+Weight:0
+
+Styleguide Library.Navigation.NavItem
 */
 /*
 
@@ -23724,6 +23160,199 @@ The virtual product has evolved from its original form, and has made some design
 Weight: 400000
 
 Styleguide  Graveyard
+*/
+/*
+Block Designs
+
+For small conferences that have a small amount of content is recommended to use the Block Designs. When sessions are lower then 10 in count, the Block Designs are recommended.
+
+Weight: 0
+
+Styleguide Graveyard.Program.Block
+*/
+/*
+Video Block Dual Channel
+
+Description: These video blocks are used in combination with grid templates and dividers. 
+
+
+Markup:
+{{> "PageExtras.Program.DateTimeDividers" }}
+<section class="gap_5 grid justify_around p_4 p_5 grid-col_1 grid-col_2:md">
+    {{> "Graveyard.Program.Live Video" }}
+    {{> "Graveyard.Program.Live Video" }}
+</section>
+{{> "PageExtras.Program.DateTimeDividers" }}
+<section class="gap_5 grid justify_around p_4 p_5 grid-col_1">
+    {{> "Graveyard.Program.Live Video" }}
+</section>
+
+
+Weight: 0
+
+Styleguide Graveyard.Program.Channels
+*/
+/*
+Video Block Session
+
+Description: These video blocks are used in combination with grid templates and dividers. 
+
+
+Markup:
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
+        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
+        {{> "PageExtras.Program.HeaderThumbnail" }}
+        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
+            <h2 class="font-size_up font_display lh_2 "><strong class="font_accent">{{> "Data.Agenda.ID" }}</strong> {{> "Data.Session.Title" }}</h2>
+        </main>
+       {{> "PageExtras.Program.ActionButtons" }}
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex flex_grow justify_start text_left uppercase">
+        {{> "PageExtras.Program.CreditDots" }}
+        </div>
+    </div>
+</article>
+
+MarkupWrapperClasses:
+    gap_5 grid justify_around p_4 p_5 grid-col_1 grid-col_2:md
+
+
+Weight: 0
+
+FORMAT: this element uses data that has strict data formatting requirements. See the data tab for more information.
+
+Styleguide Graveyard.Program.Live Video
+*/
+/*
+Video Block Presentation
+
+Description: These video blocks are used in combination with grid templates and dividers. 
+
+
+Markup:
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
+        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
+        {{> "PageExtras.Program.HeaderThumbnail" }}
+        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
+            <h2 class="font-size_up font_display lh_2 ">{{> "Data.Session.Title" }}</h2>
+            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>{{> "Data.Faculty.FullName" }}</li><li> {{> "Data.Faculty.FullName" }}</li> </ul>
+        </main>
+       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex flex_grow justify_start text_left uppercase">
+        {{> "PageExtras.Program.CreditDots" }}
+        </div>
+    </div>
+</article>
+
+
+MarkupWrapperClasses:
+    gap_5 grid justify_around p_4 p_5 grid-col_1 grid-col_2:md
+
+
+Weight: 0
+
+FORMAT: this element uses data that has strict data formatting requirements. See the data tab for more information.
+
+Styleguide Graveyard.Program.Presentation
+*/
+/*
+Five Channel Max
+
+Description: 
+Block Designs are Great for a few channels but there is a maximum of 5 channels without the design crushing too much.
+
+Markup: 
+{{> "PageExtras.Program.DateTimeDividers" }}
+<section class="gap_4 grid justify_around p-y_4 p-y_5 grid-col_1 grid-col_5:md">
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
+        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
+        {{> "PageExtras.Program.HeaderThumbnail"  modifier_class="bg_primary"}}
+        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
+            <h2 class="font-size_up font_display lh_2 ">Planning for the Inevitable: Workforce and Patient Access Challenges </h2>
+            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>{{> "Data.Faculty.FullName" }}</li><li>Frederic R. Simmons</li> </ul>
+        </main>
+       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex flex_grow justify_start text_left uppercase">
+        {{> "PageExtras.Program.CreditDots" }}
+        </div>
+    </div>
+</article>
+<!----------------------------------------------------------- AREA BREAK ---------------------------------------------------------->
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
+        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
+        {{> "PageExtras.Program.HeaderThumbnail"  modifier_class="bg_accent" }}
+        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
+            <h2 class="font-size_up font_display lh_2 ">
+            Reducing Care Variation</h2>
+            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Steven M. Bradley, MD, FACC</li><li> Suzette Jaskie, MBA </li> </ul>
+        </main>
+       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex flex_grow justify_start text_left uppercase">
+        {{> "PageExtras.Program.CreditDots" }}
+        </div>
+    </div>
+</article>
+<!----------------------------------------------------------- AREA BREAK ---------------------------------------------------------->
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
+        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
+        {{> "PageExtras.Program.HeaderThumbnail"  modifier_class="bg_highlight" }}
+        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
+            <h2 class="font-size_up font_display lh_2 ">Maintaining the Viability of Your Nuclear Cardiology Program (Joint Society Session with ASNC)</h2>
+            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Dennis Calnon</li><li>  David C. Konur, FACHE  </li> </ul>
+        </main>
+       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex flex_grow justify_start text_left uppercase">
+        {{> "PageExtras.Program.CreditDots" }}
+        </div>
+    </div>
+</article>
+<!----------------------------------------------------------- AREA 2 ---------------------------------------------------------->
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
+        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
+        {{> "PageExtras.Program.HeaderThumbnail" modifier_class="bg_warning" }}
+        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
+            <h2 class="font-size_up font_display lh_2 ">Academic Compensation Models: From APPs to Professors  </h2>
+            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>David Brody, MPA;</li><li> {{> "Data.Faculty.FullName" }}</li> </ul>
+        </main>
+       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex flex_grow justify_start text_left uppercase">
+        {{> "PageExtras.Program.CreditDots" }}
+        </div>
+    </div>
+</article>
+<!----------------------------------------------------------- AREA 2 ---------------------------------------------------------->
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
+        <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
+        {{> "PageExtras.Program.HeaderThumbnail" modifier_class="bg_success" }}
+        <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
+            <h2 class="font-size_up font_display lh_2 ">Managing Change in Graduate Medical Education  </h2>
+            <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Lisa A. Mendes, MD, FACC</li><li> Gaby Weissman, MD, FACC</li> <li><strong>Moderator</strong>Allison Bailie</li></ul>
+        </main>
+       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex flex_grow justify_start text_left uppercase">
+        {{> "PageExtras.Program.CreditDots" }}
+        </div>
+    </div>
+</article>
+</section>
+
+
+Weight:0
+
+Styleguide Graveyard.Program.Max Channels
 */
 /*
 Channels Banners
@@ -23780,7 +23409,7 @@ Markup:
             <a href="#modal-extra" class="block h:undecorated uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
         </div>
         <div class="flex_auto m-l_auto:md self_center">
-             {{> "PageExtras.CreditDots" }}
+             {{> "PageExtras.Program.CreditDots" }}
         </div>
     </div>
 </article>
@@ -23788,6 +23417,18 @@ Markup:
 Weight: 100
 
 Styleguide Graveyard.Live Video
+*/
+/*
+Twitter Tag
+
+Description: Every conference has a common #tag structure asking user to join in to the conversation.; 
+
+Markup:
+<div class="socialTag float_right text_right"><div class="c_secondary font_1">Join The Conversation</div><div class="c_primary font_xbold font_3 font_display"><em class="fas fa-hashtag"></em>ACCAthleticHeart  <em class="fab fa-twitter"></em></div></div>
+
+Weight:0
+
+Styleguide Graveyard.PageElements.TwitterTag
 */
 /*
 Branded Header
@@ -24184,7 +23825,7 @@ Markup:
                     <a href="#modal-extra" class="block h:undecorated uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
                 </div>
                 <div class="flex_auto m-l_auto:md self_center">
-                    {{> "PageExtras.CreditDots" }}
+                    {{> "PageExtras.Program.CreditDots" }}
                 </div>
             </div>
         </div>
@@ -24200,57 +23841,467 @@ Weight: 10
 Styleguide Graveyard.Block.LiveVideo.Horizontal
 */
 /*
+Locking Graphics
 
-Library
-
-The virtual library designs for the online video playing portal. 
-
-Weight: 0 
-
-Styleguide  Library
-*/
-/*
-Navigation
-
-Sidebar that expands to show the text of it's icons. 
+Showing assets before they are intractable is needed  
 
 Markup:
-<nav id="navigation" class="absolute {fixed} t_0 l_0 b_0 bg_black-3 flex flex_column justify_between p-t_0 p-b_3 p-l_3 p-r_3 p-b_4:md p-t_4:md p-r_0:md font_3:lg font_2 ">
-<ul class="flex flex_column ul_none">{{> "Library.Navigation.NavItem"}}</ul>
-<ul class="flex flex_column ul_none">{{> "Library.Navigation.NavItem"}}</ul>
-</nav>
-<script>
-let nav = document.getElementById("navigation");
-navigation.addEventListener("mouseenter", function() {
-  navigation.classList.add("hover");
-  let navItems = navigation.querySelectorAll(".nav-item");
-  navItems.forEach(function(navItem) {
-    navItem.querySelector(".label").classList.add("inline-block");
-    navItem.querySelector(".label").classList.remove("display_none:md");
-  });
-});
-</script>
+<div class="locked_graphic">{{> "Graveyard.Program.Live Video"}}</div>
+
+MarkupWrapperClasses:
+gap_5 grid justify_around p_4 p_5 grid-col_1 grid-col_2:md
+
+Weight: 1000
+
+Styleguide Graveyard.Program.LiveVideo.Locked Graphic
+*/
+/*
+Workshops
+
+Description: A collection of Workshops that are available for the user to select from.
+
+Weight:10
+
+Styleguide Graveyard.Program.Workshops
+*/
+/*
+
+Simple
+
+Description: Simple Design for Workshops. 
+
+Markup:
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black font_0 m-b_4 shadow_overlap-light">
+    <div class="br-tl_radius br-tr_radius br_1 br_black-3 br_solid flex flex_column font_ui m-t_n2 relative shadow_2">
+        <div class="br-b_1 br_primary-2 br_solid">
+            {{>"PageExtras.Program.CategoryFlags"}}
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap_4">
+                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 flex_auto p-r_4:lg">
+                    <span class="block font-size_up-1 font_display lh_1">
+                        <!--
+                            <strong class="font_bold p-r_3 font_accent">{{> "Data.Agenda.ID" }}</strong>
+                        -->
+                        {{> "Data.Session.Title" }}
+                    </span>
+                    <!-- Time & Date Stamp -->
+                    <!-- 
+                        <span class="c_accent font-size_down-1">
+                            {{> "Data.Agenda.LiveDate" }}  {{> "Data.Agenda.LiveTime" }}
+                        </span>
+                    -->
+                </h3>
+                {{>"Graveyard.Program.Workshops.Button"}}
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+    <div class="flex_auto">
+        <a href="#modal-extra" class="block h:underline uppercase font_bold" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+    </div>
+    <div class="flex_grow uppercase m-l_auto">
+            <ul class="ul_none font_n2 text_right">
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_MOCIV br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> moc
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_AAPA br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> aapa
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_ECME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> ecme
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
 
 
-MarkupWrapperClasses: h_50 relative p-l_5 bg_black-_05 w_100
+Weight: 10
 
-NOTE: this pattern is using absolute positioning but in production it should be fixed.
+Styleguide Graveyard.Program.Workshops.Simple
+*/
+/*
+Workshops Button
+
+Description: Workshops are interactive buttons that open a webex page and have the call to action "Join Now".
+
+Markup:
+<footer class="flex flex_auto flex_wrap gap_3 m_auto m-t_auto max-w_15 p-b_4 p-b_4:lg w_100">
+        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 [active]"><i class="fas fa-heart"></i></a>
+        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="" target="blank" class="btn btn-primary flex_auto">Join Now</a>
+        <a href="" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">show details</a>
+</footer>
 
 Weight:0
 
-Styleguide Library.Navigation
+Styleguide Graveyard.Program.Workshops.Button
 */
 /*
-Nav Item
+Video Block
 
-The Nav Items are icons but on hover they expand to show the text of the icon.
+Description: These video blocks are used in combination with grid templates and dividers. 
 
 Markup:
-<li class="nav-item br_radius h:bg_white p-r_4 m-r_n4 c_black h:c_primary"><a class="p_3 c_inherit"><i class="icon fas faw fa-plus "></i><span class="label display_none:md">Text</span></a></li>
+<article class="c_black m-b_4 m-b_5:md m-t_0:md m-t_4 m-t_5:lg">
+    <div class="br_1 br_radius br_solid br_black-2 flex flex_column flex_column:lg flex_row:md font_ui h:bg_black-2 m-x_n2 relative" style="height: 100%">
+        <div class="display_none:lg flex_none justify_center p-l_4:md p-y_3" style="width: 4rem">
+            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width: 3rem">
+                <div class="pathwayColor{ bg_primary } flex_shrink relative aspect_1x1 shadow_3 text_center texture_ondemand thumb [ bg-blend_multiply bg_center bg_contain bg_no-repeat  ][ br_2 br_black-3 br_radius br_solid ]">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-play fas flex_auto font_2 self_center text_center w_100"></em></div>
+                </div>
+            </div>
+        </div>
+        <div class="block:lg display_none m-t_n5 m-x_5 p-x_5">
+            <div class="m-t_n5 m_auto m_auto:md self_center text_center">
+                <div class="aspect_21x9 bg-blend_overlay bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_black-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-play fas flex_auto font_5 self_center text_center w_100"></em></div>
+                </div>
+            </div>
+        </div>
+        <div class="flex_auto [ c_primary-n4  font_0 font_1:md font_copy font_regular lh_2 ][ p-b_3 p-b_4:md ]">
+            <div class="p-t_2 p_4 relative p-y_0 p-y_3:md p-x_5:lg"><a class="expanded-click-area h:undecorated p-b_3" target="_blank" href="/docs/default-source/filesah20/eabstracts/chowdhury-anabolic-androgenic-1130-279.pdf?sfvrsn=2518b85a_2">Anabolic-Androgenic Steroid Abuse: A Potential Cause of Myocardial Infarction in Young Patients</a></div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
+        <div class="flex_shrink block  text_left p-r_4 m-r_4 ">
+            <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+        </div>
+        <div class="flex_grow uppercase text_right">
+            <ul class="m-t_n2 ul_none">
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_COP br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop </li>
+            </ul>
+        </div>
+    </div>
+</article>
 
-Weight:0
 
-Styleguide Library.Navigation.NavItem
+MarkupWrapperClasses:
+    p_4 bg_white grid template-x_25 gap-x_5 gap-y_4
+
+
+Weight: -1000
+
+Styleguide Graveyard.Program.OnDemand.Video
+*/
+/*
+Slides Block
+
+Description: These slide blocks are used in combination with grid templates and dividers. 
+
+Markup:
+<article  class="c_black m-b_4 m-b_5:md m-t_0:md m-t_4 m-t_5:lg">
+    <div class="br_1 br_radius br_solid br_black-2 flex flex_column flex_column:lg flex_row:md font_ui h:bg_black-2 m-x_n2 relative" style="height: 100%">
+        <div class="display_none:lg flex_none justify_center p-l_4:md p-y_3" style="width: 4rem">
+            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width: 3rem">
+                <div class="pathwayColor{ bg_primary } flex_shrink relative aspect_1x1 shadow_3 text_center texture_ondemand thumb [ bg-blend_multiply bg_center bg_contain bg_no-repeat  ][ br_2 br_black-3 br_radius br_solid ]">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-presentation fas flex_auto font_2 self_center text_center w_100"></em></div>
+                </div>
+            </div>
+        </div>
+        <div class="block:lg display_none m-t_n5 m-x_5 p-x_5">
+            <div class="m-t_n5 m_auto m_auto:md self_center text_center max-w_20">
+                <div class="aspect_21x9 bg-blend_overlay bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_black-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-presentation fas flex_auto font_5 self_center text_center w_100"></em></div>
+                </div>
+            </div>
+        </div>
+        <div class="flex_auto [ c_primary-n4  font_0 font_1:md font_copy font_regular lh_2 ][ p-b_3 p-b_4:md ]">
+            <div class="p-t_2 p_4 p-y_0 p-y_3:md p-x_5:lg"><a class="expanded-click-area h:undecorated p-b_3" target="_blank" href="/docs/default-source/filesah20/eabstracts/chowdhury-anabolic-androgenic-1130-279.pdf?>Anabolic-Androgenic Steroid Abuse: A Potential Cause of Myocardial Infarction in Young Patients</a></div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
+        <div class="flex_shrink block  text_left p-r_4 m-r_4 ">
+            <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+        </div>
+        <div class="flex_grow">
+            {{> "PageExtras.Program.CreditDots" }}
+        </div>
+    </div>
+</article>
+
+MarkupWrapperClasses:
+    p_4 bg_white grid template-x_25 gap-x_5 gap-y_4
+
+
+Weight: -800
+
+Styleguide Graveyard.Program.OnDemand.Slides
+*/
+/*
+eAbstract
+
+eAbstracts  are used in combination with grid templates and dividers. 
+
+Markup:
+<article  class="c_black m-b_4 m-b_5:md m-t_0:md m-t_4 m-t_5:lg">
+    <div class="br_1 br_radius br_solid br_black-2 flex flex_column flex_column:lg flex_row:md font_ui h:bg_black-2 m-x_n2 relative" style="height: 100%">
+        <div class="display_none:lg flex_none justify_center p-l_4:md p-y_3" style="width: 4rem">
+            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width: 3rem">
+                <div class="pathwayColor{ bg_primary } flex_shrink relative aspect_1x1 shadow_3 text_center texture_ondemand thumb [ bg-blend_multiply bg_center bg_contain bg_no-repeat  ][ br_2 br_black-3 br_radius br_solid ]">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-user-chart fas flex_auto font_2 self_center text_center w_100"></em></div>
+                </div>
+            </div>
+        </div>
+        <div class="block:lg display_none m-t_n5 m-x_5 p-x_5">
+            <div class="m-t_n5 m_auto m_auto:md self_center text_center">
+                <div class="aspect_21x9 bg-blend_overlay bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_black-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-user-chart fas flex_auto font_5 self_center text_center w_100"></em></div>
+                </div>
+            </div>
+        </div>
+        <div class="flex_auto [ c_primary-n4  font_0 font_1:md font_copy font_regular lh_2 ][ p-b_3 p-b_4:md p-l_0:lg p-l_4:md ]">
+            <div class="p-t_2 p_4  p-y_0 p-y_3:md p-x_5:lg">
+                <a class="expanded-click-area h:undecorated p-b_3" target="_blank" href="/docs/default-source/filesah20/eabstracts/chowdhury-anabolic-androgenic-1130-279.pdf?sfvrsn=2518b85a_2">Anabolic-Androgenic Steroid Abuse: A Potential Cause of Myocardial Infarction in Young Patients</a>
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
+        <div class="flex_shrink block  text_left p-r_4 m-r_4 ">
+            <a href="#modal-extra" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+        </div>
+        <div class="flex_grow m-l_auto">
+             {{> "PageExtras.Program.CreditDots" }}
+        </div>
+    </div>
+</article>
+
+
+MarkupWrapperClasses:
+    p_4 bg_white grid template-x_25 gap-x_5 gap-y_4
+
+
+Weight: -700
+
+Styleguide Graveyard.Program.OnDemand.eAbstract
+*/
+/*
+Journal Block
+
+Description: These slide blocks are used in combination with grid templates and dividers. 
+
+Markup:
+<article  class="c_black m-b_4 m-t_5 m-t_0:md m-t_2:lg ">
+    <div class="br_1 br_radius br_solid br_black-2 flex flex_column flex_row:md font_ui h:bg_black-2 m-x_n2 relative">
+        <div class="flex_none justify_center p-l_4:md p-y_3" style="width:4rem;">
+            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width:3rem;">
+                <div class="pathwayColor{ bg_primary } flex_shrink relative aspect_1x1 shadow_3 text_center texture_ondemand thumb [ bg-blend_multiply bg_center bg_contain bg_no-repeat  ][ br_2 br_black-3 br_radius br_solid ]">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><em class="absolute c_white-9 fa-book-open fas flex_auto font_2 self_center text_center w_100"></em></div>
+                </div>
+            </div>
+        </div>
+        <div class="flex_auto [ c_primary-n4  font_0 font_1:md font_copy font_regular lh_2 ][  p-x_3 p-b_0:lg p-b_3 p-l_4:lg p-l_4:md ]" >
+            <div class="m-t_2 p_3 p-y_2"><a class="expanded-click-area h:undecorated" target="_blank" href="https://virtual.acc.org/docs/default-source/filesah20/journal/10-dias_exercise-training-for-patients-with-hypertrophic-cardiomyopathy.pdf?sfvrsn=fa018194_2" sfref="[documents%7COpenAccessDataProvider]c9ef138c-5f43-4524-8a51-d06907c828dc">Exercise Training for Patients With Hypertrophic Cardio myopathy: JACC Review Topic of the Week </a>
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
+        <div class="flex_shrink block font_bold text_left p-r_3 m-r_3 br-r_1 br_black-3 br_solid">
+            <a href="#modal-disclosures" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures">Article</a>
+        </div>
+        <div class="flex_shrink block font_italic  text_left">
+            <span class="block uppercase" >Published: June 15, 2020</span>
+        </div>
+        <div class="flex_grow m-l_auto">
+             {{> "PageExtras.Program.CreditDots" }}
+        </div>
+    </div>
+</article>
+
+
+MarkupWrapperClasses:
+p_4 bg_white
+
+Weight: 100
+
+Styleguide Graveyard.Program.OnDemand.Journals
+*/
+/*
+Resource Package
+
+Description: These slide blocks are used in combination with grid templates and dividers. 
+
+Markup:
+<article  class="c_black m-b_4 m-t_5 m-t_0:md m-t_2:lg ">
+    <div class="br_1 br_radius br_solid br_black-2 flex flex_column flex_row:md font_ui h:bg_black-2 m-x_n2 relative">
+        <div class="flex_none justify_center p-l_4:md p-y_3" style="width:4rem;">
+            <div class="flex_none m-t_n5 m_auto m_auto:md self_center text_center" style="width:3rem;">
+                <div class="aspect_1x1 bg-blend_multiply bg_cover bg_no-repeat bg_primary br_2 br_radius br_solid br_black-3 flex_shrink relative shadow_3 texture_ondemand text_center thumb">
+                    <div class="absolute b_0 flex h:opacity justify_center l_0 opacity_7 r_0 self_center t_0 text_center w_100"><i class="flex_auto c_white-9 fa-file-archive fas font_2 self_center text_center w_100"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="flex_auto [ c_primary-n4  font_0 font_1:md font_copy font_regular lh_2 ][  p-x_3 p-b_0:lg p-b_3 p-l_4:lg p-l_4:md ]" >
+            <div class="m-t_2 p_3 p-y_2"><a class="expanded-click-area h:undecorated" target="_blank" href="https://virtual.acc.org/docs/default-source/filesah20/journal/10-dias_exercise-training-for-patients-with-hypertrophic-cardiomyopathy.pdf?sfvrsn=fa018194_2" sfref="[documents%7COpenAccessDataProvider]c9ef138c-5f43-4524-8a51-d06907c828dc">Exercise Training for Patients With Hypertrophic Cardio myopathy: JACC Review Topic of the Week </a>
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_between m-t_2 p-t_2">
+        <div class="flex_shrink block font_bold text_left p-r_3 m-r_3 br-r_1 br_black-3 br_solid">
+            <a href="#modal-disclosures" class="block h:underline uppercase" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures">Article</a>
+        </div>
+        <div class="flex_shrink block font_italic  text_left">
+            <span class="block uppercase" >Published: June 15, 2020</span>
+        </div>
+        <div class="flex_grow m-l_auto">
+             {{> "PageExtras.Program.CreditDots" }}
+        </div>
+    </div>
+</article>
+
+
+
+MarkupWrapperClasses:
+p_4 bg_white
+
+Weight: 200
+
+Styleguide Graveyard.Program.OnDemand.Resource
+*/
+/*
+Sessions
+
+Description: The session is the main content item of virtual conferences.  These element are represented differently depending on the amount of sessions and presentation are in the conference. Sessions are a collection of presentations. 
+
+
+
+Weight:10
+
+Styleguide Graveyard.Program
+*/
+/*
+
+Simple
+
+Description: When the count of sessions is lower then 10 in count, the Simple Design is recommended. 
+
+Markup:
+<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
+    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
+        <div class="br-b_1 br_solid br_primary-2">
+            {{>"PageExtras.Program.CategoryFlags"}}
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg">
+                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
+                    <span class="block font-size_up-1 font_display lh_1">
+                        <strong class="font_bold p-r_3">{{> "Data.Agenda.ID" }}</strong>
+                        {{> "Data.Session.Title" }}
+                    </span>
+                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate" }}  {{> "Data.Agenda.LiveTime" }}</span>
+                </h3>
+                <div class="flex_grow m-l_auto:lg">
+                    <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
+                        <a href="" class="btn btn-primary h:bg_secondary-n3 z_5">Watch </a>
+                        <a href="" class="btn btn-secondary z_5 a:bg_alert h:bg_alert-n3 { active }"><i class="fas fa-heart c_white"></i></a>
+                    </div>
+                </div>
+            </div>
+            <h4 class="font-size_up p-x_4 c_primary font_medium">Presentations</h4>
+            <ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
+                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white">
+                    <span class="font-size_up-1 block font_display">{{> "Data.Presentation.Title" }}</span>
+                    <span class="font-size-down opacity_7 font_ui"><strong class="c_primary">{{> "Data.Faculty.Role" }}:</strong>{{> "Data.Faculty.FullName" }} ({{> "Data.Faculty.Location" }})</span>
+                    <span class="font-size-down-1 opacity_6 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
+                </li>
+                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
+                    <span class="font-size_up-1 block font_display">Antiplatelet Regimen After Drug Coated Balloon </span>
+                    <span class="font-size-down opacity_7 font_ui">Chen (China)</span>
+                    <span class="font-size-down-1 opacity_6 font_italic block">12:00 – 12:45 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
+                </li>
+                <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9">
+                    <span class="font-size_up-1 block font_display">Case: Drug Coated Balloon in De Novo Ostial Left Anterior Descending Artery </span>
+                    <span class="font-size-down opacity_7 font_ui">Qiu (China)</span>
+                    <span class="font-size-down-1 opacity_6 font_italic block">12:45 – 1:00 PM <abbr title="EASTERN DAYLIGHT TIME, UTC -4">EDT</abbr></span>
+                </li>
+            </ul>        
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex_auto"> <a href="#modal-extra" class="block h:underline uppercase font_bold" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+        </div>
+        <div class="flex_grow uppercase m-l_auto">
+            <ul class="ul_none font_n2 text_right">
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_COP br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cop
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
+
+
+Weight: 10
+
+Styleguide Graveyard.Program.Simple
+
+*/
+/*
+
+On Demand
+
+Description: When the count of sessions is lower then 10 in count, the Simple Design is recommended the difference between live and on demand. 
+
+Markup:
+<article class="br-t_3 br_primary-2 br_radius br_solid c_black font_0 m-b_4 shadow_overlap-light">
+    <div class="br-tl_radius br-tr_radius br_1 br_black-3 br_solid flex flex_column font_ui m-t_n2 relative shadow_2">
+        <div class="br-b_1 br_primary-2 br_solid">
+            <!-- {{>"PageExtras.Program.CategoryFlags"}} -->
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg">
+                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2  p-r_4:lg">
+                    <span class="block c_black-6 uppercase font_bold font-size_down-1"> Session I: Evolving New Frontiers of Imaging Ready for Practice</span><span class="block font-size_up-1 font_display lh_1">New York Cardiovascular Symposium 2021 Welcome Video and Introduction of session and Faculty by Dr. Itchhaporia </span><span class="block c_black font-size_down-1 font_ui lh_3 opacity_7">Dipti Itchhaporia, MD, FACC (Chair)</span>
+                </h3>
+                <div class="flex_grow m-l_auto:lg">
+                    <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
+                        <a href="" class="btn btn-primary h:bg_secondary-n3 z_5">Watch </a>
+                        <a href="" class="btn btn-secondary z_5 a:bg_alert h:bg_alert-n3 { active }"><i class="fas fa-heart c_white"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+    <div class="flex_auto">
+        <a href="#modal-extra" class="block h:underline uppercase font_bold" data-remote="https://disclosures.acc.org/Public/AnnualMeetingAppConsol?pid=14617" data-toggle="modal" data-target="#modal-disclosures"><i class="far fa-paperclip"></i> Attachments</a>
+    </div>
+    <div class="flex_grow uppercase m-l_auto">
+            <ul class="ul_none font_n2 text_right">
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cme
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> cne
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_MOCIV br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> moc
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_AAPA br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> aapa
+                </li>
+                <li class="inline-block lh_0 p-l_3">
+                    <span class="bg_ECME br_1 br_black-3 br_circle br_solid inline-block m-r_1" style=" height: 1em; width: 1em;">&nbsp;</span> ecme
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
+
+
+Weight: 10
+
+Styleguide Graveyard.Program.OnDemand
+
 */
 body {
   font-size: 16px;
@@ -33006,7 +33057,7 @@ Styleguide Recipes.BrandedNav.Dropdown.List.AltContent
   }
 }
 .texture_ondemand {
-  background-image: url("../img/virtual/slidebackground.png");
+  background-image: url("../img/virtual/valve_texture.jpg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;

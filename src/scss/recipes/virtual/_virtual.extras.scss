@@ -1,4 +1,3 @@
-
 /*
 Extras
  
@@ -10,27 +9,9 @@ Styleguide PageExtras
 */
 
 /*
-External Resource
- 
-Description: External Sections of content that are helpful to cross promote with in a conferences. 
- 
-Markup:
-<article class="aspect_21x9 bg-blend_luminosity bg_cover bg_no-repeat bg_primary-2 br_1 br_black-3 br_radius br_solid flex_shrink generic_video generic_video-nolabel h:bg_secondary-n2 relative shadow_3 text_center c_primary"><em class="opacity_5 absolute t_1 r_2 fas font_4 fa-external-link-square-alt"></em><a data-sf-ec-immutable="" class="block font_7 font_6:md font_9:lg font_display font_xbold h:undecorated m_0 p_4 p_5:lg text_left uppercase" style="line-height: .85em" href="https://www.acc.org/latest-in-cardiology/features/accs-coronavirus-disease-2019-covid-19-hub?_ga=2.121293644.574512269.1591713176-49927898.1591404069#sort=%40fcommonsortdate90022%20descending" target="_blank"><span class="font_3 font_4:md m_0 m-l_0 m-b_n2 lh_0 block m-b_2">ACC’s</span>
- <span class=" block"><span class="nowrap">COVID-19</span> HUB</span>
- </a>
- </article>
-
- MarkupWrapperClasses:
- gap-x_4 gap-y_4 grid template-x_30
- 
- 
-Styleguide PageExtras.External Resource
-*/
-
-/*
 Date Time Separators
  
-Description: Sessions are divided by date time markers that have been set to east coast time with a refernce to GMT. 
+Sessions are divided by date time markers that have been set to east coast time with a refernce to GMT. 
  
 Markup:
 <div class="flex_row:md flex flex_column">
@@ -52,39 +33,7 @@ MarkupWrapperClasses:
  
 Weight: 100
  
-Styleguide PageExtras.Date Time Dividers
-*/
-
-
-
-/*
-Twitter Tag
- 
-Description: Every conference has a common #tag structure asking user to join in to the conversation.; 
- 
-Markup:
-<div class="socialTag float_right text_right"><div class="c_secondary font_1">Join The Conversation</div><div class="c_primary font_xbold font_3 font_display"><em class="fas fa-hashtag"></em>ACCAthleticHeart  <em class="fab fa-twitter"></em></div></div>
- 
-Weight:0
- 
-Styleguide PageExtras.TwitterTag
-*/
-
-/*
-Call-to-Action Card
- 
-Description: Some content areas are chunked out to drive usage through a call to action card.
- 
-Markup:
-<div class="br_radius flex flex_column justify_between p-x_5:lg p_4 shadow_overlap-light br_black-3 br_solid br_1">
-<h2 class="font_bold c_primary m-t_0 block">Member Section</h2>
-<p class="lh_3">Connect with ACC’s Sports and Exercise Member Section, THE home for sports and exercise professionals within the ACC, advocating for and advancing the priorities of the community, and serving as a College-wide resource for issues related to sports and exercise professionals.  </p>   
-<a class="block br_radius btn btn-block btn-lg btn-secondary btn_lg m-b_3 m_auto shadow_overlap-light w_100">Call to Action</a>
-</div>    
- 
-Weight:100
- 
-Styleguide PageExtras.Call To Action
+Styleguide PageExtras.Program.DateTimeDividers
 */
 
 /*
@@ -106,8 +55,24 @@ Note: This pattern requires the inclusion of the credit color stylesheets.
 
 Weight:0
  
-Styleguide PageExtras.CreditDots
+Styleguide PageExtras.Program.CreditDots
 
+*/
+
+%PageExtras.Program.CategoryFlags {
+}
+/*
+Category Flags
+ 
+Description: A graphic treatment for the category flags which are tags applied like channel and type.
+ 
+Markup:
+<div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white">{{>"Data.Agenda.ChannelName"}}</div>
+
+ 
+Weight:0
+ 
+Styleguide PageExtras.Program.CategoryFlags
 */
 
 /*
@@ -145,7 +110,108 @@ Markup:
 
  Weight: 200
  
-Styleguide PageExtras.Attachments
+Styleguide PageExtras.Program.Attachments
 */
 
+/*
+Video Header Thumb
+ 
+Description: The header is just a bit of design flair that can be colored, background swapped out and also the icon can be changed to the content of the presentation.
 
+bg_primary  -  is the default background color
+bg_accent   -  any background color can be swapped out
+
+Markup:
+<header class="flex flex_none flex_row justify_center m-t_n4:lg p-x_4">
+    <div class="aspect_21x9:md aspect_16x9 bg-blend_multiply bg_primary bg_cover bg_no-repeat {{ modifier_class }} br_2 br_radius br_solid br_white br_white-9 flex flex_shrink grid justify_center m-t_n5 max-w_15 max-w_20:md relative shadow_3 text_center texture_ondemand thumb">
+            <i class="absolute c_white-9 fa-play fas flex_auto font_4 font_5:lg self_center text_center w_100"></i>
+        </div>
+</header>
+ 
+Weight:0
+ 
+Styleguide PageExtras.Program.HeaderThumbnail
+*/
+
+/*
+Favorite Button
+ 
+The favorite button is a simple icon that can be used to add or remove a favorite. This button reflects the state of the favorite.
+
+active   - when the favorite is active
+
+Markup:
+<a href="" aria-label="mark as favorite" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 {{ modifier_class }}" ><i class="fas fa-heart"></i></a>
+
+Weight:0
+
+Styleguide PageExtras.Program.ActionButtons.Favorite
+*/
+
+/*
+Action Buttons
+ 
+The footer has a couple of buttons and a link to the presentation details.
+
+Watch   - when the main asset of the loaded page is a video or live stream.
+Join    - when the main asset of the loaded page is an online meeting or webinar.
+Listen  - when the main asset of the loaded page is a podcast or audio.
+View    - when the main asset of the loaded page is a graphic, pdf, or slide deck.
+
+ 
+Markup:
+<aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+      <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+        {{> "PageExtras.Program.ActionButtons.Favorite" modifier_class="[active]"}}
+        <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
+      </nav>
+      <a href="" aria-label="show or hide details"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">Show Details</a>
+      <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
+</aside>
+ 
+Weight:0
+ 
+Styleguide PageExtras.Program.ActionButtons
+*/
+
+/*
+Action Buttons No Details
+ 
+Description: The footer has a couple of buttons and a link to the presentation details.
+ 
+Markup:
+<aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+      <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+        {{> "PageExtras.Program.ActionButtons.Favorite" modifier_class="[active]"}}
+        <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
+      </nav>
+      <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
+</aside>
+ 
+Weight:0
+ 
+Styleguide PageExtras.Program.ActionButtons.NoDetails
+
+*/
+
+/*
+Action Buttons Only
+ 
+Description: The footer has a couple of buttons and a link to the presentation details.
+ 
+Markup:
+<aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+      <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+        {{> "PageExtras.Program.ActionButtons.Favorite" modifier_class="[active]"}}
+        <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
+      </nav>
+</aside>
+ 
+Weight:0
+ 
+Styleguide PageExtras.Program.ActionButtons.Only
+
+*/
