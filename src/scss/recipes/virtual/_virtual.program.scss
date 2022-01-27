@@ -4,27 +4,14 @@ Program
 
 The central UI of an event is the program which displays all educational content from the conference.
 
-default		 -   Grid
-
-Markup:
-
-
 MarkupWrapperClasses: 
 
 Weight: 0
 
-NOTE: nothing
-
-EXPERIMENTAL: this design is new
-
-DEPRECATED: this design is old
-
-FORMAT: This uses a strick data format look at x
-
-
 Styleguide Program
 
 */
+
 
 /*
 
@@ -34,18 +21,20 @@ Session
 
 
 Markup:
-<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
-    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
+<article class="{{> ProgramElement.Style.OuterBorder }}">
+    <div class="{{> ProgramElement.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "ProgramElement.CategoryFlags" }}          
             <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block font-size_up-1 font_display lh_1">
-                        <strong class="font_bold p-r_3">{{> Data.Session.ID }}</strong>
-                        {{> Data.Session.Title }}
-                    </span>
-                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</span>
-                </h3>
+                 <header>
+                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
+                        <span class="block font-size_up-1 font_display lh_1">
+                            <strong class="font_bold p-r_3">{{> Data.Session.ID }}</strong>
+                            {{> Data.Session.Title }}
+                        </span>
+                    </h3>
+                    <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
+                </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "ProgramElement.ActionButtons.NoDetails"  modifier_class="Watch"}}
                 </div>
@@ -75,18 +64,20 @@ Session Collapse
 
 
 Markup:
-<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
-    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
+<article class="{{> ProgramElement.Style.OuterBorder }}">
+    <div class="{{> ProgramElement.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "ProgramElement.CategoryFlags" }}          
             <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block font-size_up-1 font_display lh_1">
-                        <strong class="font_bold p-r_3">{{> Data.Session.ID }}</strong>
-                        {{> Data.Session.Title }}
-                    </span>
-                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</span>
+                <header>
+                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
+                        <span class="block font-size_up-1 font_display lh_1">
+                            <strong class="font_bold p-r_3">{{> Data.Session.ID }}</strong>
+                            {{> Data.Session.Title }}
+                        </span>
                     </h3>
+                    <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
+                </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "ProgramElement.ActionButtons"  modifier_class="Watch"}}
                 </div>
@@ -125,25 +116,28 @@ A session shell is when there is only one presentation.
 
 
 Markup:
-<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
-    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
+<article class="{{> ProgramElement.Style.OuterBorder }}">
+    <div class="{{> ProgramElement.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "ProgramElement.CategoryFlags" }}          
             <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block font-size_down-2 uppercase c_black-7"><strong class="font_bold p-r_2">{{> Data.Session.ID }}</strong>
-                        {{> Data.Session.Title }}</span>
-                    <span class="block font-size_up-1 font_display lh_1">
-                        {{> Data.Presentation.Title }}
-                    </span>
-                </h3>
+                <header> 
+                    <h2 class="font_n1 uppercase c_black-7">
+                        <strong class="font_bold p-r_2">{{> Data.Session.ID }}</strong> {{> Data.Session.Title }}
+                    </h2>   
+                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
+                        <span class="block font-size_up-1 font_display lh_1">
+                            {{> Data.Presentation.Title }}
+                        </span>
+                    </h3>
+                </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "ProgramElement.ActionButtons.NoDetails"  modifier_class="Watch"}}
                 </div>
             </div>
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_1">
-                <div class="c_accent ">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</div>
+                 <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
                 <div class="font-size_down">{{> "ProgramElement.FacultyList" modifier_class="inline"}}</div>
             </div>
             </div>
@@ -170,12 +164,116 @@ On Demand
 After the completion of a video the Sessions are broken down to the individual presentations and stored in the On Demand Area for viewing. 
 
 Markup:
+<article class="{{> ProgramElement.Style.OuterBorder }}">
+    <div class="{{> ProgramElement.Style.InnerBorder }}">
+        <div class="br-b_1 br_solid br_primary-2">
+            {{> "ProgramElement.CategoryFlags" }}          
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
+                <header> 
+                    <h2 class="font_n1 uppercase c_black-7">
+                        <strong class="font_bold p-r_2">{{> Data.Session.ID }}</strong> {{> Data.Session.Title }}
+                    </h2>   
+                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
+                        <span class="block font-size_up-1 font_display lh_1">
+                            {{> Data.Presentation.Title }}
+                        </span>
+                    </h3>
+                </header>
+                <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
+                    {{> "ProgramElement.ActionButtons.NoDetails"  modifier_class="Watch"}}
+                </div>
+            </div>
+            <div>
+            <div class="p-x_4 p-b_4 flex flex_column font_1">
+                 <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
+                <div class="font-size_down">{{> "ProgramElement.FacultyList" modifier_class="inline"}}</div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex_grow uppercase m-l_auto">
+            {{> "ProgramElement.Credits.Dots" }}
+        </div>
+    </div>
+</article>
 
 Weight: 10000
  
 Styleguide Program.OnDemand
 
 */
+
+/*
+
+Condensed Session
+ 
+Condensed Sessions are used for listing designs that are not full featured.
+
+.p_4.bg_black-1.shadow_emboss-light.br_radius.br_1.br_solid.br_black-3           -  embossed background
+
+Markup:
+<article class="{{modifier_class}} flex_column flex gap_3">
+<header>
+    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 m_0">
+        <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6">{{> Data.Session.ID }}</strong>
+        <span class="block font_display lh_2 font-size_up-1">
+            {{> Data.Session.Title }}
+        </span>
+    </h3>
+</header>
+<div class="font_0 font_ui c_accent-n1">{{>  Data.Agenda.LiveTime }}</div>
+<aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
+    <a href="" aria-label="navigate to" class="btn btn-outline-primary flex_auto">Watch</a>
+</aside>
+</article>
+
+MarkupWrapperClasses: max-w_30:md
+
+Weight: 10000
+ 
+Styleguide Program.CondensedSession
+
+*/
+
+/*
+
+Whats Happening Now
+ 
+Condensed Sessions are used for listing designs that are not full featured.
+
+
+Markup:
+<article class="relative">
+<div class="m-b_n5">{{> "ProgramElement.Header.VideoThumbnail" }}</div>
+<div class="br-t_3 br_primary-2 br_radius br_solid c_black flex flex_column font_0 gap_2 m-b_4 p-t_5 p_4 shadow_overlap-light t_n5 z_0 flex_column flex gap_3 bg_white">
+    <header class="p-t_3">
+        <h3 class="font_display lh_2 c_primary-n2 font_1 m_0">
+            <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6">{{> Data.Session.ID }}</strong>
+            <span class="block font_display lh_2 font-size_up-1">
+                {{> Data.Session.Title }}
+            </span>
+        </h3>
+        <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-7 p-r_2">Category:</strong>{{> ProgramElement.Tags.Category }}</div>
+    </header>
+    <div class="font_0 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
+    <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
+        <a href="" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
+    </aside>
+</div>
+</article>
+
+
+
+
+MarkupWrapperClasses: max-w_30:md
+
+Weight: 10000
+ 
+Styleguide Program.CondensedSession.WhatsNow
+
+*/
+
 
 /*
 

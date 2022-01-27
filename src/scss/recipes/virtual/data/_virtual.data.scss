@@ -41,6 +41,7 @@ Weight:1
  
 Styleguide Data.Agenda.ChannelName
 */
+
 %Data.Agenda.LiveTime {
 }
 /*
@@ -49,7 +50,7 @@ Live Time
 Description:
 The time at which a Agenda is live.
  
-Markup: @ 11:15 a.m. – 11:45 p.m <abbr title="EASTERN TIME, UTC -4">EDT</abbr>
+Markup: @ {{> Data.Agenda.ReleaseTime }} – {{> Data.Agenda.ReleaseTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr>
 
 FORMAT: 12 hour with 'a.m.'/'p.m' and Abbreviation of Timezone.
 
@@ -58,6 +59,38 @@ NOTE: The 'a.m.'/'p.m.' if the same should only occur on the last time mark.  11
 Weight:0
  
 Styleguide Data.Agenda.LiveTime
+*/
+%Data.Agenda.ReleaseTime {
+}
+/*
+Release Time
+ 
+Description:
+The time at which a Agenda is item is scheduled to be active, give access,  or start playing.
+ 
+Markup: 11:15 a.m.
+
+FORMAT: 12 hour with 'a.m.'/'p.m'.
+
+Weight:0
+ 
+Styleguide Data.Agenda.ReleaseTime
+*/
+%Data.Agenda.EndTime {
+}
+/*
+End Time
+ 
+Description:
+The time at which a Agenda item is scheduled to end.
+ 
+Markup: 12:15 p.m.
+
+FORMAT: 12 hour with 'a.m.'/'p.m'.
+
+Weight:0
+ 
+Styleguide Data.Agenda.EndTime
 */
 %Data.Agenda.LiveDate {
 }

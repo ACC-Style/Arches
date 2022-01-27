@@ -1259,7 +1259,7 @@ Styleguide Typography.Font.Color.Black&White
   color: rgba(19, 18, 18, 0.38) !important;
 }
 
-.c_black-5 {
+.c_black-5, .btn.disabled, button.btn.disabled, input[type=button].btn.disabled, input[type=reset].btn.disabled, input[type=submit].btn.disabled, .btn_acc-primary.disabled {
   color: rgba(19, 18, 18, 0.5) !important;
 }
 
@@ -1311,7 +1311,7 @@ Styleguide Typography.Font.Color.Black&White
   color: rgba(255, 255, 255, 0.38) !important;
 }
 
-.c_white-5, .btn.disabled, button.btn.disabled, input[type=button].btn.disabled, input[type=reset].btn.disabled, input[type=submit].btn.disabled, .btn_acc-primary.disabled {
+.c_white-5 {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
@@ -21464,7 +21464,7 @@ Live Time
 Description:
 The time at which a Agenda is live.
 
-Markup: @ 11:15 a.m. – 11:45 p.m <abbr title="EASTERN TIME, UTC -4">EDT</abbr>
+Markup: @ {{> Data.Agenda.ReleaseTime }} – {{> Data.Agenda.ReleaseTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr>
 
 FORMAT: 12 hour with 'a.m.'/'p.m' and Abbreviation of Timezone.
 
@@ -21473,6 +21473,34 @@ NOTE: The 'a.m.'/'p.m.' if the same should only occur on the last time mark.  11
 Weight:0
 
 Styleguide Data.Agenda.LiveTime
+*/
+/*
+Release Time
+
+Description:
+The time at which a Agenda is item is scheduled to be active, give access,  or start playing.
+
+Markup: 11:15 a.m.
+
+FORMAT: 12 hour with 'a.m.'/'p.m'.
+
+Weight:0
+
+Styleguide Data.Agenda.ReleaseTime
+*/
+/*
+End Time
+
+Description:
+The time at which a Agenda item is scheduled to end.
+
+Markup: 12:15 p.m.
+
+FORMAT: 12 hour with 'a.m.'/'p.m'.
+
+Weight:0
+
+Styleguide Data.Agenda.EndTime
 */
 /*
 Live Date
@@ -22329,7 +22357,7 @@ Description: There are parts of the conference site that are just extras that ar
 
 Weight: 200000
 
-Styleguide PageExtras
+Styleguide ProgramElement
 */
 /*
 Program
@@ -22420,7 +22448,7 @@ Category Flags
 Description: A graphic treatment for the category flags which are tags applied like channel and type.
 
 Markup:
-<div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white">
+<div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold">
   <ul class="ul_inline-pipe">
     <li>Chanel 1</li>
     <li>{{>"Data.Agenda.ChannelName"}}</li>
@@ -22599,6 +22627,18 @@ Markup:
 Styleguide ProgramElement.Attachments
 */
 /*
+Playing Date Time
+
+When presenting the playing date and time this simple dot pattern is a good solution.
+
+Markup:
+<span class="c_accent-n2">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</span>
+
+Weight:0
+
+Styleguide ProgramElement.PlayingDateTime
+*/
+/*
 Video Thumbnail
 
 Description: The header is just a bit of design flair that can be colored, background swapped out and also the icon can be changed to the content of the presentation.
@@ -22607,7 +22647,7 @@ bg_primary  -  is the default background color
 bg_accent   -  any background color can be swapped out
 
 Markup:
-<header class="flex flex_none flex_row justify_center m-t_n4:lg p-x_4 font_n3">
+<header class="flex flex_none flex_row justify_center p-x_4 font_n3">
     <div class="aspect_21x9:md aspect_16x9 bg-blend_multiply bg_primary bg_cover bg_no-repeat {{ modifier_class }} br_2 br_radius br_solid br_white br_white-9 flex flex_shrink grid justify_center max-w_15 max-w_20:md relative shadow_3 text_center texture_ondemand thumb bg_center">
             <i class="absolute c_white-6 fa-play fas flex_auto self_center text_center w_100"></i>
         </div>
@@ -22626,7 +22666,7 @@ bg_primary  -  is the default background color
 bg_accent   -  any background color can be swapped out
 
 Markup:
-<header class="flex flex_none flex_row justify_center m-t_n4:lg p-x_4 font_0">
+<header class="flex flex_none flex_row justify_center p-x_4 font_0">
     <div class="aspect_8x10:md aspect_4x3 bg-blend_multiply bg_primary bg_cover bg_no-repeat {{ modifier_class }} br_2 br_radius br_solid br_white br_white-9 flex flex_shrink grid justify_center max-w_15 max-w_20:md relative shadow_3 text_center texture_ondemand thumb bg_center">
             <i class="font-size_up-2 absolute c_white-6 fa-file-chart-pie fas flex_auto self_center text_center w_100"></i>
         </div>
@@ -22667,7 +22707,7 @@ Styleguide ProgramElement.ActionButtons.Favorite.Small
 /*
 Action Buttons
 
-The footer has a couple of buttons and a link to the presentation details.
+The Actions buttons  are a combination of functions and a link to the education materials player.  has a couple of buttons and a link to the presentation details.
 
 Watch   - when the main asset of the loaded page is a video or live stream.
 Join    - when the main asset of the loaded page is an online meeting or webinar.
@@ -22682,8 +22722,8 @@ Markup:
         <a href="" aria-label="download calendar reminder"  class="btn flex_none btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
-      <a aria-label="show or hide details"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">Show Details</a>
       <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
+      <a aria-label="show or hide details"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">Show Details</a>
 </aside>
 
 Weight:0
@@ -22691,9 +22731,47 @@ Weight:0
 Styleguide ProgramElement.ActionButtons
 */
 /*
+Locked Attachment Button
+
+Attachments can be released after access to the presentation or session UI has been granted. In these cases the button is disabled. And an alert is displayed giving the time when it will be available.
+
+
+Markup:
+<div class="cursor_not-allowed" onclick="alert('This attachment is not available to be downloaded at this time. You can download the attachment when it is available at Saturday, Nov. 20, 2021@ 11:15 a.m. – 11:45 p.m')">
+  <span aria-label="download attachments locked"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100 disabled" ><i class="far fa-lock"></i> Attachments</span>
+</div>
+
+Weight:0
+
+NOTE: This pattern is using bootstrap modal to display the message. The IDs of the modal and bs-targets are hard coded in the pattern and need to be dynamic for production.
+
+Styleguide ProgramElement.ActionButtons.LockedAttachments
+*/
+/*
+
+Embargoed Attachment Actions Buttons
+
+
+Markup:
+<aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+      <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+        {{> "ProgramElement.ActionButtons.Favorite" modifier_class="[active]"}}
+        <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
+      </nav>
+      {{> ProgramElement.ActionButtons.LockedAttachments }}
+</aside>
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide ProgramElement.ActionButtons.EmbargoedAttachments
+*/
+/*
 Action Buttons No Details
 
-Description: The footer has a couple of buttons and a link to the presentation details.
+Description: The Actions buttons  are a combination of functions and a link to the education materials player.  has a couple of buttons and a link to the presentation details.
 
 watch   - watch action button
 
@@ -22715,14 +22793,14 @@ Styleguide ProgramElement.ActionButtons.NoDetails
 /*
 Action Buttons Only
 
-Description: The footer has a couple of buttons and a link to the presentation details.
+The Actions buttons are a combination of functions and a link to the education materials player. 
 
 watch   - watch action button
 
 Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-        {{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="[active]"}}
+        {{> "ProgramElement.ActionButtons.Favorite" modifier_class="[active]"}}
         <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
@@ -22732,6 +22810,26 @@ Weight:0
 
 Styleguide ProgramElement.ActionButtons.Only
 
+*/
+/*
+Action Buttons On Demand
+
+The On Demand Actions buttons never have the calendar reminder button.  
+
+
+
+Markup:
+<aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+      <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+        {{> "ProgramElement.ActionButtons.Favorite" modifier_class="[active]"}}
+        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
+      </nav>
+      <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
+</aside>
+
+Weight:200
+
+Styleguide ProgramElement.ActionButtons.OnDemand
 */
 /*
 Abstract Flag
@@ -22836,6 +22934,36 @@ Markup:
 Weight:0
 
 Styleguide ProgramElement.Player.Chat
+*/
+/*
+
+Program Borders OutSide
+
+CSS Classes on the Article tag of all program elements
+
+Markup:
+c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide ProgramElement.Style.OuterBorder
+*/
+/*
+
+Program Borders Inside
+
+CSS Classes on the Article tag of all program elements
+
+Markup:
+br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide ProgramElement.Style.InnerBorder
 */
 /*
 Image and content
@@ -23242,23 +23370,9 @@ Program
 
 The central UI of an event is the program which displays all educational content from the conference.
 
-default		 -   Grid
-
-Markup:
-
-
 MarkupWrapperClasses: 
 
 Weight: 0
-
-NOTE: nothing
-
-EXPERIMENTAL: this design is new
-
-DEPRECATED: this design is old
-
-FORMAT: This uses a strick data format look at x
-
 
 Styleguide Program
 
@@ -23271,18 +23385,20 @@ Session
 
 
 Markup:
-<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
-    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
+<article class="{{> ProgramElement.Style.OuterBorder }}">
+    <div class="{{> ProgramElement.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "ProgramElement.CategoryFlags" }}          
             <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block font-size_up-1 font_display lh_1">
-                        <strong class="font_bold p-r_3">{{> Data.Session.ID }}</strong>
-                        {{> Data.Session.Title }}
-                    </span>
-                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</span>
-                </h3>
+                 <header>
+                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
+                        <span class="block font-size_up-1 font_display lh_1">
+                            <strong class="font_bold p-r_3">{{> Data.Session.ID }}</strong>
+                            {{> Data.Session.Title }}
+                        </span>
+                    </h3>
+                    <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
+                </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "ProgramElement.ActionButtons.NoDetails"  modifier_class="Watch"}}
                 </div>
@@ -23311,18 +23427,20 @@ Session Collapse
 
 
 Markup:
-<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
-    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
+<article class="{{> ProgramElement.Style.OuterBorder }}">
+    <div class="{{> ProgramElement.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "ProgramElement.CategoryFlags" }}          
             <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block font-size_up-1 font_display lh_1">
-                        <strong class="font_bold p-r_3">{{> Data.Session.ID }}</strong>
-                        {{> Data.Session.Title }}
-                    </span>
-                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</span>
+                <header>
+                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
+                        <span class="block font-size_up-1 font_display lh_1">
+                            <strong class="font_bold p-r_3">{{> Data.Session.ID }}</strong>
+                            {{> Data.Session.Title }}
+                        </span>
                     </h3>
+                    <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
+                </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "ProgramElement.ActionButtons"  modifier_class="Watch"}}
                 </div>
@@ -23359,25 +23477,28 @@ A session shell is when there is only one presentation.
 
 
 Markup:
-<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
-    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
+<article class="{{> ProgramElement.Style.OuterBorder }}">
+    <div class="{{> ProgramElement.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "ProgramElement.CategoryFlags" }}          
             <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
-                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
-                    <span class="block font-size_down-2 uppercase c_black-7"><strong class="font_bold p-r_2">{{> Data.Session.ID }}</strong>
-                        {{> Data.Session.Title }}</span>
-                    <span class="block font-size_up-1 font_display lh_1">
-                        {{> Data.Presentation.Title }}
-                    </span>
-                </h3>
+                <header> 
+                    <h2 class="font_n1 uppercase c_black-7">
+                        <strong class="font_bold p-r_2">{{> Data.Session.ID }}</strong> {{> Data.Session.Title }}
+                    </h2>   
+                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
+                        <span class="block font-size_up-1 font_display lh_1">
+                            {{> Data.Presentation.Title }}
+                        </span>
+                    </h3>
+                </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "ProgramElement.ActionButtons.NoDetails"  modifier_class="Watch"}}
                 </div>
             </div>
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_1">
-                <div class="c_accent ">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</div>
+                 <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
                 <div class="font-size_down">{{> "ProgramElement.FacultyList" modifier_class="inline"}}</div>
             </div>
             </div>
@@ -23403,10 +23524,111 @@ On Demand
 After the completion of a video the Sessions are broken down to the individual presentations and stored in the On Demand Area for viewing. 
 
 Markup:
+<article class="{{> ProgramElement.Style.OuterBorder }}">
+    <div class="{{> ProgramElement.Style.InnerBorder }}">
+        <div class="br-b_1 br_solid br_primary-2">
+            {{> "ProgramElement.CategoryFlags" }}          
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
+                <header> 
+                    <h2 class="font_n1 uppercase c_black-7">
+                        <strong class="font_bold p-r_2">{{> Data.Session.ID }}</strong> {{> Data.Session.Title }}
+                    </h2>   
+                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
+                        <span class="block font-size_up-1 font_display lh_1">
+                            {{> Data.Presentation.Title }}
+                        </span>
+                    </h3>
+                </header>
+                <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
+                    {{> "ProgramElement.ActionButtons.NoDetails"  modifier_class="Watch"}}
+                </div>
+            </div>
+            <div>
+            <div class="p-x_4 p-b_4 flex flex_column font_1">
+                 <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
+                <div class="font-size_down">{{> "ProgramElement.FacultyList" modifier_class="inline"}}</div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex_grow uppercase m-l_auto">
+            {{> "ProgramElement.Credits.Dots" }}
+        </div>
+    </div>
+</article>
 
 Weight: 10000
 
 Styleguide Program.OnDemand
+
+*/
+/*
+
+Condensed Session
+
+Condensed Sessions are used for listing designs that are not full featured.
+
+.p_4.bg_black-1.shadow_emboss-light.br_radius.br_1.br_solid.br_black-3           -  embossed background
+
+Markup:
+<article class="{{modifier_class}} flex_column flex gap_3">
+<header>
+    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 m_0">
+        <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6">{{> Data.Session.ID }}</strong>
+        <span class="block font_display lh_2 font-size_up-1">
+            {{> Data.Session.Title }}
+        </span>
+    </h3>
+</header>
+<div class="font_0 font_ui c_accent-n1">{{>  Data.Agenda.LiveTime }}</div>
+<aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
+    <a href="" aria-label="navigate to" class="btn btn-outline-primary flex_auto">Watch</a>
+</aside>
+</article>
+
+MarkupWrapperClasses: max-w_30:md
+
+Weight: 10000
+
+Styleguide Program.CondensedSession
+
+*/
+/*
+
+Whats Happening Now
+
+Condensed Sessions are used for listing designs that are not full featured.
+
+
+Markup:
+<article class="relative">
+<div class="m-b_n5">{{> "ProgramElement.Header.VideoThumbnail" }}</div>
+<div class="br-t_3 br_primary-2 br_radius br_solid c_black flex flex_column font_0 gap_2 m-b_4 p-t_5 p_4 shadow_overlap-light t_n5 z_0 flex_column flex gap_3 bg_white">
+    <header class="p-t_3">
+        <h3 class="font_display lh_2 c_primary-n2 font_1 m_0">
+            <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6">{{> Data.Session.ID }}</strong>
+            <span class="block font_display lh_2 font-size_up-1">
+                {{> Data.Session.Title }}
+            </span>
+        </h3>
+        <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-7 p-r_2">Category:</strong>{{> ProgramElement.Tags.Category }}</div>
+    </header>
+    <div class="font_0 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
+    <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
+        <a href="" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
+    </aside>
+</div>
+</article>
+
+
+
+
+MarkupWrapperClasses: max-w_30:md
+
+Weight: 10000
+
+Styleguide Program.CondensedSession.WhatsNow
 
 */
 /*
