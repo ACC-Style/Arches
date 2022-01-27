@@ -8532,11 +8532,16 @@ Markup:
                     <span class="block font-size_up-1 font_display lh_1">
                         {{> Data.Presentation.Title }}
                     </span>
-                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</span>
-                    </h3>
+                </h3>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "ProgramElement.ActionButtons.NoDetails"  modifier_class="Watch"}}
                 </div>
+            </div>
+            <div>
+            <div class="p-x_4 p-b_4 flex flex_column font_1">
+                <div class="c_accent font-size_down">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</div>
+                <div class="font-size_down-1">{{> "ProgramElement.FacultyList" modifier_class="inline"}}</div>
+            </div>
             </div>
         </div>
     </div>
