@@ -7638,15 +7638,15 @@ Presentation List Item
 When sessions have more then one presentation they are listed in a list. Presentations are colored with bg_white and bg_white-9 to have color differences. 
 
 Markup:
-<li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white relative">
-  <div class="float_right inline p_3 m-r_n4 m-t_n3">{{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
-  <span class="font-size_up-1 inline font_display">{{> "Data.Presentation.Title" }}</span>
+<li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white relative font_ui">
+  <div class="float_right inline p_3 m-r_n3 m-t_n3">{{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
+  <span data-title="title" class="font-size_up-1 inline font_display lh_2">{{> "Data.Presentation.Title" }}</span>
   <span class="font-size-down ">{{> "ProgramElement.FacultyList" modifier_class="block"}}</span>
   <span class="font-size-down-1 c_accent-n1 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
 </li>
-<li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9 relative">
-  <div class="float_right inline p_3 m-r_n4 m-t_n3">{{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
-  <span class="font-size_up-1 inline font_display">Necessitatibus Eum Quasi</span>
+<li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9 relative font_ui">
+  <div class="float_right inline p_3 m-r_n3 m-t_n3">{{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
+  <span data-title="title" class="font-size_up-1 inline font_display lh_2">Necessitatibus Eum Quasi</span>
   <span class="font-size-down ">{{> "ProgramElement.FacultyList" modifier_class="block"}}</span>
   <span class="font-size-down-1 c_accent-n1 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
 </li>
@@ -7655,7 +7655,7 @@ MarkupWrapperClasses: ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-
 
 Weight:0
 
-Styleguide ProgramElement.PresentationListItem
+Styleguide ProgramElement.Presentation.ListItem
 */
 /*
 Presentation List
@@ -7665,14 +7665,14 @@ List of Presentations is similar DOM independent of the context.
 Markup:
 <h4 class="font-size_up p-x_3 c_primary-n2 font_medium">Presentations</h4>
 <ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
-  {{> ProgramElement.PresentationListItem }}
-  {{> ProgramElement.PresentationListItem }}
+  {{> ProgramElement.Presentation.ListItem }}
+  {{> ProgramElement.Presentation.ListItem }}
 </ul>
 
 
 Weight:0
 
-Styleguide  ProgramElement.Presentations.List
+Styleguide  ProgramElement.Presentation.List
 */
 /*
 Auxiliary Data
@@ -7808,7 +7808,7 @@ The favorite button is a simple icon that can be used to add or remove a favorit
 active   - when the favorite is active
 
 Markup:
-<a href="" aria-label="mark as favorite" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 {{ modifier_class }}" ><i class="fas fa-heart"></i></a>
+<a href="" aria-label="mark as favorite" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 flex_none {{ modifier_class }}" ><i class="fas fa-heart"></i></a>
 
 Weight:0
 
@@ -7840,13 +7840,13 @@ View    - when the main asset of the loaded page is a graphic, pdf, or slide dec
 
 
 Markup:
-<aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+<aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-        {{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="[active]"}}
-        <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        {{> "ProgramElement.ActionButtons.Favorite" modifier_class="[active]"}}
+        <a href="" aria-label="download calendar reminder"  class="btn flex_none btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
-      <a href="" aria-label="show or hide details"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">Show Details</a>
+      <a aria-label="show or hide details"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">Show Details</a>
       <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
 </aside>
 
@@ -7862,9 +7862,9 @@ Description: The footer has a couple of buttons and a link to the presentation d
 watch   - watch action button
 
 Markup:
-<aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+<aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-        {{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="[active]"}}
+        {{> "ProgramElement.ActionButtons.Favorite" modifier_class="[active]"}}
         <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
@@ -8353,7 +8353,7 @@ Markup:
 <article class="flex flex_row:md flex_column gap-x_4 gap-y_3 p-t_3 b-t_5 br-b_1 br_solid br_primary-2 order_3">
     <section class="flex_auto w_100">
         <div class="font_2">
-            {{> "ProgramElement.Presentations.List"}}
+            {{> "ProgramElement.Presentation.List"}}
         </div>
     </section>
     {{> "ProgramElement.Player.AuxData" modifier_class="p_4 bg_black-1 m-t_5 br_radius self_start shadow_emboss-light"}}
@@ -8402,13 +8402,142 @@ Styleguide Player.Abstract
 */
 /*
 
-On Demand
+Program
 
-Description: All videos and presentations after a publication is in the On Demand Area. 
+The central UI of an event is the program which displays all educational content from the conference.
+
+default		 -   Grid
+
+Markup:
+
+
+MarkupWrapperClasses: 
 
 Weight: 0
 
+NOTE: nothing
+
+EXPERIMENTAL: this design is new
+
+DEPRECATED: this design is old
+
+FORMAT: This uses a strick data format look at x
+
+
+Styleguide Program
+
+*/
+/*
+
+Session
+
+ The basic session is Session with a title that has a playlist of presentations
+
+
+Markup:
+<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
+    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
+        <div class="br-b_1 br_solid br_primary-2">
+            {{> "ProgramElement.CategoryFlags" }}          
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
+                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
+                    <span class="block font-size_up-1 font_display lh_1">
+                        <strong class="font_bold p-r_3">{{> Data.Session.ID }}</strong>
+                        {{> Data.Session.Title }}
+                    </span>
+                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</span>
+                </h3>
+                <div class="flex_grow m-l_auto:lg">
+                    {{> "ProgramElement.ActionButtons.NoDetails"  modifier_class="Watch"}}
+                </div>
+            </div>
+            {{>  "ProgramElement.Presentation.List" }}
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex_grow uppercase m-l_auto">
+            {{> "ProgramElement.Credits.Dots" }}
+        </div>
+    </div>
+</article>
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Program.Session
+*/
+/*
+
+Session Collapse
+
+ The basic session is Session with a title that has a playlist of presentations
+
+
+Markup:
+<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
+    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
+        <div class="br-b_1 br_solid br_primary-2">
+            {{> "ProgramElement.CategoryFlags" }}          
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
+                <h3 class="font_display m-b_3 lh_2 c_primary-n2 font-size_up-2 p-r_4:lg">
+                    <span class="block font-size_up-1 font_display lh_1">
+                        <strong class="font_bold p-r_3">{{> Data.Session.ID }}</strong>
+                        {{> Data.Session.Title }}
+                    </span>
+                    <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</span>
+                    <ul class="font-size_down-2 ul_none flex flex_row flex_wrap justify_start font-size_down-1 c_black-7  m-t_auto lh_0 items_end">
+                            <li class="inline-block p-r_3 p_2"><span class="font-size_up c_primary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes</li>
+                            <li class="inline-block p-r_3 p_2"><span class="font-size_up c_primary-n2 z_2 block">4</span> presentations</li>
+                        </ul>
+                    </h3>
+                <div class="flex_grow m-l_auto:lg">
+                    {{> "ProgramElement.ActionButtons"  modifier_class="Watch"}}
+                </div>
+            </div>
+            <div id="collapseExample" class="collapse">
+            {{>  "ProgramElement.Presentation.List" }}
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex_grow uppercase m-l_auto">
+            {{> "ProgramElement.Credits.Dots" }}
+        </div>
+    </div>
+</article>
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Program.Session.Collapsible
+*/
+/*
+
+On Demand
+
+After the completion of a video the Sessions are broken down to the individual presentations and stored in the On Demand Area for viewing. 
+
+Markup:
+
+Weight: 10000
+
 Styleguide Program.OnDemand
+
+*/
+/*
+
+On Demand Shell
+
+The On Demand view is slightly different if the Session is only a shell. 
+
+Markup::after
+
+
+Weight: 10000
+
+Styleguide Program.OnDemand.Shell
 
 */
 /*
