@@ -14321,12 +14321,9 @@ Weight: 0
 
   Styleguide List.Type
  */
-.ul_none, [class^=ul_inline] {
+.ul_none {
   margin: 0;
   padding: 0;
-}
-
-.ul_none {
   list-style-type: none !important;
 }
 
@@ -14636,23 +14633,42 @@ Weight: 1000
 Styleguide List.InlineType
 
 */
-[class^=ul_inline] {
-  display: flex;
+.ul_inline-comma,
+.ul_inline-semicolon,
+.ul_inline-pipe {
+  display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   justify-items: center;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
-[class^=ul_inline] > li {
+.ul_inline-comma > li,
+.ul_inline-semicolon > li,
+.ul_inline-pipe > li {
   flex: 0 1 auto;
 }
-[class^=ul_inline] > li:not(:last-child)::after {
+.ul_inline-comma > li:not(:last-child)::after,
+.ul_inline-semicolon > li:not(:last-child)::after,
+.ul_inline-pipe > li:not(:last-child)::after {
   -webkit-padding-start: 0.1em;
           padding-inline-start: 0.1em;
   -webkit-padding-end: 0.5em;
           padding-inline-end: 0.5em;
   opacity: 0.6;
+}
+.ul_inline-comma li.no-after,
+.ul_inline-semicolon li.no-after,
+.ul_inline-pipe li.no-after {
+  -webkit-padding-end: 0.5em;
+          padding-inline-end: 0.5em;
+}
+.ul_inline-comma li.no-after::after,
+.ul_inline-semicolon li.no-after::after,
+.ul_inline-pipe li.no-after::after {
+  display: none;
 }
 
 .ul_inline-comma > li:not(:last-child)::after {

@@ -9,9 +9,19 @@ Styleguide PageExtras
 */
 
 /*
+Program
+ 
+Programs are build via sessions, presentations, and workshops.
+
+Weight: 200000
+ 
+Styleguide ProgramElement.Program
+*/
+
+/*
 Date Time Separators
  
-Sessions are divided by date time markers that have been set to east coast time with a refernce to GMT. 
+Sessions are divided by date time markers that have been set to east coast time with a reference to GMT. 
  
 Markup:
 <div class="flex_row:md flex flex_column">
@@ -33,8 +43,37 @@ MarkupWrapperClasses:
  
 Weight: 100
  
-Styleguide PageExtras.Program.DateTimeDividers
+Styleguide ProgramElement.DateTimeDividers
 */
+
+/*
+Credit Dot
+ 
+Dots are used to indicate the credit that this education offers.
+
+CME     - CME
+CNE     - CNE
+AAPA    - AAPA
+ABP     - ABP
+ABPMOCII - ABPMOCII
+ABPMOCIV - ABPMOCIV
+ACHE   - ACHE
+
+
+Markup:
+<li class="inline-flex items_center lh_0">
+    <span class="bg_{{ modifier_class }} br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> {{ modifier_class }} 
+</li>
+
+Note: This pattern requires the inclusion of the credit color stylesheets.
+
+FORMAT: This element uses data that has strict data formatting requirements. See color codes => credits.
+ 
+Weight:0
+ 
+Styleguide ProgramElement.Credits
+*/
+
 
 /*
 Simple Credit Dots
@@ -42,24 +81,22 @@ Simple Credit Dots
 When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
  
 Markup:
-<ul class="flex flex_row flex_wrap gap-x_3 justify_end:md justify_start self_center ul_none uppercase">
-    <li class="inline-block lh_0">
-        <span class="bg_CME br_1 br_black-3 br_circle br_solid inline-block m-r_2" style=" height: 1em; width: 1em;"></span> cme </li>
-    <li class="inline-block lh_0">
-        <span class="bg_CNE br_1 br_black-3 br_circle br_solid inline-block m-r_2" style=" height: 1em; width: 1em;"></span> cne </li>
-    <li class="inline-block lh_0">
-        <span class="bg_COP br_1 br_black-3 br_circle br_solid inline-block m-r_2" style=" height: 1em; width: 1em;"></span> cop </li>
+<ul class=" gap-x_3 justify_end:md justify_start self_center ul_inline-pipe uppercase">
+  {{> ProgramElement.Credits  modifier_class="CME" }}
+  {{> ProgramElement.Credits  modifier_class="CNE" }}
+  {{> ProgramElement.Credits  modifier_class="COP" }}
+  {{> ProgramElement.Credits  modifier_class="MOCII" }}
 </ul>
  
 Note: This pattern requires the inclusion of the credit color stylesheets.
 
 Weight:0
  
-Styleguide PageExtras.Program.CreditDots
+Styleguide ProgramElement.Credits.Dots
 
 */
 
-%PageExtras.Program.CategoryFlags {
+%ProgramElement.CategoryFlags {
 }
 /*
 Category Flags
@@ -67,12 +104,153 @@ Category Flags
 Description: A graphic treatment for the category flags which are tags applied like channel and type.
  
 Markup:
-<div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white">{{>"Data.Agenda.ChannelName"}}</div>
+<div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white">
+  <ul class="ul_inline-pipe">
+    <li>Chanel 1</li>
+    <li>{{>"Data.Agenda.ChannelName"}}</li>
+  </ul>
+</div>
 
  
 Weight:0
  
-Styleguide PageExtras.Program.CategoryFlags
+Styleguide ProgramElement.CategoryFlags
+*/
+
+/*
+Category Tag
+ 
+When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
+ 
+Markup:
+<ul class="ul_inline-comma">
+  <li>Chanel 1</li>
+  <li>{{>"Data.Agenda.ChannelName"}}</li>
+</ul>
+ 
+
+Weight:0
+ 
+Styleguide ProgramElement.Tags.Category
+
+*/
+
+/*
+Filter Tags
+ 
+When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
+ 
+Markup:
+<ul class="ul_inline-comma">
+  <li>Tag Name 1</li>
+  <li>Daugherty - Larkin</li>
+  <li>relationships</li>  
+  <li>web-readiness</li>
+</ul>
+ 
+
+Weight:0
+ 
+Styleguide ProgramElement.Tags.Filter
+
+*/
+%PresentationListItem{}
+/*
+Presentation List Item
+ 
+When sessions have more then one presentation they are listed in a list. Presentations are colored with bg_white and bg_white-9 to have color differences. 
+ 
+Markup:
+<li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white relative">
+  <div class="float_right inline p_3 m-r_n4 m-t_n3">{{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
+  <span class="font-size_up-1 inline font_display">{{> "Data.Presentation.Title" }}</span>
+  <span class="font-size-down ">{{> "ProgramElement.FacultyList" modifier_class="block"}}</span>
+  <span class="font-size-down-1 c_accent-n1 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
+</li>
+<li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9 relative">
+  <div class="float_right inline p_3 m-r_n4 m-t_n3">{{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
+  <span class="font-size_up-1 inline font_display">Necessitatibus Eum Quasi</span>
+  <span class="font-size-down ">{{> "ProgramElement.FacultyList" modifier_class="block"}}</span>
+  <span class="font-size-down-1 c_accent-n1 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
+</li>
+ 
+MarkupWrapperClasses: ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3
+
+Weight:0
+ 
+Styleguide ProgramElement.PresentationListItem
+*/
+
+/*
+Presentation List
+ 
+List of Presentations is similar DOM independent of the context. 
+ 
+Markup:
+<h4 class="font-size_up p-x_3 c_primary-n2 font_medium">Presentations</h4>
+<ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
+  {{> ProgramElement.PresentationListItem }}
+  {{> ProgramElement.PresentationListItem }}
+</ul>
+
+ 
+Weight:0
+ 
+Styleguide  ProgramElement.Presentations.List
+*/
+
+/*
+Auxiliary Data
+ 
+Description: Most players have auxiliary data zones that describe the playing element through credits, tags, and categories.
+ 
+Markup:
+<aside class="flex_auto max-w_20:md max-w_25:lg w_100 {{ modifier_class }}">
+    <h4 class="font-size_up c_black-6 font_medium"><i class="fas fa-file-certificate p-r_3"></i> credits</h4>
+    <div class="p-y_3 br-t_1  br_primary-2 br_solid ">
+      {{> "ProgramElement.Credits.Dots" }}
+    </div>
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7">
+        {{> "ProgramElement.Tags.Category" }}
+    </div>
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7">
+      {{> "ProgramElement.Tags.Filter" }}
+    </div>
+</aside>
+
+ 
+Weight:0
+ 
+Styleguide ProgramElement.Player.AuxData
+*/
+
+
+/*
+Faculty List
+
+When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+
+
+
+Weight:0
+ 
+Styleguide ProgramElement.FacultyList
+
 */
 
 /*
@@ -110,11 +288,11 @@ Markup:
 
  Weight: 200
  
-Styleguide PageExtras.Program.Attachments
+Styleguide ProgramElement.Attachments
 */
 
 /*
-Video Header Thumb
+Video Thumbnail
  
 Description: The header is just a bit of design flair that can be colored, background swapped out and also the icon can be changed to the content of the presentation.
 
@@ -122,15 +300,35 @@ bg_primary  -  is the default background color
 bg_accent   -  any background color can be swapped out
 
 Markup:
-<header class="flex flex_none flex_row justify_center m-t_n4:lg p-x_4">
-    <div class="aspect_21x9:md aspect_16x9 bg-blend_multiply bg_primary bg_cover bg_no-repeat {{ modifier_class }} br_2 br_radius br_solid br_white br_white-9 flex flex_shrink grid justify_center m-t_n5 max-w_15 max-w_20:md relative shadow_3 text_center texture_ondemand thumb">
-            <i class="absolute c_white-9 fa-play fas flex_auto font_4 font_5:lg self_center text_center w_100"></i>
+<header class="flex flex_none flex_row justify_center m-t_n4:lg p-x_4 font_n3">
+    <div class="aspect_21x9:md aspect_16x9 bg-blend_multiply bg_primary bg_cover bg_no-repeat {{ modifier_class }} br_2 br_radius br_solid br_white br_white-9 flex flex_shrink grid justify_center max-w_15 max-w_20:md relative shadow_3 text_center texture_ondemand thumb bg_center">
+            <i class="absolute c_white-6 fa-play fas flex_auto self_center text_center w_100"></i>
         </div>
 </header>
  
 Weight:0
  
-Styleguide PageExtras.Program.HeaderThumbnail
+Styleguide ProgramElement.Header.VideoThumbnail
+*/
+
+/*
+Abstract Thumbnail
+ 
+Description: The header is just a bit of design flair that can be colored, background swapped out and also the icon can be changed to the content of the presentation.
+
+bg_primary  -  is the default background color
+bg_accent   -  any background color can be swapped out
+
+Markup:
+<header class="flex flex_none flex_row justify_center m-t_n4:lg p-x_4 font_0">
+    <div class="aspect_8x10:md aspect_4x3 bg-blend_multiply bg_primary bg_cover bg_no-repeat {{ modifier_class }} br_2 br_radius br_solid br_white br_white-9 flex flex_shrink grid justify_center max-w_15 max-w_20:md relative shadow_3 text_center texture_ondemand thumb bg_center">
+            <i class="font-size_up-2 absolute c_white-6 fa-file-chart-pie fas flex_auto self_center text_center w_100"></i>
+        </div>
+</header>
+ 
+Weight:0
+ 
+Styleguide ProgramElement.Header.AbstractThumbnail
 */
 
 /*
@@ -145,7 +343,22 @@ Markup:
 
 Weight:0
 
-Styleguide PageExtras.Program.ActionButtons.Favorite
+Styleguide ProgramElement.ActionButtons.Favorite
+*/
+
+/*
+Favorite Button Small
+ 
+The favorite button is a simple icon that can be used to add or remove a favorite. This button reflects the state of the favorite.
+
+active   - when the favorite is active
+
+Markup:
+<a href="" aria-label="mark as favorite" class="btn btn-secondary btn-sm flex_none a:bg_alert-n2  h:bg_alert-n4 {{ modifier_class }}" ><i class="fas fa-heart"></i></a>
+
+Weight:0
+
+Styleguide ProgramElement.ActionButtons.Favorite.Small
 */
 
 /*
@@ -162,7 +375,7 @@ View    - when the main asset of the loaded page is a graphic, pdf, or slide dec
 Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-        {{> "PageExtras.Program.ActionButtons.Favorite" modifier_class="[active]"}}
+        {{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="[active]"}}
         <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
@@ -172,7 +385,7 @@ Markup:
  
 Weight:0
  
-Styleguide PageExtras.Program.ActionButtons
+Styleguide ProgramElement.ActionButtons
 */
 
 /*
@@ -185,7 +398,7 @@ watch   - watch action button
 Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-        {{> "PageExtras.Program.ActionButtons.Favorite" modifier_class="[active]"}}
+        {{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="[active]"}}
         <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
@@ -194,7 +407,7 @@ Markup:
  
 Weight:0
  
-Styleguide PageExtras.Program.ActionButtons.NoDetails
+Styleguide ProgramElement.ActionButtons.NoDetails
 
 */
 
@@ -208,7 +421,7 @@ watch   - watch action button
 Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-        {{> "PageExtras.Program.ActionButtons.Favorite" modifier_class="[active]"}}
+        {{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="[active]"}}
         <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
@@ -216,6 +429,115 @@ Markup:
  
 Weight:0
  
-Styleguide PageExtras.Program.ActionButtons.Only
+Styleguide ProgramElement.ActionButtons.Only
 
+*/
+
+
+/*
+Abstract Flag
+ 
+Abstract flags are used to indicate that an abstract is awarded for some reason.  Use the default and star for most reasons. If there is a need for three levels of awards then use star and trophy alt or the angle up icons. In the content of the page you should denote the legend of the icons used.
+
+fa-star             - this denote the premium awarded abstracts (e.g. top 10)
+fa-trophy-alt       - this denote the premium awarded abstracts (e.g. best of the top 10)
+fa-angle-up         - this denote the premium awarded abstracts (level up 1)
+fa-angle-double-up  - this denote the premium awarded abstracts (level up 2)
+ 
+Markup:
+<div class="inline-block isolation_isolate m-x_3 p-t_2 relative">
+    <i class="c_acc fa-bookmark fas font-size_up-2 font_10 relative text-shadow_black-1 z_1"></i>
+    <span class="absolute b_0 flex font-size_down-2 font_bold items_center justify_center l_0 r_0 t_0 z_2"><i class="c_white-6  {{ modifier_class }} fas font-size_down-2 text-shadow_white-n1"></i></span>
+</div>
+
+ 
+Weight:0
+ 
+Styleguide ProgramElement.Award.Flags
+*/
+
+/*
+Abstract Flag Legend
+
+Markup:
+<div class="c_black-6 inline-flex flex_row items_center justify_start m-t_3 {{ modifier_class }}">
+  <ul class="ul_inline-pipe">
+    <li class="inline-flex items_center">
+      {{> "ProgramElement.Award.Flags" modifier_class="fa-star"}}
+      <strong class="font-size_down-1 font_copy"> Special Category</strong>
+    </li>
+    <li class="inline-flex items_center">
+      {{> "ProgramElement.Award.Flags" modifier_class=""}}
+      <strong class="font-size_down-1 font_copy"> Top Ten</strong>
+    </li>
+  </ul>
+</div>
+
+
+Weight:0
+ 
+Styleguide ProgramElement.Award.FlagLegend
+*/
+
+/*
+Attachments Big Button
+ 
+On player pages use the big button for attachments. The text only displays when the view port is medium and up.
+ 
+Markup:
+<a title="download attachments" class="bg_secondary nowrap text_center br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/Tweat_DrSoda" target="_blank"> 
+  <i class="far fa-paperclip"></i>
+  <span class="display_none inline-block:md"> Attachments</span> 
+</a>
+        
+ 
+Weight:0
+ 
+Styleguide ProgramElement.Attachments.BigButton
+*/
+
+/*
+Chat Window
+ 
+The chat window is used to display the chat in player pages.
+ 
+Markup:
+<div class="br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column" id="panel-chat" style="height:100%">
+  <div class="panel-heading bg_transparent">
+      <h4 class="panel-title font_bold font_display c_primary">Live Chat</h4>
+      <p class="welcome">Welcome <b> Matt Watier </b></p>
+  </div>
+  <div id="wrapper" class="br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light">
+      <div class="load-log p_3 absolute t_0 r_0 l_0 b_0 overflow_unset" data-log-id="2">
+          <div class="msgln">(1:44 PM) <b> Lovely Day </b>: Chat<br></div>
+          <div class="msgln">(2:13 PM) <b> Lovely Day </b>: Chat some more<br></div>
+          <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
+          <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
+          <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.<br></div>
+          <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.<br></div>
+          <div class="msgln">(2:18 PM) <b> Lovely Day </b>: Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.<br></div>
+          <div class="msgln">(2:19 PM) <b> Lovely Day </b>: Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.<br></div>
+          <div class="msgln">(3:48 PM) <b> Lovely Day </b>: test<br></div>
+          <div class="msgln">(3:50 PM) <b> Matt Watier </b>: hello<br></div>
+      </div>
+  </div>
+  <div class="panel-footer flex_none m-t_auto">
+      <form name="message" action="">
+          <div class="form-group flex flex_row nowrap">
+              <input name="usermsg" type="text" id="usermsg" class="form-control br-br_square br-tr_square flex_auto" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+              <input name="submitmsg" type="submit" id="submitmsg" value="Add" class="btn btn-primary br-tl_square br-bl_square flex_none">
+              <input type="hidden" name="user_client_portal_reg_id" id="user_client_portal_reg_id" value="10">
+              <input type="hidden" name="chat_id" id="chat_id" value="2">
+              <input type="hidden" name="client_portal_presentation_id" id="client_portal_presentation_id" value="2">
+              <input type="hidden" name="client_portal_id" id="client_portal_id" value="1">
+              <input type="hidden" name="screen_name" id="screen_name" value=" Matt   Watier ">
+          </div>
+      </form>
+  </div>
+</div>
+
+ 
+Weight:0
+ 
+Styleguide ProgramElement.Player.Chat
 */

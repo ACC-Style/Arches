@@ -5,12 +5,12 @@ Description: These video blocks are used in combination with grid templates and 
 
  
 Markup:
-{{> "PageExtras.Program.DateTimeDividers" }}
+{{> "ProgramElement.DateTimeDividers" }}
 <section class="gap_5 grid justify_around p_4 p_5 grid-col_1 grid-col_2:md">
     {{> "Graveyard.Program.Live Video" }}
     {{> "Graveyard.Program.Live Video" }}
 </section>
-{{> "PageExtras.Program.DateTimeDividers" }}
+{{> "ProgramElement.DateTimeDividers" }}
 <section class="gap_5 grid justify_around p_4 p_5 grid-col_1">
     {{> "Graveyard.Program.Live Video" }}
 </section>
@@ -31,15 +31,15 @@ Description: These video blocks are used in combination with grid templates and 
 Markup:
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "PageExtras.Program.HeaderThumbnail" }}
+        {{> "ProgramElement.Header.VideoThumbnail" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 "><strong class="font_accent">{{> "Data.Agenda.ID" }}</strong> {{> "Data.Session.Title" }}</h2>
         </main>
-       {{> "PageExtras.Program.ActionButtons" }}
+       {{> "ProgramElement.ActionButtons" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.Program.CreditDots" }}
+        {{> "ProgramElement.Credits.Dots" }}
         </div>
     </div>
 </article>
@@ -64,16 +64,16 @@ Description: These video blocks are used in combination with grid templates and 
 Markup:
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "PageExtras.Program.HeaderThumbnail" }}
+        {{> "ProgramElement.Header.VideoThumbnail" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">{{> "Data.Session.Title" }}</h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>{{> "Data.Faculty.FullName" }}</li><li> {{> "Data.Faculty.FullName" }}</li> </ul>
         </main>
-       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+       {{> "ProgramElement.ActionButtons.NoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.Program.CreditDots" }}
+        {{> "ProgramElement.Credits.Dots" }}
         </div>
     </div>
 </article>
@@ -105,85 +105,85 @@ Description:
 Block Designs are Great for a few channels but there is a maximum of 5 channels without the design crushing too much.
  
 Markup: 
-{{> "PageExtras.Program.DateTimeDividers" }}
+{{> "ProgramElement.DateTimeDividers" }}
 <section class="gap_4 grid justify_around p-y_4 p-y_5 grid-col_1 grid-col_5:md">
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "PageExtras.Program.HeaderThumbnail"  modifier_class="bg_primary"}}
+        {{> "ProgramElement.Header.VideoThumbnail"  modifier_class="bg_primary"}}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">Planning for the Inevitable: Workforce and Patient Access Challenges </h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>{{> "Data.Faculty.FullName" }}</li><li>Frederic R. Simmons</li> </ul>
         </main>
-       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+       {{> "ProgramElement.ActionButtons.NoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.Program.CreditDots" }}
+        {{> "ProgramElement.Credits.Dots" }}
         </div>
     </div>
 </article>
 <!----------------------------------------------------------- AREA BREAK ---------------------------------------------------------->
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "PageExtras.Program.HeaderThumbnail"  modifier_class="bg_accent" }}
+        {{> "ProgramElement.Header.VideoThumbnail"  modifier_class="bg_accent" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">
             Reducing Care Variation</h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Steven M. Bradley, MD, FACC</li><li> Suzette Jaskie, MBA </li> </ul>
         </main>
-       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+       {{> "ProgramElement.ActionButtons.NoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.Program.CreditDots" }}
+        {{> "ProgramElement.Credits.Dots" }}
         </div>
     </div>
 </article>
 <!----------------------------------------------------------- AREA BREAK ---------------------------------------------------------->
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "PageExtras.Program.HeaderThumbnail"  modifier_class="bg_highlight" }}
+        {{> "ProgramElement.Header.VideoThumbnail"  modifier_class="bg_highlight" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">Maintaining the Viability of Your Nuclear Cardiology Program (Joint Society Session with ASNC)</h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Dennis Calnon</li><li>  David C. Konur, FACHE  </li> </ul>
         </main>
-       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+       {{> "ProgramElement.ActionButtons.NoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.Program.CreditDots" }}
+        {{> "ProgramElement.Credits.Dots" }}
         </div>
     </div>
 </article>
 <!----------------------------------------------------------- AREA 2 ---------------------------------------------------------->
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "PageExtras.Program.HeaderThumbnail" modifier_class="bg_warning" }}
+        {{> "ProgramElement.Header.VideoThumbnail" modifier_class="bg_warning" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">Academic Compensation Models: From APPs to Professors  </h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>David Brody, MPA;</li><li> {{> "Data.Faculty.FullName" }}</li> </ul>
         </main>
-       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+       {{> "ProgramElement.ActionButtons.NoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.Program.CreditDots" }}
+        {{> "ProgramElement.Credits.Dots" }}
         </div>
     </div>
 </article>
 <!----------------------------------------------------------- AREA 2 ---------------------------------------------------------->
 <article class="br-t_3 br_primary-2 br_radius br_solid c_black m-b_4 m-b_5:md m-t_5 m-x_0">
         <div class="br_1 br_black-2 br_radius br_solid flex flex_column font_ui justify_start p-x_4 relative shadow_overlap-light" style="height: 100%;">
-        {{> "PageExtras.Program.HeaderThumbnail" modifier_class="bg_success" }}
+        {{> "ProgramElement.Header.VideoThumbnail" modifier_class="bg_success" }}
         <main class="block flex_auto m-x_auto max-w_35 p-t_3 p-t_4:lg w_100">
             <h2 class="font-size_up font_display lh_2 ">Managing Change in Graduate Medical Education  </h2>
             <ul class="block c_black-6 font-size_down lh_1 ul_none"><li>Lisa A. Mendes, MD, FACC</li><li> Gaby Weissman, MD, FACC</li> <li><strong>Moderator</strong>Allison Bailie</li></ul>
         </main>
-       {{> "PageExtras.Program.ActionButtons.NoDetails" }}
+       {{> "ProgramElement.ActionButtons.NoDetails" }}
     </div>
     <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex flex_grow justify_start text_left uppercase">
-        {{> "PageExtras.Program.CreditDots" }}
+        {{> "ProgramElement.Credits.Dots" }}
         </div>
     </div>
 </article>

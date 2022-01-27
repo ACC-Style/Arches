@@ -1,3 +1,4 @@
+@use "sass:string";
 /*
 List
  
@@ -34,7 +35,7 @@ Weight: 0
  */
 
 // list with no decoration shouldn't have a padding
-.ul_none, [class^="ul_inline"] {
+.ul_none{
     padding: 0;
     margin: 0;
 }
@@ -82,8 +83,13 @@ Styleguide List.InlineType
 
 */
 
-[class^="ul_inline"] {
-    display: flex;
+%ul_inline,
+.ul_inline-comma,
+.ul_inline-semicolon,
+.ul_inline-pipe{
+    padding: 0;
+    margin: 0;
+    display:  inline-flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
@@ -97,6 +103,11 @@ Styleguide List.InlineType
           opacity: .6;
         }
     }
+    li.no-after{padding-inline-end: .5em;}
+    li.no-after::after{
+      display:none;
+      
+    }
 }
 .ul_inline-comma > li:not(:last-child)::after {
     content: ",";
@@ -107,6 +118,6 @@ Styleguide List.InlineType
 }
 .ul_inline-pipe > li:not(:last-child)::after {
   content: "|";
-  padding-inline-start: .5em;
+  padding-inline-start:.5em;
 
 }

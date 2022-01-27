@@ -11835,11 +11835,9 @@
 #acc_arches_override .font-blend_unset {
   mix-blend-mode: unset;
 }
-#acc_arches_override .ul_none, #acc_arches_override [class^=ul_inline] {
+#acc_arches_override .ul_none {
   margin: 0;
   padding: 0;
-}
-#acc_arches_override .ul_none {
   list-style-type: none !important;
 }
 #acc_arches_override .ul_bullet {
@@ -11952,23 +11950,38 @@
   text-align: center;
   vertical-align: top;
 }
-#acc_arches_override [class^=ul_inline] {
-  display: flex;
+#acc_arches_override .ul_inline-comma,
+#acc_arches_override .ul_inline-semicolon,
+#acc_arches_override .ul_inline-pipe {
+  display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   justify-items: center;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
-#acc_arches_override [class^=ul_inline] > li {
+#acc_arches_override .ul_inline-comma > li,
+#acc_arches_override .ul_inline-semicolon > li,
+#acc_arches_override .ul_inline-pipe > li {
   flex: 0 1 auto;
 }
-#acc_arches_override [class^=ul_inline] > li:not(:last-child)::after {
+#acc_arches_override .ul_inline-comma > li:not(:last-child)::after,
+#acc_arches_override .ul_inline-semicolon > li:not(:last-child)::after,
+#acc_arches_override .ul_inline-pipe > li:not(:last-child)::after {
   -webkit-padding-start: 0.1em;
           padding-inline-start: 0.1em;
   -webkit-padding-end: 0.5em;
           padding-inline-end: 0.5em;
   opacity: 0.6;
+}
+#acc_arches_override .ul_inline-comma li.no-after::after,
+#acc_arches_override .ul_inline-semicolon li.no-after::after,
+#acc_arches_override .ul_inline-pipe li.no-after::after {
+  display: none;
+  -webkit-padding-end: 0.5em;
+          padding-inline-end: 0.5em;
 }
 #acc_arches_override .ul_inline-comma > li:not(:last-child)::after {
   content: ",";
