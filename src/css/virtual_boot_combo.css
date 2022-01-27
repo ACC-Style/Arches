@@ -23322,14 +23322,16 @@ Markup:
                         {{> Data.Session.Title }}
                     </span>
                     <span class="c_accent font-size_down-1">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</span>
-                    <ul class="font-size_down-2 ul_none flex flex_row flex_wrap justify_start c_black-7  m-t_auto lh_0 items_end">
-                            <li class="inline-block p-r_3 p_2"><span class="font-size_up c_primary-n2 block"><i class="fal fa-clock"></i> 30</span> minutes</li>
-                            <li class="inline-block p-r_3 p_2"><span class="font-size_up c_primary-n2 z_2 block">4</span> presentations</li>
-                        </ul>
                     </h3>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "ProgramElement.ActionButtons"  modifier_class="Watch"}}
                 </div>
+            </div>
+            <div class="p-x_4 p-b_4 flex flex_column font_1">
+                <ul class="font-size_down ul_none flex flex_row flex_wrap justify_start c_black-7  m-t_auto lh_0 items_end">
+                    <li class="inline-block p-r_3 p_2"><span class="font-size_up c_primary-n2 block"><i class="fal fa-clock"></i> 30</span> minutes</li>
+                    <li class="inline-block p-r_3 p_2"><span class="font-size_up c_primary-n2 z_2 block">4</span> presentations</li>
+                </ul>
             </div>
             <div id="collapseExample" class="collapse">
             {{>  "ProgramElement.Presentation.List" }}
@@ -23375,8 +23377,8 @@ Markup:
             </div>
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_1">
-                <div class="c_accent font-size_down">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</div>
-                <div class="font-size_down-1">{{> "ProgramElement.FacultyList" modifier_class="inline"}}</div>
+                <div class="c_accent ">{{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}</div>
+                <div class="font-size_down">{{> "ProgramElement.FacultyList" modifier_class="inline"}}</div>
             </div>
             </div>
         </div>
