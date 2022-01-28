@@ -23462,6 +23462,18 @@ Markup:
 </article>
 </div>
 
+SubComponents:
+Sub.Attachments.BigButton - Attachments
+Sub.FacultyList - Faculty List
+Sub.Player.AuxData - Aux Data
+Sub.ActionButtons.Favorite - Favorite Button
+
+Data:
+Data.Session.Title - Title
+Data.Session.ID - Session ID
+Sub.Presentation.List - Presentation List
+
+
 Weight:0
 
 Styleguide Player.Session
@@ -23476,7 +23488,7 @@ Markup:
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
-                    <strong class="font_bold p-r_3">{{> "Data.Session.ID"}}</strong> {{> "Data.Session.Title"}}
+                    {{> "Data.Abstract.Title"}}
                 </span>
                 {{> "Sub.Award.FlagLegend" modifier_class="font_0"}}
             </h3>
@@ -23489,7 +23501,7 @@ Markup:
             <div class="player hd full">
                 <div class="bg_acc aspect_4x3 c_white text_center  justify_center flex items_center">PDF EMBED</div>
             </div>
-            <div class="m-t_4 m-x_3">{{> "Sub.FacultyList" modifier_class="block w_100"}}</div>
+            <div class="m-t_4 m-x_3">{{> "Sub.FacultyList.NoLocation" modifier_class="block w_100"}}</div>
         </div>
         <div class="flex flex_auto flex_column gap_4 max-w_20:md max-w_25:lg w_100">
             <div class="bg_primary-4 aspect_16x9 br_radius c_white text_center  justify_center flex items_center">Video EMBED</div>
@@ -23498,6 +23510,15 @@ Markup:
         </div>
     </section>
 </div>
+
+SubComponents:
+Sub.Award.FlagLegend - Award Flags
+Sub.Attachments.BigButton - Attachments
+Sub.FacultyList.NoLocation - Faculty List
+Sub.Player.AuxData - Aux Data
+
+Data:
+Data.Abstract.Title - Title
 
 Weight:1000
 
