@@ -164,7 +164,7 @@
           // append subCompHTML the html. 
           var li = document.createElement("li");
           var link = o.path.split('.').reduce(function (acc, curr) { return acc+"-"+curr; }, '');
-          li.innerHTML = '<a href="item' + link + '.html" class="kss-subComponent__name lh_1 font_0 p-b_3">' + o.name + '</a>';
+          li.innerHTML = '<a href="item' + link.toLowerCase() + '.html" class="kss-subComponent__name lh_1 font_0 p-b_3">' + o.name + '</a>';
           nodeHTML.append(li);
         });
       }
@@ -208,7 +208,7 @@
           // append subCompHTML the html. 
           var li = document.createElement("li");
           var link = o.path.split('.').reduce(function (acc, curr) { return acc+"-"+curr; }, '');
-          li.innerHTML = '<a href="item' + link + '.html" class="kss-dataElement__name lh_1 font_0 p-b_3">' + o.name + '</a>';
+          li.innerHTML = '<a href="item' + link.toLowerCase() + '.html" class="kss-dataElement__name lh_1 font_0 p-b_3">' + o.name + '</a>';
           nodeHTML.append(li);
         });
       }
