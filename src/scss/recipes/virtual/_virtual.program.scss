@@ -21,10 +21,10 @@ Session
 
 
 Markup:
-<article class="{{> ProgramElement.Style.OuterBorder }}">
-    <div class="{{> ProgramElement.Style.InnerBorder }}">
+<article class="{{> Sub.Style.OuterBorder }}">
+    <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
-            {{> "ProgramElement.CategoryFlags" }}          
+            {{> "Sub.CategoryFlags" }}          
             <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
                  <header>
                     <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
@@ -33,18 +33,18 @@ Markup:
                             {{> Data.Session.Title }}
                         </span>
                     </h3>
-                    <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
+                    <div class="font_0 font_ui">{{>  Sub.PlayingDateTime }}</div>
                 </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
-                    {{> "ProgramElement.ActionButtons.NoDetails"  modifier_class="Watch"}}
+                    {{> "Sub.ActionButtons.NoDetails"  modifier_class="Watch"}}
                 </div>
             </div>
-            {{>  "ProgramElement.Presentation.List" }}
+            {{>  "Sub.Presentation.List" }}
         </div>
     </div>
     <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex_grow uppercase m-l_auto">
-            {{> "ProgramElement.Credits.Dots" }}
+            {{> "Sub.Credits.Dots" }}
         </div>
     </div>
 </article>
@@ -52,6 +52,12 @@ Markup:
 MarkupWrapperClasses: 
 
 Weight: 0
+
+SubComponents:
+Sub.Presentation.List - Presentation List
+Sub.ActionButtons.NoDetails - Action Buttons
+Sub.ActionButtons.Favorite.Small - Favorite Button
+
 
 Styleguide Program.Session
 */
@@ -64,10 +70,10 @@ Session Collapse
 
 
 Markup:
-<article class="{{> ProgramElement.Style.OuterBorder }}">
-    <div class="{{> ProgramElement.Style.InnerBorder }}">
+<article class="{{> Sub.Style.OuterBorder }}">
+    <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
-            {{> "ProgramElement.CategoryFlags" }}          
+            {{> "Sub.CategoryFlags" }}          
             <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
                 <header>
                     <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
@@ -76,10 +82,10 @@ Markup:
                             {{> Data.Session.Title }}
                         </span>
                     </h3>
-                    <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
+                    <div class="font_0 font_ui">{{>  Sub.PlayingDateTime }}</div>
                 </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
-                    {{> "ProgramElement.ActionButtons"  modifier_class="Watch"}}
+                    {{> "Sub.ActionButtons"  modifier_class="Watch"}}
                 </div>
             </div>
             <div class="p-x_4 p-b_4 flex flex_column font_1">
@@ -89,13 +95,13 @@ Markup:
                 </ul>
             </div>
             <div id="collapseExample" class="collapse">
-            {{>  "ProgramElement.Presentation.List" }}
+            {{>  "Sub.Presentation.List" }}
             </div>
         </div>
     </div>
     <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex_grow uppercase m-l_auto">
-            {{> "ProgramElement.Credits.Dots" }}
+            {{> "Sub.Credits.Dots" }}
         </div>
     </div>
 </article>
@@ -116,10 +122,10 @@ A session shell is when there is only one presentation.
 
 
 Markup:
-<article class="{{> ProgramElement.Style.OuterBorder }}">
-    <div class="{{> ProgramElement.Style.InnerBorder }}">
+<article class="{{> Sub.Style.OuterBorder }}">
+    <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
-            {{> "ProgramElement.CategoryFlags" }}          
+            {{> "Sub.CategoryFlags" }}          
             <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
                 <header> 
                     <h2 class="font_n1 uppercase c_black-7">
@@ -132,20 +138,20 @@ Markup:
                     </h3>
                 </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
-                    {{> "ProgramElement.ActionButtons.NoDetails"  modifier_class="Watch"}}
+                    {{> "Sub.ActionButtons.NoDetails"  modifier_class="Watch"}}
                 </div>
             </div>
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_1">
-                 <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
-                <div class="font-size_down">{{> "ProgramElement.FacultyList" modifier_class="inline"}}</div>
+                 <div class="font_0 font_ui">{{>  Sub.PlayingDateTime }}</div>
+                <div class="font-size_down">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
             </div>
             </div>
         </div>
     </div>
     <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex_grow uppercase m-l_auto">
-            {{> "ProgramElement.Credits.Dots" }}
+            {{> "Sub.Credits.Dots" }}
         </div>
     </div>
 </article>
@@ -164,10 +170,10 @@ On Demand
 After the completion of a video the Sessions are broken down to the individual presentations and stored in the On Demand Area for viewing. 
 
 Markup:
-<article class="{{> ProgramElement.Style.OuterBorder }}">
-    <div class="{{> ProgramElement.Style.InnerBorder }}">
+<article class="{{> Sub.Style.OuterBorder }}">
+    <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
-            {{> "ProgramElement.CategoryFlags" }}          
+            {{> "Sub.CategoryFlags" }}          
             <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
                 <header> 
                     <h2 class="font_n1 uppercase c_black-7">
@@ -180,20 +186,20 @@ Markup:
                     </h3>
                 </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
-                    {{> "ProgramElement.ActionButtons.OnDemand"  modifier_class="Watch"}}
+                    {{> "Sub.ActionButtons.OnDemand"  modifier_class="Watch"}}
                 </div>
             </div>
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_1">
-                 <div class="font_0 font_ui">{{>  ProgramElement.PlayingDateTime }}</div>
-                <div class="font-size_down">{{> "ProgramElement.FacultyList" modifier_class="inline"}}</div>
+                 <div class="font_0 font_ui">{{>  Sub.PlayingDateTime }}</div>
+                <div class="font-size_down">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
             </div>
             </div>
         </div>
     </div>
     <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex_grow uppercase m-l_auto">
-            {{> "ProgramElement.Credits.Dots" }}
+            {{> "Sub.Credits.Dots" }}
         </div>
     </div>
 </article>
@@ -246,7 +252,7 @@ Condensed Sessions are used for listing designs that are not full featured.
 Markup:
 <article class="relative">
 <div class="b_n5 m-b_n5 p-x_4:md p-x_5:lg relative">
-{{> "ProgramElement.Header.VideoThumbnail" }}
+{{> "Sub.Header.VideoThumbnail" }}
 </div>
 <div class="br-t_3 br_primary-2 br_radius br_solid c_black flex flex_column font_0 m-b_4 p-t_5 p_4 shadow_overlap-light t_n5 z_0 flex_column flex gap_3 bg_white">
 <div class="p_2">&nbsp;</div>    
@@ -257,7 +263,7 @@ Markup:
                 {{> "Data.Session.Title" }}
             </span>
         </h3>
-        <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> ProgramElement.Tags.Category }}</div>
+        <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> Sub.Tags.Category }}</div>
     </header>
     <div class="font_n2 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
     <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
@@ -282,7 +288,7 @@ A zone on the page that displays the current live session.
  
 Markup:
 <section class="">
-    <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "ProgramElement.SectionHeader" modifier_class="Playing Now" }}</h2>
+    <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
         {{> Program.WhatsNow }}
         {{> Program.WhatsNow }}
@@ -323,7 +329,7 @@ Markup:
 <article class="c_black font_0 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
     <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
         <div class="br-b_1 br_solid br_primary-2">
-            {{> "ProgramElement.CategoryFlags" }}
+            {{> "Sub.CategoryFlags" }}
             <div class="p_4 p-b_2 flex flex_column gap-y_4">
                 <header>
                     <h2 class="font_n1 uppercase c_black-7">
@@ -333,12 +339,12 @@ Markup:
                         <span class="block font-size_up-1 font_display lh_1"> {{> Data.Presentation.Title }} </span>
                     </h3>
                 </header>
-                <div class="flex_grow m-x_auto m-l_auto m-r_0:lg w_100 "> {{> "ProgramElement.ActionButtons.OnDemand" modifier_class="Watch" }}</div>
+                <div class="flex_grow m-x_auto m-l_auto m-r_0:lg w_100 "> {{> "Sub.ActionButtons.OnDemand" modifier_class="Watch" }}</div>
             </div>
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0">
                 <div class="font-size_down">
-                {{> "ProgramElement.FacultyList" }}
+                {{> "Sub.FacultyList" }}
                 </div>
             </div>
             </div>
@@ -346,7 +352,7 @@ Markup:
     </div>
     <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex_grow uppercase m-l_auto">
-            {{> "ProgramElement.Credits.Dots" }}
+            {{> "Sub.Credits.Dots" }}
         </div>
     </div>
 </article>
@@ -362,7 +368,7 @@ Styleguide Program.FeaturedPresentation
 
 Abstracts
 
-description
+Abstracts are a presentation of a static slide deck, or pdf with a possible attached video. These cards link to an abstract player page. 
  
 Markup:
 <article class="c_black font_0 br-t_3 br_solid br_secondary-2 br_radius isolation_isolate shadow_overlap-light relative">
@@ -370,10 +376,10 @@ Markup:
 <div class="flex flex_column gap-y_4">
     <div class="br-b_1 br_solid br_primary-2">
     <div class="absolute r_3 r_4:lg t_n2 font_5:md font_3 m-t_n2 z_2">
-        {{> "ProgramElement.Award.Flags" modifier_class="fa-star" }}
+        {{> "Sub.Award.Flags" modifier_class="fa-star" }}
     </div>
         <div class="m-y_4 m-x_auto p-x_4  max-w_15:md  max-w_10 relative">
-            {{> "ProgramElement.Header.AbstractThumbnail" modifier_class="bg_acc" }}</div>
+            {{> "Sub.Header.AbstractThumbnail" modifier_class="bg_acc" }}</div>
             <div class="p_4 p-b_2 flex flex_column gap-y_4">
                 <header>
                     <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_1:lg font_0 p-r_4:lg">
@@ -383,7 +389,7 @@ Markup:
                 <div class="flex_grow m-x_auto m-l_auto m-r_0:lg w_100 "> 
                 <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
                     <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-                    <a href="" aria-label="download attachments" class="br_radius btn btn-secondary flex_auto w_80:md"><i class="far fa-paperclip"></i><span class="display_none inline:md">Attachments</span> </a><a href="" aria-label="navigate to" class="btn btn-primary flex_auto w_70">Veiw</a>
+                    <a href="" aria-label="download attachments" class="br_radius btn btn-secondary flex_auto w_80:md"><i class="far fa-paperclip"></i><span class="display_none inline:md">Attachments</span> </a><a href="" aria-label="navigate to" class="btn btn-primary flex_auto w_70">View</a>
                     </nav>
                 </aside>
                 </div>
@@ -391,7 +397,7 @@ Markup:
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0">
                 <div class="font-size_down">
-                {{> "ProgramElement.FacultyList"  modifier_class="block w_100 font-size_down" }}
+                {{> "Sub.FacultyList.NoLocation"  modifier_class="block w_100 font-size_down" }}
                 </div>
             </div>
             </div>
@@ -399,31 +405,45 @@ Markup:
     </div>
     <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex_grow uppercase m-l_auto">
-            {{> "ProgramElement.Credits.Dots" }}
+            {{> "Sub.Credits.Dots" }}
         </div>
     </div>
 </article>
 
 MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4
+
+Data: 
+Data.Abstract.Title - Title
+
+
+SubComponents:
+Sub.Award.Flags - Award Flags
+Sub.Header.AbstractThumbnail - Image Thumbnail
+Sub.FacultyList.NoLocation - Faculty List w/o Location
+Sub.Credits.Dots - Credit Dots
+Sub.ActionButtons - Action Buttons
  
 Weight:0
- 
-Styleguide Program.Abstract 
+
+Styleguide Program.Abstract
 */
 
 /*
 
 Abstracts Grid
 
-description
+Abstracts are presented in a grid view. 
  
 Markup:
+<section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
 {{> Program.Abstract }}
 {{> Program.Abstract }}
 {{> Program.Abstract }}
+</section>
 
-MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg
+MarkupWrapperClasses: 
 
+NOTE: A grid-item at its smallest is 300px wide the grid column size needs to be set depending on the width the parent container.
 
 Weight:0
  
@@ -440,7 +460,7 @@ Featured Session Grids should respond to the size of the parent container.
  
 Markup:
 <section class="">
-<h2 class="font_bold font_display c_primary-n1">{{> "ProgramElement.SectionHeader" modifier_class="Featured Presentations" }}</h2>
+<h2 class="font_bold font_display c_primary-n1">{{> "Sub.SectionHeader" modifier_class="Featured Presentations" }}</h2>
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 ">
 {{> "Program.FeaturedPresentation" }}
 {{> "Program.FeaturedPresentation" }}
@@ -453,7 +473,7 @@ Markup:
 
 MarkupWrapperClasses: 
 
-NOTE: A featured presentation is smallest at 300px wide the grid coloumn size needs to be set depending on the width the parent container.
+NOTE: A grid-item at its smallest is 300px wide the grid column size needs to be set depending on the width the parent container.
  
 Weight:0
  

@@ -13,7 +13,7 @@ Markup:
         </div>
     </div>
     <div class="flex_auto max-w_25:lg max-w_20:md w_100 ">
-       {{> "ProgramElement.Player.Chat"}}
+       {{> "Sub.Player.Chat"}}
     </div>
 </section>
 <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
@@ -25,17 +25,17 @@ Markup:
             </span>
         </h3>
         <div class="self_start flex gap_2">
-        {{> "ProgramElement.ActionButtons.Favorite"}}
-        {{> "ProgramElement.Attachments.BigButton"}}
+        {{> "Sub.ActionButtons.Favorite"}}
+        {{> "Sub.Attachments.BigButton"}}
         </div>
 </header>
 <article class="flex flex_row:md flex_column gap-x_4 gap-y_3 p-t_3 b-t_5 br-b_1 br_solid br_primary-2 order_3">
     <section class="flex_auto w_100">
         <div class="font_2">
-            {{> "ProgramElement.Presentation.List"}}
+            {{> "Sub.Presentation.List"}}
         </div>
     </section>
-    {{> "ProgramElement.Player.AuxData" modifier_class="p_4 bg_black-1 m-t_5 br_radius self_start shadow_emboss-light"}}
+    {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 m-t_5 br_radius self_start shadow_emboss-light"}}
 </article>
 </div>
  
@@ -58,10 +58,10 @@ Markup:
                 <span class="block">
                     <strong class="font_bold p-r_3">{{> "Data.Session.ID"}}</strong> {{> "Data.Session.Title"}}
                 </span>
-                {{> "ProgramElement.Award.FlagLegend" modifier_class="font_0"}}
+                {{> "Sub.Award.FlagLegend" modifier_class="font_0"}}
             </h3>
             <div class="self_start">
-            {{> "ProgramElement.Attachments.BigButton"}}
+            {{> "Sub.Attachments.BigButton"}}
             </div>
     </header>
     <section class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3 order_2 order_1:md">
@@ -69,12 +69,12 @@ Markup:
             <div class="player hd full">
                 <div class="bg_acc aspect_4x3 c_white text_center  justify_center flex items_center">PDF EMBED</div>
             </div>
-            <div class="m-t_4 m-x_3">{{> "ProgramElement.FacultyList" modifier_class="block w_100"}}</div>
+            <div class="m-t_4 m-x_3">{{> "Sub.FacultyList" modifier_class="block w_100"}}</div>
         </div>
         <div class="flex flex_auto flex_column gap_4 max-w_20:md max-w_25:lg w_100">
             <div class="bg_primary-4 aspect_16x9 br_radius c_white text_center  justify_center flex items_center">Video EMBED</div>
             <div class="bg_secondary-3 aspect_4x1 br_radius c_white text_center  justify_center flex items_center">Audio EMBED</div>
-            {{> "ProgramElement.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light"}}
+            {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light"}}
         </div>
     </section>
 </div>

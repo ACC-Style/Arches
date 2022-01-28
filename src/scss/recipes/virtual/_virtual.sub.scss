@@ -15,7 +15,7 @@ Programs are build via sessions, presentations, and workshops.
 
 Weight: 200000
  
-Styleguide ProgramElement.Program
+Styleguide Sub.Program
 */
 
 /*
@@ -42,7 +42,7 @@ MarkupWrapperClasses: p_4 br_inherit
  
 Weight: 100
  
-Styleguide ProgramElement.DateTimeDividers
+Styleguide Sub.DateTimeDividers
 */
 
 /*
@@ -70,7 +70,7 @@ FORMAT: This element uses data that has strict data formatting requirements. See
  
 Weight:0
  
-Styleguide ProgramElement.Credits
+Styleguide Sub.Credits
 */
 
 
@@ -81,21 +81,21 @@ When it is only important to show the credits listed and not the credit values t
  
 Markup:
 <ul class=" gap-x_3 justify_end:md justify_start self_center ul_inline-pipe uppercase">
-  {{> ProgramElement.Credits  modifier_class="CME" }}
-  {{> ProgramElement.Credits  modifier_class="CNE" }}
-  {{> ProgramElement.Credits  modifier_class="COP" }}
-  {{> ProgramElement.Credits  modifier_class="MOCII" }}
+  {{> Sub.Credits  modifier_class="CME" }}
+  {{> Sub.Credits  modifier_class="CNE" }}
+  {{> Sub.Credits  modifier_class="COP" }}
+  {{> Sub.Credits  modifier_class="MOCII" }}
 </ul>
  
 Note: This pattern requires the inclusion of the credit color stylesheets.
 
 Weight:0
  
-Styleguide ProgramElement.Credits.Dots
+Styleguide Sub.Credits.Dots
 
 */
 
-%ProgramElement.CategoryFlags {
+%Sub.CategoryFlags {
 }
 /*
 Category Flags
@@ -113,7 +113,7 @@ Markup:
  
 Weight:0
  
-Styleguide ProgramElement.CategoryFlags
+Styleguide Sub.CategoryFlags
 */
 
 /*
@@ -130,7 +130,7 @@ Markup:
 
 Weight:0
  
-Styleguide ProgramElement.Tags.Category
+Styleguide Sub.Tags.Category
 
 */
 
@@ -150,7 +150,7 @@ Markup:
 
 Weight:0
  
-Styleguide ProgramElement.Tags.Filter
+Styleguide Sub.Tags.Filter
 
 */
 %PresentationListItem{}
@@ -161,15 +161,15 @@ When sessions have more then one presentation they are listed in a list. Present
  
 Markup:
 <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white relative font_ui">
-  <div class="float_right inline p_3 m-r_n3 m-t_n3">{{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
+  <div class="float_right inline p_3 m-r_n3 m-t_n3">{{> "Sub.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
   <span data-title="title" class="font-size_up-1 inline font_display lh_2">{{> "Data.Presentation.Title" }}</span>
-  <span class="font-size-down ">{{> "ProgramElement.FacultyList" modifier_class="block w_100 font-size_down-1"}}</span>
+  <span class="font-size-down ">{{> "Sub.FacultyList" modifier_class="block w_100 font-size_down-1"}}</span>
   <span class="font-size-down-1 c_accent-n1 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
 </li>
 <li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9 relative font_ui">
-  <div class="float_right inline p_3 m-r_n3 m-t_n3">{{> "ProgramElement.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
+  <div class="float_right inline p_3 m-r_n3 m-t_n3">{{> "Sub.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
   <span data-title="title" class="font-size_up-1 inline font_display lh_2">Necessitatibus Eum Quasi</span>
-  <span class="font-size-down ">{{> "ProgramElement.FacultyList" modifier_class="block w_100 font-size_down-1"}}</span>
+  <span class="font-size-down ">{{> "Sub.FacultyList" modifier_class="block w_100 font-size_down-1"}}</span>
   <span class="font-size-down-1 c_accent-n1 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
 </li>
  
@@ -177,7 +177,7 @@ MarkupWrapperClasses: ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-
 
 Weight:0
  
-Styleguide ProgramElement.Presentation.ListItem
+Styleguide Sub.Presentation.ListItem
 */
 
 /*
@@ -188,14 +188,14 @@ List of Presentations is similar DOM independent of the context.
 Markup:
 <h4 class="font-size_up p-x_3 c_primary-n2 font_medium">Presentations</h4>
 <ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
-  {{> ProgramElement.Presentation.ListItem }}
-  {{> ProgramElement.Presentation.ListItem }}
+  {{> Sub.Presentation.ListItem }}
+  {{> Sub.Presentation.ListItem }}
 </ul>
 
  
 Weight:0
  
-Styleguide  ProgramElement.Presentation.List
+Styleguide  Sub.Presentation.List
 */
 
 /*
@@ -207,22 +207,22 @@ Markup:
 <aside class="flex_auto max-w_20:md max-w_25:lg w_100 {{ modifier_class }}">
     <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-file-certificate p-r_3"></i> Credits</h4>
     <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
-      {{> "ProgramElement.Credits.Dots" }}
+      {{> "Sub.Credits.Dots" }}
     </div>
     <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
     <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
-        {{> "ProgramElement.Tags.Category" }}
+        {{> "Sub.Tags.Category" }}
     </div>
     <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
     <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
-      {{> "ProgramElement.Tags.Filter" }}
+      {{> "Sub.Tags.Filter" }}
     </div>
 </aside>
 
  
 Weight:0
  
-Styleguide ProgramElement.Player.AuxData
+Styleguide Sub.Player.AuxData
 */
 
 
@@ -244,11 +244,42 @@ Markup:
   <li>Jeanette Franecki <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
 </ul>
 
+SubComponents:
+Data.Faculty.FullName - Full Name
+Data.Faculty.FullName - Location
 
 
 Weight:0
  
-Styleguide ProgramElement.FacultyList
+Styleguide Sub.FacultyList
+
+*/
+
+/*
+Non Faculty List
+
+When you list non-event areas like Posters, and Abstracts the list removes the location of the person. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }}</li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
+  <li>Dianna Denesik III</li>
+  <li>Miguel Romaguera</li>  
+  <li>Jeanette Franecki</li>
+</ul>
+
+SubComponents:
+Data.Faculty.FullName - Full Name
+
+
+Weight:0
+ 
+Styleguide Sub.FacultyList.NoLocation
 
 */
 
@@ -287,7 +318,7 @@ Markup:
 
  Weight: 200
  
-Styleguide ProgramElement.Attachments
+Styleguide Sub.Attachments
 */
 
 /*
@@ -300,7 +331,7 @@ Markup:
  
 Weight:0
  
-Styleguide ProgramElement.PlayingDateTime
+Styleguide Sub.PlayingDateTime
 */
 
 /*
@@ -320,7 +351,7 @@ Markup:
  
 Weight:0
  
-Styleguide ProgramElement.Header.VideoThumbnail
+Styleguide Sub.Header.VideoThumbnail
 */
 
 /*
@@ -340,7 +371,7 @@ Markup:
  
 Weight:0
  
-Styleguide ProgramElement.Header.AbstractThumbnail
+Styleguide Sub.Header.AbstractThumbnail
 */
 
 /*
@@ -355,7 +386,7 @@ Markup:
 
 Weight:0
 
-Styleguide ProgramElement.ActionButtons.Favorite
+Styleguide Sub.ActionButtons.Favorite
 */
 
 /*
@@ -370,7 +401,7 @@ Markup:
 
 Weight:0
 
-Styleguide ProgramElement.ActionButtons.Favorite.Small
+Styleguide Sub.ActionButtons.Favorite.Small
 */
 
 /*
@@ -387,7 +418,7 @@ View    - when the main asset of the loaded page is a graphic, pdf, or slide dec
 Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-        {{> "ProgramElement.ActionButtons.Favorite" modifier_class="[active]"}}
+        {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
         <a href="" aria-label="download calendar reminder"  class="btn flex_none btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
@@ -397,7 +428,7 @@ Markup:
  
 Weight:0
  
-Styleguide ProgramElement.ActionButtons
+Styleguide Sub.ActionButtons
 */
 
 /*
@@ -415,7 +446,7 @@ Weight:0
 
 NOTE: This pattern is using bootstrap modal to display the message. The IDs of the modal and bs-targets are hard coded in the pattern and need to be dynamic for production.
  
-Styleguide ProgramElement.ActionButtons.LockedAttachments
+Styleguide Sub.ActionButtons.LockedAttachments
 */
 
 /*
@@ -426,18 +457,18 @@ Embargoed Attachment Actions Buttons
 Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-        {{> "ProgramElement.ActionButtons.Favorite" modifier_class="[active]"}}
+        {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
         <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
       </nav>
-      {{> ProgramElement.ActionButtons.LockedAttachments }}
+      {{> Sub.ActionButtons.LockedAttachments }}
 </aside>
 
 MarkupWrapperClasses: 
  
 Weight:0
  
-Styleguide ProgramElement.ActionButtons.EmbargoedAttachments
+Styleguide Sub.ActionButtons.EmbargoedAttachments
 */
 
 /*
@@ -450,7 +481,7 @@ watch   - watch action button
 Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-        {{> "ProgramElement.ActionButtons.Favorite" modifier_class="[active]"}}
+        {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
         <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
@@ -459,7 +490,7 @@ Markup:
  
 Weight:0
  
-Styleguide ProgramElement.ActionButtons.NoDetails
+Styleguide Sub.ActionButtons.NoDetails
 
 */
 
@@ -473,7 +504,7 @@ watch   - watch action button
 Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-        {{> "ProgramElement.ActionButtons.Favorite" modifier_class="[active]"}}
+        {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
         <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
@@ -481,7 +512,7 @@ Markup:
  
 Weight:0
  
-Styleguide ProgramElement.ActionButtons.Only
+Styleguide Sub.ActionButtons.Only
 
 */
 
@@ -495,7 +526,7 @@ The On Demand Actions buttons never have the calendar reminder button.
 Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-        {{> "ProgramElement.ActionButtons.Favorite" modifier_class="[active]"}}
+        {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
         <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
       </nav>
       <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
@@ -503,7 +534,7 @@ Markup:
  
 Weight:200
  
-Styleguide ProgramElement.ActionButtons.OnDemand
+Styleguide Sub.ActionButtons.OnDemand
 */
 
 
@@ -526,7 +557,7 @@ Markup:
  
 Weight:0
  
-Styleguide ProgramElement.Award.Flags
+Styleguide Sub.Award.Flags
 */
 
 /*
@@ -536,11 +567,11 @@ Markup:
 <div class="c_black-6 inline-flex flex_row items_center justify_start m-t_3 {{ modifier_class }}">
   <ul class="ul_inline-pipe">
     <li class="inline-flex items_center">
-      {{> "ProgramElement.Award.Flags" modifier_class="fa-star"}}
+      {{> "Sub.Award.Flags" modifier_class="fa-star"}}
       <strong class="font-size_down-1 font_copy"> Special Category</strong>
     </li>
     <li class="inline-flex items_center">
-      {{> "ProgramElement.Award.Flags" modifier_class=""}}
+      {{> "Sub.Award.Flags" modifier_class=""}}
       <strong class="font-size_down-1 font_copy"> Top Ten</strong>
     </li>
   </ul>
@@ -549,7 +580,7 @@ Markup:
 
 Weight:0
  
-Styleguide ProgramElement.Award.FlagLegend
+Styleguide Sub.Award.FlagLegend
 */
 
 /*
@@ -566,7 +597,7 @@ Markup:
  
 Weight:0
  
-Styleguide ProgramElement.Attachments.BigButton
+Styleguide Sub.Attachments.BigButton
 */
 
 /*
@@ -612,7 +643,7 @@ Markup:
  
 Weight:0
  
-Styleguide ProgramElement.Player.Chat
+Styleguide Sub.Player.Chat
 */
 
 /*
@@ -628,7 +659,7 @@ MarkupWrapperClasses:
  
 Weight:0
  
-Styleguide ProgramElement.Style.OuterBorder
+Styleguide Sub.Style.OuterBorder
 */
 
 /*
@@ -644,7 +675,7 @@ MarkupWrapperClasses:
  
 Weight:0
  
-Styleguide ProgramElement.Style.InnerBorder
+Styleguide Sub.Style.InnerBorder
 */
 
 /*
@@ -668,9 +699,11 @@ Markup:
     </div>
 </div>
 
+
+
 MarkupWrapperClasses: br_black-5
  
 Weight:0
  
-Styleguide ProgramElement.SectionHeader
+Styleguide Sub.SectionHeader
 */
