@@ -42,7 +42,7 @@ Markup:
             {{>  "ProgramElement.Presentation.List" }}
         </div>
     </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex_grow uppercase m-l_auto">
             {{> "ProgramElement.Credits.Dots" }}
         </div>
@@ -93,7 +93,7 @@ Markup:
             </div>
         </div>
     </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex_grow uppercase m-l_auto">
             {{> "ProgramElement.Credits.Dots" }}
         </div>
@@ -143,7 +143,7 @@ Markup:
             </div>
         </div>
     </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex_grow uppercase m-l_auto">
             {{> "ProgramElement.Credits.Dots" }}
         </div>
@@ -180,7 +180,7 @@ Markup:
                     </h3>
                 </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
-                    {{> "ProgramElement.ActionButtons.NoDetails"  modifier_class="Watch"}}
+                    {{> "ProgramElement.ActionButtons.OnDemand"  modifier_class="Watch"}}
                 </div>
             </div>
             <div>
@@ -191,7 +191,7 @@ Markup:
             </div>
         </div>
     </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex_grow uppercase m-l_auto">
             {{> "ProgramElement.Credits.Dots" }}
         </div>
@@ -245,16 +245,19 @@ Condensed Sessions are used for listing designs that are not full featured.
 
 Markup:
 <article class="relative">
-<div class="m-b_n5 p-x_5:lg p-x_4:md">{{> "ProgramElement.Header.VideoThumbnail" }}</div>
-<div class="br-t_3 br_primary-2 br_radius br_solid c_black flex flex_column font_0 gap_2 m-b_4 p-t_5 p_4 shadow_overlap-light t_n5 z_0 flex_column flex gap_3 bg_white">
-    <header class="p-t_3">
+<div class="b_n5 m-b_n5 p-x_4:md p-x_5:lg relative">
+{{> "ProgramElement.Header.VideoThumbnail" }}
+</div>
+<div class="br-t_3 br_primary-2 br_radius br_solid c_black flex flex_column font_0 m-b_4 p-t_5 p_4 shadow_overlap-light t_n5 z_0 flex_column flex gap_3 bg_white">
+<div class="p_2">&nbsp;</div>    
+<header class="p-t_3">
         <h3 class="font_display lh_2 c_primary-n2 font_1 m_0">
-            <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6">{{> Data.Session.ID }}</strong>
+            <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6 m-t_n3">{{> "Data.Session.ID" }}</strong>
             <span class="block font_display lh_2 font-size_up-1">
-                {{> Data.Session.Title }}
+                {{> "Data.Session.Title" }}
             </span>
         </h3>
-        <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-7 p-r_2">Category:</strong>{{> ProgramElement.Tags.Category }}</div>
+        <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> ProgramElement.Tags.Category }}</div>
     </header>
     <div class="font_n2 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
     <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
@@ -263,14 +266,11 @@ Markup:
 </div>
 </article>
 
-
-
-
 MarkupWrapperClasses: max-w_30:md
 
 Weight: 10000
  
-Styleguide Program.CondensedSession.WhatsNow
+Styleguide Program.WhatsNow
 
 */
 
@@ -281,20 +281,20 @@ Whats Happening Now
 A zone on the page that displays the current live session.
  
 Markup:
-<div class="br_2 br_accent-2 br_round br_solid m-y_4 p-x_5 relative">
-    <h1 class="br-b_2 br_accent-n1 br_solid c_accent-n3 font_bold font_display m-b_4 p-y_2 inline p-x_4 m-t_n4">What's Happening Now</h1>
-    <div class="gap-x_5 grid grid-col_3">
-        {{> Program.CondensedSession.WhatsNow }}
-        {{> Program.CondensedSession.WhatsNow }}
-        {{> Program.CondensedSession.WhatsNow }}
+<section class="">
+    <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "ProgramElement.SectionHeader" modifier_class="Playing Now" }}</h2>
+    <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
+        {{> Program.WhatsNow }}
+        {{> Program.WhatsNow }}
+        {{> Program.WhatsNow }}
     </div>
-</div>
+</section>
 
 MarkupWrapperClasses: 
  
 Weight:0
  
-Styleguide Program.WhatsNow
+Styleguide Program.WhatsNow.Grid
 */
 
 
@@ -320,64 +320,38 @@ Featured Presentation Grid
 Featured Sessions are On Demand Presentations.
  
 Markup:
-<article class="c_black font_0 m-b_4 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
+<article class="c_black font_0 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
     <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
         <div class="br-b_1 br_solid br_primary-2">
-            <div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold">
-              <ul class="ul_inline-pipe">
-                <li>Chanel 1</li>
-                <li>Navigating Health Care Economics</li>
-              </ul>
-            </div>            <div class="p_4 p-b_2 flex flex_column gap-y_4">
+            {{> "ProgramElement.CategoryFlags" }}
+            <div class="p_4 p-b_2 flex flex_column gap-y_4">
                 <header>
                     <h2 class="font_n1 uppercase c_black-7">
-                        <strong class="font_bold p-r_2">3652</strong> Cardiovascular Update for the Clinician III
+                        <strong class="font_bold p-r_2 block font-size_down-2">{{> Data.Session.ID}}-{{> Data.Presentation.ID}}</strong> {{> Data.Session.Title }}
                     </h2>
                     <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
-                        <span class="block font-size_up-1 font_display lh_1">
-                            New York Cardiovascular Symposium 2021 Welcome Video and Introduction of Session and Faculty                        </span>
+                        <span class="block font-size_up-1 font_display lh_1"> {{> Data.Presentation.Title }} </span>
                     </h3>
                 </header>
-                <div class="flex_grow m-x_auto m-l_auto m-r_0:lg w_100 ">
-                    <aside class="flex flex_none flex_column gap-y_3 m-x_auto p-b_4 p-b_4:md w_100">
-                          <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-                            <a href="" aria-label="mark as favorite" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 flex_none [active]"><i class="fas fa-heart"></i></a>        
-                            <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
-                          </nav>
-                          <a href="" aria-label="download attachments" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
-                    </aside>                </div>
+                <div class="flex_grow m-x_auto m-l_auto m-r_0:lg w_100 "> {{> "ProgramElement.ActionButtons.OnDemand" modifier_class="Watch" }}</div>
             </div>
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0">
-                 
-                <div class="font-size_down"><ul class="ul_inline-semicolon font_regular font_copy">
-  <li class="no-after font_medium c_primary-n1 inline">Role Type 1:</li>
-  <li>Pepper H. Soda III, MD, FACC <span class="opacity_9 font_light">( New York, NY, USA)<span></span></span></li>
-  <li class="no-after font_medium c_primary-n1  inline">Role Type 2:</li>
-  <li>Dianna Denesik III <span class="opacity_9 font_light">( New York, NY, USA)<span></span></span></li>
-  <li>Miguel Romaguera <span class="opacity_9 font_light">( New York, NY, USA)<span></span></span></li>
-  <li>Jeanette Franecki <span class="opacity_9 font_light">( New York, NY, USA)<span></span></span></li>
-</ul></div>
+                <div class="font-size_down">
+                {{> "ProgramElement.FacultyList" }}
+                </div>
             </div>
             </div>
         </div>
     </div>
-    <div class="c_black flex flex_wrap font_n2 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
         <div class="flex_grow uppercase m-l_auto">
-            <ul class=" gap-x_3 justify_end:md justify_start self_center ul_inline-pipe uppercase">
-              <li class="inline-flex items_center lh_0">
-                  <span class="bg_CME br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> CME
-              </li>  <li class="inline-flex items_center lh_0">
-                  <span class="bg_CNE br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> CNE
-              </li>  <li class="inline-flex items_center lh_0">
-                  <span class="bg_COP br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> COP
-              </li>  <li class="inline-flex items_center lh_0">
-                  <span class="bg_MOCII br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> MOCII
-              </li></ul>        </div>
+            {{> "ProgramElement.Credits.Dots" }}
+        </div>
     </div>
 </article>
 
-MarkupWrapperClasses: grid grid-col-3
+MarkupWrapperClasses: grid-col_3:lg grid-col_2:md grid-col_1 grid
  
 Weight:0
  
@@ -391,8 +365,46 @@ Abstracts
 description
  
 Markup:
+<article class="c_black font_0 br-t_3 br_solid br_secondary-2 br_radius isolation_isolate shadow_overlap-light relative">
+<div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2">
+<div class="flex flex_column gap-y_4">
+    <div class="br-b_1 br_solid br_primary-2">
+    <div class="absolute r_3 r_4:lg t_n2 font_5:md font_3 m-t_n2 z_2">
+        {{> "ProgramElement.Award.Flags" modifier_class="fa-star" }}
+    </div>
+        <div class="m-y_4 m-x_auto p-x_4  max-w_15:md  max-w_10 relative">
+            {{> "ProgramElement.Header.AbstractThumbnail" modifier_class="bg_acc" }}</div>
+            <div class="p_4 p-b_2 flex flex_column gap-y_4">
+                <header>
+                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_1:lg font_0 p-r_4:lg">
+                        <span class="block font-size_up-1 font_display lh_1"> {{> Data.Abstract.Title }} </span>
+                    </h3>
+                </header>
+                <div class="flex_grow m-x_auto m-l_auto m-r_0:lg w_100 "> 
+                <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+                    <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+                    <a href="" aria-label="download attachments" class="br_radius btn btn-secondary flex_auto w_80:md"><i class="far fa-paperclip"></i><span class="display_none inline:md">Attachments</span> </a><a href="" aria-label="navigate to" class="btn btn-primary flex_auto w_70">Veiw</a>
+                    </nav>
+                </aside>
+                </div>
+            </div>
+            <div>
+            <div class="p-x_4 p-b_4 flex flex_column font_0">
+                <div class="font-size_down">
+                {{> "ProgramElement.FacultyList"  modifier_class="block w_100 font-size_down" }}
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex_grow uppercase m-l_auto">
+            {{> "ProgramElement.Credits.Dots" }}
+        </div>
+    </div>
+</article>
 
-MarkupWrapperClasses: 
+MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4
  
 Weight:0
  
@@ -406,9 +418,13 @@ Abstracts Grid
 description
  
 Markup:
+{{> Program.Abstract }}
+{{> Program.Abstract }}
+{{> Program.Abstract }}
 
-MarkupWrapperClasses: 
- 
+MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg
+
+
 Weight:0
  
 Styleguide Program.Abstract.Grid
@@ -418,11 +434,26 @@ Styleguide Program.Abstract.Grid
 
 Featured Presentation Grid
 
-description
+Featured Session Grids should respond to the size of the parent container. 
+
+
  
 Markup:
+<section class="">
+<h2 class="font_bold font_display c_primary-n1">{{> "ProgramElement.SectionHeader" modifier_class="Featured Presentations" }}</h2>
+<div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 ">
+{{> "Program.FeaturedPresentation" }}
+{{> "Program.FeaturedPresentation" }}
+{{> "Program.FeaturedPresentation" }}
+{{> "Program.FeaturedPresentation" }}
+{{> "Program.FeaturedPresentation" }}
+{{> "Program.FeaturedPresentation" }}
+</div>
+</section>
 
 MarkupWrapperClasses: 
+
+NOTE: A featured presentation is smallest at 300px wide the grid coloumn size needs to be set depending on the width the parent container.
  
 Weight:0
  
