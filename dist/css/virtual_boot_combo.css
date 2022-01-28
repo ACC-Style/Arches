@@ -23818,6 +23818,54 @@ Styleguide Program.WhatsNow
 */
 /*
 
+Whats Now Item - Horizontal
+
+Condensed Sessions are used for listing designs that are not full featured.
+
+
+Markup:
+<article class="{{> Sub.Style.OuterBorder }}">
+    <div class="{{> Sub.Style.InnerBorder }} relative flex flex_row:md flex_colum">
+    <div class="flex_auto w_100 max-w_20 p_4 gap-x_5:lg gap-x_4:md self_center">
+    {{> "Sub.Header.VideoThumbnail" }}
+    </div>
+    <div class="p_4 flex_auto self_center flex flex_column gap-y_3:md gap-y_2:md">
+        <header class="p-t_3">
+            <h3 class="font_display lh_2 c_primary-n2 font_1 m_0">
+                <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6 m-t_n3">{{> "Data.Session.ID" }}</strong>
+                <span class="block font_display lh_2 font-size_up-1">
+                    {{> "Data.Session.Title" }}
+                </span>
+            </h3>
+            <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> Sub.Tags.Category }}</div>
+        </header>
+        <div class="font_n2 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
+        <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
+            <a href="" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
+        </aside>
+    </div>
+</div>
+</article>
+
+MarkupWrapperClasses: 
+
+Data:
+Data.Session.ID - Session ID
+Data.Session.Title - Session Title
+Data.Agenda.EndTime - Session End Time
+
+SubComponents:
+Sub.Header.VideoThumbnail - Thumbnail of Video
+Sub.Tags.Category - Category Tag
+Sub.ActionButtons - Watch Button
+
+Weight: 10000
+
+Styleguide Program.WhatsNow.Horizontal
+
+*/
+/*
+
 Whats Happening Now
 
 A zone on the page that displays the current live session.
