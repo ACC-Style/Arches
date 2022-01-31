@@ -1,0 +1,24 @@
+@use "sass:math";
+@use "sass:list";
+
+@function randomWords($maxCount: 5) {
+	$words: (
+		Incidunt,
+		similique,
+		soluta,
+		Et,
+		omnis,
+		quo,
+		dignissimos,
+		et,
+		tempora,
+		voluptatem
+	);
+	$i: 1;
+	$value: "";
+	@while $i < $maxCount {
+		$value: $value + list.nth( $words, random( list.length($words)) )   + " ";
+		$i: $i + 2;
+	};
+	@return $value;
+}

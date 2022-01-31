@@ -7667,7 +7667,7 @@ Simple Credit Dots
 When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
 
 Markup:
-<ul class=" gap-x_3 justify_end:md justify_start self_center ul_inline-pipe uppercase">
+<ul class=" gap-x_3 gap-y_3 justify_end:md justify_start self_center ul_inline-pipe uppercase">
   {{> Sub.Credits  modifier_class="CME" }}
   {{> Sub.Credits  modifier_class="CNE" }}
   {{> Sub.Credits  modifier_class="COP" }}
@@ -7935,7 +7935,7 @@ bg_primary  -  is the default background color
 bg_accent   -  any background color can be swapped out
 
 Markup:
-<header class="flex flex_none flex_row justify_center font_0">
+<header class="flex flex_none flex_row justify_center font_0 m-t_4 m-x_4">
     <div class="aspect_8x10:md aspect_1x1 bg-blend_multiply bg_primary bg_cover bg_no-repeat {{ modifier_class }} br_2 br_radius br_solid br_white br_white-9 flex flex_shrink grid justify_center max-w_10 max-w_15:md relative shadow_bevel-bold text_center texture_ondemand thumb bg_center">
             <i class="font-size_up-2 absolute c_white-6 fa-file-chart-pie fas flex_auto self_center text_center w_100"></i>
         </div>
@@ -8951,32 +8951,198 @@ Styleguide Program.CondensedSession
 */
 /*
 
+On Demand Shell
+
+The On Demand view is slightly different if the Session is only a shell. 
+
+Markup::after
+
+
+Weight: 10000
+
+Styleguide Program.OnDemand.Shell
+
+*/
+/*
+
+Abstracts
+
+Abstracts are a presentation of a static slide deck, or pdf with a possible attached video. These cards link to an abstract player page. 
+
+Markup:
+<article class="br_1 br_black-3 br_radius br_solid c_black flex flex_column  isolation_isolate shadow_overlap-light relative">
+    <div class="br-b_0 br-t_3 br-tl_radius br-tr_radius br_black-3 br_primary-2 br_solid flex flex_column font_ui m-b_n2 m-x_n1 m-t_n1 m-b_0 opacity_none p_0 relative"></div>
+    <div class="absolute r_3 r_4:md r_5:lg t_n2 font_5:md font_3 m-t_n2 z_2">
+        {{> "Sub.Award.Flags" modifier_class="fa-star" }}
+    </div>
+    {{> "Sub.Header.AbstractThumbnail" modifier_class="bg_acc" }}
+    <div class="p_4 p-b_2 flex flex_column gap-y_4 flex_auto">
+        <header>
+            <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_1:lg font_0 p-r_4:lg">
+                <span class="block font-size_up-1 font_display lh_1"> {{> Data.Abstract.Title }} {{modifier_class}}</span>
+            </h3>
+        </header>
+        <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md m-t_auto w_100">
+            <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+                <a href="" aria-label="navigate to" class="btn btn-primary flex_auto w_70">View</a>
+            </nav>
+        </aside>
+        <div class="p-b_4:lg p-b_3 font_n1">{{> "Sub.FacultyList.NoLocation"  modifier_class="block w_100 font-size_down" }}</div>
+    </div>
+    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch flex_none">
+        <div class="absolute br-t_1 br_primary-2 br_solid l_0 m_0 opacity_none p_0 r_0 t_0 z_2"></div>
+        <div class=" uppercase flex flex_wrap font_n3 justify_start">{{> "Sub.Credits.Dots" }}</div>
+    </div>
+</article>
+
+
+MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4
+
+Data: 
+Data.Abstract.Title - Title
+
+
+SubComponents:
+Sub.Award.Flags - Award Flags
+Sub.Header.AbstractThumbnail - Image Thumbnail
+Sub.FacultyList.NoLocation - Faculty List w/o Location
+Sub.Credits.Dots - Credit Dots
+Sub.ActionButtons - Action Buttons
+
+Weight:0
+
+Styleguide Program.GridFormat.Abstract
+*/
+/*
+
+Abstracts Grid
+
+Abstracts are presented in a grid view. 
+
+Markup:
+<section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
+    {{> Program.GridFormat.Abstract }}
+    <!-- DUPLICATE -->
+    {{> Program.GridFormat.Abstract  modifier_class="soluta et soluta voluptatem "  }}
+    {{> Program.GridFormat.Abstract modifier_class=""  }}
+</section>
+
+MarkupWrapperClasses: 
+
+NOTE: A grid-item at its smallest is 300px wide the grid column size needs to be set depending on the width the parent container.
+
+Weight:0
+
+Styleguide Program.GridFormat.Abstract.Grid
+*/
+/*
+
+Featured Presentation
+
+Featured Sessions are On Demand Presentations.
+
+
+Markup:
+<article class="br_1 br_black-3 br_radius br_solid c_black flex flex_column isolation_isolate shadow_overlap-light">
+    <div class="br-b_0 br-t_3 br-tl_radius br-tr_radius br_black-3 br_primary-2 br_solid flex flex_column font_ui m-b_n2 m-x_n1 m-t_n1 m-b_0 opacity_none p_0 relative"></div> 
+    {{> "Sub.CategoryFlags" }}
+    <div class="flex flex_auto flex_column gap-y_4 p-b_2 p_4">
+        <header>
+            <h2 class="uppercase c_black-7 font-size_down">
+                <strong class="font_bold p-r_2 block">{{> Data.Session.ID}}-{{> Data.Presentation.ID}}</strong> {{> Data.Session.Title }}
+            </h2>
+            <h3 class="font_display m-b_3 lh_2 c_primary-n2 p-r_4:lg font-size_up-2 lh_1">
+                {{> Data.Presentation.Title }} {{ modifier_class }}
+            </h3>
+        </header>
+        {{> "Sub.ActionButtons.Featured" modifier_class="Watch" }}
+        <div class="p-b_4">
+            <div class="font_n1">
+                {{> "Sub.FacultyList" }}
+            </div>
+        </div>
+    </div>   
+    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
+        <div class="absolute br-t_1 br_primary-2 br_solid l_0 m_0 opacity_none p_0 r_0 t_0 z_2"></div>
+        <div class=" uppercase flex flex_wrap font_n3 justify_start">{{> "Sub.Credits.Dots" }}</div>
+    </div>
+</article>
+
+
+
+
+MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4
+
+SubComponents:
+Sub.CategoryFlags - Category Flags
+Sub.ActionButtons.OnDemand - Action Buttons
+Sub.FacultyList - FacultyList
+Sub.Credits.Dots - Credit Dots
+
+Data:
+Data.Session.ID - Session ID (optional)
+Data.Session.Title - Session Title (optional)
+Data.Presentation.ID - Presentation ID (optional)
+Data.Presentation.Title - Presentation Title
+
+Weight:0
+
+Styleguide Program.GridFormat.FeaturedPresentation
+*/
+/*
+
+Featured Presentation Grid
+
+Featured Session Grids should respond to the size of the parent container. 
+
+Markup:
+<section class="">
+<h2 class="font_bold font_display c_primary-n1">{{> "Sub.SectionHeader" modifier_class="Featured Presentations" }}</h2>
+<div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
+{{> "Program.GridFormat.FeaturedPresentation" }}
+<!-- DUPLICATE -->
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="voluptatem quo Et dignissimos " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="omnis " }}
+<!-- End DUPLICATE -->
+</div>
+</section>
+
+MarkupWrapperClasses: 
+
+NOTE: A grid-item at its smallest is 300px wide the grid column size needs to be set depending on the width the parent container.
+
+Weight:0
+
+Styleguide Program.GridFormat.FeaturedPresentation.Grid
+*/
+/*
+
 Whats Happening Now
 
 Condensed Sessions are used for listing designs that are not full featured.
 
 
 Markup:
-<article class="relative">
-<div class="b_n5 m-b_n5 p-x_4:md p-x_5:lg relative">
-{{> "Sub.Header.VideoThumbnail" }}
-</div>
-<div class="br-t_3 br_primary-2 br_radius br_solid c_black flex flex_column font_0 m-b_4 p-t_5 p_4 shadow_overlap-light t_n5 z_0 flex_column flex gap_3 bg_white">
-<div class="p_2">&nbsp;</div>    
-<header class="p-t_3">
+<article class="relative isolation_isolate flex flex_column">
+    <div class="b_n5 m-b_n5 p-x_4:md p-x_5:lg relative z_1">
+    {{> "Sub.Header.VideoThumbnail" }}
+    </div>
+    <div class="br-t_3 br_primary-2 br_radius br_solid c_black flex flex_column font_0 m-b_4 p-t_5 p_4 shadow_overlap-light t_n5 z_0 flex_column flex gap_3 bg_white flex_auto">
+    <div class="p_2">&nbsp;</div>    
+    <header class="p-t_3">
         <h3 class="font_display lh_2 c_primary-n2 font_1 m_0">
             <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6 m-t_n3">{{> "Data.Session.ID" }}</strong>
             <span class="block font_display lh_2 font-size_up-1">
-                {{> "Data.Session.Title" }}
+                {{> "Data.Session.Title" }} {{ modifier_class }}
             </span>
         </h3>
-        <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> Sub.Tags.Category }}</div>
     </header>
-    <div class="font_n2 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
-    <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
+    <div class="font_n1 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
+    <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> Sub.Tags.Category }}</div>
+    <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100 m-t_auto">
         <a href="" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
     </aside>
-</div>
+    </div>
 </article>
 
 MarkupWrapperClasses: max-w_30:md
@@ -8993,7 +9159,7 @@ Sub.ActionButtons - Watch Button
 
 Weight: 10000
 
-Styleguide Program.WhatsNow
+Styleguide Program.GridFormat.WhatsNow
 
 */
 /*
@@ -9041,12 +9207,12 @@ Sub.ActionButtons - Watch Button
 
 Weight: 10000
 
-Styleguide Program.WhatsNow.Horizontal
+Styleguide Program.GridFormat.WhatsNow.Horizontal
 
 */
 /*
 
-Whats Happening Now
+Whats Happening Now Grid
 
 A zone on the page that displays the current live session.
 
@@ -9054,9 +9220,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.WhatsNow }}
-        {{> Program.WhatsNow }}
-        {{> Program.WhatsNow }}
+        {{> Program.GridFormat.WhatsNow modifier_class="dignissimos Et dignissimos soluta Et " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="dignissimos dignissimos soluta similique quo " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem tempora et Incidunt Incidunt " }}
     </div>
 </section>
 
@@ -9064,210 +9230,7 @@ MarkupWrapperClasses:
 
 Weight:0
 
-Styleguide Program.WhatsNow.Grid
-*/
-/*
-
-On Demand Shell
-
-The On Demand view is slightly different if the Session is only a shell. 
-
-Markup::after
-
-
-Weight: 10000
-
-Styleguide Program.OnDemand.Shell
-
-*/
-/*
-
-Featured Presentation
-
-Featured Sessions are On Demand Presentations.
-
-font_n1      - smaller
-font_0        - normal
-font_1        - larger
-
-Markup:
-<article class="br_1 br_black-3 br_radius br_solid c_black flex flex_column {{modifier_class}} isolation_isolate shadow_overlap-light">
-    <div class="br-b_0 br-t_3 br-tl_radius br-tr_radius br_black-3 br_primary-2 br_solid flex flex_column font_ui m-b_n2 m-x_n1 m-t_n1 m-b_0 opacity_none p_0 relative"></div> 
-    {{> "Sub.CategoryFlags" }}
-    <div class="flex flex_auto flex_column gap-y_4 p-b_2 p_4">
-        <header>
-            <h2 class="uppercase c_black-7 font-size_down-1">
-                <strong class="font_bold p-r_2 block">{{> Data.Session.ID}}-{{> Data.Presentation.ID}}</strong> {{> Data.Session.Title }}
-            </h2>
-            <h3 class="font_display m-b_3 lh_2 c_primary-n2 p-r_4:lg font-size_up-2 lh_1">
-                {{> Data.Presentation.Title }}
-            </h3>
-        </header>
-        {{> "Sub.ActionButtons.Featured" modifier_class="Watch" }}
-        <div class="p-b_4">
-            <div class="font_n1">
-                {{> "Sub.FacultyList" }}
-            </div>
-        </div>
-    </div>   
-    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
-        <div class="absolute br-t_1 br_primary-2 br_solid l_0 m_0 opacity_none p_0 r_0 t_0 z_2"></div>
-        <div class=" uppercase flex flex_wrap font_n3 justify_start">{{> "Sub.Credits.Dots" }}</div>
-    </div>
-</article>
-<!-- DUPLICATE -->
-<article class="br_1 br_black-3 br_radius br_solid c_black flex flex_column font_0 isolation_isolate shadow_overlap-light">
-    <div class="br-b_0 br-t_3 br-tl_radius br-tr_radius br_black-3 br_primary-2 br_solid flex flex_column font_ui m-b_n2 m-x_n1 m-t_n1 m-b_0 opacity_none p_0 relative"></div> 
-    {{> "Sub.CategoryFlags" }}
-    <div class="flex flex_auto flex_column gap-y_4 p-b_2 p_4">
-        <header>
-            <h2 class="uppercase c_black-7 font_n1">
-                <strong class="font_bold p-r_2 block font_n2">{{> Data.Session.ID}}-{{> Data.Presentation.ID}}</strong> {{> Data.Session.Title }}
-            </h2>
-            <h3 class="font_display m-b_3 lh_2 c_primary-n2 p-r_4:lg font-size_up-2 lh_1">
-                quia iste adipisci
-            </h3>
-        </header>
-        {{> "Sub.ActionButtons.Featured" modifier_class="Watch" }}
-        <div class="p-b_4">
-            <div class="font_n1">
-                {{> "Sub.FacultyList" }}
-            </div>
-        </div>
-    </div>   
-    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
-        <div class="absolute br-t_1 br_primary-2 br_solid l_0 m_0 opacity_none p_0 r_0 t_0 z_2"></div>
-        <div class=" uppercase flex flex_wrap font_n3 justify_start">{{> "Sub.Credits.Dots" }}</div>
-    </div>
-</article>
-
-
-
-MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4
-
-SubComponents:
-Sub.CategoryFlags - Category Flags
-Sub.ActionButtons.OnDemand - Action Buttons
-Sub.FacultyList - FacultyList
-Sub.Credits.Dots - Credit Dots
-
-Data:
-Data.Session.ID - Session ID (optional)
-Data.Session.Title - Session Title (optional)
-Data.Presentation.ID - Presentation ID (optional)
-Data.Presentation.Title - Presentation Title
-
-Weight:0
-
-Styleguide Program.FeaturedPresentation
-*/
-/*
-
-Abstracts
-
-Abstracts are a presentation of a static slide deck, or pdf with a possible attached video. These cards link to an abstract player page. 
-
-Markup:
-<article class="c_black font_0 br-t_3 br_solid br_secondary-2 br_radius isolation_isolate shadow_overlap-light relative">
-<div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2">
-<div class="flex flex_column gap-y_4">
-    <div class="br-b_1 br_solid br_primary-2">
-    <div class="absolute r_3 r_4:lg t_n2 font_5:md font_3 m-t_n2 z_2">
-        {{> "Sub.Award.Flags" modifier_class="fa-star" }}
-    </div>
-        <div class="m-y_4 m-x_auto p-x_4  max-w_15:md  max-w_10 relative">
-            {{> "Sub.Header.AbstractThumbnail" modifier_class="bg_acc" }}</div>
-            <div class="p_4 p-b_2 flex flex_column gap-y_4">
-                <header>
-                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_1:lg font_0 p-r_4:lg">
-                        <span class="block font-size_up-1 font_display lh_1"> {{> Data.Abstract.Title }} </span>
-                    </h3>
-                </header>
-                <div class="flex_grow m-x_auto m-l_auto m-r_0:lg w_100 "> 
-                <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
-                    <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-                        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto w_70">View</a>
-                    </nav>
-                </aside>
-                </div>
-            </div>
-            <div>
-            <div class="p-x_4 p-b_4 flex flex_column font_0">
-                <div class="font-size_down">
-                {{> "Sub.FacultyList.NoLocation"  modifier_class="block w_100 font-size_down" }}
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex_grow uppercase m-l_auto">
-            {{> "Sub.Credits.Dots" }}
-        </div>
-    </div>
-</article>
-
-MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4
-
-Data: 
-Data.Abstract.Title - Title
-
-
-SubComponents:
-Sub.Award.Flags - Award Flags
-Sub.Header.AbstractThumbnail - Image Thumbnail
-Sub.FacultyList.NoLocation - Faculty List w/o Location
-Sub.Credits.Dots - Credit Dots
-Sub.ActionButtons - Action Buttons
-
-Weight:0
-
-Styleguide Program.Abstract
-*/
-/*
-
-Abstracts Grid
-
-Abstracts are presented in a grid view. 
-
-Markup:
-<section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
-{{> Program.Abstract }}
-{{> Program.Abstract }}
-{{> Program.Abstract }}
-</section>
-
-MarkupWrapperClasses: 
-
-NOTE: A grid-item at its smallest is 300px wide the grid column size needs to be set depending on the width the parent container.
-
-Weight:0
-
-Styleguide Program.Abstract.Grid
-*/
-/*
-
-Featured Presentation Grid
-
-Featured Session Grids should respond to the size of the parent container. 
-
-Markup:
-<section class="">
-<h2 class="font_bold font_display c_primary-n1">{{> "Sub.SectionHeader" modifier_class="Featured Presentations" }}</h2>
-<div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
-{{> "Program.FeaturedPresentation" }}
-{{> "Program.FeaturedPresentation" }}
-{{> "Program.FeaturedPresentation" }}
-</div>
-</section>
-
-MarkupWrapperClasses: 
-
-NOTE: A grid-item at its smallest is 300px wide the grid column size needs to be set depending on the width the parent container.
-
-Weight:0
-
-Styleguide Program.FeaturedPresentation.Grid
+Styleguide Program.GridFormat.WhatsNow.Grid
 */
 /*
 Sponsor Tiles
