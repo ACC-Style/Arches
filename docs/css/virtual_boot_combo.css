@@ -22527,7 +22527,7 @@ Category Flags
 Description: A graphic treatment for the category flags which are tags applied like channel and type.
 
 Markup:
-<div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold">
+<div class="font_n3 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold self_start">
   <ul class="ul_inline-pipe">
     <li>Channel 1</li>
     <li>{{>"Data.Agenda.ChannelName"}}</li>
@@ -22939,6 +22939,26 @@ Markup:
 Weight:200
 
 Styleguide Sub.ActionButtons.OnDemand
+*/
+/*
+Action Buttons Featured
+
+The Featured Actions buttons never have the calendar reminder button.  
+
+
+
+Markup:
+<aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100 m-t_auto">
+      <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+        {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
+        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
+      </nav>
+      <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
+</aside>
+
+Weight:200
+
+Styleguide Sub.ActionButtons.Featured
 */
 /*
 Abstract Flag
@@ -23820,31 +23840,31 @@ Styleguide Program.WhatsNow
 
 Whats Now Item - Horizontal
 
-Condensed Sessions are used for listing designs that are not full featured.
+Whats happening now items are used for listing designs that are not full featured. When there is only one on a full width page you can use this horizontal design.
 
 
 Markup:
 <article class="{{> Sub.Style.OuterBorder }}">
     <div class="{{> Sub.Style.InnerBorder }} relative flex flex_row:md flex_colum">
-    <div class="flex_auto w_100 max-w_20 p_4 gap-x_5:lg gap-x_4:md self_center">
-    {{> "Sub.Header.VideoThumbnail" }}
+        <div class="flex_auto w_100 max-w_20 p_4 gap-x_5:lg gap-x_4:md self_center">
+        {{> "Sub.Header.VideoThumbnail" }}
+        </div>
+        <div class="p_4 flex_auto self_center flex flex_column gap-y_3:md gap-y_2:md">
+            <header class="p-t_3">
+                <h3 class="font_display lh_2 c_primary-n2 font_1 m_0">
+                    <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6 m-t_n3">{{> "Data.Session.ID" }}</strong>
+                    <span class="block font_display lh_2 font-size_up-1">
+                        {{> "Data.Session.Title" }}
+                    </span>
+                </h3>
+                <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> Sub.Tags.Category }}</div>
+            </header>
+            <div class="font_n2 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
+            <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
+                <a href="" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
+            </aside>
+        </div>
     </div>
-    <div class="p_4 flex_auto self_center flex flex_column gap-y_3:md gap-y_2:md">
-        <header class="p-t_3">
-            <h3 class="font_display lh_2 c_primary-n2 font_1 m_0">
-                <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6 m-t_n3">{{> "Data.Session.ID" }}</strong>
-                <span class="block font_display lh_2 font-size_up-1">
-                    {{> "Data.Session.Title" }}
-                </span>
-            </h3>
-            <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> Sub.Tags.Category }}</div>
-        </header>
-        <div class="font_n2 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
-        <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
-            <a href="" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
-        </aside>
-    </div>
-</div>
 </article>
 
 MarkupWrapperClasses: 
@@ -23902,43 +23922,68 @@ Styleguide Program.OnDemand.Shell
 */
 /*
 
-Featured Presentation Grid
+Featured Presentation
 
 Featured Sessions are On Demand Presentations.
 
+font_n1      - smaller
+font_0        - normal
+font_1        - larger
+
 Markup:
-<article class="c_black font_0 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
-    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
-        <div class="br-b_1 br_solid br_primary-2">
-            {{> "Sub.CategoryFlags" }}
-            <div class="p_4 p-b_2 flex flex_column gap-y_4">
-                <header>
-                    <h2 class="font_n1 uppercase c_black-7">
-                        <strong class="font_bold p-r_2 block font-size_down-2">{{> Data.Session.ID}}-{{> Data.Presentation.ID}}</strong> {{> Data.Session.Title }}
-                    </h2>
-                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
-                        <span class="block font-size_up-1 font_display lh_1"> {{> Data.Presentation.Title }} </span>
-                    </h3>
-                </header>
-                <div class="flex_grow m-x_auto m-l_auto m-r_0:lg w_100 "> {{> "Sub.ActionButtons.OnDemand" modifier_class="Watch" }}</div>
-            </div>
-            <div>
-            <div class="p-x_4 p-b_4 flex flex_column font_0">
-                <div class="font-size_down">
+<article class="br_1 br_black-3 br_radius br_solid c_black flex flex_column {{modifier_class}} isolation_isolate shadow_overlap-light">
+    <div class="br-b_0 br-t_3 br-tl_radius br-tr_radius br_black-3 br_primary-2 br_solid flex flex_column font_ui m-b_n2 m-x_n1 m-t_n1 m-b_0 opacity_none p_0 relative"></div> 
+    {{> "Sub.CategoryFlags" }}
+    <div class="flex flex_auto flex_column gap-y_4 p-b_2 p_4">
+        <header>
+            <h2 class="uppercase c_black-7 font-size_down-1">
+                <strong class="font_bold p-r_2 block">{{> Data.Session.ID}}-{{> Data.Presentation.ID}}</strong> {{> Data.Session.Title }}
+            </h2>
+            <h3 class="font_display m-b_3 lh_2 c_primary-n2 p-r_4:lg font-size_up-2 lh_1">
+                {{> Data.Presentation.Title }}
+            </h3>
+        </header>
+        {{> "Sub.ActionButtons.Featured" modifier_class="Watch" }}
+        <div class="p-b_4">
+            <div class="font_n1">
                 {{> "Sub.FacultyList" }}
-                </div>
-            </div>
             </div>
         </div>
+    </div>   
+    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
+        <div class="absolute br-t_1 br_primary-2 br_solid l_0 m_0 opacity_none p_0 r_0 t_0 z_2"></div>
+        <div class=" uppercase flex flex_wrap font_n3 justify_start">{{> "Sub.Credits.Dots" }}</div>
     </div>
-    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex_grow uppercase m-l_auto">
-            {{> "Sub.Credits.Dots" }}
+</article>
+<!-- DUPLICATE -->
+<article class="br_1 br_black-3 br_radius br_solid c_black flex flex_column font_0 isolation_isolate shadow_overlap-light">
+    <div class="br-b_0 br-t_3 br-tl_radius br-tr_radius br_black-3 br_primary-2 br_solid flex flex_column font_ui m-b_n2 m-x_n1 m-t_n1 m-b_0 opacity_none p_0 relative"></div> 
+    {{> "Sub.CategoryFlags" }}
+    <div class="flex flex_auto flex_column gap-y_4 p-b_2 p_4">
+        <header>
+            <h2 class="uppercase c_black-7 font_n1">
+                <strong class="font_bold p-r_2 block font_n2">{{> Data.Session.ID}}-{{> Data.Presentation.ID}}</strong> {{> Data.Session.Title }}
+            </h2>
+            <h3 class="font_display m-b_3 lh_2 c_primary-n2 p-r_4:lg font-size_up-2 lh_1">
+                quia iste adipisci
+            </h3>
+        </header>
+        {{> "Sub.ActionButtons.Featured" modifier_class="Watch" }}
+        <div class="p-b_4">
+            <div class="font_n1">
+                {{> "Sub.FacultyList" }}
+            </div>
         </div>
+    </div>   
+    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
+        <div class="absolute br-t_1 br_primary-2 br_solid l_0 m_0 opacity_none p_0 r_0 t_0 z_2"></div>
+        <div class=" uppercase flex flex_wrap font_n3 justify_start">{{> "Sub.Credits.Dots" }}</div>
     </div>
 </article>
 
-MarkupWrapperClasses: grid-col_3:lg grid-col_2:md grid-col_1 grid
+
+
+MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4
 
 SubComponents:
 Sub.CategoryFlags - Category Flags
@@ -24046,15 +24091,10 @@ Featured Presentation Grid
 
 Featured Session Grids should respond to the size of the parent container. 
 
-
-
 Markup:
 <section class="">
 <h2 class="font_bold font_display c_primary-n1">{{> "Sub.SectionHeader" modifier_class="Featured Presentations" }}</h2>
-<div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 ">
-{{> "Program.FeaturedPresentation" }}
-{{> "Program.FeaturedPresentation" }}
-{{> "Program.FeaturedPresentation" }}
+<div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.FeaturedPresentation" }}
 {{> "Program.FeaturedPresentation" }}
 {{> "Program.FeaturedPresentation" }}

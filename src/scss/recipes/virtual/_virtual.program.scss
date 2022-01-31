@@ -390,43 +390,65 @@ Styleguide Program.OnDemand.Shell
 
 /*
 
-Featured Presentation Grid
+Featured Presentation
 
 Featured Sessions are On Demand Presentations.
- 
+
+
 Markup:
-<article class="c_black font_0 br-t_3 br_solid br_primary-2 br_radius isolation_isolate shadow_overlap-light">
-    <div class="br_1 br-b_0 br-tr_radius br-tl_radius br_solid br_black-3 flex flex_column font_ui m-t_n2 relative">
-        <div class="br-b_1 br_solid br_primary-2">
-            {{> "Sub.CategoryFlags" }}
-            <div class="p_4 p-b_2 flex flex_column gap-y_4">
-                <header>
-                    <h2 class="font_n1 uppercase c_black-7">
-                        <strong class="font_bold p-r_2 block font-size_down-2">{{> Data.Session.ID}}-{{> Data.Presentation.ID}}</strong> {{> Data.Session.Title }}
-                    </h2>
-                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
-                        <span class="block font-size_up-1 font_display lh_1"> {{> Data.Presentation.Title }} </span>
-                    </h3>
-                </header>
-                <div class="flex_grow m-x_auto m-l_auto m-r_0:lg w_100 "> {{> "Sub.ActionButtons.OnDemand" modifier_class="Watch" }}</div>
-            </div>
-            <div>
-            <div class="p-x_4 p-b_4 flex flex_column font_0">
-                <div class="font-size_down">
+<article class="br_1 br_black-3 br_radius br_solid c_black flex flex_column {{modifier_class}} isolation_isolate shadow_overlap-light">
+    <div class="br-b_0 br-t_3 br-tl_radius br-tr_radius br_black-3 br_primary-2 br_solid flex flex_column font_ui m-b_n2 m-x_n1 m-t_n1 m-b_0 opacity_none p_0 relative"></div> 
+    {{> "Sub.CategoryFlags" }}
+    <div class="flex flex_auto flex_column gap-y_4 p-b_2 p_4">
+        <header>
+            <h2 class="uppercase c_black-7 font-size_down-1">
+                <strong class="font_bold p-r_2 block">{{> Data.Session.ID}}-{{> Data.Presentation.ID}}</strong> {{> Data.Session.Title }}
+            </h2>
+            <h3 class="font_display m-b_3 lh_2 c_primary-n2 p-r_4:lg font-size_up-2 lh_1">
+                {{> Data.Presentation.Title }}
+            </h3>
+        </header>
+        {{> "Sub.ActionButtons.Featured" modifier_class="Watch" }}
+        <div class="p-b_4">
+            <div class="font_n1">
                 {{> "Sub.FacultyList" }}
-                </div>
-            </div>
             </div>
         </div>
+    </div>   
+    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
+        <div class="absolute br-t_1 br_primary-2 br_solid l_0 m_0 opacity_none p_0 r_0 t_0 z_2"></div>
+        <div class=" uppercase flex flex_wrap font_n3 justify_start">{{> "Sub.Credits.Dots" }}</div>
     </div>
-    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex_grow uppercase m-l_auto">
-            {{> "Sub.Credits.Dots" }}
+</article>
+<!-- DUPLICATE -->
+<article class="br_1 br_black-3 br_radius br_solid c_black flex flex_column font_0 isolation_isolate shadow_overlap-light">
+    <div class="br-b_0 br-t_3 br-tl_radius br-tr_radius br_black-3 br_primary-2 br_solid flex flex_column font_ui m-b_n2 m-x_n1 m-t_n1 m-b_0 opacity_none p_0 relative"></div> 
+    {{> "Sub.CategoryFlags" }}
+    <div class="flex flex_auto flex_column gap-y_4 p-b_2 p_4">
+        <header>
+            <h2 class="uppercase c_black-7 font_n1">
+                <strong class="font_bold p-r_2 block font_n2">{{> Data.Session.ID}}-{{> Data.Presentation.ID}}</strong> {{> Data.Session.Title }}
+            </h2>
+            <h3 class="font_display m-b_3 lh_2 c_primary-n2 p-r_4:lg font-size_up-2 lh_1">
+                quia iste adipisci
+            </h3>
+        </header>
+        {{> "Sub.ActionButtons.Featured" modifier_class="Watch" }}
+        <div class="p-b_4">
+            <div class="font_n1">
+                {{> "Sub.FacultyList" }}
+            </div>
         </div>
+    </div>   
+    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
+        <div class="absolute br-t_1 br_primary-2 br_solid l_0 m_0 opacity_none p_0 r_0 t_0 z_2"></div>
+        <div class=" uppercase flex flex_wrap font_n3 justify_start">{{> "Sub.Credits.Dots" }}</div>
     </div>
 </article>
 
-MarkupWrapperClasses: grid-col_3:lg grid-col_2:md grid-col_1 grid
+
+
+MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4
 
 SubComponents:
 Sub.CategoryFlags - Category Flags
@@ -536,16 +558,11 @@ Styleguide Program.Abstract.Grid
 Featured Presentation Grid
 
 Featured Session Grids should respond to the size of the parent container. 
-
-
  
 Markup:
 <section class="">
 <h2 class="font_bold font_display c_primary-n1">{{> "Sub.SectionHeader" modifier_class="Featured Presentations" }}</h2>
-<div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 ">
-{{> "Program.FeaturedPresentation" }}
-{{> "Program.FeaturedPresentation" }}
-{{> "Program.FeaturedPresentation" }}
+<div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.FeaturedPresentation" }}
 {{> "Program.FeaturedPresentation" }}
 {{> "Program.FeaturedPresentation" }}
