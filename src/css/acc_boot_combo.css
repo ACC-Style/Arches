@@ -1259,7 +1259,7 @@ Styleguide Typography.Font.Color.Black&White
   color: rgba(19, 18, 18, 0.38) !important;
 }
 
-.c_black-5 {
+.c_black-5, .btn.disabled, button.btn.disabled, input[type=button].btn.disabled, input[type=reset].btn.disabled, input[type=submit].btn.disabled, .btn_acc-primary.disabled {
   color: rgba(19, 18, 18, 0.5) !important;
 }
 
@@ -1311,7 +1311,7 @@ Styleguide Typography.Font.Color.Black&White
   color: rgba(255, 255, 255, 0.38) !important;
 }
 
-.c_white-5, .btn.disabled, button.btn.disabled, input[type=button].btn.disabled, input[type=reset].btn.disabled, input[type=submit].btn.disabled, .btn_acc-primary.disabled {
+.c_white-5 {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
@@ -9050,6 +9050,10 @@ Markup:
 Styleguide Decorator.Border.Style
 
 */
+.br_inherit {
+  border-color: inherit;
+}
+
 .br_none, .btn_acc-primary {
   border-style: none;
 }
@@ -14659,12 +14663,16 @@ Styleguide List.InlineType
           padding-inline-end: 0.5em;
   opacity: 0.6;
 }
+.ul_inline-comma li.no-after,
+.ul_inline-semicolon li.no-after,
+.ul_inline-pipe li.no-after {
+  -webkit-padding-end: 0.5em;
+          padding-inline-end: 0.5em;
+}
 .ul_inline-comma li.no-after::after,
 .ul_inline-semicolon li.no-after::after,
 .ul_inline-pipe li.no-after::after {
   display: none;
-  -webkit-padding-end: 0.5em;
-          padding-inline-end: 0.5em;
 }
 
 .ul_inline-comma > li:not(:last-child)::after {
