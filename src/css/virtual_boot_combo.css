@@ -396,9 +396,6 @@ Styleguide Anatomy.ExtraCredit
   font-size: 20.25px;
   font-size: 1.265625rem;
 }
-.reading-typography h5 {
-  font-weight: 700;
-}
 .reading-typography h5,.reading-typography h6 {
   font-size: 18px;
   font-size: 1.125rem;
@@ -1361,23 +1358,39 @@ Weight: -80
   Styleguide Typography.Font.Weight
  */
 .font_light {
-  font-weight: 100 !important;
+  font-weight: 300;
 }
 
 .font_regular {
-  font-weight: 400 !important;
+  font-weight: 400;
 }
 
 .font_medium, .btn_acc-primary {
-  font-weight: 500 !important;
+  font-weight: 500;
 }
 
 .font_bold {
-  font-weight: 700 !important;
+  font-weight: 700;
 }
 
 .font_xbold {
-  font-weight: 900 !important;
+  font-weight: 800;
+}
+
+.font_display.font_light, .font_light .font_display, .font_display .font_light {
+  font-weight: 400;
+}
+.font_display.font_regular, .font_regular .font_display, .font_display .font_regular {
+  font-weight: 500;
+}
+.font_display.font_medium, .font_display.btn_acc-primary, .font_medium .font_display, .btn_acc-primary .font_display, .font_display .font_medium, .font_display .btn_acc-primary {
+  font-weight: 600;
+}
+.font_display.font_bold, .font_bold .font_display, .font_display .font_bold {
+  font-weight: 700;
+}
+.font_display.font_xbold, .font_xbold .font_display, .font_display .font_xbold {
+  font-weight: 900;
 }
 
 /*
@@ -23613,7 +23626,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_3619">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_7298">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -23642,11 +23655,11 @@ Markup:
             </div>
         </div>
     </div>
-    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3 relative">
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="btn btn-small btn-secondary" href="#session_3619">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_7298">top</a></div>
     </div>
 </article>
 
@@ -23864,8 +23877,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="voluptatem voluptatem soluta et similique Incidunt soluta similique "  }}
-    {{> Program.GridFormat.Abstract modifier_class=""  }}
+    {{> Program.GridFormat.Abstract  modifier_class=""  }}
+    {{> Program.GridFormat.Abstract modifier_class="voluptatem voluptatem tempora soluta similique Incidunt dignissimos Et "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -23942,8 +23955,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="" }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="tempora Incidunt quo " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Incidunt soluta similique dignissimos " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="dignissimos similique quo voluptatem et " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -24061,9 +24074,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="Incidunt voluptatem dignissimos " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="tempora soluta similique Incidunt " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="omnis et " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="" }}
+        {{> Program.GridFormat.WhatsNow modifier_class="omnis similique " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem soluta et voluptatem voluptatem et quo " }}
     </div>
 </section>
 
@@ -25481,12 +25494,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-weight: 400;
   font-family: "Maven Pro","Muli","Open Sans","system",sans-serif;
-}
-
-h6, .h6 {
-  font-weight: 700;
 }
 
 p {
@@ -25507,10 +25515,6 @@ var {
 
 form {
   border-color: rgba(19, 18, 18, 0.38);
-}
-
-label {
-  font-weight: 700;
 }
 
 label,input,
@@ -25748,7 +25752,6 @@ td {
 thead {
   padding: 4px 8px 0;
   padding: 0.25rem 0.5rem 0;
-  font-weight: 700;
 }
 
 tbody {
@@ -33027,7 +33030,6 @@ Weight: 1000
 Styleguide  Bootstrap.Components
 */
 .btn {
-  font-weight: 500;
   font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   white-space: nowrap;
 }

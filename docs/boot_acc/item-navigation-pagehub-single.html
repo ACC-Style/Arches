@@ -252,28 +252,28 @@
                     </aside>
                 </section>
                 <main class="w_100 flex_auto">
-                            <header class="bg_white kss-section kss-section--depth-2 br_radius shadow_overlap-light br_radius" id="kssref-bootstrap-carousel">
+                            <header class="bg_white kss-section kss-section--depth-3 br_radius shadow_overlap-light br_radius" id="kssref-navigation-pagehub-single">
                         <article class="kss-section__content relative">
                             <div class="absolute t_0 r_4 flex flex_row gap-x_2 justify_end">
-                                <a class="c_white bg_black-5 c_white flex_none h:bg_black-7 inline-block p_2 shadow_overlap-light" target="_blank" href="item-bootstrap-carousel.html" title="pop out component into new tab">
+                                    <div class="inline-block flex_none p_2 bg_highlight c_white shadow_overlap-light">
+                                        <i class="fas fa-fw fa-comment-alt"></i>
+                                    </div>
+                                <a class="c_white bg_black-5 c_white flex_none h:bg_black-7 inline-block p_2 shadow_overlap-light" target="_blank" href="item-navigation-pagehub-single.html" title="pop out component into new tab">
                                     <i class="fa-external-link fa-fw fas fa-fw fas"></i>
                                 </a>
                             </div>
-                                <p class="kss-section__source font_n3"> Source: <span>dist/css/acc_boot.css</span>, line <span>15490</span>
+                                <p class="kss-section__source font_n3"> Source: <span>dist/css/acc_boot.css</span>, line <span>7819</span>
                                 </p>
-                            <a class="kss-section__permalink" href="#kssref-bootstrap-carousel">
-                                <h2 class="kss-section__item c_primary kss-section__item--depth-2">
-                                    <span class="kss-section__ref">3.2</span>
-                                    <span class="kss-section__name">Carousel ALT</span>
-                                </h2>
+                            <a class="kss-section__permalink" href="#kssref-navigation-pagehub-single">
+                                <h3 class="kss-section__item c_primary kss-section__item--depth-3">
+                                    <span class="kss-section__ref">5.2.3</span>
+                                    <span class="kss-section__name">Page Hub Single</span>
+                                </h3>
                             </a>
                                 <div class="kss-section__description reading-typography font-size_up overflow_auto ">
                                     <div class="font_n1">
                                     </div>
-                                    <p>A slide-show component for cycling through groups of images and text.
-.no-controls            Will remove left and right arrow
-.text-indicators        Converts the circle indicators to text tabs that lock to the right side of the images.
-.chevron-on             Adds a light orange chevron on the '.active' indicator to increase its impact.</p>
+                                    <p>A collection of links that collapses the children of the nav item.</p>
 
                                 </div>
                         </article>
@@ -282,241 +282,85 @@
                                 </h1>
                                 <div class="kss-modifiers__example">
                                     <div class="">
-                                        <div
-	id="carouselExampleFade"
-	class="carousel carousel-alt slide no-controls text-indicators chevron-on"
->
-	<ol class="carousel-indicators">
-		<li data-target="#carouselExampleFade" data-slide-to="0" class="wrap" >
-			quaerat odit assumenda
-		</li>
-		<li data-target="#carouselExampleFade" data-slide-to="1" class=" wrap">
-			delectus sunt optio
-		</li>
-		<li data-target="#carouselExampleFade" data-slide-to="2" class=" wrap">
-			deserunt quia quasi
-		</li>
-	</ol>
-	<!-- Wrapper for slides -->
-	<div class="carousel-inner" role="listbox">
-		<div class="carousel-item active">
-			<a><img class="block w_100" src="http://lorempixel.com/630/420/animals" alt="..."/></a>
-			<div class="carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0">
-                    <span class="title  font_display block m-b_2 font_4:md m-b_3:md">Cardiac Syncope Program Launches!</span>
-                    <p><strong>NEW</strong>&nbsp;|&nbsp;Hear from an expert panel and complete four patient cases to test your knowledge on our Syncope Program! <a href="http://edu.acc.org/diweb/catalog/item/eid/SYNCOPE2019" title="" class="" target="_blank"><strong>Find out more!</strong></a></p>
+                                        <ul class="c_primary font_copy ul_none font_1">
+    <li class="nav-item active" data-nav="child">
+        <div class="flex flex_row">
+              <div class="opacity_0 flex flex_column flex_none font-size_down p-y_2 justify_start" aria-expanded="false">
+                <div class="flex_none " >
+                        <span class="fa-stack">
+                        <i class="fas fa-minus fa-stack-1x"></i>
+                        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+                        </span>
                 </div>
-		</div>
-		<div class="carousel-item">
-			<a><img class="block w_100" src="http://lorempixel.com/630/420/nature" alt="..."/></a>
-			<div class="carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0">
-				<span class="title font_display block m-b_2 font_4:md m-b_3:md">sint explicabo sequi</span> Earum nihil omnis.
-			</div>
-		</div>
-		<div class="carousel-item">
-			<a><img class="block w_100" src="http://lorempixel.com/630/420/food" alt="..."/></a>
-			<div class="carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0">
-				<span class="title font_display block m-b_2 font_4:md m-b_3:md">sint explicabo sequi</span> Earum nihil omnis.
-			</div>
-		</div>
-	</div>
-	<!-- Controls -->
-	<a
-		class="left carousel-control-prev"
-		href="#carouselExampleFade"
-		role="button"
-		data-slide="prev"
-	>
-		<i class="fas fa-chevron-left"></i>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a
-		class="right carousel-control-next"
-		href="#carouselExampleFade"
-		role="button"
-		data-slide="next"
-	>
-		<i class="fas fa-chevron-right"></i>
-		<span class="sr-only">Next</span>
-	</a>
-</div>
+            </div>
+            <div class="flex_auto self_center">
+                <a class="active p-y_2 w_100 inline-block h:underline self_center font-size_up font_medium p-l_3">Parent Nav</a>
+            </div>
+        </div>
+    </li>
+</ul>
                                     </div>
                                 </div>
                             </article>
+                            <div class="bg_highlight-4 block c_black inline-block p-y_3 p-x_4 w_100">
+                                <h5 class="font_bold m_0 c_black">NOTE:</h5>
+                                Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly.
+                            </div>
                             <section class="relative  br-t_1 br_solid br_black-2 bg_black-1 shadow_n1 texture_light">
-                                <main class="kss-section__markup overflow_scroll scrollbar-mini collapse transition_3" id="collapse-bootstrap-carousel">
-                                    <pre><code class="language-markup"  id="code-bootstrap-carousel" value='&lt;div
-	id&#x3D;&quot;carouselExampleFade&quot;
-	class&#x3D;&quot;carousel carousel-alt slide no-controls text-indicators chevron-on&quot;
-&gt;
-	&lt;ol class&#x3D;&quot;carousel-indicators&quot;&gt;
-		&lt;li data-target&#x3D;&quot;#carouselExampleFade&quot; data-slide-to&#x3D;&quot;0&quot; class&#x3D;&quot;wrap&quot; &gt;
-			quaerat odit assumenda
-		&lt;/li&gt;
-		&lt;li data-target&#x3D;&quot;#carouselExampleFade&quot; data-slide-to&#x3D;&quot;1&quot; class&#x3D;&quot; wrap&quot;&gt;
-			delectus sunt optio
-		&lt;/li&gt;
-		&lt;li data-target&#x3D;&quot;#carouselExampleFade&quot; data-slide-to&#x3D;&quot;2&quot; class&#x3D;&quot; wrap&quot;&gt;
-			deserunt quia quasi
-		&lt;/li&gt;
-	&lt;/ol&gt;
-	&lt;!-- Wrapper for slides --&gt;
-	&lt;div class&#x3D;&quot;carousel-inner&quot; role&#x3D;&quot;listbox&quot;&gt;
-		&lt;div class&#x3D;&quot;carousel-item active&quot;&gt;
-			&lt;a&gt;&lt;img class&#x3D;&quot;block w_100&quot; src&#x3D;&quot;http://lorempixel.com/630/420/animals&quot; alt&#x3D;&quot;...&quot;/&gt;&lt;/a&gt;
-			&lt;div class&#x3D;&quot;carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0&quot;&gt;
-                    &lt;span class&#x3D;&quot;title  font_display block m-b_2 font_4:md m-b_3:md&quot;&gt;Cardiac Syncope Program Launches!&lt;/span&gt;
-                    &lt;p&gt;&lt;strong&gt;NEW&lt;/strong&gt;&amp;nbsp;|&amp;nbsp;Hear from an expert panel and complete four patient cases to test your knowledge on our Syncope Program! &lt;a href&#x3D;&quot;http://edu.acc.org/diweb/catalog/item/eid/SYNCOPE2019&quot; title&#x3D;&quot;&quot; class&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;strong&gt;Find out more!&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+                                <main class="kss-section__markup overflow_scroll scrollbar-mini collapse transition_3" id="collapse-navigation-pagehub-single">
+                                    <pre><code class="language-markup"  id="code-navigation-pagehub-single" value='&lt;ul class&#x3D;&quot;c_primary font_copy ul_none font_1&quot;&gt;
+    &lt;li class&#x3D;&quot;nav-item active&quot; data-nav&#x3D;&quot;child&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex_row&quot;&gt;
+              &lt;div class&#x3D;&quot;opacity_0 flex flex_column flex_none font-size_down p-y_2 justify_start&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
+                &lt;div class&#x3D;&quot;flex_none &quot; &gt;
+                        &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+                        &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+                        &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+                        &lt;/span&gt;
                 &lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;carousel-item&quot;&gt;
-			&lt;a&gt;&lt;img class&#x3D;&quot;block w_100&quot; src&#x3D;&quot;http://lorempixel.com/630/420/nature&quot; alt&#x3D;&quot;...&quot;/&gt;&lt;/a&gt;
-			&lt;div class&#x3D;&quot;carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0&quot;&gt;
-				&lt;span class&#x3D;&quot;title font_display block m-b_2 font_4:md m-b_3:md&quot;&gt;sint explicabo sequi&lt;/span&gt; Earum nihil omnis.
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;carousel-item&quot;&gt;
-			&lt;a&gt;&lt;img class&#x3D;&quot;block w_100&quot; src&#x3D;&quot;http://lorempixel.com/630/420/food&quot; alt&#x3D;&quot;...&quot;/&gt;&lt;/a&gt;
-			&lt;div class&#x3D;&quot;carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0&quot;&gt;
-				&lt;span class&#x3D;&quot;title font_display block m-b_2 font_4:md m-b_3:md&quot;&gt;sint explicabo sequi&lt;/span&gt; Earum nihil omnis.
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;!-- Controls --&gt;
-	&lt;a
-		class&#x3D;&quot;left carousel-control-prev&quot;
-		href&#x3D;&quot;#carouselExampleFade&quot;
-		role&#x3D;&quot;button&quot;
-		data-slide&#x3D;&quot;prev&quot;
-	&gt;
-		&lt;i class&#x3D;&quot;fas fa-chevron-left&quot;&gt;&lt;/i&gt;
-		&lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
-	&lt;/a&gt;
-	&lt;a
-		class&#x3D;&quot;right carousel-control-next&quot;
-		href&#x3D;&quot;#carouselExampleFade&quot;
-		role&#x3D;&quot;button&quot;
-		data-slide&#x3D;&quot;next&quot;
-	&gt;
-		&lt;i class&#x3D;&quot;fas fa-chevron-right&quot;&gt;&lt;/i&gt;
-		&lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;/span&gt;
-	&lt;/a&gt;
-&lt;/div&gt;'>&lt;div
-	id&#x3D;&quot;carouselExampleFade&quot;
-	class&#x3D;&quot;carousel carousel-alt slide no-controls text-indicators chevron-on&quot;
-&gt;
-	&lt;ol class&#x3D;&quot;carousel-indicators&quot;&gt;
-		&lt;li data-target&#x3D;&quot;#carouselExampleFade&quot; data-slide-to&#x3D;&quot;0&quot; class&#x3D;&quot;wrap&quot; &gt;
-			quaerat odit assumenda
-		&lt;/li&gt;
-		&lt;li data-target&#x3D;&quot;#carouselExampleFade&quot; data-slide-to&#x3D;&quot;1&quot; class&#x3D;&quot; wrap&quot;&gt;
-			delectus sunt optio
-		&lt;/li&gt;
-		&lt;li data-target&#x3D;&quot;#carouselExampleFade&quot; data-slide-to&#x3D;&quot;2&quot; class&#x3D;&quot; wrap&quot;&gt;
-			deserunt quia quasi
-		&lt;/li&gt;
-	&lt;/ol&gt;
-	&lt;!-- Wrapper for slides --&gt;
-	&lt;div class&#x3D;&quot;carousel-inner&quot; role&#x3D;&quot;listbox&quot;&gt;
-		&lt;div class&#x3D;&quot;carousel-item active&quot;&gt;
-			&lt;a&gt;&lt;img class&#x3D;&quot;block w_100&quot; src&#x3D;&quot;http://lorempixel.com/630/420/animals&quot; alt&#x3D;&quot;...&quot;/&gt;&lt;/a&gt;
-			&lt;div class&#x3D;&quot;carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0&quot;&gt;
-                    &lt;span class&#x3D;&quot;title  font_display block m-b_2 font_4:md m-b_3:md&quot;&gt;Cardiac Syncope Program Launches!&lt;/span&gt;
-                    &lt;p&gt;&lt;strong&gt;NEW&lt;/strong&gt;&amp;nbsp;|&amp;nbsp;Hear from an expert panel and complete four patient cases to test your knowledge on our Syncope Program! &lt;a href&#x3D;&quot;http://edu.acc.org/diweb/catalog/item/eid/SYNCOPE2019&quot; title&#x3D;&quot;&quot; class&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;strong&gt;Find out more!&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;flex_auto self_center&quot;&gt;
+                &lt;a class&#x3D;&quot;active p-y_2 w_100 inline-block h:underline self_center font-size_up font_medium p-l_3&quot;&gt;Parent Nav&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;'>&lt;ul class&#x3D;&quot;c_primary font_copy ul_none font_1&quot;&gt;
+    &lt;li class&#x3D;&quot;nav-item active&quot; data-nav&#x3D;&quot;child&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex_row&quot;&gt;
+              &lt;div class&#x3D;&quot;opacity_0 flex flex_column flex_none font-size_down p-y_2 justify_start&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
+                &lt;div class&#x3D;&quot;flex_none &quot; &gt;
+                        &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+                        &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+                        &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+                        &lt;/span&gt;
                 &lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;carousel-item&quot;&gt;
-			&lt;a&gt;&lt;img class&#x3D;&quot;block w_100&quot; src&#x3D;&quot;http://lorempixel.com/630/420/nature&quot; alt&#x3D;&quot;...&quot;/&gt;&lt;/a&gt;
-			&lt;div class&#x3D;&quot;carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0&quot;&gt;
-				&lt;span class&#x3D;&quot;title font_display block m-b_2 font_4:md m-b_3:md&quot;&gt;sint explicabo sequi&lt;/span&gt; Earum nihil omnis.
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;carousel-item&quot;&gt;
-			&lt;a&gt;&lt;img class&#x3D;&quot;block w_100&quot; src&#x3D;&quot;http://lorempixel.com/630/420/food&quot; alt&#x3D;&quot;...&quot;/&gt;&lt;/a&gt;
-			&lt;div class&#x3D;&quot;carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0&quot;&gt;
-				&lt;span class&#x3D;&quot;title font_display block m-b_2 font_4:md m-b_3:md&quot;&gt;sint explicabo sequi&lt;/span&gt; Earum nihil omnis.
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;!-- Controls --&gt;
-	&lt;a
-		class&#x3D;&quot;left carousel-control-prev&quot;
-		href&#x3D;&quot;#carouselExampleFade&quot;
-		role&#x3D;&quot;button&quot;
-		data-slide&#x3D;&quot;prev&quot;
-	&gt;
-		&lt;i class&#x3D;&quot;fas fa-chevron-left&quot;&gt;&lt;/i&gt;
-		&lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
-	&lt;/a&gt;
-	&lt;a
-		class&#x3D;&quot;right carousel-control-next&quot;
-		href&#x3D;&quot;#carouselExampleFade&quot;
-		role&#x3D;&quot;button&quot;
-		data-slide&#x3D;&quot;next&quot;
-	&gt;
-		&lt;i class&#x3D;&quot;fas fa-chevron-right&quot;&gt;&lt;/i&gt;
-		&lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;/span&gt;
-	&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-                                    <input class="display_none text-input html-code-input" type="text" name="" id="input-bootstrap-carousel" value='&lt;div
-	id&#x3D;&quot;carouselExampleFade&quot;
-	class&#x3D;&quot;carousel carousel-alt slide no-controls text-indicators chevron-on&quot;
-&gt;
-	&lt;ol class&#x3D;&quot;carousel-indicators&quot;&gt;
-		&lt;li data-target&#x3D;&quot;#carouselExampleFade&quot; data-slide-to&#x3D;&quot;0&quot; class&#x3D;&quot;wrap&quot; &gt;
-			quaerat odit assumenda
-		&lt;/li&gt;
-		&lt;li data-target&#x3D;&quot;#carouselExampleFade&quot; data-slide-to&#x3D;&quot;1&quot; class&#x3D;&quot; wrap&quot;&gt;
-			delectus sunt optio
-		&lt;/li&gt;
-		&lt;li data-target&#x3D;&quot;#carouselExampleFade&quot; data-slide-to&#x3D;&quot;2&quot; class&#x3D;&quot; wrap&quot;&gt;
-			deserunt quia quasi
-		&lt;/li&gt;
-	&lt;/ol&gt;
-	&lt;!-- Wrapper for slides --&gt;
-	&lt;div class&#x3D;&quot;carousel-inner&quot; role&#x3D;&quot;listbox&quot;&gt;
-		&lt;div class&#x3D;&quot;carousel-item active&quot;&gt;
-			&lt;a&gt;&lt;img class&#x3D;&quot;block w_100&quot; src&#x3D;&quot;http://lorempixel.com/630/420/animals&quot; alt&#x3D;&quot;...&quot;/&gt;&lt;/a&gt;
-			&lt;div class&#x3D;&quot;carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0&quot;&gt;
-                    &lt;span class&#x3D;&quot;title  font_display block m-b_2 font_4:md m-b_3:md&quot;&gt;Cardiac Syncope Program Launches!&lt;/span&gt;
-                    &lt;p&gt;&lt;strong&gt;NEW&lt;/strong&gt;&amp;nbsp;|&amp;nbsp;Hear from an expert panel and complete four patient cases to test your knowledge on our Syncope Program! &lt;a href&#x3D;&quot;http://edu.acc.org/diweb/catalog/item/eid/SYNCOPE2019&quot; title&#x3D;&quot;&quot; class&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;strong&gt;Find out more!&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;flex_auto self_center&quot;&gt;
+                &lt;a class&#x3D;&quot;active p-y_2 w_100 inline-block h:underline self_center font-size_up font_medium p-l_3&quot;&gt;Parent Nav&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                                    <input class="display_none text-input html-code-input" type="text" name="" id="input-navigation-pagehub-single" value='&lt;ul class&#x3D;&quot;c_primary font_copy ul_none font_1&quot;&gt;
+    &lt;li class&#x3D;&quot;nav-item active&quot; data-nav&#x3D;&quot;child&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex_row&quot;&gt;
+              &lt;div class&#x3D;&quot;opacity_0 flex flex_column flex_none font-size_down p-y_2 justify_start&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
+                &lt;div class&#x3D;&quot;flex_none &quot; &gt;
+                        &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+                        &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+                        &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+                        &lt;/span&gt;
                 &lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;carousel-item&quot;&gt;
-			&lt;a&gt;&lt;img class&#x3D;&quot;block w_100&quot; src&#x3D;&quot;http://lorempixel.com/630/420/nature&quot; alt&#x3D;&quot;...&quot;/&gt;&lt;/a&gt;
-			&lt;div class&#x3D;&quot;carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0&quot;&gt;
-				&lt;span class&#x3D;&quot;title font_display block m-b_2 font_4:md m-b_3:md&quot;&gt;sint explicabo sequi&lt;/span&gt; Earum nihil omnis.
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;carousel-item&quot;&gt;
-			&lt;a&gt;&lt;img class&#x3D;&quot;block w_100&quot; src&#x3D;&quot;http://lorempixel.com/630/420/food&quot; alt&#x3D;&quot;...&quot;/&gt;&lt;/a&gt;
-			&lt;div class&#x3D;&quot;carousel-caption bg_black-7 text-shadow_black-1 text_center text_left:md font_2:md c_white p_3:lg p-b_4:lg p-y_3 lh_1 b_0 r_0 l_0&quot;&gt;
-				&lt;span class&#x3D;&quot;title font_display block m-b_2 font_4:md m-b_3:md&quot;&gt;sint explicabo sequi&lt;/span&gt; Earum nihil omnis.
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;!-- Controls --&gt;
-	&lt;a
-		class&#x3D;&quot;left carousel-control-prev&quot;
-		href&#x3D;&quot;#carouselExampleFade&quot;
-		role&#x3D;&quot;button&quot;
-		data-slide&#x3D;&quot;prev&quot;
-	&gt;
-		&lt;i class&#x3D;&quot;fas fa-chevron-left&quot;&gt;&lt;/i&gt;
-		&lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
-	&lt;/a&gt;
-	&lt;a
-		class&#x3D;&quot;right carousel-control-next&quot;
-		href&#x3D;&quot;#carouselExampleFade&quot;
-		role&#x3D;&quot;button&quot;
-		data-slide&#x3D;&quot;next&quot;
-	&gt;
-		&lt;i class&#x3D;&quot;fas fa-chevron-right&quot;&gt;&lt;/i&gt;
-		&lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;/span&gt;
-	&lt;/a&gt;
-&lt;/div&gt;'>
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;flex_auto self_center&quot;&gt;
+                &lt;a class&#x3D;&quot;active p-y_2 w_100 inline-block h:underline self_center font-size_up font_medium p-l_3&quot;&gt;Parent Nav&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;'>
                                 </main>
                                 <header class="flex_row flex shadow_n1 br-br_radius br-bl_radius">
-                                    <div class="flex flex_row flex_auto collapsed h:bg_black-7 br-bl_radius c_black-8 h:c_white" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapse-bootstrap-carousel" aria-controls="#collapse-bootstrap-carousel">
+                                    <div class="flex flex_row flex_auto collapsed h:bg_black-7 br-bl_radius c_black-8 h:c_white" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapse-navigation-pagehub-single" aria-controls="#collapse-navigation-pagehub-single">
                                         <div class="flex_none p_2 font_1">
                                             <i class="a:rotation fa-fw fa-chevron-up fas self_center text_center"></i>
                                         </div>
@@ -524,7 +368,7 @@
                                             <h4 class="font_0 font_bold flex_auto p-l_2 self_center m_0 text_left">Code Sample</h4>
                                         </div>
                                     </div>
-                                    <a class="bg_primary br_1 br_black-3 br_solid c_white flex_none font_medium font_ui h:bg_primary-n2 h:undecorated m-l_auto p-x_3 p-y_2 br-br_radius" onclick="CopyCode( 'input-bootstrap-carousel')"><i class="fas fa-copy"></i> Copy Code</a>
+                                    <a class="bg_primary br_1 br_black-3 br_solid c_white flex_none font_medium font_ui h:bg_primary-n2 h:undecorated m-l_auto p-x_3 p-y_2 br-br_radius" onclick="CopyCode( 'input-navigation-pagehub-single')"><i class="fas fa-copy"></i> Copy Code</a>
                                 </header>
                             </section>
                             </header>
