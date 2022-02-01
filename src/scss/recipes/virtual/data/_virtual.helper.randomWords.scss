@@ -18,7 +18,18 @@
 	$value: "";
 	@while $i < $maxCount {
 		$value: $value + list.nth( $words, random( list.length($words)) )   + " ";
-		$i: $i + 2;
+		$i: $i + 1;
+	};
+	@return $value;
+}
+
+
+@function randomID($idPreName:'element',$maxCount: 5) {
+	$i: 1;
+	$value: $idPreName+"_";
+	@while $i < $maxCount {
+		$value: $value + ( random( 10 ) - 1 );
+		$i: $i + 1;
 	};
 	@return $value;
 }

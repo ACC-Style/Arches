@@ -64,6 +64,7 @@ Sub.ActionButtons.Favorite.Small - Favorite Button
 Styleguide Program.Session
 */
 
+$elementID: randomID("session");
 /*
 
 Session Collapse
@@ -72,7 +73,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}">
+<article class="{{> Sub.Style.OuterBorder }}" id="#{$elementID}">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -101,10 +102,11 @@ Markup:
             </div>
         </div>
     </div>
-    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3 relative">
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="##{$elementID}">top</a></div>
     </div>
 </article>
 
