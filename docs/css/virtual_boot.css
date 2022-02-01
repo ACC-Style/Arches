@@ -8256,11 +8256,11 @@ Styleguide Sub.Style.InnerBorder
 */
 /*
 
-Section Header
+title
 
-Some patterns need a section header.
+description
 
-Featured    -  Featured Label
+default		 -   Grid
 
 Markup:
 <div class="flex_row:md flex flex_column">
@@ -8268,105 +8268,48 @@ Markup:
         <span class="br-tl_radius br-t_2 br_solid br_inherit self_center"></span>
     </div>
     <div class="flex_auto flex_shrink p-x_4 lh_1 text_center">
-        {{ modifier_class }}
+        {{modifier_class}}
     </div>
     <div class="flex_auto grid">
         <span class="br-tl_radius br-t_2 br_solid br_inherit self_center"></span>
     </div>
 </div>
 
-
-
 MarkupWrapperClasses: br_black-5
 
-Weight:0
+Weight: 0
+
+NOTE: nothing
+
+EXPERIMENTAL: this design is new
+
+DEPRECATED: this design is old
+
+FORMAT: This uses a strick data format look at x
+
 
 Styleguide Sub.SectionHeader
+
 */
 /*
 
 Faceted Search
 
-description
+Facet Groups
 
 Markup:
 <li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
     <header class="flex font-size_up">
         <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
-        <a class="flex_none self_center c_primary-n2 h:c_primary-n3 toggle opacity_5 h:opacity lh_1 font-size_down t_n2 r_n2 text_right m-l_auto user-select_none h:undecorated undecorated" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="COL{{ modifier_class }}"> collapse <i class="fa p_3 transition_3 fa-plus rotate-135"></i></a>
+          {{> "Sub.CollapseIcon" modifier_class="#CollapseFacetGroupID" }}
     </header>
-    <main id="COL{{ modifier_class }}" class="p_1 collapse show" style="">
+    <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check1" id="check1" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check1" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> gemifloxacin mesylate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">71</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check2" id="check2" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check2" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Warfarin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">99</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check3" id="check3" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check3" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Enoxaparin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">55</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check4" id="check4" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check4" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> oxycodone hydrochloride <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">91</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check5" id="check5" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check5" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Desmopressin Acetate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">98</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check6" id="check6" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check6" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Clemastine fumarate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">38</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check7" id="check7" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check7" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> cocoa butter, phenylephrine hcl <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">26</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check8" id="check8" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check8" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> liothyronine sodium, LEVOTHYROXINE SODIUM <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">90</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check9" id="check9" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check9" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> risperidone <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">39</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check10" id="check10" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check10" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> TRICLOSAN <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9702" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9079" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4970" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9142" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4182" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8374,9 +8317,59 @@ Markup:
 
 MarkupWrapperClasses: max-w_30 ul_none
 
+NOTE: by default the facet group is collapsed, and only loads the first 10 facets with the sort order of count.  The more and less link disable when they have reached the limit of the group's length. The more link will load the next 10 facets. Collapsing the facet group will not change the exposed amount of facets revealed or hidden by the more and less links.
+
+SubComponents: 
+Sub.Search.FacetCheckbox - Single Facet Checkbox
+Sub.CollapseIcon - Collapse Icon
+
 Weight:0
 
 Styleguide Sub.Search.Faceted
+*/
+/*
+
+Collapse/Expand
+
+The collapse/expand icon is used to collapse and expand the facet group.
+
+Markup:
+<div class="c_primary-n2 collapsed flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5  self_center toggle user-select_none" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" role="button" aria-expanded="true" aria-controls="{{modifier_class}}">
+  <div class="flex_none self_cetner"> collapse </div>
+  <div class="flex_none" >
+      <span class="fa-stack">
+        <i class="fas fa-minus fa-stack-1x"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+      </span>
+  </div>
+</div>
+
+
+
+Weight:0
+
+Styleguide Sub.CollapseIcon
+*/
+/*
+
+Facet Checkbox
+
+The single checkbox for a facet.
+
+Markup:
+<li class="m-y_2">
+    <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+        <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check{{modifier_class}}" id="check{{modifier_class}}" class="font-size_up"></div>
+        <div class="flex_auto self_center p-l_2"><label for="check{{modifier_class}}" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> {{ modifier_class }}ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+        <!---->
+    </div>
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight:0
+
+Styleguide Sub.Search.FacetCheckbox
 */
 /*
 Image and content
@@ -8868,7 +8861,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_5387">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_4010">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -8901,7 +8894,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_5387">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_4010">top</a></div>
     </div>
 </article>
 
@@ -9119,8 +9112,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="similique voluptatem quo "  }}
-    {{> Program.GridFormat.Abstract modifier_class="Incidunt quo "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="omnis similique omnis similique voluptatem voluptatem dignissimos "  }}
+    {{> Program.GridFormat.Abstract modifier_class="Et similique omnis dignissimos "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -9197,8 +9190,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="soluta tempora omnis quo quo omnis " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="soluta et Et tempora " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="omnis quo dignissimos Incidunt voluptatem omnis Incidunt dignissimos Et " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="omnis omnis Incidunt omnis " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -9316,9 +9309,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="quo Et tempora Incidunt " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="omnis omnis Incidunt omnis " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem Et Incidunt " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="et voluptatem soluta tempora voluptatem quo similique voluptatem " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="" }}
+        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem voluptatem Incidunt tempora et " }}
     </div>
 </section>
 
