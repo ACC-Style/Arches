@@ -234,16 +234,33 @@ Weight: -80
   Styleguide Typography.Font.Weight
  */
 
-@include loop-style(font-weight, '', '!important');
-.font_ui {}
+// @include loop-style(font-weight, '', '!important');
 
-.font_copy {}
+.font_light{font-weight: 300}
+.font_regular{font-weight: 400}
+.font_medium{font-weight: 500}
+.font_bold{font-weight: 700}
+.font_xbold{font-weight: 800}
 
-.font_display {}
+// .font_ui,.font_copy {
+//   &.font_light, & .font_light{font-weight: 300}
+//   &.font_regular, & .font_regular{font-weight: 400}
+//   &.font_medium, & .font_medium{font-weight: 500}
+//   &.font_bold, & .font_bold{font-weight: 700}
+//   &.font_xbold, & .font_xbold{font-weight: 900}
+// }
+.font_display {
+  &.font_light, .font_light &, & .font_light{font-weight: 400}
+  &.font_regular, .font_regular &, & .font_regular{font-weight: 500}
+  &.font_medium, .font_medium &, & .font_medium{font-weight: 600}
+  &.font_bold, .font_bold &, & .font_bold{font-weight: 700}
+  &.font_xbold, .font_xbold &, & .font_xbold{font-weight: 900}
+}
 
-.font_accent {}
 
-.font_mono {}
+.font_mono, .font_accent { 
+
+}
 
 
 /*
