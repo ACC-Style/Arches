@@ -1,3 +1,4 @@
+$sessionID :randomID("session");
 
 /*
 Session
@@ -5,9 +6,9 @@ Session
 Description: 
  
 Markup:
-<div class="flex_column flex">
+<div class="flex_column flex" id="#{$sessionID}">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
-        <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100"  id="##{$elementID}">
+        <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
                     <strong class="font_bold p-r_3">{{> "Data.Session.ID"}}</strong> {{> "Data.Session.Title"}} </span>
                 <span class="c_accent font-size_down-2 lh_0 inline-block">
@@ -24,99 +25,30 @@ Markup:
             <div class="player hd full">
                 <div class="bg_acc aspect_4x3 c_white text_center  justify_center flex items_center">VIDEO</div>
             </div>
-            <section class="p-t_3 b-t_5 br-b_1 br_solid br_primary-2 display_none block:md">
+            <section class="p-t_3 display_none block:md">
+                <div  class="br-b_2 br_0 br_solid br_primary-2">   
                 {{> "Sub.Presentation.List"}}
-                <div class=" font_n3 p_3 relative">
-                    <div>
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="##{$elementID}">top</a>
-                    </div>
                 </div>
-            </section>
-        </div>
-        <div class="flex_auto max-w_25:lg max-w_20:md w_100 flex flex_column gap-y_3 justify_start">
-            {{> "Sub.Player.Chat" modifier_class="flex_0"}}
-            <section class="p-t_3 b-t_5 br-b_1 br_solid br_primary-2 display_none:md">
-                {{> "Sub.Presentation.List"}}
-                <div class=" font_n3 p_3 relative">
-                    <div>
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="##{$elementID}">top</a>
-                    </div>
-                </div>
-            </section>
-            {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
-        </div>
-    </section>
-</div>
-
-SubComponents:
-Sub.Attachments.BigButton - Attachments
-Sub.FacultyList - Faculty List
-Sub.Player.AuxData - Aux Data
-Sub.ActionButtons.Favorite - Favorite Button
-
-Data:
-Data.Session.Title - Title
-Data.Session.ID - Session ID
-Sub.Presentation.List - Presentation List
-
- 
-Weight:0
- 
-Styleguide Player.Session
-*/
-
-
-
-/*
-Session w/ CIO
- 
-Description: 
- 
-Markup:
-<div class="flex_column flex">
-    <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
-        <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100"  id="##{$elementID}">
-                <span class="block">
-                    <strong class="font_bold p-r_3">{{> "Data.Session.ID"}}</strong> {{> "Data.Session.Title"}} </span>
-                <span class="c_accent font-size_down-2 lh_0 inline-block">
-                {{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}
-                </span>
-            </h3>
-            <div class="self_start flex gap_2">
-            {{> "Sub.ActionButtons.Favorite"}}
-            {{> "Sub.Attachments.BigButton"}}
-            </div>
-    </header>
-    <section class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3">
-        <div class="flex_auto w_100">
-            <div class="player hd full">
-                <div class="bg_acc aspect_4x3 c_white text_center  justify_center flex items_center">VIDEO</div>
-            </div>
-            <section class="p-t_3 b-t_5 br-b_1 br_solid br_primary-2 display_none block:md">
-                {{> "Sub.Presentation.List"}}
-                <div class=" font_n3 p_3 relative">
-                    <div>
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="##{$elementID}">top</a>
-                    </div>
+                <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#{'#'+$sessionID}">top</a>
                 </div>
             </section>
         </div>
         <div class="flex_auto max-w_25:lg max-w_20:md w_100 flex flex_column gap-y_3 justify_start">
             {{> "Sub.Player.Chat" modifier_class="flex_0"}}
             {{> "Sub.Player.CIO"  modifier_class="flex_0"}}
-            <section class="p-t_3 b-t_5 br-b_1 br_solid br_primary-2 display_none:md">
+            <section class="p-t_3 display_none:md block">
+                <div  class="br-b_2 br_0 br_solid br_primary-2">   
                 {{> "Sub.Presentation.List"}}
-                <div class=" font_n3 p_3 relative">
-                    <div>
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="##{$elementID}">top</a>
-                    </div>
+                </div>
+                <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#{'#'+$sessionID}">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
         </div>
     </section>
 </div>
-
 
 SubComponents:
 Sub.Attachments.BigButton - Attachments
@@ -134,8 +66,11 @@ Sub.Presentation.List - Presentation List
  
 Weight:0
  
-Styleguide Player.Session.CIO
+Styleguide Player.Session
 */
+
+
+
 
 
 
