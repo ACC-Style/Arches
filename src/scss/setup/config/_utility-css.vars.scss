@@ -187,8 +187,8 @@ $value-to-unit: (
 		90: 90%,
 		95: 95%,
 		100: 100%,
-		1-third: 33%,
-		2-thirds: 66%,
+		third-1: 33%,
+		third-2: 66%,
 	),
 	height-viewport: (
 		auto: auto,
@@ -210,6 +210,11 @@ $value-to-unit: (
 		3lh: 1.65em,
 		4lh: 1.75em,
 		5lh: 2.5em,
+		1xlh: $vertical-space,
+		2xlh: $vertical-space * 2,
+		3xlh: $vertical-space * 3,
+		4xlh: $vertical-space * 4,
+		5xlh: $vertical-space * 5,
 	),
 	blend: (
 		normal: normal,
@@ -1115,13 +1120,13 @@ $style-definition: (
 		unit: "scale",
 
 	),
-	grid-width: (
-		short-name: ".w-grid",
+	flex-basis: (
+		short-name: ".flex",
 		css-style: (
-			"width",
+			"flex-basis",
 		),
-		long-name: ".grid-width",
-		unit: grid,
+		long-name: ".flex-basis",
+		unit: "width-percent",
 
 	),
 	height-viewport: (

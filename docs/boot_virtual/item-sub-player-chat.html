@@ -356,12 +356,20 @@
                                 </h1>
                                 <div class="kss-modifiers__example">
                                     <div class="">
-                                        <div class="br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column" id="panel-chat" style="height:100%">
-  <div class="panel-heading bg_transparent">
-      <h4 class="panel-title font_bold font_display c_primary">Live Chat</h4>
-      <p class="welcome">Welcome <b> Matt Watier </b></p>
-  </div>
-  <div id="wrapper" class="br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light">
+                                        <div class="br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column gap-y_3 " id="panel-chat">
+  <div class="panel-heading bg_transparent flex flex_row">
+      <h4 class="panel-title font_bold font_display c_primary m_0 flex_auto self_center">Chat</h4>
+      <div class="c_primary-n2 collapsed flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none" data-bs-toggle="collapse" data-bs-target="#CollapseChatWindow" role="button" aria-expanded="true" aria-controls="#CollapseChatWindow">
+        <div class="flex_none self_cetner"> collapse </div>
+        <div class="flex_none" >
+            <span class="fa-stack">
+              <i class="fas fa-minus fa-stack-1x"></i>
+              <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+            </span>
+        </div>
+      </div>  </div>
+  <div id="CollapseChatWindow" class="collapse show">
+  <div  class="br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light min-h_5xlh">
       <div class="load-log p_3 absolute t_0 r_0 l_0 b_0 overflow_unset" data-log-id="2">
           <div class="msgln">(1:44 PM) <b> Lovely Day </b>: Chat<br></div>
           <div class="msgln">(2:13 PM) <b> Lovely Day </b>: Chat some more<br></div>
@@ -388,18 +396,27 @@
           </div>
       </form>
   </div>
+  </div>
 </div>
                                     </div>
                                 </div>
                             </article>
                             <section class="relative  br-t_1 br_solid br_black-2 bg_black-1 shadow_n1 texture_light">
                                 <main class="kss-section__markup overflow_scroll scrollbar-mini collapse transition_3" id="collapse-sub-player-chat">
-                                    <pre><code class="language-markup"  id="code-sub-player-chat" value='&lt;div class&#x3D;&quot;br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column&quot; id&#x3D;&quot;panel-chat&quot; style&#x3D;&quot;height:100%&quot;&gt;
-  &lt;div class&#x3D;&quot;panel-heading bg_transparent&quot;&gt;
-      &lt;h4 class&#x3D;&quot;panel-title font_bold font_display c_primary&quot;&gt;Live Chat&lt;/h4&gt;
-      &lt;p class&#x3D;&quot;welcome&quot;&gt;Welcome &lt;b&gt; Matt Watier &lt;/b&gt;&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div id&#x3D;&quot;wrapper&quot; class&#x3D;&quot;br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light&quot;&gt;
+                                    <pre><code class="language-markup"  id="code-sub-player-chat" value='&lt;div class&#x3D;&quot;br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column gap-y_3 &quot; id&#x3D;&quot;panel-chat&quot;&gt;
+  &lt;div class&#x3D;&quot;panel-heading bg_transparent flex flex_row&quot;&gt;
+      &lt;h4 class&#x3D;&quot;panel-title font_bold font_display c_primary m_0 flex_auto self_center&quot;&gt;Chat&lt;/h4&gt;
+      &lt;div class&#x3D;&quot;c_primary-n2 collapsed flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#CollapseChatWindow&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#CollapseChatWindow&quot;&gt;
+        &lt;div class&#x3D;&quot;flex_none self_cetner&quot;&gt; collapse &lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+            &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+              &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+              &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;  &lt;/div&gt;
+  &lt;div id&#x3D;&quot;CollapseChatWindow&quot; class&#x3D;&quot;collapse show&quot;&gt;
+  &lt;div  class&#x3D;&quot;br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light min-h_5xlh&quot;&gt;
       &lt;div class&#x3D;&quot;load-log p_3 absolute t_0 r_0 l_0 b_0 overflow_unset&quot; data-log-id&#x3D;&quot;2&quot;&gt;
           &lt;div class&#x3D;&quot;msgln&quot;&gt;(1:44 PM) &lt;b&gt; Lovely Day &lt;/b&gt;: Chat&lt;br&gt;&lt;/div&gt;
           &lt;div class&#x3D;&quot;msgln&quot;&gt;(2:13 PM) &lt;b&gt; Lovely Day &lt;/b&gt;: Chat some more&lt;br&gt;&lt;/div&gt;
@@ -426,12 +443,21 @@
           &lt;/div&gt;
       &lt;/form&gt;
   &lt;/div&gt;
-&lt;/div&gt;'>&lt;div class&#x3D;&quot;br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column&quot; id&#x3D;&quot;panel-chat&quot; style&#x3D;&quot;height:100%&quot;&gt;
-  &lt;div class&#x3D;&quot;panel-heading bg_transparent&quot;&gt;
-      &lt;h4 class&#x3D;&quot;panel-title font_bold font_display c_primary&quot;&gt;Live Chat&lt;/h4&gt;
-      &lt;p class&#x3D;&quot;welcome&quot;&gt;Welcome &lt;b&gt; Matt Watier &lt;/b&gt;&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div id&#x3D;&quot;wrapper&quot; class&#x3D;&quot;br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light&quot;&gt;
+&lt;/div&gt;'>&lt;div class&#x3D;&quot;br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column gap-y_3 &quot; id&#x3D;&quot;panel-chat&quot;&gt;
+  &lt;div class&#x3D;&quot;panel-heading bg_transparent flex flex_row&quot;&gt;
+      &lt;h4 class&#x3D;&quot;panel-title font_bold font_display c_primary m_0 flex_auto self_center&quot;&gt;Chat&lt;/h4&gt;
+      &lt;div class&#x3D;&quot;c_primary-n2 collapsed flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#CollapseChatWindow&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#CollapseChatWindow&quot;&gt;
+        &lt;div class&#x3D;&quot;flex_none self_cetner&quot;&gt; collapse &lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+            &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+              &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+              &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;  &lt;/div&gt;
+  &lt;div id&#x3D;&quot;CollapseChatWindow&quot; class&#x3D;&quot;collapse show&quot;&gt;
+  &lt;div  class&#x3D;&quot;br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light min-h_5xlh&quot;&gt;
       &lt;div class&#x3D;&quot;load-log p_3 absolute t_0 r_0 l_0 b_0 overflow_unset&quot; data-log-id&#x3D;&quot;2&quot;&gt;
           &lt;div class&#x3D;&quot;msgln&quot;&gt;(1:44 PM) &lt;b&gt; Lovely Day &lt;/b&gt;: Chat&lt;br&gt;&lt;/div&gt;
           &lt;div class&#x3D;&quot;msgln&quot;&gt;(2:13 PM) &lt;b&gt; Lovely Day &lt;/b&gt;: Chat some more&lt;br&gt;&lt;/div&gt;
@@ -457,14 +483,23 @@
               &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;screen_name&quot; id&#x3D;&quot;screen_name&quot; value&#x3D;&quot; Matt   Watier &quot;&gt;
           &lt;/div&gt;
       &lt;/form&gt;
+  &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                                    <input class="display_none text-input html-code-input" type="text" name="" id="input-sub-player-chat" value='&lt;div class&#x3D;&quot;br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column&quot; id&#x3D;&quot;panel-chat&quot; style&#x3D;&quot;height:100%&quot;&gt;
-  &lt;div class&#x3D;&quot;panel-heading bg_transparent&quot;&gt;
-      &lt;h4 class&#x3D;&quot;panel-title font_bold font_display c_primary&quot;&gt;Live Chat&lt;/h4&gt;
-      &lt;p class&#x3D;&quot;welcome&quot;&gt;Welcome &lt;b&gt; Matt Watier &lt;/b&gt;&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div id&#x3D;&quot;wrapper&quot; class&#x3D;&quot;br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light&quot;&gt;
+                                    <input class="display_none text-input html-code-input" type="text" name="" id="input-sub-player-chat" value='&lt;div class&#x3D;&quot;br_solid br_radius br_1 br_black-3 shadow_overlap-light p_4:lg p_3 panel panel-default flex flex_column gap-y_3 &quot; id&#x3D;&quot;panel-chat&quot;&gt;
+  &lt;div class&#x3D;&quot;panel-heading bg_transparent flex flex_row&quot;&gt;
+      &lt;h4 class&#x3D;&quot;panel-title font_bold font_display c_primary m_0 flex_auto self_center&quot;&gt;Chat&lt;/h4&gt;
+      &lt;div class&#x3D;&quot;c_primary-n2 collapsed flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#CollapseChatWindow&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#CollapseChatWindow&quot;&gt;
+        &lt;div class&#x3D;&quot;flex_none self_cetner&quot;&gt; collapse &lt;/div&gt;
+        &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+            &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+              &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+              &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;  &lt;/div&gt;
+  &lt;div id&#x3D;&quot;CollapseChatWindow&quot; class&#x3D;&quot;collapse show&quot;&gt;
+  &lt;div  class&#x3D;&quot;br_1 br_black-2 br_radius br_solid flex_auto h_20 h_auto:md loading-log m-b_4 overflow_auto p-r_3 panel-body reading-typography relative scrollbar-mini shadow_emboss-light min-h_5xlh&quot;&gt;
       &lt;div class&#x3D;&quot;load-log p_3 absolute t_0 r_0 l_0 b_0 overflow_unset&quot; data-log-id&#x3D;&quot;2&quot;&gt;
           &lt;div class&#x3D;&quot;msgln&quot;&gt;(1:44 PM) &lt;b&gt; Lovely Day &lt;/b&gt;: Chat&lt;br&gt;&lt;/div&gt;
           &lt;div class&#x3D;&quot;msgln&quot;&gt;(2:13 PM) &lt;b&gt; Lovely Day &lt;/b&gt;: Chat some more&lt;br&gt;&lt;/div&gt;
@@ -490,6 +525,7 @@
               &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;screen_name&quot; id&#x3D;&quot;screen_name&quot; value&#x3D;&quot; Matt   Watier &quot;&gt;
           &lt;/div&gt;
       &lt;/form&gt;
+  &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;'>
                                 </main>

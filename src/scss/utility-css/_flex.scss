@@ -466,3 +466,13 @@
 		flex-shrink: 1;
 	}
 }
+
+@include loop-style(flex-basis, '', '!important');
+
+@media #{$medium-up} {
+	@include loop-style(flex-basis, $bp-label_medium, '!important');
+}
+
+@media #{$large-up} {
+	@include loop-style(flex-basis, $bp-label_large, '!important');
+}
