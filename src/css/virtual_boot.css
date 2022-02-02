@@ -8225,6 +8225,19 @@ Weight:0
 Styleguide Sub.Player.Chat
 */
 /*
+CIO Window
+
+CIO is a survey widget that allows faculty to collect questions and polls from participants.
+
+Markup:
+<iframe src="https://oncology.cnf.io/sessions/qen8/#!/dashboard" title="CIO WIDGET"></iframe>
+
+
+Weight:0
+
+Styleguide Sub.Player.CIO
+*/
+/*
 
 Program Borders OutSide
 
@@ -8256,7 +8269,7 @@ Styleguide Sub.Style.InnerBorder
 */
 /*
 
-title
+Section Header
 
 description
 
@@ -8305,11 +8318,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9702" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9079" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4970" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9142" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4182" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2174" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4084" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8443" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1613" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2779" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8747,6 +8760,65 @@ Weight:0
 Styleguide Player.Session
 */
 /*
+Session w/ CIO
+
+Description: 
+
+Markup:
+<div class="flex_column flex">
+<section class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3 order_2 order_1:md">
+    <div class="flex_auto w_100">
+        <div class="player hd full">
+            <div class="bg_acc aspect_4x3 c_white text_center  justify_center flex items_center">VIDEO</div>
+        </div>
+    </div>
+    <div class="flex_auto max-w_25:lg max-w_20:md w_100 flex flex_column">
+       {{> "Sub.Player.Chat"}}
+       {{> Sub.Player.CIO }}
+    </div>
+</section>
+<header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
+    <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
+            <span class="block">
+                <strong class="font_bold p-r_3">{{> "Data.Session.ID"}}</strong> {{> "Data.Session.Title"}} </span>
+            <span class="c_accent font-size_down-2 lh_0 inline-block">
+            {{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}
+            </span>
+        </h3>
+        <div class="self_start flex gap_2">
+        {{> "Sub.ActionButtons.Favorite"}}
+        {{> "Sub.Attachments.BigButton"}}
+        </div>
+</header>
+<article class="flex flex_row:md flex_column gap-x_4 gap-y_3 p-t_3 b-t_5 br-b_1 br_solid br_primary-2 order_3">
+    <section class="flex_auto w_100">
+        <div class="font_2">
+            {{> "Sub.Presentation.List"}}
+        </div>
+    </section>
+    {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 m-t_5 br_radius self_start shadow_emboss-light"}}
+</article>
+</div>
+
+SubComponents:
+Sub.Attachments.BigButton - Attachments
+Sub.FacultyList - Faculty List
+Sub.Player.AuxData - Aux Data
+Sub.ActionButtons.Favorite - Favorite Button
+Sub.Player.CIO - CIO
+Sub.Player.Chat - Chat
+
+Data:
+Data.Session.Title - Title
+Data.Session.ID - Session ID
+Sub.Presentation.List - Presentation List
+
+
+Weight:0
+
+Styleguide Player.Session.CIO
+*/
+/*
 Abstracts & Posters
 
 Description: 
@@ -8861,7 +8933,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_4010">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_1082">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -8894,7 +8966,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_4010">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_1082">top</a></div>
     </div>
 </article>
 
@@ -9112,8 +9184,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="omnis similique omnis similique voluptatem voluptatem dignissimos "  }}
-    {{> Program.GridFormat.Abstract modifier_class="Et similique omnis dignissimos "  }}
+    {{> Program.GridFormat.Abstract  modifier_class=""  }}
+    {{> Program.GridFormat.Abstract modifier_class="soluta voluptatem similique "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -9190,8 +9262,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="omnis quo dignissimos Incidunt voluptatem omnis Incidunt dignissimos Et " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="omnis omnis Incidunt omnis " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="similique omnis quo quo Et Et " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="et Incidunt tempora et omnis " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -9309,9 +9381,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="et voluptatem soluta tempora voluptatem quo similique voluptatem " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="" }}
-        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem voluptatem Incidunt tempora et " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="tempora voluptatem similique soluta " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="tempora tempora similique voluptatem quo omnis Et soluta " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="soluta " }}
     </div>
 </section>
 

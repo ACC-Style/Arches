@@ -59,6 +59,69 @@ Styleguide Player.Session
 
 
 /*
+Session w/ CIO
+ 
+Description: 
+ 
+Markup:
+<div class="flex_column flex">
+<section class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3 order_2 order_1:md">
+    <div class="flex_auto w_100">
+        <div class="player hd full">
+            <div class="bg_acc aspect_4x3 c_white text_center  justify_center flex items_center">VIDEO</div>
+        </div>
+    </div>
+    <div class="flex_auto max-w_25:lg max-w_20:md w_100 flex flex_column">
+       {{> "Sub.Player.Chat"}}
+       {{> Sub.Player.CIO }}
+    </div>
+</section>
+<header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
+    <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
+            <span class="block">
+                <strong class="font_bold p-r_3">{{> "Data.Session.ID"}}</strong> {{> "Data.Session.Title"}} </span>
+            <span class="c_accent font-size_down-2 lh_0 inline-block">
+            {{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}
+            </span>
+        </h3>
+        <div class="self_start flex gap_2">
+        {{> "Sub.ActionButtons.Favorite"}}
+        {{> "Sub.Attachments.BigButton"}}
+        </div>
+</header>
+<article class="flex flex_row:md flex_column gap-x_4 gap-y_3 p-t_3 b-t_5 br-b_1 br_solid br_primary-2 order_3">
+    <section class="flex_auto w_100">
+        <div class="font_2">
+            {{> "Sub.Presentation.List"}}
+        </div>
+    </section>
+    {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 m-t_5 br_radius self_start shadow_emboss-light"}}
+</article>
+</div>
+
+SubComponents:
+Sub.Attachments.BigButton - Attachments
+Sub.FacultyList - Faculty List
+Sub.Player.AuxData - Aux Data
+Sub.ActionButtons.Favorite - Favorite Button
+Sub.Player.CIO - CIO
+Sub.Player.Chat - Chat
+
+Data:
+Data.Session.Title - Title
+Data.Session.ID - Session ID
+Sub.Presentation.List - Presentation List
+
+ 
+Weight:0
+ 
+Styleguide Player.Session.CIO
+*/
+
+
+
+
+/*
 Abstracts & Posters
  
 Description: 
