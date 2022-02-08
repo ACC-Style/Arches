@@ -769,7 +769,7 @@ Faceted Search
 Facet Groups
  
 Markup:
-<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
+<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3 {{ modifier_class }}">
     <header class="flex font-size_up">
         <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
           {{> "Sub.CollapseIcon" modifier_class="#CollapseFacetGroupID" }}
@@ -844,4 +844,32 @@ MarkupWrapperClasses: ul_none
 Weight:0
  
 Styleguide Sub.Search.FacetCheckbox
+*/
+
+
+/*
+
+
+Search Bar
+
+Simple Search Bar
+
+
+Markup:
+<div class="bg_white br_radius m-b_4 p_4 shadow_overlap-light">
+    <h1 class="c_primary-n1 font_display m-b_3 m-t_0">Search: All</h1>
+    <div class="input-holder flex flex_row self_end relative w_100">
+        <input id="input_uniqueTextAnda" name="input_uniqueTextAnda" type="text" placeholder="Search" class=" br_2 flex_auto p-y_2 br_solid flex_auto p-l_4 lh_3 br_radius bg_white c_black bg_white f:bg_primary br_black-2 font_2:lg font_1:md font_0">
+        <a class="absolute b_0 bg_primary br-br_radius br-tr_radius br_square c_white f:outline_none font-size_up font_medium grid h:bg_primary-n3 h:undecorated inline-block items_center justify_center p-x_4 r_0 t_0 text_center transition_1 undecorated">
+        <i class="fas fa-search"></i>
+        </a>
+    </div>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide  Sub.Search.Bar
 */

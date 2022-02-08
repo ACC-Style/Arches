@@ -7592,7 +7592,7 @@ Markup:
 
 Weight:0
 
-Styleguide PageContent.Evergreen.Credits
+Styleguide PageLayout.Evergreen.Credits
 */
 /*
 Sub Components
@@ -8324,18 +8324,18 @@ Faceted Search
 Facet Groups
 
 Markup:
-<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
+<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3 {{ modifier_class }}">
     <header class="flex font-size_up">
         <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
           {{> "Sub.CollapseIcon" modifier_class="#CollapseFacetGroupID" }}
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7257" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4387" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3204" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0407" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5203" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4576" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7722" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3848" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7939" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4834" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8398,6 +8398,32 @@ Weight:0
 Styleguide Sub.Search.FacetCheckbox
 */
 /*
+
+
+Search Bar
+
+Simple Search Bar
+
+
+Markup:
+<div class="bg_white br_radius m-b_4 p_4 shadow_overlap-light">
+    <h1 class="c_primary-n1 font_display m-b_3 m-t_0">Search: All</h1>
+    <div class="input-holder flex flex_row self_end relative w_100">
+        <input id="input_uniqueTextAnda" name="input_uniqueTextAnda" type="text" placeholder="Search" class=" br_2 flex_auto p-y_2 br_solid flex_auto p-l_4 lh_3 br_radius bg_white c_black bg_white f:bg_primary br_black-2 font_2:lg font_1:md font_0">
+        <a class="absolute b_0 bg_primary br-br_radius br-tr_radius br_square c_white f:outline_none font-size_up font_medium grid h:bg_primary-n3 h:undecorated inline-block items_center justify_center p-x_4 r_0 t_0 text_center transition_1 undecorated">
+        <i class="fas fa-search"></i>
+        </a>
+    </div>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide  Sub.Search.Bar
+*/
+/*
 Image and content
 
 Description: 
@@ -8419,7 +8445,7 @@ Markup:
 
 Weight:0
 
-Styleguide PageContent.ImageContentSimple
+Styleguide PageLayout.ImageContentSimple
 */
 /*
 Call-to-Action Card
@@ -8435,7 +8461,7 @@ Markup:
 
 Weight:100
 
-Styleguide  PageContent.Call To Action
+Styleguide  PageLayout.Call To Action
 */
 /*
 External Resource
@@ -8458,7 +8484,7 @@ Markup:
  gap-x_4 gap-y_4 grid template-x_30
 
 
-Styleguide PageContent.External Resource
+Styleguide PageLayout.External Resource
 */
 /*
 Awards
@@ -8717,12 +8743,12 @@ Weight: 100
 Styleguide Awards.UltraCondensed
 */
 /*
-Session
+Channel Player
 
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_5470">
+<div class="flex_column flex" id="session_4483">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -8746,7 +8772,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_5470">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_4483">top</a>
                 </div>
             </section>
         </div>
@@ -8758,7 +8784,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_5470">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_4483">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -8782,7 +8808,7 @@ Sub.Presentation.List - Presentation List
 
 Weight:0
 
-Styleguide Player.Session
+Styleguide Page.Player.Channel
 */
 /*
 Abstracts & Posters
@@ -8828,7 +8854,88 @@ Data.Abstract.Title - Title
 
 Weight:1000
 
-Styleguide Player.Abstract
+Styleguide Page.Player.Abstract
+*/
+/*
+
+Filter List
+
+Search filter
+
+
+Markup:
+<div class="flex flex_row:md flex_column-reverse gap_4">
+    <div class="flex_auto flex_100 max-w_25">
+        <ul class="ul_none bg_black-1 p_3 br_radius shadow_emboss-light m-b_2 sticky:lg t_3:lg">  
+        <li class="font_display font_2 font_medium">Filters</li>  
+        {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+        {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+        </ul>
+   </div>
+    <div class="flex_auto ">
+        <ul class="ul_none flex_column flex gap-y_3">
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+        </ul>
+    </div>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: nothing
+
+EXPERIMENTAL: this design is new
+
+
+Styleguide Page.Search.Filter
+*/
+/*
+
+Filter List
+
+Search filter
+
+
+Markup:
+<div class="flex flex_row:md flex_column-reverse gap_4">
+    <div class="flex_auto flex_100 max-w_25">
+        <ul class="ul_none bg_black-1 p_3 br_radius shadow_emboss-light m-b_2 sticky:lg t_3:lg">  
+        <li class="font_display font_2 font_medium">Filters</li>  
+        {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+        {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+        </ul>
+   </div>
+    <div class="flex_auto ">
+        {{> "Sub.Search.Bar"}}
+        <ul class="ul_none flex_column flex gap-y_3">
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+        </ul>
+    </div>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: nothing
+
+EXPERIMENTAL: this design is new
+
+
+Styleguide Page.Search.BarAndFilter
 */
 /*
 
@@ -8899,7 +9006,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_6187">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_3110">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -8932,7 +9039,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_6187">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_3110">top</a></div>
     </div>
 </article>
 
@@ -9150,8 +9257,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class=""  }}
-    {{> Program.GridFormat.Abstract modifier_class="soluta omnis et voluptatem voluptatem tempora dignissimos quo tempora "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="soluta "  }}
+    {{> Program.GridFormat.Abstract modifier_class="similique similique omnis tempora omnis "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -9228,8 +9335,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="similique et similique Incidunt tempora similique et " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="omnis dignissimos Et similique " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Et similique quo omnis Incidunt quo " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="tempora Et omnis similique dignissimos voluptatem " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -9347,9 +9454,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="et omnis tempora " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="et dignissimos dignissimos omnis soluta omnis Incidunt " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="omnis omnis " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="similique Et et voluptatem Et tempora dignissimos soluta Et " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="et et soluta quo Incidunt " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="similique et Et soluta tempora " }}
     </div>
 </section>
 
@@ -9586,6 +9693,17 @@ FORMAT: This element uses data that has strict data formatting requirements. See
 Weight:0
 
 Styleguide Faculty.NoPhotos
+*/
+/*
+
+
+Pages
+
+Combination of UI brought together for pages on the site. 
+
+Weight: 0
+
+Styleguide Pages
 */
 /*
 
