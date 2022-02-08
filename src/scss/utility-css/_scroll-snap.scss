@@ -1,0 +1,13 @@
+  .scroll-snap_y {
+    scroll-snap-type: y mandatory;
+  }
+  .scroll-snap_x {
+    scroll-snap-type: x mandatory;
+  }
+
+.scroll-snap_y, .scroll-snap_x {
+    scroll-padding: 1rem;
+    & > * {
+        scroll-snap-align: start;
+    }
+}

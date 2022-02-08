@@ -6856,6 +6856,17 @@ Styleguide Layouts.Display.overflow
 
 .overflow_scroll {
   overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.overflow_scroll-x {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.overflow_scroll-y {
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .overflow_clip {
@@ -6868,6 +6879,21 @@ Styleguide Layouts.Display.overflow
 
 .overflow_unset {
   overflow: unset;
+}
+
+.scroll-snap_y {
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-snap_x {
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-snap_y, .scroll-snap_x {
+  scroll-padding: 1rem;
+}
+.scroll-snap_y > *, .scroll-snap_x > * {
+  scroll-snap-align: start;
 }
 
 /*

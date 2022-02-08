@@ -108,7 +108,13 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
           return section.toJSON ? options.fn(section.toJSON()) : options.inverse('');
         });
       }
-
+      this.Handlebars.registerHelper('checkLength', function (v1, v2, options) {
+        'use strict';
+        if (v1.length>v2) {
+            return options.fn(this);
+        }
+        return options.inverse(this);
+    });
       // Allow a builder user to override the {{eachSection [query]}} helper
       // with the --extend setting.
       if (!this.Handlebars.helpers['eachSection']) {

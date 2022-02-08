@@ -130,13 +130,13 @@
             {{ else }}
             <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
             <div class="flex flex_column flex_row:md gap-x_5 p-t_4 max-w_90 m_auto">
-                <section class="max-w_15 w_20:lg flex_none relative display_none block:md">
-                    <aside class="sticky t_0">
-                        <div>
-                            {{#each menu}}
-                                {{#if isActive}}
-                                    <h3>{{ header }}</h3>
-                                    {{#if children}}
+                {{#each menu}}
+                    {{#if isActive}}
+                        {{#if children}}
+                            <section class="max-w_15 w_20:lg flex_none relative display_none block:md">
+                                <h3>{{ header }}</h3>
+                                <div>
+                                    <aside class="sticky t_0">
                                         <ul class="m-l_0 ul_none lh_2">
                                             {{#each children}}
                                                 <li class="{{#if isGrandChild}}p-l_4 font-size_down lh_2 {{else}} font_bold {{/if}}">
@@ -146,17 +146,17 @@
                                                 </li>
                                             {{/each}}
                                         </ul>
-                                    {{/if}}
-                                {{/if}}
-                            {{/each}}
-                            <div class=" font_bold ">
-                                <a class="block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="#topbody">
-                                    <i class="fas fa-arrow-up"></i><span class="flex_auto overflow_ellipsis">Top</span>
-                                </a>
-                            </div>
-                        </div>
-                    </aside>
-                </section>
+                                        <div class=" font_bold font-size_down-2 ">
+                                            <a class="block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="#topbody">
+                                                <i class="fas fa-arrow-up"></i><span class="flex_auto overflow_ellipsis">Top of Page </span>
+                                            </a>
+                                        </div>
+                                    </aside>
+                                </div>
+                        {{/if}}
+                        </section>
+                    {{/if}}
+                {{/each}}
                 <main class="w_100 flex_auto">
                     {{#each sections}}
                         {{#if @first}}
@@ -339,6 +339,8 @@
                 }
                 copyTextarea.classList.add('display_none');
             };
+
+
         </script>
         {{{ scripts }}}
         <!-- /scripts. -->
