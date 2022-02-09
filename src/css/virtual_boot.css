@@ -8331,11 +8331,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7939" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3417" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2756" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2055" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7228" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8746" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5160" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6297" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1296" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0691" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8367,11 +8367,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1981" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9012" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7634" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4116" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7752" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5255" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9417" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6119" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0461" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7749" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8942,7 +8942,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_4126">
+<div class="flex_column flex" id="session_6408">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -8966,7 +8966,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_4126">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_6408">top</a>
                 </div>
             </section>
         </div>
@@ -8978,7 +8978,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_4126">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_6408">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9101,7 +9101,7 @@ Markup:
         <ul class="bg_black-1 br_radius flex flex_column m-y_3 m-y_4:lg p_3 shadow_emboss-light ul_none z_0">
             <li> {{> "Program.Session.Shell" }}</li>
             <li> {{> "Program.Session.Collapsible" }}</li>
-            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session" }}</li>
             <li> {{> "Program.Session.Shell" }}</li>
             <li> {{> "Program.Session.Shell" }}</li>
             <li> {{> "Program.Session.Shell" }}</li>
@@ -9118,6 +9118,16 @@ Weight: 0
 NOTE: Note that this page design is supposed to be full screen so in the documentation it might collapse incorrectly or seem too crunched.
 
 EXPERIMENTAL: this design is new
+
+SubComponents:
+Sub.CollapseIcon.NoText - Collapse Icon
+Sub.Search.Faceted - Search Facet Group
+Sub.Search.Bar - Search Bar
+Sub.Search.ResultOverview - Search Result Overview
+Sub.Pagination - Pagination
+Program.Session - Session
+Program.Session.Shell - Session Shell
+Program.Session.Collapsible - Session Collapsible
 
 
 Styleguide Pages.Search.BarAndFilter
@@ -9175,10 +9185,17 @@ MarkupWrapperClasses:
 
 Weight: 0
 
+Data:
+Data.Session.ID - Session ID
+Data.Session.Title - Session title
+
+
 SubComponents:
 Sub.Presentation.List - Presentation List
 Sub.ActionButtons.NoDetails - Action Buttons
 Sub.ActionButtons.Favorite.Small - Favorite Button
+Sub.PlayingDateTime - Playing Date Time
+Sub.CategoryFlags - Category Flags
 
 
 Styleguide Program.Session
@@ -9191,7 +9208,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_7150">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_3866">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -9224,7 +9241,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_7150">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_3866">top</a></div>
     </div>
 </article>
 
@@ -9324,6 +9341,18 @@ Markup:
 </article>
 
 Weight: 10000
+
+Data: 
+Data.Presentation.Title - Presentation Title
+Data.Session.Title - Session Title
+Data.Session.ID - Session ID
+
+SubComponents:
+Sub.Credits.Dots - Credit Dots
+Sub.FacultyList - Faculty List
+Sub.PlayingDateTime - Playing Date Time
+Sub.ActionButtons.OnDemand - Action Buttons
+Sub.CategoryFlags - Category Flags
 
 Styleguide Program.OnDemand
 
@@ -9442,8 +9471,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="Incidunt dignissimos omnis Et soluta et dignissimos tempora "  }}
-    {{> Program.GridFormat.Abstract modifier_class="et Et Incidunt quo voluptatem "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="tempora Incidunt "  }}
+    {{> Program.GridFormat.Abstract modifier_class="quo similique Et Et similique omnis quo voluptatem soluta "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -9520,8 +9549,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Et voluptatem " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Incidunt voluptatem similique " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="" }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="omnis et quo " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -9639,9 +9668,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem Incidunt tempora quo tempora tempora " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="omnis soluta dignissimos Et quo et Incidunt " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="soluta Et Et tempora Incidunt quo voluptatem " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="soluta voluptatem dignissimos " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="dignissimos quo voluptatem " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="" }}
     </div>
 </section>
 
