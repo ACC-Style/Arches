@@ -96,6 +96,21 @@ Weight:0
 Styleguide Sub.Credits.Dots
 
 */
+/*
+
+Non Accredited
+
+description
+ 
+Markup:
+<strong class="font_xbold uppercase c_secondary-n2"><i class="fas fa-info-circle"></i> Not Accredited | Industry Session</strong>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Sub.Credits.NonAccredited
+*/
 
 %Sub.CategoryFlags {
 }
@@ -105,7 +120,7 @@ Category Flags
 Description: A graphic treatment for the category flags which are tags applied like channel and type.
  
 Markup:
-<div class="font_n3 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold self_start">
+<div class="font_n3 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold self_start {{ modifier_class }}">
   <ul class="ul_inline-pipe">
     <li>Channel 1</li>
     <li>{{>"Data.Agenda.ChannelName"}}</li>
@@ -517,7 +532,24 @@ Weight:0
 Styleguide Sub.ActionButtons.Only
 
 */
+/*
+Action Buttons Clear Search
+ 
+This action button is used to clear the search filters and parameters.
 
+ 
+Markup:
+<aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+      <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+        <a href="#" aria-label="navigate to" class="br_1 br_solid br_white-3 btn btn-secondary flex_auto shadow_overlap-light">Clear Search <i class="fas fa-times p-l_3"></i></a>
+      </nav>
+</aside>
+ 
+Weight:0
+ 
+Styleguide Sub.ActionButtons.ClearSearch
+
+*/
 /*
 Action Buttons On Demand
  
@@ -989,21 +1021,6 @@ Weight: 0
 Styleguide  Sub.Search.NoBar
 */
 
-/*
-
-No Results
-
-description
- 
-Markup:
-DO THIS
-
-MarkupWrapperClasses: 
- 
-Weight:0
- 
-Styleguide Program.Session.NoResults 
-*/
 
 
 
@@ -1051,7 +1068,7 @@ Markup:
 <nav aria-label="Pagination" class="flex flex_row p-b_5:lg p-b_4">
     <ul class="pagination flex flex_row ul_none justify_stretch relative lh_0 font_n1 font_medium m-x_auto shadow_bevel-light br_radius overflow_hidden">
         <li class="flex pagination-previous ">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer br-tl_radius br-bl_radius overflow_hidden br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer br-tl_radius br-bl_radius overflow_hidden br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">
                         <div class="flex flex_row nowrap"><i class="fas fa-arrow-left p-r_3 self_center"></i> <span class="show-for-sr display_none inline:md self_center">Prev</span></div>
@@ -1061,49 +1078,49 @@ Markup:
         </li>
         <!---->
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex"><i class="fas  fa-ellipsis-h left"></i></div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">50 </div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto font_medium font_ui  c_white h:c_white h:bg_primary-n2 br_primary-n3 bg_primary p-y_3 p-x_3 cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 " style="min-height: unset;">
+            <a class="active ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">51 </div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">52 </div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">53 </div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">54 </div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex"><i class="fas  fa-ellipsis-h right"></i></div>
                 </div>
@@ -1111,7 +1128,7 @@ Markup:
         </li>
         <!---->
         <li class="flex pagination-next">                        
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br-tr_radius br-br_radius overflow_hidden br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" aria-label="Next Page" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br-tr_radius br-br_radius overflow_hidden br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" aria-label="Next Page" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">
                         <div class="flex flex_row nowrap"><span class="show-for-sr display_none inline:md self_center">Next</span> <i class="fas fa-arrow-right p-l_3 self_center"></i></div>

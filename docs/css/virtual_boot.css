@@ -7696,12 +7696,27 @@ Styleguide Sub.Credits.Dots
 
 */
 /*
+
+Non Accredited
+
+description
+
+Markup:
+<strong class="font_xbold uppercase c_secondary-n2"><i class="fas fa-info-circle"></i> Not Accredited | Industry Session</strong>
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Sub.Credits.NonAccredited
+*/
+/*
 Category Flags
 
 Description: A graphic treatment for the category flags which are tags applied like channel and type.
 
 Markup:
-<div class="font_n3 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold self_start">
+<div class="font_n3 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold self_start {{ modifier_class }}">
   <ul class="ul_inline-pipe">
     <li>Channel 1</li>
     <li>{{>"Data.Agenda.ChannelName"}}</li>
@@ -8095,6 +8110,24 @@ Styleguide Sub.ActionButtons.Only
 
 */
 /*
+Action Buttons Clear Search
+
+This action button is used to clear the search filters and parameters.
+
+
+Markup:
+<aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
+      <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
+        <a href="#" aria-label="navigate to" class="br_1 br_solid br_white-3 btn btn-secondary flex_auto shadow_overlap-light">Clear Search <i class="fas fa-times p-l_3"></i></a>
+      </nav>
+</aside>
+
+Weight:0
+
+Styleguide Sub.ActionButtons.ClearSearch
+
+*/
+/*
 Action Buttons On Demand
 
 The On Demand Actions buttons never have the calendar reminder button.  
@@ -8341,11 +8374,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5333" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6247" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2535" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4892" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1480" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4799" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6415" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3371" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1786" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6579" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8377,11 +8410,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4007" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0874" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7175" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9847" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6820" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2228" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3928" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6385" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5679" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6163" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8546,21 +8579,6 @@ Styleguide  Sub.Search.NoBar
 */
 /*
 
-No Results
-
-description
-
-Markup:
-DO THIS
-
-MarkupWrapperClasses: 
-
-Weight:0
-
-Styleguide Program.Session.NoResults 
-*/
-/*
-
 Result Overview
 
 Small strip of data that shows the number of results and the time it took to search.
@@ -8601,7 +8619,7 @@ Markup:
 <nav aria-label="Pagination" class="flex flex_row p-b_5:lg p-b_4">
     <ul class="pagination flex flex_row ul_none justify_stretch relative lh_0 font_n1 font_medium m-x_auto shadow_bevel-light br_radius overflow_hidden">
         <li class="flex pagination-previous ">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer br-tl_radius br-bl_radius overflow_hidden br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer br-tl_radius br-bl_radius overflow_hidden br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">
                         <div class="flex flex_row nowrap"><i class="fas fa-arrow-left p-r_3 self_center"></i> <span class="show-for-sr display_none inline:md self_center">Prev</span></div>
@@ -8611,49 +8629,49 @@ Markup:
         </li>
         <!---->
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex"><i class="fas  fa-ellipsis-h left"></i></div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">50 </div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto font_medium font_ui  c_white h:c_white h:bg_primary-n2 br_primary-n3 bg_primary p-y_3 p-x_3 cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 " style="min-height: unset;">
+            <a class="active ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">51 </div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">52 </div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">53 </div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">54 </div>
                 </div>
             </a>
         </li>
         <li class="flex">
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex"><i class="fas  fa-ellipsis-h right"></i></div>
                 </div>
@@ -8661,7 +8679,7 @@ Markup:
         </li>
         <!---->
         <li class="flex pagination-next">                        
-            <a class="ease_out transition_1 f:outline_none h:undecorated a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br-tr_radius br-br_radius overflow_hidden br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" aria-label="Next Page" style="min-height: unset;">
+            <a class="ease_out transition_1 f:outline_none h:undecorated a:bg_accent-n3 a:c_white c_black-7 h:c_black text_center inline-block w_auto cursor_pointer  br-tr_radius br-br_radius overflow_hidden br_square br-l_1 br_solid br_1 br_black-3 bg_white h:bg_black-3 p-y_3 p-x_3" aria-label="Next Page" style="min-height: unset;">
                 <div class="flex block justify_center flex_column ">
                     <div class="flex_auto self_center justify_center flex">
                         <div class="flex flex_row nowrap"><span class="show-for-sr display_none inline:md self_center">Next</span> <i class="fas fa-arrow-right p-l_3 self_center"></i></div>
@@ -9186,7 +9204,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_0177">
+<div class="flex_column flex" id="session_2663">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -9210,7 +9228,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_0177">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2663">top</a>
                 </div>
             </section>
         </div>
@@ -9222,7 +9240,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_0177">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2663">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9325,6 +9343,7 @@ Markup:
             <li> {{> "Program.Session.Collapsible" }}</li>
             <li> {{> "Program.Session" }}</li>
             <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.NonAccredited" }}</li>
             <li> {{> "Program.Session.Shell" }}</li>
             <li> {{> "Program.Session.Shell" }}</li>
         </ul>
@@ -9373,6 +9392,7 @@ Markup:
             <li> {{> "Program.Session.Collapsible" }}</li>
             <li> {{> "Program.Session" }}</li>
             <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.NonAccredited" }}</li>
             <li> {{> "Program.Session.Shell" }}</li>
             <li> {{> "Program.Session.Shell" }}</li>
         </ul>
@@ -9404,9 +9424,9 @@ Styleguide Pages.Search.BarAndFilter
 */
 /*
 
-Search Bar with Filter
+No Results
 
-Search filter
+When the search returns no results or the user has filters all results away.
 
 
 Markup:
@@ -9454,7 +9474,7 @@ Program.Session.NoResults - No Result Response
 
 
 
-Styleguide Pages.Search.BarAndFilter
+Styleguide Pages.Search.NoResults
 */
 /*
 
@@ -9532,7 +9552,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_7964">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_5476">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -9565,7 +9585,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_7964">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_5476">top</a></div>
     </div>
 </article>
 
@@ -9723,6 +9743,95 @@ Styleguide Program.CondensedSession
 */
 /*
 
+No Results
+
+When the results are empty the user is presented with a message.
+
+Markup:
+<article class="c_black font_0 br-t_3 br_solid br_radius isolation_isolate shadow_overlap-light bg_white br_black-4 bg_warning-n1 m-y_5 m-x_3">
+    <div class="{{> 'Sub.Style.InnerBorder'}}">
+        <div class="br-b_1 br_solid br_black-4" >     
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
+                <header class="c_white">
+                    <h2 class="font_2  c_white font_display font_bold lh_1">
+                       <span class="font-size_up-2 block uppercase"><i class="fas fa-exclamation-triangle"></i> OH NO!</span>
+                       <span class="font-size_down inline-block lh_0 m-t_2">We couldn't find any results for your search.</span>
+                    </h2>
+                    <h3 class="font_0 font_bold font_copy lh_0 m-b_2 m-t_4 uppercase">Search Help</h3>
+                    <p class="font_copy m-b_4 lh_2 font_0">
+                    It is easy to search for a session, but its also easy to have a typo. Check your spelling and try again.<br> Click the Clear Search button to return to all sessions.
+                    </p>
+                </header>
+                <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_10:md flex flex_column items_center justify_center">
+                    {{> "Sub.ActionButtons.ClearSearch"  modifier_class="Watch"}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_warning-n3 br_solid br_1 br-t_0 br_black-3">
+    </div>
+</article>
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Program.Session.NoResults 
+*/
+/*
+
+Non Accredited Session
+
+There are sessions that are tagged as non accredited which means they are not eligible for credit and are industry specific.
+
+Markup:
+<article class="{{> Sub.Style.OuterBorder }} br_secondary-n2">
+    <div class="{{> Sub.Style.InnerBorder }} ">
+        <div class="br-b_1 br_solid br_secondary-2">
+        <div class="font_n3 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold self_start bg_secondary-n2 ">
+            <ul class="ul_inline-pipe">
+                <li>Industry Theater</li>
+                <li>{{>"Data.Agenda.ChannelName"}}</li>
+            </ul>
+        </div>    
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
+                <header> 
+                    <h2 class="font_n1 uppercase c_black-7">
+                        <strong class="font_bold p-r_2">{{> Data.Session.ID }}</strong> {{> Data.Session.Title }}
+                    </h2>   
+                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
+                        <span class="block font-size_up-1 font_display lh_1">
+                            {{> Data.Presentation.Title }}
+                        </span>
+                    </h3>
+                </header>
+                <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
+                    {{> "Sub.ActionButtons.NoDetails"  modifier_class="Watch"}}
+                </div>
+            </div>
+            <div>
+            <div class="p-x_4 p-b_4 flex flex_column font_1">
+                 <div class="font_0 font_ui">{{>  Sub.PlayingDateTime }}</div>
+                <div class="font-size_down">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex_grow uppercase m-l_auto">
+            {{> "Sub.Credits.NonAccredited" }}
+        </div>
+    </div>
+</article>
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Program.Session.NonAccredited
+*/
+/*
+
 On Demand Shell
 
 The On Demand view is slightly different if the Session is only a shell. 
@@ -9795,8 +9904,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="similique Incidunt dignissimos similique soluta "  }}
-    {{> Program.GridFormat.Abstract modifier_class="tempora similique voluptatem soluta "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="Et quo quo Et voluptatem quo voluptatem "  }}
+    {{> Program.GridFormat.Abstract modifier_class="dignissimos "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -9873,8 +9982,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="dignissimos Et tempora Incidunt omnis tempora et voluptatem " }}
 {{> "Program.GridFormat.FeaturedPresentation" modifier_class="" }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="voluptatem Et dignissimos " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -9992,9 +10101,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem et Incidunt tempora omnis " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="quo dignissimos quo soluta omnis et et et " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="omnis " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="omnis voluptatem tempora Incidunt tempora " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Incidunt Incidunt " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="" }}
     </div>
 </section>
 

@@ -277,6 +277,99 @@ Styleguide Program.CondensedSession
 
 /*
 
+No Results
+
+When the results are empty the user is presented with a message.
+ 
+Markup:
+<article class="c_black font_0 br-t_3 br_solid br_radius isolation_isolate shadow_overlap-light bg_white br_black-4 bg_warning-n1 m-y_5 m-x_3">
+    <div class="{{> 'Sub.Style.InnerBorder'}}">
+        <div class="br-b_1 br_solid br_black-4" >     
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
+                <header class="c_white">
+                    <h2 class="font_2  c_white font_display font_bold lh_1">
+                       <span class="font-size_up-2 block uppercase"><i class="fas fa-exclamation-triangle"></i> OH NO!</span>
+                       <span class="font-size_down inline-block lh_0 m-t_2">We couldn't find any results for your search.</span>
+                    </h2>
+                    <h3 class="font_0 font_bold font_copy lh_0 m-b_2 m-t_4 uppercase">Search Help</h3>
+                    <p class="font_copy m-b_4 lh_2 font_0">
+                    It is easy to search for a session, but its also easy to have a typo. Check your spelling and try again.
+                    <hr>
+                    Click the `Clear Search` button to return to all sessions.
+                    </p>
+                </header>
+                <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_10:md flex flex_column items_center justify_center">
+                    {{> "Sub.ActionButtons.ClearSearch"  modifier_class="Watch"}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_warning-n3 br_solid br_1 br-t_0 br_black-3">
+    </div>
+</article>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Program.Session.NoResults 
+*/
+
+/*
+
+Non Accredited Session
+
+There are sessions that are tagged as non accredited which means they are not eligible for credit and are industry specific.
+ 
+Markup:
+<article class="{{> Sub.Style.OuterBorder }} br_secondary-n2">
+    <div class="{{> Sub.Style.InnerBorder }} ">
+        <div class="br-b_1 br_solid br_secondary-2">
+        <div class="font_n3 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold self_start bg_secondary-n2 ">
+            <ul class="ul_inline-pipe">
+                <li>Industry Theater</li>
+                <li>{{>"Data.Agenda.ChannelName"}}</li>
+            </ul>
+        </div>    
+            <div class="p_4 p-b_2 flex flex_column flex_row:lg gap-x_4 gap-x_5:lg">
+                <header> 
+                    <h2 class="font_n1 uppercase c_black-7">
+                        <strong class="font_bold p-r_2">{{> Data.Session.ID }}</strong> {{> Data.Session.Title }}
+                    </h2>   
+                    <h3 class="font_display m-b_3 lh_2 c_primary-n2 font_2 p-r_4:lg">
+                        <span class="block font-size_up-1 font_display lh_1">
+                            {{> Data.Presentation.Title }}
+                        </span>
+                    </h3>
+                </header>
+                <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
+                    {{> "Sub.ActionButtons.NoDetails"  modifier_class="Watch"}}
+                </div>
+            </div>
+            <div>
+            <div class="p-x_4 p-b_4 flex flex_column font_1">
+                 <div class="font_0 font_ui">{{>  Sub.PlayingDateTime }}</div>
+                <div class="font-size_down">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
+        <div class="flex_grow uppercase m-l_auto">
+            {{> "Sub.Credits.NonAccredited" }}
+        </div>
+    </div>
+</article>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Program.Session.NonAccredited
+*/
+
+/*
+
 On Demand Shell
  
 The On Demand view is slightly different if the Session is only a shell. 
