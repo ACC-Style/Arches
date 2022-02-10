@@ -6,14 +6,40 @@ Search filter
 
 
 Markup:
-
+<div class="flex flex_row:md flex_column-reverse gap_4">
+    <div class="flex_auto flex_100 max-w_20:lg" id="FilterNavContainer">
+        <aside class="bg_black-1 p_3 br_radius shadow_emboss-light m-b_2 sticky:lg t_3:lg">
+            <h3 class="flex flex_row font_2 font_display c_primary font_medium items_center m-b_0 m-l_3"><span class="flex flex_auto">Filters</span> 
+            <span class="">
+            {{> "Sub.CollapseIcon.NoText" modifier_class="#CollapseFacetGroupContainerID" }}
+            </span>
+            </h3>  
+            <ul class="ul_none collapse show block:md" id="CollapseFacetGroupContainerID">  
+                {{> "Sub.Search.FacetedPrimary" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+                {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+                {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+            </ul>
+        </aside>
+    </div>
+    <div class="flex flex_auto flex_column isolation_isolate" id="SearchBarTop">
+        {{> "Sub.Search.NoBar"}}
+        {{> "Sub.Search.ResultOverview" modifier_class="m-t_3 m-b_2" }}
+        <ul class="bg_black-1 br_radius flex flex_column m-y_3 m-y_4:lg p_3 shadow_emboss-light ul_none z_0">
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Collapsible" }}</li>
+            <li> {{> "Program.Session" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+        </ul>
+        {{> "Sub.Pagination"}}
+    </div>
+</div>
 
 
 MarkupWrapperClasses: 
 
 Weight: 0
-
-NOTE: nothing
 
 NOTE: Note that this page design is supposed to be full screen so in the documentation it might collapse incorrectly or seem too crunched.
 
@@ -84,3 +110,57 @@ Styleguide Pages.Search.BarAndFilter
 */
 
 
+/*
+
+Search Bar with Filter
+
+Search filter
+
+
+Markup:
+<div class="flex flex_row:md flex_column-reverse gap_4">
+    <div class="flex_auto flex_100 max-w_20:lg" id="FilterNavContainer">
+        <aside class="bg_black-1 p_3 br_radius shadow_emboss-light m-b_2 sticky:lg t_3:lg">
+            <h3 class="flex flex_row font_2 font_display c_primary font_medium items_center m-b_0 m-l_3"><span class="flex flex_auto">Filters</span> 
+            <span class="">
+            {{> "Sub.CollapseIcon.NoText" modifier_class="#CollapseFacetGroupContainerID" }}
+            </span>
+            </h3>  
+            <ul class="ul_none collapse show block:md" id="CollapseFacetGroupContainerID">  
+                {{> "Sub.Search.FacetedPrimary" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+                {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+                {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+            </ul>
+        </aside>
+    </div>
+    <div class="flex flex_auto flex_column isolation_isolate" id="SearchBarTop">
+        {{> "Sub.Search.Bar"}}
+        {{> "Sub.Search.ResultOverview" modifier_class="m-t_3 m-b_2" }}
+        <ul class="bg_black-1 br_radius flex flex_column m-y_3 m-y_4:lg p_3 shadow_emboss-light ul_none z_0">
+            <li> {{> "Program.Session.NoResults" }}</li>
+        </ul>
+        {{> "Sub.Pagination"}}
+    </div>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: Note that this page design is supposed to be full screen so in the documentation it might collapse incorrectly or seem too crunched.
+
+EXPERIMENTAL: this design is new
+
+SubComponents:
+Sub.CollapseIcon.NoText - Collapse Icon
+Sub.Search.Faceted - Search Facet Group
+Sub.Search.Bar - Search Bar
+Sub.Search.ResultOverview - Search Result Overview
+Sub.Pagination - Pagination
+Program.Session.NoResults - No Result Response
+
+
+
+Styleguide Pages.Search.BarAndFilter
+*/

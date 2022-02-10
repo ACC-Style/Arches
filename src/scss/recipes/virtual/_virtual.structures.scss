@@ -1,0 +1,254 @@
+/*
+Image and content
+ 
+Description: 
+ 
+Markup:
+<div class="flex flex_row:lg flex_column">
+    <div class="flex_none:lg self_center self_start:lg"><img src="https://picsum.photos/260/240" alt="" class="w_100 max-w_25:lg"></div>
+    <div class="flex_auto p-x_5:lg p-y_4 p-y_0:lg ">
+    <main class="reading-typography">
+            <h3 class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vitae ex minus voluptas, debitis consequuntur, voluptatem, ad nostrum quod eum pariatur natus? Aspernatur repellendus a sapiente iure quibusdam molestias nulla?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vitae ex minus voluptas, debitis consequuntur, voluptatem, ad nostrum quod eum pariatur natus? Aspernatur repellendus a sapiente iure quibusdam molestias nulla?</p>
+            <p>Dolorem quo eos quibusdam illo eveniet. Eius repellendus totam nam atque aut dicta molestias et. Molestiae nobis rerum possimus voluptatem non. Natus soluta aliquam occaecati libero blanditiis sed sed non. Aut asperiores enim ut mollitia. Ea aliquam exercitationem consectetur temporibus laudantium harum voluptatem.Blanditiis sapiente accusantium in dolorem adipisci. Quibusdam nihil voluptates tempora. Itaque nihil iste nulla assumenda velit nam et corporis dolorem. Illo ea officia quibusdam harum. At quisquam ullam nam. Fugiat et debitis.</p>
+        </main>
+        <footer>
+            <a href="https://www.acc.org/-/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Meetings/2021/Agendas/NYCVS-2021-Agenda.pdf?la=en&amp;hash=07D2FBA41852DA1B120569EAE9D96E8EEBB9F6B5&amp;_ga=2.39127523.1324976227.1642517088-301418094.1638216724" class="btn br_radius max-w_30 m_auto m-b_3 block shadow_overlap-light btn-primary c_white h:undecorated" target="_blank">Download Agenda</a>
+        </footer>
+    </div>
+</div>
+ 
+Weight:0
+ 
+Styleguide Structures.ImageContentSimple
+*/
+
+
+/*
+Call-to-Action Card
+ 
+Description: Some content areas are chunked out to drive usage through a call to action card.
+ 
+Markup:
+<div class="br_radius flex flex_column justify_between p-x_5:lg p_4 shadow_overlap-light br_black-3 br_solid br_1">
+<h2 class="font_bold c_primary m-t_0 block">Member Section</h2>
+<p class="lh_3">Connect with ACC’s Sports and Exercise Member Section, THE home for sports and exercise professionals within the ACC, advocating for and advancing the priorities of the community, and serving as a College-wide resource for issues related to sports and exercise professionals.  </p>   
+<a class="block br_radius btn btn-block btn-lg btn-secondary btn_lg m-b_3 m_auto shadow_overlap-light w_100">Call to Action</a>
+</div>    
+ 
+Weight:100
+ 
+Styleguide  Structures.Call To Action
+*/
+
+/*
+External Resource
+ 
+External Sections of content that are helpful to cross promote other products from the conferences. 
+
+primary    -  Change the color of the block to primary.
+accent    -  Change the color of the block to accent.
+
+ 
+Markup:
+<article class="aspect_21x9 bg-blend_luminosity relative bg_cover bg_no-repeat bg_{{ modifier_class }}-2 br_1 br_black-3 br_radius br_solid flex_shrink generic_video generic_video-nolabel h:bg_secondary-n2 relative shadow_3 text_center c_{{ modifier_class }}-4">
+    <em class="opacity_5 absolute t_1 r_2 fas font_4 fa-external-link-square-alt"></em>
+    <a class="block font_7 font_6:md font_9:lg font_display font_xbold h:undecorated m_0 p_4 p_5:lg text_left uppercase c_inherit expanded-click-area" style="line-height: .85em" href="https://www.acc.org/latest-in-cardiology/features/accs-coronavirus-disease-2019-covid-19-hub?_ga=2.121293644.574512269.1591713176-49927898.1591404069#sort=%40fcommonsortdate90022%20descending" target="_blank"><span class="font_3 font_4:md m_0 m-l_0 m-b_n2 lh_0 block m-b_2">ACC’s</span>
+    <span class=" block">COVID-19 HUB</span>
+ </a>
+ </article>
+
+ MarkupWrapperClasses:
+ gap-x_4 gap-y_4 grid template-x_30
+ 
+ 
+Styleguide Structures.External Resource
+*/
+
+/*
+
+Alpha List
+
+Long list of alpha ordered items with quick link jumping to the letter.
+ 
+Markup:
+<h1 id="AlphaNavTop" class="font_4 c_primary" >Alpha List</h1>
+<section class="relative p-t_2">
+    <div class=" sticky t_0 r_0 z_1">
+        <div class="absolute r_4 t_0  flex flex_row flex_nowrap gap-x_3">
+        <!--  Helper Jump links -->
+        <a class="br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#AlphaNavTop">
+        <span><i class="fas fa-arrow-up"></i> top</span>
+        </a>
+        <!--  Helper Jump links -->  
+        </div>
+    </div>
+<nav class="bg_white br_radius grid items_center p_3 p_4:lg relative shadow_overlap-light z_2 m-t_n2">
+        <ul class="c_secondary-2 flex:lg flex_row font_bold gap_4 grid grid-col_5 justify_around:lg justify_center m-x_4 m-y_3 ul_none">
+            <li class="{{> Structures.AlphaList.li_classes }}">A</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">B</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">C</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">D</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">E</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">F</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">G</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">H</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">I</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">J</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">K</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">L</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">M</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">N</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">O</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">P</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">Q</li>
+            <li class="{{> Structures.AlphaList.li_classes }}"><a class="{{> Structures.AlphaList.link_classes }}"href="#R">R</a></li>
+            <li class="{{> Structures.AlphaList.li_classes }}"><a class="{{> Structures.AlphaList.link_classes }}"href="#S">S</a></li>
+            <li class="{{> Structures.AlphaList.li_classes }}"><a class="{{> Structures.AlphaList.link_classes }}"href="#T">T</a></li>
+            <li class="{{> Structures.AlphaList.li_classes }}">U</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">V</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">W</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">X</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">Y</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">Z</li>
+        </ul>
+    </nav>
+    <div id="R" class="{{> Structures.AlphaList.container_classes }}" >
+        <div class="flex_none"><div class="{{> Structures.AlphaList.marker_classes }}">R</div></div>
+        <ul class="{{> 'Structures.AlphaList.list_item_container_classes'}}">
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Rafi Iles"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Rhiann Best"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Romana Ibarra"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Roseanne Bridges"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Roy Squires"}}</li>
+        </ul>
+    </div>
+    <div id="S" class="{{> Structures.AlphaList.container_classes }}" >
+        <div class="flex_none"><div class="{{> Structures.AlphaList.marker_classes }}">S</div></div>
+        <ul class="{{> 'Structures.AlphaList.list_item_container_classes'}}">
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sammy Christie"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sanjeev Hatfield"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Scarlett-Rose"}}</li> 
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sioned Enriquez"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sophia-Rose"}}</li> 
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sorcha Avery"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sulayman Wells"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sumaiya Millington"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sammy Christie"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sanjeev Hatfield"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Scarlett-Rose"}}</li> 
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sioned Enriquez"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sophia-Rose"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sorcha Avery"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sulayman Wells"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sumaiya Millington"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sammy Christie"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sanjeev Hatfield"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Scarlett-Rose"}}</li> 
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sioned Enriquez"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sophia-Rose"}}</li> 
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sorcha Avery"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sulayman Wells"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sumaiya Millington"}}</li>
+        </ul>
+    </div>
+    <div id="T" class="{{> Structures.AlphaList.container_classes }}" >
+        <div class="flex_none"><div class="{{> Structures.AlphaList.marker_classes }}">T</div></div>
+        <ul class="{{> 'Structures.AlphaList.list_item_container_classes'}}">
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tatiana Buchanan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Terrell Healy"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tolga Monaghan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tyriq Perry"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tatiana Buchanan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Terrell Healy"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tolga Monaghan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tyriq Perry"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tatiana Buchanan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Terrell Healy"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tolga Monaghan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tyriq Perry"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tatiana Buchanan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Terrell Healy"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tolga Monaghan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tyriq Perry"}}</li>
+        </ul>
+    </div>
+</section>
+
+ 
+Weight:0
+ 
+Styleguide Structures.AlphaList
+*/
+
+/*
+
+Style - Container Classes
+
+Markup:
+relative br-t_1 br_dotted br_primary-3 w_100  p-y_4 font_0 flex_row flex 
+ 
+Styleguide Structures.AlphaList.container_classes
+*/
+/*
+
+Style - Marker Classes
+
+Markup:
+c_white font_8 font_accent font_bold inline-block uppercase shadow_overlap-light bg_primary-n2 lh_0 br_radius p_2 p-x_4 m-x_3 sticky t_4  flex_none
+ 
+Styleguide Structures.AlphaList.marker_classes
+*/
+/*
+
+Style - List Item Nav Classes
+
+Markup:
+c_black-7  text_center 
+ 
+Styleguide Structures.AlphaList.li_classes
+*/
+/*
+
+Style - List Item Nav Link Classes
+
+Markup:
+bg_primary-4 br_radius h:c_white h:bg_primary-n3 p-x_3 block h:undecorated
+
+Styleguide Structures.AlphaList.link_classes 
+*/
+
+/*
+
+Sub - List Item Name
+
+Markup:
+<span class="p-y_3 lh_1">
+<span data-name="newMember__name" class="block font_display c_primary-n2 font-size_up lh_0 m-b_3">
+    {{ modifier_class }}
+</span>
+<span data-name="newMember__title" class="block font-size_down-1 lh_1 m-b_2 c_black-8">
+    {{> "Data.Faculty.Title" }}
+</span>
+<span data-name="newMember__location" class="block font-size_down-2 c_black-6">
+    {{> "Data.Faculty.Location" }}
+</span>
+</span>
+ 
+Styleguide Structures.AlphaList.list_item_name 
+*/
+
+
+/*
+
+Style - List Item Container Classes
+
+
+ 
+Markup:
+flex_auto gap-x_5 gap-y_4 grid grid-col_1 grid-col_2:md grid-col_3:lg p-t_0 p_4 ul_none
+ 
+Weight:0
+ 
+Styleguide Structures.AlphaList.list_item_container_classes
+*/

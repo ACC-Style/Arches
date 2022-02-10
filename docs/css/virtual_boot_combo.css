@@ -22558,22 +22558,22 @@ Markup:
     <nav class="flex_auto max-w_90 font_n1 font_1:md font_2:lg font_display font_medium m-l_0 navbar navbar-dark navbar-expand-lg p_0 text_center:lg text_left">
         <!-- Primary Nav that expands on mobile and reveals extra nav items when on desktop. -->
         <ul class="navbar-nav flex flex_row w_100">
-            {{> "PageLayout.HeaderNav.Active" }}
-            {{> "PageLayout.HeaderNav.MobileButton"}}
-            {{> "PageLayout.HeaderNav.Disabled"}}
+            {{> "Structures.HeaderNav.Active" }}
+            {{> "Structures.HeaderNav.MobileButton"}}
+            {{> "Structures.HeaderNav.Disabled"}}
             <!-- menu toggle for mobile -->
-            {{> "PageLayout.HeaderNav.MobileToggle"}}
+            {{> "Structures.HeaderNav.MobileToggle"}}
             <!-- menu items that hide when in mobile under the expanded area -->
-            {{> "PageLayout.HeaderNav.MobileHidden" }}
-            {{> "PageLayout.HeaderNav.MobileHiddenDisabled" }}
-            {{> "PageLayout.HeaderNav.MobileHidden" }}
+            {{> "Structures.HeaderNav.MobileHidden" }}
+            {{> "Structures.HeaderNav.MobileHiddenDisabled" }}
+            {{> "Structures.HeaderNav.MobileHidden" }}
         </ul>
         <!-- Expanding Mobile Menu -->
         <div class="collapse navbar-collapse" id="ExpandingMobileMenu">
             <ul class="navbar-nav flex shadow_emboss-light flex_column w_100 font_1 bg_black-2 display_none:lg" >
-                {{> "PageLayout.HeaderNav.ExpandMobileLinks" }}
-                {{> "PageLayout.HeaderNav.ExpandMobileLinksDisabled" }}
-                {{> "PageLayout.HeaderNav.ExpandMobileLinks" }}
+                {{> "Structures.HeaderNav.ExpandMobileLinks" }}
+                {{> "Structures.HeaderNav.ExpandMobileLinksDisabled" }}
+                {{> "Structures.HeaderNav.ExpandMobileLinks" }}
             </ul> 
         </div>
     </nav>
@@ -22581,7 +22581,7 @@ Markup:
 
 Weight: 0
 
-Styleguide PageLayout.HeaderNav
+Styleguide Structures.HeaderNav
 */
 /*
 Mobile Button  Header Nav
@@ -22601,7 +22601,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide PageLayout.HeaderNav.MobileButton
+Styleguide Structures.HeaderNav.MobileButton
 */
 /*
 Mobile Toggle Header Nav
@@ -22621,7 +22621,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide PageLayout.HeaderNav.MobileToggle
+Styleguide Structures.HeaderNav.MobileToggle
 */
 /*
 Mobile Hidden Header Nav
@@ -22639,7 +22639,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide PageLayout.HeaderNav.MobileHidden
+Styleguide Structures.HeaderNav.MobileHidden
 */
 /*
 Mobile Hidden Header Nav Disabled
@@ -22657,7 +22657,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide PageLayout.HeaderNav.MobileHiddenDisabled
+Styleguide Structures.HeaderNav.MobileHiddenDisabled
 */
 /*
 Expanded Mobile Nav List
@@ -22675,7 +22675,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide PageLayout.HeaderNav.ExpandMobileLinks
+Styleguide Structures.HeaderNav.ExpandMobileLinks
 */
 /*
 Expanded Mobile Nav List Disabled
@@ -22693,7 +22693,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 0
 
-Styleguide PageLayout.HeaderNav.ExpandMobileLinksDisabled
+Styleguide Structures.HeaderNav.ExpandMobileLinksDisabled
 */
 /*
 Nav Active
@@ -22712,7 +22712,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: -1
 
-Styleguide PageLayout.HeaderNav.Active
+Styleguide Structures.HeaderNav.Active
 */
 /*
 Nav Disabled
@@ -22731,7 +22731,7 @@ MarkupWrapperClasses: ul_none
 
 Weight: 10
 
-Styleguide PageLayout.HeaderNav.Disabled
+Styleguide Structures.HeaderNav.Disabled
 */
 /*
 
@@ -22742,7 +22742,7 @@ Conferences can have a header branding area which gives the design team the abil
 
 Weight: -999
 
-Styleguide PageLayout.BrandArea
+Styleguide Structures.BrandArea
 
 */
 /*
@@ -22753,7 +22753,7 @@ Description: This is the logged in header brand area.
 
 Markup:
 <div class="relative">
-    {{> "PageLayout.BrandArea.LoggedIn.Button"}}
+    {{> "Structures.BrandArea.LoggedIn.Button"}}
     <picture class="w_100">
         <source class="w_100" srcset="https://via.placeholder.com/1440x200.png?text=Desktop+Large" media="(min-width: 1200px)">
         <source class="w_100" srcset="https://via.placeholder.com/1200x200.png?text=Desktop" media="(min-width: 1024px)">
@@ -22767,7 +22767,7 @@ MarkupWrapperClasses: relative
 
 Weight: -999
 
-Styleguide PageLayout.BrandArea.LoggedIn
+Styleguide Structures.BrandArea.LoggedIn
 
 */
 /*
@@ -22787,7 +22787,7 @@ MarkupWrapperClasses: relative
 
 Weight:0
 
-Styleguide PageLayout.BrandArea.LoggedIn.Button
+Styleguide Structures.BrandArea.LoggedIn.Button
 */
 /*
 
@@ -22797,7 +22797,7 @@ Description: Because the UI is floats on top of the images there are area that a
 
 Markup:
 <div class="relative m-t_4 overflow-hidden" style="width:1400px">
-{{> "PageLayout.BrandArea.LoggedIn.Button"}}
+{{> "Structures.BrandArea.LoggedIn.Button"}}
 <div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
 	<img
 		class="w_100"
@@ -22805,7 +22805,7 @@ Markup:
 	/>
 </div>
 <div class="relative m-t_4  overflow-hidden" style="width:1200px">
- {{> "PageLayout.BrandArea.LoggedIn.Button"}}
+ {{> "Structures.BrandArea.LoggedIn.Button"}}
 <div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
 	<img
 		class="w_100"
@@ -22813,7 +22813,7 @@ Markup:
 	/>
 </div>
 <div class="relative m-t_4  overflow-hidden" style="width:768px">
- {{> "PageLayout.BrandArea.LoggedIn.Button"}}
+ {{> "Structures.BrandArea.LoggedIn.Button"}}
 <div class="absolute b_0 bg_alert font_5 font_xbold grid justify_center opacity_5 r_0 self_center t_0 text_center" style="width:250px"><span class="self_center c_black font-blend_color-burn">UNSAFE</span></div>
 	<img
 		class="w_100"
@@ -22851,7 +22851,7 @@ MarkupWrapperClasses: relative
 
 Weight: -999
 
-Styleguide PageLayout.BrandArea.UnSAFE
+Styleguide Structures.BrandArea.UnSAFE
 
 */
 /*
@@ -22879,7 +22879,7 @@ MarkupWrapperClasses: relative
 
 Weight: -1000
 
-Styleguide PageLayout.BrandArea.LoggedOut
+Styleguide Structures.BrandArea.LoggedOut
 
 */
 /*
@@ -22901,7 +22901,7 @@ Markup:
 
 Weight:0
 
-Styleguide PageLayout.Evergreen.Credits
+Styleguide Structures.Evergreen.Credits
 */
 /*
 Sub Components
@@ -23640,11 +23640,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1854" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7103" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4100" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3597" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6032" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5333" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6247" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2535" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4892" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1480" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -23676,11 +23676,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0625" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2651" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2553" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3893" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4892" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4007" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0874" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7175" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9847" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6820" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -23782,7 +23782,7 @@ Markup:
 </div>
 </div>
 <div class="bg_white br_radius p_4:lg p_3 shadow_overlap-light z_2 relative" >
-    <h1 class="c_primary-n1 font_display m-b_3 m-t_0 flex flex_row justify_between"><span>Search</span>
+    <h1 class="c_primary-n1 font_display m-b_3 m-t_0 flex flex_row justify_between"><span>Program</span>
       <a href="#FilterNavContainer" class="absolute br-tl_square br-tr_square br_radius btn btn-accent btn-sm display_none:md flex_none grid items_center justify_center m-l_auto r_3 self_center t_0">
       <span><i class="fas fa-arrow-down"></i><i class="fas fa-filter"></i></span>
       </a>
@@ -23806,6 +23806,57 @@ MarkupWrapperClasses:
 Weight: 0
 
 Styleguide  Sub.Search.Bar
+*/
+/*
+
+
+Search Bar
+
+Simple Search Bar
+
+
+Markup:
+<div class=" sticky t_0 r_0 z_1">
+<div class="absolute r_4 t_0  flex flex_row flex_nowrap gap-x_3">
+<!--  Helper Jump links -->
+  <a class="br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#SearchBarTop">
+  <span><i class="fas fa-arrow-up"></i> top</span>
+  </a>
+  <a href="#FilterNavContainer" class="br-tl_square br-tr_square br_radius btn btn-accent btn-sm display_none:md grid items_center justify_center m-l_auto self_center shadow_3">
+  <span><i class="fas fa-arrow-down"></i><i class="m-l_2 fas fa-filter"></i></span>
+  </a>
+<!--  Helper Jump links -->  
+</div>
+</div>
+<div class="bg_white br_radius p_4:lg p_3 shadow_overlap-light z_2 relative" >
+    <h1 class="c_primary-n1 font_display m-b_3 m-t_0 flex flex_row justify_between"><span>Program</span>
+      <a href="#FilterNavContainer" class="absolute br-tl_square br-tr_square br_radius btn btn-accent btn-sm display_none:md flex_none grid items_center justify_center m-l_auto r_3 self_center t_0">
+      <span><i class="fas fa-arrow-down"></i><i class="fas fa-filter"></i></span>
+      </a>
+    </h1>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide  Sub.Search.NoBar
+*/
+/*
+
+No Results
+
+description
+
+Markup:
+DO THIS
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Program.Session.NoResults 
 */
 /*
 
@@ -23948,7 +23999,7 @@ Markup:
 
 Weight:0
 
-Styleguide PageLayout.ImageContentSimple
+Styleguide Structures.ImageContentSimple
 */
 /*
 Call-to-Action Card
@@ -23964,7 +24015,7 @@ Markup:
 
 Weight:100
 
-Styleguide  PageLayout.Call To Action
+Styleguide  Structures.Call To Action
 */
 /*
 External Resource
@@ -23987,7 +24038,190 @@ Markup:
  gap-x_4 gap-y_4 grid template-x_30
 
 
-Styleguide PageLayout.External Resource
+Styleguide Structures.External Resource
+*/
+/*
+
+Alpha List
+
+Long list of alpha ordered items with quick link jumping to the letter.
+
+Markup:
+<h1 id="AlphaNavTop" class="font_4 c_primary" >Alpha List</h1>
+<section class="relative p-t_2">
+    <div class=" sticky t_0 r_0 z_1">
+        <div class="absolute r_4 t_0  flex flex_row flex_nowrap gap-x_3">
+        <!--  Helper Jump links -->
+        <a class="br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#AlphaNavTop">
+        <span><i class="fas fa-arrow-up"></i> top</span>
+        </a>
+        <!--  Helper Jump links -->  
+        </div>
+    </div>
+<nav class="bg_white br_radius grid items_center p_3 p_4:lg relative shadow_overlap-light z_2 m-t_n2">
+        <ul class="c_secondary-2 flex:lg flex_row font_bold gap_4 grid grid-col_5 justify_around:lg justify_center m-x_4 m-y_3 ul_none">
+            <li class="{{> Structures.AlphaList.li_classes }}">A</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">B</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">C</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">D</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">E</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">F</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">G</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">H</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">I</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">J</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">K</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">L</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">M</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">N</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">O</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">P</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">Q</li>
+            <li class="{{> Structures.AlphaList.li_classes }}"><a class="{{> Structures.AlphaList.link_classes }}"href="#R">R</a></li>
+            <li class="{{> Structures.AlphaList.li_classes }}"><a class="{{> Structures.AlphaList.link_classes }}"href="#S">S</a></li>
+            <li class="{{> Structures.AlphaList.li_classes }}"><a class="{{> Structures.AlphaList.link_classes }}"href="#T">T</a></li>
+            <li class="{{> Structures.AlphaList.li_classes }}">U</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">V</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">W</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">X</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">Y</li>
+            <li class="{{> Structures.AlphaList.li_classes }}">Z</li>
+        </ul>
+    </nav>
+    <div id="R" class="{{> Structures.AlphaList.container_classes }}" >
+        <div class="flex_none"><div class="{{> Structures.AlphaList.marker_classes }}">R</div></div>
+        <ul class="{{> 'Structures.AlphaList.list_item_container_classes'}}">
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Rafi Iles"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Rhiann Best"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Romana Ibarra"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Roseanne Bridges"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Roy Squires"}}</li>
+        </ul>
+    </div>
+    <div id="S" class="{{> Structures.AlphaList.container_classes }}" >
+        <div class="flex_none"><div class="{{> Structures.AlphaList.marker_classes }}">S</div></div>
+        <ul class="{{> 'Structures.AlphaList.list_item_container_classes'}}">
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sammy Christie"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sanjeev Hatfield"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Scarlett-Rose"}}</li> 
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sioned Enriquez"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sophia-Rose"}}</li> 
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sorcha Avery"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sulayman Wells"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sumaiya Millington"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sammy Christie"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sanjeev Hatfield"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Scarlett-Rose"}}</li> 
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sioned Enriquez"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sophia-Rose"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sorcha Avery"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sulayman Wells"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sumaiya Millington"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sammy Christie"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sanjeev Hatfield"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Scarlett-Rose"}}</li> 
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sioned Enriquez"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sophia-Rose"}}</li> 
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sorcha Avery"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sulayman Wells"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Sumaiya Millington"}}</li>
+        </ul>
+    </div>
+    <div id="T" class="{{> Structures.AlphaList.container_classes }}" >
+        <div class="flex_none"><div class="{{> Structures.AlphaList.marker_classes }}">T</div></div>
+        <ul class="{{> 'Structures.AlphaList.list_item_container_classes'}}">
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tatiana Buchanan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Terrell Healy"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tolga Monaghan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tyriq Perry"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tatiana Buchanan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Terrell Healy"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tolga Monaghan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tyriq Perry"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tatiana Buchanan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Terrell Healy"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tolga Monaghan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tyriq Perry"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tatiana Buchanan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Terrell Healy"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tolga Monaghan"}}</li>
+            <li>{{> "Structures.AlphaList.list_item_name" modifier_class="Tyriq Perry"}}</li>
+        </ul>
+    </div>
+</section>
+
+
+Weight:0
+
+Styleguide Structures.AlphaList
+*/
+/*
+
+Style - Container Classes
+
+Markup:
+relative br-t_1 br_dotted br_primary-3 w_100  p-y_4 font_0 flex_row flex 
+
+Styleguide Structures.AlphaList.container_classes
+*/
+/*
+
+Style - Marker Classes
+
+Markup:
+c_white font_8 font_accent font_bold inline-block uppercase shadow_overlap-light bg_primary-n2 lh_0 br_radius p_2 p-x_4 m-x_3 sticky t_4  flex_none
+
+Styleguide Structures.AlphaList.marker_classes
+*/
+/*
+
+Style - List Item Nav Classes
+
+Markup:
+c_black-7  text_center 
+
+Styleguide Structures.AlphaList.li_classes
+*/
+/*
+
+Style - List Item Nav Link Classes
+
+Markup:
+bg_primary-4 br_radius h:c_white h:bg_primary-n3 p-x_3 block h:undecorated
+
+Styleguide Structures.AlphaList.link_classes 
+*/
+/*
+
+Sub - List Item Name
+
+Markup:
+<span class="p-y_3 lh_1">
+<span data-name="newMember__name" class="block font_display c_primary-n2 font-size_up lh_0 m-b_3">
+    {{ modifier_class }}
+</span>
+<span data-name="newMember__title" class="block font-size_down-1 lh_1 m-b_2 c_black-8">
+    {{> "Data.Faculty.Title" }}
+</span>
+<span data-name="newMember__location" class="block font-size_down-2 c_black-6">
+    {{> "Data.Faculty.Location" }}
+</span>
+</span>
+
+Styleguide Structures.AlphaList.list_item_name 
+*/
+/*
+
+Style - List Item Container Classes
+
+
+
+Markup:
+flex_auto gap-x_5 gap-y_4 grid grid-col_1 grid-col_2:md grid-col_3:lg p-t_0 p_4 ul_none
+
+Weight:0
+
+Styleguide Structures.AlphaList.list_item_container_classes
 */
 /*
 Awards
@@ -24251,7 +24485,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_7806">
+<div class="flex_column flex" id="session_0177">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -24275,7 +24509,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_7806">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_0177">top</a>
                 </div>
             </section>
         </div>
@@ -24287,7 +24521,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_7806">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_0177">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -24367,14 +24601,40 @@ Search filter
 
 
 Markup:
-
+<div class="flex flex_row:md flex_column-reverse gap_4">
+    <div class="flex_auto flex_100 max-w_20:lg" id="FilterNavContainer">
+        <aside class="bg_black-1 p_3 br_radius shadow_emboss-light m-b_2 sticky:lg t_3:lg">
+            <h3 class="flex flex_row font_2 font_display c_primary font_medium items_center m-b_0 m-l_3"><span class="flex flex_auto">Filters</span> 
+            <span class="">
+            {{> "Sub.CollapseIcon.NoText" modifier_class="#CollapseFacetGroupContainerID" }}
+            </span>
+            </h3>  
+            <ul class="ul_none collapse show block:md" id="CollapseFacetGroupContainerID">  
+                {{> "Sub.Search.FacetedPrimary" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+                {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+                {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+            </ul>
+        </aside>
+    </div>
+    <div class="flex flex_auto flex_column isolation_isolate" id="SearchBarTop">
+        {{> "Sub.Search.NoBar"}}
+        {{> "Sub.Search.ResultOverview" modifier_class="m-t_3 m-b_2" }}
+        <ul class="bg_black-1 br_radius flex flex_column m-y_3 m-y_4:lg p_3 shadow_emboss-light ul_none z_0">
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Collapsible" }}</li>
+            <li> {{> "Program.Session" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+            <li> {{> "Program.Session.Shell" }}</li>
+        </ul>
+        {{> "Sub.Pagination"}}
+    </div>
+</div>
 
 
 MarkupWrapperClasses: 
 
 Weight: 0
-
-NOTE: nothing
 
 NOTE: Note that this page design is supposed to be full screen so in the documentation it might collapse incorrectly or seem too crunched.
 
@@ -24437,6 +24697,60 @@ Sub.Pagination - Pagination
 Program.Session - Session
 Program.Session.Shell - Session Shell
 Program.Session.Collapsible - Session Collapsible
+
+
+Styleguide Pages.Search.BarAndFilter
+*/
+/*
+
+Search Bar with Filter
+
+Search filter
+
+
+Markup:
+<div class="flex flex_row:md flex_column-reverse gap_4">
+    <div class="flex_auto flex_100 max-w_20:lg" id="FilterNavContainer">
+        <aside class="bg_black-1 p_3 br_radius shadow_emboss-light m-b_2 sticky:lg t_3:lg">
+            <h3 class="flex flex_row font_2 font_display c_primary font_medium items_center m-b_0 m-l_3"><span class="flex flex_auto">Filters</span> 
+            <span class="">
+            {{> "Sub.CollapseIcon.NoText" modifier_class="#CollapseFacetGroupContainerID" }}
+            </span>
+            </h3>  
+            <ul class="ul_none collapse show block:md" id="CollapseFacetGroupContainerID">  
+                {{> "Sub.Search.FacetedPrimary" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+                {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+                {{> "Sub.Search.Faceted" modifier_class="br-b_2 br_0 br_primary-3 br_solid shadow_overlap-light"}}
+            </ul>
+        </aside>
+    </div>
+    <div class="flex flex_auto flex_column isolation_isolate" id="SearchBarTop">
+        {{> "Sub.Search.Bar"}}
+        {{> "Sub.Search.ResultOverview" modifier_class="m-t_3 m-b_2" }}
+        <ul class="bg_black-1 br_radius flex flex_column m-y_3 m-y_4:lg p_3 shadow_emboss-light ul_none z_0">
+            <li> {{> "Program.Session.NoResults" }}</li>
+        </ul>
+        {{> "Sub.Pagination"}}
+    </div>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: Note that this page design is supposed to be full screen so in the documentation it might collapse incorrectly or seem too crunched.
+
+EXPERIMENTAL: this design is new
+
+SubComponents:
+Sub.CollapseIcon.NoText - Collapse Icon
+Sub.Search.Faceted - Search Facet Group
+Sub.Search.Bar - Search Bar
+Sub.Search.ResultOverview - Search Result Overview
+Sub.Pagination - Pagination
+Program.Session.NoResults - No Result Response
+
 
 
 Styleguide Pages.Search.BarAndFilter
@@ -24517,7 +24831,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_4489">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_7964">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -24550,7 +24864,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_4489">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_7964">top</a></div>
     </div>
 </article>
 
@@ -24780,8 +25094,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="et Et similique tempora Et quo quo similique "  }}
-    {{> Program.GridFormat.Abstract modifier_class="Et soluta voluptatem omnis Et "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="similique Incidunt dignissimos similique soluta "  }}
+    {{> Program.GridFormat.Abstract modifier_class="tempora similique voluptatem soluta "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -24858,8 +25172,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Et Et omnis omnis tempora " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="quo tempora dignissimos Incidunt omnis " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="dignissimos Et tempora Incidunt omnis tempora et voluptatem " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="" }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -24977,9 +25291,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="omnis tempora dignissimos " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem et voluptatem Incidunt " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="soluta soluta quo Et tempora omnis voluptatem et omnis " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem et Incidunt tempora omnis " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="quo dignissimos quo soluta omnis et et et " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="omnis " }}
     </div>
 </section>
 
