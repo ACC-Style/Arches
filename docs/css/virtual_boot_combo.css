@@ -2124,6 +2124,407 @@ Styleguide Typography.Text.Indent
 }
 /*
 List
+<<<<<<< Updated upstream
+
+Description: A major part of the construction of the web and the content of the web are lists.
+
+Weight: 110
+
+Styleguide List
+*/
+/*
+  List Type
+
+  Change the type of a list.
+
+  .ul_none            -  none
+  .ul_bullet          -  bullet          
+  .ul_square          -  square      
+
+Markup:
+  <div class="font_normal font_1 p_3">
+    <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
+    <ul class="{{modifier_class}}">
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    </ul>
+</div>
+
+Weight: 0
+
+  Styleguide List.Type
+ */
+.ul_none {
+  margin: 0;
+  padding: 0;
+  list-style-type: none !important;
+}
+
+.ul_bullet {
+  list-style-type: disc !important;
+}
+
+.ul_circle {
+  list-style-type: circle !important;
+}
+
+.ul_square {
+  list-style-type: square !important;
+}
+
+.ul_lowercase {
+  list-style-type: lower-alpha !important;
+}
+
+.ul_uppercase {
+  list-style-type: upper-alpha !important;
+}
+
+/*
+Marker
+
+Markers classes change the styles and looks of the the list item maker.  Marker must attach to the parent UL or Ol and will not style the grand children.
+
+.marker_primary - primary colored list markers.
+.marker_secondary - secondary colored list markers.
+.marker_accent - accent colored list markers.
+.marker_alert - alert colored list markers.
+.marker_warning - warning colored list markers.
+.marker_success - success colored list markers.
+.marker_highlight - highlight colored list markers.
+.marker_black - black colored list markers.
+.marker_white - white colored list markers.
+
+Markup:
+<ul class="{{ modifier_class }}">
+    <li>List Item Text</li>
+    <li>List Item Text</li>
+    <li>List Item Text
+    <ul class="">
+        <li>List Item Grand Children</li>
+        <li>List Item Grand Children</li>
+    </ul>
+    </li>
+</ul>
+<ol class="{{ modifier_class }}">
+    <li>List Item Text</li>
+    <li>List Item Text</li>
+    <li>List Item Text</li>
+</ol>
+
+MarkupWrapperClasses: bg_black-2 p_5
+
+Weight:10
+
+Styleguide List.Marker
+*/
+.marker_primary > *::marker {
+  color: #198dae;
+}
+
+.marker_secondary > *::marker {
+  color: #676a72;
+}
+
+.marker_success > *::marker {
+  color: #078a2e;
+}
+
+.marker_shade > *::marker {
+  color: #898989;
+}
+
+.marker_warning > *::marker {
+  color: #da8210;
+}
+
+.marker_alert > *::marker {
+  color: #dd1a1a;
+}
+
+.marker_navigation > *::marker {
+  color: #2b58c0;
+}
+
+.marker_accent > *::marker {
+  color: #16a385;
+}
+
+.marker_info > *::marker {
+  color: #a3988c;
+}
+
+.marker_highlight > *::marker {
+  color: #7742bd;
+}
+
+.marker_acc > *::marker {
+  color: #004176;
+}
+
+.marker_black > *::marker {
+  color: #131212;
+}
+
+.marker_white > *::marker {
+  color: white;
+}
+
+/*
+Counters
+
+Add counters in front of collections without the need of an OL or UL for an advanced list type. Counters cannot be nested!
+
+Weight: 250
+
+Styleguide List.counters
+
+*/
+/* No styleguide reference. */
+/*
+	Counter Basics
+
+	Counter can be incremented by the `counter_increment` class.  
+
+	Markup:
+    <div class="counter_reset">
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment">:</span> Item, Object, or Section</div>
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment">:</span> Item, Object, or Section</div>
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment">:</span> Item, Object, or Section</div>
+ 	</div>
+
+	 Weight: -100
+
+	Styleguide List.counters.basics
+
+*/
+.counter_reset {
+  counter-reset: a;
+}
+
+.counter_increment {
+  counter-increment: a;
+}
+
+.counter:before {
+  content: counter(a);
+}
+
+/*
+	Counter Sub
+
+	Counter Subs can be nested inside of counters
+
+	Markup:
+    <div class="counter_reset ">
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment counter_upper-alpha"></span> Item, Object, or Section</div>
+            <div class="counter-sub_reset">
+                <div class="m_3 p_2 p-l_4 bg_primary-3"><span class="font_bold counter counter_upper-alpha"></span>.<span class="font_bold counter-sub counter-sub_increment counter-sub_lower-alpha"></span> Sub Item</div>
+                <div class="m_3 p_2 p-l_4 bg_primary-3"><span class="font_bold counter counter_upper-alpha"></span>.<span class="font_bold counter-sub counter-sub_increment counter-sub_lower-alpha"></span> Sub Item</div>
+                <div class="m_3 p_2 p-l_4 bg_primary-3"><span class="font_bold counter counter_upper-alpha"></span>.<span class="font_bold counter-sub counter-sub_increment counter-sub_lower-alpha"></span> Sub Item</div>
+            </div>
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment counter_upper-alpha"></span> Item, Object, or Section</div>
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment counter_upper-alpha"></span> Item, Object, or Section</div>
+ 	</div>
+
+	Styleguide List.counters.sub counters
+
+*/
+.counter-sub_reset {
+  counter-reset: b;
+}
+
+.counter-sub_increment {
+  counter-increment: b;
+}
+
+/*
+	Counter Types
+
+	Create different types of list with the counter types
+
+	counter 										- Defualt Number Listing
+	counter_lower-alpha         - Lowercase Alphabetic Listing
+	counter_upper-alpha         - Uppercase Alphabetic Listing
+	counter_lower-roman         - Lowercase Roman Listing
+	counter_upper-roman         - Uppercase Roman Listing
+
+	Markup:
+	<div class="counter_reset">
+			<div class="m_3 p_3 bg_primary-2"><span class="{{modifier_class}} font_bold counter_increment"></span> Item, Object, or Section</div>
+			<div class="m_3 p_3 bg_primary-2"><span class="{{modifier_class}} font_bold counter_increment"></span> Item, Object, or Section</div>
+			<div class="m_3 p_3 bg_primary-2"><span class="{{modifier_class}} font_bold counter_increment"></span> Item, Object, or Section</div>
+ 	</div>
+
+	Styleguide List.counters.types
+
+*/
+.counter_lower-alpha:before {
+  content: counter(a, lower-alpha);
+}
+
+.counter_upper-alpha:before {
+  content: counter(a, upper-alpha);
+}
+
+.counter_lower-roman:before {
+  content: counter(a, lower-roman);
+}
+
+.counter_upper-roman:before {
+  content: counter(a, upper-roman);
+}
+
+.counter-sub:before {
+  content: counter(b);
+}
+
+.counter-sub_lower-alpha:before {
+  content: counter(b, lower-alpha);
+}
+
+.counter-sub_upper-alpha:before {
+  content: counter(b, upper-alpha);
+}
+
+.counter-sub_lower-roman:before {
+  content: counter(b, lower-roman);
+}
+
+.counter-sub_upper-roman:before {
+  content: counter(b, upper-roman);
+}
+
+/*
+	Order Markers
+
+	Quickly decorate the counter with a circle.  Change the  bgground and font color with utility classes to acheive different effects.
+
+
+	Markup:
+    <div class="counter_reset">
+        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker bg_primary-2"></span> Item, Object, or Section</div>
+        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker font_10 br-tr_round br-br_round bg_highlight-2"></span> Item, Object, or Section</div>
+        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker bg_info-2"></span> Item, Object, or Section</div>
+        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker bg_warning-2"></span> Item, Object, or Section</div>
+    </div>
+
+	Weight: 100
+
+	Styleguide List.counters.markers
+
+*/
+.order-marker {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0;
+  margin-right: 0.5em;
+  margin-bottom: 0;
+  padding: 0.75em 0 0 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: top;
+}
+
+/*
+Inline Lists
+
+Inline Lists are for separated items on a single line.
+
+.ul_inline-comma            -  wrapping line of text that is separated by commas
+.ul_inline-semicolon          -  wrapping line of text that is separated by semicolons          
+.ul_inline-pipe          -  wrapping line of text that is separated by pipes     
+
+Markup:
+<div class="font_normal font_1 p_3">
+  <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
+  <ul class="{{modifier_class}}">
+    <li>Evelyn Watsica II</li>
+    <li>Linda Lang</li>
+    <li>Laurie Greenfelder</li>
+    <li>Katie Wiegand</li>
+    <li>Brittany Conn</li>
+  </ul>
+</div>
+<style>
+[class^="ul_inline"] > li:last-child::after {
+    content:"" !important;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+}
+</style>
+
+
+NOTE: The limitations of the styleguide around compound pseudo selector :not(:last-child):after means a trailing divider shows up in documentation but not in production applications. Added a workaround to hide the divider via the following style tag in the example.  This is not necessary in production applications.
+
+
+Weight: 1000
+
+Styleguide List.InlineType
+
+*/
+.ul_inline-comma,
+.ul_inline-semicolon,
+.ul_inline-pipe {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ul_inline-comma > li,
+.ul_inline-semicolon > li,
+.ul_inline-pipe > li {
+  flex: 0 1 auto;
+}
+.ul_inline-comma > li:not(:last-child)::after,
+.ul_inline-semicolon > li:not(:last-child)::after,
+.ul_inline-pipe > li:not(:last-child)::after {
+  -webkit-padding-start: 0.1em;
+          padding-inline-start: 0.1em;
+  -webkit-padding-end: 0.5em;
+          padding-inline-end: 0.5em;
+  opacity: 0.6;
+}
+.ul_inline-comma li.no-after,
+.ul_inline-semicolon li.no-after,
+.ul_inline-pipe li.no-after {
+  -webkit-padding-end: 0.5em;
+          padding-inline-end: 0.5em;
+}
+.ul_inline-comma li.no-after::after,
+.ul_inline-semicolon li.no-after::after,
+.ul_inline-pipe li.no-after::after {
+  display: none;
+}
+
+.ul_inline-comma > li:not(:last-child)::after {
+  content: ",";
+}
+
+.ul_inline-semicolon > li:not(:last-child)::after {
+  content: ";";
+}
+
+.ul_inline-pipe > li:not(:last-child)::after {
+  -webkit-padding-start: 0.5em;
+          padding-inline-start: 0.5em;
+  content: "|";
+}
+
+/*
+Margin
+=======
+>>>>>>> Stashed changes
 
 Description: A major part of the construction of the web and the content of the web are lists.
 
@@ -14464,6 +14865,34 @@ a:focus-visible {
 .h\:bg_black-8:hover {
   background-color: rgba(19, 18, 18, 0.9) !important;
 }
+<<<<<<< Updated upstream
+.active.a\:rotate_270,
+.active > .a\:rotate_270 {
+  transform: rotate(270deg);
+}
+.active.a\:rotate_315,
+.active > .a\:rotate_315 {
+  transform: rotate(315deg);
+}
+
+/*
+
+Rotation
+
+Rotation through transform. Transform doesn't modify the displacement of the flow.  This also have an active class modifier
+
+rotate_45               - Rotate by 45 degrees
+rotate_90               - Rotate by 90 degrees
+rotate_135              - Rotate by 135 degrees
+rotate_180              - Rotate by 180 degrees
+rotate_225              - Rotate by 225 degrees
+rotate_270              - Rotate by 270 degrees
+rotate_315              - Rotate by 315 degrees
+
+
+Markup:
+<i class="font_10 fas fa fa-user {{modifier_class}}"></i>
+=======
 
 .h\:bg_black-9:hover {
   background-color: rgba(19, 18, 18, 0.975) !important;
@@ -14785,11 +15214,110 @@ Styleguide Interaction.Animation.scale
 .origin_tl {
   transform-origin: left top;
 }
+>>>>>>> Stashed changes
 
 .origin_rt {
   transform-origin: right top;
 }
 
+<<<<<<< Updated upstream
+Weight: 100
+
+Styleguide Interaction.Animation.Rotation
+*/
+/*
+
+Rotation on Active
+
+ Add in the `a:` in front of these classes gives you the rotation only when the item is active.<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 ">These classes are effected by the parent having `active` state.</span></div>
+
+rotate_45               - Rotate by 45 degrees
+rotate_90               - Rotate by 90 degrees
+rotate_135              - Rotate by 135 degrees
+rotate_180              - Rotate by 180 degrees
+rotate_225              - Rotate by 225 degrees
+rotate_270              - Rotate by 270 degrees
+rotate_315              - Rotate by 315 degrees
+
+
+Markup:
+<span><i class="font_10 fas fa fa-user a:{{modifier_class}}"></i> Not Active </span>
+<span><i class="active font_10 fas fa fa-user a:{{modifier_class}}"></i> Active </span>
+
+Weight: 100
+
+Styleguide Interaction.Animation.RotationActive
+*/
+*[data-bs-toggle=collapse] .a\:rotation.fa-times, *[data-bs-toggle=collapse] .a\:rotation.fa-chevron-up, *[data-bs-toggle=collapse] .a\:rotation.fa-minus.rotate_90 {
+  transform: rotate(0deg);
+}
+*[data-bs-toggle=collapse].collapsed .a\:rotation.fa-times, *[data-bs-toggle=collapse].show .a\:rotation.fa-times {
+  transform: rotate(135deg);
+}
+*[data-bs-toggle=collapse].collapsed .a\:rotation.fa-chevron-up, *[data-bs-toggle=collapse].show .a\:rotation.fa-chevron-up {
+  transform: rotate(180deg);
+}
+*[data-bs-toggle=collapse].collapsed .a\:rotation.fa-minus.rotate_90, *[data-bs-toggle=collapse].show .a\:rotation.fa-minus.rotate_90 {
+  transform: rotate(90deg);
+}
+
+.bg-blend_normal {
+  background-blend-mode: normal;
+}
+
+.bg-blend_multiply {
+  background-blend-mode: multiply;
+}
+
+.bg-blend_screen {
+  background-blend-mode: screen;
+}
+
+.bg-blend_overlay {
+  background-blend-mode: overlay;
+}
+
+.bg-blend_darken {
+  background-blend-mode: darken;
+}
+
+.bg-blend_lighten {
+  background-blend-mode: lighten;
+}
+
+.bg-blend_color-dodge {
+  background-blend-mode: color-dodge;
+}
+
+.bg-blend_color-burn {
+  background-blend-mode: color-burn;
+}
+
+.bg-blend_hard-light {
+  background-blend-mode: hard-light;
+}
+
+.bg-blend_soft-light {
+  background-blend-mode: soft-light;
+}
+
+.bg-blend_difference {
+  background-blend-mode: difference;
+}
+
+.bg-blend_exclusion {
+  background-blend-mode: exclusion;
+}
+
+.bg-blend_hue {
+  background-blend-mode: hue;
+}
+
+.bg-blend_saturation {
+  background-blend-mode: saturation;
+}
+
+=======
 .origin_c {
   transform-origin: center center;
 }
@@ -14990,6 +15518,7 @@ Styleguide Interaction.Animation.RotationActive
   background-blend-mode: saturation;
 }
 
+>>>>>>> Stashed changes
 .bg-blend_color {
   background-blend-mode: color;
 }
@@ -15005,6 +15534,7 @@ Styleguide Interaction.Animation.RotationActive
 .bg-blend_inherit {
   background-blend-mode: inherit;
 }
+<<<<<<< Updated upstream
 
 .bg-blend_unset {
   background-blend-mode: unset;
@@ -15078,6 +15608,81 @@ Styleguide Interaction.Animation.RotationActive
   mix-blend-mode: initial;
 }
 
+=======
+
+.bg-blend_unset {
+  background-blend-mode: unset;
+}
+
+.font-blend_normal {
+  mix-blend-mode: normal;
+}
+
+.font-blend_multiply {
+  mix-blend-mode: multiply;
+}
+
+.font-blend_screen {
+  mix-blend-mode: screen;
+}
+
+.font-blend_overlay {
+  mix-blend-mode: overlay;
+}
+
+.font-blend_darken {
+  mix-blend-mode: darken;
+}
+
+.font-blend_lighten {
+  mix-blend-mode: lighten;
+}
+
+.font-blend_color-dodge {
+  mix-blend-mode: color-dodge;
+}
+
+.font-blend_color-burn {
+  mix-blend-mode: color-burn;
+}
+
+.font-blend_hard-light {
+  mix-blend-mode: hard-light;
+}
+
+.font-blend_soft-light {
+  mix-blend-mode: soft-light;
+}
+
+.font-blend_difference {
+  mix-blend-mode: difference;
+}
+
+.font-blend_exclusion {
+  mix-blend-mode: exclusion;
+}
+
+.font-blend_hue {
+  mix-blend-mode: hue;
+}
+
+.font-blend_saturation {
+  mix-blend-mode: saturation;
+}
+
+.font-blend_color {
+  mix-blend-mode: color;
+}
+
+.font-blend_luminosity {
+  mix-blend-mode: luminosity;
+}
+
+.font-blend_initial {
+  mix-blend-mode: initial;
+}
+
+>>>>>>> Stashed changes
 .font-blend_inherit {
   mix-blend-mode: inherit;
 }
@@ -23674,17 +24279,23 @@ Markup:
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4118" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2159" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1435" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1988" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7237" }}
 =======
+=======
+>>>>>>> Stashed changes
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4133" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0013" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9040" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9782" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0793" }}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
@@ -23718,17 +24329,23 @@ Markup:
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9385" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2314" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3162" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3706" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0083" }}
 =======
+=======
+>>>>>>> Stashed changes
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2096" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8246" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3920" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6844" }}
             {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5422" }}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
@@ -24520,7 +25137,11 @@ Description:
 
 Markup:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <div class="flex_column flex" id="session_8915">
+=======
+<div class="flex_column flex" id="session_9119">
+>>>>>>> Stashed changes
 =======
 <div class="flex_column flex" id="session_9119">
 >>>>>>> Stashed changes
@@ -24548,7 +25169,11 @@ Markup:
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_8915">top</a>
+=======
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_9119">top</a>
+>>>>>>> Stashed changes
 =======
                     <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_9119">top</a>
 >>>>>>> Stashed changes
@@ -24564,7 +25189,11 @@ Markup:
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_8915">top</a>
+=======
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_9119">top</a>
+>>>>>>> Stashed changes
 =======
                     <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_9119">top</a>
 >>>>>>> Stashed changes
@@ -24600,7 +25229,11 @@ Description:
 
 Markup:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <div class="flex_column flex" id="session_8915">
+=======
+<div class="flex_column flex" id="session_9119">
+>>>>>>> Stashed changes
 =======
 <div class="flex_column flex" id="session_9119">
 >>>>>>> Stashed changes
@@ -24629,7 +25262,11 @@ Markup:
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_8915">top</a>
+=======
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_9119">top</a>
+>>>>>>> Stashed changes
 =======
                     <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_9119">top</a>
 >>>>>>> Stashed changes
@@ -24645,7 +25282,11 @@ Markup:
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_8915">top</a>
+=======
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_9119">top</a>
+>>>>>>> Stashed changes
 =======
                     <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_9119">top</a>
 >>>>>>> Stashed changes
@@ -24972,7 +25613,11 @@ Session Collapse
 
 Markup:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <article class="{{> Sub.Style.OuterBorder }}" id="session_1884">
+=======
+<article class="{{> Sub.Style.OuterBorder }}" id="session_2857">
+>>>>>>> Stashed changes
 =======
 <article class="{{> Sub.Style.OuterBorder }}" id="session_2857">
 >>>>>>> Stashed changes
@@ -25009,7 +25654,11 @@ Markup:
             {{> "Sub.Credits.Dots" }}
         </div>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_1884">top</a></div>
+=======
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_2857">top</a></div>
+>>>>>>> Stashed changes
 =======
         <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_2857">top</a></div>
 >>>>>>> Stashed changes
@@ -25334,8 +25983,13 @@ Markup:
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     {{> Program.GridFormat.Abstract  modifier_class="Et similique soluta soluta "  }}
     {{> Program.GridFormat.Abstract modifier_class="similique voluptatem "  }}
+=======
+    {{> Program.GridFormat.Abstract  modifier_class="voluptatem et "  }}
+    {{> Program.GridFormat.Abstract modifier_class="tempora Et Incidunt voluptatem quo dignissimos "  }}
+>>>>>>> Stashed changes
 =======
     {{> Program.GridFormat.Abstract  modifier_class="voluptatem et "  }}
     {{> Program.GridFormat.Abstract modifier_class="tempora Et Incidunt voluptatem quo dignissimos "  }}
@@ -25417,8 +26071,13 @@ Markup:
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 {{> "Program.GridFormat.FeaturedPresentation" modifier_class="" }}
 {{> "Program.GridFormat.FeaturedPresentation" modifier_class="Incidunt quo Incidunt soluta quo similique dignissimos similique similique " }}
+=======
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="similique omnis soluta " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Et dignissimos Et Et Et soluta similique tempora " }}
+>>>>>>> Stashed changes
 =======
 {{> "Program.GridFormat.FeaturedPresentation" modifier_class="similique omnis soluta " }}
 {{> "Program.GridFormat.FeaturedPresentation" modifier_class="Et dignissimos Et Et Et soluta similique tempora " }}
@@ -25541,9 +26200,15 @@ Markup:
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         {{> Program.GridFormat.WhatsNow modifier_class="similique dignissimos tempora Et et voluptatem soluta " }}
         {{> Program.GridFormat.WhatsNow modifier_class="Et omnis " }}
         {{> Program.GridFormat.WhatsNow modifier_class="tempora omnis soluta omnis " }}
+=======
+        {{> Program.GridFormat.WhatsNow modifier_class="Et omnis et omnis Et voluptatem omnis Incidunt tempora " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="tempora omnis " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Incidunt " }}
+>>>>>>> Stashed changes
 =======
         {{> Program.GridFormat.WhatsNow modifier_class="Et omnis et omnis Et voluptatem omnis Incidunt tempora " }}
         {{> Program.GridFormat.WhatsNow modifier_class="tempora omnis " }}
