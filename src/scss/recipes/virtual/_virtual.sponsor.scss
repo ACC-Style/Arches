@@ -14,12 +14,37 @@ Sponsor Grid
 Description: 
  
 Markup:
-{{> Sponsor.Tile.WebLink }}
-{{> Sponsor.Tile.WebLink }}
-{{> Sponsor.Tile.WebLink }}
+<section class=" grid grid-col_3:lg grid-col_2:md grid-col_1 gap_4 gap_5:lg p-b_5">
+    {{> Sponsor.Tile.WebLink }}
+<div class="shadow_bevel-light p_4 bg_white br_radius br_solid br_black-2 br_1 flex flex_column gap-y_4">
+    <header class="flex justify_center relative aspect_16x9 w_100 m-x_auto max-w_20">
+    <img class="absolute t_0 r_0 l_0 b_0" style="object-fit: contain;height: 100%;width: 100%;" src="https://cdn.jsdelivr.net/gh/ACC-Style/Arches/dist/img/LoremIpsum3.png">
+    </header>
+    <div class="readable-typography">
+    <h2>
+    {{> "Data.Sponsor.Name"}}
+    </h2>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, consequuntur similique quibusdam deleniti fuga, ad laudantium vel assumenda incidunt impedit iure molestias! Et laboriosam nulla ut at officia ipsa quaerat?</p>
+    </div>
+    <div class="m-t_auto">{{> "Data.Sponsor.Address"}}</div>
+    <footer class="br-t_1 br_dashed grid justify_center p-t_4 self_stretch">{{> "Data.Sponsor.MoreLink" modifier_class="btn btn-secondary c_white h:c_white-8 self_center"}}</footer>
+</div>
+<div class="shadow_bevel-light p_4 bg_white br_radius br_solid br_black-2 br_1 flex flex_column gap-y_4">
+    <header class="flex justify_center relative aspect_16x9 w_100 m-x_auto max-w_20">
+    <img class="absolute t_0 r_0 l_0 b_0" style="object-fit: contain;height: 100%;width: 100%;" src="https://cdn.jsdelivr.net/gh/ACC-Style/Arches/dist/img/LoremIpsum2.png">
+    </header>
+    <div class="readable-typography">
+    <h2>
+    {{> "Data.Sponsor.Name"}}
+    </h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, consequuntur similique quibusdam deleniti fuga, ad laudantium vel assumenda incidunt impedit iure molestias! Et laboriosam nulla ut at officia ipsa quaerat?</p>
+    <p>Quia cum enim voluptates quas qui assumenda omnis qui. Modi ducimus totam amet et vel aut eveniet. Perferendis temporibus distinctio eos labore quaerat eius rerum. Ipsam qui et eveniet quo necessitatibus.</p>
+    </div>
+    <div class="m-t_auto">{{> "Data.Sponsor.Address"}}</div>
+    <footer class="br-t_1 br_dashed grid justify_center  p-t_4 self_stretch">{{> "Data.Sponsor.MoreLink" modifier_class="btn btn-secondary c_white h:c_white-8 self_center"}}</footer>
+</div>
+</section>
 
-
-MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 gap_4 bg_black-1 p_4 p-b_5 texture_dust
 
 Weight:0
  
@@ -34,15 +59,17 @@ Sponsor Tile
  
 Markup:
 <div class="shadow_bevel-light p_4 bg_white br_radius br_solid br_black-2 br_1 flex flex_column gap-y_4">
-    <header class="grid justify_center"><div class="self_center">{{> "Data.Sponsor.Logo"}}</div></header>
-    <h2>
-    {{> "Data.Sponsor.Name"}}
-    </h2>
+    <header class="flex justify_center relative aspect_16x9 w_100 m-x_auto max-w_20">
+        {{> "Data.Sponsor.Logo"}}
+    </header>
     <div class="readable-typography">
-    {{> "Data.Sponsor.Description"}}
-    {{> "Data.Sponsor.Address"}}
+        <h2>
+        {{> "Data.Sponsor.Name"}}
+        </h2>
+        {{> "Data.Sponsor.Description"}}
     </div>
-    <footer class="br-t_1 br_dashed grid justify_center m-t_4 m-t_auto p-t_4 self_stretch">{{> "Data.Sponsor.MoreLink" modifier_class="btn btn-secondary c_white h:c_white-8 self_center"}}</footer>
+    <div class="m-t_auto">{{> "Data.Sponsor.Address"}}</div>
+    <footer class="br-t_1 br_dashed grid justify_center p-t_4 self_stretch">{{> "Data.Sponsor.MoreLink" modifier_class="btn btn-secondary c_white h:c_white-8 self_center"}}</footer>
 </div>
 
 Data:
@@ -51,7 +78,7 @@ Data.Sponsor.Description - Description in HTML
 Data.Sponsor.Address - Address
 
 
-MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 gap_4 bg_black-1 p_4 p-b_5 texture_dust
+MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 gap_4
  
 Weight:0
  
