@@ -663,3 +663,108 @@ Weight:0
 Styleguide Program.GridFormat.WhatsNow.Grid
 */
 
+/*
+
+Whats Happening Next
+ 
+During the day there will be gaps that will not have a video or session playing so we want to broadcast the information of what will be playing soon. 
+
+
+Markup:
+<article class="relative isolation_isolate flex flex_column">
+    <div class="bg_white br-t_3 br_radius br_secondary-2 br_solid c_black flex flex_auto flex_column font_0 gap_3 m-b_4 p-t_4 p_4 shadow_emboss-light t_n5 texture_light z_0">
+    <header>
+        <h3 class="font_display lh_2 c_secondary-n2 font_0 m_0">
+            <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6 m-t_n3">{{> "Data.Session.ID" }}</strong>
+            <span class="font_display lh_2 c_secondary-n2 m_0 font-size_up-2">
+                {{> "Data.Session.Title" }} {{ modifier_class }}
+            </span>
+        </h3>
+    </header>
+    <div class="font_n1 font_ui c_accent-n1">Starting  @ {{>  Data.Agenda.ReleaseTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
+    <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> Sub.Tags.Category }}</div>
+    </div>
+</article>
+
+MarkupWrapperClasses: max-w_30:md
+
+Data:
+Data.Session.ID - Session ID
+Data.Session.Title - Session Title
+Data.Agenda.EndTime - Session End Time
+
+SubComponents:
+Sub.Header.VideoThumbnail - Thumbnail of Video
+Sub.Tags.Category - Category Tag
+Sub.ActionButtons - Watch Button
+
+
+NOTE: the Date in the Starting message is conditional. If the session starts on a day that isn't today then the date will be displayed. 
+
+Weight: 10000
+ 
+Styleguide Program.GridFormat.WhatsNext
+
+*/
+
+/*
+
+Whats Happening Next - Grid
+
+At times between breaks of sessions the whats happening next will be a grid will show a whats happening next grid because there are no sessions playing.
+ 
+Markup:
+<section class="">
+    <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
+    <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
+        {{> Program.GridFormat.WhatsNext modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}
+        {{> Program.GridFormat.WhatsNext modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}
+        {{> Program.GridFormat.WhatsNext modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}
+    </div>
+    <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
+        <strong class="text_center c_accent">Access to Session space opens up 15 minutes before start</strong>
+    </aside>
+</section>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Program.GridFormat.WhatsNext.Grid
+*/
+
+
+/*
+
+Whats Happening Next - Grid
+
+At times before the end of the conference but if there is no scheduled session.
+ 
+Markup:
+<section class="">
+    <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="End of Current Program" }}</h2>
+    <div class="grid-col_1">
+<article class="relative isolation_isolate flex flex_column">
+    <div class="bg_white br-t_3 br_radius br_secondary-2 br_solid c_black flex flex_auto flex_column font_0 gap_3 m-b_4 p-t_4 p_4 shadow_emboss-light t_n5 texture_light z_0">
+    <header>
+        <h3 class="font_display lh_2 c_secondary-n2 font_0 m_0">
+            <span class="font_display lh_2 c_secondary-n2 m_0 font-size_up-2">
+                The Current Program has ended, but the event is not over yet.
+            </span>
+            <span>Check back soon for more information.</span>
+        </h3>
+    </header>
+    </div>
+</article>
+    </div>
+    <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
+        <strong class="text_center c_accent">Access to Session space opens up 15 minutes before start</strong>
+    </aside>
+</section>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Program.GridFormat.WhatsNext.Grid
+*/
