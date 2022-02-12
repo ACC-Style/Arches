@@ -742,29 +742,27 @@ At times before the end of the conference but if there is no scheduled session.
  
 Markup:
 <section class="">
-    <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="End of Current Program" }}</h2>
+    <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="End of Current Scheduled Program" }}</h2>
     <div class="grid-col_1">
-<article class="relative isolation_isolate flex flex_column">
-    <div class="bg_white br-t_3 br_radius br_secondary-2 br_solid c_black flex flex_auto flex_column font_0 gap_3 m-b_4 p-t_4 p_4 shadow_emboss-light t_n5 texture_light z_0">
-    <header>
-        <h3 class="font_display lh_2 c_secondary-n2 font_0 m_0">
-            <span class="font_display lh_2 c_secondary-n2 m_0 font-size_up-2">
-                The Current Program has ended, but the event is not over yet.
-            </span>
-            <span>Check back soon for more information.</span>
-        </h3>
-    </header>
-    </div>
-</article>
+    <article class="relative isolation_isolate flex flex_column">
+        <div class="bg_white br-t_3 br_radius br_secondary-2 br_solid c_black flex flex_auto flex_column font_0 gap_3 m-b_4 p-t_4 p_4 shadow_emboss-light t_n5 texture_light z_0">
+        <header class="reading-typography font-size_up text_center">
+            <h3 class="c_secondary-n2">
+            The Current Program has ended
+            </h3>
+            <p> But the event is not over yet and there could possibly be more.<br> Check back soon for more information or view pass sessions from the <a class="link" href='ondemand'>On Demand Page</a>.</p>
+        </header>
+        </div>
+    </article>
     </div>
     <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
-        <strong class="text_center c_accent">Access to Session space opens up 15 minutes before start</strong>
+        <strong class="text_center c_accent">This Event ends on {{> "Data.Agenda.onDemandReleaseTime"}}</strong>
     </aside>
 </section>
 
-MarkupWrapperClasses: 
- 
+
 Weight:0
- 
-Styleguide Program.GridFormat.WhatsNext.Grid
+
+
+Styleguide Program.GridFormat.WhatsNext.EndOfProgram
 */
