@@ -569,11 +569,13 @@ gulp.task(
             LOE_COR = buildbrand(LOE_COR, brand, framework);
             var pathway = constructColorStyleSheet("pathway");
             pathway = buildbrand(pathway, brand, framework);
+            var pathwayV2 = constructColorStyleSheet("pathwayV2");
+            pathwayV2 = buildbrand(pathwayV2, brand, framework);
             var social = constructColorStyleSheet("social");
             social = buildbrand(social, brand, framework);
             var registry = constructColorStyleSheet("registry");
 			registry = buildbrand(registry, brand, framework);
-            return merge(base, credits, social, pathway, LOE_COR, registry)
+            return merge(base, credits, social, pathway, pathwayV2,  LOE_COR, registry)
                 .pipe(header("/*** COLOR CODES 3 **/\n"))
                 .pipe(gulp.dest(PATHS.SCSS));
             
