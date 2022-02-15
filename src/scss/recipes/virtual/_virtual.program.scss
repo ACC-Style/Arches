@@ -157,8 +157,7 @@ Markup:
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0 font_copy">
                  <div class="font_medium m-b_3">{{>  Sub.PlayingDateTime }}</div>
-                 <div class="font-size_down-1">{{> "Sub.FacultyList.Session" modifier_class="inline"}}</div>
-                <div class="font-size_down-1">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
+                 <div class="font-size_down-1">{{> "Sub.FacultyList.SessionAndPresentation" modifier_class="inline"}}</div>
             </div>
             </div>
         </div>
@@ -206,8 +205,7 @@ Markup:
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0 font_copy">
                  <div class="font_medium m-b_3">{{>  Sub.PlayingDateTime }}</div>
-                 <div class="font-size_down-1">{{> "Sub.FacultyList.Session" modifier_class="inline"}}</div>
-                <div class="font-size_down-1">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
+                 <div class="font-size_down-1">{{> "Sub.FacultyList.SessionAndPresentation" modifier_class="inline"}}</div>
             </div>
             </div>
         </div>
@@ -228,8 +226,7 @@ Data.Session.ID - Session ID
 
 SubComponents:
 Sub.Credits.Dots - Credit Dots
-Sub.FacultyList.Session - Session Faculty List
-Sub.FacultyList - Faculty List
+Sub.FacultyList.SessionAndPresentation - Session & Presentation Faculty List
 Sub.PlayingDateTime - Playing Date Time
 Sub.ActionButtons.OnDemand - Action Buttons
 Sub.CategoryFlags - Category Flags
@@ -354,8 +351,7 @@ Markup:
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0 font_copy">
                  <div class="font_medium m-b_3">{{>  Sub.PlayingDateTime }}</div>
-                <div class="font-size_down-1">{{> "Sub.FacultyList.Session" modifier_class="inline"}}</div>
-                <div class="font-size_down-1">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
+                <div class="font-size_down-1">{{> "Sub.FacultyList.SessionAndPresentation" modifier_class="inline"}}</div>
             </div>
             </div>
         </div>
@@ -370,8 +366,7 @@ Markup:
 MarkupWrapperClasses: 
 
 Components:
-Sub.FacultyList - Faculty List
-Sub.FacultyList.Session - Session Faculty List
+Sub.FacultyList.SessionAndPresentation - Session Faculty & Faculty List
 Sub.Credits.NonAccredited - Non Accredited Message
 Sub.ActionButtons.NoDetails - Action Button w/o Details
  
@@ -380,20 +375,6 @@ Weight:0
 Styleguide Program.Session.NonAccredited
 */
 
-/*
-
-On Demand Shell
- 
-The On Demand view is slightly different if the Session is only a shell. 
-
-Markup::after
-
-
-Weight: 10000
- 
-Styleguide Program.OnDemand.Shell
-
-*/
 
 /*
 
@@ -490,15 +471,10 @@ Markup:
                 {{> Data.Presentation.Title }} {{ modifier_class }}
             </h3>
         </header>
-        {{> "Sub.ActionButtons.Featured" modifier_class="Watch" }}
-        <div class="p-b_4">
-            <div class="font_n1">
-                {{> "Sub.FacultyList.Session" }}
-            </div>    
-            <div class="font_n1">
-                {{> "Sub.FacultyList" }}
-            </div>
-        </div>
+        <div class="font_n1">
+            {{> "Sub.FacultyList.SessionAndPresentation" }}
+        </div> 
+        {{> "Sub.ActionButtons.Featured" modifier_class="Watch" }}  
     </div>   
     <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
         <div class="absolute br-t_1 br_primary-2 br_solid l_0 m_0 opacity_none p_0 r_0 t_0 z_2"></div>
@@ -514,7 +490,7 @@ MarkupWrapperClasses: grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4
 SubComponents:
 Sub.CategoryFlags - Category Flags
 Sub.ActionButtons.OnDemand - Action Buttons
-Sub.FacultyList - FacultyList
+Sub.SessionAndPresentation - Session & Faculty List
 Sub.Credits.Dots - Credit Dots
 
 Data:
