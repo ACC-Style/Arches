@@ -16,14 +16,15 @@ Arches does have a learning curve, but to reduce the curve the names follow a st
 In each brand documentation area you will see direct representations of the styles in actions and predefined patterns used in those properties.
 
 
-| Brand                            | Current Use Status   | Notes                                                                         |
-| -------------------------------- | -------------------- | ----------------------------------------------------------------------------- |
-| [ACC Main Site](boot_acc/)       | In Conversion        | Some pages are fully using Arches other are using the Utility Class Override  |
-| [CardioSmart](boot_cardiosmart/) | Fully                | Built on Pure Arches Style Sheets                                             |
-| [CVQuality](boot_cvquality/)     | Documented           | Designs have been documented and branch project started not using Arches now. |
-| [Mobile](zurb_acc/)              | Documented           | Mobile utilize zurb instead of bootstrap because of better mobile support.    |
-| [JACC](boot_journal/)            | Partially Documented | JACC is vendor based and will most likely never be converted.                 |
-| [Virtual](boot_virtual/)         | Retiring             | This documentation was used in 2020 and will be retired.                      |
+| Brand                            | Current Use Status   | Notes                                                                                                                              |
+| -------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [ACC Main Site](boot_acc/)       | In Conversion        | Some pages are fully using Arches other are using the Utility Class Override                                                       |
+| [CardioSmart](boot_cardiosmart/) | Fully                | Built on Pure Arches Style Sheets                                                                                                  |
+| [CVQuality](boot_cvquality/)     | Documented           | Designs have been documented and branch project started not using Arches now.                                                      |
+| [Mobile](zurb_acc/)              | Documented           | Mobile utilize zurb instead of bootstrap because of better mobile support.                                                         |
+| [JACC](boot_journal/)            | Partially Documented | JACC is vendor based and will most likely never be converted.                                                                      |
+| [Virtual](boot_virtual/)         | Partially Documented | The virtual platform for events has been restarted to build with vendor                                                            |
+| [Library](boot_library/)         | Partially Documented | the library is a spin off of the data from events. to make the styling more interesting it is utilizing a different look and feel. |
 
 ### Playgrounds Documentation
 

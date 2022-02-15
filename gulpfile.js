@@ -441,6 +441,28 @@ gulp.task(
         }
     )
 );
+gulp.task(
+    "build-library",
+    gulp.series(
+        function SCSS() {
+            return constructSassFiles("library", "boot");
+        },
+        function CSS() {
+            return runSass("library");
+        },
+        function CONCAT() {
+            return concatCSS("library", "boot");
+        },
+        function Markdown() {
+            return constructMarkdown("library", "boot");
+        },
+        "copy-to-dist",
+        "copy-to-styleguide",
+        function() {
+            return run("npm run boot_library").exec();
+        }
+    )
+);
 
 gulp.task(
     "build-covid",
