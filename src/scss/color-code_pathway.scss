@@ -112,6 +112,13 @@ $line-height_5: get-css-size(line-height, 5);/** Base UC File **/@each $color-na
   @include color-loop(color, $color-name-alt, $color);
   @include color-loop(border-color, $color-name-alt, $color);
 }
+
+@each $color-name, $color in $PathwayColorsV2 {
+  $color-name-alt: $color-name;
+  @include color-loop(background-color, $color-name-alt, $color);
+  @include color-loop(color, $color-name-alt, $color);
+  @include color-loop(border-color, $color-name-alt, $color);
+}
 .updateDecoration{
     background-color: get-themecolor(highlight,3) !important;
 }
