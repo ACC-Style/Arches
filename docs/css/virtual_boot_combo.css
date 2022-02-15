@@ -23160,7 +23160,35 @@ Styleguide Sub.FacultyList
 
 */
 /*
-Non Faculty List
+Session Faculty List
+
+When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Session Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Session Role Type 2:</li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+
+SubComponents:
+Data.Faculty.FullName - Full Name
+Data.Faculty.FullName - Location
+
+
+Weight:0
+
+Styleguide Sub.FacultyList.Session
+
+*/
+/*
+No Location Faculty List
 
 When you list non-event areas like Posters, and Abstracts the list removes the location of the person. 
 
@@ -23673,11 +23701,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6824" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3552" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3060" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8076" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0142" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3681" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4814" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8389" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6913" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0837" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -23709,11 +23737,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9387" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7122" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7449" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6072" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1363" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9137" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8262" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2301" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9948" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0232" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -24503,7 +24531,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_2648">
+<div class="flex_column flex" id="session_3517">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -24527,7 +24555,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2648">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3517">top</a>
                 </div>
             </section>
         </div>
@@ -24539,7 +24567,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2648">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3517">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -24571,7 +24599,7 @@ Channel Player:Non Accredited
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_2648">
+<div class="flex_column flex" id="session_3517">
     <div class="bg_secondary-n3 c_white font_bold font_ui p_3 m-b_4"> {{> "Sub.Credits.NonAccredited" }}: disclosure or message about how  so we can be extra clear about this</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
@@ -24596,7 +24624,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2648">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3517">top</a>
                 </div>
             </section>
         </div>
@@ -24608,7 +24636,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2648">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3517">top</a>
                 </div>
             </section>
             <aside class="flex_none max-w_20:md max-w_25:lg w_100 p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1">
@@ -24889,6 +24917,7 @@ Markup:
                         </span>
                     </h3>
                     <div class="font_0 font_ui">{{>  Sub.PlayingDateTime }}</div>
+                    <div class="font_n1 font_ui">{{>  Sub.FacultyList.Session }}</div>
                 </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "Sub.ActionButtons.NoDetails"  modifier_class="Watch"}}
@@ -24931,7 +24960,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_3252">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_9201">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -24944,6 +24973,7 @@ Markup:
                         </span>
                     </h3>
                     <div class="font_0 font_ui">{{>  Sub.PlayingDateTime }}</div>
+                    <div class="font_n1 font_ui">{{>  Sub.FacultyList.Session }}</div>
                 </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "Sub.ActionButtons"  modifier_class="Watch"}}
@@ -24964,7 +24994,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_3252">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_9201">top</a></div>
     </div>
 </article>
 
@@ -25004,6 +25034,7 @@ Markup:
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0 font_copy">
                  <div class="font_medium m-b_3">{{>  Sub.PlayingDateTime }}</div>
+                 <div class="font-size_down-1">{{> "Sub.FacultyList.Session" modifier_class="inline"}}</div>
                 <div class="font-size_down-1">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
             </div>
             </div>
@@ -25051,6 +25082,7 @@ Markup:
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0 font_copy">
                  <div class="font_medium m-b_3">{{>  Sub.PlayingDateTime }}</div>
+                 <div class="font-size_down-1">{{> "Sub.FacultyList.Session" modifier_class="inline"}}</div>
                 <div class="font-size_down-1">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
             </div>
             </div>
@@ -25072,6 +25104,7 @@ Data.Session.ID - Session ID
 
 SubComponents:
 Sub.Credits.Dots - Credit Dots
+Sub.FacultyList.Session - Session Faculty List
 Sub.FacultyList - Faculty List
 Sub.PlayingDateTime - Playing Date Time
 Sub.ActionButtons.OnDemand - Action Buttons
@@ -25193,6 +25226,7 @@ Markup:
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0 font_copy">
                  <div class="font_medium m-b_3">{{>  Sub.PlayingDateTime }}</div>
+                <div class="font-size_down-1">{{> "Sub.FacultyList.Session" modifier_class="inline"}}</div>
                 <div class="font-size_down-1">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
             </div>
             </div>
@@ -25206,6 +25240,12 @@ Markup:
 </article>
 
 MarkupWrapperClasses: 
+
+Components:
+Sub.FacultyList - Faculty List
+Sub.FacultyList.Session - Session Faculty List
+Sub.Credits.NonAccredited - Non Accredited Message
+Sub.ActionButtons.NoDetails - Action Button w/o Details
 
 Weight:0
 
@@ -25285,8 +25325,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="quo similique soluta omnis voluptatem omnis quo similique "  }}
-    {{> Program.GridFormat.Abstract modifier_class="et voluptatem Et quo "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="dignissimos omnis voluptatem tempora "  }}
+    {{> Program.GridFormat.Abstract modifier_class=""  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -25319,6 +25359,9 @@ Markup:
         </header>
         {{> "Sub.ActionButtons.Featured" modifier_class="Watch" }}
         <div class="p-b_4">
+            <div class="font_n1">
+                {{> "Sub.FacultyList.Session" }}
+            </div>    
             <div class="font_n1">
                 {{> "Sub.FacultyList" }}
             </div>
@@ -25363,8 +25406,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="quo quo dignissimos Incidunt " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="quo dignissimos voluptatem " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="et voluptatem omnis Incidunt tempora soluta Et quo Et " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="omnis similique Incidunt " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -25482,9 +25525,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="Incidunt voluptatem dignissimos Incidunt quo " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="tempora tempora dignissimos " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="omnis Et Incidunt Incidunt Incidunt " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="" }}
+        {{> Program.GridFormat.WhatsNow modifier_class="similique similique " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="omnis quo tempora " }}
     </div>
 </section>
 
@@ -25547,9 +25590,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNext modifier_class="Incidunt et dignissimos soluta dignissimos voluptatem " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="voluptatem quo Incidunt soluta voluptatem quo dignissimos " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Et similique dignissimos voluptatem omnis similique voluptatem " }}
         {{> Program.GridFormat.WhatsNext modifier_class="" }}
-        {{> Program.GridFormat.WhatsNext modifier_class="similique Incidunt quo " }}
     </div>
     <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
         <strong class="text_center c_accent">Access to Session space opens up 15 minutes before start</strong>

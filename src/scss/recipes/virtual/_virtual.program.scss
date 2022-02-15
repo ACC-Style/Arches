@@ -36,6 +36,7 @@ Markup:
                         </span>
                     </h3>
                     <div class="font_0 font_ui">{{>  Sub.PlayingDateTime }}</div>
+                    <div class="font_n1 font_ui">{{>  Sub.FacultyList.Session }}</div>
                 </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "Sub.ActionButtons.NoDetails"  modifier_class="Watch"}}
@@ -93,6 +94,7 @@ Markup:
                         </span>
                     </h3>
                     <div class="font_0 font_ui">{{>  Sub.PlayingDateTime }}</div>
+                    <div class="font_n1 font_ui">{{>  Sub.FacultyList.Session }}</div>
                 </header>
                 <div class="flex_grow m-x_auto m-l_auto:lg m-r_0:lg w_100 max-w_20:md">
                     {{> "Sub.ActionButtons"  modifier_class="Watch"}}
@@ -155,6 +157,7 @@ Markup:
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0 font_copy">
                  <div class="font_medium m-b_3">{{>  Sub.PlayingDateTime }}</div>
+                 <div class="font-size_down-1">{{> "Sub.FacultyList.Session" modifier_class="inline"}}</div>
                 <div class="font-size_down-1">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
             </div>
             </div>
@@ -203,6 +206,7 @@ Markup:
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0 font_copy">
                  <div class="font_medium m-b_3">{{>  Sub.PlayingDateTime }}</div>
+                 <div class="font-size_down-1">{{> "Sub.FacultyList.Session" modifier_class="inline"}}</div>
                 <div class="font-size_down-1">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
             </div>
             </div>
@@ -224,6 +228,7 @@ Data.Session.ID - Session ID
 
 SubComponents:
 Sub.Credits.Dots - Credit Dots
+Sub.FacultyList.Session - Session Faculty List
 Sub.FacultyList - Faculty List
 Sub.PlayingDateTime - Playing Date Time
 Sub.ActionButtons.OnDemand - Action Buttons
@@ -349,6 +354,7 @@ Markup:
             <div>
             <div class="p-x_4 p-b_4 flex flex_column font_0 font_copy">
                  <div class="font_medium m-b_3">{{>  Sub.PlayingDateTime }}</div>
+                <div class="font-size_down-1">{{> "Sub.FacultyList.Session" modifier_class="inline"}}</div>
                 <div class="font-size_down-1">{{> "Sub.FacultyList" modifier_class="inline"}}</div>
             </div>
             </div>
@@ -362,6 +368,12 @@ Markup:
 </article>
 
 MarkupWrapperClasses: 
+
+Components:
+Sub.FacultyList - Faculty List
+Sub.FacultyList.Session - Session Faculty List
+Sub.Credits.NonAccredited - Non Accredited Message
+Sub.ActionButtons.NoDetails - Action Button w/o Details
  
 Weight:0
  
@@ -480,6 +492,9 @@ Markup:
         </header>
         {{> "Sub.ActionButtons.Featured" modifier_class="Watch" }}
         <div class="p-b_4">
+            <div class="font_n1">
+                {{> "Sub.FacultyList.Session" }}
+            </div>    
             <div class="font_n1">
                 {{> "Sub.FacultyList" }}
             </div>
