@@ -179,7 +179,9 @@ Markup:
             <div class="player hd full">
                 <div class="bg_acc aspect_4x3 c_white text_center  justify_center flex items_center">PDF EMBED</div>
             </div>
-            <div class="p-t_3">{{> "Sub.FacultyList.NoLocation" modifier_class="block w_100"}}</div>
+            <div class="flex_auto w_100 font_n1 p-x_3 m-t_3">
+            {{> "Sub.FacultyList.SessionAndPresentation" modifier_class="block w_100"}}
+            </div>
         </div>
        <div class="flex_auto max-w_25:lg max-w_20:md w_100 flex flex_column gap-y_3 justify_start">
             <div class="bg_primary-4 aspect_16x9 br_radius c_white text_center  justify_center flex items_center">Video EMBED</div>
@@ -213,8 +215,11 @@ Markup:
 <div class="flex_column flex">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
-                <span class="block">
-                    {{> "Data.Abstract.Title"}}
+        <span class="block font-size_down-2 c_black-6">
+        <strong class="font_bold p-r_3">{{> "Data.Session.ID"}}</strong> {{> "Data.Session.Title"}}
+        </span>        
+        <span class="block">
+                    {{> "Data.Presentation.Title"}}
                 </span>
             </h3>
             <div class="self_start">
@@ -227,8 +232,8 @@ Markup:
         </div>
     </section>
     <section class="flex flex_row:md flex_column gap-x_4 gap-y_3 m-t_4">
-        <div class="flex_auto w_100">
-            <div class="p-t_3">{{> "Sub.FacultyList.SessionAndPresentation" modifier_class="block w_100"}}</div>
+        <div class="flex_auto w_100 font_n1 p-x_3">
+            {{> "Sub.FacultyList.SessionAndPresentation" modifier_class="block w_100"}}
         </div>
         <div class="flex_auto max-w_25:lg max-w_20:md w_100 flex flex_column gap-y_3 justify_start">
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -243,7 +248,9 @@ Sub.FacultyList.SessionAndPresentation - Faculty List
 Sub.Player.AuxData - Aux Data
 
 Data:
-Data.Abstract.Title - Title
+Data.Session.ID - Session ID
+Data.Session.Title - Session Title
+Data.Presentation.Title - Presentation Title
 
 Weight:1000
  
