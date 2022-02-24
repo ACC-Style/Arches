@@ -20,7 +20,7 @@ Based on the Session the Non-accredited session is styled to represent that it d
 
  
 Markup:
-<article class=" m-y_2:md br_1 br_black-3 br_radius br_solid c_black flex flex_column isolation_isolate shadow_overlap-light bg_white h:bg_primary-5 m-x_3  relative overflow_hidden {{ modifier_class }}">
+<article class="z_2 m-y_2:md br_1 br_black-3 br_radius br_solid c_black flex flex_column isolation_isolate shadow_overlap-light bg_white h:bg_primary-5 m-x_3  relative overflow_hidden {{ modifier_class }}">
   <div class="br-b_0 br-t_3 br-tl_radius br-tr_radius br_black-3 br_secondary-n2 br_solid flex flex_column font_ui m-b_0 m-b_n2 m-x_n1 opacity_none p_0"></div>
   <div class="font-size_down-2 p_2 uppercase bg_secondary-n2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold self_start ">
     <ul class="ul_inline-pipe">
@@ -54,7 +54,7 @@ The day grid sessions are light on information because the limitations of the la
 
 
 Markup:
-<article class=" m-y_2:md br_1 br_black-3 br_radius br_solid c_black flex flex_column isolation_isolate shadow_overlap-light bg_white h:bg_primary-5 m-x_3 relative overflow_hidden {{ modifier_class }}">
+<article class="z_2 m-y_2:md br_1 br_black-3 br_radius br_solid c_black flex flex_column isolation_isolate shadow_overlap-light bg_white h:bg_primary-5 m-x_3 relative overflow_hidden {{ modifier_class }}">
   <div class="br-b_0 br-t_3 br-tl_radius br-tr_radius br_black-3 br_primary-2 br_solid flex flex_column font_ui m-b_n2 m-x_n1 m-t_n1 m-b_0 opacity_none p_0"></div>
   <div class="font-size_down-2 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold self_start ">
     <ul class="ul_inline-pipe">
@@ -102,67 +102,33 @@ Day Grid with Channels.
 There is need to override the default css variables of this design if you are going to shift away from the default.  The units of time are set to increments of 5 minutes. 
  
 Markup:
-<div id="day" class="grid:md  relative font_0:lg font_n1">
-    <div class="channel channel_1 bg_black-2 display_none block:md" style="grid_column:2/3"></div>
-    <div class="channel channel_2 bg_black-_05 display_none block:md" style="grid_column:3/4"></div>
-    <div class="channel channel_3 bg_black-2 display_none block:md" style="grid_column:4/5"></div>
-    <div class="hour hour_9 br-t_1 br_solid br_accent-2 relative">
-        <span class="c_accent-n2 font-size_up-2 font_display hour_label lh_0 opacity_7 self_start p_3">9 A.M.</span>
-        <div class="minutes opacity_3 bg_accent-4 flex_column:md justify_stretch absolute t_0 r_0 b_0 l_0 display_none flex:md">
-            <span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span>
-        </div>
-    </div>
-    <div class="hour hour_10 br-t_1 br_solid br_accent-2 relative">
-        <span class="c_accent-n2 font-size_up-2 font_display hour_label lh_0 opacity_7 self_start p_3">10 A.M.</span>
-        <div class="minutes opacity_3 bg_accent-4 flex_column:md justify_stretch absolute t_0 r_0 b_0 l_0 display_none flex:md">
-            <span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span>
-        </div>
-    </div>
-    <div class="hour hour_11 br-t_1 br_solid br_accent-2 relative">
-        <span class="c_accent-n2 font-size_up-2 font_display hour_label lh_0 opacity_7 self_start p_3">11 A.M.</span>
-        <div class="minutes opacity_3 bg_accent-4 flex_column:md justify_stretch absolute t_0 r_0 b_0 l_0 display_none flex:md">
-            <span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span>
-        </div>
-    </div>
-    <div class="hour hour_12 br-t_1 br_solid br_accent-2 relative">
-        <span class="c_accent-n2 font-size_up-2 font_display hour_label lh_0 opacity_7 self_start p_3">12 P.M.</span>
-        <div class="minutes opacity_3 bg_accent-4 flex_column:md justify_stretch absolute t_0 r_0 b_0 l_0 display_none flex:md">
-            <span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span>
-        </div>
-    </div>
-    <div class="hour hour_13 br-t_1 br_solid br_accent-2 relative">
-        <span class="c_accent-n2 font-size_up-2 font_display hour_label lh_0 opacity_7 self_start p_3">1 P.M.</span>
-        <div class="minutes opacity_3 bg_accent-4 flex_column:md justify_stretch absolute t_0 r_0 b_0 l_0 display_none flex:md">
-            <span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span>
-        </div>
-    </div>
-    <div class="hour hour_14 br-t_1 br_solid br_accent-2 relative">
-        <span class="c_accent-n2 font-size_up-2 font_display hour_label lh_0 opacity_7 self_start p_3">2 P.M.</span>
-        <div class="minutes opacity_3 bg_accent-4 flex_column:md justify_stretch absolute t_0 r_0 b_0 l_0 display_none flex:md">
-            <span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span>
-        </div>
-    </div>
-    <div class="hour hour_15 br-t_1 br_solid br_accent-2 relative">
-        <span class="c_accent-n2 font-size_up-2 font_display hour_label lh_0 opacity_7 self_start p_3">3 P.M.</span>
-        <div class="minutes opacity_3 bg_accent-4 flex_column:md justify_stretch absolute t_0 r_0 b_0 l_0 display_none flex:md">
-            <span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span>
-        </div>
-    </div>
-    <div class="hour hour_16 br-t_1 br_solid br_accent-2 relative">
-        <span class="c_accent-n2 font-size_up-2 font_display hour_label lh_0 opacity_7 self_start p_3">4 P.M.</span>
-        <div class="minutes opacity_3 bg_accent-4 flex_column:md justify_stretch absolute t_0 r_0 b_0 l_0 display_none flex:md">
-            <span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span>
-        </div>
-    </div>
-    {{> "Program.AgendaGrid.Session" modifier_class="time-start_10-00 time-end_11-40 channel-start_1 channel-end_2" }}
+<section id="day" class="grid:md flex flex_column gap-y_3 gap-y_0:md relative font_0:lg font_n1 isolation_isolate">
+    <div class="channel channel_1 bg_black-2 display_none block:md channel-start_1 channel-end_1" ></div>
+    <div class="channel channel_2 bg_black-_05 display_none block:md channel-start_2 channel-end_2" ></div>
+    <div class="channel channel_3 bg_black-2 display_none block:md channel-start_3 channel-end_3" ></div>
+    <div class="channel channel_4 bg_black-05 display_none block:md channel-start_4 channel-end_4" ></div>
+    {{> "Program.AgendaGrid.Hour" modifier_class="9" }}
+    {{> "Program.AgendaGrid.Session" modifier_class="time-start_9-00 time-end_10-00 channel-start_3 channel-end_4" }}
+    {{> "Program.AgendaGrid.Hour" modifier_class="10" }}
+    {{> "Program.AgendaGrid.Session" modifier_class="time-start_10-00 time-end_11-40 channel-start_1 channel-end_1" }}
     {{> "Program.AgendaGrid.Session.NonAccredited" modifier_class="time-start_10-00 time-end_11-40 channel-start_2 channel-end_3" }}
-    {{> "Program.AgendaGrid.Session" modifier_class="time-start_9-00 time-end_10-00 channel-start_3 channel-end_5" }}
+    {{> "Program.AgendaGrid.Hour" modifier_class="11" }}
+    {{> "Program.AgendaGrid.Hour" modifier_class="12" }}
     {{> "Program.AgendaGrid.Session" modifier_class="time-start_12-00 time-end_13-00 channel-start_1 channel-end_3" }}
-</div>
+    {{> "Program.AgendaGrid.Hour" modifier_class="13" }}
+    {{> "Program.AgendaGrid.Session" modifier_class="time-start_13-30 time-end_15-10 channel-start_3 channel-end_4" }}
+    {{> "Program.AgendaGrid.Hour" modifier_class="14" }}
+    {{> "Program.AgendaGrid.Hour" modifier_class="15" }}
+    {{> "Program.AgendaGrid.Hour" modifier_class="16" }}
+</section>
 
 MarkupWrapperClasses: 
  
 Weight:0
+
+FORMAT: In the real design the hours should be in the format of "3 p.m" and not military time of  "15:00"
+
+NOTE: Limitation of this design because of the pattern library. The Hours could be formatted differently to reflect the AM and PM. But this build needs to be done in military time because of lack of dynamic labels for the hours.
  
 Styleguide Program.AgendaGrid.Day
 */
@@ -174,14 +140,14 @@ Hour Line
 description
  
 Markup:
-<div class="hour hour_{{ modifier_class }} br-t_1 br_solid br_accent-2 relative">
+<div class="hour hour_{{ modifier_class }} br-t_1 br_solid br_accent-2 relative m-t_4 m-t_0:md z_0">
     <span class="c_accent-n2 font-size_up-2 font_display hour_label lh_0 opacity_7 self_start p_3">{{ modifier_class }}:00</span>
     <div class="minutes opacity_3 bg_accent-4 flex_column:md justify_stretch absolute t_0 r_0 b_0 l_0 display_none flex:md">
         <span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span>
     </div>
 </div>
 
-MarkupWrapperClasses: 
+MarkupWrapperClasses: day_grid
  
 Weight:0
  
