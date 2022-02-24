@@ -28,7 +28,7 @@
     --hour: 0;
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: [ timeSlot ] 6rem repeat(var(--channels-per-day), 1fr);
+    grid-template-columns: [ timeSlot ] 6em repeat(var(--channels-per-day), 1fr);
 }
 .hour_label{
     grid-column: timeSlot;
@@ -54,12 +54,12 @@
             $minutes: "05"; 
             }
         .time-start_#{ $h }-#{ $minutes } {
-            --hour: calc( #{$h} - var(--hour-start_offset));
-            grid-row-start: calc(12 * (var(--hour)) + #{$m} + 1);
+            --start-hour: calc( #{$h} - var(--hour-start_offset));
+            grid-row-start: calc(12 * (var(--start-hour)) + #{$m} + 1);
         }
         .time-end_#{ $h }-#{ $minutes } {
-            --hour: calc( #{$h} - var(--hour-start_offset));
-            grid-row-end: calc(12 * (var(--hour)) + #{$m} + 1);
+            --end-hour: calc( #{$h} - var(--hour-start_offset));
+            grid-row-end: calc(12 * (var(--end-hour)) + #{$m} + 1);
         }
     }
 }
