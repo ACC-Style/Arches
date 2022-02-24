@@ -1,0 +1,75 @@
+#day,
+.day_grid {
+    --hour-start_offset: 9;
+    --hour-end_truncate: 18;
+    --channels-per-day: 4;
+    --hour-length: calc( var(--hour-end_truncate) - var(--hour-start_offset) ); 
+    grid-template-rows: [ channelName ] 1fr repeat( calc( var(--hour-length) * 12 ), minmax(auto, 1fr) );
+    grid-template-columns: [ timeSlot ] 6rem repeat( var(--channels-per-day), auto);
+}
+
+
+.grid.agenda_item {
+    grid-template-rows: repeat(auto-fill, auto);
+    grid-template-columns: 1fr;
+}
+
+.channel {
+    grid-row: 1/-1;
+    grid-column: 2/3;
+}
+
+.channel.channel_3 {
+    grid-column: 4/5;
+}
+
+.hour {
+    
+    --hour: 0;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: [ timeSlot ] 6rem repeat(var(--channels-per-day), 1fr);
+}
+.hour_label{
+    grid-column: timeSlot;
+    grid-row: 1;
+}
+.minutes{
+    grid-column: 2/calc(2 + var(--channels-per-day));
+    grid-row: 1;
+}
+
+@for $h from 1 through 23 {
+    .hour_#{$h} {
+        --hour: calc( #{$h} - var(--hour-start_offset));
+        grid-row-start: calc(12 * (var(--hour)) + 1 );
+        grid-row-end: calc(12 * (var(--hour) + 1 ) + 1 );
+    }
+    @for $m from 0 through 11 {
+        $minutes: $m * 5;
+        @if( $minutes == 0 ) {
+             $minutes: "00"; 
+            }
+        @if( $minutes == 5 ) {
+            $minutes: "05"; 
+            }
+        .time-start_#{ $h }-#{ $minutes } {
+            --hour: calc( #{$h} - var(--hour-start_offset));
+            grid-row-start: calc(12 * (var(--hour)) + #{$m} + 1);
+        }
+        .time-end_#{ $h }-#{ $minutes } {
+            --hour: calc( #{$h} - var(--hour-start_offset));
+            grid-row-end: calc(12 * (var(--hour)) + #{$m} + 1);
+        }
+    }
+}
+
+@for $c from 1 through 4 {
+
+    .channel-start_#{$c} {
+        grid-column-start: calc(1 + #{$c});
+    }
+    .channel-end_#{$c} {
+        grid-column-end: calc(1 + #{$c});
+    }
+}
