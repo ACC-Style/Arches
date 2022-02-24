@@ -4,8 +4,8 @@
     --hour-end_truncate: 18;
     --channels-per-day: 4;
     --hour-length: calc( var(--hour-end_truncate) - var(--hour-start_offset) ); 
-    grid-template-rows: [ channelName ] 1fr repeat( calc( var(--hour-length) * 12 ), minmax(auto, 1fr) );
-    grid-template-columns: [ timeSlot ] 6rem repeat( var(--channels-per-day), auto);
+    grid-template-rows: [ channelName ] 2rem repeat( calc( var(--hour-length) * 12 ), minmax(auto, 1fr) );
+    grid-template-columns: [ timeSlot ] 6em repeat( var(--channels-per-day), auto);
 }
 
 
@@ -15,13 +15,9 @@
 }
 
 .channel {
-    grid-row: 1/-1;
-    grid-column: 2/3;
+    grid-row: 2/-1;
 }
 
-.channel.channel_3 {
-    grid-column: 4/5;
-}
 
 .hour {
     
@@ -42,8 +38,8 @@
 @for $h from 1 through 23 {
     .hour_#{$h} {
         --hour: calc( #{$h} - var(--hour-start_offset));
-        grid-row-start: calc(12 * (var(--hour)) + 1 );
-        grid-row-end: calc(12 * (var(--hour) + 1 ) + 1 );
+        grid-row-start: calc(12 * (var(--hour)) + 2 );
+        grid-row-end: calc(12 * (var(--hour) + 1 ) + 2 );
     }
     @for $m from 0 through 11 {
         $minutes: $m * 5;
@@ -55,11 +51,11 @@
             }
         .time-start_#{ $h }-#{ $minutes } {
             --start-hour: calc( #{$h} - var(--hour-start_offset));
-            grid-row-start: calc(12 * (var(--start-hour)) + #{$m} + 1);
+            grid-row-start: calc(12 * (var(--start-hour)) + #{$m} + 2);
         }
         .time-end_#{ $h }-#{ $minutes } {
             --end-hour: calc( #{$h} - var(--hour-start_offset));
-            grid-row-end: calc(12 * (var(--end-hour)) + #{$m} + 1);
+            grid-row-end: calc(12 * (var(--end-hour)) + #{$m} + 2);
         }
     }
 }

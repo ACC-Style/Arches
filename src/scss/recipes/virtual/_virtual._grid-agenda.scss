@@ -102,7 +102,29 @@ Day Grid with Channels.
 There is need to override the default css variables of this design if you are going to shift away from the default.  The units of time are set to increments of 5 minutes. 
  
 Markup:
-<section id="day" class="grid:md flex flex_column gap-y_3 gap-y_0:md relative font_0:lg font_n1 isolation_isolate">
+<h2 class="c_primary font_display">Full Program</h2>
+<nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light m-b_5">
+<ul class="flex_column flex_row:md nav">
+        <li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item">
+            <a
+            id="BasicLink-tab" data-bs-toggle="tab" data-bs-target="#BasicLink"  role="tab" aria-controls="BasicLink" aria-selected="true"
+            class="a:bg_accent-n2 h:underline-none a:c_white br-b_3 br_white-0 br_solid:md c_primary h:bg_acc-n3 h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4" href="#">List with Search</a>
+        </li>
+        <li class=" br-t_3 br_solid:md br_white-0 m-l_1 nav-item">
+            <a
+                id="ActiveLink-tab" data-bs-toggle="tab" data-bs-target="#ActiveLink"  role="tab" aria-controls="ActiveLink" aria-selected="true"
+                class="active a:bg_accent-n2 h:underline-none a:c_white br-b_3 br_white-0 br_solid:md c_primary h:bg_acc-n3 h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4"
+                href="#">Schedule View</a>
+        </li>
+      </ul>
+</nav>
+<section id="day" class="grid:md flex flex_column gap-y_3 gap-y_0:md relative font_0:lg font_n1 font_n2:md isolation_isolate m-y_4">
+<header class="day_grid grid:md sticky t_0 bg_white display_none z_3 br-b_1 br_primary br_solid" style="grid-column:1/-1; grid-row:channelName/channelName ">
+<span class="channel-start_1 channel-end_1 font_bold uppercase p_2 text_center overflow_ellipsis">Channel Name 1</span>
+<span class="channel-start_2 channel-end_2 font_bold uppercase p_2 text_center overflow_ellipsis">Channel Name 2</span>
+<span class="channel-start_3 channel-end_3 font_bold uppercase p_2 text_center overflow_ellipsis">Channel Name 3</span>
+<span class="channel-start_4 channel-end_4 font_bold uppercase p_2 text_center overflow_ellipsis">Channel Name 4</span>
+</header>
     <div class="channel channel_1 bg_black-2 display_none block:md channel-start_1 channel-end_1" ></div>
     <div class="channel channel_2 bg_black-_05 display_none block:md channel-start_2 channel-end_2" ></div>
     <div class="channel channel_3 bg_black-2 display_none block:md channel-start_3 channel-end_3" ></div>
@@ -141,7 +163,7 @@ description
  
 Markup:
 <div class="hour hour_{{ modifier_class }} br-t_1 br_solid br_accent-2 relative m-t_4 m-t_0:md z_0">
-    <span class="c_accent-n2 font-size_up-2 font_display hour_label lh_0 opacity_7 self_start p_3">{{ modifier_class }}:00</span>
+    <span class="c_accent-n2 font-size_up-2 font_display hour_label lh_0 opacity_7 self_start p_3 sticky:md t_5:md">{{ modifier_class }}:00</span>
     <div class="minutes opacity_3 bg_accent-4 flex_column:md justify_stretch absolute t_0 r_0 b_0 l_0 display_none flex:md">
         <span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span><span class="minutes_10 flex_auto"></span><span class="minutes_10 flex_auto bg_white"></span>
     </div>
