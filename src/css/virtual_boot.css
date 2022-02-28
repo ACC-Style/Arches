@@ -8447,11 +8447,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9370" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8780" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6813" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5806" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9629" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3695" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5352" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2339" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7666" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0156" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8483,11 +8483,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1826" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3891" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9062" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5016" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0170" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7746" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3371" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7249" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9677" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8085" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -9016,140 +9016,178 @@ Weight:0
 Styleguide Structures.AlphaList.list_item_container_classes
 */
 /*
-Awards
 
-Description: Awards are blocks design to display the awards for the conference.
-
-
-Weight:100000
-
-Styleguide Awards
-*/
-/*
 Awardee
 
-The base DOM and Data that represent an awardee.
-
-default         -  row is the base element.  Apply font modifier to increase the font sizes used throughout the pattern.
-.font_column    -  column version of the design.
+The basic Data of an awardee.
 
 Markup:
-<div data-name="awardee" class="{{modifier_class}} flex gap_4 w_100 self_center items_center">
-    <div data-name="awardee__image" class="br_round br_solid br_black-3 br_1 overflow_hidden shadow_bevel-light max-w_25">
-        {{> "Data.Faculty.Photo"}}
-    </div>
-    <div data-name="awardee__content" class="m-y_3 p-x_3 max-w_35">
-        <div data-name="awardee__name" class="font_display c_primary-n2 font-size_up lh_0 m-b_3">
-            {{> "Data.Faculty.FullName" }}
-        </div>
-        <div data-name="awardee__title" class="font-size_down-1 lh_2 m-b_2">
-            {{> "Data.Faculty.Title" }}
-        </div>
-        <div data-name="awardee__location" class="font-size_down-2 m-b_2 c_black-6">
-            {{> "Data.Faculty.Location" }}
-        </div>
-    </div>
-</div>
+<h2>HeadShot</h2>
+<h2>Display Name</h2>
+{{> "Data.Faculty.FullName" }}
+<h2>Title/h2>
+{{> "Data.Faculty.Title" }}
+<h2>Location</h2>
+{{> "Data.Faculty.Location" }}
 
+MarkupWrapperClasses: reading-typography
 
+Weight: 0
 
-Weight:0
-
-Styleguide Awards.Awardee
+Styleguide section
 */
 /*
+
+Awardee Premium
+
+The base DOM and Data that represent an awardee. Head shots images are maxed at 350px wide.
+
+flex_column			- The stacked version of the awardee.
+
+Markup:
+<div data-name="awardee" class="{{ modifier_class }} flex gap_4 w_100 self_center items_center">
+	<div data-name="awardee__image" class="br_round br_solid br_black-3 br_1 overflow_hidden shadow_bevel-light max-w_20">
+		{{> "Data.Faculty.Photo"}}
+	</div>
+	<div data-name="awardee__content" class="m-y_3 p-x_3 max-w_35">
+		<div data-name="awardee__name" class="font_display c_primary-n2 font-size_up lh_0 m-b_3">
+			{{> "Data.Faculty.FullName" }}
+		</div>
+		<div data-name="awardee__title" class="font-size_down lh_2 m-b_2">
+			{{> "Data.Faculty.Title" }}
+		</div>
+		<div data-name="awardee__location" class="font-size_down-1 m-b_2 c_black-6">
+			{{> "Data.Faculty.Location" }}
+		</div>
+	</div>
+</div>
+
+MarkupWrapperClasses: font_2
+
+Weight:  -100
+
+Styleguide Awards.Awardee.Premium
+*/
+/*
+
 Awardee Standard
 
-The base DOM and Data that represent an awardee.
+The base DOM and Data that represent an awardee. Head shots images are maxed at 240px wide.
 
-default         -  row is the base element.  Apply font modifier to increase the font sizes used throughout the pattern.
-.font_column    -  column version of the design.
+flex_column			- The stacked version of the awardee.
 
 Markup:
-<div data-name="awardee" class="{{ modifier_class }} flex  flex_column gap_4 w_100 self_center items_center">
-    <div data-name="awardee__image" class="br_solid br_black-3 br_1 overflow_hidden w_100 max-w_15">
-        {{> "Data.Faculty.Photo"}}
-    </div>
-    <div data-name="awardee__content" class="m-y_3 p-x_3 max-w_35">
-        <div data-name="awardee__name" class="font_display c_primary-n2 font-size_up lh_0 m-b_3">
-            {{> "Data.Faculty.FullName" }}
-        </div>
-        <div data-name="awardee__title" class="font-size_down lh_2 m-b_2">
-            {{> "Data.Faculty.Title" }}
-        </div>
-        <div data-name="awardee__location" class="font-size_down-1 m-b_2 c_black-6">
-            {{> "Data.Faculty.Location" }}
-        </div>
-    </div>
+<div data-name="awardee" class="{{ modifier_class }} flex gap_4 w_100 self_center items_center">
+	<div data-name="awardee__image" class="br_solid br_black-3 br_1 overflow_hidden w_100 max-w_15">
+		{{> "Data.Faculty.Photo"}}
+	</div>
+	<div data-name="awardee__content" class="m-y_3 p-x_3 max-w_35">
+		<div data-name="awardee__name" class="font_display c_primary-n2 font-size_up lh_0 m-b_3">
+			{{> "Data.Faculty.FullName" }}
+		</div>
+		<div data-name="awardee__title" class="font-size_down lh_2 m-b_2">
+			{{> "Data.Faculty.Title" }}
+		</div>
+		<div data-name="awardee__location" class="font-size_down-1 m-b_2 c_black-6">
+			{{> "Data.Faculty.Location" }}
+		</div>
+	</div>
 </div>
 
+MarkupWrapperClasses: font_1
 
 
-Weight:0
+Weight:  -50
 
-Styleguide Awards.AwardeeStandard
+Styleguide Awards.Awardee.Standard
 */
 /*
+
 Awardee Condensed
 
-The base DOM and Data that represent an awardee.
+The base DOM and Data that represent an awardee. Head shots images are maxed at 160px wide.
 
-default         -  row is the base element.  Apply font modifier to increase the font sizes used throughout the pattern.
-.font_column    -  column version of the design.
+flex_column			- The stacked version of the awardee.
 
 Markup:
 <div data-name="awardee" class="{{ modifier_class }} flex gap_3 w_100 self_center items_center">
-    <div data-name="awardee__image" class="br_solid br_black-3 br_1 overflow_hidden w_100 max-w_10">
-        {{> "Data.Faculty.Photo"}}
-    </div>
-    <div data-name="awardee__content" class="m-y_3 p-x_3 max-w_35">
-        <div data-name="awardee__name" class="font_display c_primary-n2 font-size_up lh_0 m-b_3">
-            {{> "Data.Faculty.FullName" }}
-        </div>
-        <div data-name="awardee__title" class="font-size_down lh_2 m-b_2">
-            {{> "Data.Faculty.Title" }}
-        </div>
-        <div data-name="awardee__location" class="font-size_down-1 m-b_2 c_black-6">
-            {{> "Data.Faculty.Location" }}
-        </div>
-    </div>
+	<div data-name="awardee__image" class="br_solid br_black-3 br_1 overflow_hidden w_100 max-w_10">
+		{{> "Data.Faculty.Photo"}}
+	</div>
+	<div data-name="awardee__content" class="m-y_3 p-x_3 max-w_35">
+		<div data-name="awardee__name" class="font_display c_primary-n2 font-size_up lh_0 m-b_3">
+			{{> "Data.Faculty.FullName" }}
+		</div>
+		<div data-name="awardee__title" class="font-size_down lh_2 m-b_2">
+			{{> "Data.Faculty.Title" }}
+		</div>
+		<div data-name="awardee__location" class="font-size_down-1 m-b_2 c_black-6">
+			{{> "Data.Faculty.Location" }}
+		</div>
+	</div>
 </div>
 
+MarkupWrapperClasses:
 
+Weight:  50
 
-Weight:0
+Styleguide Awards.Awardee.Condensed
 
-Styleguide Awards.AwardeeCondensed
 */
 /*
 Awardee Ultra Condensed
 
-The base DOM and Data that represent an awardee. This is the smallest version of the awardee, and is only in a row version.
+The base DOM and Data that represent an awardee. Head shots images are maxed at 80px wide.
 
+flex_column			- The stacked version of the awardee.
 
 Markup:
 <div data-name="awardee" class="{{ modifier_class }} flex gap_3 w_100 self_center items_center">
-    <div data-name="awardee__image" class="br_solid br_black-3 br_1 overflow_hidden w_100 max-w_5">
-        {{> "Data.Faculty.Photo"}}
-    </div>
-    <div data-name="awardee__content" class="m-y_3 p-x_3 max-w_35">
-        <div data-name="awardee__name" class="font_display c_primary-n2 font-size_up lh_0 m-b_3">
-            {{> "Data.Faculty.FullName" }}
-        </div>
-        <div data-name="awardee__title" class="font-size_down lh_2 m-b_2">
-            {{> "Data.Faculty.Title" }}
-        </div>
-        <div data-name="awardee__location" class="font-size_down-1 m-b_2 c_black-6">
-            {{> "Data.Faculty.Location" }}
-        </div>
-    </div>
+	<div data-name="awardee__image" class="br_solid br_black-3 br_1 overflow_hidden w_100 max-w_5">
+		{{> "Data.Faculty.Photo"}}
+	</div>
+	<div data-name="awardee__content" class="m-y_3 p-x_3 max-w_35">
+		<div data-name="awardee__name" class="font_display c_primary-n2 font-size_up lh_0 m-b_3">
+			{{> "Data.Faculty.FullName" }}
+		</div>
+		<div data-name="awardee__title" class="font-size_down lh_2 m-b_2">
+			{{> "Data.Faculty.Title" }}
+		</div>
+		<div data-name="awardee__location" class="font-size_down-1 m-b_2 c_black-6">
+			{{> "Data.Faculty.Location" }}
+		</div>
+	</div>
 </div>
 
+MarkupWrapperClasses:
 
+Weight: 100
+
+Styleguide Awards.Awardee.UltraCondensed
+
+*/
+/*
+
+Awards
+
+Awards in the system is a looped collections of information with a title and optional description of the award and the looped recipients. Depending on the type of award, the level of the award is more or less decorated. 
+MarkupWrapperClasses: 
 
 Weight:0
 
-Styleguide Awards.AwardeeUltraCondensed
+Styleguide Awards.Level
+*/
+/*
+
+Award Premiere
+
+The Premiere award is a special award that includes additional information about the award and the awardee. The content can be html and event include embeds of video and images.
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Awards.Level.Premiere
 */
 /*
 Award Premiere Tier Stacked
@@ -9158,45 +9196,49 @@ Awards are blocks design to display the awards for the conference.
 
 Markup:
 <div data-name="award__container" class="{{ modifier_class }} max-w_30 flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
-    {{> "Awards.Awardee" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
-    <div data-name="award__detail" class="font_0">    
-        <div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
-            {{> "Data.Award.Title" }}
-        </div>
-        <div data-name="awardee__description" class="reading-typography m_4 ">
-            {{> "Data.Award.Description" }}
-        </div>
-    </div>
+	{{> "Awards.Awardee.Premium" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
+	<div data-name="award__detail" class="font_0">   
+	<div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
+			{{> "Data.Award.Title" }}
+		</div>
+		<div data-name="awardee__description" class="reading-typography m_4 ">
+			{{> "Data.Award.Description" }}
+		</div>
+	</div>
 </div>
 
+MarkupWrapperClasses:
 
-Weight:0
+Weight: 0
 
-Styleguide Awards.PremiereColumn
+Styleguide Awards.Level.Premiere.Column
+
 */
 /*
-Award Premiere Tier Row 
+Award Premiere Tier Row
 
 Awards are blocks design to display the awards for the conference.
 
 
 Markup:
 <div data-name="award__container" class="{{ modifier_class }} flex_row:md flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
-    {{> "Awards.Awardee" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
-    <div data-name="award__detail" class="font_0">    
-        <div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
-            {{> "Data.Award.Title" }}
-        </div>
-        <div data-name="awardee__description" class="reading-typography m_4 ">
-            {{> "Data.Award.Description" }}
-        </div>
-    </div>
+	{{> "Awards.Awardee.Premium" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
+	<div data-name="award__detail" class="font_0">   
+	<div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
+			{{> "Data.Award.Title" }}
+		</div>
+		<div data-name="awardee__description" class="reading-typography m_4 ">
+			{{> "Data.Award.Description" }}
+		</div>
+	</div>
 </div>
 
+MarkupWrapperClasses:
 
-Weight:0
+Weight: 0
 
-Styleguide Awards.PremiereRow
+Styleguide Awards.Level.Premiere.Row
+
 */
 /*
 Award + Status
@@ -9207,23 +9249,29 @@ Awards are blocks design to display the awards for the conference.
 Markup:
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Column]</h2>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column max-w_20 relative br_black-1 br_solid br_1">
-    <div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div> 
-    {{> "Awards.AwardeeStandard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
+	{{> "Awards.Awardee.Standard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+</div>
+<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column max-w_20 relative br_black-1 br_solid br_1">
+	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
+	{{> "Awards.Awardee.Standard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
 </div>
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
-    <div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div> 
-    {{> "Awards.AwardeeStandard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
+	{{> "Awards.Awardee.Standard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
 </div>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
-    <div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div> 
-    {{> "Awards.AwardeeStandard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
+	{{> "Awards.Awardee.Standard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
 </div>
 
+MarkupWrapperClasses:
 
-Weight:0
+Weight: 0
 
-Styleguide Awards.Status
+Styleguide Awards.Level.Standard.Status
+
 */
 /*
 Award Condensed
@@ -9234,20 +9282,22 @@ Awards are blocks design to display the awards for the conference.
 Markup:
 <h2 class="font_2:lg font_1 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Column]</h2>
 <div data-name="award__container" class="flex bg_black-1 p_4 flex_column max-w_15 relative">
-    {{> "Awards.AwardeeCondensed" modifier_class="flex_column font_0" }}
+	{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
 </div>
 <h2 class="font_2:lg font_1 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
 <div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
-    {{> "Awards.AwardeeCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	{{> "Awards.Awardee.Condensed" modifier_class="flex_row:lg font_0 items_start" }}
 </div>
 <div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
-    {{> "Awards.AwardeeCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	{{> "Awards.Awardee.Condensed" modifier_class="flex_row:lg font_0 items_start" }}
 </div>
 
+MarkupWrapperClasses:
 
-Weight: 100
+Weight:  100
 
-Styleguide Awards.Condensed
+Styleguide Awards.Level.Condensed
+
 */
 /*
 Award Ultra Condensed
@@ -9259,17 +9309,19 @@ Markup:
 <h3 class="font_1:lg font_0 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }}</h3>
 <ul class="ul_none">
 <li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
-    {{> "Awards.AwardeeUltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </li>
 <li data-name="award__container" class="p-y_3">
-    {{> "Awards.AwardeeUltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </li>
 </ul>
 
+MarkupWrapperClasses:
 
-Weight: 100
+Weight:  100
 
-Styleguide Awards.UltraCondensed
+Styleguide Awards.Level.UltraCondensed
+
 */
 /*
 Channel Player
@@ -9277,7 +9329,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_0446">
+<div class="flex_column flex" id="session_4906">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -9301,7 +9353,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_0446">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_4906">top</a>
                 </div>
             </section>
         </div>
@@ -9313,7 +9365,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_0446">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_4906">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9345,7 +9397,7 @@ Channel Player:Non Accredited
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_0446">
+<div class="flex_column flex" id="session_4906">
     <div class="bg_secondary-n3 c_white font_bold font_ui p_3 m-b_4"> {{> "Sub.Credits.NonAccredited" }}: disclosure or message about how  so we can be extra clear about this</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
@@ -9370,7 +9422,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_0446">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_4906">top</a>
                 </div>
             </section>
         </div>
@@ -9382,7 +9434,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_0446">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_4906">top</a>
                 </div>
             </section>
             <aside class="flex_none max-w_20:md max-w_25:lg w_100 p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1">
@@ -9758,7 +9810,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_4535">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_4990">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -9792,7 +9844,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_4535">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_4990">top</a></div>
     </div>
 </article>
 
@@ -10104,8 +10156,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="Incidunt Incidunt dignissimos dignissimos et omnis "  }}
-    {{> Program.GridFormat.Abstract modifier_class="similique voluptatem omnis "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="dignissimos "  }}
+    {{> Program.GridFormat.Abstract modifier_class="voluptatem Incidunt omnis et Incidunt "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -10180,8 +10232,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="voluptatem et " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="dignissimos dignissimos " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="et " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Et et et Et et quo " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -10299,9 +10351,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="dignissimos Incidunt et quo soluta Incidunt voluptatem " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="similique similique voluptatem soluta voluptatem Incidunt " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="omnis similique Incidunt Incidunt et voluptatem quo " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="tempora " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="dignissimos dignissimos tempora Et et Et similique omnis omnis " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="et similique similique " }}
     </div>
 </section>
 
@@ -10364,9 +10416,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNext modifier_class="similique similique voluptatem Incidunt tempora soluta dignissimos omnis similique " }}
         {{> Program.GridFormat.WhatsNext modifier_class="" }}
-        {{> Program.GridFormat.WhatsNext modifier_class="similique Incidunt " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="soluta Incidunt soluta voluptatem omnis soluta et soluta " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="tempora omnis " }}
     </div>
     <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
         <strong class="text_center c_accent">Access to Session space opens up 15 minutes before start</strong>
