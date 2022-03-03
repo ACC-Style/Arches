@@ -22656,6 +22656,32 @@ Weight:0
 Styleguide  Sub.Presentation.List
 */
 /*
+Auxiliary Data Abstracts
+
+Description: Most players have auxiliary data zones that describe the playing element through credits, tags, and categories.
+
+Markup:
+<aside class="flex_none max-w_20:md max-w_25:lg w_100 {{ modifier_class }}">
+    <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-file-certificate p-r_3"></i> Credits</h4>
+    <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down-1">
+      {{> "Sub.Credits.Dots" }}
+    </div>
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
+        {{> "Sub.Tags.Category" }}
+    </div>
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
+      {{> "Sub.Tags.Filter" }}
+    </div>
+</aside>
+
+
+Weight:0
+
+Styleguide Sub.Player.AuxData.Abstracts
+*/
+/*
 Auxiliary Data
 
 Description: Most players have auxiliary data zones that describe the playing element through credits, tags, and categories.
@@ -22667,7 +22693,7 @@ Markup:
       {{> "Sub.FacultyList.Session"  modifier_class=""}}
     </div>
     <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-file-certificate p-r_3"></i> Credits</h4>
-    <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
+    <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down-1">
       {{> "Sub.Credits.Dots" }}
     </div>
     <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
@@ -23318,11 +23344,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7048" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5435" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6042" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0168" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8538" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2335" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9205" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2332" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4414" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7133" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -23354,11 +23380,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7384" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3201" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7358" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5269" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9081" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3905" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8170" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8037" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5404" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8193" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -24260,7 +24286,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_7826">
+<div class="flex_column flex" id="session_0202">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -24284,7 +24310,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_7826">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_0202">top</a>
                 </div>
             </section>
         </div>
@@ -24296,7 +24322,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_7826">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_0202">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -24328,7 +24354,7 @@ Channel Player External Content
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_7826">
+<div class="flex_column flex" id="session_0202">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -24358,7 +24384,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_7826">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_0202">top</a>
                 </div>
             </section>
         </div>
@@ -24369,7 +24395,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_7826">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_0202">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -24402,7 +24428,7 @@ Channel Player No Schedule
 description
 
 Markup:
-<div class="flex_column flex" id="session_7826">
+<div class="flex_column flex" id="session_0202">
     <header class="flex flex_column-reverse font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -24423,7 +24449,7 @@ Markup:
         <h2 class="font_bold font_display c_primary-n1 m-b_4"><div class="flex_row:md flex flex_column">
             <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
         </h2>
-        {{> Program.GridFormat.WhatsNext modifier_class="Et Incidunt similique voluptatem soluta quo et " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="dignissimos " }}
         </div>
     </section>
 </div>
@@ -24441,7 +24467,7 @@ Channel Player:Non Accredited
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_7826">
+<div class="flex_column flex" id="session_0202">
     <div class="bg_secondary-n3 c_white font_bold font_ui p_3 p-x_4 m-b_4 shadow_overlap-light br_radius" > {{> "Sub.Credits.NonAccredited" }}: disclosure or message about how  so we can be extra clear about this</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
@@ -24466,7 +24492,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_7826">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_0202">top</a>
                 </div>
             </section>
         </div>
@@ -24478,7 +24504,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_7826">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_0202">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData.NotAccredited" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -24528,13 +24554,13 @@ Markup:
                 <div class="bg_acc aspect_4x3 c_white text_center  justify_center flex items_center">PDF EMBED</div>
             </div>
             <div class="flex_auto w_100 font_n1 p-x_3 m-t_3">
-            {{> "Sub.FacultyList.SessionAndPresentation" modifier_class="block w_100"}}
+            {{> "Sub.FacultyList" modifier_class="block w_100"}}
             </div>
         </div>
        <div class="flex_auto max-w_25:lg max-w_20:md w_100 flex flex_column gap-y_3 justify_start">
             <div class="bg_primary-4 aspect_16x9 br_radius c_white text_center  justify_center flex items_center">Video EMBED</div>
             <div class="bg_secondary-3 aspect_4x1 br_radius c_white text_center  justify_center flex items_center">Audio EMBED</div>
-            {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
+            {{> "Sub.Player.AuxData.Abstracts" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
         </div>
     </section>
 </div>
@@ -24841,7 +24867,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_4429">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_2683">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -24875,7 +24901,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_4429">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_2683">top</a></div>
     </div>
 </article>
 
@@ -25187,8 +25213,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class=""  }}
-    {{> Program.GridFormat.Abstract modifier_class="Et Incidunt dignissimos quo similique "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="similique soluta dignissimos Incidunt Et soluta omnis "  }}
+    {{> Program.GridFormat.Abstract modifier_class="Et tempora quo et Et dignissimos Et soluta Incidunt "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -25263,8 +25289,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="soluta " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="et similique Incidunt " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Et " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="quo soluta et et dignissimos quo " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -25382,9 +25408,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="" }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Incidunt tempora et similique soluta soluta dignissimos " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="" }}
+        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem quo soluta et Incidunt Incidunt soluta similique Et " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="et tempora similique Et Incidunt " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="et dignissimos voluptatem soluta soluta voluptatem et tempora " }}
     </div>
 </section>
 
@@ -25447,9 +25473,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNext modifier_class="Incidunt " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="Et soluta et " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="" }}
+        {{> Program.GridFormat.WhatsNext modifier_class="et " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="et tempora Et dignissimos dignissimos omnis quo " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Incidunt quo Et Et dignissimos omnis " }}
     </div>
 </section>
 
