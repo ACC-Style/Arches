@@ -8,18 +8,35 @@ Markup:
 <h2>HeadShot</h2>
 <h2>Display Name</h2>
 {{> "Data.Faculty.FullName" }}
-<h2>Title/h2>
+<h2>Title</h2>
 {{> "Data.Faculty.Title" }}
 <h2>Location</h2>
 {{> "Data.Faculty.Location" }}
 
 MarkupWrapperClasses: reading-typography
 
-Weight: 0
+Weight: 300
 
 Styleguide Awards.Awardee
 */
+/*
 
+Awardee Avatar
+
+When a head shot is missing it should use the avatar.
+
+Markup:
+<div class="aspect_1x1 w_100 grid text_center items_center justify_center bg_black-3 c_black-3 font_10">
+<span class="fa-stack"> <i class="fa-user fas fa-stack-2x"></i> <i style="font-size: 70%;top: 25%;" class="fa-medal fas fa-stack-1x"></i></span>
+</div>
+
+
+MarkupWrapperClasses: br_round br_solid br_black-3 br_1 overflow_hidden shadow_bevel-light max-w_20 
+
+Weight: 0
+
+Styleguide Awards.Awardee.Avatar
+*/
 /*
 
 Awardee Premium
@@ -85,6 +102,39 @@ MarkupWrapperClasses: font_1
 Weight:  -50
 
 Styleguide Awards.Awardee.Standard
+*/
+/*
+
+Awardee Standard with Avatar
+
+The base DOM and Data that represent an awardee. Head shots images are maxed at 240px wide.
+
+flex_column			- The stacked version of the awardee.
+
+Markup:
+<div data-name="awardee" class="{{ modifier_class }} flex gap_4 w_100 self_center items_center">
+	<div data-name="awardee__image" class="br_solid br_black-3 br_1 overflow_hidden w_100 max-w_15">
+		{{> "Awards.Awardee.Avatar"}}
+	</div>
+	<div data-name="awardee__content" class="m-y_3 p-x_3 max-w_35">
+		<div data-name="awardee__name" class="font_display c_primary-n2 font-size_up lh_0 m-b_3">
+			{{> "Data.Faculty.FullName" }}
+		</div>
+		<div data-name="awardee__title" class="font-size_down lh_2 m-b_2">
+			{{> "Data.Faculty.Title" }}
+		</div>
+		<div data-name="awardee__location" class="font-size_down-1 m-b_2 c_black-6">
+			{{> "Data.Faculty.Location" }}
+		</div>
+	</div>
+</div>
+
+MarkupWrapperClasses: font_1
+
+
+Weight:  -50
+
+Styleguide Awards.Awardee.Standard.Avatar
 */
 
 
@@ -246,8 +296,8 @@ Markup:
 	{{> "Awards.Awardee.Standard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
 </div>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column max-w_20 relative br_black-1 br_solid br_1">
-	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
-	{{> "Awards.Awardee.Standard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+	{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
 </div>
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
@@ -256,7 +306,7 @@ Markup:
 </div>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
 	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
-	{{> "Awards.Awardee.Standard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+	{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
 </div>
 
 MarkupWrapperClasses:
@@ -275,6 +325,15 @@ Awards are blocks design to display the awards for the conference.
 
 Markup:
 <h2 class="font_2:lg font_1 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Column]</h2>
+<div data-name="award__container" class="flex bg_black-1 p_4 flex_column max-w_15 relative">
+	{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+</div>
+<div data-name="award__container" class="flex bg_black-1 p_4 flex_column max-w_15 relative">
+	{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+</div>
+<div data-name="award__container" class="flex bg_black-1 p_4 flex_column max-w_15 relative">
+	{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+</div>
 <div data-name="award__container" class="flex bg_black-1 p_4 flex_column max-w_15 relative">
 	{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
 </div>

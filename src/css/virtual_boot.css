@@ -7986,11 +7986,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8349" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4575" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3342" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7939" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6974" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6020" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6433" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9628" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0487" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0373" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8022,11 +8022,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4912" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0157" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9311" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3748" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7567" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9129" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0948" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6158" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1400" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8138" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8564,16 +8564,34 @@ Markup:
 <h2>HeadShot</h2>
 <h2>Display Name</h2>
 {{> "Data.Faculty.FullName" }}
-<h2>Title/h2>
+<h2>Title</h2>
 {{> "Data.Faculty.Title" }}
 <h2>Location</h2>
 {{> "Data.Faculty.Location" }}
 
 MarkupWrapperClasses: reading-typography
 
-Weight: 0
+Weight: 300
 
 Styleguide Awards.Awardee
+*/
+/*
+
+Awardee Avatar
+
+When a head shot is missing it should use the avatar.
+
+Markup:
+<div class="aspect_1x1 w_100 grid text_center items_center justify_center bg_black-3 c_black-3 font_10">
+<span class="fa-stack"> <i class="fa-user fas fa-stack-2x"></i> <i style="font-size: 70%;top: 25%;" class="fa-medal fas fa-stack-1x"></i></span>
+</div>
+
+
+MarkupWrapperClasses: br_round br_solid br_black-3 br_1 overflow_hidden shadow_bevel-light max-w_20 
+
+Weight: 0
+
+Styleguide Awards.Awardee.Avatar
 */
 /*
 
@@ -8639,6 +8657,39 @@ MarkupWrapperClasses: font_1
 Weight:  -50
 
 Styleguide Awards.Awardee.Standard
+*/
+/*
+
+Awardee Standard with Avatar
+
+The base DOM and Data that represent an awardee. Head shots images are maxed at 240px wide.
+
+flex_column			- The stacked version of the awardee.
+
+Markup:
+<div data-name="awardee" class="{{ modifier_class }} flex gap_4 w_100 self_center items_center">
+	<div data-name="awardee__image" class="br_solid br_black-3 br_1 overflow_hidden w_100 max-w_15">
+		{{> "Awards.Awardee.Avatar"}}
+	</div>
+	<div data-name="awardee__content" class="m-y_3 p-x_3 max-w_35">
+		<div data-name="awardee__name" class="font_display c_primary-n2 font-size_up lh_0 m-b_3">
+			{{> "Data.Faculty.FullName" }}
+		</div>
+		<div data-name="awardee__title" class="font-size_down lh_2 m-b_2">
+			{{> "Data.Faculty.Title" }}
+		</div>
+		<div data-name="awardee__location" class="font-size_down-1 m-b_2 c_black-6">
+			{{> "Data.Faculty.Location" }}
+		</div>
+	</div>
+</div>
+
+MarkupWrapperClasses: font_1
+
+
+Weight:  -50
+
+Styleguide Awards.Awardee.Standard.Avatar
 */
 /*
 
@@ -8792,8 +8843,8 @@ Markup:
 	{{> "Awards.Awardee.Standard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
 </div>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column max-w_20 relative br_black-1 br_solid br_1">
-	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
-	{{> "Awards.Awardee.Standard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+	{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
 </div>
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
@@ -8802,7 +8853,7 @@ Markup:
 </div>
 <div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
 	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
-	{{> "Awards.Awardee.Standard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+	{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
 </div>
 
 MarkupWrapperClasses:
@@ -8868,7 +8919,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_1778">
+<div class="flex_column flex" id="session_3001">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -8892,7 +8943,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_1778">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3001">top</a>
                 </div>
             </section>
         </div>
@@ -8904,7 +8955,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_1778">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3001">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -8936,7 +8987,7 @@ Channel Player:Non Accredited
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_1778">
+<div class="flex_column flex" id="session_3001">
     <div class="bg_secondary-n3 c_white font_bold font_ui p_3 m-b_4"> {{> "Sub.Credits.NonAccredited" }}: disclosure or message about how  so we can be extra clear about this</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
@@ -8961,7 +9012,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_1778">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3001">top</a>
                 </div>
             </section>
         </div>
@@ -8973,7 +9024,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_1778">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3001">top</a>
                 </div>
             </section>
             <aside class="flex_none max-w_20:md max-w_25:lg w_100 p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1">
@@ -9349,7 +9400,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_0811">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_5364">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -9383,7 +9434,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_0811">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_5364">top</a></div>
     </div>
 </article>
 
@@ -9695,8 +9746,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="voluptatem et quo "  }}
-    {{> Program.GridFormat.Abstract modifier_class="omnis voluptatem tempora "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="Et Et voluptatem tempora dignissimos dignissimos tempora soluta "  }}
+    {{> Program.GridFormat.Abstract modifier_class="tempora omnis soluta "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -9771,8 +9822,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="dignissimos dignissimos voluptatem " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="" }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="dignissimos omnis tempora dignissimos quo Et dignissimos similique similique " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="dignissimos voluptatem Et " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -9890,9 +9941,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem Incidunt similique quo omnis tempora Incidunt " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="quo quo Incidunt voluptatem " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="similique Incidunt " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="soluta quo omnis similique " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Incidunt tempora voluptatem Et similique voluptatem Et similique similique " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="voluptatem omnis Et tempora soluta Et soluta dignissimos " }}
     </div>
 </section>
 
@@ -9955,9 +10006,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNext modifier_class="voluptatem Incidunt soluta " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="omnis dignissimos Et similique quo dignissimos tempora quo " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="tempora omnis voluptatem similique tempora et " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="quo " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Et Incidunt soluta voluptatem omnis Incidunt " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="soluta quo Incidunt omnis dignissimos tempora " }}
     </div>
 </section>
 
