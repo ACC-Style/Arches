@@ -227,6 +227,7 @@ Weight:0
 Styleguide  Sub.Presentation.List
 */
 
+
 /*
 Auxiliary Data
  
@@ -234,6 +235,10 @@ Description: Most players have auxiliary data zones that describe the playing el
  
 Markup:
 <aside class="flex_none max-w_20:md max-w_25:lg w_100 {{ modifier_class }}">
+    <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Session Faculty</h4>
+    <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
+      {{> "Sub.FacultyList.Session"  modifier_class=""}}
+    </div>
     <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-file-certificate p-r_3"></i> Credits</h4>
     <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
       {{> "Sub.Credits.Dots" }}
@@ -254,6 +259,35 @@ Weight:0
 Styleguide Sub.Player.AuxData
 */
 
+/*
+Auxiliary Data Not Accredited
+ 
+Description: Most players have auxiliary data zones that describe the playing element through credits, tags, and categories.
+ 
+Markup:
+<aside class="flex_none max-w_20:md max-w_25:lg w_100 {{ modifier_class }}">
+    <div class="bg_secondary-n3 br_radius c_white font-size_down m-b_4 p_3 shadow_overlap-light">
+     {{> "Sub.Credits.NonAccredited" }}
+    </div>
+    <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Session Faculty</h4>
+    <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
+      {{> "Sub.FacultyList.Session"  modifier_class=""}}
+    </div>
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
+        {{> "Sub.Tags.Category" }}
+    </div>
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
+      {{> "Sub.Tags.Filter" }}
+    </div>
+</aside>
+
+ 
+Weight:0
+ 
+Styleguide Sub.Player.AuxData.NotAccredited
+*/
 
 /*
 Faculty List

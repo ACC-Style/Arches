@@ -191,7 +191,7 @@ Description:
  
 Markup:
 <div class="flex_column flex" id="#{$sessionID}">
-    <div class="bg_secondary-n3 c_white font_bold font_ui p_3 m-b_4"> {{> "Sub.Credits.NonAccredited" }}: disclosure or message about how  so we can be extra clear about this</div>
+    <div class="bg_secondary-n3 c_white font_bold font_ui p_3 p-x_4 m-b_4 shadow_overlap-light br_radius" > {{> "Sub.Credits.NonAccredited" }}: disclosure or message about how  so we can be extra clear about this</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -230,20 +230,7 @@ Markup:
                     <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#{'#'+$sessionID}">top</a>
                 </div>
             </section>
-            <aside class="flex_none max-w_20:md max-w_25:lg w_100 p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1">
-                <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-file-certificate p-r_3"></i> Credits</h4>
-                <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
-                {{> "Sub.Credits.NonAccredited" }}
-                </div>
-                <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
-                <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
-                    {{> "Sub.Tags.Category" }}
-                </div>
-                <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
-                <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
-                {{> "Sub.Tags.Filter" }}
-                </div>
-            </aside>
+            {{> "Sub.Player.AuxData.NotAccredited" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
         </div>
     </section>
 </div>
@@ -251,7 +238,7 @@ Markup:
 SubComponents:
 Sub.Attachments.BigButton - Attachments
 Sub.FacultyList - Faculty List
-Sub.Player.AuxData - Aux Data
+Sub.Player.AuxData.NotAccredited - Aux Data
 Sub.ActionButtons.Favorite - Favorite Button
 Sub.Player.CIO - CIO
 Sub.Player.Chat - Chat
