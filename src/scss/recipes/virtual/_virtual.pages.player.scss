@@ -70,6 +70,80 @@ Styleguide Pages.Player.Channel
 */
 
 /*
+Channel Player External Content
+ 
+Description: 
+ 
+Markup:
+<div class="flex_column flex" id="#{$sessionID}">
+    <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
+        <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
+                <span class="block">
+                    <strong class="font_bold p-r_3">{{> "Data.Session.ID"}}</strong> {{> "Data.Session.Title"}} </span>
+                <span class="c_accent font-size_down-2 lh_0 inline-block">
+                {{> "Data.Agenda.LiveDate"}}  {{> "Data.Agenda.LiveTime" }}
+                </span>
+            </h3>
+            <div class="self_start flex gap_2">
+            {{> "Sub.ActionButtons.Favorite"}}
+            {{> "Sub.Attachments.BigButton"}}
+            </div>
+    </header>
+    <section class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3">
+        <div class="flex_auto w_100">
+            <div class="bg_primary br_round c_white font-size_up m-b_5 m-r_3 p_5 shadow_overlap-light">
+            <h1 class="m-t_4">Session is being held In WebEx</h1>
+            <p>The schedule session allows users to engage directly with each other so it will be held in WebEx.</p>
+            <p>Please click the link below and follow any instructions to join the session.</p>
+            <a title="back to program" class="bg_white block btn btn-hollow btn-outline-secondary font_xbold m-t_5 m_auto max-w_30 shadow_0" href="../program/" target="_blank">
+            <span class="display_none inline-block:md"> Join</span>
+            <i class="fas fa-external-link-alt p-l_3"></i>
+            </a>
+            </div>
+            <section class="p-t_3 display_none block:md">
+                <div  class="br-b_2 br_0 br_solid br_primary-2">   
+                {{> "Sub.Presentation.List"}}
+                </div>
+                <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#{'#'+$sessionID}">top</a>
+                </div>
+            </section>
+        </div>
+        <div class="flex_auto max-w_25:lg max-w_20:md w_100 flex flex_column gap-y_3 justify_start">
+            {{> "Sub.Player.Chat" modifier_class="flex_0"}}
+            <section class="p-t_3 display_none:md block">
+                <div  class="br-b_2 br_0 br_solid br_primary-2">   
+                {{> "Sub.Presentation.List"}}
+                </div>
+                <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#{'#'+$sessionID}">top</a>
+                </div>
+            </section>
+            {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
+        </div>
+    </section>
+</div>
+
+SubComponents:
+Sub.Attachments.BigButton - Attachments
+Sub.FacultyList - Faculty List
+Sub.Player.AuxData - Aux Data
+Sub.ActionButtons.Favorite - Favorite Button
+Sub.Player.CIO - CIO
+Sub.Player.Chat - Chat
+
+Data:
+Data.Session.Title - Title
+Data.Session.ID - Session ID
+Sub.Presentation.List - Presentation List
+
+ 
+Weight:0
+ 
+Styleguide Pages.Player.Channel
+*/
+
+/*
 
 Channel Player No Schedule
 
