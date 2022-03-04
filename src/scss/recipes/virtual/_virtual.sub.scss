@@ -40,6 +40,10 @@ Markup:
 
 FORMAT: This element uses data that has strict data formatting requirements. See the data tab for more information.
 
+Data: 
+Data.Agenda.LiveDate - Live Date
+Data.Agenda.LiveTime - Live Time
+
 MarkupWrapperClasses: p_4 br_inherit
  
 Weight: 100
@@ -91,6 +95,8 @@ Markup:
  
 Note: This pattern requires the inclusion of the credit color stylesheets.
 
+SubComponents: Sub.Credits
+
 Weight:0
  
 Styleguide Sub.Credits.Dots
@@ -103,7 +109,7 @@ Non Accredited
 description
  
 Markup:
-<strong class="font_xbold uppercase"><i class="fas fa-info-circle"></i> Nonaccredited | Industry Session</strong>
+<strong class="font_xbold uppercase"><i class="fas fa-info-circle p-r_3"></i>Industry Session | Nonaccredited</strong>
 
 MarkupWrapperClasses: 
  
@@ -122,11 +128,12 @@ Description: A graphic treatment for the category flags which are tags applied l
 Markup:
 <div class="font_n3 p_2 uppercase bg_primary-2 p-x_4 m-x_4 inline-block br-br_radius br-bl_radius c_white font_bold self_start {{ modifier_class }}">
   <ul class="ul_inline-pipe">
-    <li>Channel 1</li>
     <li>{{>"Data.Agenda.ChannelName"}}</li>
+    <li>Category Tag</li>
   </ul>
 </div>
 
+Data: Data.Agenda.ChannelName - Channel Name
  
 Weight:0
  
@@ -204,6 +211,17 @@ Markup:
  
 MarkupWrapperClasses: ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3
 
+FORMAT: This element uses data that has strict data formatting requirements. See the data tab for more information.
+
+Data:
+Data.Presentation.Title - Title
+Data.Presentation.LiveTime - Live Time
+
+SubComponents:
+Sub.FacultyList - Faculty List
+Sub.ActionButtons.Favorite.Small - Small Action Button
+
+
 Weight:0
  
 Styleguide Sub.Presentation.ListItem
@@ -221,10 +239,82 @@ Markup:
   {{> Sub.Presentation.ListItem }}
 </ul>
 
+SubComponents:
+Sub.Presentation.ListItem - List Item
+
  
 Weight:0
  
 Styleguide  Sub.Presentation.List
+*/
+
+
+
+/*
+Auxiliary Data
+ 
+Description: Most players have auxiliary data zones that describe the playing element through credits, tags, and categories.
+ 
+Markup:
+<aside class="flex_none max-w_20:md max-w_25:lg w_100 {{ modifier_class }}">    
+    {{> "Sub.FacultyList.AuxSession"  modifier_class=""}}
+    <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-file-certificate p-r_3"></i> Credits</h4>
+    <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down-1">
+      {{> "Sub.Credits.Dots" }}
+    </div>
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
+        {{> "Sub.Tags.Category" }}
+    </div>
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
+      {{> "Sub.Tags.Filter" }}
+    </div>
+</aside>
+
+SubComponents:
+Sub.Credits.NonAccredited - Non Accredited
+Sub.FacultyList.AuxSession - Session Faculty Lists
+Sub.Credits.Dots - Credit Dots
+Sub.Tags.Category - Category
+Sub.Tags.Filter - Tags
+ 
+Weight:0
+ 
+Styleguide Sub.Player.AuxData
+*/
+
+/*
+Auxiliary Data Not Accredited
+ 
+Description: Most players have auxiliary data zones that describe the playing element through credits, tags, and categories.
+ 
+Markup:
+<aside class="flex_none max-w_20:md max-w_25:lg w_100 {{ modifier_class }}">
+    <div class="bg_secondary-n3 br_radius c_white font-size_down m-b_4 p_3 shadow_overlap-light">
+     {{> "Sub.Credits.NonAccredited" }}
+    </div>
+    {{> "Sub.FacultyList.AuxSession"  modifier_class=""}}
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
+        {{> "Sub.Tags.Category" }}
+    </div>
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
+      {{> "Sub.Tags.Filter" }}
+    </div>
+</aside>
+
+SubComponents:
+Sub.Credits.NonAccredited - Non Accredited
+Sub.FacultyList.AuxSession - Session Faculty Lists
+Sub.Credits.Dots - Credit Dots
+Sub.Tags.Category - Category
+Sub.Tags.Filter - Tags
+ 
+Weight:0
+ 
+Styleguide Sub.Player.AuxData.NotAccredited
 */
 
 /*
@@ -248,71 +338,14 @@ Markup:
     </div>
 </aside>
 
+SubComponents:
+Sub.Credits.Dots - Credit Dots
+Sub.Tags.Category - Category
+Sub.Tags.Filter - Tags
  
 Weight:0
  
 Styleguide Sub.Player.AuxData.Abstracts
-*/
-
-/*
-Auxiliary Data
- 
-Description: Most players have auxiliary data zones that describe the playing element through credits, tags, and categories.
- 
-Markup:
-<aside class="flex_none max-w_20:md max-w_25:lg w_100 {{ modifier_class }}">
-    <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Session Faculty</h4>
-    <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
-      {{> "Sub.FacultyList.Session"  modifier_class=""}}
-    </div>
-    <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-file-certificate p-r_3"></i> Credits</h4>
-    <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down-1">
-      {{> "Sub.Credits.Dots" }}
-    </div>
-    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
-    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
-        {{> "Sub.Tags.Category" }}
-    </div>
-    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
-    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
-      {{> "Sub.Tags.Filter" }}
-    </div>
-</aside>
-
- 
-Weight:0
- 
-Styleguide Sub.Player.AuxData
-*/
-
-/*
-Auxiliary Data Not Accredited
- 
-Description: Most players have auxiliary data zones that describe the playing element through credits, tags, and categories.
- 
-Markup:
-<aside class="flex_none max-w_20:md max-w_25:lg w_100 {{ modifier_class }}">
-    <div class="bg_secondary-n3 br_radius c_white font-size_down m-b_4 p_3 shadow_overlap-light">
-     {{> "Sub.Credits.NonAccredited" }}
-    </div>
-    <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Session Faculty</h4>
-    <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
-      {{> "Sub.FacultyList.Session"  modifier_class=""}}
-    </div>
-    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
-    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
-        {{> "Sub.Tags.Category" }}
-    </div>
-    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
-    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
-      {{> "Sub.Tags.Filter" }}
-    </div>
-</aside>
-
- 
-Weight:0
- 
-Styleguide Sub.Player.AuxData.NotAccredited
 */
 
 /*
@@ -326,21 +359,60 @@ inline-block  - use inline-block on the role type label to keep all the faculty 
 Markup:
 <ul class="ul_inline-semicolon font_regular font_copy">
   <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
-  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
   <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
-  <li>Dianna Denesik III <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
-  <li>Miguel Romaguera <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>  
-  <li>Jeanette Franecki <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
 </ul>
 
-SubComponents:
+Data:
 Data.Faculty.FullName - Full Name
 Data.Faculty.FullName - Location
 
+FORMAT: This element uses data that has strict data formatting requirements. See the data tab for more information.
 
 Weight:0
  
 Styleguide Sub.FacultyList
+
+*/
+
+/*
+Aux Session Faculty List
+
+When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Role Type 1</h4>
+<div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li>Marty Little <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Eileen Marvin <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Chelsea Dach DVM <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+</div>
+<h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Role Type 2</h4>
+<div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li>Wm Price<span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Mrs. Jeffrey Cartwright <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>CEmmett Spencer<span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+</div>
+
+
+SubComponents:
+Data.Faculty.FullName - Full Name
+Data.Faculty.Location - Location
+
+
+Weight:0
+ 
+Styleguide Sub.FacultyList.AuxSession
 
 */
 
@@ -355,17 +427,17 @@ inline-block  - use inline-block on the role type label to keep all the faculty 
 Markup:
 <ul class="ul_inline-semicolon font_regular font_copy">
   <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Session Role Type 1:</li>
-  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
   <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Session Role Type 2:</li>
-  <li>Dianna Denesik III <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
-  <li>Miguel Romaguera <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>  
-  <li>Jeanette Franecki <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
     <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
-  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
   <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
-  <li>Dianna Denesik III <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
-  <li>Miguel Romaguera <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>  
-  <li>Jeanette Franecki <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
 </ul>
 
 SubComponents:
@@ -391,11 +463,11 @@ inline-block  - use inline-block on the role type label to keep all the faculty 
 Markup:
 <ul class="ul_inline-semicolon font_regular font_copy">
   <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Session Role Type 1:</li>
-  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
   <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Session Role Type 2:</li>
-  <li>Dianna Denesik III <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
-  <li>Miguel Romaguera <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>  
-  <li>Jeanette Franecki <span class="opacity_9 font_light">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
 </ul>
 
 SubComponents:
@@ -913,4 +985,19 @@ FORMAT: This uses a strick data format look at x
 
 Styleguide Sub.SectionHeader
 
+*/
+/*
+
+title
+
+description
+ 
+Markup:
+
+MarkupWrapperClasses:
+<div class="p_4 c_black grid text_center items_center justify_center w_100 bg_highlight-5 br_round br_dashed br_1 br_highlight">{{ modifier_class }}</div> 
+ 
+Weight:0
+ 
+Styleguide Sub.LayoutBlock
 */
