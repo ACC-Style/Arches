@@ -60,3 +60,108 @@ Weight:0
  
 Styleguide Page.Home.Header
 */
+
+/*
+
+Carousel 
+
+Vertical Carousels to have discoverable areas on the home pages.
+
+
+Markup:
+<section class=''>
+    <header class="p-x_4 font_display font_regular font_3:lg font_2:md font_1 c_primary-n1 m-x_3 m-b_3 m-b_3:lg lh_1 m-t_5:lg m-t_4:md m-t_3 flex flex_row"><h2 class="lh_1 m_0 font_regular lowercase">Featured</h2></header>
+    <div class="font_0 font_1:lg relative isolation_isolate overflow_hidden">
+        <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}}">
+        {{> "Program.Session.Home" }}
+        {{> "Program.Session.Home" }}
+        {{> "Program.Session.Home" }}
+        {{> "Program.Session.Home" }}
+        </div>
+        <div class="customize-tools">
+            <ul class="controls ul_none font_5 c_black-6" id="slider1-customize-controls" aria-label="Carousel Navigation" tabindex="0">
+            <li class="prev bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 l_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-l_0 br-br_radius br-tr_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="prev">
+                <i class="fal fa-chevron-left"></i>
+            </li>
+            <li class="next bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 r_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-r_0 br-bl_radius br-tl_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="next">
+                <i class="fal fa-chevron-right"></i>
+            </li>
+            </ul>
+        </div>
+    </div>
+    <footer class="flex flex_row-reverse p_3 p-b_4"><a href="" class="link self_end ">view all from "Featured" <i class="fal fa-chevron-circle-right m-r_3"></i></a></footer>       
+</section>   <!-- Slider CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"> 
+<!-- Slider JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script>
+    let args ={
+    items: 1,
+    mouseDrag: true,
+    slideBy: "page",
+    swipeAngle: false,
+    autoplay: false,
+    controls: true,
+    nav: false,
+    edgePadding: 0,
+    loop:true,
+    edgePadding:48,
+    center:false,
+    gutter:16,
+    responsive: {
+        480: {
+            items: 1
+        },
+        768: {
+            items: 2
+        },
+        1024: {
+            items: 2
+        },
+        1200: {
+            items: 3
+        }
+    }};
+    let slider1 = tns({ container: '#slider1', controlsContainer: "#slider1-customize-controls", ...args });
+</script>
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+SubComponents:
+Program.Session.Home    - Session
+
+NOTE: This design requires javascript. (tiny slider js)
+
+Styleguide Page.Home.Carousel
+*/
+
+
+/* nav */
+.tns-nav {
+    text-align: center;
+    margin: 0.5rem 0;
+    > [aria-controls] {
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0;
+    margin: 0 0.25rem;
+    border-radius: 50%;
+    background: #ddd;
+    border: 0;
+    min-height: 0;
+    line-height: 1;
+    }
+    > .tns-nav-active {
+    background: #999;
+    }
+}
+
+.tns-item {
+    display: flex !important;
+}
+
+.tns-visually-hidden {
+    display: none;
+}
