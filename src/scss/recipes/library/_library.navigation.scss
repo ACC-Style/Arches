@@ -69,20 +69,55 @@ NOTE: This design highly depends on Javascript.There are styles in the pattern t
 Styleguide Navigation.MainNav
 */
 
-.filter_blur {
-    backdrop-filter: blur(5px);
-}
+/*
 
-.h\:shadow_overlap-light:hover {
-    box-shadow: 0 1px 10px rgb(0 0 0 / 5%), 0 2px 4px rgb(0 0 0 / 30%), 1px 5px 5px rgb(0 0 0 / 1%);
-}
+Home Utility Nav
 
-.a\:shadow_overlap-light.active {
-    box-shadow: 0 1px 10px rgb(0 0 0 / 5%), 0 2px 4px rgb(0 0 0 / 30%), 1px 5px 5px rgb(0 0 0 / 1%);
-}
-:root {
-accent-color: #149378;
-}
+Small nav under the home page to quick link users to helpful pieces of content
+
+Markup:
+<nav class="utility-nav p-t_3 p-t_4:lg font_n3 font_0:md font_1:lg m-b_n3">
+    <ul class="flex flex_row ul_none justify_center">
+        <li class="text_center p-x_3 p-x_4:md lh_1">
+            <a class="h:undecorated c_primary h:c_secondary-n3"
+                ><i class="fal fa-star  block inline:md"></i><span class=""> featured</span></a
+            >
+        </li>
+        <li class="text_center p-x_3 p-x_4:md lh_1 br-l_1 br_solid br_black-4">
+            <a class="h:undecorated c_primary h:c_secondary-n3"
+                ><i class="fal fa-sitemap  block inline:md"></i><span class=""> Clinical Focus</span></a
+            >
+        </li>
+        <li class="text_center p-x_3 p-x_4:md lh_1 text_center  br-l_1 br_solid br_black-4">
+            <a class="h:undecorated c_primary h:c_secondary-n3"
+            ><i class="fal fa-heart block inline:md"></i><span class=""> Saved</span></a
+        >
+        </li>
+        <li class="text_center p-x_3 p-x_4:md lh_1 br-l_1 br_solid br_black-4">
+            <a class="h:undecorated c_primary h:c_secondary-n3"
+            ><i class="fal fa-play  block inline:md"></i><span class=""> Continue Watching</span></a
+        >
+        </li>
+        <li class="text_center p-x_3 p-x_4:md lh_1 br-l_1 br_solid br_black-4">
+            <a class="h:undecorated c_primary h:c_secondary-n3"
+            ><i class="fal fa-sync  block inline:md"></i><span class=""> Watch Again </span></a
+        >
+        </li>
+    </ul>
+</nav>
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+FORMAT: This uses a strick data format look at x
+
+Styleguide Navigation.Home.Utility
+*/
+
+
+
+
 @media only screen and (min-width: 768px) {
     .main-area-offset {
         margin-left: 4rem;
@@ -97,13 +132,6 @@ accent-color: #149378;
     }
 }
 
-.bookmark-clipping-path {
-    clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0% 100%, 0 48%, 0% 0%);
-}
-
-.bookmark-shadow {
-    filter: drop-shadow(2px 2px 3px rgb(50 50 0 / 25%));
-}
 
 
 html:not([data-scroll='0']) #navigation_mobile .label {

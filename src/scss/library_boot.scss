@@ -309,12 +309,35 @@ $line-height_5: get-css-size(line-height, 5);// /*Bootstrap Framework Setup File
 // scss-docs-end import-stack
 
 
+@import 'recipes/virtual/data/_virtual.helper.randomWords';
 @import 'recipes/virtual/data/virtual.data';
 @import 'recipes/virtual/virtual.sub.search';
 
 @import 'recipes/library/index';
 // data values 
-// ACC Design Alterations
+
+
+.filter_blur {
+    backdrop-filter: blur(5px);
+}
+
+.h\:shadow_overlap-light:hover {
+    box-shadow: 0 1px 10px rgb(0 0 0 / 5%), 0 2px 4px rgb(0 0 0 / 30%), 1px 5px 5px rgb(0 0 0 / 1%);
+}
+
+.a\:shadow_overlap-light.active {
+    box-shadow: 0 1px 10px rgb(0 0 0 / 5%), 0 2px 4px rgb(0 0 0 / 30%), 1px 5px 5px rgb(0 0 0 / 1%);
+}
+:root {
+accent-color: #149378;
+}
+.bookmark-clipping-path {
+    clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0% 100%, 0 48%, 0% 0%);
+}
+
+.bookmark-shadow {
+    filter: drop-shadow(2px 2px 3px rgb(50 50 0 / 25%));
+}// ACC Design Alterations
 @import "base/base";
 @import "components/logo";
 @import "components/interactive-extras";
