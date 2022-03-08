@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Video Library</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="kss-node" name="generator">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet">
+    <link href="kss-assets/vendor/prism.css" rel="stylesheet">
+    <link href="kss-assets/css/kss.css" rel="stylesheet">
+    <link rel="stylesheet" href="../icons/css/fontawesome.css"/>
+<link rel="stylesheet" href="../icons/css/solid.css"/>
+<link rel="stylesheet" href="../icons/css/regular.css"/>
+<link rel="stylesheet" href="../icons/css/brands.css"/>
+<link rel="stylesheet" href="../icons/css/light.css"/>
+<link rel="stylesheet" href="../icons/css/light.css"/>
+<link rel="stylesheet" href="../css/styleguide_override.css"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab:wght@300;400;500;700;800&display=swap"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Maven+Pro:wght@300;400;500;700;800&display=swap"/>
+<link rel="stylesheet" href="../css/color-code_social.css"/>
+<link rel="stylesheet" href="../css/color-code_credits.css"/>
+<link rel="stylesheet" href="../css/library_boot.css"/>
+<link rel="stylesheet" href="../css/library_uc.css"/>
+
+</head>
+
+<body class="kss-body texture_light font_ui">
+    <!-- header. -->
+    <section class="display_none block:md" id="topbody">
+        <aside class="m_auto font_ui font_n1 display_none block:md bg_secondary-n2 br_solid br_black-4 p-y_3 br-b_1 shadow_emboss-light">
+            <ul class="ul_none flex flex_row:md flex_column justify_center ">
+                <li class="w_auto:md w_100 md p_2 self_center">
+                    <span class="block inline-block:md c_white-8 undecorated p_2 nowrap uppercase font_xbold">Brands</span>
+                </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../" id="home_nav">Arches</a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../utility_classes/" id="utility_classes">Utility Classes</a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_acc/" id="boot_acc">ACC</a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_cardiosmart/" id="uc_cardiosmart">CardioSmart</a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_cvquality/" id="boot_cvquality">CVQuality</a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_virtual/" id="boot_virtual">Virtual</a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center is-active active">
+                        <a class="
+                is-active active font_bold 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_library/" id="boot_library">Library</a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_journal/" id="boot_journal">JACC</a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../color_codes/" id="color_codes">Color Codes</a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="https://acc-style.github.io/IconDictionary/" id="icon_dictionary">Icon Dictionary</a>
+                    </li>
+                <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center">
+                    <a class=" block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="https://acc-style.github.io/origami6/?path=/story/introduction--page" id="origami"><i class="fas fa-paper-plane p-r_3"></i><span>Project Origami</span></a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <header class="bg_white shadow_overlap-light br_black-1 br_solid br_1 sticky t_0 display_none:md flex flex_inline z_5">
+        <h1 class="self_center m_3">
+            <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">Arches</a>: Online Video Library
+        </h1>
+        <a class="m-l_auto self_center m_3 kss-header__hamburger-trigger">
+            <div class="kss-header__hamburger"></div>
+        </a>
+    </header>
+    <!-- /header. -->
+    <!-- navigation. -->
+    <!-- /navigation. -->
+    <!-- documentation. -->
+    <header class="p_4 text_center">
+        <h1 class="font_display font_10 font_light display_none block:md">
+            <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">Arches:</a>Online Video Library
+        </h1>
+        <small class="font_0 m-t_n3 block m-b_4 font_xbold font_display display_none block:md">Multi Product Brand Style System by the American College of Cardiology</small>
+    </header>
+    <section class="display_none block:md">
+        <aside class="m_auto font_copy display_none block:md sticky t_0">
+            <ul class="ul_none flex flex_row:md flex_column flex_wrap justify_center br-t_1 br_solid br_black-4 p-y_3 br-b_1 ">
+                <li class=" w_auto:md w_100 p_2 self_center ">
+                    <a class="block inline-block:md undecorated  bg_primary-n1 h:bg_primary-n3 h:undecorated c_white p_3 br_radius nowrap" href="https://acc-style.github.io/Arches/index.html">
+                        <span class=""><i class="fas fa-chevron-left p-x_2"></i> Arches</span>
+                    </a>
+                </li>
+                <li class=" w_auto:md w_100 p_2 self_center ">
+                    <a class="block inline-block:md undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated c_black-8 h:c_black-9 p_3 br_radius nowrap" href="index.html">
+                        <span class=""><i class="fas fa-home p-x_2"></i></span>
+                    </a>
+                </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap" href="section-designbase.html">
+                            <span class="">Design Base</span>
+                        </a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap" href="section-html.html">
+                            <span class="">Basic HTML</span>
+                        </a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap" href="section-bootstrap.html">
+                            <span class="">Bootstrap</span>
+                        </a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap" href="section-data.html">
+                            <span class="">Data</span>
+                        </a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center is-active active">
+                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated is-active active h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap" href="section-navigation.html">
+                            <span class="">Navigation</span>
+                        </a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap" href="section-page.html">
+                            <span class="">Page</span>
+                        </a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap" href="section-recipes.html">
+                            <span class="">Recipes</span>
+                        </a>
+                    </li>
+                    <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                        <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap" href="section-sub.html">
+                            <span class="">Sub</span>
+                        </a>
+                    </li>
+            </ul>
+        </aside>
+    </section>
+    <section id="MobleNav" class="bg_secondary-n3 display_none:lg font_0 font_ui kss-navigation overflow_auto p-b_2 p-x_3 scrollbar-mini shadow_overlap-bold z_4" style="padding-top:70px">
+        <aside class="display_none:md flex flex_column-reverse">
+            <ul class="block flex flex_column ul_none w_100 ul_none lh_3" id="sitenav">
+                    <li class="flex_auto  m-b_2">
+                        <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="../" id="home_nav">Arches</a>
+                    </li>
+                    <li class="flex_auto  m-b_2">
+                        <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="../utility_classes/" id="utility_classes">Utility Classes</a>
+                    </li>
+                    <li class="flex_auto  m-b_2">
+                        <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="../boot_acc/" id="boot_acc">ACC</a>
+                    </li>
+                    <li class="flex_auto  m-b_2">
+                        <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="../boot_cardiosmart/" id="uc_cardiosmart">CardioSmart</a>
+                    </li>
+                    <li class="flex_auto  m-b_2">
+                        <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="../boot_cvquality/" id="boot_cvquality">CVQuality</a>
+                    </li>
+                    <li class="flex_auto  m-b_2">
+                        <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="../boot_virtual/" id="boot_virtual">Virtual</a>
+                    </li>
+                    <li class="flex_auto is-active active m-b_2">
+                        <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="../boot_library/" id="boot_library">Library</a>
+                    </li>
+                        <li class="flex_auto m-y_2 p_3 bg_black-5 br_radius p_3 shadow_emboss-light">
+                            <ul class="block flex flex_column ul_none w_100 ul_none lh_3">
+                                <li class=" m-b_2 a:bg_accent h:bg_black-5 relative br_radius p_2 m-b_1">
+                                    <a class="  a:c_white c_white-8 h:c_white" href="index.html">
+                                        <span class=""><i class="fas fa-home p-x_2"></i> Home</span>
+                                    </a>
+                                </li>
+                                    <li class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                                        <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-designbase.html">
+                                            <span class="">Design Base</span>
+                                        </a>
+                                    </li>
+                                    <li class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                                        <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-html.html">
+                                            <span class="">Basic HTML</span>
+                                        </a>
+                                    </li>
+                                    <li class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                                        <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-bootstrap.html">
+                                            <span class="">Bootstrap</span>
+                                        </a>
+                                    </li>
+                                    <li class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                                        <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-data.html">
+                                            <span class="">Data</span>
+                                        </a>
+                                    </li>
+                                    <li class="is-active active m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                                        <a class="is-active active a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-navigation.html">
+                                            <span class="">Navigation</span>
+                                        </a>
+                                    </li>
+                                            <ul class="m-l_4 ul_none lh_3">
+                                                    <li class=" font_bold  m-b_2">
+                                                        <a class="block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap   c_white-8 h:c_white" href="section-navigation.html#kssref-navigation-mainnav">
+                                                            <span class="kss-nav__ref flex_shrink p-r_3 font_bold">5.1</span>
+                                                            <span class="flex_auto overflow_ellipsis">Main Nav</span>
+                                                        </a>
+                                                    </li>
+                                            </ul>
+                                    <li class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                                        <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-page.html">
+                                            <span class="">Page</span>
+                                        </a>
+                                    </li>
+                                    <li class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                                        <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-recipes.html">
+                                            <span class="">Recipes</span>
+                                        </a>
+                                    </li>
+                                    <li class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                                        <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-sub.html">
+                                            <span class="">Sub</span>
+                                        </a>
+                                    </li>
+                            </ul>
+                        </li>
+                    <li class="flex_auto  m-b_2">
+                        <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="../boot_journal/" id="boot_journal">JACC</a>
+                    </li>
+                    <li class="flex_auto  m-b_2">
+                        <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="../color_codes/" id="color_codes">Color Codes</a>
+                    </li>
+                    <li class="flex_auto  m-b_2">
+                        <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="https://acc-style.github.io/IconDictionary/" id="icon_dictionary">Icon Dictionary</a>
+                    </li>
+                <li class="flex_auto m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius" href="https://acc-style.github.io/origami6/?path=/story/introduction--page" id="origami"><i class="fas fa-paper-plane p-r_3"></i><span>Project Origami</span></a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <div class="m_auto p-x_4 ">
+            <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
+            <div class="flex flex_column flex_row:md gap-x_5 p-t_4 max-w_90 m_auto">
+                            <section class="max-w_15 w_20:lg flex_none relative display_none block:md">
+                                <h3>Navigation</h3>
+                                <div>
+                                    <aside class="sticky t_0">
+                                        <ul class="m-l_0 ul_none lh_2">
+                                                <li class=" font_bold ">
+                                                    <a class="block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="section-navigation.html#kssref-navigation-mainnav">
+                                                        <span class="flex_auto overflow_ellipsis">Main Nav</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                        <div class=" font_bold font-size_down-2 ">
+                                            <a class="block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap" href="#topbody">
+                                                <i class="fas fa-arrow-up"></i><span class="flex_auto overflow_ellipsis">Top of Page </span>
+                                            </a>
+                                        </div>
+                                    </aside>
+                                </div>
+                        </section>
+                <main class="w_100 flex_auto">
+                            <header class="bg_white kss-section kss-section--depth-1 br_radius shadow_overlap-light br_radius" id="kssref-navigation">
+                        <article class="kss-section__content relative">
+                            <div class="absolute t_0 r_4 flex flex_row gap-x_2 justify_end">
+                                <a class="c_white bg_black-5 c_white flex_none h:bg_black-7 inline-block p_2 shadow_overlap-light" target="_blank" href="item-navigation.html" title="pop out component into new tab">
+                                    <i class="fa-external-link fa-fw fas fa-fw fas"></i>
+                                </a>
+                            </div>
+                            <a class="kss-section__permalink" href="#kssref-navigation">
+                                <h1 class="kss-section__item c_primary kss-section__item--depth-1">
+                                    <span class="kss-section__ref">5</span>
+                                    <span class="kss-section__name">Navigation</span>
+                                </h1>
+                            </a>
+                        </article>
+                            </header>
+                                <section class="kss-section bg_white kss-section--depth-2 br_radius shadow_2" id="kssref-navigation-mainnav">
+                        <article class="kss-section__content relative">
+                            <div class="absolute t_0 r_4 flex flex_row gap-x_2 justify_end">
+                                    <div class="inline-block flex_none p_2 bg_highlight c_white shadow_overlap-light">
+                                        <i class="fas fa-fw fa-comment-alt"></i>
+                                    </div>
+                                <a class="c_white bg_black-5 c_white flex_none h:bg_black-7 inline-block p_2 shadow_overlap-light" target="_blank" href="item-navigation-mainnav.html" title="pop out component into new tab">
+                                    <i class="fa-external-link fa-fw fas fa-fw fas"></i>
+                                </a>
+                            </div>
+                                <p class="kss-section__source font_n3"> Source: <span>dist/css/library_boot.css</span>, line <span>7326</span>
+                                </p>
+                            <a class="kss-section__permalink" href="#kssref-navigation-mainnav">
+                                <h2 class="kss-section__item c_primary kss-section__item--depth-2">
+                                    <span class="kss-section__ref">5.1</span>
+                                    <span class="kss-section__name">Main Nav</span>
+                                </h2>
+                            </a>
+                                <div class="kss-section__description reading-typography font-size_up overflow_auto ">
+                                    <div class="font_n1">
+                                    </div>
+                                    <p>THe library because it is an app uses a different style of nav which is more align to streaming software.</p>
+
+                                </div>
+                        </article>
+                            <article class="kss-section__modifiers">
+                                <h1 class="kss-modifiers__heading"> Example 
+                                </h1>
+                                <div class="kss-modifiers__example">
+                                    <div class="MarkupWrapperClasses:">
+                                            <div class="main-area-offset p_2 p-x_5:md p-y_4:md isolation_isolate relative p-t_1 p-b_1">
+        <nav id="navigation_mobile" class="block display_none:md shadow_emboss-light filter_blur br_radius m_3 m-b_0 bg_black-6 p_2 sticky t_3 z_4">
+            <ul class="flex flex_row ul_none justify_between">
+                <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.homeActive %}active{% endif %}">
+                    <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../home"><i class="icon fas fa-fw fa-home-heart p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 {% if page.homeActive %}active{% endif %} font_n2 h_1h">Home</span></a>
+                </li>
+                <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.searchActive %}active{% endif %}">
+                    <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../search"><i class="icon fas fa-fw fa-search p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h {% if page.searchActive %}active{% endif %}">Search</span></a>
+                </li>
+                <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.saveActive %}active{% endif %}">
+                    <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../saved"><i class="icon fas fa-fw fa-heart p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h nowrap {% if page.saveActive %}active{% endif %}">Saved</span></a>
+                </li>
+                <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.creditsActive %}active{% endif %}">
+                    <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../saved"><i class="icon fas fa-fw fa-award p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h {% if page.creditsActive %}active{% endif %}">Credits</span></a>
+                </li>
+                <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light disabled opacity_3 cursor_not-allowed {% if page.watchingActive %}active{% endif %}">
+                    <a class="c_inherit-all flex flex_column h:undecorated p_3"  href="../watching"><i class="icon fas fa-fw fa-play p-y_2 self_center"></i><span class="label self_center lowercase lh_0 font_n2 h_1h {% if page.watchingActive %}active{% endif %}">Watching</span></a>
+                </li>
+                <li class="nav-item flex_auto br_radius c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light">
+                    <a class="c_inherit-all flex flex_column h:undecorated p_3"><i class="icon fas fa-fw fa-sign-out-alt p-y_2 self_center"></i><span class="label self_center lowercase lh_0 font_n2 nowrap h_1h">Log Out</span></a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="navigation" class=" display_none fixed shadow_emboss-light filter_blur overflow_hidden br_radius r_3 r_0:md r_auto:md l_4 b_4 t_auto t_4:md bg_black-7 flex:md flex_column:md justify_between p-t_0 p-b_3 p-l_3 p-r_3 p-b_4:md p-t_4:md p-r_0:md font_4:lg font_3:md font_2 transition_3 font_display nav-mined">
+            <ul class="flex flex_column:md flex_row ul_none justify_around justify_start:md gap_3 w_100 w_auto:md">
+                <li class="nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.homeActive %}active{% endif %}">
+                    <a class="p_3 c_inherit-all h:undecorated flex flex_column flex_row:md"  href="../home"><i class="icon fas fa-fw fa-home-heart p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 {% if page.homeActive %}active{% endif %} font_n2 font_3:md font_4:lg">Home</span></a>
+                </li>
+                <li class="nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.searchActive == true %} active {% endif %}">
+                    <a class="p_3 c_inherit-all h:undecorated flex flex_column flex_row:md " href="../search"><i class="icon fas fa-fw fa-search p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.SearchActive %}active{% endif %}">Search</span></a>
+                </li>
+                <li class="nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.savedActive == true %} active {% endif %}">
+                    <a class="p_3 c_inherit-all h:undecorated flex flex_column flex_row:md" href="../saved"><i class="icon fas fa-fw fa-heart p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.savedActive == true %} active {% endif %}">Saved</span></a>
+                </li>
+                <li class="nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.creditsActive == true %} active {% endif %}">
+                    <a class="p_3 c_inherit-all h:undecorated flex flex_column flex_row:md" href="../credits"><i class="icon fas fa-fw fa-award p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.creditsActive == true %} active {% endif %}">Credits</span></a>
+                </li>
+                <li class="nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light disabled cursor_not-allowed opacity_3 {% if page.watchingActive == true %} active {% endif %}">
+                    <a class="p_3 c_inherit-all h:undecorated flex flex_column flex_row:md"  href="../watching"><i class="icon fas fa-fw fa-play p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.watchingActive == true %} active {% endif %}">Watching</span></a>
+                </li>
+            </ul>
+            <ul class="flex_column:md flex_row ul_none justify_center gap_3 flex">
+                <li class="nav-item flex_auto br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light">
+                    <a class="p_3 c_inherit-all h:undecorated flex flex_column flex_row:md"><i class="icon fas fa-fw fa-sign-out-alt p-x_2 p-y_3 p-y_0:md self_center"></i><span class="label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg">Log Out</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script></script>
+                                    </div>
+                                </div>
+                            </article>
+                            <div class="bg_highlight-4 block c_black inline-block p-y_3 p-x_4 w_100">
+                                <h5 class="font_bold m_0 c_black">NOTE:</h5>
+                                This design highly depends on Javascript.
+                            </div>
+                            <section class="relative  br-t_1 br_solid br_black-2 bg_black-1 shadow_n1 texture_light">
+                                <main class="kss-section__markup overflow_scroll scrollbar-mini collapse transition_3" id="collapse-navigation-mainnav">
+                                    <pre><code class="language-markup"  id="code-navigation-mainnav" value='    &lt;div class&#x3D;&quot;main-area-offset p_2 p-x_5:md p-y_4:md isolation_isolate relative p-t_1 p-b_1&quot;&gt;
+        &lt;nav id&#x3D;&quot;navigation_mobile&quot; class&#x3D;&quot;block display_none:md shadow_emboss-light filter_blur br_radius m_3 m-b_0 bg_black-6 p_2 sticky t_3 z_4&quot;&gt;
+            &lt;ul class&#x3D;&quot;flex flex_row ul_none justify_between&quot;&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.homeActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../home&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-home-heart p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 {% if page.homeActive %}active{% endif %} font_n2 h_1h&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.searchActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../search&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-search p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 font_n2 h_1h {% if page.searchActive %}active{% endif %}&quot;&gt;Search&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.saveActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../saved&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-heart p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 font_n2 h_1h nowrap {% if page.saveActive %}active{% endif %}&quot;&gt;Saved&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.creditsActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../saved&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-award p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 font_n2 h_1h {% if page.creditsActive %}active{% endif %}&quot;&gt;Credits&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light disabled opacity_3 cursor_not-allowed {% if page.watchingActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot;  href&#x3D;&quot;../watching&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-play p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center lowercase lh_0 font_n2 h_1h {% if page.watchingActive %}active{% endif %}&quot;&gt;Watching&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-sign-out-alt p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center lowercase lh_0 font_n2 nowrap h_1h&quot;&gt;Log Out&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;nav id&#x3D;&quot;navigation&quot; class&#x3D;&quot; display_none fixed shadow_emboss-light filter_blur overflow_hidden br_radius r_3 r_0:md r_auto:md l_4 b_4 t_auto t_4:md bg_black-7 flex:md flex_column:md justify_between p-t_0 p-b_3 p-l_3 p-r_3 p-b_4:md p-t_4:md p-r_0:md font_4:lg font_3:md font_2 transition_3 font_display nav-mined&quot;&gt;
+            &lt;ul class&#x3D;&quot;flex flex_column:md flex_row ul_none justify_around justify_start:md gap_3 w_100 w_auto:md&quot;&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.homeActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot;  href&#x3D;&quot;../home&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-home-heart p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 {% if page.homeActive %}active{% endif %} font_n2 font_3:md font_4:lg&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.searchActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md &quot; href&#x3D;&quot;../search&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-search p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.SearchActive %}active{% endif %}&quot;&gt;Search&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.savedActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot; href&#x3D;&quot;../saved&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-heart p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.savedActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;Saved&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.creditsActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot; href&#x3D;&quot;../credits&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-award p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.creditsActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;Credits&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light disabled cursor_not-allowed opacity_3 {% if page.watchingActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot;  href&#x3D;&quot;../watching&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-play p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.watchingActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;Watching&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul class&#x3D;&quot;flex_column:md flex_row ul_none justify_center gap_3 flex&quot;&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-sign-out-alt p-x_2 p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg&quot;&gt;Log Out&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;script&gt;&lt;/script&gt;'>    &lt;div class&#x3D;&quot;main-area-offset p_2 p-x_5:md p-y_4:md isolation_isolate relative p-t_1 p-b_1&quot;&gt;
+        &lt;nav id&#x3D;&quot;navigation_mobile&quot; class&#x3D;&quot;block display_none:md shadow_emboss-light filter_blur br_radius m_3 m-b_0 bg_black-6 p_2 sticky t_3 z_4&quot;&gt;
+            &lt;ul class&#x3D;&quot;flex flex_row ul_none justify_between&quot;&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.homeActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../home&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-home-heart p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 {% if page.homeActive %}active{% endif %} font_n2 h_1h&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.searchActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../search&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-search p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 font_n2 h_1h {% if page.searchActive %}active{% endif %}&quot;&gt;Search&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.saveActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../saved&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-heart p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 font_n2 h_1h nowrap {% if page.saveActive %}active{% endif %}&quot;&gt;Saved&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.creditsActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../saved&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-award p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 font_n2 h_1h {% if page.creditsActive %}active{% endif %}&quot;&gt;Credits&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light disabled opacity_3 cursor_not-allowed {% if page.watchingActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot;  href&#x3D;&quot;../watching&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-play p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center lowercase lh_0 font_n2 h_1h {% if page.watchingActive %}active{% endif %}&quot;&gt;Watching&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-sign-out-alt p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center lowercase lh_0 font_n2 nowrap h_1h&quot;&gt;Log Out&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;nav id&#x3D;&quot;navigation&quot; class&#x3D;&quot; display_none fixed shadow_emboss-light filter_blur overflow_hidden br_radius r_3 r_0:md r_auto:md l_4 b_4 t_auto t_4:md bg_black-7 flex:md flex_column:md justify_between p-t_0 p-b_3 p-l_3 p-r_3 p-b_4:md p-t_4:md p-r_0:md font_4:lg font_3:md font_2 transition_3 font_display nav-mined&quot;&gt;
+            &lt;ul class&#x3D;&quot;flex flex_column:md flex_row ul_none justify_around justify_start:md gap_3 w_100 w_auto:md&quot;&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.homeActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot;  href&#x3D;&quot;../home&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-home-heart p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 {% if page.homeActive %}active{% endif %} font_n2 font_3:md font_4:lg&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.searchActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md &quot; href&#x3D;&quot;../search&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-search p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.SearchActive %}active{% endif %}&quot;&gt;Search&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.savedActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot; href&#x3D;&quot;../saved&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-heart p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.savedActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;Saved&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.creditsActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot; href&#x3D;&quot;../credits&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-award p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.creditsActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;Credits&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light disabled cursor_not-allowed opacity_3 {% if page.watchingActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot;  href&#x3D;&quot;../watching&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-play p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.watchingActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;Watching&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul class&#x3D;&quot;flex_column:md flex_row ul_none justify_center gap_3 flex&quot;&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-sign-out-alt p-x_2 p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg&quot;&gt;Log Out&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;script&gt;&lt;/script&gt;</code></pre>
+                                    <input class="display_none text-input html-code-input" type="text" name="" id="input-navigation-mainnav" value='    &lt;div class&#x3D;&quot;main-area-offset p_2 p-x_5:md p-y_4:md isolation_isolate relative p-t_1 p-b_1&quot;&gt;
+        &lt;nav id&#x3D;&quot;navigation_mobile&quot; class&#x3D;&quot;block display_none:md shadow_emboss-light filter_blur br_radius m_3 m-b_0 bg_black-6 p_2 sticky t_3 z_4&quot;&gt;
+            &lt;ul class&#x3D;&quot;flex flex_row ul_none justify_between&quot;&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.homeActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../home&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-home-heart p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 {% if page.homeActive %}active{% endif %} font_n2 h_1h&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.searchActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../search&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-search p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 font_n2 h_1h {% if page.searchActive %}active{% endif %}&quot;&gt;Search&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.saveActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../saved&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-heart p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 font_n2 h_1h nowrap {% if page.saveActive %}active{% endif %}&quot;&gt;Saved&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.creditsActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot; href&#x3D;&quot;../saved&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-award p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center  lowercase lh_0 font_n2 h_1h {% if page.creditsActive %}active{% endif %}&quot;&gt;Credits&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light disabled opacity_3 cursor_not-allowed {% if page.watchingActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot;  href&#x3D;&quot;../watching&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-play p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center lowercase lh_0 font_n2 h_1h {% if page.watchingActive %}active{% endif %}&quot;&gt;Watching&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light&quot;&gt;
+                    &lt;a class&#x3D;&quot;c_inherit-all flex flex_column h:undecorated p_3&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-sign-out-alt p-y_2 self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center lowercase lh_0 font_n2 nowrap h_1h&quot;&gt;Log Out&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;nav id&#x3D;&quot;navigation&quot; class&#x3D;&quot; display_none fixed shadow_emboss-light filter_blur overflow_hidden br_radius r_3 r_0:md r_auto:md l_4 b_4 t_auto t_4:md bg_black-7 flex:md flex_column:md justify_between p-t_0 p-b_3 p-l_3 p-r_3 p-b_4:md p-t_4:md p-r_0:md font_4:lg font_3:md font_2 transition_3 font_display nav-mined&quot;&gt;
+            &lt;ul class&#x3D;&quot;flex flex_column:md flex_row ul_none justify_around justify_start:md gap_3 w_100 w_auto:md&quot;&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.homeActive %}active{% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot;  href&#x3D;&quot;../home&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-home-heart p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 {% if page.homeActive %}active{% endif %} font_n2 font_3:md font_4:lg&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.searchActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md &quot; href&#x3D;&quot;../search&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-search p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.SearchActive %}active{% endif %}&quot;&gt;Search&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.savedActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot; href&#x3D;&quot;../saved&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-heart p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.savedActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;Saved&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.creditsActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot; href&#x3D;&quot;../credits&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-award p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.creditsActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;Credits&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light disabled cursor_not-allowed opacity_3 {% if page.watchingActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot;  href&#x3D;&quot;../watching&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-play p-x_2:md p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg {% if page.watchingActive &#x3D;&#x3D; true %} active {% endif %}&quot;&gt;Watching&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul class&#x3D;&quot;flex_column:md flex_row ul_none justify_center gap_3 flex&quot;&gt;
+                &lt;li class&#x3D;&quot;nav-item flex_auto br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light&quot;&gt;
+                    &lt;a class&#x3D;&quot;p_3 c_inherit-all h:undecorated flex flex_column flex_row:md&quot;&gt;&lt;i class&#x3D;&quot;icon fas fa-fw fa-sign-out-alt p-x_2 p-y_3 p-y_0:md self_center&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;label self_center display_none:md p-l_3:md p-l_4:lg lowercase lh_0 font_n2 font_3:md font_4:lg&quot;&gt;Log Out&lt;/span&gt;&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;script&gt;&lt;/script&gt;'>
+                                </main>
+                                <header class="flex_row flex shadow_n1 br-br_radius br-bl_radius">
+                                    <div class="flex flex_row flex_auto collapsed h:bg_black-7 br-bl_radius c_black-8 h:c_white" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#collapse-navigation-mainnav" aria-controls="#collapse-navigation-mainnav">
+                                        <div class="flex_none p_2 font_1">
+                                            <i class="a:rotation fa-fw fa-chevron-up fas self_center text_center"></i>
+                                        </div>
+                                        <div class="flex_auto flex flex_row">
+                                            <h4 class="font_0 font_bold flex_auto p-l_2 self_center m_0 text_left">Code Sample</h4>
+                                        </div>
+                                    </div>
+                                    <a class="bg_primary br_1 br_black-3 br_solid c_white flex_none font_medium font_ui h:bg_primary-n2 h:undecorated m-l_auto p-x_3 p-y_2 br-br_radius" onclick="CopyCode( 'input-navigation-mainnav')"><i class="fas fa-copy"></i> Copy Code</a>
+                                </header>
+                            </section>
+                            </section>
+                </main>
+            </div>
+        </section>
+        <!-- /documentation. -->
+        <!-- scripts. -->
+        <script src="kss-assets/vendor/jquery.js"></script>
+        <script src="kss-assets/vendor/prism.js"></script>
+        <script src="kss-assets/js/kss.js"></script>
+        <script>
+            var CopyCode = function ($id) {
+                var copyTextarea = document.getElementById($id);
+                console.log($id);
+                copyTextarea.classList.remove('display_none');
+                copyTextarea.focus();
+                copyTextarea.select();
+
+                try {
+                    var successful = document.execCommand('copy');
+                    var msg = successful ? 'successful' : 'unsuccessful';
+                    console.log('Copying text command was ' + msg);
+                } catch (err) {
+                    console.log('Oops, unable to copy');
+                }
+                copyTextarea.classList.add('display_none');
+            };
+
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/toggleActive.js"></script>
+
+        <!-- /scripts. -->
+</body>
+
+</html>
