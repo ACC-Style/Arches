@@ -145,6 +145,21 @@ Styleguide Decorator.Border.Colors.Black
 @include loop-style(border-bottom-right-radius);
 @include loop-style(border-bottom-left-radius);
 
+@media #{$medium-up} {
+  @include loop-style(border-radius, $bp-label_medium);
+  @include loop-style(border-top-right-radius, $bp-label_medium);
+  @include loop-style(border-top-left-radius, $bp-label_medium);
+  @include loop-style(border-bottom-right-radius, $bp-label_medium);
+  @include loop-style(border-bottom-left-radius, $bp-label_medium);
+}
+@media #{$large-up} {
+  @include loop-style(border-radius, $bp-label_large);
+  @include loop-style(border-top-right-radius, $bp-label_large);
+  @include loop-style(border-top-left-radius, $bp-label_large);
+  @include loop-style(border-bottom-right-radius, $bp-label_large);
+  @include loop-style(border-bottom-left-radius, $bp-label_large);
+}
+
 @each $val-name, $val in map-get($value-to-unit, radius) {
 	.#{$val-name} {
 		&,

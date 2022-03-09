@@ -41,12 +41,14 @@ Styleguide Page.Home.Header
 
 Carousel 
 
-Vertical Carousels to have discoverable areas on the home pages.
+Horizontal Carousels to have discoverable areas on the home pages.
 
 
 Markup:
-<section class='font_0 font_1:lg font_ui font_regular'>
-    <header class="p-x_4 font_display font-size_up-2 c_primary-n1 m-x_3 m-b_3 m-b_3:lg lh_1 m-t_5:lg m-t_4:md m-t_3 flex flex_row"><h2 class="lh_1 m_0 font_regular lowercase">Featured</h2></header>
+<section class='font_0 font_1:lg font_ui font_regular {{> 'Sub.CSS.Inset.level_up-1'}} {{> 'Sub.CSS.Inset.padding'}}'>
+    <header class="font_display font-size_up-2 c_primary-n1m-b_3 m-b_3:lg lh_1 m-t_4:md m-t_3">
+        <h2 class="lh_1 m_0 font_regular lowercase">Featured</h2>
+    </header>
     <div class="relative isolation_isolate overflow_hidden">
         <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}}">
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
@@ -57,12 +59,10 @@ Markup:
         {{> 'Sub.Carousel.CustomTools'}}
     </div>
     <footer class="flex flex_row-reverse p_3 p-b_4"><a href="" class="link self_end ">view all from "Featured" <i class="fal fa-chevron-circle-right m-r_3"></i></a></footer>       
-</section>   <!-- Slider CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"> 
-<!-- Slider JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+</section>
 <script>
-    let args ={
+document.addEventListener("DOMContentLoaded", function(event) { 
+let args ={
     items: 1,
     mouseDrag: true,
     slideBy: "page",
@@ -90,6 +90,7 @@ Markup:
         }
     }};
     let slider1 = tns({ container: '#slider1', controlsContainer: "#slider1-customize-controls", ...args });
+});
 </script>
 
 MarkupWrapperClasses: 
@@ -102,6 +103,34 @@ Program.Session.Home    - Session
 NOTE: This design requires javascript. (tiny slider js)
 
 Styleguide Page.Home.Carousel
+*/
+
+/*
+
+TinySlider.js
+
+Script tags for tinySlider
+
+
+Markup:
+<h2> Slider CSS </h2>
+<span class="user-select_all">https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css</span>
+<h2> Slider JS </h2>
+<span class="user-select_all">https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js</span>
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: nothing
+
+EXPERIMENTAL: this design is new
+
+DEPRECATED: this design is old
+
+FORMAT: This uses a strick data format look at x
+
+Styleguide 
 */
 
 
@@ -208,4 +237,61 @@ MarkupWrapperClasses:
 Weight: 0
 
 Styleguide Page.Footer
+*/
+
+/*
+
+Continue Watching
+
+Shows a short list of presentations
+
+default		 - 
+
+Markup:
+<section class='font_0 font_1:lg font_ui font_regular  {{> 'Sub.CSS.Inset.level_up-1'}} {{> 'Sub.CSS.Inset.padding'}}'>
+    <header class="font_display font-size_up-2 c_primary-n1m-b_3 m-b_3:lg lh_1 m-t_4:md m-t_3">
+        <h2 class="lh_1 m_0 font_regular lowercase">Continue Watching</h2>
+    </header>
+    <div class="relative isolation_isolate overflow_hidden br_radius">
+        <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}} ">
+        {{> "Program.Presentation.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+        {{> "Program.Presentation.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+        {{> "Program.Presentation.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+        {{> "Program.Presentation.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+        {{> "Program.Presentation.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+        </div>
+        {{> 'Sub.Carousel.CustomToolsVertical'}}
+    </div>
+    <footer class="flex flex_row-reverse p_3 p-b_4"><a href="" class="link self_end ">view all from "Continue Watching" <i class="fal fa-chevron-circle-right m-r_3"></i></a></footer>       
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {   
+let args2 ={
+    items: 1,
+    mouseDrag: true,
+    axis: "vertical",
+    slideBy: "page",
+    swipeAngle: false,
+    autoplay: false,
+    controls: true,
+    items:3,
+    nav: false,
+    edgePadding: 0,
+    loop:true,
+    edgePadding:0,
+    center:false,
+    gutter:16
+    };
+    let slider2 = tns({ container: '#SliderContinueWatching', controlsContainer: "#slider-customize-controls-vertical", ...args2 });
+});</script>
+
+MarkupWrapperClasses: main-area-offset p_2 p-x_5:md p-y_4:md isolation_isolate br_radius bg_white-7
+
+NOTE: container: '#SliderContinueWatching', controlsContainer: "#slider-customize-controls-vertical" need to be unique to the slider. 
+
+Weight: 0
+
+
+
+Styleguide Page.Home.ContinuePlaying
 */
