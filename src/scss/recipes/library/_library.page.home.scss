@@ -45,8 +45,8 @@ Vertical Carousels to have discoverable areas on the home pages.
 
 
 Markup:
-<section class='font_0 font_1:lg '>
-    <header class="p-x_4 font_display font_regular font-size_up-2 c_primary-n1 m-x_3 m-b_3 m-b_3:lg lh_1 m-t_5:lg m-t_4:md m-t_3 flex flex_row"><h2 class="lh_1 m_0 font_regular lowercase">Featured</h2></header>
+<section class='font_0 font_1:lg font_ui font_regular'>
+    <header class="p-x_4 font_display font-size_up-2 c_primary-n1 m-x_3 m-b_3 m-b_3:lg lh_1 m-t_5:lg m-t_4:md m-t_3 flex flex_row"><h2 class="lh_1 m_0 font_regular lowercase">Featured</h2></header>
     <div class="relative isolation_isolate overflow_hidden">
         <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}}">
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
@@ -54,16 +54,7 @@ Markup:
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         </div>
-        <div class="customize-tools">
-            <ul class="controls ul_none font-size_up-2 c_black-6" id="slider1-customize-controls" aria-label="Carousel Navigation" tabindex="0">
-            <li class="prev bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 l_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-l_0 br-br_radius br-tr_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="prev">
-                <i class="fal fa-chevron-left"></i>
-            </li>
-            <li class="next bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 r_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-r_0 br-bl_radius br-tl_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="next">
-                <i class="fal fa-chevron-right"></i>
-            </li>
-            </ul>
-        </div>
+        {{> 'Sub.Carousel.CustomTools'}}
     </div>
     <footer class="flex flex_row-reverse p_3 p-b_4"><a href="" class="link self_end ">view all from "Featured" <i class="fal fa-chevron-circle-right m-r_3"></i></a></footer>       
 </section>   <!-- Slider CSS -->
@@ -114,6 +105,45 @@ Styleguide Page.Home.Carousel
 */
 
 
+/*
+
+
+Carousel Empty State
+
+The empty state of the carousel
+
+Markup:
+<div class="p-y_3"> 
+    <div class="tns-outer bg_black-1 shadow_emboss-light font_0 font_ui font_regular" id="slider3-ow">
+        <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">4 to 8</span> of 4</div>
+        <div id="slider3-mw" class="tns-ovh">
+            <div class="tns-inner" id="slider3-iw">
+                <div id="slider3" class=" flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" >
+                    <div class="tns-item  tns-slide-active p-x_5">
+                        <article class="bg_white br_1 br_black-1 br_radius br_solid flex flex_grow shadow_overlap-light w_100">
+                            <div class="flex flex_row justify_start relative w_100">
+                                <main class="flex flex_column flex_auto justify_between flex_auto p-l_4 p-x_4:md  p-y_3 p-y_3:lg relative w_100 isolation_isolate reading-typography">
+                                    <h2 class="">
+                                       You don't have any previously watched presentations.
+                                    </h2>
+                                    <p>This collection is based off of your watching history. Come back here when you want to review or re-watch what you have previously viewed.</p>
+                                </main>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> 'Sub.Carousel.CustomTools.Disabled' }}
+</div>
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Page.Home.Carousel.Empty
+*/
 /* nav */
 .tns-nav {
     text-align: center;
@@ -141,3 +171,41 @@ Styleguide Page.Home.Carousel
 .tns-visually-hidden {
     display: none;
 }
+
+
+/*
+
+Footer
+
+ The Apps Footer. 
+
+
+Markup:
+<footer class="flex flex_row:md flex_column-reverse gap_4 m-t_4 flex_none">
+                <!-- subfooter -->
+                <div id="subfooter" class="bg_primary-1 flex_auto font_n1 p-x_4 p-y_4 z_0 br_radius texture_dust shadow_emboss-light p-b_4">
+                    <ul class="m_auto footer-bottom-links ul_none max-w_80">
+                        <li class="inline p_2"><a href="//www.acc.org/footer-pages/media-center" class="c_white-6 h:c_white">Media Center</a></li>
+                        <li class="inline p_2"><a href="//www.acc.org/footer-pages/quick-start-guide" class="c_white-6 h:c_white">ACC.org Quick Start Guide</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/advertising-and-sponsorship-policy">Advertising &amp; Sponsorship Policy</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/clinical-content-disclaimer">Clinical Content Disclaimer</a> </li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/editorial-board">Editorial Board</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/privacy-policy">Privacy Policy</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/registered-user-agreement">Registered User Agreement</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/terms-and-conditions">Terms of Service</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/cookie-policy">Cookie Policy</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/member-hub-terms-of-use">Member Hub Terms of Use</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/sitemap-acc.xml">Site Map</a> </li>
+                    </ul> <!-- /footer-bottom-links -->
+                </div><!-- /subfooter -->
+                <div id="logo" class="bg_white-4 br_1 br_black-1 br_round br-br_radius   br-tl_radius  br_solid flex flex_none flex_row items_center justify_center max-w_25:md max-w_30:lg p-x_4 p-y_3 shadow_bevel-light w_100">
+                    <h2 class="logo_condensed w_100 max-w_20">American College of Cardiology</h2>
+                </div>
+            </footer>
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Page.Footer
+*/

@@ -22772,161 +22772,6 @@ Weight:0
 Styleguide Sub.Player.AuxData.Abstracts
 */
 /*
-Faculty List
-
-When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
-
-block         - use block on the role type label to stack the faculty names.
-inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
-
-Markup:
-<ul class="ul_inline-semicolon font_regular font_copy">
-  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
-  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
-  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
-  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-</ul>
-
-Data:
-Data.Faculty.FullName - Full Name
-Data.Faculty.FullName - Location
-
-FORMAT: This element uses data that has strict data formatting requirements. See the data tab for more information.
-
-Weight:0
-
-Styleguide Sub.FacultyList
-
-*/
-/*
-Aux Session Faculty List
-
-When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
-
-block         - use block on the role type label to stack the faculty names.
-inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
-
-Markup:
-<h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Role Type 1</h4>
-<div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
-<ul class="ul_inline-semicolon font_regular font_copy">
-  <li>Marty Little <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li>Eileen Marvin <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
-  <li>Chelsea Dach DVM <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-</ul>
-</div>
-<h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Role Type 2</h4>
-<div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
-<ul class="ul_inline-semicolon font_regular font_copy">
-  <li>Wm Price<span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li>Mrs. Jeffrey Cartwright <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
-  <li>CEmmett Spencer<span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-</ul>
-</div>
-
-
-SubComponents:
-Data.Faculty.FullName - Full Name
-Data.Faculty.Location - Location
-
-
-Weight:0
-
-Styleguide Sub.FacultyList.AuxSession
-
-*/
-/*
-Combined Faculty List
-
-When a presentation is in a single state the combination of session roles and presentation roles are shown.
-
-block         - use block on the role type label to stack the faculty names.
-inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
-
-Markup:
-<ul class="ul_inline-semicolon font_regular font_copy">
-  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Session Role Type 1:</li>
-  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Session Role Type 2:</li>
-  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
-  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-    <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
-  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
-  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
-  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-</ul>
-
-SubComponents:
-Data.Faculty.FullName - Full Name
-Data.Faculty.FullName - Location
-
-
-Weight:0
-
-Styleguide Sub.FacultyList.SessionAndPresentation
-
-*/
-/*
-Session Faculty List
-
-When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
-
-block         - use block on the role type label to stack the faculty names.
-inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
-
-Markup:
-<ul class="ul_inline-semicolon font_regular font_copy">
-  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Session Role Type 1:</li>
-  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Session Role Type 2:</li>
-  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
-  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-</ul>
-
-SubComponents:
-Data.Faculty.FullName - Full Name
-Data.Faculty.FullName - Location
-
-
-Weight:0
-
-Styleguide Sub.FacultyList.Session
-
-*/
-/*
-No Location Faculty List
-
-When you list non-event areas like Posters, and Abstracts the list removes the location of the person. 
-
-block         - use block on the role type label to stack the faculty names.
-inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
-
-Markup:
-<ul class="ul_inline-semicolon font_regular font_copy">
-  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
-  <li>{{> "Data.Faculty.FullName" }}</li>
-  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
-  <li>Dianna Denesik III</li>
-  <li>Miguel Romaguera</li>  
-  <li>Jeanette Franecki</li>
-</ul>
-
-SubComponents:
-Data.Faculty.FullName - Full Name
-
-
-Weight:0
-
-Styleguide Sub.FacultyList.NoLocation
-
-*/
-/*
 Attachments Modal
 
 Description: 
@@ -23397,6 +23242,161 @@ Weight:0
 Styleguide Sub.LayoutBlock
 */
 /*
+Faculty List
+
+When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+
+Data:
+Data.Faculty.FullName - Full Name
+Data.Faculty.FullName - Location
+
+FORMAT: This element uses data that has strict data formatting requirements. See the data tab for more information.
+
+Weight:0
+
+Styleguide Sub.FacultyList
+
+*/
+/*
+Aux Session Faculty List
+
+When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Role Type 1</h4>
+<div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li>Marty Little <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Eileen Marvin <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Chelsea Dach DVM <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+</div>
+<h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Role Type 2</h4>
+<div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li>Wm Price<span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Mrs. Jeffrey Cartwright <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>CEmmett Spencer<span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+</div>
+
+
+SubComponents:
+Data.Faculty.FullName - Full Name
+Data.Faculty.Location - Location
+
+
+Weight:0
+
+Styleguide Sub.FacultyList.AuxSession
+
+*/
+/*
+Combined Faculty List
+
+When a presentation is in a single state the combination of session roles and presentation roles are shown.
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Session Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Session Role Type 2:</li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+    <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+
+SubComponents:
+Data.Faculty.FullName - Full Name
+Data.Faculty.FullName - Location
+
+
+Weight:0
+
+Styleguide Sub.FacultyList.SessionAndPresentation
+
+*/
+/*
+Session Faculty List
+
+When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Session Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Session Role Type 2:</li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+
+SubComponents:
+Data.Faculty.FullName - Full Name
+Data.Faculty.FullName - Location
+
+
+Weight:0
+
+Styleguide Sub.FacultyList.Session
+
+*/
+/*
+No Location Faculty List
+
+When you list non-event areas like Posters, and Abstracts the list removes the location of the person. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }}</li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
+  <li>Dianna Denesik III</li>
+  <li>Miguel Romaguera</li>  
+  <li>Jeanette Franecki</li>
+</ul>
+
+SubComponents:
+Data.Faculty.FullName - Full Name
+
+
+Weight:0
+
+Styleguide Sub.FacultyList.NoLocation
+
+*/
+/*
 Action Buttons Clear Search
 
 This action button is used to clear the search filters and parameters.
@@ -23428,11 +23428,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0819" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3650" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8799" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4425" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7286" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2586" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0441" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2063" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1095" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8867" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -23464,11 +23464,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7921" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6292" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7953" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9614" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6695" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0981" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5801" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3730" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0900" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2674" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -24370,7 +24370,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_2958">
+<div class="flex_column flex" id="session_7905">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -24394,7 +24394,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2958">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_7905">top</a>
                 </div>
             </section>
         </div>
@@ -24406,7 +24406,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2958">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_7905">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -24438,7 +24438,7 @@ Channel Player External Content
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_2958">
+<div class="flex_column flex" id="session_7905">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -24468,7 +24468,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2958">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_7905">top</a>
                 </div>
             </section>
         </div>
@@ -24479,7 +24479,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2958">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_7905">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -24512,7 +24512,7 @@ Channel Player No Schedule
 description
 
 Markup:
-<div class="flex_column flex" id="session_2958">
+<div class="flex_column flex" id="session_7905">
     <header class="flex flex_column-reverse font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -24533,7 +24533,7 @@ Markup:
         <h2 class="font_bold font_display c_primary-n1 m-b_4"><div class="flex_row:md flex flex_column">
             <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
         </h2>
-        {{> Program.GridFormat.WhatsNext modifier_class="Incidunt " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Blood Vessel Electrocardiogram Arteriosclerosis " }}
         </div>
     </section>
 </div>
@@ -24551,7 +24551,7 @@ Channel Player:Non Accredited
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_2958">
+<div class="flex_column flex" id="session_7905">
     <div class="bg_secondary-n3 c_white font_bold font_ui p_3 p-x_4 m-b_4 shadow_overlap-light br_radius" > {{> "Sub.Credits.NonAccredited" }}: These sessions are ineligible to receive credit</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
@@ -24576,7 +24576,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2958">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_7905">top</a>
                 </div>
             </section>
         </div>
@@ -24588,7 +24588,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2958">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_7905">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData.NotAccredited" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -24962,7 +24962,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_0217">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_3747">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -24996,7 +24996,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_0217">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_3747">top</a></div>
     </div>
 </article>
 
@@ -25308,8 +25308,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="quo quo similique "  }}
-    {{> Program.GridFormat.Abstract modifier_class="voluptatem quo quo similique omnis et tempora Incidunt tempora "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="Clinical Myocardial Cardiovascular Chest Pain "  }}
+    {{> Program.GridFormat.Abstract modifier_class="Valvular Cardiovascular Pharmacologic Electrocardiogram Chest Pain Myocardial Chest Pain "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -25384,8 +25384,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="voluptatem et quo omnis Et " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="similique voluptatem et " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Cardiovascular Chest Pain Myocardial " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Blood Vessel Valvular Heart Disease Blood Vessel Valvular " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -25503,9 +25503,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="similique " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="tempora dignissimos et tempora " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Et Incidunt tempora dignissimos et quo quo dignissimos tempora " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="" }}
+        {{> Program.GridFormat.WhatsNow modifier_class="" }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Electrocardiographic Pericardial " }}
     </div>
 </section>
 
@@ -25568,9 +25568,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNext modifier_class="soluta voluptatem Et Incidunt tempora et quo Et " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="voluptatem dignissimos quo dignissimos " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="et Et tempora tempora quo et voluptatem " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Pharmacologic Blood Vessel Side Effect " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Arteriosclerosis Clinical Pericardial Electrocardiographic Cardiovascular Electrocardiogram " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Cardiovascular Blood Vessel Valvular Heart Disease Pharmacologic Arrhythmia Myocardial " }}
     </div>
 </section>
 

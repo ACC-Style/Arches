@@ -11,26 +11,16 @@ Markup:
     <div class="flex flex_row font_ui justify_start relative w_100">
         <main
             class="flex flex_column flex_auto justify_between flex_auto p-l_4 p-x_4:md p-y_3 p-y_3:lg relative w_100 isolation_isolate">
-            <h2 class="font-size_up-1 font_display lh_2 c_primary h:underline c_primary-n3 m-t_2">
+            <h2 class="font-size_up-1 font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
                 <a class="c_inherit-all expanded-click-area z_1">
                     Clinical Update for the {{ modifier_class}} 
                 </a>
             </h2>
             <ul
                 class="ul_none flex flex_row flex_wrap justify_start font-size_down-1 c_black-7 m-t_auto lh_0 items_end">
-                <li class="inline-block p-r_3 p_2">
-                    <span class="font-size_up c_primary-n2 block"><i class="fal fa-clock"></i> 15</span>
-                    minutes
-                </li>
-                <li class="inline-block p-r_3 p_2">
-                    <span class="font-size_up c_primary-n2 block">4</span>
-                    presentations
-                </li>
-                <li class="inline-block br_round p-x_3 m-l_n3 p_2 z_3 h:bg_black-2 br_radius self_end">
-                    <a href="" class="link flex_auto underline h:undecorated">
-                    <span class="font-size_up c_primary-n2"><i class="fal fa-paperclip"></i></span> 
-                    Attachments</a>
-                </li>
+                {{> 'Sub.Data.Duration'}}
+                {{> 'Sub.Data.PresentationCount'}}
+                {{> 'Sub.Data.AttachmentLink'}}
             </ul>
         </main>
         <aside class="flex_none p-x_3:md p-b_3">
@@ -57,9 +47,80 @@ Markup:
 
 MarkupWrapperClasses: 
 
+Data:
+Data.Session.Title - Title
+
+SubComponents: 
+Sub.Credits - Credits
+
 
 
 Weight: 0
 
 Styleguide Program.Session.Home
+*/
+
+/*
+
+Presentation - Home
+
+Presentation designs on the home page.
+
+Markup:
+<li class="m-b_4">
+    <article class="flex flex_grow flex_column w_100 p-x_4 br-t_1 br_solid br_black-3">
+        <div class="flex flex_row font_ui justify_start relative w_100 gap_3">
+            <main
+                class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate p-y_3 p-y_4:lg p-r_4:lg">
+                <div class="font_display m-b_3 lh_2 ">
+                    <h1 class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 m-t_"> {{> 'Data.Session.Title'}}</h1>
+                    <h2 class="font-size_up-1 font_display font_regular lh_2 h:underline c_primary-n3">
+                    <a class="c_inherit-all expanded-click-area z_1">
+                        Presentation of the findings {{ modifier_class}} 
+                    </a>
+                    </h2>
+                </div>
+                <div class="c_black-8 font_copy font-size_down-1">
+                    {{> 'Sub.FacultyList' }}
+                </div>
+                <ul class="ul_none flex flex_row justify_start font-size_down-1 c_black-7  m-t_auto lh_0">
+                {{> 'Sub.Data.Duration'}}
+                {{> 'Sub.Data.PresentationCount'}}
+                {{> 'Sub.Data.AttachmentLink'}}
+                </ul>
+            </main>
+            <aside class="flex_none p-x_3:md p-b_3">
+                <ul
+                    class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2">
+                    <li class="flex_auto p-b_3 m-b_auto bookmark-shadow">
+                        {{> 'Sub.ActionButtons.Favorite' }}
+                    </li>
+                    <li class="lh_0">
+                        {{> 'Sub.Credit' modifier_class="CME"}}
+                    </li>
+                    <li class="lh_0">
+                        {{> 'Sub.Credit' modifier_class="CNE"}}
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        {{> 'Sub.ProgressBar' modifier_class="" }}
+    </article>
+</li>
+
+
+MarkupWrapperClasses: ul_none
+
+Weight: 0
+
+Data:
+Data.Session.Title - Session Title
+Data.Presentation.Title - Presentation Title
+
+SubComponents: 
+Sub.FacultyList - Faculty List
+Sub.ProgressBar - Progress
+Sub.Credits - Credits
+
+Styleguide Program.Presentation.Home
 */

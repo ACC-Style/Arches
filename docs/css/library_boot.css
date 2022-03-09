@@ -6820,11 +6820,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8943" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5818" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6375" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1661" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1905" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9942" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9359" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5305" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5081" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0293" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6856,11 +6856,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4629" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5116" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8255" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9289" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4559" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3599" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5631" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6156" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1714" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6875" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -7143,6 +7143,161 @@ Weight:0
 Styleguide Sub.Pagination
 */
 /*
+Faculty List
+
+When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+
+Data:
+Data.Faculty.FullName - Full Name
+Data.Faculty.FullName - Location
+
+FORMAT: This element uses data that has strict data formatting requirements. See the data tab for more information.
+
+Weight:0
+
+Styleguide Sub.FacultyList
+
+*/
+/*
+Aux Session Faculty List
+
+When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Role Type 1</h4>
+<div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li>Marty Little <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Eileen Marvin <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Chelsea Dach DVM <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+</div>
+<h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-users p-r_3"></i> Role Type 2</h4>
+<div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down">
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li>Wm Price<span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Mrs. Jeffrey Cartwright <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>CEmmett Spencer<span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+</div>
+
+
+SubComponents:
+Data.Faculty.FullName - Full Name
+Data.Faculty.Location - Location
+
+
+Weight:0
+
+Styleguide Sub.FacultyList.AuxSession
+
+*/
+/*
+Combined Faculty List
+
+When a presentation is in a single state the combination of session roles and presentation roles are shown.
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Session Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Session Role Type 2:</li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+    <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+
+SubComponents:
+Data.Faculty.FullName - Full Name
+Data.Faculty.FullName - Location
+
+
+Weight:0
+
+Styleguide Sub.FacultyList.SessionAndPresentation
+
+*/
+/*
+Session Faculty List
+
+When it is only important to show the credits listed and not the credit values this simple dot pattern is a good solution. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Session Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Session Role Type 2:</li>
+  <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+  <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
+  <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
+</ul>
+
+SubComponents:
+Data.Faculty.FullName - Full Name
+Data.Faculty.FullName - Location
+
+
+Weight:0
+
+Styleguide Sub.FacultyList.Session
+
+*/
+/*
+No Location Faculty List
+
+When you list non-event areas like Posters, and Abstracts the list removes the location of the person. 
+
+block         - use block on the role type label to stack the faculty names.
+inline-block  - use inline-block on the role type label to keep all the faculty in wrapping single line. 
+
+Markup:
+<ul class="ul_inline-semicolon font_regular font_copy">
+  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
+  <li>{{> "Data.Faculty.FullName" }}</li>
+  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
+  <li>Dianna Denesik III</li>
+  <li>Miguel Romaguera</li>  
+  <li>Jeanette Franecki</li>
+</ul>
+
+SubComponents:
+Data.Faculty.FullName - Full Name
+
+
+Weight:0
+
+Styleguide Sub.FacultyList.NoLocation
+
+*/
+/*
 
 Header
 
@@ -7184,25 +7339,16 @@ Vertical Carousels to have discoverable areas on the home pages.
 
 
 Markup:
-<section class='font_0 font_1:lg '>
-    <header class="p-x_4 font_display font_regular font-size_up-2 c_primary-n1 m-x_3 m-b_3 m-b_3:lg lh_1 m-t_5:lg m-t_4:md m-t_3 flex flex_row"><h2 class="lh_1 m_0 font_regular lowercase">Featured</h2></header>
+<section class='font_0 font_1:lg font_ui font_regular'>
+    <header class="p-x_4 font_display font-size_up-2 c_primary-n1 m-x_3 m-b_3 m-b_3:lg lh_1 m-t_5:lg m-t_4:md m-t_3 flex flex_row"><h2 class="lh_1 m_0 font_regular lowercase">Featured</h2></header>
     <div class="relative isolation_isolate overflow_hidden">
         <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}}">
-        {{> "Program.Session.Home"  modifier_class="Pericardial Valvular Valvular Electrocardiogram Valvular Heart Disease "}}
+        {{> "Program.Session.Home"  modifier_class="Cardiovascular Electrocardiogram Side Effect Electrocardiogram Clinical Cardiovascular Cardiovascular Electrocardiogram Blood Vessel "}}
+        {{> "Program.Session.Home"  modifier_class="Valvular "}}
+        {{> "Program.Session.Home"  modifier_class="Pericardial Chest Pain "}}
         {{> "Program.Session.Home"  modifier_class=""}}
-        {{> "Program.Session.Home"  modifier_class="Pericardial Side Effect Electrocardiogram Chest Pain Myocardial Cardiovascular Valvular Heart Disease Chest Pain "}}
-        {{> "Program.Session.Home"  modifier_class="Clinical Clinical Clinical Valvular Heart Disease Electrocardiogram "}}
         </div>
-        <div class="customize-tools">
-            <ul class="controls ul_none font-size_up-2 c_black-6" id="slider1-customize-controls" aria-label="Carousel Navigation" tabindex="0">
-            <li class="prev bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 l_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-l_0 br-br_radius br-tr_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="prev">
-                <i class="fal fa-chevron-left"></i>
-            </li>
-            <li class="next bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 r_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-r_0 br-bl_radius br-tl_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="next">
-                <i class="fal fa-chevron-right"></i>
-            </li>
-            </ul>
-        </div>
+        {{> 'Sub.Carousel.CustomTools'}}
     </div>
     <footer class="flex flex_row-reverse p_3 p-b_4"><a href="" class="link self_end ">view all from "Featured" <i class="fal fa-chevron-circle-right m-r_3"></i></a></footer>       
 </section>   <!-- Slider CSS -->
@@ -7250,6 +7396,45 @@ Program.Session.Home    - Session
 NOTE: This design requires javascript. (tiny slider js)
 
 Styleguide Page.Home.Carousel
+*/
+/*
+
+
+Carousel Empty State
+
+The empty state of the carousel
+
+Markup:
+<div class="p-y_3"> 
+    <div class="tns-outer bg_black-1 shadow_emboss-light font_0 font_ui font_regular" id="slider3-ow">
+        <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">4 to 8</span> of 4</div>
+        <div id="slider3-mw" class="tns-ovh">
+            <div class="tns-inner" id="slider3-iw">
+                <div id="slider3" class=" flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" >
+                    <div class="tns-item  tns-slide-active p-x_5">
+                        <article class="bg_white br_1 br_black-1 br_radius br_solid flex flex_grow shadow_overlap-light w_100">
+                            <div class="flex flex_row justify_start relative w_100">
+                                <main class="flex flex_column flex_auto justify_between flex_auto p-l_4 p-x_4:md  p-y_3 p-y_3:lg relative w_100 isolation_isolate reading-typography">
+                                    <h2 class="">
+                                       You don't have any previously watched presentations.
+                                    </h2>
+                                    <p>This collection is based off of your watching history. Come back here when you want to review or re-watch what you have previously viewed.</p>
+                                </main>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> 'Sub.Carousel.CustomTools.Disabled' }}
+</div>
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Page.Home.Carousel.Empty
 */
 /* nav */
 .tns-nav {
@@ -7327,6 +7512,132 @@ Weight: 0
 
 
 Styleguide Sub.ActionButtons.Favorite
+*/
+/*
+
+Progress Player Bar
+
+shows users where they left off with the player. 
+
+default		 -  Has zero player
+50          - 50% played 
+
+Markup:
+<aside class="bg_secondary-3 h:bg_primary-3 p-x_4 p-y_3 br_radius flex flex_row texture_dust relative">
+    <a class="expanded-click-area" href="player@{{ modifier_class }}"><i class="fa fa-play p-x_3 c_primary"></i></a>
+    <div class="progress w_100 self_center br_black-2 br_solid bg_black-4 br_1 br_round h_0lh font_n4">
+        <div class="progress-bar bg_accent" role="progressbar" style="width: {{ modifier_class }}%" aria-valuenow="{{ modifier_class }}" aria-valuemax="100"></div>
+    </div>
+</aside>  
+
+Styleguide Sub.ProgressBar
+*/
+/*
+
+Carousel Custom Nav
+
+Tiny Slider custom
+
+Markup:
+<div class="customize-tools">
+    <ul class="controls ul_none font-size_up-2 c_black-6" id="slider1-customize-controls" aria-label="Carousel Navigation" tabindex="0">
+        <li class="prev bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 l_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-l_0 br-br_radius br-tr_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="prev">
+            <i class="fal fa-chevron-left"></i>
+        </li>
+        <li class="next bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 r_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-r_0 br-bl_radius br-tl_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="next">
+            <i class="fal fa-chevron-right"></i>
+        </li>
+    </ul>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Sub.Carousel.CustomTools
+*/
+/*
+
+Carousel Custom Disabled
+
+Tiny Slider custom
+
+Markup:
+<div class="customize-tools">
+<ul class="controls ul_none font-size_up-2 c_black-6" id="slider3-customize-controls" aria-label="Carousel Navigation" tabindex="0">
+<li class="disabled prev bg_white-8 filter_blur absolute t_1 b_1 l_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-l_0 br-br_radius br-tr_radius shadow_overlap-light" aria-controls="slider3" tabindex="-1" data-controls="prev">
+    <i class="fal fa-chevron-left opacity_3"></i>
+</li>
+<li class="disabled next bg_white-8  filter_blur absolute t_1 b_1 r_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-r_0 br-bl_radius br-tl_radius shadow_overlap-light" aria-controls="slider3" tabindex="-1" data-controls="next">
+    <i class="fal fa-chevron-right opacity_3"></i>
+</li>
+</ul>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Sub.Carousel.CustomTools.Disabled
+*/
+/*
+
+Duration
+
+The length of the clip of video or all the of the lengths of the combined clips. 
+
+Markup:
+<li class="inline-block p-r_3 p_2">
+    <span class="font-size_up c_primary-n2 block"><i class="fal fa-clock"></i> 15</span>
+    minutes
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight: 0
+
+
+
+Styleguide Sub.Data.Duration 
+*/
+/*
+
+Presentation Count
+
+Number of presentations in the session. 
+
+Markup:
+<li class="inline-block p-r_3 p_2">
+    <span class="font-size_up c_primary-n2 block">4</span>
+    presentations
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight: 0
+
+Styleguide Sub.Data.PresentationCount
+*/
+/*
+
+Attachment Link
+
+Link to attachments. 
+
+Markup:
+<li class="inline-block br_round p-x_3 m-l_n3 p_2 z_3 h:bg_black-2 br_radius self_end">
+    <a href="" class="link flex_auto underline h:undecorated">
+    <span class="font-size_up c_primary-n2"><i class="fal fa-paperclip"></i></span> 
+    Attachments</a>
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight: 0
+
+Styleguide Sub.Data.AttachmentLink
 */
 /*
 
@@ -7611,26 +7922,16 @@ Markup:
     <div class="flex flex_row font_ui justify_start relative w_100">
         <main
             class="flex flex_column flex_auto justify_between flex_auto p-l_4 p-x_4:md p-y_3 p-y_3:lg relative w_100 isolation_isolate">
-            <h2 class="font-size_up-1 font_display lh_2 c_primary h:underline c_primary-n3 m-t_2">
+            <h2 class="font-size_up-1 font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
                 <a class="c_inherit-all expanded-click-area z_1">
                     Clinical Update for the {{ modifier_class}} 
                 </a>
             </h2>
             <ul
                 class="ul_none flex flex_row flex_wrap justify_start font-size_down-1 c_black-7 m-t_auto lh_0 items_end">
-                <li class="inline-block p-r_3 p_2">
-                    <span class="font-size_up c_primary-n2 block"><i class="fal fa-clock"></i> 15</span>
-                    minutes
-                </li>
-                <li class="inline-block p-r_3 p_2">
-                    <span class="font-size_up c_primary-n2 block">4</span>
-                    presentations
-                </li>
-                <li class="inline-block br_round p-x_3 m-l_n3 p_2 z_3 h:bg_black-2 br_radius self_end">
-                    <a href="" class="link flex_auto underline h:undecorated">
-                    <span class="font-size_up c_primary-n2"><i class="fal fa-paperclip"></i></span> 
-                    Attachments</a>
-                </li>
+                {{> 'Sub.Data.Duration'}}
+                {{> 'Sub.Data.PresentationCount'}}
+                {{> 'Sub.Data.AttachmentLink'}}
             </ul>
         </main>
         <aside class="flex_none p-x_3:md p-b_3">
@@ -7657,11 +7958,81 @@ Markup:
 
 MarkupWrapperClasses: 
 
+Data:
+Data.Session.Title - Title
+
+SubComponents: 
+Sub.Credits - Credits
+
 
 
 Weight: 0
 
 Styleguide Program.Session.Home
+*/
+/*
+
+Presentation - Home
+
+Presentation designs on the home page.
+
+Markup:
+<li class="m-b_4">
+    <article class="flex flex_grow flex_column w_100 p-x_4 br-t_1 br_solid br_black-3">
+        <div class="flex flex_row font_ui justify_start relative w_100 gap_3">
+            <main
+                class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate p-y_3 p-y_4:lg p-r_4:lg">
+                <div class="font_display m-b_3 lh_2 ">
+                    <h1 class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 m-t_"> {{> 'Data.Session.Title'}}</h1>
+                    <h2 class="font-size_up-1 font_display font_regular lh_2 h:underline c_primary-n3">
+                    <a class="c_inherit-all expanded-click-area z_1">
+                        Presentation of the findings {{ modifier_class}} 
+                    </a>
+                    </h2>
+                </div>
+                <div class="c_black-8 font_copy font-size_down-1">
+                    {{> 'Sub.FacultyList' }}
+                </div>
+                <ul class="ul_none flex flex_row justify_start font-size_down-1 c_black-7  m-t_auto lh_0">
+                {{> 'Sub.Data.Duration'}}
+                {{> 'Sub.Data.PresentationCount'}}
+                {{> 'Sub.Data.AttachmentLink'}}
+                </ul>
+            </main>
+            <aside class="flex_none p-x_3:md p-b_3">
+                <ul
+                    class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2">
+                    <li class="flex_auto p-b_3 m-b_auto bookmark-shadow">
+                        {{> 'Sub.ActionButtons.Favorite' }}
+                    </li>
+                    <li class="lh_0">
+                        {{> 'Sub.Credit' modifier_class="CME"}}
+                    </li>
+                    <li class="lh_0">
+                        {{> 'Sub.Credit' modifier_class="CNE"}}
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        {{> 'Sub.ProgressBar' modifier_class="" }}
+    </article>
+</li>
+
+
+MarkupWrapperClasses: ul_none
+
+Weight: 0
+
+Data:
+Data.Session.Title - Session Title
+Data.Presentation.Title - Presentation Title
+
+SubComponents: 
+Sub.FacultyList - Faculty List
+Sub.ProgressBar - Progress
+Sub.Credits - Credits
+
+Styleguide Program.Presentation.Home
 */
 .filter_blur {
   -webkit-backdrop-filter: blur(5px);
