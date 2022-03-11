@@ -50,7 +50,7 @@ Markup:
         <h2 class="lh_1 m_0 font_regular lowercase">Featured</h2>
     </header>
     <div class="relative isolation_isolate overflow_hidden">
-        <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}}">
+        <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down-1'}}">
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
@@ -143,7 +143,7 @@ The empty state of the carousel
 
 Markup:
 <div class="p-y_3"> 
-    <div class="tns-outer bg_black-1 shadow_emboss-light font_0 font_ui font_regular" id="slider3-ow">
+    <div class="tns-outer {{> 'Sub.CSS.Inset.level_down'}}  font_0 font_ui font_regular" id="slider3-ow">
         <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">4 to 8</span> of 4</div>
         <div id="slider3-mw" class="tns-ovh">
             <div class="tns-inner" id="slider3-iw">
@@ -212,7 +212,7 @@ Footer
 Markup:
 <footer class="flex flex_row:md flex_column-reverse gap_4 m-t_4 flex_none">
                 <!-- subfooter -->
-                <div id="subfooter" class="bg_primary-1 flex_auto font_n1 p-x_4 p-y_4 z_0 br_radius texture_dust shadow_emboss-light p-b_4">
+                <div id="subfooter" class="bg_primary-1 flex_auto font_n1 p-x_4 p-y_4 z_1 br_radius texture_dust shadow_emboss-light p-b_4">
                     <ul class="m_auto footer-bottom-links ul_none max-w_80">
                         <li class="inline p_2"><a href="//www.acc.org/footer-pages/media-center" class="c_white-6 h:c_white">Media Center</a></li>
                         <li class="inline p_2"><a href="//www.acc.org/footer-pages/quick-start-guide" class="c_white-6 h:c_white">ACC.org Quick Start Guide</a></li>
@@ -227,7 +227,7 @@ Markup:
                         <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/sitemap-acc.xml">Site Map</a> </li>
                     </ul> <!-- /footer-bottom-links -->
                 </div><!-- /subfooter -->
-                <div id="logo" class="bg_white-4 br_1 br_black-1 br_round br-br_radius   br-tl_radius  br_solid flex flex_none flex_row items_center justify_center max-w_25:md max-w_30:lg p-x_4 p-y_3 shadow_bevel-light w_100">
+                <div id="logo" class="bg_white-4 br_1 br_black-1 br_round br-br_radius br-tl_radius  br_solid flex flex_none flex_row items_center justify_center max-w_25:md max-w_30:lg p-x_4 p-y_3 shadow_bevel-light w_100">
                     <h2 class="logo_condensed w_100 max-w_20">American College of Cardiology</h2>
                 </div>
             </footer>
@@ -252,7 +252,7 @@ Markup:
     <header class="font_display font-size_up-2 c_primary-n1m-b_3 m-b_3:lg lh_1 m-t_4:md m-t_3">
         <h2 class="lh_1 m_0 font_regular lowercase">Continue Watching</h2>
     </header>
-    <div class="relative isolation_isolate overflow_hidden br_radius">
+    <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.CSS.Inset.level_down-1'}} ">
         <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}} ">
         {{> "Program.Presentation.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Presentation.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
