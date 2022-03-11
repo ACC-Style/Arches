@@ -23590,11 +23590,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4858" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1257" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9282" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0600" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4602" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1056" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1893" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5643" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2063" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1281" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -23626,11 +23626,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5987" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0566" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7203" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6460" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2728" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5882" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2279" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1850" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6577" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4605" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -24423,19 +24423,32 @@ Award Premiere Tier Stacked
 Awards are blocks design to display the awards for the conference.
 
 Markup:
-<div data-name="award__container" class="{{ modifier_class }} max-w_30 flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
-	{{> "Awards.Awardee.Premium" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
-	<div data-name="award__detail" class="font_0">   
-	<div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
-			{{> "Data.Award.Title" }}
-		</div>
-		<div data-name="awardee__description" class="reading-typography m_4 ">
-			{{> "Data.Award.Description" }}
+<div class="grid grid-col_3:lg gap_5">
+	<div data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column flex_column:lg flex_row:md  shadow_overlap-light">
+		{{> "Awards.Awardee.Premium" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
+		<div data-name="award__detail" class="font_0">   
+		<div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
+				{{> "Data.Award.Title" }}
+			</div>
+			<div data-name="awardee__description" class="reading-typography m_4 ">
+				{{> "Data.Award.Description" }}
+			</div>
 		</div>
 	</div>
+	<div data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column flex_column:lg flex_row:md shadow_overlap-light">
+		{{> "Awards.Awardee.Premium" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
+		<div data-name="award__detail" class="font_0">   
+		<div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
+				{{> "Data.Award.Title" }}
+			</div>
+			<div data-name="awardee__description" class="reading-typography m_4 ">
+				{{> "Data.Award.Description" }}
+			</div>
+		</div>
+	</div>	
 </div>
 
-MarkupWrapperClasses:
+MarkupWrapperClasses:  
 
 Weight: 0
 
@@ -24474,11 +24487,17 @@ Award Premiere Video
 Awards are blocks design to display the awards for the conference.
 
 Markup:
-<div data-name="award__container" class="{{ modifier_class }} max-w_30 flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
+<div class="grid grid-col_3:lg grid-col_2:md grid-col_1 gap_4">
+<div data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
 	{{> "Awards.Awardee.Premium.Video" modifier_class="font_2:lg font_1:md font_0 flex_column" }}
 </div>
-
-MarkupWrapperClasses:
+<div data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
+	{{> "Awards.Awardee.Premium.Video" modifier_class="font_2:lg font_1:md font_0 flex_column" }}
+</div>
+<div data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
+	{{> "Awards.Awardee.Premium.Video" modifier_class="font_2:lg font_1:md font_0 flex_column" }}
+</div>
+</div>
 
 Weight: 0
 
@@ -24493,22 +24512,58 @@ Awards are blocks design to display the awards for the conference.
 
 Markup:
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Column]</h2>
-<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column max-w_20 relative br_black-1 br_solid br_1">
-	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
-	{{> "Awards.Awardee.Standard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
-</div>
-<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column max-w_20 relative br_black-1 br_solid br_1">
-	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
-	{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+<div class="grid grid-col_4:lg gap_4 grid-col_3:md grid-col_1">
+	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
+		{{> "Awards.Awardee.Standard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+	</div>
+	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+	</div>
+		<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+	</div>
+	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+	</div>
+	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+	</div>
+		<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
+	</div>
 </div>
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
-<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
-	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
-	{{> "Awards.Awardee.Standard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
-</div>
-<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
-	<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
-	{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+<div class="grid grid-col_2:lg grid-col_1  gap_4">
+	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
+		{{> "Awards.Awardee.Standard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+	</div>
+	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
+		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+	</div>
+	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
+		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+	</div>
+	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
+		{{> "Awards.Awardee.Standard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+	</div>
+	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
+		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+	</div>
+	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
+		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
+	</div>
 </div>
 
 MarkupWrapperClasses:
@@ -24526,27 +24581,45 @@ Awards are blocks design to display the awards for the conference.
 
 Markup:
 <h2 class="font_2:lg font_1 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Column]</h2>
-<div data-name="award__container" class="flex bg_black-1 p_4 flex_column max-w_15 relative">
-	{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-</div>
-<div data-name="award__container" class="flex bg_black-1 p_4 flex_column max-w_15 relative">
-	{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-</div>
-<div data-name="award__container" class="flex bg_black-1 p_4 flex_column max-w_15 relative">
-	{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-</div>
-<div data-name="award__container" class="flex bg_black-1 p_4 flex_column max-w_15 relative">
-	{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+<div class="grid grid-col_5:lg grid-col_3:md grid-col_2 gap_4">
+	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+	</div>
+	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+	</div>
+	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+	</div>
+	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+	</div>
+	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+	</div>
+	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+	</div>
+	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+	</div>
+	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+	</div>
+	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
+	</div>
 </div>
 <h2 class="font_2:lg font_1 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
-<div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
-	{{> "Awards.Awardee.Condensed" modifier_class="flex_row:lg font_0 items_start" }}
-</div>
-<div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
-	{{> "Awards.Awardee.Condensed" modifier_class="flex_row:lg font_0 items_start" }}
+<div class="grid grid-col_2 gap_4">
+	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
+		{{> "Awards.Awardee.Condensed" modifier_class="flex_row:lg font_0 items_start" }}
+	</div>
+	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
+		{{> "Awards.Awardee.Condensed" modifier_class="flex_row:lg font_0 items_start" }}
+	</div>
 </div>
 
-MarkupWrapperClasses:
 
 Weight:  100
 
@@ -24561,11 +24634,29 @@ Awards are blocks design to display the awards for the conference.
 
 Markup:
 <h3 class="font_1:lg font_0 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }}</h3>
-<ul class="ul_none">
+<ul class="ul_none grid grid-col_3:lg grid-col_2:md grid-col_1 gap_4">
 <li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
 	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </li>
-<li data-name="award__container" class="p-y_3">
+<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+</li>
+<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+</li>
+<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+</li>
+<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+</li>
+<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+</li>
+<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+</li>
+<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
 	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
 </li>
 </ul>
@@ -24583,7 +24674,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_5297">
+<div class="flex_column flex" id="session_5719">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -24607,7 +24698,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_5297">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_5719">top</a>
                 </div>
             </section>
         </div>
@@ -24619,7 +24710,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_5297">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_5719">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -24651,7 +24742,7 @@ Channel Player External Content
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_5297">
+<div class="flex_column flex" id="session_5719">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -24681,7 +24772,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_5297">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_5719">top</a>
                 </div>
             </section>
         </div>
@@ -24692,7 +24783,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_5297">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_5719">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -24725,7 +24816,7 @@ Channel Player No Schedule
 description
 
 Markup:
-<div class="flex_column flex" id="session_5297">
+<div class="flex_column flex" id="session_5719">
     <header class="flex flex_column-reverse font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -24746,7 +24837,7 @@ Markup:
         <h2 class="font_bold font_display c_primary-n1 m-b_4"><div class="flex_row:md flex flex_column">
             <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
         </h2>
-        {{> Program.GridFormat.WhatsNext modifier_class="Arrhythmia Valvular Side Effect Clinical Arteriosclerosis Valvular Arrhythmia Cardiovascular " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Valvular Pharmacologic Electrocardiographic " }}
         </div>
     </section>
 </div>
@@ -24764,7 +24855,7 @@ Channel Player:Non Accredited
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_5297">
+<div class="flex_column flex" id="session_5719">
     <div class="bg_secondary-n3 c_white font_bold font_ui p_3 p-x_4 m-b_4 shadow_overlap-light br_radius" > {{> "Sub.Credits.NonAccredited" }}: These sessions are ineligible to receive credit</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
@@ -24789,7 +24880,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_5297">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_5719">top</a>
                 </div>
             </section>
         </div>
@@ -24801,7 +24892,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_5297">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_5719">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData.NotAccredited" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -25175,7 +25266,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_3030">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_5471">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -25209,7 +25300,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_3030">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_5471">top</a></div>
     </div>
 </article>
 
@@ -25521,8 +25612,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="Cardiovascular Cardiovascular Arrhythmia Electrocardiographic Cardiovascular Electrocardiographic Arrhythmia Valvular Heart Disease "  }}
-    {{> Program.GridFormat.Abstract modifier_class="Valvular Valvular Cardiovascular Electrocardiogram Myocardial "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="Pharmacologic Pericardial Blood Vessel Valvular Heart Disease Clinical Pharmacologic Cardiovascular "  }}
+    {{> Program.GridFormat.Abstract modifier_class="Valvular Clinical Valvular "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -25597,8 +25688,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="" }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Chest Pain " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Cardiovascular Side Effect Pericardial Myocardial Pharmacologic Cardiovascular Pharmacologic " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Side Effect Chest Pain Side Effect Electrocardiographic Arrhythmia Clinical Side Effect Myocardial " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -25716,9 +25807,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="Side Effect Arteriosclerosis Arteriosclerosis Valvular Arteriosclerosis Myocardial Arteriosclerosis Chest Pain Pericardial " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Side Effect Pharmacologic Arteriosclerosis Valvular " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Valvular Cardiovascular Chest Pain " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Arrhythmia Arrhythmia " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="" }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Chest Pain Side Effect Valvular Heart Disease Pharmacologic Pharmacologic Blood Vessel Clinical Pericardial " }}
     </div>
 </section>
 
@@ -25781,9 +25872,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNext modifier_class="Side Effect Electrocardiogram Arteriosclerosis " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="Myocardial Electrocardiogram Pericardial " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="Chest Pain Electrocardiogram Side Effect Valvular Heart Disease Blood Vessel " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="" }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Side Effect Electrocardiogram Valvular Electrocardiographic Arrhythmia Arrhythmia " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="" }}
     </div>
 </section>
 
