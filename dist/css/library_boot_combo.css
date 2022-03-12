@@ -8175,6 +8175,10 @@ Styleguide Layouts.MaxWidth
   height: 100vh;
 }
 
+.h_100p {
+  height: 100%;
+}
+
 .h_unset {
   height: unset;
 }
@@ -8274,6 +8278,10 @@ Styleguide Layouts.MaxWidth
 
 .min-h_100 {
   min-height: 100vh;
+}
+
+.min-h_100p {
+  min-height: 100%;
 }
 
 .min-h_unset {
@@ -8378,6 +8386,10 @@ Styleguide Layouts.MaxWidth
     height: 100vh;
   }
 
+  .h_100p\:md {
+    height: 100%;
+  }
+
   .h_unset\:md {
     height: unset;
   }
@@ -8472,6 +8484,10 @@ Styleguide Layouts.MaxWidth
 
   .min-h_100\:md {
     min-height: 100vh;
+  }
+
+  .min-h_100p\:md {
+    min-height: 100%;
   }
 
   .min-h_unset\:md {
@@ -8571,6 +8587,10 @@ Styleguide Layouts.MaxWidth
     height: 100vh;
   }
 
+  .h_100p\:lg {
+    height: 100%;
+  }
+
   .h_unset\:lg {
     height: unset;
   }
@@ -8667,6 +8687,10 @@ Styleguide Layouts.MaxWidth
     min-height: 100vh;
   }
 
+  .min-h_100p\:lg {
+    min-height: 100%;
+  }
+
   .min-h_unset\:lg {
     min-height: unset;
   }
@@ -8734,7 +8758,8 @@ Markup:
 <div class="flex_auto br_solid br_white-8 br_1 bg_primary h_70">.h_70</div>   
 <div class="flex_auto br_solid br_white-8 br_1 bg_primary h_80">.h_80</div>   
 <div class="flex_auto br_solid br_white-8 br_1 bg_primary h_90">.h_90</div>   
-<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_100">.h_100</div>  
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_100">.h_100 </div>  
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_100p">.h_100p (percent) </div>  
 <div class="flex_auto br_solid br_white-8 br_1 bg_primary h_60 h_unset:lg">.h_60.h_unset:lg</div>
 </div>
 
@@ -21586,6 +21611,102 @@ textarea.form-control-lg {
 }
 
 /*
+
+Content Filler
+
+This is a styleguide only element to show structure edges.
+
+Markup:
+<div class="h_30 w_100 c_accent-n4 font_xbold font_3 br_accent bg_accent-5 br_dashed br_1 m_3 p_5 grid items_center justify_center">Layout Zone: {{ modifier_class }}</div>
+
+MarkupWrapperClasses: 
+
+Weight: 100
+
+Styleguide Page.Layouts.Filler
+*/
+/*
+
+Grid Filler
+
+This is a styleguide only element to show structure edges.
+
+Markup:
+<div class="w_auto h_100p c_highlight-n4 font_xbold font_3 br_dotted br_highlight bg_highlight-5 br_1 grid items_center justify_center lh_0 overflow_ellipsis">Grid Area: {{ modifier_class }}</div>
+
+MarkupWrapperClasses: 
+
+Weight: 100
+
+Styleguide Page.Layouts.GridFiller
+*/
+/*
+
+Sub Grid Filler
+
+This is a styleguide only element to show structure edges.
+
+Markup:
+<div class="w_auto h_100p c_success-n4 font_xbold font_3 br_dotted br_success bg_success-5 br_1 grid items_center justify_center lh_0 overflow_ellipsis">Grid Area: {{ modifier_class }}</div>
+
+MarkupWrapperClasses: 
+
+Weight: 100
+
+Styleguide Page.Layouts.SubGridFiller
+*/
+/*
+
+Side Bar Area
+
+This pattern is often used to push the sidebar bellow the main content area. 
+
+
+Markup:
+<div class="flex flex_row:md flex_column-reverse gap_4 gap_5:lg">
+    <div class="flex_auto flex_100 max-w_20:lg">
+    {{> "Page.Layouts.Filler"  modifier_class="Sidebar"}}
+    </div>
+    <div class="flex_auto flex_100 ">
+    {{> "Page.Layouts.Filler"  modifier_class="Main"}}
+    </div>
+</div>
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Page.Layouts.Sidebar
+*/
+/*
+
+Side Bar Area With Ad
+
+This pattern is often used to push the sidebar bellow the main content area. 
+
+
+Markup:
+<div class="flex flex_row:lg flex_column gap_4 gap_5:lg">
+    <div class="flex_auto flex_100 flex flex_row:md flex_column-reverse gap_4 gap_5:lg">
+        <div class="flex_auto flex_100 max-w_20:md">
+            {{> "Page.Layouts.Filler" modifier_class="Sidebar"}}
+        </div>
+        <div class="flex_auto flex_100">
+            {{> "Page.Layouts.Filler" modifier_class="Main"}}
+        </div>
+    </div>
+    <div class="flex_auto flex_100 max_w-100 max-w_10:lg">
+        {{> "Page.Layouts.Filler" modifier_class="Ad Rail"}}
+    </div>
+</div>   
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Page.Layouts.SidebarAndAd
+*/
+/*
 Agenda Item
 
 Description:
@@ -22176,7 +22297,7 @@ Markup:
 <li>Et cumque distinctio maxime maiores aut labore ut est esse.</li>
 </ul>
 <p>Et quia saepe corporis explicabo consectetur voluptatem iure. Quos nostrum autem. Et omnis nostrum eius autem aut voluptas illum. Et autem velit facere explicabo reiciendis voluptas. Ipsum vel et nisi in iste molestias sit. Eos et aut est ullam.</p>
-<a href="https://acc.org" target="_blank">Read More</a>
+<a href="https://acc.org" target="_blank">Watch Video</a>
 
 Weight:5
 
@@ -22218,7 +22339,7 @@ Description:
 The title of a Abstract.
 
 Markup:
-Abstract on Cardiovascular Update for the Clinician Success H<sub>2</sub>O
+Abstract on Cardiovascular Update for the Clinician Success H<sub>2</sub>
 
 Weight:1
 
@@ -22281,11 +22402,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3940" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3889" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7381" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9071" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9940" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1926" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2583" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8591" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6493" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8004" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -22317,11 +22438,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5419" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1697" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5306" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9705" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9656" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4147" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5096" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0011" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2239" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6162" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -22760,6 +22881,188 @@ Styleguide Sub.FacultyList.NoLocation
 */
 /*
 
+Base Grid Areas
+
+The library base is a grid system that is used for the library page.
+
+Markup:
+<div class="BODY_TAG-stand-in {{> "Sub.CSS.Body"}}">	
+	<div class="page-wrapper {{> "Sub.CSS.Page"}}">	
+		<div class="grid grid-template_page gap_4">
+			<header class="grid-area_headerArea">{{> "Page.Layouts.GridFiller"  modifier_class="BreadCrumb"}}</header>
+			<div class="grid-area_menuArea">{{> "Page.Layouts.GridFiller"  modifier_class="M"}}</div>
+			<section class="grid grid-template_content grid-area_mainArea gap_4">
+				<aside class="col-start_filterArea col-end_filterArea">{{> "Page.Layouts.SubGridFiller"  modifier_class="F"}}</aside>
+				<div class="col-start_insertArea-1 col-end_insertArea-2"> {{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Primary"}}</div>
+				<div class="col-start_insertArea-3 col-end_insertArea-4"> {{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Secondary"}}</div>
+			</section>
+			<footer class="grid grid-template_content grid-area_footerArea">
+				<div class="col-start col-end">{{> "Page.Layouts.GridFiller"  modifier_class="Footer"}}</div>
+			</footer>
+		</div>
+	</div>
+</div>
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Page.Layouts.PageGrid
+*/
+.grid-template_page {
+  grid-template-areas: "menuArea" "headerArea" "menuArea" "footerArea";
+}
+
+.grid-template_page,.grid-template_content {
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+}
+
+.grid-template_content {
+  grid-template-areas: "filterArea" "insertArea1" "insertArea2" "insertArea3" "insertArea4";
+}
+
+@media only screen and (min-width : 768px) {
+  .grid-template_content {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 4rem;
+    grid-template-areas: "filterArea insertArea1 insertArea2 insertArea3 insertArea4";
+  }
+}
+@media only screen and (min-width : 1024px) {
+  .grid-template_page {
+    grid-template-rows: 4rem 1fr auto;
+    grid-template-columns: 4rem 1fr;
+    grid-template-areas: "menuArea headerArea" "menuArea mainArea" "menuArea footerArea";
+  }
+
+  .grid-template_content {
+    grid-template-rows: 1fr;
+    grid-template-columns: 4rem 1fr 1fr 1fr 1fr;
+    grid-template-areas: "filterArea insertArea1 insertArea2 insertArea3 insertArea4";
+  }
+}
+.grid-area_headerArea {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: headerArea;
+}
+
+.grid-area_menuArea {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: menuArea;
+}
+
+.grid-area_mainArea {
+  grid-area: mainArea;
+}
+
+.grid-area_footerArea {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: footerArea;
+}
+
+@media only screen and (min-width : 1024px){
+  .grid-area_headerArea {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .grid-area_menuArea {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+  }
+  .grid-area_mainArea {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .grid-area_footerArea {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+}
+
+.col-start_filterArea {
+  grid-column-start: filterArea;
+}
+
+.col-end_filterArea {
+  grid-column-end: filterArea;
+}
+
+.col-start {
+  grid-column-start: 1;
+}
+
+.col-end {
+  grid-column-end: -1;
+}
+
+.col-start_insertArea-1 {
+  grid-column-start: insertArea1;
+}
+
+.col-end_insertArea-1 {
+  grid-column-end: insertArea1;
+}
+
+.col-start_insertArea-2 {
+  grid-column-start: insertArea2;
+}
+
+.col-end_insertArea-2 {
+  grid-column-end: insertArea2;
+}
+
+.col-start_insertArea-3 {
+  grid-column-start: insertArea3;
+}
+
+.col-end_insertArea-3 {
+  grid-column-end: insertArea3;
+}
+
+.col-start_insertArea-4 {
+  grid-column-start: insertArea4;
+}
+
+.col-end_insertArea-4 {
+  grid-column-end: insertArea4;
+}
+
+/*
+
+Not Home Page
+
+The sub pages have a common layouts.
+
+Markup:
+<div class="BODY_TAG-stand-in {{> "Sub.CSS.Body"}}">	
+	<div class="page-wrapper {{> "Sub.CSS.Page"}}">	
+		<div class="grid grid-template_page gap_4">
+			<header class="grid-area_headerArea flex flex_row items_center justify_start {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}">{{> "Navigation.Breadcrumb"}}</header>
+			<div class="grid-area_menuArea">{{> "Navigation.MainNav"}}</div>
+			<section class="grid grid-template_content grid-area_mainArea gap_4">
+				<aside class="col-start_filterArea col-end_filterArea h_100">{{> "Page.Layouts.SubGridFiller"  modifier_class="F"}}</aside>
+				<div class="col-start_insertArea-1 col-end_insertArea-2  {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}"> {{> "Page.Layouts.Filler"  modifier_class="Insert Primary"}}</div>
+				<div class="col-start_insertArea-3 col-end_insertArea-4  {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}"> {{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Secondary"}}</div>
+			</section>
+			<footer class="grid grid-template_content grid-area_footerArea">
+				<div class="col-start col-end">{{> "Navigation.Footer"  }}</div>
+			</footer>
+		</div>
+	</div>
+</div>
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Page.Layouts.NotHome
+*/
+/*
+
 Header
 
 Home page branding splash with ka site search. 
@@ -22805,11 +23108,11 @@ Markup:
         <h2 class="lh_1 m_0 font_regular lowercase">Featured</h2>
     </header>
     <div class="relative isolation_isolate overflow_hidden">
-        <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}}">
-        {{> "Program.Session.Home"  modifier_class="Valvular Heart Disease Electrocardiogram Blood Vessel Electrocardiographic Myocardial Pericardial Electrocardiogram Electrocardiogram Myocardial "}}
-        {{> "Program.Session.Home"  modifier_class="Myocardial Blood Vessel Pericardial Valvular Electrocardiogram Arrhythmia Cardiovascular Pharmacologic "}}
-        {{> "Program.Session.Home"  modifier_class="Side Effect Electrocardiographic Myocardial Clinical Electrocardiographic Electrocardiographic Pharmacologic Pharmacologic Cardiovascular "}}
-        {{> "Program.Session.Home"  modifier_class="Valvular Arrhythmia Arteriosclerosis Myocardial Blood Vessel Electrocardiogram "}}
+        <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down-1'}}">
+        {{> "Program.Session.Home"  modifier_class="Valvular Heart Disease Valvular Valvular Heart Disease Arteriosclerosis Arrhythmia Side Effect Cardiovascular "}}
+        {{> "Program.Session.Home"  modifier_class="Cardiovascular Arteriosclerosis "}}
+        {{> "Program.Session.Home"  modifier_class="Valvular Blood Vessel Arrhythmia "}}
+        {{> "Program.Session.Home"  modifier_class="Side Effect Arteriosclerosis Valvular Heart Disease Electrocardiogram Myocardial Blood Vessel "}}
         </div>
         {{> 'Sub.Carousel.CustomTools'}}
     </div>
@@ -22895,7 +23198,7 @@ The empty state of the carousel
 
 Markup:
 <div class="p-y_3"> 
-    <div class="tns-outer bg_black-1 shadow_emboss-light font_0 font_ui font_regular" id="slider3-ow">
+    <div class="tns-outer {{> 'Sub.CSS.Inset.level_down'}}  font_0 font_ui font_regular" id="slider3-ow">
         <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">4 to 8</span> of 4</div>
         <div id="slider3-mw" class="tns-ovh">
             <div class="tns-inner" id="slider3-iw">
@@ -22931,7 +23234,6 @@ Styleguide Page.Home.Carousel.Empty
   margin: 0.5rem 0;
   text-align: center;
 }
-
 .tns-nav > [aria-controls] {
   width: 8px;
   width: 0.5rem;
@@ -22946,7 +23248,6 @@ Styleguide Page.Home.Carousel.Empty
   background: #ddd;
   line-height: 1;
 }
-
 .tns-nav > .tns-nav-active {
   background: #999;
 }
@@ -22961,42 +23262,6 @@ Styleguide Page.Home.Carousel.Empty
 
 /*
 
-Footer
-
- The Apps Footer. 
-
-
-Markup:
-<footer class="flex flex_row:md flex_column-reverse gap_4 m-t_4 flex_none">
-                <!-- subfooter -->
-                <div id="subfooter" class="bg_primary-1 flex_auto font_n1 p-x_4 p-y_4 z_0 br_radius texture_dust shadow_emboss-light p-b_4">
-                    <ul class="m_auto footer-bottom-links ul_none max-w_80">
-                        <li class="inline p_2"><a href="//www.acc.org/footer-pages/media-center" class="c_white-6 h:c_white">Media Center</a></li>
-                        <li class="inline p_2"><a href="//www.acc.org/footer-pages/quick-start-guide" class="c_white-6 h:c_white">ACC.org Quick Start Guide</a></li>
-                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/advertising-and-sponsorship-policy">Advertising &amp; Sponsorship Policy</a></li>
-                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/clinical-content-disclaimer">Clinical Content Disclaimer</a> </li>
-                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/editorial-board">Editorial Board</a></li>
-                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/privacy-policy">Privacy Policy</a></li>
-                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/registered-user-agreement">Registered User Agreement</a></li>
-                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/terms-and-conditions">Terms of Service</a></li>
-                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/cookie-policy">Cookie Policy</a></li>
-                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/member-hub-terms-of-use">Member Hub Terms of Use</a></li>
-                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/sitemap-acc.xml">Site Map</a> </li>
-                    </ul> <!-- /footer-bottom-links -->
-                </div><!-- /subfooter -->
-                <div id="logo" class="bg_white-4 br_1 br_black-1 br_round br-br_radius   br-tl_radius  br_solid flex flex_none flex_row items_center justify_center max-w_25:md max-w_30:lg p-x_4 p-y_3 shadow_bevel-light w_100">
-                    <h2 class="logo_condensed w_100 max-w_20">American College of Cardiology</h2>
-                </div>
-            </footer>
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-Styleguide Page.Footer
-*/
-/*
-
 Continue Watching
 
 Shows a short list of presentations
@@ -23008,13 +23273,13 @@ Markup:
     <header class="font_display font-size_up-2 c_primary-n1m-b_3 m-b_3:lg lh_1 m-t_4:md m-t_3">
         <h2 class="lh_1 m_0 font_regular lowercase">Continue Watching</h2>
     </header>
-    <div class="relative isolation_isolate overflow_hidden br_radius">
+    <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.CSS.Inset.level_down-1'}} ">
         <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}} ">
-        {{> "Program.Presentation.Home"  modifier_class="Side Effect Electrocardiogram Valvular Heart Disease Valvular Side Effect Electrocardiographic Myocardial "}}
-        {{> "Program.Presentation.Home"  modifier_class="Myocardial Arrhythmia Pharmacologic Arteriosclerosis Side Effect Side Effect Pharmacologic "}}
-        {{> "Program.Presentation.Home"  modifier_class="Electrocardiogram Pharmacologic Clinical Electrocardiographic "}}
-        {{> "Program.Presentation.Home"  modifier_class="Myocardial Valvular Heart Disease Electrocardiogram Blood Vessel Electrocardiogram Electrocardiogram Myocardial Side Effect Valvular "}}
-        {{> "Program.Presentation.Home"  modifier_class="Electrocardiographic Clinical Valvular Heart Disease Electrocardiographic Cardiovascular Valvular "}}
+        {{> "Program.Presentation.Home"  modifier_class="Myocardial Valvular Myocardial Valvular Heart Disease Electrocardiogram Electrocardiogram Pharmacologic "}}
+        {{> "Program.Presentation.Home"  modifier_class="Electrocardiogram Valvular Blood Vessel Side Effect Clinical Electrocardiographic Cardiovascular "}}
+        {{> "Program.Presentation.Home"  modifier_class="Clinical Cardiovascular "}}
+        {{> "Program.Presentation.Home"  modifier_class="Side Effect Electrocardiographic Myocardial Side Effect Side Effect Cardiovascular Chest Pain "}}
+        {{> "Program.Presentation.Home"  modifier_class="Arteriosclerosis Valvular Heart Disease "}}
         </div>
         {{> 'Sub.Carousel.CustomToolsVertical'}}
     </div>
@@ -23247,12 +23512,80 @@ Styleguide Sub.Data.AttachmentLink
 */
 /*
 
+Breadcrumb First Item
+
+The not first nor last item in the breadcrumb.
+
+Markup:
+<li class="relative m-b_1 flex_auto flex_inline flex lh_1 h:c_primary">
+    <a href="../home" class="inherit_all h:underline undecorated expanded-click-area overflow_ellipsis flex flex_nowrap">
+        <i class="fal fa-home fa-fw m-r_3 flex_none self_center c_primary font-size_up "></i>
+        <span class="display_none flex_auto inline:md self_center">Home</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight:0
+
+Styleguide Sub.Navigation.Breadcrumb.FirstItem
+*/
+/*
+
+Breadcrumb Not-First Item
+
+The not first nor last item in the breadcrumb.
+
+Search - Search Page
+Session Name - Session Page
+
+Markup:
+<li class="relative m-b_1 flex_auto flex_inline flex lh_1 h:c_primary">
+    <i class="fal fa-chevron-left fa-fw m-x_3 flex_none self_center c_primary font-size_down"></i>
+    <a href="../watching" class="inherit_all h:underline undecorated expanded-click-area overflow_ellipsis flex flex_nowrap">
+        <span class=" flex_auto self_center">Page Type Label</span>
+        <span class=" flex_auto self_center display_inline:md display_none">{{modifier_class}}</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight:0
+
+Styleguide Sub.Navigation.Breadcrumb.NotFirstItem
+*/
+/*
+
+Breadcrumb Last Item
+
+The last Item in the Breadcrumb doesn't include a link to the page and is decorated as highlighted.
+
+Search - Search Page
+Session Name - Session Page
+
+Markup:
+<li class="relative m-b_1 flex_auto flex_inline flex lh_1">
+    <i class="fal fa-chevron-left c_primary-n2 m-x_3 self_center font-size_down"></i>
+    <div class="flex flex_row flex_nowrap overflow_ellipsis">
+        <span class=" flex_auto self_center">Page Type Label</span>
+        <span class=" flex_auto self_center display_inline:md display_none">{{modifier_class}}</span>
+    </div>
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight:0
+
+Styleguide Sub.Navigation.Breadcrumb.LastItem
+*/
+/*
+
 Body Classes
 
 The list of classes used on the body tag
 
 Markup:
-bg_black-4 w_100 min-h_100 p_3:md p_2 overflow_scroll
+bg_black-4 w_100 p_3:md p_2
 
 MarkupWrapperClasses: 
 
@@ -23269,7 +23602,7 @@ Page Area
 The list of classes used on the body tag
 
 Markup:
-main-area-offset p_2 p-x_5:md p-y_4:md isolation_isolate br_radius bg_white-7
+p_2 p_3:md isolation_isolate br_radius bg_white-7
 
 MarkupWrapperClasses: 
 
@@ -23320,7 +23653,7 @@ Inset level_down
 The list of classes used on the body tag
 
 Markup:
-inset-level_down bg_black-1 shadow_emboss-light br_radius br_solid br_1 br_black-2
+inset-level_down bg_black-_05 shadow_emboss-light br_radius br_solid br_1 br_black-1
 
 MarkupWrapperClasses: 
 
@@ -23337,7 +23670,7 @@ Inset level_down-1
 The list of classes used on the body tag
 
 Markup:
-inset-level_down-1 bg_black-1 shadow_emboss-light bg_black-3 br_1 br_black-3 
+inset-level_down-1 bg_black-1 shadow_emboss-light br_solid br_1 br_black-2 br_radius
 
 MarkupWrapperClasses: 
 
@@ -23354,7 +23687,7 @@ Inset level_down-2
 The list of classes used on the body tag
 
 Markup:
-inset-level_down-2 bg_black-1 shadow_emboss-light bg_black-3 br_1 br_black-3 
+inset-level_down-2 bg_black-2 shadow_emboss-light br_solid br_1 br_black-3 br_radius 
 
 MarkupWrapperClasses: 
 
@@ -23408,8 +23741,8 @@ THe library because it is an app uses a different style of nav which is more ali
 
 
 Markup:
-    <div class="{{> 'Sub.CSS.Page' }} relative p-t_1 p-b_1">
-       <nav id="navigation" class="display_none fixed shadow_emboss-light filter_blur overflow_hidden br_radius r_3 r_0:md r_auto:md l_4 b_4 t_auto t_4:md bg_black-7 flex:md flex_column:md justify_between p-t_0 p-b_3 p-l_3 p-r_3 p-b_4:md p-t_4:md p-r_0:md font_4:lg font_3:md font_2 transition_3 font_display nav-mined">
+<div class="display_none flex:md sticky t_3">
+        <nav style="height: calc(100vh - 2rem);" id="navigation" class="absolute h_100vh shadow_emboss-light filter_blur overflow_hidden br_radius bg_black-7 flex:md flex_column:md justify_between p-t_0 p-b_3 p-l_3 p-r_3 p-b_4:md p-t_4:md p-r_0:md font_4:lg font_3:md font_2 transition_3 font_display nav-mined">
             <ul class="flex flex_column:md flex_row ul_none justify_around justify_start:md gap_3 w_100 w_auto:md">
                 <li class="nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light active">
                     <a class="p_3 c_inherit-all h:undecorated flex flex_column flex_row:md" href="../home"><i class="icon fas fa-fw fa-home-heart p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0 active font_n2 font_3:md font_4:lg display_none:md opacity_0">Home</span></a>
@@ -23433,34 +23766,31 @@ Markup:
                 </li>
             </ul>
         </nav>
-        <nav id="navigation_mobile" class="block display_none:md shadow_emboss-light filter_blur br_radius m_3 m-b_0 bg_black-6 p_2 sticky t_3 z_4">
-            <ul class="flex flex_row ul_none justify_between">
-                <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light active">
-                    <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../home"><i class="icon fas fa-fw fa-home-heart p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 active font_n2 h_1h">Home</span></a>
-                </li>
-                <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
-                    <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../search"><i class="icon fas fa-fw fa-search p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h ">Search</span></a>
-                </li>
-                <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
-                    <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../saved"><i class="icon fas fa-fw fa-heart p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h nowrap ">Saved</span></a>
-                </li>
-                <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
-                    <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../saved"><i class="icon fas fa-fw fa-award p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h ">Credits</span></a>
-                </li>
-                <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light disabled opacity_3 cursor_not-allowed ">
-                    <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../watching"><i class="icon fas fa-fw fa-play p-y_2 self_center"></i><span class="label self_center lowercase lh_0 font_n2 h_1h ">Watching</span></a>
-                </li>
-                <li class="nav-item flex_auto br_radius c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light">
-                    <a class="c_inherit-all flex flex_column h:undecorated p_3"><i class="icon fas fa-fw fa-sign-out-alt p-y_2 self_center"></i><span class="label self_center lowercase lh_0 font_n2 nowrap h_1h">Log Out</span></a>
-                </li>
-            </ul>
-        </nav>
-    </div> 
+    </div>
+    <nav id="navigation_mobile" class="block display_none:md shadow_emboss-light filter_blur br_radius m_3 m-b_0 bg_black-6 p_2 sticky t_3 z_4">
+        <ul class="flex flex_row ul_none justify_between">
+            <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light active">
+                <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../home"><i class="icon fas fa-fw fa-home-heart p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 active font_n2 h_1h">Home</span></a>
+            </li>
+            <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
+                <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../search"><i class="icon fas fa-fw fa-search p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h ">Search</span></a>
+            </li>
+            <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
+                <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../saved"><i class="icon fas fa-fw fa-heart p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h nowrap ">Saved</span></a>
+            </li>
+            <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
+                <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../saved"><i class="icon fas fa-fw fa-award p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h ">Credits</span></a>
+            </li>
+            <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light disabled opacity_3 cursor_not-allowed ">
+                <a class="c_inherit-all flex flex_column h:undecorated p_3" href="../watching"><i class="icon fas fa-fw fa-play p-y_2 self_center"></i><span class="label self_center lowercase lh_0 font_n2 h_1h ">Watching</span></a>
+            </li>
+            <li class="nav-item flex_auto br_radius c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light">
+                <a class="c_inherit-all flex flex_column h:undecorated p_3"><i class="icon fas fa-fw fa-sign-out-alt p-y_2 self_center"></i><span class="label self_center lowercase lh_0 font_n2 nowrap h_1h">Log Out</span></a>
+            </li>
+        </ul>
+    </nav>
     <script src="../js/library/library.main-nav.js"></script>
     <!-- These Styles are just for the styleguide and are not to be included with the pattern. -->
-    <style>
-    #navigation{ position: relative !important; min-height:50vh;}
-    </style>
 
 MarkupWrapperClasses: 
 
@@ -23514,6 +23844,68 @@ Weight: 0
 FORMAT: This uses a strick data format look at x
 
 Styleguide Navigation.Home.Utility
+*/
+/*
+
+Breadcrumb
+
+Basic Nav that helps the user orientate the context of the page.
+
+Markup:
+<nav class="flex_inline flex lh_0  font_ui font_2 font_regular c_black-7 {{modifier_class}}">
+    <ol class="ul_none flex flex_row items_center justify_start flex_no-wrap"> 
+        {{> 'Sub.Navigation.Breadcrumb.FirstItem' }}
+        {{> 'Sub.Navigation.Breadcrumb.NotFirstItem' class="Session Shorten Name" }}
+        {{> 'Sub.Navigation.Breadcrumb.LastItem' class="Presentation Shorten Name" }}
+    </ol>   
+</nav>
+
+MarkupWrapperClasses: 
+
+SubComponents:
+Sub.Navigation.Breadcrumb.FirstItem - First item
+Sub.Navigation.Breadcrumb.NotFirstItem - Not first item
+Sub.Navigation.Breadcrumb.LastItem - Last item
+
+Weight:0
+
+Styleguide Navigation.Breadcrumb
+*/
+/*
+
+Footer
+
+ The Apps Footer. 
+
+
+Markup:
+<footer class="flex flex_row:md flex_column-reverse gap_4 m-t_4 flex_none">
+                <!-- subfooter -->
+                <div id="subfooter" class="bg_primary-1 flex_auto font_n1 p-x_4 p-y_4 z_1 br_radius texture_dust shadow_emboss-light p-b_4">
+                    <ul class="m_auto footer-bottom-links ul_none max-w_80">
+                        <li class="inline p_2"><a href="//www.acc.org/footer-pages/media-center" class="c_white-6 h:c_white">Media Center</a></li>
+                        <li class="inline p_2"><a href="//www.acc.org/footer-pages/quick-start-guide" class="c_white-6 h:c_white">ACC.org Quick Start Guide</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/advertising-and-sponsorship-policy">Advertising &amp; Sponsorship Policy</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/clinical-content-disclaimer">Clinical Content Disclaimer</a> </li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/editorial-board">Editorial Board</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/privacy-policy">Privacy Policy</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/registered-user-agreement">Registered User Agreement</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/terms-and-conditions">Terms of Service</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/cookie-policy">Cookie Policy</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/footer-pages/member-hub-terms-of-use">Member Hub Terms of Use</a></li>
+                        <li class="inline p_2"><a class="c_white-6 h:c_white" href="//www.acc.org/sitemap-acc.xml">Site Map</a> </li>
+                    </ul> <!-- /footer-bottom-links -->
+                </div><!-- /subfooter -->
+                <div id="logo" class="bg_white-4 br_1 br_black-1 br_round br-br_radius br-tl_radius  br_solid flex flex_none flex_row items_center justify_center max-w_25:md max-w_30:lg p-x_4 p-y_3 shadow_bevel-light w_100">
+                    <h2 class="logo_condensed w_100 max-w_20">American College of Cardiology</h2>
+                </div>
+            </footer>
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Navigation.Footer
 */
 @media only screen and (min-width: 768px) {
   .main-area-offset {

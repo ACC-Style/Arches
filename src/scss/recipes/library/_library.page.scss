@@ -1,0 +1,33 @@
+/*
+
+Not Home Page
+
+The sub pages have a common layouts.
+ 
+Markup:
+<div class="BODY_TAG-stand-in {{> "Sub.CSS.Body"}}">	
+	<div class="page-wrapper {{> "Sub.CSS.Page"}}">	
+		<div class="grid grid-template_page gap_4">
+			<header class="grid-area_headerArea flex flex_row items_center justify_start {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}">{{> "Navigation.Breadcrumb"}}</header>
+			<div class="grid-area_menuArea">{{> "Navigation.MainNav"}}</div>
+			<section class="grid grid-template_content grid-area_mainArea gap_4">
+				<aside class="col-start_filterArea col-end_filterArea h_90">{{> "Page.Layouts.SubGridFiller"  modifier_class="F"}}</aside>
+				<div class="col-start_insertArea-1 col-end_insertArea-2  {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}"> {{> "Page.Layouts.Filler"  modifier_class="Insert Primary"}}</div>
+				<div class="col-start_insertArea-3 col-end_insertArea-4  {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}"> {{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Secondary"}}</div>
+			</section>
+			<footer class="grid grid-template_content grid-area_footerArea">
+				<div class="col-start col-end">{{> "Navigation.Footer"  }}</div>
+			</footer>
+		</div>
+	</div>
+</div>
+
+MarkupWrapperClasses: 
+
+
+NOTE: This page will not render 100% correctly because it is calculated based on the whole viewport and the styleguide has it wrapped in page dynamics..
+ 
+Weight:0
+ 
+Styleguide Page.Layouts.NotHome
+*/

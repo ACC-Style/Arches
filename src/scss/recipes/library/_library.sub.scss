@@ -198,3 +198,75 @@ Weight: 0
 
 Styleguide Sub.Data.AttachmentLink
 */
+
+
+
+/*
+
+Breadcrumb First Item
+
+The not first nor last item in the breadcrumb.
+ 
+Markup:
+<li class="relative m-b_1 flex_auto flex_inline flex lh_1 h:c_primary">
+    <a href="../home" class="inherit_all h:underline undecorated expanded-click-area overflow_ellipsis flex flex_nowrap">
+        <i class="fal fa-home fa-fw m-r_3 flex_none self_center c_primary font-size_up "></i>
+        <span class="display_none flex_auto inline:md self_center">Home</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight:0
+ 
+Styleguide Sub.Navigation.Breadcrumb.FirstItem
+*/
+
+/*
+
+Breadcrumb Not-First Item
+
+The not first nor last item in the breadcrumb.
+
+Search - Search Page
+Session Name - Session Page
+ 
+Markup:
+<li class="relative m-b_1 flex_auto flex_inline flex lh_1 h:c_primary">
+    <i class="fal fa-chevron-left fa-fw m-x_3 flex_none self_center c_primary font-size_down"></i>
+    <a href="../watching" class="inherit_all h:underline undecorated expanded-click-area overflow_ellipsis flex flex_nowrap">
+        <span class=" flex_auto self_center">Page Type Label</span>
+        <span class=" flex_auto self_center display_inline:md display_none">{{modifier_class}}</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight:0
+ 
+Styleguide Sub.Navigation.Breadcrumb.NotFirstItem
+*/
+/*
+
+Breadcrumb Last Item
+
+The last Item in the Breadcrumb doesn't include a link to the page and is decorated as highlighted.
+
+Search - Search Page
+Session Name - Session Page
+
+Markup:
+<li class="relative m-b_1 flex_auto flex_inline flex lh_1">
+    <i class="fal fa-chevron-left c_primary-n2 m-x_3 self_center font-size_down"></i>
+    <div class="flex flex_row flex_nowrap overflow_ellipsis">
+        <span class=" flex_auto self_center">Page Type Label</span>
+        <span class=" flex_auto self_center display_inline:md display_none">{{modifier_class}}</span>
+    </div>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight:0
+ 
+Styleguide Sub.Navigation.Breadcrumb.LastItem
+*/

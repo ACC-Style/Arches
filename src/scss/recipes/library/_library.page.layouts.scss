@@ -1,0 +1,99 @@
+
+/*
+
+Base Grid Areas
+
+The library base is a grid system that is used for the library page.
+ 
+Markup:
+<div class="BODY_TAG-stand-in {{> "Sub.CSS.Body"}}">	
+	<div class="page-wrapper {{> "Sub.CSS.Page"}}">	
+		<div class="grid grid-template_page gap_4">
+			<header class="grid-area_headerArea">{{> "Page.Layouts.GridFiller"  modifier_class="BreadCrumb"}}</header>
+			<div class="grid-area_menuArea">{{> "Page.Layouts.GridFiller"  modifier_class="M"}}</div>
+			<section class="grid grid-template_content grid-area_mainArea gap_4">
+				<aside class="col-start_filterArea col-end_filterArea">{{> "Page.Layouts.SubGridFiller"  modifier_class="F"}}</aside>
+				<div class="col-start_insertArea-1 col-end_insertArea-2"> {{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Primary"}}</div>
+				<div class="col-start_insertArea-3 col-end_insertArea-4"> {{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Secondary"}}</div>
+			</section>
+			<footer class="grid grid-template_content grid-area_footerArea">
+				<div class="col-start col-end">{{> "Page.Layouts.GridFiller"  modifier_class="Footer"}}</div>
+			</footer>
+		</div>
+	</div>
+</div>
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Page.Layouts.PageGrid
+*/
+
+.grid-template_page {
+	grid-template-columns: 1fr;
+	grid-template-rows:  auto;
+	grid-template-areas: 'menuArea' 'headerArea' 'menuArea' 'footerArea';
+}
+.grid-template_content {
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 'filterArea' 'insertArea1' 'insertArea2' 'insertArea3' 'insertArea4';
+}
+@media #{$medium-up} {
+	.grid-template_content {
+		grid-template-columns: 1fr 1fr 1fr  1fr 4rem;
+		grid-template-rows: 1fr;
+		grid-template-areas: 'filterArea insertArea1 insertArea2 insertArea3 insertArea4';
+	}
+}
+@media #{$large-up} {
+	.grid-template_page {
+		grid-template-columns: 4rem 1fr;
+		grid-template-rows:  4rem 1fr  auto;
+		grid-template-areas: 'menuArea headerArea' 'menuArea mainArea' 'menuArea footerArea';
+	}
+	.grid-template_content {
+		grid-template-columns: 4rem 1fr 1fr 1fr  1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas: 'filterArea insertArea1 insertArea2 insertArea3 insertArea4';
+	}
+}
+
+
+.grid-area_headerArea{
+	grid-area: headerArea;
+}
+.grid-area_menuArea{
+	grid-area: menuArea;
+}
+.grid-area_mainArea{
+	grid-area: mainArea;
+}
+.grid-area_footerArea{
+	grid-area: footerArea;
+}
+
+.col-start_filterArea {
+	grid-column-start: filterArea;
+}
+.col-end_filterArea {
+	grid-column-end: filterArea;
+}
+.col-start{
+	grid-column-start: 1
+}
+.col-end{
+	grid-column-end: -1
+}
+
+@for $c from 1 through 4 {
+
+    .col-start_insertArea-#{$c} {
+        grid-column-start: insertArea#{$c};
+    }
+    .col-end_insertArea-#{$c} {
+        grid-column-end: insertArea#{$c};
+    }
+}
+
+

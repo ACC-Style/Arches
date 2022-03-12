@@ -12,7 +12,39 @@ MarkupWrapperClasses:
 
 Weight: 100
 
-Styleguide Pages.Layouts.Filler
+Styleguide Page.Layouts.Filler
+*/
+
+/*
+
+Grid Filler
+
+This is a styleguide only element to show structure edges.
+
+Markup:
+<div class="w_auto h_100p c_highlight-n4 font_xbold font_3 br_dotted br_highlight bg_highlight-5 br_1 grid items_center justify_center lh_0 overflow_ellipsis">Grid Area: {{ modifier_class }}</div>
+
+MarkupWrapperClasses: 
+
+Weight: 100
+
+Styleguide Page.Layouts.GridFiller
+*/
+
+/*
+
+Sub Grid Filler
+
+This is a styleguide only element to show structure edges.
+
+Markup:
+<div class="w_auto h_100p c_success-n4 font_xbold font_3 br_dotted br_success bg_success-5 br_1 grid items_center justify_center lh_0 overflow_ellipsis">Grid Area: {{ modifier_class }}</div>
+
+MarkupWrapperClasses: 
+
+Weight: 100
+
+Styleguide Page.Layouts.SubGridFiller
 */
 
 /*
@@ -25,10 +57,10 @@ This pattern is often used to push the sidebar bellow the main content area.
 Markup:
 <div class="flex flex_row:md flex_column-reverse gap_4 gap_5:lg">
     <div class="flex_auto flex_100 max-w_20:lg">
-    {{> "Pages.Layouts.Filler"  modifier_class="Sidebar"}}
+    {{> "Page.Layouts.Filler"  modifier_class="Sidebar"}}
     </div>
     <div class="flex_auto flex_100 ">
-    {{> "Pages.Layouts.Filler"  modifier_class="Main"}}
+    {{> "Page.Layouts.Filler"  modifier_class="Main"}}
     </div>
 </div>
 
@@ -36,7 +68,7 @@ MarkupWrapperClasses:
 
 Weight: 0
 
-Styleguide Pages.Layouts.Sidebar
+Styleguide Page.Layouts.Sidebar
 */
 
 /*
@@ -50,14 +82,14 @@ Markup:
 <div class="flex flex_row:lg flex_column gap_4 gap_5:lg">
     <div class="flex_auto flex_100 flex flex_row:md flex_column-reverse gap_4 gap_5:lg">
         <div class="flex_auto flex_100 max-w_20:md">
-            {{> "Pages.Layouts.Filler" modifier_class="Sidebar"}}
+            {{> "Page.Layouts.Filler" modifier_class="Sidebar"}}
         </div>
         <div class="flex_auto flex_100">
-            {{> "Pages.Layouts.Filler" modifier_class="Main"}}
+            {{> "Page.Layouts.Filler" modifier_class="Main"}}
         </div>
     </div>
     <div class="flex_auto flex_100 max_w-100 max-w_10:lg">
-        {{> "Pages.Layouts.Filler" modifier_class="Ad Rail"}}
+        {{> "Page.Layouts.Filler" modifier_class="Ad Rail"}}
     </div>
 </div>   
 
@@ -65,5 +97,5 @@ MarkupWrapperClasses:
 
 Weight: 0
 
-Styleguide Pages.Layouts.SidebarAndAd
+Styleguide Page.Layouts.SidebarAndAd
 */
