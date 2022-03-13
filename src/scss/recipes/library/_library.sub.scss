@@ -270,3 +270,243 @@ Weight:0
  
 Styleguide Sub.Navigation.Breadcrumb.LastItem
 */
+
+/*
+
+Search Filter
+
+The filter box on the search page.
+ 
+Markup:
+<div id="filterZone" class="{aspect_1x1:md} {nav-mined} nav-maxed self_start bg_black-3 br_1 br_black-2 br_radius br_solid flex_auto p_2 p_3:md  shadow_emboss-light transition_3 flex flex_column">
+        <nav class="flex_auto overflow_hidden self_stretch font_4:lg font_3:md font_2 font_display font_display">
+            <ul class="flex flex_column:md flex_row gap_3 justify_start:md ul_none w_100 w_auto:md">
+                <li class="a:bg_primary a:c_white a:shadow_overlap-light {aspect_1x1:md} br_radius c_white-8 flex_none grid h:bg_black-7 h:c_white h:shadow_overlap-light nav-item p_0:md p_3">
+                    <a class="c_inherit-all h:undecorated p_3 lh_1 m-x_n1">
+                        <i class="far fa-filter p-x_2:md p-y_3 p-y_0:md"></i>
+                        <span class="font-size_down label lh_0 lowercase self_center font_medium {display_none:md}">Filter</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <ul id="filterFacets" class="ul_none font_n1 {display_none} opacity_none transition_3 min-h_50:md">
+            <li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
+    <header class="flex font-size_up">
+        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Faculty </div>
+        <a class="flex_none self_center  c_primary-n2 h:c_primary-n3 toggle opacity_5 h:opacity lh_1 font-size_down t_n2 r_n2 text_right m-l_auto user-select_none h:undecorated undecorated" data-bs-toggle="collapse" href="#collapseFaculty" role="button" aria-expanded="false" aria-controls="collapseFaculty"> collapse <i class="fa p_3 transition_3 fa-plus rotate-135"></i></a>
+    </header>
+    <main id="collapseFaculty" class="p_1 collapse show">
+        <div class="p_3 flex flex_role"><input class="br-tr_square br-br_square" type="text" name="" id="" placeholder="refine by faculty name"><button class="btn btn-secondary br-tl_square br-bl_square"><i class="fas fa-users"></i></button></div>
+    </main>
+</li>
+            <li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
+    <header class="flex font-size_up">
+        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
+        <a class="flex_none self_center  c_primary-n2 h:c_primary-n3 toggle opacity_5 h:opacity lh_1 font-size_down t_n2 r_n2 text_right m-l_auto user-select_none h:undecorated undecorated" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> collapse <i class="fa p_3 transition_3 fa-plus rotate-135"></i></a>
+    </header>
+    <main id="collapseExample" class="p_1 collapse">
+        <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check1" id="check1" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check1" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> gemifloxacin mesylate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">71</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check2" id="check2" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check2" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Warfarin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">99</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check3" id="check3" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check3" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Enoxaparin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">55</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check4" id="check4" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check4" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> oxycodone hydrochloride <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">91</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check5" id="check5" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check5" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Desmopressin Acetate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">98</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check6" id="check6" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check6" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Clemastine fumarate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">38</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check7" id="check7" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check7" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> cocoa butter, phenylephrine hcl <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">26</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check8" id="check8" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check8" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> liothyronine sodium, LEVOTHYROXINE SODIUM <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">90</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check9" id="check9" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check9" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> risperidone <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">39</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check10" id="check10" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check10" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> TRICLOSAN <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+        </ul>
+        <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
+    </main>
+</li>
+            <li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
+    <header class="flex font-size_up">
+        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
+        <a class="flex_none self_center  c_primary-n2 h:c_primary-n3 toggle opacity_5 h:opacity lh_1 font-size_down t_n2 r_n2 text_right m-l_auto user-select_none h:undecorated undecorated" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> collapse <i class="fa p_3 transition_3 fa-plus rotate-135"></i></a>
+    </header>
+    <main id="collapseExample" class="p_1 collapse">
+        <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check1" id="check1" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check1" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> gemifloxacin mesylate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">71</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check2" id="check2" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check2" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Warfarin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">99</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check3" id="check3" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check3" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Enoxaparin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">55</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check4" id="check4" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check4" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> oxycodone hydrochloride <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">91</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check5" id="check5" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check5" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Desmopressin Acetate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">98</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check6" id="check6" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check6" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Clemastine fumarate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">38</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check7" id="check7" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check7" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> cocoa butter, phenylephrine hcl <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">26</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check8" id="check8" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check8" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> liothyronine sodium, LEVOTHYROXINE SODIUM <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">90</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check9" id="check9" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check9" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> risperidone <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">39</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check10" id="check10" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check10" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> TRICLOSAN <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+        </ul>
+        <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
+    </main>
+</li>
+        </ul>
+        <script>
+            let filterZone = document.getElementById("filterZone");
+            let filterZoneNav = filterZone.querySelector("nav");
+            let filterFacets = filterZone.querySelector("#filterFacets");
+            let filterZoneExpanded = true;
+            filterZoneNav.addEventListener("click", function () {
+                if (filterZoneExpanded) {
+                    filterFacets.classList.toggle("opacity_0");
+                    filterFacets.classList.toggle("opacity_none");
+                    setTimeout(function () {
+                        filterFacets.classList.toggle("{display_none}");
+                        filterFacets.classList.toggle("display_none");
+                        filterFacets.classList.toggle("min-h_0:md");
+                        filterFacets.classList.toggle("min-h_50:md");
+                        filterZone.classList.remove("{aspect_1x1:md}", "{nav-mined}", "nav-maxed");
+                        filterZone.classList.add("aspect_1x1:md", "nav-mined", "{nav-maxed}");
+                        filterZoneNav.querySelector("span.label").classList.toggle("{display_none:md}");
+                        filterZoneNav.querySelector("span.label").classList.toggle("display_none:md");
+                        filterZoneExpanded = false;
+                    }, 300);
+                    return;
+                } else {
+                    filterZone.classList.add("{aspect_1x1:md}", "{nav-mined}", "nav-maxed");
+                    filterZone.classList.remove("aspect_1x1:md", "nav-mined", "{nav-maxed}");
+                    filterFacets.classList.toggle("min-h_0:md");
+                    filterFacets.classList.toggle("min-h_50:md");
+                    filterFacets.classList.toggle("{display_none}");
+                    filterFacets.classList.toggle("display_none");
+                    setTimeout(function () {
+                        filterFacets.classList.toggle("opacity_0");
+                        filterFacets.classList.toggle("opacity_none");
+                        filterZoneNav.querySelector("span.label").classList.toggle("{display_none:md}");
+                        filterZoneNav.querySelector("span.label").classList.toggle("display_none:md");
+                        filterZoneExpanded = true;
+                    }, 300);
+                    return;
+                }
+            });
+        </script>
+</div>
+
+MarkupWrapperClasses: 
+
+ 
+Weight:0
+ 
+Styleguide Sub.Search.Filter
+*/

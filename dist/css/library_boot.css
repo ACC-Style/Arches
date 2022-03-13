@@ -6916,11 +6916,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1087" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7680" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8902" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0755" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7934" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3861" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7274" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3152" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7661" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0172" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6952,11 +6952,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6103" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3013" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5650" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0605" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7471" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6250" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1878" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1552" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6707" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7832" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -7406,7 +7406,7 @@ Markup:
 			<div class="grid-area_menuArea">{{> "Page.Layouts.GridFiller"  modifier_class="M"}}</div>
 			<header class="grid-area_headerArea">{{> "Page.Layouts.GridFiller"  modifier_class="BreadCrumb"}}</header>
 			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md">
-				<aside class="col-start_filterArea col-end_filterArea order_last order_0:md">
+				<aside class="col-start_filterArea col-end_filterArea order_last order_unset:md">
 				{{> "Page.Layouts.SubGridFiller"  modifier_class="Filter"}}</aside>
 				<div class="col-start_insertArea-1 col-end_insertArea-1 ">
 					{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert 1"}}
@@ -7433,25 +7433,23 @@ Weight:0
 
 Styleguide Page.Layouts.PageGrid
 */
+.grid-template_content > * {
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
 .grid-template_page {
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: 1fr;
-  grid-template-areas: "menuArea menuArea" "headerArea headerArea" "mainArea mainArea" "footerArea footerArea";
+  grid-template-rows: 4rem 1fr auto;
+  grid-template-columns: 4rem 1fr;
+  grid-template-areas: "menuArea headerArea" "menuArea mainArea" "menuArea footerArea";
 }
 
 .grid-template_content {
-  grid-template-rows: repeat(4, 1fr) 4rem;
-  grid-template-columns: 1fr;
-  grid-template-areas: "insertArea1 insertArea1" "insertArea2 insertArea2" "insertArea3 insertArea3" "insertArea4 insertArea4" "filterArea filterArea";
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr) auto;
+  grid-template-areas: "insertArea1 insertArea2 insertArea3 insertArea4 filterArea";
 }
 
-@media only screen and (min-width : 768px) {
-  .grid-template_content {
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(4, 1fr) 4rem;
-    grid-template-areas: "filterArea insertArea1 insertArea2 insertArea3 insertArea4";
-  }
-}
 @media only screen and (min-width : 1024px) {
   .grid-template_page {
     grid-template-rows: 4rem 1fr auto;
@@ -7461,35 +7459,32 @@ Styleguide Page.Layouts.PageGrid
 
   .grid-template_content {
     grid-template-rows: 1fr;
-    grid-template-columns: 4rem repeat(4, 1fr);
+    grid-template-columns: auto repeat(4, 1fr);
     grid-template-areas: "filterArea insertArea1 insertArea2 insertArea3 insertArea4";
   }
 }
 .grid-area_headerArea {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: headerArea;
 }
 
 .grid-area_menuArea {
   -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: menuArea;
 }
 
 .grid-area_mainArea {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: mainArea;
 }
 
 .grid-area_footerArea {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: footerArea;
 }
 
@@ -7497,23 +7492,19 @@ Styleguide Page.Layouts.PageGrid
   .grid-area_headerArea {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
   }
   .grid-area_menuArea {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
   }
   .grid-area_mainArea {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
   }
   .grid-area_footerArea {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
   }
 }
 
@@ -7613,6 +7604,71 @@ Styleguide Page.Layouts.PageGrid
   grid-column-end: insertArea4;
 }
 
+@media only screen and (min-width : 1024px) {
+  .row-start_insertArea-1\:lg {
+    grid-row-start: insertArea-1;
+  }
+
+  .row-end_insertArea-1\:lg {
+    grid-row-end: insertArea-1;
+  }
+
+  .col-start_insertArea-1\:lg {
+    grid-column-start: insertArea1;
+  }
+
+  .col-end_insertArea-1\:lg {
+    grid-column-end: insertArea1;
+  }
+
+  .row-start_insertArea-2\:lg {
+    grid-row-start: insertArea-2;
+  }
+
+  .row-end_insertArea-2\:lg {
+    grid-row-end: insertArea-2;
+  }
+
+  .col-start_insertArea-2\:lg {
+    grid-column-start: insertArea2;
+  }
+
+  .col-end_insertArea-2\:lg {
+    grid-column-end: insertArea2;
+  }
+
+  .row-start_insertArea-3\:lg {
+    grid-row-start: insertArea-3;
+  }
+
+  .row-end_insertArea-3\:lg {
+    grid-row-end: insertArea-3;
+  }
+
+  .col-start_insertArea-3\:lg {
+    grid-column-start: insertArea3;
+  }
+
+  .col-end_insertArea-3\:lg {
+    grid-column-end: insertArea3;
+  }
+
+  .row-start_insertArea-4\:lg {
+    grid-row-start: insertArea-4;
+  }
+
+  .row-end_insertArea-4\:lg {
+    grid-row-end: insertArea-4;
+  }
+
+  .col-start_insertArea-4\:lg {
+    grid-column-start: insertArea4;
+  }
+
+  .col-end_insertArea-4\:lg {
+    grid-column-end: insertArea4;
+  }
+}
 /*
 
 Not Home Page
@@ -7626,12 +7682,12 @@ Markup:
 			<div class="grid-area_menuArea">
 				{{> "Navigation.MainNav"}}
 			</div>
-			<header class="grid-area_headerArea flex flex_row items_center justify_start {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}">
+			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}">
 				{{> "Navigation.Breadcrumb"}}
 			</header>
 			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md">
-			<aside class="col-start_filterArea col-end_filterArea order_last order_0:md">
-				{{> "Page.Layouts.SubGridFiller"  modifier_class="F"}}</aside>
+			<aside class="col-start_filterArea col-end_filterArea order_last order_unset:md">
+				{{> "Sub.Search.Filter" }}</aside>
 			<div class="col-start_insertArea-1 col-end_insertArea-2 {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}"> 
 				{{> "Page.Layouts.Filler"  modifier_class="Insert Primary"}}
 			</div>
@@ -7704,10 +7760,10 @@ Markup:
     </header>
     <div class="relative isolation_isolate overflow_hidden">
         <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down-1'}}">
-        {{> "Program.Session.Home"  modifier_class="Pericardial Side Effect Chest Pain Chest Pain Electrocardiographic Chest Pain Valvular "}}
-        {{> "Program.Session.Home"  modifier_class="Myocardial Chest Pain Arteriosclerosis Clinical Electrocardiogram Arrhythmia Valvular Heart Disease "}}
-        {{> "Program.Session.Home"  modifier_class="Chest Pain Valvular Heart Disease "}}
-        {{> "Program.Session.Home"  modifier_class="Pharmacologic Valvular Electrocardiogram Valvular Heart Disease Clinical Pharmacologic "}}
+        {{> "Program.Session.Home"  modifier_class="Electrocardiographic Valvular Heart Disease Pericardial Arteriosclerosis "}}
+        {{> "Program.Session.Home"  modifier_class=""}}
+        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Electrocardiogram Clinical Electrocardiogram Electrocardiogram "}}
+        {{> "Program.Session.Home"  modifier_class="Clinical Electrocardiogram Myocardial Side Effect Pharmacologic "}}
         </div>
         {{> 'Sub.Carousel.CustomTools'}}
     </div>
@@ -7870,11 +7926,11 @@ Markup:
     </header>
     <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.CSS.Inset.level_down-1'}} ">
         <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}} ">
-        {{> "Program.Presentation.Home"  modifier_class="Electrocardiogram Blood Vessel Blood Vessel Arteriosclerosis "}}
-        {{> "Program.Presentation.Home"  modifier_class="Electrocardiogram Cardiovascular Valvular Arrhythmia Side Effect Myocardial "}}
-        {{> "Program.Presentation.Home"  modifier_class="Myocardial Valvular Chest Pain "}}
-        {{> "Program.Presentation.Home"  modifier_class="Myocardial Clinical Electrocardiogram Arrhythmia Blood Vessel Electrocardiogram Blood Vessel "}}
-        {{> "Program.Presentation.Home"  modifier_class="Side Effect Valvular Side Effect Electrocardiographic Electrocardiogram Chest Pain Side Effect Valvular Pericardial "}}
+        {{> "Program.Presentation.Home"  modifier_class="Pharmacologic Electrocardiographic Valvular Valvular Valvular Heart Disease Electrocardiogram Side Effect Blood Vessel Arrhythmia "}}
+        {{> "Program.Presentation.Home"  modifier_class="Electrocardiogram Arteriosclerosis "}}
+        {{> "Program.Presentation.Home"  modifier_class="Electrocardiographic Pericardial Chest Pain Arrhythmia Chest Pain Myocardial Arrhythmia "}}
+        {{> "Program.Presentation.Home"  modifier_class="Electrocardiographic Myocardial Valvular Heart Disease Blood Vessel "}}
+        {{> "Program.Presentation.Home"  modifier_class="Electrocardiographic Clinical "}}
         </div>
         {{> 'Sub.Carousel.CustomToolsVertical'}}
     </div>
@@ -8175,6 +8231,245 @@ Styleguide Sub.Navigation.Breadcrumb.LastItem
 */
 /*
 
+Search Filter
+
+The filter box on the search page.
+
+Markup:
+<div id="filterZone" class="{aspect_1x1:md} {nav-mined} nav-maxed self_start bg_black-3 br_1 br_black-2 br_radius br_solid flex_auto p_2 p_3:md  shadow_emboss-light transition_3 flex flex_column">
+        <nav class="flex_auto overflow_hidden self_stretch font_4:lg font_3:md font_2 font_display font_display">
+            <ul class="flex flex_column:md flex_row gap_3 justify_start:md ul_none w_100 w_auto:md">
+                <li class="a:bg_primary a:c_white a:shadow_overlap-light {aspect_1x1:md} br_radius c_white-8 flex_none grid h:bg_black-7 h:c_white h:shadow_overlap-light nav-item p_0:md p_3">
+                    <a class="c_inherit-all h:undecorated p_3 lh_1 m-x_n1">
+                        <i class="far fa-filter p-x_2:md p-y_3 p-y_0:md"></i>
+                        <span class="font-size_down label lh_0 lowercase self_center font_medium {display_none:md}">Filter</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <ul id="filterFacets" class="ul_none font_n1 {display_none} opacity_none transition_3 min-h_50:md">
+            <li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
+    <header class="flex font-size_up">
+        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Faculty </div>
+        <a class="flex_none self_center  c_primary-n2 h:c_primary-n3 toggle opacity_5 h:opacity lh_1 font-size_down t_n2 r_n2 text_right m-l_auto user-select_none h:undecorated undecorated" data-bs-toggle="collapse" href="#collapseFaculty" role="button" aria-expanded="false" aria-controls="collapseFaculty"> collapse <i class="fa p_3 transition_3 fa-plus rotate-135"></i></a>
+    </header>
+    <main id="collapseFaculty" class="p_1 collapse show">
+        <div class="p_3 flex flex_role"><input class="br-tr_square br-br_square" type="text" name="" id="" placeholder="refine by faculty name"><button class="btn btn-secondary br-tl_square br-bl_square"><i class="fas fa-users"></i></button></div>
+    </main>
+</li>
+            <li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
+    <header class="flex font-size_up">
+        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
+        <a class="flex_none self_center  c_primary-n2 h:c_primary-n3 toggle opacity_5 h:opacity lh_1 font-size_down t_n2 r_n2 text_right m-l_auto user-select_none h:undecorated undecorated" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> collapse <i class="fa p_3 transition_3 fa-plus rotate-135"></i></a>
+    </header>
+    <main id="collapseExample" class="p_1 collapse">
+        <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check1" id="check1" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check1" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> gemifloxacin mesylate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">71</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check2" id="check2" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check2" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Warfarin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">99</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check3" id="check3" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check3" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Enoxaparin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">55</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check4" id="check4" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check4" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> oxycodone hydrochloride <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">91</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check5" id="check5" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check5" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Desmopressin Acetate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">98</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check6" id="check6" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check6" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Clemastine fumarate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">38</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check7" id="check7" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check7" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> cocoa butter, phenylephrine hcl <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">26</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check8" id="check8" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check8" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> liothyronine sodium, LEVOTHYROXINE SODIUM <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">90</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check9" id="check9" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check9" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> risperidone <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">39</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check10" id="check10" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check10" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> TRICLOSAN <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+        </ul>
+        <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
+    </main>
+</li>
+            <li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
+    <header class="flex font-size_up">
+        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
+        <a class="flex_none self_center  c_primary-n2 h:c_primary-n3 toggle opacity_5 h:opacity lh_1 font-size_down t_n2 r_n2 text_right m-l_auto user-select_none h:undecorated undecorated" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> collapse <i class="fa p_3 transition_3 fa-plus rotate-135"></i></a>
+    </header>
+    <main id="collapseExample" class="p_1 collapse">
+        <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check1" id="check1" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check1" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> gemifloxacin mesylate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">71</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check2" id="check2" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check2" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Warfarin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">99</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check3" id="check3" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check3" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Enoxaparin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">55</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check4" id="check4" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check4" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> oxycodone hydrochloride <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">91</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check5" id="check5" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check5" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Desmopressin Acetate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">98</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check6" id="check6" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check6" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Clemastine fumarate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">38</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check7" id="check7" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check7" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> cocoa butter, phenylephrine hcl <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">26</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check8" id="check8" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check8" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> liothyronine sodium, LEVOTHYROXINE SODIUM <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">90</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check9" id="check9" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check9" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> risperidone <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">39</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+            <li class="m-y_2">
+                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check10" id="check10" class="font-size_up"></div>
+                    <div class="flex_auto self_center p-l_2"><label for="check10" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> TRICLOSAN <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+                    <!---->
+                </div>
+            </li>
+        </ul>
+        <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
+    </main>
+</li>
+        </ul>
+        <script>
+            let filterZone = document.getElementById("filterZone");
+            let filterZoneNav = filterZone.querySelector("nav");
+            let filterFacets = filterZone.querySelector("#filterFacets");
+            let filterZoneExpanded = true;
+            filterZoneNav.addEventListener("click", function () {
+                if (filterZoneExpanded) {
+                    filterFacets.classList.toggle("opacity_0");
+                    filterFacets.classList.toggle("opacity_none");
+                    setTimeout(function () {
+                        filterFacets.classList.toggle("{display_none}");
+                        filterFacets.classList.toggle("display_none");
+                        filterFacets.classList.toggle("min-h_0:md");
+                        filterFacets.classList.toggle("min-h_50:md");
+                        filterZone.classList.remove("{aspect_1x1:md}", "{nav-mined}", "nav-maxed");
+                        filterZone.classList.add("aspect_1x1:md", "nav-mined", "{nav-maxed}");
+                        filterZoneNav.querySelector("span.label").classList.toggle("{display_none:md}");
+                        filterZoneNav.querySelector("span.label").classList.toggle("display_none:md");
+                        filterZoneExpanded = false;
+                    }, 300);
+                    return;
+                } else {
+                    filterZone.classList.add("{aspect_1x1:md}", "{nav-mined}", "nav-maxed");
+                    filterZone.classList.remove("aspect_1x1:md", "nav-mined", "{nav-maxed}");
+                    filterFacets.classList.toggle("min-h_0:md");
+                    filterFacets.classList.toggle("min-h_50:md");
+                    filterFacets.classList.toggle("{display_none}");
+                    filterFacets.classList.toggle("display_none");
+                    setTimeout(function () {
+                        filterFacets.classList.toggle("opacity_0");
+                        filterFacets.classList.toggle("opacity_none");
+                        filterZoneNav.querySelector("span.label").classList.toggle("{display_none:md}");
+                        filterZoneNav.querySelector("span.label").classList.toggle("display_none:md");
+                        filterZoneExpanded = true;
+                    }, 300);
+                    return;
+                }
+            });
+        </script>
+</div>
+
+MarkupWrapperClasses: 
+
+
+Weight:0
+
+Styleguide Sub.Search.Filter
+*/
+/*
+
 Body Classes
 
 The list of classes used on the body tag
@@ -8214,7 +8509,7 @@ Inset Level_up
 The list of classes used on the body tag
 
 Markup:
-inset-level_up flex_auto bg_white-7 br_radius br_solid br_1 br_black-2
+inset-level_up bg_white-7 br_radius br_solid br_1 br_black-2
 
 MarkupWrapperClasses: 
 

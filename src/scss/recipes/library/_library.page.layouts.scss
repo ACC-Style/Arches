@@ -12,7 +12,7 @@ Markup:
 			<div class="grid-area_menuArea">{{> "Page.Layouts.GridFiller"  modifier_class="M"}}</div>
 			<header class="grid-area_headerArea">{{> "Page.Layouts.GridFiller"  modifier_class="BreadCrumb"}}</header>
 			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md">
-				<aside class="col-start_filterArea col-end_filterArea order_last order_0:md">
+				<aside class="col-start_filterArea col-end_filterArea order_last order_unset:md">
 				{{> "Page.Layouts.SubGridFiller"  modifier_class="Filter"}}</aside>
 				<div class="col-start_insertArea-1 col-end_insertArea-1 ">
 					{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert 1"}}
@@ -40,23 +40,23 @@ Weight:0
 Styleguide Page.Layouts.PageGrid
 */
 
+
+.grid-template_content > * {
+	grid-row-start: 1;
+	grid-row-end: 1;
+}
+
 .grid-template_page {
-	grid-template-columns: 1fr;
-	grid-template-rows:  repeat( 4, auto);
-	grid-template-areas: 'menuArea menuArea' 'headerArea headerArea' 'mainArea mainArea' 'footerArea footerArea';
+	grid-template-columns: 4rem 1fr;
+	grid-template-rows:  4rem 1fr  auto;
+	grid-template-areas: 'menuArea headerArea' 'menuArea mainArea' 'menuArea footerArea';
 }
 .grid-template_content {
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat( 4, 1fr) 4rem;
-	grid-template-areas: 'insertArea1 insertArea1' 'insertArea2 insertArea2' 'insertArea3 insertArea3' 'insertArea4 insertArea4' 'filterArea filterArea' ;
+	grid-template-columns: repeat( 4, 1fr) auto;
+	grid-template-rows: 1fr;
+	grid-template-areas: 'insertArea1 insertArea2 insertArea3 insertArea4 filterArea';
 }
-@media #{$medium-up} {
-	.grid-template_content {
-		grid-template-columns: repeat( 4, 1fr) 4rem;
-		grid-template-rows: 1fr;
-		grid-template-areas: 'filterArea insertArea1 insertArea2 insertArea3 insertArea4';
-	}
-}
+
 @media #{$large-up} {
 	.grid-template_page {
 		grid-template-columns: 4rem 1fr;
@@ -64,7 +64,7 @@ Styleguide Page.Layouts.PageGrid
 		grid-template-areas: 'menuArea headerArea' 'menuArea mainArea' 'menuArea footerArea';
 	}
 	.grid-template_content {
-		grid-template-columns: 4rem repeat( 4, 1fr);
+		grid-template-columns: auto repeat( 4, 1fr);
 		grid-template-rows: 1fr;
 		grid-template-areas: 'filterArea insertArea1 insertArea2 insertArea3 insertArea4';
 	}
@@ -122,5 +122,20 @@ Styleguide Page.Layouts.PageGrid
         grid-column-end: insertArea#{$c};
     }
 }
-
+@media #{$large-up} {
+	@for $c from 1 through 4 {
+		.row-start_insertArea-#{$c}#{$bp-label_large} {
+			grid-row-start: insertArea-#{$c};
+		}
+		.row-end_insertArea-#{$c}#{$bp-label_large} {
+			grid-row-end: insertArea-#{$c};
+		}
+		.col-start_insertArea-#{$c}#{$bp-label_large}  {
+			grid-column-start: insertArea#{$c};
+		}
+		.col-end_insertArea-#{$c}#{$bp-label_large} {
+			grid-column-end: insertArea#{$c};
+		}
+	}	
+}
 

@@ -11,12 +11,12 @@ Markup:
 			<div class="grid-area_menuArea">
 				{{> "Navigation.MainNav"}}
 			</div>
-			<header class="grid-area_headerArea flex flex_row items_center justify_start {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}">
+			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}">
 				{{> "Navigation.Breadcrumb"}}
 			</header>
 			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md">
-			<aside class="col-start_filterArea col-end_filterArea order_last order_0:md">
-				{{> "Page.Layouts.SubGridFiller"  modifier_class="F"}}</aside>
+			<aside class="col-start_filterArea col-end_filterArea order_last order_unset:md">
+				{{> "Sub.Search.Filter" }}</aside>
 			<div class="col-start_insertArea-1 col-end_insertArea-2 {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}"> 
 				{{> "Page.Layouts.Filler"  modifier_class="Insert Primary"}}
 			</div>
