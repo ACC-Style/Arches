@@ -5,18 +5,28 @@ Not Home Page
 The sub pages have a common layouts.
  
 Markup:
-<div class="BODY_TAG-stand-in {{> "Sub.CSS.Body"}}">	
-	<div class="page-wrapper {{> "Sub.CSS.Page"}}">	
-		<div class="grid grid-template_page gap_4">
-			<header class="grid-area_headerArea flex flex_row items_center justify_start {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}">{{> "Navigation.Breadcrumb"}}</header>
-			<div class="grid-area_menuArea">{{> "Navigation.MainNav"}}</div>
-			<section class="grid grid-template_content grid-area_mainArea gap_4">
-				<aside class="col-start_filterArea col-end_filterArea h_90">{{> "Page.Layouts.SubGridFiller"  modifier_class="F"}}</aside>
-				<div class="col-start_insertArea-1 col-end_insertArea-2  {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}"> {{> "Page.Layouts.Filler"  modifier_class="Insert Primary"}}</div>
-				<div class="col-start_insertArea-3 col-end_insertArea-4  {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}"> {{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Secondary"}}</div>
+<div class="BODY_TAG-stand-in h_100 grid {{> "Sub.CSS.Body"}}">	
+	<div class="page-wrapper grid {{> "Sub.CSS.Page"}}">	
+		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
+			<div class="grid-area_menuArea">
+				{{> "Navigation.MainNav"}}
+			</div>
+			<header class="grid-area_headerArea flex flex_row items_center justify_start {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}">
+				{{> "Navigation.Breadcrumb"}}
+			</header>
+			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md">
+			<aside class="col-start_filterArea col-end_filterArea order_last order_0:md">
+				{{> "Page.Layouts.SubGridFiller"  modifier_class="F"}}</aside>
+			<div class="col-start_insertArea-1 col-end_insertArea-2 {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}"> 
+				{{> "Page.Layouts.Filler"  modifier_class="Insert Primary"}}
+			</div>
+			<div class="col-start_insertArea-3 col-end_insertArea-4 {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}">
+				{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Secondary"}}
+			</div>
 			</section>
-			<footer class="grid grid-template_content grid-area_footerArea">
-				<div class="col-start col-end">{{> "Navigation.Footer"  }}</div>
+			<footer class="grid:md flex flex_column grid-template_content grid-area_footerArea m-t_auto	">
+				{{> "Navigation.Footer.Links" modifier_class="col-end_insertArea-3 col-start" }}
+				{{> "Navigation.Footer.Logo"  modifier_class="col-start_insertArea-4 col-end" }}
 			</footer>
 		</div>
 	</div>
