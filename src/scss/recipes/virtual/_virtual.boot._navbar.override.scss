@@ -35,16 +35,20 @@ Styleguide Navigation.HeaderNav
 */
 
 /*
-Mobile Button  Header Nav
+Base Header Nav
  
 Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
  
 Markup:
-<li class="nav-item flex_auto">
+<!-- All areas that have `[ ]` in the design are areas where classes might be added or removed. -->
+<li class="nav-item flex_auto [~]">
     <a class="a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/program" target="_self">
         <!-- icon is needed for the Mobile Button Nav -->
         <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-calendar-alt display_none:lg"></i>
-        <span class="block lh_0 p-y_0 p-y_2:md text_center">Nav Link</span>
+        <span class="block lh_0 p-y_0 p-y_2:md text_center">
+        <!--  []  -->
+        Base Link Design 
+        </span>
     </a>
 </li>
 
@@ -56,12 +60,12 @@ Styleguide Navigation.HeaderNav.MobileButton
 */
 
 /*
-Mobile Toggle Header Nav
+Mobile Toggle
  
 Toggle button for the expanding mobile menu.
  
 Markup:
-<li class="nav-item flex_auto  block display_none:lg">
+<li class="nav-item flex_auto block display_none:lg">
     <a class="bg_secondary h:bg_secondary-n2 flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 font_medium h:c_white text-shadow_black-1 h:c_white justify_center nav-link text_center p-y_3:md" aria-expanded="false" aria-label="Toggle Extra Nav" data-bs-toggle="collapse" data-bs-target="#ExpandingMobileMenu" aria-controls="ExpandingMobileMenu"
     >
         <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-ellipsis-h-alt"></i>
@@ -78,12 +82,13 @@ Styleguide Navigation.HeaderNav.MobileToggle
 
 
 /*
-Mobile Hidden Header Nav
+Base Header Nav - Hide on Mobile
  
 Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
  
 Markup:
-<li class="nav-item flex_auto display_none block:lg">
+<!-- add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
+<li class="nav-item flex_auto [ display_none block:lg ]">
     <a class="a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/convocation" target="_self">
         <span class="block lh_0 p-y_0 p-y_2:md text_center">Nav Link</span>
     </a>
@@ -104,7 +109,10 @@ Header Nav basic design that is not hidden when in mobile viewport have an inclu
 Markup:
 <li class="nav-item flex_auto display_none block:lg">
     <a class="a:bg_accent [ bg_secondary-2 c_secondary-3 disabled  ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/convocation" target="_self">
-        <span class="block lh_0 p-y_0 p-y_2:md text_center"><i class="fas fa-lock p-r_3"></i>Nav Link</span>
+        <span class="block lh_0 p-y_0 p-y_2:md text_center">
+            <i class="fas fa-lock p-r_3"></i>
+            Menu Secondary Link
+        </span>
     </a>
 </li>
 
@@ -123,7 +131,8 @@ Header Nav in mobile view has an expanded more list that hides the secondary nav
  
 Markup:
 <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
-    <a class="a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
+    <a class="[~] a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
+        <!-- [~] -->
         Mobile Nav Link
     </a>
 </li>
@@ -142,8 +151,11 @@ Header Nav in mobile view has an expanded more list that hides the secondary nav
  
 Markup:
 <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
+    <!-- if disabled add these classes to the a tag -->
     <a class=" [ bg_secondary-2 c_secondary-3 disabled ]  a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg" href="/convocation" target="_self">
-        <i class="fas fa-lock p-l_3"></i> Mobile Nav Link
+        <!-- add lock icon -->
+        <i class="fas fa-lock p-l_3"></i>
+        Mobile Nav Link
     </a>
 </li>
 
@@ -159,6 +171,7 @@ Nav Active
 Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
  
 Markup:
+<!-- When Nav is Active add the [ active ] classes to all locations to the basic design -->
 <li class="nav-item flex_auto [ active ]">
     <a class="[ active ][ text-shadow_black-1 ] a:bg_accent flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/" target="_self">
         <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-home-heart display_none:lg"></i>
@@ -179,11 +192,15 @@ Disabled Header Nav is used when the conference site is open but all pages shoul
  
 Markup:
 <li class="nav-item flex_auto ">
+    <!-- If Button Disabled add the classes in the bracket to the Base Design and remove [ text-shadow_black-1 ] -->
     <a class="[ bg_secondary-2 c_secondary-3 disabled ] a:bg_accent flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/faculty" target="_blank">
         <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-users display_none:lg"></i>
-        <span class="block lh_0 p-y_0 p-y_2:md  text_center"><i class="fas fa-lock p-r_3"></i>Faculty</span>
+        <span class="block lh_0 p-y_0 p-y_2:md  text_center">
+            <!-- If Button Disabled Add This Icon --><i class="fas fa-lock p-r_3"></i>
+            Faculty
+        </span>
     </a>
-</li>
+</li> 
 
 MarkupWrapperClasses: ul_none
  

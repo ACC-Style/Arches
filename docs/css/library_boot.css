@@ -6916,11 +6916,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3018" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5310" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6733" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5327" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6529" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4003" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9261" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4067" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0294" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2506" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6952,11 +6952,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9628" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9975" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6813" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0557" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7438" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4992" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3845" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4171" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5756" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7620" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6997,8 +6997,8 @@ Markup:
     </header>
     <main id="collapseTypeAhead" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_4420" }}
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_0880" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_7215" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_0941" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -7996,11 +7996,6 @@ Weight:0
 
 Styleguide Page.Layouts.PageGrid
 */
-.grid-template_content > * {
-  grid-row-start: 1;
-  grid-row-end: 1;
-}
-
 .grid-template_page {
   grid-template-rows: 4rem 1fr auto;
   grid-template-columns: 4rem 1fr;
@@ -8167,6 +8162,71 @@ Styleguide Page.Layouts.PageGrid
   grid-column-end: insertArea4;
 }
 
+@media only screen and (min-width : 768px) {
+  .row-start_insertArea-1\:md {
+    grid-row-start: insertArea-1;
+  }
+
+  .row-end_insertArea-1\:md {
+    grid-row-end: insertArea-1;
+  }
+
+  .col-start_insertArea-1\:md {
+    grid-column-start: insertArea1;
+  }
+
+  .col-end_insertArea-1\:md {
+    grid-column-end: insertArea1;
+  }
+
+  .row-start_insertArea-2\:md {
+    grid-row-start: insertArea-2;
+  }
+
+  .row-end_insertArea-2\:md {
+    grid-row-end: insertArea-2;
+  }
+
+  .col-start_insertArea-2\:md {
+    grid-column-start: insertArea2;
+  }
+
+  .col-end_insertArea-2\:md {
+    grid-column-end: insertArea2;
+  }
+
+  .row-start_insertArea-3\:md {
+    grid-row-start: insertArea-3;
+  }
+
+  .row-end_insertArea-3\:md {
+    grid-row-end: insertArea-3;
+  }
+
+  .col-start_insertArea-3\:md {
+    grid-column-start: insertArea3;
+  }
+
+  .col-end_insertArea-3\:md {
+    grid-column-end: insertArea3;
+  }
+
+  .row-start_insertArea-4\:md {
+    grid-row-start: insertArea-4;
+  }
+
+  .row-end_insertArea-4\:md {
+    grid-row-end: insertArea-4;
+  }
+
+  .col-start_insertArea-4\:md {
+    grid-column-start: insertArea4;
+  }
+
+  .col-end_insertArea-4\:md {
+    grid-column-end: insertArea4;
+  }
+}
 @media only screen and (min-width : 1024px) {
   .row-start_insertArea-1\:lg {
     grid-row-start: insertArea-1;
@@ -8242,20 +8302,20 @@ Markup:
 <div class="BODY_TAG-stand-in h_100 grid {{> "Sub.ClassList.Body"}}">	
 	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
-			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea" }}
-			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none {{> "Sub.ClassList.Inset.level_up"}} {{> "Sub.ClassList.Inset.padding"}}">
+			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea z_4" }}
+			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> "Sub.ClassList.Inset.level_up"}} {{> "Sub.ClassList.Inset.padding"}}">
 				{{> "Navigation.Breadcrumb"}}
 			</header>
-			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md">
-			{{> "Sub.Search.FilterRail"  modifier_class="col-start_filterArea col-end_filterArea order_last order_unset:md"}}
-			<div class="col-start_insertArea-1 col-end_insertArea-3	 {{> "Sub.ClassList.Inset.level_up"}} {{> "Sub.ClassList.Inset.padding"}}"> 
-				{{> "Page.Layouts.Filler"  modifier_class="Insert Primary"}}
-			</div>
-			<div class="col-start_insertArea-4 col-end_insertArea-4 {{> "Sub.ClassList.Inset.level_up"}} {{> "Sub.ClassList.Inset.padding"}}">
-				{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Secondary"}}
-			</div>
+			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md z_1">
+				{{> "Sub.Search.FilterRail"  modifier_class="col-start_filterArea col-end_filterArea order_last order_unset:md"}}
+				<div class="col-start_insertArea-1 col-end_insertArea-3	 row-start_1 {{> "Sub.ClassList.Inset.level_up-1"}} {{> "Sub.ClassList.Inset.padding"}}"> 
+					{{> "Page.Layouts.Filler"  modifier_class="Insert Primary"}}
+				</div>
+				<div class="col-start_insertArea-4 col-end_insertArea-4  row-start_1{{> "Sub.ClassList.Inset.level_up-1"}} {{> "Sub.ClassList.Inset.padding"}}">
+					{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Secondary"}}
+				</div>
 			</section>
-			<footer class="grid:md flex flex_column grid-template_content grid-area_footerArea m-t_auto gap_4:md gap_3 p_3 ">
+			<footer class="grid:md flex flex_column grid-template_content grid-area_footerArea m-t_auto gap_4:md gap_3 p_3 z_1">
 				{{> "Navigation.Footer.Links" modifier_class="col-end_insertArea-3 col-start" }}
 				{{> "Navigation.Footer.Logo"  modifier_class="col-start_insertArea-4 col-end" }}
 			</footer>
@@ -8320,10 +8380,10 @@ Markup:
     </header>
     <div class="relative isolation_isolate overflow_hidden">
         <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.level_down-1'}}">
-        {{> "Program.Session.Home"  modifier_class="Side Effect Chest Pain Side Effect Cardiovascular Arteriosclerosis Arrhythmia Arteriosclerosis Myocardial Electrocardiographic "}}
-        {{> "Program.Session.Home"  modifier_class="Pericardial "}}
-        {{> "Program.Session.Home"  modifier_class="Blood Vessel Valvular Pericardial Blood Vessel Pharmacologic Chest Pain Chest Pain Myocardial Electrocardiogram "}}
-        {{> "Program.Session.Home"  modifier_class="Arrhythmia Valvular Arteriosclerosis "}}
+        {{> "Program.Session.Home"  modifier_class="Myocardial Chest Pain Arrhythmia Valvular Heart Disease "}}
+        {{> "Program.Session.Home"  modifier_class="Blood Vessel Blood Vessel Arrhythmia Pharmacologic Valvular Electrocardiogram Pericardial Valvular Pericardial "}}
+        {{> "Program.Session.Home"  modifier_class="Valvular Arteriosclerosis Clinical Electrocardiogram Cardiovascular Chest Pain Electrocardiographic Electrocardiogram Pharmacologic "}}
+        {{> "Program.Session.Home"  modifier_class="Pericardial Arteriosclerosis Arteriosclerosis Valvular Clinical Valvular "}}
         </div>
         {{> 'Sub.Carousel.CustomTools'}}
     </div>
@@ -8486,11 +8546,11 @@ Markup:
     </header>
     <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.ClassList.Inset.level_down-1'}} ">
         <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.level_down'}} ">
-        {{> "Program.Presentation.Home"  modifier_class="Valvular Arrhythmia Pericardial "}}
-        {{> "Program.Presentation.Home"  modifier_class="Electrocardiographic Blood Vessel Electrocardiographic Pharmacologic Side Effect Cardiovascular Cardiovascular Myocardial "}}
-        {{> "Program.Presentation.Home"  modifier_class="Arrhythmia Arrhythmia "}}
-        {{> "Program.Presentation.Home"  modifier_class="Electrocardiogram Myocardial Side Effect "}}
-        {{> "Program.Presentation.Home"  modifier_class="Clinical Cardiovascular Pericardial "}}
+        {{> "Program.Presentation.Home"  modifier_class="Cardiovascular Myocardial Chest Pain Valvular Heart Disease Valvular Heart Disease Valvular Heart Disease Chest Pain Chest Pain "}}
+        {{> "Program.Presentation.Home"  modifier_class="Valvular Arteriosclerosis Pericardial Electrocardiogram Cardiovascular Cardiovascular "}}
+        {{> "Program.Presentation.Home"  modifier_class="Blood Vessel Arrhythmia Arrhythmia Arteriosclerosis "}}
+        {{> "Program.Presentation.Home"  modifier_class="Blood Vessel Pharmacologic Clinical Cardiovascular "}}
+        {{> "Program.Presentation.Home"  modifier_class="Arrhythmia Electrocardiographic Pericardial Arteriosclerosis Clinical "}}
         </div>
         {{> 'Sub.Carousel.CustomToolsVertical'}}
     </div>

@@ -41,10 +41,6 @@ Styleguide Page.Layouts.PageGrid
 */
 
 
-.grid-template_content > * {
-	grid-row-start: 1;
-	grid-row-end: 1;
-}
 
 .grid-template_page {
 	grid-template-columns: 4rem 1fr;
@@ -121,6 +117,22 @@ Styleguide Page.Layouts.PageGrid
     .col-end_insertArea-#{$c} {
         grid-column-end: insertArea#{$c};
     }
+}
+@media #{$medium-up} {
+	@for $c from 1 through 4 {
+		.row-start_insertArea-#{$c}#{$bp-label_medium} {
+			grid-row-start: insertArea-#{$c};
+		}
+		.row-end_insertArea-#{$c}#{$bp-label_medium} {
+			grid-row-end: insertArea-#{$c};
+		}
+		.col-start_insertArea-#{$c}#{$bp-label_medium}  {
+			grid-column-start: insertArea#{$c};
+		}
+		.col-end_insertArea-#{$c}#{$bp-label_medium} {
+			grid-column-end: insertArea#{$c};
+		}
+	}	
 }
 @media #{$large-up} {
 	@for $c from 1 through 4 {
