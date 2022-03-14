@@ -6909,18 +6909,18 @@ Faceted Search
 Facet Groups
 
 Markup:
-<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3 {{ modifier_class }}">
-    <header class="flex font-size_up">
+<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3  max-w_20:md {{ modifier_class }}" >
+    <header class="flex font-size_up m-y_2">
         <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
           {{> "Sub.CollapseIcon" modifier_class="#CollapseFacetGroupID" }}
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3861" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7274" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3152" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7661" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0172" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5096" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4206" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3451" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6129" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4012" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6945,18 +6945,18 @@ Faceted Search
 Facet Groups
 
 Markup:
-<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3 {{ modifier_class }}">
-    <header class="flex font-size_up">
+<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3  max-w_20:md {{ modifier_class }}" >
+    <header class="flex font-size_up m-y_2">
         <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Primary Category </div>
-          {{> "Sub.CollapseIcon" modifier_class="#CollapseFacetGroupPrimaryID" }}
+         {{> "Sub.CollapseIcon" modifier_class="#CollapseFacetGroupPrimaryID" }}
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6250" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1878" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1552" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6707" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7832" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6471" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8366" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5846" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2369" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6025" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6976,12 +6976,50 @@ Styleguide Sub.Search.FacetedPrimary
 */
 /*
 
+Faceted Type Ahead
+
+A type ahead search that adds a selected faceted filter to the search page. This is used when filters are exceptionally long and could be difficult to read when listed out.  Authors, and mesh terms can use this pattern to add them as a filter to the search page.
+
+Markup:
+<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3 max-w_20:md {{ modifier_class }}">
+    <header class="flex font-size_up m-y_2">
+        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Type Ahead Filter</div>
+    </header>
+    <main class="p_1 collapse show">
+        <div class="p_3 flex flex_row">
+            <input class="br-tr_square br-br_square" type="text" name="" id="" placeholder="Filter Name">
+            <button class="btn btn-secondary br-tl_square br-bl_square"><i class="fas fa-users"></i></button>
+        </div>
+    </main>
+    <header class="flex font-size_up m-y_2">
+        <div class="flex_auto self_center p-l_2 lh_1 font-size_down font_bold opacity_8">Filtering By</div>
+        {{> "Sub.CollapseIcon" modifier_class="#collapseTypeAhead" }}
+    </header>
+    <main id="collapseTypeAhead" class="p_1 collapse show" style="">
+        <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_9964" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_5573" }}
+        </ul>
+        <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
+    </main>
+</li> 
+
+MarkupWrapperClasses:
+
+
+
+Weight:100
+
+Styleguide Sub.Search.Faceted.TypeAhead
+*/
+/*
+
 Collapse/Expand
 
 The collapse/expand icon is used to collapse and expand the facet group.
 
 Markup:
-<div class="c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" role="button" aria-expanded="true" aria-controls="{{modifier_class}}">
+<div class="c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" role="button" aria-expanded="true" aria-controls="{{modifier_class}}">
   <div class="flex_none self_center"> collapse </div>
   <div class="flex_none" >
       <span class="fa-stack">
@@ -7025,7 +7063,7 @@ Markup:
 <li class="m-y_2">
     <div class="input flex user-select_none relative h:bg_black-1 br_radius">
         <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check{{modifier_class}}" id="check{{modifier_class}}" class="font-size_up"></div>
-        <div class="flex_auto self_center p-l_2"><label for="check{{modifier_class}}" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> {{ modifier_class }}ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+        <div class="flex_auto self_center p-l_2 p-y_2"><label for="check{{modifier_class}}" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> {{ modifier_class }}ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
         <!---->
     </div>
 </li>
@@ -7035,6 +7073,30 @@ MarkupWrapperClasses: ul_none
 Weight:0
 
 Styleguide Sub.Search.FacetCheckbox
+*/
+/*
+
+Facet Checkbox With Trash
+
+The single checkbox that is generated by the type ahead filter search. The trash button removes the filter. 
+
+Markup:
+<li class="m-y_2">
+    <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+        <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet{{modifier_class}}" id="checkfacet{{modifier_class}}" class="font-size_up"></div>
+        <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet{{modifier_class}}" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md">  type ahead filter {{ modifier_class }}</span></label></div>
+        <div class="">
+            <button class="bg_transparent br_0 br_radius c_alert h:bg_alert-3 h:c_alert-n3 p-y_2"><i class="fas fa-trash"></i></button>
+        </div>
+        <!---->
+    </div>
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight:0
+
+Styleguide Sub.Search.FacetCheckboxWithTrash
 */
 /*
 
@@ -7395,13 +7457,514 @@ Styleguide Sub.FacultyList.NoLocation
 */
 /*
 
+Body Classes
+
+The list of classes used on the body tag
+
+Markup:
+bg_black-4 w_100 p_3:md p_2
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: Combination of classes used as a common decorators.
+
+Styleguide Sub.ClassList.Body
+*/
+/*
+
+Page Area
+
+The list of classes used on the body tag
+
+Markup:
+p_2 p_3:md isolation_isolate br_radius bg_white-7
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: Combination of classes used as a common decorators.
+
+Styleguide Sub.ClassList.Page
+*/
+/*
+
+Inset Level_up
+
+The list of classes used on the body tag
+
+Markup:
+inset-level_up bg_white-7 br_radius br_solid br_1 br_black-2
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: Combination of classes used as a common decorators.
+
+Styleguide Sub.ClassList.Inset.level_up
+*/
+/*
+
+Inset Level_up-1
+
+The list of classes used on the body tag
+
+Markup:
+inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: Combination of classes used as a common decorators.
+
+Styleguide Sub.ClassList.Inset.level_up-1
+*/
+/*
+
+Inset level_down
+
+The list of classes used on the body tag
+
+Markup:
+inset-level_down bg_black-_05 shadow_emboss-light br_radius br_solid br_1 br_black-1
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: Combination of classes used as a common decorators.
+
+Styleguide Sub.ClassList.Inset.level_down
+*/
+/*
+
+Inset level_down-1
+
+The list of classes used on the body tag
+
+Markup:
+inset-level_down-1 bg_black-1 shadow_emboss-light br_solid br_1 br_black-2 br_radius
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: Combination of classes used as a common decorators.
+
+Styleguide Sub.ClassList.Inset.level_down-1
+*/
+/*
+
+Inset level_down-2
+
+The list of classes used on the body tag
+
+Markup:
+inset-level_down-2 bg_black-2 shadow_emboss-light br_solid br_1 br_black-3 br_radius 
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: Combination of classes used as a common decorators.
+
+Styleguide Sub.ClassList.Inset.level_down-2
+*/
+/*
+
+Inset padding
+
+The list of classes used on the body tag
+
+Markup:
+p_2 p_3:md p_4:lg
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: Combination of classes used as a common decorators.
+
+Styleguide Sub.ClassList.Inset.padding
+
+*/
+/*
+
+Reading padding
+
+The list of classes used on the body tag
+
+Markup:
+p_3 p_4:lg
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: Combination of classes used as a common decorators.
+
+Styleguide Sub.ClassList.Reading.padding
+
+*/
+/*
+
+Credits Chiclets
+
+Credits show in the design when they are available to be claimed by the media they are on. 
+
+default		 -  there is no default version of credits it is always a type.
+CME		 -  CME Credits
+CNE	 -  CNE Credits
+
+Markup:
+<span class="bg_{{ modifier_class }} br_1 br_black-3 br_round c_white br_solid p-y_1 p_2 block text_center font_regular font_ui">{{ modifier_class }}</span>
+
+MarkupWrapperClasses:p_2 
+
+Weight: 0
+
+Styleguide Sub.Credit
+*/
+/*
+
+Favorite/Bookmark Button
+
+This button has an active and deactivate state depending on the users select of that media item. 
+
+default		 -   plan button
+active        -  the media item is selected
+
+Markup:
+<a class="inline-block m-x_n3 m-t_n1">
+    <span class="fa-stack fa-2x a:c_alert-n2 c_secondary-3 h:c_alert-n3 {{modifier_class}}">
+        <i class="fas fa-bookmark fa-stack-2x c_inherit-all text-shadow_black-1"></i>
+        <i class="fa-heart c_black-3 h:c_white a:c_white fa-stack-1x fas font-size_down-1  text-shadow_black-n1"></i>
+    </span>
+</a>
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+
+Styleguide Sub.ActionButtons.Favorite
+*/
+/*
+
+Progress Player Bar
+
+shows users where they left off with the player. 
+
+default		 -  Has zero player
+50          - 50% played 
+
+Markup:
+<aside class="bg_secondary-3 h:bg_primary-3 p-x_4 p-y_3 br_radius flex flex_row texture_dust relative">
+    <a class="expanded-click-area" href="player@{{ modifier_class }}"><i class="fa fa-play p-x_3 c_primary"></i></a>
+    <div class="progress w_100 self_center br_black-2 br_solid bg_black-4 br_1 br_round h_0lh font_n4">
+        <div class="progress-bar bg_accent" role="progressbar" style="width: {{ modifier_class }}%" aria-valuenow="{{ modifier_class }}" aria-valuemax="100"></div>
+    </div>
+</aside>  
+
+Styleguide Sub.ProgressBar
+*/
+/*
+
+Carousel Custom Nav
+
+Tiny Slider custom
+
+Markup:
+<div class="customize-tools">
+    <ul class="controls ul_none font-size_up-2 c_black-6" id="slider1-customize-controls" aria-label="Carousel Navigation" tabindex="0">
+        <li class="prev bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 l_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-l_0 br-br_radius br-tr_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="prev">
+            <i class="fal fa-chevron-left"></i>
+        </li>
+        <li class="next bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 r_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-r_0 br-bl_radius br-tl_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="next">
+            <i class="fal fa-chevron-right"></i>
+        </li>
+    </ul>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Sub.Carousel.CustomTools
+*/
+/*
+
+Carousel Custom Nav Vertical
+
+Tiny Slider custom
+
+Markup:
+<div class="customize-tools relative">
+    <ul class="absolute b_4 r_0 l_0 controls ul_none font-size_up-2 c_black-6 flex flex_row gap-x_4" id="slider-customize-controls-vertical" aria-label="Carousel Navigation" tabindex="0">
+        <li class="prev bg_white-8 block br-br_radius br-l_0 br-tr_radius br_1 br_primary-3 br_solid filter_blur flex flex_auto flex_column h:bg_black-1 h:c_black-9 items_center justify_center p_3 shadow_overlap-light w_50" aria-controls="customize" tabindex="-1" data-controls="prev">
+            <i class="fal fa-chevron-up"></i>
+        </li>
+        <li class="next bg_white-8 block br-bl_radius br-r_0 br-tl_radius br_1 br_primary-3 br_solid filter_blur flex flex_auto flex_column h:bg_black-1 h:c_black-9 items_center justify_center p_3 shadow_overlap-light w_50" aria-controls="customize" tabindex="-1" data-controls="next">
+            <i class="fal fa-chevron-down"></i>
+        </li>
+    </ul>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Sub.Carousel.CustomToolsVertical
+*/
+/*
+
+Carousel Custom Disabled
+
+Tiny Slider custom
+
+Markup:
+<div class="customize-tools">
+<ul class="controls ul_none font-size_up-2 c_black-6" id="slider3-customize-controls" aria-label="Carousel Navigation" tabindex="0">
+<li class="disabled prev bg_white-8 filter_blur absolute t_1 b_1 l_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-l_0 br-br_radius br-tr_radius shadow_overlap-light" aria-controls="slider3" tabindex="-1" data-controls="prev">
+    <i class="fal fa-chevron-left opacity_3"></i>
+</li>
+<li class="disabled next bg_white-8  filter_blur absolute t_1 b_1 r_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-r_0 br-bl_radius br-tl_radius shadow_overlap-light" aria-controls="slider3" tabindex="-1" data-controls="next">
+    <i class="fal fa-chevron-right opacity_3"></i>
+</li>
+</ul>
+</div>
+
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+Styleguide Sub.Carousel.CustomTools.Disabled
+*/
+/*
+
+Duration
+
+The length of the clip of video or all the of the lengths of the combined clips. 
+
+Markup:
+<li class="inline-block p-r_3 p_2">
+    <span class="font-size_up c_primary-n2 block"><i class="fal fa-clock"></i> 15</span>
+    minutes
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight: 0
+
+
+
+Styleguide Sub.Data.Duration 
+*/
+/*
+
+Presentation Count
+
+Number of presentations in the session. 
+
+Markup:
+<li class="inline-block p-r_3 p_2">
+    <span class="font-size_up c_primary-n2 block">4</span>
+    presentations
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight: 0
+
+Styleguide Sub.Data.PresentationCount
+*/
+/*
+
+Attachment Link
+
+Link to attachments. 
+
+Markup:
+<li class="inline-block br_round p-x_3 m-l_n3 p_2 z_3 h:bg_black-2 br_radius self_end">
+    <a href="" class="link flex_auto underline h:undecorated">
+    <span class="font-size_up c_primary-n2"><i class="fal fa-paperclip"></i></span> 
+    Attachments</a>
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight: 0
+
+Styleguide Sub.Data.AttachmentLink
+*/
+/*
+
+Breadcrumb First Item
+
+The not first nor last item in the breadcrumb.
+
+Markup:
+<li class="flex flex-shrink_1 flex_auto:md flex_inline h:c_primary lh_2 m-b_1 relative">
+    <i class="fal fa-home fa-fw flex_none self_center c_primary font-size_up "></i>
+    <a href="../home" class="inherit_all h:underline undecorated expanded-click-area overflow_ellipsis flex flex_nowrap nowrap">
+        <span class="display_none flex_auto inline:md self_center m-l_3">Home</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight:0
+
+Styleguide Sub.Navigation.Breadcrumb.FirstItem
+*/
+/*
+
+Breadcrumb Not-First Item
+
+The not first nor last item in the breadcrumb.
+
+Search - Search Page
+Session Name - Session Page
+
+Markup:
+<li class="flex flex-shrink_1 flex_auto:md flex_50 flex_inline h:c_primary lh_2 m-b_1 overflow_hidden relative">
+    <i class="fal fa-chevron-left fa-fw m-x_3 flex_none self_center c_primary font-size_down"></i>
+    <a href="../watching" class="inherit_all h:underline undecorated expanded-click-area overflow_ellipsis flex flex_nowrap nowrap">
+        <span class=" flex_auto self_center">Page Type Label</span>
+        <span class=" flex_auto self_center display_inline:md display_none">{{modifier_class}}</span>
+    </a>
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight:0
+
+Styleguide Sub.Navigation.Breadcrumb.NotFirstItem
+*/
+/*
+
+Breadcrumb Last Item
+
+The last Item in the Breadcrumb doesn't include a link to the page and is decorated as highlighted.
+
+Search - Search Page
+Session Name - Session Page
+
+Markup:
+<li class="flex flex-shrink_1 flex_auto:md flex_50 flex_inline lh_2 m-b_1 overflow_hidden relative c_black-7">
+    <i class="fal fa-chevron-left c_primary-n2 m-x_3 self_center font-size_down"></i>
+    <div class="flex flex_row flex_nowrap overflow_ellipsis nowrap">
+        <span class=" flex_auto self_center">Page Type Label</span>
+        <span class=" flex_auto self_center display_inline:md display_none font_medium">{{modifier_class}}</span>
+    </div>
+</li>
+
+MarkupWrapperClasses: ul_none
+
+Weight:0
+
+Styleguide Sub.Navigation.Breadcrumb.LastItem
+*/
+/*
+
+Search Filter Rail
+
+The filter box on the search page.
+
+Markup:
+<div id="filterZone" class="{aspect_1x1:md} {nav-mined} nav-maxed self_start bg_black-3 br_1 br_black-2 br_radius br_solid flex_auto p_2 p_3:md  shadow_emboss-light transition_3 flex flex_column {{modifier_class}}">
+	<nav class="flex_auto overflow_hidden self_stretch font_4:lg font_3:md font_2 font_display font_display">
+		<ul class="flex flex_column:md flex_row gap_3 justify_start:md ul_none w_100 w_auto:md">
+			<li class="a:bg_primary a:c_white a:shadow_overlap-light {aspect_1x1:md} br_radius c_white-8 flex_none grid h:bg_black-7 h:c_white h:shadow_overlap-light nav-item p_0:md p_3">
+				<a class="c_inherit-all h:undecorated p_3 lh_1 m-x_n1">
+					<i class="far fa-filter p-x_2:md p-y_3 p-y_0:md"></i>
+					<span class="font-size_down label lh_0 lowercase self_center font_medium {display_none:md}">Filter</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<ul id="filterFacets" class="ul_none font_n1 {display_none} opacity_none transition_3 min-h_50:md">
+		{{> 'Sub.Search.Faceted.TypeAhead' modifier_class="Filter1"}}
+		{{> 'Sub.Search.FacetedPrimary' modifier_class="Filter2"}}
+		{{> 'Sub.Search.Faceted' modifier_class="Filter3"}}
+	</ul>
+	<script>
+		let filterZone = document.getElementById("filterZone");
+		let filterZoneNav = filterZone.querySelector("nav");
+		let filterFacets = filterZone.querySelector("#filterFacets");
+		let filterZoneExpanded = true;
+		filterZoneNav.addEventListener("click", function () {
+			if (filterZoneExpanded) {
+				filterFacets.classList.toggle("opacity_0");
+				filterFacets.classList.toggle("opacity_none");
+				setTimeout(function () {
+					filterFacets.classList.toggle("{display_none}");
+					filterFacets.classList.toggle("display_none");
+					filterFacets.classList.toggle("min-h_0:md");
+					filterFacets.classList.toggle("min-h_50:md");
+					filterZone.classList.remove("{aspect_1x1:md}", "{nav-mined}", "nav-maxed");
+					filterZone.classList.add("aspect_1x1:md", "nav-mined", "{nav-maxed}");
+					filterZoneNav.querySelector("span.label").classList.toggle("{display_none:md}");
+					filterZoneNav.querySelector("span.label").classList.toggle("display_none:md");
+					filterZoneExpanded = false;
+				}, 300);
+				return;
+			} else {
+				filterZone.classList.add("{aspect_1x1:md}", "{nav-mined}", "nav-maxed");
+				filterZone.classList.remove("aspect_1x1:md", "nav-mined", "{nav-maxed}");
+				filterFacets.classList.toggle("min-h_0:md");
+				filterFacets.classList.toggle("min-h_50:md");
+				filterFacets.classList.toggle("{display_none}");
+				filterFacets.classList.toggle("display_none");
+				setTimeout(function () {
+					filterFacets.classList.toggle("opacity_0");
+					filterFacets.classList.toggle("opacity_none");
+					filterZoneNav.querySelector("span.label").classList.toggle("{display_none:md}");
+					filterZoneNav.querySelector("span.label").classList.toggle("display_none:md");
+					filterZoneExpanded = true;
+				}, 300);
+				return;
+			}
+		});
+	</script>
+</div>
+
+MarkupWrapperClasses: 
+
+
+Weight: -1000
+
+Styleguide Sub.Search.FilterRail
+*/
+/*
+
+Youtube Embed Playlist
+
+Markup:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLCROrnGF2SYByKd5KHoqjRZXM4hwlHgjH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Sub.YoutubeEmbedPlaylist
+*/
+/*
+
 Base Grid Areas
 
 The library base is a grid system that is used for the library page.
 
 Markup:
-<div class="BODY_TAG-stand-in h_100 grid:md flex flex_column {{> "Sub.CSS.Body"}}">	
-	<div class="page-wrapper grid {{> "Sub.CSS.Page"}}">	
+<div class="BODY_TAG-stand-in h_100 grid:md flex flex_column {{> "Sub.ClassList.Body"}}">	
+	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			<div class="grid-area_menuArea">{{> "Page.Layouts.GridFiller"  modifier_class="M"}}</div>
 			<header class="grid-area_headerArea">{{> "Page.Layouts.GridFiller"  modifier_class="BreadCrumb"}}</header>
@@ -7676,22 +8239,19 @@ Not Home Page
 The sub pages have a common layouts.
 
 Markup:
-<div class="BODY_TAG-stand-in h_100 grid {{> "Sub.CSS.Body"}}">	
-	<div class="page-wrapper grid {{> "Sub.CSS.Page"}}">	
+<div class="BODY_TAG-stand-in h_100 grid {{> "Sub.ClassList.Body"}}">	
+	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
-			<div class="grid-area_menuArea">
-				{{> "Navigation.MainNav"}}
-			</div>
-			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}">
+			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea" }}
+			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none {{> "Sub.ClassList.Inset.level_up"}} {{> "Sub.ClassList.Inset.padding"}}">
 				{{> "Navigation.Breadcrumb"}}
 			</header>
 			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md">
-			<aside class="col-start_filterArea col-end_filterArea order_last order_unset:md">
-				{{> "Sub.Search.Filter" }}</aside>
-			<div class="col-start_insertArea-1 col-end_insertArea-2 {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}"> 
+			{{> "Sub.Search.FilterRail"  modifier_class="col-start_filterArea col-end_filterArea order_last order_unset:md"}}
+			<div class="col-start_insertArea-1 col-end_insertArea-2 {{> "Sub.ClassList.Inset.level_up"}} {{> "Sub.ClassList.Inset.padding"}}"> 
 				{{> "Page.Layouts.Filler"  modifier_class="Insert Primary"}}
 			</div>
-			<div class="col-start_insertArea-3 col-end_insertArea-4 {{> "Sub.CSS.Inset.level_up"}} {{> "Sub.CSS.Inset.padding"}}">
+			<div class="col-start_insertArea-3 col-end_insertArea-4 {{> "Sub.ClassList.Inset.level_up"}} {{> "Sub.ClassList.Inset.padding"}}">
 				{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Secondary"}}
 			</div>
 			</section>
@@ -7754,16 +8314,16 @@ Horizontal Carousels to have discoverable areas on the home pages.
 
 
 Markup:
-<section class='font_0 font_1:lg font_ui font_regular {{> 'Sub.CSS.Inset.level_up-1'}} {{> 'Sub.CSS.Inset.padding'}}'>
+<section class='font_0 font_1:lg font_ui font_regular {{> 'Sub.ClassList.Inset.level_up-1'}} {{> 'Sub.ClassList.Inset.padding'}}'>
     <header class="font_display font-size_up-2 c_primary-n1m-b_3 m-b_3:lg lh_1 m-t_4:md m-t_3">
         <h2 class="lh_1 m_0 font_regular lowercase">Featured</h2>
     </header>
     <div class="relative isolation_isolate overflow_hidden">
-        <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down-1'}}">
-        {{> "Program.Session.Home"  modifier_class="Electrocardiographic Valvular Heart Disease Pericardial Arteriosclerosis "}}
-        {{> "Program.Session.Home"  modifier_class=""}}
-        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Electrocardiogram Clinical Electrocardiogram Electrocardiogram "}}
-        {{> "Program.Session.Home"  modifier_class="Clinical Electrocardiogram Myocardial Side Effect Pharmacologic "}}
+        <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.level_down-1'}}">
+        {{> "Program.Session.Home"  modifier_class="Myocardial Side Effect Electrocardiogram Pericardial Valvular Heart Disease Side Effect Arteriosclerosis Electrocardiographic Arteriosclerosis "}}
+        {{> "Program.Session.Home"  modifier_class="Valvular Heart Disease Electrocardiogram Arrhythmia Blood Vessel Cardiovascular Valvular "}}
+        {{> "Program.Session.Home"  modifier_class="Valvular Pharmacologic Cardiovascular Blood Vessel Blood Vessel Pericardial Blood Vessel Valvular Heart Disease "}}
+        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Blood Vessel Arrhythmia Electrocardiogram Blood Vessel Valvular Heart Disease Myocardial Electrocardiogram "}}
         </div>
         {{> 'Sub.Carousel.CustomTools'}}
     </div>
@@ -7849,7 +8409,7 @@ The empty state of the carousel
 
 Markup:
 <div class="p-y_3"> 
-    <div class="tns-outer {{> 'Sub.CSS.Inset.level_down'}}  font_0 font_ui font_regular" id="slider3-ow">
+    <div class="tns-outer {{> 'Sub.ClassList.Inset.level_down'}}  font_0 font_ui font_regular" id="slider3-ow">
         <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">4 to 8</span> of 4</div>
         <div id="slider3-mw" class="tns-ovh">
             <div class="tns-inner" id="slider3-iw">
@@ -7920,17 +8480,17 @@ Shows a short list of presentations
 default		 - 
 
 Markup:
-<section class='font_0 font_1:lg font_ui font_regular  {{> 'Sub.CSS.Inset.level_up-1'}} {{> 'Sub.CSS.Inset.padding'}}'>
+<section class='font_0 font_1:lg font_ui font_regular  {{> 'Sub.ClassList.Inset.level_up-1'}} {{> 'Sub.ClassList.Inset.padding'}}'>
     <header class="font_display font-size_up-2 c_primary-n1m-b_3 m-b_3:lg lh_1 m-t_4:md m-t_3">
         <h2 class="lh_1 m_0 font_regular lowercase">Continue Watching</h2>
     </header>
-    <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.CSS.Inset.level_down-1'}} ">
-        <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}} ">
-        {{> "Program.Presentation.Home"  modifier_class="Pharmacologic Electrocardiographic Valvular Valvular Valvular Heart Disease Electrocardiogram Side Effect Blood Vessel Arrhythmia "}}
-        {{> "Program.Presentation.Home"  modifier_class="Electrocardiogram Arteriosclerosis "}}
-        {{> "Program.Presentation.Home"  modifier_class="Electrocardiographic Pericardial Chest Pain Arrhythmia Chest Pain Myocardial Arrhythmia "}}
-        {{> "Program.Presentation.Home"  modifier_class="Electrocardiographic Myocardial Valvular Heart Disease Blood Vessel "}}
-        {{> "Program.Presentation.Home"  modifier_class="Electrocardiographic Clinical "}}
+    <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.ClassList.Inset.level_down-1'}} ">
+        <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.level_down'}} ">
+        {{> "Program.Presentation.Home"  modifier_class=""}}
+        {{> "Program.Presentation.Home"  modifier_class="Pericardial Pharmacologic Chest Pain Pericardial Pharmacologic Electrocardiographic Electrocardiographic "}}
+        {{> "Program.Presentation.Home"  modifier_class="Side Effect Arrhythmia Valvular Electrocardiogram Myocardial Clinical Cardiovascular Side Effect Electrocardiogram "}}
+        {{> "Program.Presentation.Home"  modifier_class="Chest Pain Side Effect Valvular Heart Disease Pericardial Arteriosclerosis Valvular Heart Disease Electrocardiographic "}}
+        {{> "Program.Presentation.Home"  modifier_class=""}}
         </div>
         {{> 'Sub.Carousel.CustomToolsVertical'}}
     </div>
@@ -7969,669 +8529,13 @@ Styleguide Page.Home.ContinuePlaying
 */
 /*
 
-Credits Chiclets
-
-Credits show in the design when they are available to be claimed by the media they are on. 
-
-default		 -  there is no default version of credits it is always a type.
-CME		 -  CME Credits
-CNE	 -  CNE Credits
-
-Markup:
-<span class="bg_{{ modifier_class }} br_1 br_black-3 br_round c_white br_solid p-y_1 p_2 block text_center font_regular font_ui">{{ modifier_class }}</span>
-
-MarkupWrapperClasses:p_2 
-
-Weight: 0
-
-Styleguide Sub.Credit
-*/
-/*
-
-Favorite/Bookmark Button
-
-This button has an active and deactivate state depending on the users select of that media item. 
-
-default		 -   plan button
-active        -  the media item is selected
-
-Markup:
-<a class="inline-block m-x_n3 m-t_n1">
-    <span class="fa-stack fa-2x a:c_alert-n2 c_secondary-3 h:c_alert-n3 {{modifier_class}}">
-        <i class="fas fa-bookmark fa-stack-2x c_inherit-all text-shadow_black-1"></i>
-        <i class="fa-heart c_black-3 h:c_white a:c_white fa-stack-1x fas font-size_down-1  text-shadow_black-n1"></i>
-    </span>
-</a>
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-
-Styleguide Sub.ActionButtons.Favorite
-*/
-/*
-
-Progress Player Bar
-
-shows users where they left off with the player. 
-
-default		 -  Has zero player
-50          - 50% played 
-
-Markup:
-<aside class="bg_secondary-3 h:bg_primary-3 p-x_4 p-y_3 br_radius flex flex_row texture_dust relative">
-    <a class="expanded-click-area" href="player@{{ modifier_class }}"><i class="fa fa-play p-x_3 c_primary"></i></a>
-    <div class="progress w_100 self_center br_black-2 br_solid bg_black-4 br_1 br_round h_0lh font_n4">
-        <div class="progress-bar bg_accent" role="progressbar" style="width: {{ modifier_class }}%" aria-valuenow="{{ modifier_class }}" aria-valuemax="100"></div>
-    </div>
-</aside>  
-
-Styleguide Sub.ProgressBar
-*/
-/*
-
-Carousel Custom Nav
-
-Tiny Slider custom
-
-Markup:
-<div class="customize-tools">
-    <ul class="controls ul_none font-size_up-2 c_black-6" id="slider1-customize-controls" aria-label="Carousel Navigation" tabindex="0">
-        <li class="prev bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 l_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-l_0 br-br_radius br-tr_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="prev">
-            <i class="fal fa-chevron-left"></i>
-        </li>
-        <li class="next bg_white-8 h:bg_black-1 h:c_black-9 filter_blur absolute t_1 b_1 r_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-r_0 br-bl_radius br-tl_radius shadow_overlap-light" aria-controls="customize" tabindex="-1" data-controls="next">
-            <i class="fal fa-chevron-right"></i>
-        </li>
-    </ul>
-</div>
-
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-Styleguide Sub.Carousel.CustomTools
-*/
-/*
-
-Carousel Custom Nav Vertical
-
-Tiny Slider custom
-
-Markup:
-<div class="customize-tools relative">
-    <ul class="absolute b_4 r_0 l_0 controls ul_none font-size_up-2 c_black-6 flex flex_row gap-x_4" id="slider-customize-controls-vertical" aria-label="Carousel Navigation" tabindex="0">
-        <li class="prev bg_white-8 block br-br_radius br-l_0 br-tr_radius br_1 br_primary-3 br_solid filter_blur flex flex_auto flex_column h:bg_black-1 h:c_black-9 items_center justify_center p_3 shadow_overlap-light w_50" aria-controls="customize" tabindex="-1" data-controls="prev">
-            <i class="fal fa-chevron-up"></i>
-        </li>
-        <li class="next bg_white-8 block br-bl_radius br-r_0 br-tl_radius br_1 br_primary-3 br_solid filter_blur flex flex_auto flex_column h:bg_black-1 h:c_black-9 items_center justify_center p_3 shadow_overlap-light w_50" aria-controls="customize" tabindex="-1" data-controls="next">
-            <i class="fal fa-chevron-down"></i>
-        </li>
-    </ul>
-</div>
-
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-Styleguide Sub.Carousel.CustomToolsVertical
-*/
-/*
-
-Carousel Custom Disabled
-
-Tiny Slider custom
-
-Markup:
-<div class="customize-tools">
-<ul class="controls ul_none font-size_up-2 c_black-6" id="slider3-customize-controls" aria-label="Carousel Navigation" tabindex="0">
-<li class="disabled prev bg_white-8 filter_blur absolute t_1 b_1 l_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-l_0 br-br_radius br-tr_radius shadow_overlap-light" aria-controls="slider3" tabindex="-1" data-controls="prev">
-    <i class="fal fa-chevron-left opacity_3"></i>
-</li>
-<li class="disabled next bg_white-8  filter_blur absolute t_1 b_1 r_0 p_3 flex_column flex justify_center items_center br_primary-3 br_solid br_1 br-r_0 br-bl_radius br-tl_radius shadow_overlap-light" aria-controls="slider3" tabindex="-1" data-controls="next">
-    <i class="fal fa-chevron-right opacity_3"></i>
-</li>
-</ul>
-</div>
-
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-Styleguide Sub.Carousel.CustomTools.Disabled
-*/
-/*
-
-Duration
-
-The length of the clip of video or all the of the lengths of the combined clips. 
-
-Markup:
-<li class="inline-block p-r_3 p_2">
-    <span class="font-size_up c_primary-n2 block"><i class="fal fa-clock"></i> 15</span>
-    minutes
-</li>
-
-MarkupWrapperClasses: ul_none
-
-Weight: 0
-
-
-
-Styleguide Sub.Data.Duration 
-*/
-/*
-
-Presentation Count
-
-Number of presentations in the session. 
-
-Markup:
-<li class="inline-block p-r_3 p_2">
-    <span class="font-size_up c_primary-n2 block">4</span>
-    presentations
-</li>
-
-MarkupWrapperClasses: ul_none
-
-Weight: 0
-
-Styleguide Sub.Data.PresentationCount
-*/
-/*
-
-Attachment Link
-
-Link to attachments. 
-
-Markup:
-<li class="inline-block br_round p-x_3 m-l_n3 p_2 z_3 h:bg_black-2 br_radius self_end">
-    <a href="" class="link flex_auto underline h:undecorated">
-    <span class="font-size_up c_primary-n2"><i class="fal fa-paperclip"></i></span> 
-    Attachments</a>
-</li>
-
-MarkupWrapperClasses: ul_none
-
-Weight: 0
-
-Styleguide Sub.Data.AttachmentLink
-*/
-/*
-
-Breadcrumb First Item
-
-The not first nor last item in the breadcrumb.
-
-Markup:
-<li class="flex flex-shrink_1 flex_auto:md flex_inline h:c_primary lh_2 m-b_1 relative">
-    <i class="fal fa-home fa-fw flex_none self_center c_primary font-size_up "></i>
-    <a href="../home" class="inherit_all h:underline undecorated expanded-click-area overflow_ellipsis flex flex_nowrap nowrap">
-        <span class="display_none flex_auto inline:md self_center m-l_3">Home</span>
-    </a>
-</li>
-
-MarkupWrapperClasses: ul_none
-
-Weight:0
-
-Styleguide Sub.Navigation.Breadcrumb.FirstItem
-*/
-/*
-
-Breadcrumb Not-First Item
-
-The not first nor last item in the breadcrumb.
-
-Search - Search Page
-Session Name - Session Page
-
-Markup:
-<li class="flex flex-shrink_1 flex_auto:md flex_50 flex_inline h:c_primary lh_2 m-b_1 overflow_hidden relative">
-    <i class="fal fa-chevron-left fa-fw m-x_3 flex_none self_center c_primary font-size_down"></i>
-    <a href="../watching" class="inherit_all h:underline undecorated expanded-click-area overflow_ellipsis flex flex_nowrap nowrap">
-        <span class=" flex_auto self_center">Page Type Label</span>
-        <span class=" flex_auto self_center display_inline:md display_none">{{modifier_class}}</span>
-    </a>
-</li>
-
-MarkupWrapperClasses: ul_none
-
-Weight:0
-
-Styleguide Sub.Navigation.Breadcrumb.NotFirstItem
-*/
-/*
-
-Breadcrumb Last Item
-
-The last Item in the Breadcrumb doesn't include a link to the page and is decorated as highlighted.
-
-Search - Search Page
-Session Name - Session Page
-
-Markup:
-<li class="flex flex-shrink_1 flex_auto:md flex_50 flex_inline lh_2 m-b_1 overflow_hidden relative c_black-7">
-    <i class="fal fa-chevron-left c_primary-n2 m-x_3 self_center font-size_down"></i>
-    <div class="flex flex_row flex_nowrap overflow_ellipsis nowrap">
-        <span class=" flex_auto self_center">Page Type Label</span>
-        <span class=" flex_auto self_center display_inline:md display_none font_medium">{{modifier_class}}</span>
-    </div>
-</li>
-
-MarkupWrapperClasses: ul_none
-
-Weight:0
-
-Styleguide Sub.Navigation.Breadcrumb.LastItem
-*/
-/*
-
-Search Filter
-
-The filter box on the search page.
-
-Markup:
-<div id="filterZone" class="{aspect_1x1:md} {nav-mined} nav-maxed self_start bg_black-3 br_1 br_black-2 br_radius br_solid flex_auto p_2 p_3:md  shadow_emboss-light transition_3 flex flex_column">
-        <nav class="flex_auto overflow_hidden self_stretch font_4:lg font_3:md font_2 font_display font_display">
-            <ul class="flex flex_column:md flex_row gap_3 justify_start:md ul_none w_100 w_auto:md">
-                <li class="a:bg_primary a:c_white a:shadow_overlap-light {aspect_1x1:md} br_radius c_white-8 flex_none grid h:bg_black-7 h:c_white h:shadow_overlap-light nav-item p_0:md p_3">
-                    <a class="c_inherit-all h:undecorated p_3 lh_1 m-x_n1">
-                        <i class="far fa-filter p-x_2:md p-y_3 p-y_0:md"></i>
-                        <span class="font-size_down label lh_0 lowercase self_center font_medium {display_none:md}">Filter</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <ul id="filterFacets" class="ul_none font_n1 {display_none} opacity_none transition_3 min-h_50:md">
-            <li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
-    <header class="flex font-size_up">
-        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Faculty </div>
-        <a class="flex_none self_center  c_primary-n2 h:c_primary-n3 toggle opacity_5 h:opacity lh_1 font-size_down t_n2 r_n2 text_right m-l_auto user-select_none h:undecorated undecorated" data-bs-toggle="collapse" href="#collapseFaculty" role="button" aria-expanded="false" aria-controls="collapseFaculty"> collapse <i class="fa p_3 transition_3 fa-plus rotate-135"></i></a>
-    </header>
-    <main id="collapseFaculty" class="p_1 collapse show">
-        <div class="p_3 flex flex_role"><input class="br-tr_square br-br_square" type="text" name="" id="" placeholder="refine by faculty name"><button class="btn btn-secondary br-tl_square br-bl_square"><i class="fas fa-users"></i></button></div>
-    </main>
-</li>
-            <li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
-    <header class="flex font-size_up">
-        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
-        <a class="flex_none self_center  c_primary-n2 h:c_primary-n3 toggle opacity_5 h:opacity lh_1 font-size_down t_n2 r_n2 text_right m-l_auto user-select_none h:undecorated undecorated" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> collapse <i class="fa p_3 transition_3 fa-plus rotate-135"></i></a>
-    </header>
-    <main id="collapseExample" class="p_1 collapse">
-        <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check1" id="check1" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check1" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> gemifloxacin mesylate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">71</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check2" id="check2" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check2" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Warfarin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">99</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check3" id="check3" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check3" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Enoxaparin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">55</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check4" id="check4" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check4" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> oxycodone hydrochloride <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">91</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check5" id="check5" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check5" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Desmopressin Acetate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">98</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check6" id="check6" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check6" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Clemastine fumarate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">38</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check7" id="check7" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check7" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> cocoa butter, phenylephrine hcl <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">26</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check8" id="check8" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check8" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> liothyronine sodium, LEVOTHYROXINE SODIUM <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">90</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check9" id="check9" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check9" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> risperidone <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">39</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check10" id="check10" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check10" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> TRICLOSAN <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-        </ul>
-        <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
-    </main>
-</li>
-            <li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3">
-    <header class="flex font-size_up">
-        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
-        <a class="flex_none self_center  c_primary-n2 h:c_primary-n3 toggle opacity_5 h:opacity lh_1 font-size_down t_n2 r_n2 text_right m-l_auto user-select_none h:undecorated undecorated" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> collapse <i class="fa p_3 transition_3 fa-plus rotate-135"></i></a>
-    </header>
-    <main id="collapseExample" class="p_1 collapse">
-        <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check1" id="check1" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check1" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> gemifloxacin mesylate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">71</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check2" id="check2" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check2" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Warfarin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">99</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check3" id="check3" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check3" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Enoxaparin Sodium <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">55</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check4" id="check4" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check4" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> oxycodone hydrochloride <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">91</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check5" id="check5" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check5" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Desmopressin Acetate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">98</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check6" id="check6" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check6" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> Clemastine fumarate <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">38</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check7" id="check7" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check7" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> cocoa butter, phenylephrine hcl <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">26</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check8" id="check8" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check8" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> liothyronine sodium, LEVOTHYROXINE SODIUM <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">90</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check9" id="check9" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check9" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> risperidone <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">39</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-            <li class="m-y_2">
-                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
-                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check10" id="check10" class="font-size_up"></div>
-                    <div class="flex_auto self_center p-l_2"><label for="check10" class="font-size_up lh_2"><span class="font_regular p-y_2 inline-block p-y_1:md"> TRICLOSAN <small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
-                    <!---->
-                </div>
-            </li>
-        </ul>
-        <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
-    </main>
-</li>
-        </ul>
-        <script>
-            let filterZone = document.getElementById("filterZone");
-            let filterZoneNav = filterZone.querySelector("nav");
-            let filterFacets = filterZone.querySelector("#filterFacets");
-            let filterZoneExpanded = true;
-            filterZoneNav.addEventListener("click", function () {
-                if (filterZoneExpanded) {
-                    filterFacets.classList.toggle("opacity_0");
-                    filterFacets.classList.toggle("opacity_none");
-                    setTimeout(function () {
-                        filterFacets.classList.toggle("{display_none}");
-                        filterFacets.classList.toggle("display_none");
-                        filterFacets.classList.toggle("min-h_0:md");
-                        filterFacets.classList.toggle("min-h_50:md");
-                        filterZone.classList.remove("{aspect_1x1:md}", "{nav-mined}", "nav-maxed");
-                        filterZone.classList.add("aspect_1x1:md", "nav-mined", "{nav-maxed}");
-                        filterZoneNav.querySelector("span.label").classList.toggle("{display_none:md}");
-                        filterZoneNav.querySelector("span.label").classList.toggle("display_none:md");
-                        filterZoneExpanded = false;
-                    }, 300);
-                    return;
-                } else {
-                    filterZone.classList.add("{aspect_1x1:md}", "{nav-mined}", "nav-maxed");
-                    filterZone.classList.remove("aspect_1x1:md", "nav-mined", "{nav-maxed}");
-                    filterFacets.classList.toggle("min-h_0:md");
-                    filterFacets.classList.toggle("min-h_50:md");
-                    filterFacets.classList.toggle("{display_none}");
-                    filterFacets.classList.toggle("display_none");
-                    setTimeout(function () {
-                        filterFacets.classList.toggle("opacity_0");
-                        filterFacets.classList.toggle("opacity_none");
-                        filterZoneNav.querySelector("span.label").classList.toggle("{display_none:md}");
-                        filterZoneNav.querySelector("span.label").classList.toggle("display_none:md");
-                        filterZoneExpanded = true;
-                    }, 300);
-                    return;
-                }
-            });
-        </script>
-</div>
-
-MarkupWrapperClasses: 
-
-
-Weight:0
-
-Styleguide Sub.Search.Filter
-*/
-/*
-
-Body Classes
-
-The list of classes used on the body tag
-
-Markup:
-bg_black-4 w_100 p_3:md p_2
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-NOTE: Combination of classes used as a common decorators.
-
-Styleguide Sub.CSS.Body
-*/
-/*
-
-Page Area
-
-The list of classes used on the body tag
-
-Markup:
-p_2 p_3:md isolation_isolate br_radius bg_white-7
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-NOTE: Combination of classes used as a common decorators.
-
-Styleguide Sub.CSS.Page
-*/
-/*
-
-Inset Level_up
-
-The list of classes used on the body tag
-
-Markup:
-inset-level_up bg_white-7 br_radius br_solid br_1 br_black-2
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-NOTE: Combination of classes used as a common decorators.
-
-Styleguide Sub.CSS.Inset.level_up
-*/
-/*
-
-Inset Level_up-1
-
-The list of classes used on the body tag
-
-Markup:
-inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-NOTE: Combination of classes used as a common decorators.
-
-Styleguide Sub.CSS.Inset.level_up-1
-*/
-/*
-
-Inset level_down
-
-The list of classes used on the body tag
-
-Markup:
-inset-level_down bg_black-_05 shadow_emboss-light br_radius br_solid br_1 br_black-1
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-NOTE: Combination of classes used as a common decorators.
-
-Styleguide Sub.CSS.Inset.level_down
-*/
-/*
-
-Inset level_down-1
-
-The list of classes used on the body tag
-
-Markup:
-inset-level_down-1 bg_black-1 shadow_emboss-light br_solid br_1 br_black-2 br_radius
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-NOTE: Combination of classes used as a common decorators.
-
-Styleguide Sub.CSS.Inset.level_down-1
-*/
-/*
-
-Inset level_down-2
-
-The list of classes used on the body tag
-
-Markup:
-inset-level_down-2 bg_black-2 shadow_emboss-light br_solid br_1 br_black-3 br_radius 
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-NOTE: Combination of classes used as a common decorators.
-
-Styleguide Sub.CSS.Inset.level_down-2
-*/
-/*
-
-Inset padding
-
-The list of classes used on the body tag
-
-Markup:
-p_2 p_3:md p_4:lg
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-NOTE: Combination of classes used as a common decorators.
-
-Styleguide Sub.CSS.Inset.padding
-
-*/
-/*
-
-Reading padding
-
-The list of classes used on the body tag
-
-Markup:
-p_3 p_4:lg
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-NOTE: Combination of classes used as a common decorators.
-
-Styleguide Sub.CSS.Inset.padding-reading
-
-*/
-/*
-
 Main Nav
 
 THe library because it is an app uses a different style of nav which is more align to streaming software.
 
 
 Markup:
-<div class="display_none flex:md sticky t_3">
+<div class="display_none flex:md sticky t_3 {{modifier_class}}">
         <nav style="height: calc(100vh - 2rem); width: 35rem;" id="navigation" class="absolute h_100vh shadow_emboss-light filter_blur overflow_hidden br_radius bg_black-7 flex:md flex_column:md justify_between p-t_0 p-b_3 p-l_3 p-r_3 p-b_4:md p-t_4:md p-r_0:md font_4:lg font_3:md font_2 transition_3 font_display nav-mined">
             <ul class="flex flex_column:md flex_row ul_none justify_around justify_start:md gap_3 w_100 w_auto:md">
                 <li class="nav-item flex_none br_radius p-t_3 m-t_n3 m-t_0:md p-t_0:md p-r_4:md m-r_n4:md c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light active">
@@ -8769,7 +8673,7 @@ Footer Links
 
 
 Markup:
-<div id="subfooter" class="bg_primary-1 flex_auto font_n1 z_1 br_radius texture_dust shadow_emboss-light {{> 'Sub.CSS.Inset.padding' }} {{ modifier_class}}">
+<div id="subfooter" class="bg_primary-1 flex_auto font_n1 z_1 br_radius texture_dust shadow_emboss-light {{> 'Sub.ClassList.Inset.padding' }} {{ modifier_class}}">
     <ul class="m_auto footer-bottom-links ul_none max-w_80">
         <li class="inline p_2"><a href="//www.acc.org/footer-pages/media-center" class="c_white-6 h:c_white">Media Center</a></li>
         <li class="inline p_2"><a href="//www.acc.org/footer-pages/quick-start-guide" class="c_white-6 h:c_white">ACC.org Quick Start Guide</a></li>
@@ -8799,7 +8703,7 @@ Footer Logo
 The ACC Logo in the footer.
 
 Markup:
-<div id="logo" class="bg_white-4 br_1 br_black-1 br_round br-br_radius br-tl_radius  br_solid flex flex_none flex_row items_center justify_center  shadow_bevel-light {{> 'Sub.CSS.Inset.padding'}} {{ modifier_class}} ">
+<div id="logo" class="bg_white-4 br_1 br_black-1 br_round br-br_radius br-tl_radius  br_solid flex flex_none flex_row items_center justify_center  shadow_bevel-light {{> 'Sub.ClassList.Inset.padding'}} {{ modifier_class}} ">
     <h2 class="logo_condensed w_100 max-w_20">American College of Cardiology</h2>
 </div>
 
@@ -8809,24 +8713,6 @@ Weight:0
 
 Styleguide Navigation.Footer.Logo
 */
-@media only screen and (min-width: 768px) {
-  .main-area-offset {
-    margin-left: 4rem;
-  }
-
-  .nav-maxed {
-    max-width: clamp(15vw, 25rem, 100%);
-  }
-
-  .nav-mined {
-    max-width: 4rem;
-  }
-}
-html:not([data-scroll="0"]) #navigation_mobile .label {
-  height: 0;
-  opacity: 0 !important;
-}
-
 /*
 
 Sessions - Homepage
@@ -8836,7 +8722,7 @@ Session Designs on the home page.
 
 Markup:
 <div>
-<article class="flex flex_grow w_100 {{> 'Sub.CSS.Inset.level_up-1'}} {{> 'Sub.CSS.Inset.padding-reading'}}">
+<article class="flex flex_grow w_100 {{> 'Sub.ClassList.Inset.level_up-1'}} {{> 'Sub.ClassList.Reading.padding'}}">
     <div class="flex flex_row font_ui justify_start relative w_100">
         <main
             class="flex flex_column flex_auto justify_between flex_auto p-l_4 p-x_4:md p-y_3 p-y_3:lg relative w_100 isolation_isolate">
@@ -8896,7 +8782,7 @@ Presentation designs on the home page.
 
 Markup:
 <div>
-    <article class="flex flex_grow flex_column w_100  {{> 'Sub.CSS.Inset.level_up-1'}}  {{> 'Sub.CSS.Inset.padding-reading'}}">
+    <article class="flex flex_grow flex_column w_100  {{> 'Sub.ClassList.Inset.level_up-1'}}  {{> 'Sub.ClassList.Reading.padding'}}">
         <div class="flex flex_row font_ui justify_start relative w_100 gap_3">
             <main
                 class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate p-y_3 p-y_4:lg p-r_4:lg">
@@ -8961,17 +8847,18 @@ Styleguide Program.Presentation.Home
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.3), 1px 5px 5px rgba(0, 0, 0, 0.01);
 }
 
-:root {
-  accent-color: #149378;
-}
+@media only screen and (min-width: 768px) {
+  .nav-maxed {
+    max-width: clamp(15vw, 25rem, 100%);
+  }
 
-.bookmark-clipping-path {
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0% 100%, 0 48%, 0% 0%);
-          clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0% 100%, 0 48%, 0% 0%);
+  .nav-mined {
+    max-width: 4rem;
+  }
 }
-
-.bookmark-shadow {
-  filter: drop-shadow(2px 2px 3px rgba(50, 50, 0, 0.25));
+html:not([data-scroll="0"]) #navigation_mobile .label {
+  height: 0;
+  opacity: 0 !important;
 }
 
 body {

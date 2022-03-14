@@ -45,12 +45,12 @@ Horizontal Carousels to have discoverable areas on the home pages.
 
 
 Markup:
-<section class='font_0 font_1:lg font_ui font_regular {{> 'Sub.CSS.Inset.level_up-1'}} {{> 'Sub.CSS.Inset.padding'}}'>
+<section class='font_0 font_1:lg font_ui font_regular {{> 'Sub.ClassList.Inset.level_up-1'}} {{> 'Sub.ClassList.Inset.padding'}}'>
     <header class="font_display font-size_up-2 c_primary-n1m-b_3 m-b_3:lg lh_1 m-t_4:md m-t_3">
         <h2 class="lh_1 m_0 font_regular lowercase">Featured</h2>
     </header>
     <div class="relative isolation_isolate overflow_hidden">
-        <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down-1'}}">
+        <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.level_down-1'}}">
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
@@ -143,7 +143,7 @@ The empty state of the carousel
 
 Markup:
 <div class="p-y_3"> 
-    <div class="tns-outer {{> 'Sub.CSS.Inset.level_down'}}  font_0 font_ui font_regular" id="slider3-ow">
+    <div class="tns-outer {{> 'Sub.ClassList.Inset.level_down'}}  font_0 font_ui font_regular" id="slider3-ow">
         <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">4 to 8</span> of 4</div>
         <div id="slider3-mw" class="tns-ovh">
             <div class="tns-inner" id="slider3-iw">
@@ -213,12 +213,12 @@ Shows a short list of presentations
 default		 - 
 
 Markup:
-<section class='font_0 font_1:lg font_ui font_regular  {{> 'Sub.CSS.Inset.level_up-1'}} {{> 'Sub.CSS.Inset.padding'}}'>
+<section class='font_0 font_1:lg font_ui font_regular  {{> 'Sub.ClassList.Inset.level_up-1'}} {{> 'Sub.ClassList.Inset.padding'}}'>
     <header class="font_display font-size_up-2 c_primary-n1m-b_3 m-b_3:lg lh_1 m-t_4:md m-t_3">
         <h2 class="lh_1 m_0 font_regular lowercase">Continue Watching</h2>
     </header>
-    <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.CSS.Inset.level_down-1'}} ">
-        <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.CSS.Inset.level_down'}} ">
+    <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.ClassList.Inset.level_down-1'}} ">
+        <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.level_down'}} ">
         {{> "Program.Presentation.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Presentation.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Presentation.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}

@@ -18,13 +18,18 @@
 .a\:shadow_overlap-light.active {
     box-shadow: 0 1px 10px rgb(0 0 0 / 5%), 0 2px 4px rgb(0 0 0 / 30%), 1px 5px 5px rgb(0 0 0 / 1%);
 }
-:root {
-accent-color: #149378;
-}
-.bookmark-clipping-path {
-    clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0% 100%, 0 48%, 0% 0%);
+
+@media only screen and (min-width: 768px) {
+    .nav-maxed {
+        max-width: clamp(15vw, 25rem, 100%);
+    }
+
+    .nav-mined {
+        max-width: 4rem;
+    }
 }
 
-.bookmark-shadow {
-    filter: drop-shadow(2px 2px 3px rgb(50 50 0 / 25%));
+html:not([data-scroll='0']) #navigation_mobile .label {
+    opacity:0 !important;
+    height:0;
 }

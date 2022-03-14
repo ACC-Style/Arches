@@ -27,8 +27,8 @@ Faceted Search
 Facet Groups
  
 Markup:
-<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3 {{ modifier_class }}">
-    <header class="flex font-size_up">
+<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3  max-w_20:md {{ modifier_class }}" >
+    <header class="flex font-size_up m-y_2">
         <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
           {{> "Sub.CollapseIcon" modifier_class="#CollapseFacetGroupID" }}
     </header>
@@ -64,10 +64,10 @@ Faceted Search
 Facet Groups
  
 Markup:
-<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3 {{ modifier_class }}">
-    <header class="flex font-size_up">
+<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3  max-w_20:md {{ modifier_class }}" >
+    <header class="flex font-size_up m-y_2">
         <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Primary Category </div>
-          {{> "Sub.CollapseIcon" modifier_class="#CollapseFacetGroupPrimaryID" }}
+         {{> "Sub.CollapseIcon" modifier_class="#CollapseFacetGroupPrimaryID" }}
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
@@ -94,6 +94,46 @@ Weight:0
 Styleguide Sub.Search.FacetedPrimary
 */
 
+/*
+
+Faceted Type Ahead
+
+A type ahead search that adds a selected faceted filter to the search page. This is used when filters are exceptionally long and could be difficult to read when listed out.  Authors, and mesh terms can use this pattern to add them as a filter to the search page.
+
+Markup:
+<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3 max-w_20:md {{ modifier_class }}">
+    <header class="flex font-size_up m-y_2">
+        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Type Ahead Filter</div>
+    </header>
+    <main class="p_1 collapse show">
+        <div class="p_3 flex flex_row">
+            <input class="br-tr_square br-br_square" type="text" name="" id="" placeholder="Filter Name">
+            <button class="btn btn-secondary br-tl_square br-bl_square"><i class="fas fa-users"></i></button>
+        </div>
+    </main>
+    <header class="flex font-size_up m-y_2">
+        <div class="flex_auto self_center p-l_2 lh_1 font-size_down font_bold opacity_8">Filtering By</div>
+        {{> "Sub.CollapseIcon" modifier_class="#collapseTypeAhead" }}
+    </header>
+    <main id="collapseTypeAhead" class="p_1 collapse show" style="">
+        <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="#{ randomID("facet") }" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="#{ randomID("facet") }" }}
+        </ul>
+        <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
+    </main>
+</li> 
+
+MarkupWrapperClasses:
+
+
+ 
+Weight:100
+ 
+Styleguide Sub.Search.Faceted.TypeAhead
+*/
+
+
 
 /*
 
@@ -102,7 +142,7 @@ Collapse/Expand
 The collapse/expand icon is used to collapse and expand the facet group.
  
 Markup:
-<div class="c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" role="button" aria-expanded="true" aria-controls="{{modifier_class}}">
+<div class="c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" role="button" aria-expanded="true" aria-controls="{{modifier_class}}">
   <div class="flex_none self_center"> collapse </div>
   <div class="flex_none" >
       <span class="fa-stack">
@@ -148,7 +188,7 @@ Markup:
 <li class="m-y_2">
     <div class="input flex user-select_none relative h:bg_black-1 br_radius">
         <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="check{{modifier_class}}" id="check{{modifier_class}}" class="font-size_up"></div>
-        <div class="flex_auto self_center p-l_2"><label for="check{{modifier_class}}" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> {{ modifier_class }}ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+        <div class="flex_auto self_center p-l_2 p-y_2"><label for="check{{modifier_class}}" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> {{ modifier_class }}ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
         <!---->
     </div>
 </li>
@@ -159,6 +199,32 @@ Weight:0
  
 Styleguide Sub.Search.FacetCheckbox
 */
+
+/*
+
+Facet Checkbox With Trash
+
+The single checkbox that is generated by the type ahead filter search. The trash button removes the filter. 
+ 
+Markup:
+<li class="m-y_2">
+    <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+        <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet{{modifier_class}}" id="checkfacet{{modifier_class}}" class="font-size_up"></div>
+        <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet{{modifier_class}}" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md">  type ahead filter {{ modifier_class }}</span></label></div>
+        <div class="">
+            <button class="bg_transparent br_0 br_radius c_alert h:bg_alert-3 h:c_alert-n3 p-y_2"><i class="fas fa-trash"></i></button>
+        </div>
+        <!---->
+    </div>
+</li>
+
+MarkupWrapperClasses: ul_none
+ 
+Weight:0
+ 
+Styleguide Sub.Search.FacetCheckboxWithTrash
+*/
+
 
 
 /*

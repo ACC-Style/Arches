@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Video Library</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="kss-node" name="generator">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet">
+    <link href="kss-assets/vendor/prism.css" rel="stylesheet">
+    <link href="kss-assets/css/kss.css" rel="stylesheet">
+    <link rel="stylesheet" href="../icons/css/fontawesome.css"/>
+<link rel="stylesheet" href="../icons/css/solid.css"/>
+<link rel="stylesheet" href="../icons/css/regular.css"/>
+<link rel="stylesheet" href="../icons/css/brands.css"/>
+<link rel="stylesheet" href="../icons/css/light.css"/>
+<link rel="stylesheet" href="../icons/css/light.css"/>
+<link rel="stylesheet" href="../css/styleguide_override.css"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab:wght@300;400;500;700;800&display=swap"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Maven+Pro:wght@300;400;500;700;800&display=swap"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"/>
+<link rel="stylesheet" href="../css/color-code_social.css"/>
+<link rel="stylesheet" href="../css/color-code_credits.css"/>
+<link rel="stylesheet" href="../css/library_boot.css"/>
+<link rel="stylesheet" href="../css/library_uc.css"/>
+
+</head>
+
+<body class="kss-body texture_light font_ui">
+    <!-- header. -->
+    <section class="display_none block:md" id="topbody">
+        <aside
+            class="m_auto font_ui font_n1 display_none block:md bg_secondary-n2 br_solid br_black-4 p-y_3 br-b_1 shadow_emboss-light">
+            <ul class="ul_none flex flex_row:md flex_column justify_center ">
+                <li class="w_auto:md w_100 md p_2 self_center">
+                    <span
+                        class="block inline-block:md c_white-8 undecorated p_2 nowrap uppercase font_xbold">Brands</span>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../" id="home_nav">Arches</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../utility_classes/" id="utility_classes">Utility Classes</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_acc/" id="boot_acc">ACC</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_cardiosmart/" id="uc_cardiosmart">CardioSmart</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_cvquality/" id="boot_cvquality">CVQuality</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_virtual/" id="boot_virtual">Virtual</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center is-active active">
+                    <a class="
+                is-active active font_bold 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_library/" id="boot_library">Library</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_journal/" id="boot_journal">JACC</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../color_codes/" id="color_codes">Color Codes</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="https://acc-style.github.io/IconDictionary/" id="icon_dictionary">Icon Dictionary</a>
+                </li>
+                <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center">
+                    <a class=" block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap"
+                        href="https://acc-style.github.io/origami6/?path=/story/introduction--page" id="origami"><i
+                            class="fas fa-paper-plane p-r_3"></i><span>Project Origami</span></a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <header
+        class="bg_white shadow_overlap-light br_black-1 br_solid br_1 sticky t_0 display_none:md flex flex_inline z_5">
+        <h1 class="self_center m_3">
+            <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">Arches</a>: Online Video Library
+        </h1>
+        <a class="m-l_auto self_center m_3 kss-header__hamburger-trigger">
+            <div class="kss-header__hamburger"></div>
+        </a>
+    </header>
+    <!-- /header. -->
+    <!-- navigation. -->
+    <!-- /navigation. -->
+    <!-- documentation. -->
+    <header class="p_4 text_center">
+        <h1 class="font_display font_10 font_light display_none block:md">
+            <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">Arches:</a>Online Video Library
+        </h1>
+        <small class="font_0 m-t_n3 block m-b_4 font_xbold font_display display_none block:md">Multi Product Brand Style
+            System by the American College of Cardiology</small>
+    </header>
+    <section class="display_none block:md">
+        <aside class="m_auto font_copy display_none block:md sticky t_0">
+            <ul
+                class="ul_none flex flex_row:md flex_column flex_wrap justify_center br-t_1 br_solid br_black-4 p-y_3 br-b_1 ">
+                <li class=" w_auto:md w_100 p_2 self_center ">
+                    <a class="block inline-block:md undecorated  bg_primary-n1 h:bg_primary-n3 h:undecorated c_white p_3 br_radius nowrap"
+                        href="https://acc-style.github.io/Arches/index.html">
+                        <span class=""><i class="fas fa-chevron-left p-x_2"></i> Arches</span>
+                    </a>
+                </li>
+                <li class=" w_auto:md w_100 p_2 self_center ">
+                    <a class="block inline-block:md undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated c_black-8 h:c_black-9 p_3 br_radius nowrap"
+                        href="index.html">
+                        <span class=""><i class="fas fa-home p-x_2"></i></span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-designbase.html">
+                        <span class="">Design Base</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-html.html">
+                        <span class="">Basic HTML</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-bootstrap.html">
+                        <span class="">Bootstrap</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-data.html">
+                        <span class="">Data</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-navigation.html">
+                        <span class="">Navigation</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-page.html">
+                        <span class="">Page</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-program.html">
+                        <span class="">Program</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-recipes.html">
+                        <span class="">Recipes</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-sub.html">
+                        <span class="">Sub</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <section id="MobleNav"
+        class="bg_secondary-n3 display_none:lg font_0 font_ui kss-navigation overflow_auto p-b_2 p-x_3 scrollbar-mini shadow_overlap-bold z_4"
+        style="padding-top:70px">
+        <aside class="display_none:md flex flex_column-reverse">
+            <ul class="block flex flex_column ul_none w_100 ul_none lh_3" id="sitenav">
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../" id="home_nav">Arches</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../utility_classes/" id="utility_classes">Utility Classes</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_acc/" id="boot_acc">ACC</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_cardiosmart/" id="uc_cardiosmart">CardioSmart</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_cvquality/" id="boot_cvquality">CVQuality</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_virtual/" id="boot_virtual">Virtual</a>
+                </li>
+                <li class="flex_auto is-active active m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_library/" id="boot_library">Library</a>
+                </li>
+                <li class="flex_auto m-y_2 p_3 bg_black-5 br_radius p_3 shadow_emboss-light">
+                    <ul class="block flex flex_column ul_none w_100 ul_none lh_3">
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_black-5 relative br_radius p_2 m-b_1">
+                            <a class="  a:c_white c_white-8 h:c_white"
+                                href="index.html">
+                                <span class=""><i class="fas fa-home p-x_2"></i> Home</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-designbase.html">
+                                <span class="">Design Base</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-html.html">
+                                <span class="">Basic HTML</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-bootstrap.html">
+                                <span class="">Bootstrap</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-data.html">
+                                <span class="">Data</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-navigation.html">
+                                <span class="">Navigation</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-page.html">
+                                <span class="">Page</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-program.html">
+                                <span class="">Program</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-recipes.html">
+                                <span class="">Recipes</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-sub.html">
+                                <span class="">Sub</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_journal/" id="boot_journal">JACC</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../color_codes/" id="color_codes">Color Codes</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="https://acc-style.github.io/IconDictionary/" id="icon_dictionary">Icon Dictionary</a>
+                </li>
+                <li class="flex_auto m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="https://acc-style.github.io/origami6/?path=/story/introduction--page" id="origami"><i
+                            class="fas fa-paper-plane p-r_3"></i><span>Project Origami</span></a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <div class="m_auto p-x_4 ">
+        <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
+        <div class="flex flex_column flex_row:md gap-x_5 p-t_4 max-w_90 m_auto">
+            <main class="w_100 flex_auto">
+                <header
+                    class="bg_white kss-section kss-section--depth-3 br_radius shadow_overlap-light br_radius"
+                    id="kssref-sub-search-filterrail">
+                        <article class="kss-section__content relative">
+                            <div class="absolute t_0 r_4 flex flex_row gap-x_2 justify_end">
+                                <a class="c_white bg_black-5 c_white flex_none h:bg_black-7 inline-block p_2 shadow_overlap-light"
+                                    target="_blank" href="item-sub-search-filterrail.html"
+                                    title="pop out component into new tab">
+                                    <i class="fa-external-link fa-fw fas fa-fw fas"></i>
+                                </a>
+                            </div>
+                            <p class="kss-section__source font_n3"> Source: <span>dist/css/library_boot.css</span>, line
+                                <span>7875</span>
+                            </p>
+                            <a class="kss-section__permalink" href="#kssref-sub-search-filterrail">
+                                <h3 class="kss-section__item c_primary kss-section__item--depth-3">
+                                    <span class="kss-section__ref">9.11.1</span>
+                                    <span class="kss-section__name">Search Filter Rail</span>
+                                </h3>
+                            </a>
+                            <div class="kss-section__description reading-typography font-size_up overflow_auto ">
+                                <div class="font_n1">
+                                </div>
+                                <p>The filter box on the search page.</p>
+
+                            </div>
+                        </article>
+                        <article class="kss-section__modifiers">
+                            <h1 class="kss-modifiers__heading"> Example 
+                            </h1>
+                            <div class="kss-modifiers__example">
+                                <div class="MarkupWrapperClasses:">
+                                    <div id="filterZone" class="{aspect_1x1:md} {nav-mined} nav-maxed self_start bg_black-3 br_1 br_black-2 br_radius br_solid flex_auto p_2 p_3:md  shadow_emboss-light transition_3 flex flex_column ">
+	<nav class="flex_auto overflow_hidden self_stretch font_4:lg font_3:md font_2 font_display font_display">
+		<ul class="flex flex_column:md flex_row gap_3 justify_start:md ul_none w_100 w_auto:md">
+			<li class="a:bg_primary a:c_white a:shadow_overlap-light {aspect_1x1:md} br_radius c_white-8 flex_none grid h:bg_black-7 h:c_white h:shadow_overlap-light nav-item p_0:md p_3">
+				<a class="c_inherit-all h:undecorated p_3 lh_1 m-x_n1">
+					<i class="far fa-filter p-x_2:md p-y_3 p-y_0:md"></i>
+					<span class="font-size_down label lh_0 lowercase self_center font_medium {display_none:md}">Filter</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<ul id="filterFacets" class="ul_none font_n1 {display_none} opacity_none transition_3 min-h_50:md">
+		<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3 max-w_20:md Filter1">
+		    <header class="flex font-size_up m-y_2">
+		        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Type Ahead Filter</div>
+		    </header>
+		    <main class="p_1 collapse show">
+		        <div class="p_3 flex flex_row">
+		            <input class="br-tr_square br-br_square" type="text" name="" id="" placeholder="Filter Name">
+		            <button class="btn btn-secondary br-tl_square br-bl_square"><i class="fas fa-users"></i></button>
+		        </div>
+		    </main>
+		    <header class="flex font-size_up m-y_2">
+		        <div class="flex_auto self_center p-l_2 lh_1 font-size_down font_bold opacity_8">Filtering By</div>
+		        <div class="c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4" data-bs-toggle="collapse" data-bs-target="#collapseTypeAhead" role="button" aria-expanded="true" aria-controls="#collapseTypeAhead">
+		          <div class="flex_none self_center"> collapse </div>
+		          <div class="flex_none" >
+		              <span class="fa-stack">
+		                <i class="fas fa-minus fa-stack-1x"></i>
+		                <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+		              </span>
+		          </div>
+		        </div>    </header>
+		    <main id="collapseTypeAhead" class="p_1 collapse show" style="">
+		        <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
+		            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacetfacet_9964" id="checkfacetfacet_9964" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacetfacet_9964" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md">  type ahead filter facet_9964</span></label></div>
+		                    <div class="">
+		                        <button class="bg_transparent br_0 br_radius c_alert h:bg_alert-3 h:c_alert-n3 p-y_2"><i class="fas fa-trash"></i></button>
+		                    </div>
+		                    <!---->
+		                </div>
+		            </li>            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacetfacet_5573" id="checkfacetfacet_5573" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacetfacet_5573" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md">  type ahead filter facet_5573</span></label></div>
+		                    <div class="">
+		                        <button class="bg_transparent br_0 br_radius c_alert h:bg_alert-3 h:c_alert-n3 p-y_2"><i class="fas fa-trash"></i></button>
+		                    </div>
+		                    <!---->
+		                </div>
+		            </li>        </ul>
+		        <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
+		    </main>
+		</li>		<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3  max-w_20:md Filter2" >
+		    <header class="flex font-size_up m-y_2">
+		        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Primary Category </div>
+		         <div class="c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4" data-bs-toggle="collapse" data-bs-target="#CollapseFacetGroupPrimaryID" role="button" aria-expanded="true" aria-controls="#CollapseFacetGroupPrimaryID">
+		           <div class="flex_none self_center"> collapse </div>
+		           <div class="flex_none" >
+		               <span class="fa-stack">
+		                 <i class="fas fa-minus fa-stack-1x"></i>
+		                 <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+		               </span>
+		           </div>
+		         </div>    </header>
+		    <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
+		        <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
+		            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet_6471" id="checkfacet_6471" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet_6471" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> facet_6471ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+		                    <!---->
+		                </div>
+		            </li>            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet_8366" id="checkfacet_8366" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet_8366" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> facet_8366ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+		                    <!---->
+		                </div>
+		            </li>            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet_5846" id="checkfacet_5846" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet_5846" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> facet_5846ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+		                    <!---->
+		                </div>
+		            </li>            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet_2369" id="checkfacet_2369" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet_2369" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> facet_2369ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+		                    <!---->
+		                </div>
+		            </li>            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet_6025" id="checkfacet_6025" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet_6025" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> facet_6025ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+		                    <!---->
+		                </div>
+		            </li>        </ul>
+		        <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
+		    </main>
+		</li>		<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3  max-w_20:md Filter3" >
+		    <header class="flex font-size_up m-y_2">
+		        <div class="flex_auto  self_center p-l_0 lh_1 font-size_up font_medium">Drugs Generic </div>
+		          <div class="c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4" data-bs-toggle="collapse" data-bs-target="#CollapseFacetGroupID" role="button" aria-expanded="true" aria-controls="#CollapseFacetGroupID">
+		            <div class="flex_none self_center"> collapse </div>
+		            <div class="flex_none" >
+		                <span class="fa-stack">
+		                  <i class="fas fa-minus fa-stack-1x"></i>
+		                  <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+		                </span>
+		            </div>
+		          </div>    </header>
+		    <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
+		        <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
+		            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet_5096" id="checkfacet_5096" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet_5096" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> facet_5096ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+		                    <!---->
+		                </div>
+		            </li>            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet_4206" id="checkfacet_4206" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet_4206" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> facet_4206ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+		                    <!---->
+		                </div>
+		            </li>            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet_3451" id="checkfacet_3451" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet_3451" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> facet_3451ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+		                    <!---->
+		                </div>
+		            </li>            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet_6129" id="checkfacet_6129" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet_6129" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> facet_6129ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+		                    <!---->
+		                </div>
+		            </li>            <li class="m-y_2">
+		                <div class="input flex user-select_none relative h:bg_black-1 br_radius">
+		                    <div class="flex_none p-l_3 p-r_3 self_center"><input type="checkbox" name="checkfacet_4012" id="checkfacet_4012" class="font-size_up"></div>
+		                    <div class="flex_auto self_center p-l_2 p-y_2"><label for="checkfacet_4012" class="font-size_up lh_2 block"><span class="font_regular p-y_2 inline-block p-y_1:md"> facet_4012ut nobis est<small class="flex_auto p-l_2 font_light c_accent font-size_down-1">58</small></span></label></div>
+		                    <!---->
+		                </div>
+		            </li>        </ul>
+		        <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
+		    </main>
+		</li>	</ul>
+	<script>
+		let filterZone = document.getElementById("filterZone");
+		let filterZoneNav = filterZone.querySelector("nav");
+		let filterFacets = filterZone.querySelector("#filterFacets");
+		let filterZoneExpanded = true;
+		filterZoneNav.addEventListener("click", function () {
+			if (filterZoneExpanded) {
+				filterFacets.classList.toggle("opacity_0");
+				filterFacets.classList.toggle("opacity_none");
+				setTimeout(function () {
+					filterFacets.classList.toggle("{display_none}");
+					filterFacets.classList.toggle("display_none");
+					filterFacets.classList.toggle("min-h_0:md");
+					filterFacets.classList.toggle("min-h_50:md");
+					filterZone.classList.remove("{aspect_1x1:md}", "{nav-mined}", "nav-maxed");
+					filterZone.classList.add("aspect_1x1:md", "nav-mined", "{nav-maxed}");
+					filterZoneNav.querySelector("span.label").classList.toggle("{display_none:md}");
+					filterZoneNav.querySelector("span.label").classList.toggle("display_none:md");
+					filterZoneExpanded = false;
+				}, 300);
+				return;
+			} else {
+				filterZone.classList.add("{aspect_1x1:md}", "{nav-mined}", "nav-maxed");
+				filterZone.classList.remove("aspect_1x1:md", "nav-mined", "{nav-maxed}");
+				filterFacets.classList.toggle("min-h_0:md");
+				filterFacets.classList.toggle("min-h_50:md");
+				filterFacets.classList.toggle("{display_none}");
+				filterFacets.classList.toggle("display_none");
+				setTimeout(function () {
+					filterFacets.classList.toggle("opacity_0");
+					filterFacets.classList.toggle("opacity_none");
+					filterZoneNav.querySelector("span.label").classList.toggle("{display_none:md}");
+					filterZoneNav.querySelector("span.label").classList.toggle("display_none:md");
+					filterZoneExpanded = true;
+				}, 300);
+				return;
+			}
+		});
+	</script>
+</div>
+                                </div>
+                            </div>
+                        </article>
+                        <section
+                            class="relative  br-t_1 br_solid br_black-2 bg_black-1 shadow_n1 texture_light">
+                            <main class="kss-section__markup overflow_scroll scrollbar-mini collapse transition_3"
+                                id="collapse-sub-search-filterrail">
+                                <pre><code class="language-markup"  id="code-sub-search-filterrail" value='&lt;div id&#x3D;&quot;filterZone&quot; class&#x3D;&quot;{aspect_1x1:md} {nav-mined} nav-maxed self_start bg_black-3 br_1 br_black-2 br_radius br_solid flex_auto p_2 p_3:md  shadow_emboss-light transition_3 flex flex_column &quot;&gt;
+	&lt;nav class&#x3D;&quot;flex_auto overflow_hidden self_stretch font_4:lg font_3:md font_2 font_display font_display&quot;&gt;
+		&lt;ul class&#x3D;&quot;flex flex_column:md flex_row gap_3 justify_start:md ul_none w_100 w_auto:md&quot;&gt;
+			&lt;li class&#x3D;&quot;a:bg_primary a:c_white a:shadow_overlap-light {aspect_1x1:md} br_radius c_white-8 flex_none grid h:bg_black-7 h:c_white h:shadow_overlap-light nav-item p_0:md p_3&quot;&gt;
+				&lt;a class&#x3D;&quot;c_inherit-all h:undecorated p_3 lh_1 m-x_n1&quot;&gt;
+					&lt;i class&#x3D;&quot;far fa-filter p-x_2:md p-y_3 p-y_0:md&quot;&gt;&lt;/i&gt;
+					&lt;span class&#x3D;&quot;font-size_down label lh_0 lowercase self_center font_medium {display_none:md}&quot;&gt;Filter&lt;/span&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+	&lt;ul id&#x3D;&quot;filterFacets&quot; class&#x3D;&quot;ul_none font_n1 {display_none} opacity_none transition_3 min-h_50:md&quot;&gt;
+		&lt;li data-name&#x3D;&quot;library-search-facet&quot; class&#x3D;&quot;bg_white-8 br_radius m-t_3 p_3 max-w_20:md Filter1&quot;&gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto  self_center p-l_0 lh_1 font-size_up font_medium&quot;&gt;Type Ahead Filter&lt;/div&gt;
+		    &lt;/header&gt;
+		    &lt;main class&#x3D;&quot;p_1 collapse show&quot;&gt;
+		        &lt;div class&#x3D;&quot;p_3 flex flex_row&quot;&gt;
+		            &lt;input class&#x3D;&quot;br-tr_square br-br_square&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;&quot; id&#x3D;&quot;&quot; placeholder&#x3D;&quot;Filter Name&quot;&gt;
+		            &lt;button class&#x3D;&quot;btn btn-secondary br-tl_square br-bl_square&quot;&gt;&lt;i class&#x3D;&quot;fas fa-users&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+		        &lt;/div&gt;
+		    &lt;/main&gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 lh_1 font-size_down font_bold opacity_8&quot;&gt;Filtering By&lt;/div&gt;
+		        &lt;div class&#x3D;&quot;c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#collapseTypeAhead&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#collapseTypeAhead&quot;&gt;
+		          &lt;div class&#x3D;&quot;flex_none self_center&quot;&gt; collapse &lt;/div&gt;
+		          &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+		              &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+		                &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+		                &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+		              &lt;/span&gt;
+		          &lt;/div&gt;
+		        &lt;/div&gt;    &lt;/header&gt;
+		    &lt;main id&#x3D;&quot;collapseTypeAhead&quot; class&#x3D;&quot;p_1 collapse show&quot; style&#x3D;&quot;&quot;&gt;
+		        &lt;ul class&#x3D;&quot;p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid&quot;&gt;
+		            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacetfacet_9964&quot; id&#x3D;&quot;checkfacetfacet_9964&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacetfacet_9964&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt;  type ahead filter facet_9964&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;&quot;&gt;
+		                        &lt;button class&#x3D;&quot;bg_transparent br_0 br_radius c_alert h:bg_alert-3 h:c_alert-n3 p-y_2&quot;&gt;&lt;i class&#x3D;&quot;fas fa-trash&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+		                    &lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacetfacet_5573&quot; id&#x3D;&quot;checkfacetfacet_5573&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacetfacet_5573&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt;  type ahead filter facet_5573&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;&quot;&gt;
+		                        &lt;button class&#x3D;&quot;bg_transparent br_0 br_radius c_alert h:bg_alert-3 h:c_alert-n3 p-y_2&quot;&gt;&lt;i class&#x3D;&quot;fas fa-trash&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+		                    &lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;        &lt;/ul&gt;
+		        &lt;footer class&#x3D;&quot;text_center font-size_down c_primary-n1 p-t_3&quot;&gt;&lt;span class&#x3D;&quot;cursor_not-allowed c_black-3&quot;&gt;less&lt;/span&gt;&lt;span class&#x3D;&quot;c_primary&quot;&gt; | &lt;/span&gt;&lt;span class&#x3D;&quot;link h:underline h:black link h:underline h:black cursor_pointer&quot;&gt;more&lt;/span&gt;&lt;/footer&gt;
+		    &lt;/main&gt;
+		&lt;/li&gt;		&lt;li data-name&#x3D;&quot;library-search-facet&quot; class&#x3D;&quot;bg_white-8 br_radius m-t_3 p_3  max-w_20:md Filter2&quot; &gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto  self_center p-l_0 lh_1 font-size_up font_medium&quot;&gt;Primary Category &lt;/div&gt;
+		         &lt;div class&#x3D;&quot;c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#CollapseFacetGroupPrimaryID&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#CollapseFacetGroupPrimaryID&quot;&gt;
+		           &lt;div class&#x3D;&quot;flex_none self_center&quot;&gt; collapse &lt;/div&gt;
+		           &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+		               &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+		                 &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+		                 &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+		               &lt;/span&gt;
+		           &lt;/div&gt;
+		         &lt;/div&gt;    &lt;/header&gt;
+		    &lt;main id&#x3D;&quot;CollapseFacetGroupPrimaryID&quot; class&#x3D;&quot;p_1 collapse show&quot; style&#x3D;&quot;&quot;&gt;
+		        &lt;ul class&#x3D;&quot;p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid&quot;&gt;
+		            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_6471&quot; id&#x3D;&quot;checkfacet_6471&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_6471&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_6471ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_8366&quot; id&#x3D;&quot;checkfacet_8366&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_8366&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_8366ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_5846&quot; id&#x3D;&quot;checkfacet_5846&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_5846&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_5846ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_2369&quot; id&#x3D;&quot;checkfacet_2369&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_2369&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_2369ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_6025&quot; id&#x3D;&quot;checkfacet_6025&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_6025&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_6025ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;        &lt;/ul&gt;
+		        &lt;footer class&#x3D;&quot;text_center font-size_down c_primary-n1 p-t_3&quot;&gt;&lt;span class&#x3D;&quot;cursor_not-allowed c_black-3&quot;&gt;less&lt;/span&gt;&lt;span class&#x3D;&quot;c_primary&quot;&gt; | &lt;/span&gt;&lt;span class&#x3D;&quot;link h:underline h:black link h:underline h:black cursor_pointer&quot;&gt;more&lt;/span&gt;&lt;/footer&gt;
+		    &lt;/main&gt;
+		&lt;/li&gt;		&lt;li data-name&#x3D;&quot;library-search-facet&quot; class&#x3D;&quot;bg_white-8 br_radius m-t_3 p_3  max-w_20:md Filter3&quot; &gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto  self_center p-l_0 lh_1 font-size_up font_medium&quot;&gt;Drugs Generic &lt;/div&gt;
+		          &lt;div class&#x3D;&quot;c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#CollapseFacetGroupID&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#CollapseFacetGroupID&quot;&gt;
+		            &lt;div class&#x3D;&quot;flex_none self_center&quot;&gt; collapse &lt;/div&gt;
+		            &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+		                &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+		                  &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+		                  &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+		                &lt;/span&gt;
+		            &lt;/div&gt;
+		          &lt;/div&gt;    &lt;/header&gt;
+		    &lt;main id&#x3D;&quot;CollapseFacetGroupID&quot; class&#x3D;&quot;p_1 collapse show&quot; style&#x3D;&quot;&quot;&gt;
+		        &lt;ul class&#x3D;&quot;p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid&quot;&gt;
+		            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_5096&quot; id&#x3D;&quot;checkfacet_5096&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_5096&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_5096ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_4206&quot; id&#x3D;&quot;checkfacet_4206&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_4206&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_4206ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_3451&quot; id&#x3D;&quot;checkfacet_3451&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_3451&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_3451ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_6129&quot; id&#x3D;&quot;checkfacet_6129&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_6129&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_6129ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_4012&quot; id&#x3D;&quot;checkfacet_4012&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_4012&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_4012ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;        &lt;/ul&gt;
+		        &lt;footer class&#x3D;&quot;text_center font-size_down c_primary-n1 p-t_3&quot;&gt;&lt;span class&#x3D;&quot;cursor_not-allowed c_black-3&quot;&gt;less&lt;/span&gt;&lt;span class&#x3D;&quot;c_primary&quot;&gt; | &lt;/span&gt;&lt;span class&#x3D;&quot;link h:underline h:black link h:underline h:black cursor_pointer&quot;&gt;more&lt;/span&gt;&lt;/footer&gt;
+		    &lt;/main&gt;
+		&lt;/li&gt;	&lt;/ul&gt;
+	&lt;script&gt;
+		let filterZone &#x3D; document.getElementById(&quot;filterZone&quot;);
+		let filterZoneNav &#x3D; filterZone.querySelector(&quot;nav&quot;);
+		let filterFacets &#x3D; filterZone.querySelector(&quot;#filterFacets&quot;);
+		let filterZoneExpanded &#x3D; true;
+		filterZoneNav.addEventListener(&quot;click&quot;, function () {
+			if (filterZoneExpanded) {
+				filterFacets.classList.toggle(&quot;opacity_0&quot;);
+				filterFacets.classList.toggle(&quot;opacity_none&quot;);
+				setTimeout(function () {
+					filterFacets.classList.toggle(&quot;{display_none}&quot;);
+					filterFacets.classList.toggle(&quot;display_none&quot;);
+					filterFacets.classList.toggle(&quot;min-h_0:md&quot;);
+					filterFacets.classList.toggle(&quot;min-h_50:md&quot;);
+					filterZone.classList.remove(&quot;{aspect_1x1:md}&quot;, &quot;{nav-mined}&quot;, &quot;nav-maxed&quot;);
+					filterZone.classList.add(&quot;aspect_1x1:md&quot;, &quot;nav-mined&quot;, &quot;{nav-maxed}&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;{display_none:md}&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;display_none:md&quot;);
+					filterZoneExpanded &#x3D; false;
+				}, 300);
+				return;
+			} else {
+				filterZone.classList.add(&quot;{aspect_1x1:md}&quot;, &quot;{nav-mined}&quot;, &quot;nav-maxed&quot;);
+				filterZone.classList.remove(&quot;aspect_1x1:md&quot;, &quot;nav-mined&quot;, &quot;{nav-maxed}&quot;);
+				filterFacets.classList.toggle(&quot;min-h_0:md&quot;);
+				filterFacets.classList.toggle(&quot;min-h_50:md&quot;);
+				filterFacets.classList.toggle(&quot;{display_none}&quot;);
+				filterFacets.classList.toggle(&quot;display_none&quot;);
+				setTimeout(function () {
+					filterFacets.classList.toggle(&quot;opacity_0&quot;);
+					filterFacets.classList.toggle(&quot;opacity_none&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;{display_none:md}&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;display_none:md&quot;);
+					filterZoneExpanded &#x3D; true;
+				}, 300);
+				return;
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;'>&lt;div id&#x3D;&quot;filterZone&quot; class&#x3D;&quot;{aspect_1x1:md} {nav-mined} nav-maxed self_start bg_black-3 br_1 br_black-2 br_radius br_solid flex_auto p_2 p_3:md  shadow_emboss-light transition_3 flex flex_column &quot;&gt;
+	&lt;nav class&#x3D;&quot;flex_auto overflow_hidden self_stretch font_4:lg font_3:md font_2 font_display font_display&quot;&gt;
+		&lt;ul class&#x3D;&quot;flex flex_column:md flex_row gap_3 justify_start:md ul_none w_100 w_auto:md&quot;&gt;
+			&lt;li class&#x3D;&quot;a:bg_primary a:c_white a:shadow_overlap-light {aspect_1x1:md} br_radius c_white-8 flex_none grid h:bg_black-7 h:c_white h:shadow_overlap-light nav-item p_0:md p_3&quot;&gt;
+				&lt;a class&#x3D;&quot;c_inherit-all h:undecorated p_3 lh_1 m-x_n1&quot;&gt;
+					&lt;i class&#x3D;&quot;far fa-filter p-x_2:md p-y_3 p-y_0:md&quot;&gt;&lt;/i&gt;
+					&lt;span class&#x3D;&quot;font-size_down label lh_0 lowercase self_center font_medium {display_none:md}&quot;&gt;Filter&lt;/span&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+	&lt;ul id&#x3D;&quot;filterFacets&quot; class&#x3D;&quot;ul_none font_n1 {display_none} opacity_none transition_3 min-h_50:md&quot;&gt;
+		&lt;li data-name&#x3D;&quot;library-search-facet&quot; class&#x3D;&quot;bg_white-8 br_radius m-t_3 p_3 max-w_20:md Filter1&quot;&gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto  self_center p-l_0 lh_1 font-size_up font_medium&quot;&gt;Type Ahead Filter&lt;/div&gt;
+		    &lt;/header&gt;
+		    &lt;main class&#x3D;&quot;p_1 collapse show&quot;&gt;
+		        &lt;div class&#x3D;&quot;p_3 flex flex_row&quot;&gt;
+		            &lt;input class&#x3D;&quot;br-tr_square br-br_square&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;&quot; id&#x3D;&quot;&quot; placeholder&#x3D;&quot;Filter Name&quot;&gt;
+		            &lt;button class&#x3D;&quot;btn btn-secondary br-tl_square br-bl_square&quot;&gt;&lt;i class&#x3D;&quot;fas fa-users&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+		        &lt;/div&gt;
+		    &lt;/main&gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 lh_1 font-size_down font_bold opacity_8&quot;&gt;Filtering By&lt;/div&gt;
+		        &lt;div class&#x3D;&quot;c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#collapseTypeAhead&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#collapseTypeAhead&quot;&gt;
+		          &lt;div class&#x3D;&quot;flex_none self_center&quot;&gt; collapse &lt;/div&gt;
+		          &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+		              &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+		                &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+		                &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+		              &lt;/span&gt;
+		          &lt;/div&gt;
+		        &lt;/div&gt;    &lt;/header&gt;
+		    &lt;main id&#x3D;&quot;collapseTypeAhead&quot; class&#x3D;&quot;p_1 collapse show&quot; style&#x3D;&quot;&quot;&gt;
+		        &lt;ul class&#x3D;&quot;p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid&quot;&gt;
+		            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacetfacet_9964&quot; id&#x3D;&quot;checkfacetfacet_9964&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacetfacet_9964&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt;  type ahead filter facet_9964&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;&quot;&gt;
+		                        &lt;button class&#x3D;&quot;bg_transparent br_0 br_radius c_alert h:bg_alert-3 h:c_alert-n3 p-y_2&quot;&gt;&lt;i class&#x3D;&quot;fas fa-trash&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+		                    &lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacetfacet_5573&quot; id&#x3D;&quot;checkfacetfacet_5573&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacetfacet_5573&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt;  type ahead filter facet_5573&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;&quot;&gt;
+		                        &lt;button class&#x3D;&quot;bg_transparent br_0 br_radius c_alert h:bg_alert-3 h:c_alert-n3 p-y_2&quot;&gt;&lt;i class&#x3D;&quot;fas fa-trash&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+		                    &lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;        &lt;/ul&gt;
+		        &lt;footer class&#x3D;&quot;text_center font-size_down c_primary-n1 p-t_3&quot;&gt;&lt;span class&#x3D;&quot;cursor_not-allowed c_black-3&quot;&gt;less&lt;/span&gt;&lt;span class&#x3D;&quot;c_primary&quot;&gt; | &lt;/span&gt;&lt;span class&#x3D;&quot;link h:underline h:black link h:underline h:black cursor_pointer&quot;&gt;more&lt;/span&gt;&lt;/footer&gt;
+		    &lt;/main&gt;
+		&lt;/li&gt;		&lt;li data-name&#x3D;&quot;library-search-facet&quot; class&#x3D;&quot;bg_white-8 br_radius m-t_3 p_3  max-w_20:md Filter2&quot; &gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto  self_center p-l_0 lh_1 font-size_up font_medium&quot;&gt;Primary Category &lt;/div&gt;
+		         &lt;div class&#x3D;&quot;c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#CollapseFacetGroupPrimaryID&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#CollapseFacetGroupPrimaryID&quot;&gt;
+		           &lt;div class&#x3D;&quot;flex_none self_center&quot;&gt; collapse &lt;/div&gt;
+		           &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+		               &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+		                 &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+		                 &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+		               &lt;/span&gt;
+		           &lt;/div&gt;
+		         &lt;/div&gt;    &lt;/header&gt;
+		    &lt;main id&#x3D;&quot;CollapseFacetGroupPrimaryID&quot; class&#x3D;&quot;p_1 collapse show&quot; style&#x3D;&quot;&quot;&gt;
+		        &lt;ul class&#x3D;&quot;p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid&quot;&gt;
+		            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_6471&quot; id&#x3D;&quot;checkfacet_6471&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_6471&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_6471ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_8366&quot; id&#x3D;&quot;checkfacet_8366&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_8366&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_8366ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_5846&quot; id&#x3D;&quot;checkfacet_5846&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_5846&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_5846ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_2369&quot; id&#x3D;&quot;checkfacet_2369&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_2369&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_2369ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_6025&quot; id&#x3D;&quot;checkfacet_6025&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_6025&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_6025ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;        &lt;/ul&gt;
+		        &lt;footer class&#x3D;&quot;text_center font-size_down c_primary-n1 p-t_3&quot;&gt;&lt;span class&#x3D;&quot;cursor_not-allowed c_black-3&quot;&gt;less&lt;/span&gt;&lt;span class&#x3D;&quot;c_primary&quot;&gt; | &lt;/span&gt;&lt;span class&#x3D;&quot;link h:underline h:black link h:underline h:black cursor_pointer&quot;&gt;more&lt;/span&gt;&lt;/footer&gt;
+		    &lt;/main&gt;
+		&lt;/li&gt;		&lt;li data-name&#x3D;&quot;library-search-facet&quot; class&#x3D;&quot;bg_white-8 br_radius m-t_3 p_3  max-w_20:md Filter3&quot; &gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto  self_center p-l_0 lh_1 font-size_up font_medium&quot;&gt;Drugs Generic &lt;/div&gt;
+		          &lt;div class&#x3D;&quot;c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#CollapseFacetGroupID&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#CollapseFacetGroupID&quot;&gt;
+		            &lt;div class&#x3D;&quot;flex_none self_center&quot;&gt; collapse &lt;/div&gt;
+		            &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+		                &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+		                  &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+		                  &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+		                &lt;/span&gt;
+		            &lt;/div&gt;
+		          &lt;/div&gt;    &lt;/header&gt;
+		    &lt;main id&#x3D;&quot;CollapseFacetGroupID&quot; class&#x3D;&quot;p_1 collapse show&quot; style&#x3D;&quot;&quot;&gt;
+		        &lt;ul class&#x3D;&quot;p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid&quot;&gt;
+		            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_5096&quot; id&#x3D;&quot;checkfacet_5096&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_5096&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_5096ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_4206&quot; id&#x3D;&quot;checkfacet_4206&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_4206&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_4206ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_3451&quot; id&#x3D;&quot;checkfacet_3451&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_3451&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_3451ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_6129&quot; id&#x3D;&quot;checkfacet_6129&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_6129&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_6129ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_4012&quot; id&#x3D;&quot;checkfacet_4012&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_4012&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_4012ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;        &lt;/ul&gt;
+		        &lt;footer class&#x3D;&quot;text_center font-size_down c_primary-n1 p-t_3&quot;&gt;&lt;span class&#x3D;&quot;cursor_not-allowed c_black-3&quot;&gt;less&lt;/span&gt;&lt;span class&#x3D;&quot;c_primary&quot;&gt; | &lt;/span&gt;&lt;span class&#x3D;&quot;link h:underline h:black link h:underline h:black cursor_pointer&quot;&gt;more&lt;/span&gt;&lt;/footer&gt;
+		    &lt;/main&gt;
+		&lt;/li&gt;	&lt;/ul&gt;
+	&lt;script&gt;
+		let filterZone &#x3D; document.getElementById(&quot;filterZone&quot;);
+		let filterZoneNav &#x3D; filterZone.querySelector(&quot;nav&quot;);
+		let filterFacets &#x3D; filterZone.querySelector(&quot;#filterFacets&quot;);
+		let filterZoneExpanded &#x3D; true;
+		filterZoneNav.addEventListener(&quot;click&quot;, function () {
+			if (filterZoneExpanded) {
+				filterFacets.classList.toggle(&quot;opacity_0&quot;);
+				filterFacets.classList.toggle(&quot;opacity_none&quot;);
+				setTimeout(function () {
+					filterFacets.classList.toggle(&quot;{display_none}&quot;);
+					filterFacets.classList.toggle(&quot;display_none&quot;);
+					filterFacets.classList.toggle(&quot;min-h_0:md&quot;);
+					filterFacets.classList.toggle(&quot;min-h_50:md&quot;);
+					filterZone.classList.remove(&quot;{aspect_1x1:md}&quot;, &quot;{nav-mined}&quot;, &quot;nav-maxed&quot;);
+					filterZone.classList.add(&quot;aspect_1x1:md&quot;, &quot;nav-mined&quot;, &quot;{nav-maxed}&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;{display_none:md}&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;display_none:md&quot;);
+					filterZoneExpanded &#x3D; false;
+				}, 300);
+				return;
+			} else {
+				filterZone.classList.add(&quot;{aspect_1x1:md}&quot;, &quot;{nav-mined}&quot;, &quot;nav-maxed&quot;);
+				filterZone.classList.remove(&quot;aspect_1x1:md&quot;, &quot;nav-mined&quot;, &quot;{nav-maxed}&quot;);
+				filterFacets.classList.toggle(&quot;min-h_0:md&quot;);
+				filterFacets.classList.toggle(&quot;min-h_50:md&quot;);
+				filterFacets.classList.toggle(&quot;{display_none}&quot;);
+				filterFacets.classList.toggle(&quot;display_none&quot;);
+				setTimeout(function () {
+					filterFacets.classList.toggle(&quot;opacity_0&quot;);
+					filterFacets.classList.toggle(&quot;opacity_none&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;{display_none:md}&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;display_none:md&quot;);
+					filterZoneExpanded &#x3D; true;
+				}, 300);
+				return;
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</code></pre>
+                                <textarea class="display_none text-input html-code-input" type="text" name=""
+                                    id="input-sub-search-filterrail">&lt;div id&#x3D;&quot;filterZone&quot; class&#x3D;&quot;{aspect_1x1:md} {nav-mined} nav-maxed self_start bg_black-3 br_1 br_black-2 br_radius br_solid flex_auto p_2 p_3:md  shadow_emboss-light transition_3 flex flex_column &quot;&gt;
+	&lt;nav class&#x3D;&quot;flex_auto overflow_hidden self_stretch font_4:lg font_3:md font_2 font_display font_display&quot;&gt;
+		&lt;ul class&#x3D;&quot;flex flex_column:md flex_row gap_3 justify_start:md ul_none w_100 w_auto:md&quot;&gt;
+			&lt;li class&#x3D;&quot;a:bg_primary a:c_white a:shadow_overlap-light {aspect_1x1:md} br_radius c_white-8 flex_none grid h:bg_black-7 h:c_white h:shadow_overlap-light nav-item p_0:md p_3&quot;&gt;
+				&lt;a class&#x3D;&quot;c_inherit-all h:undecorated p_3 lh_1 m-x_n1&quot;&gt;
+					&lt;i class&#x3D;&quot;far fa-filter p-x_2:md p-y_3 p-y_0:md&quot;&gt;&lt;/i&gt;
+					&lt;span class&#x3D;&quot;font-size_down label lh_0 lowercase self_center font_medium {display_none:md}&quot;&gt;Filter&lt;/span&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+	&lt;ul id&#x3D;&quot;filterFacets&quot; class&#x3D;&quot;ul_none font_n1 {display_none} opacity_none transition_3 min-h_50:md&quot;&gt;
+		&lt;li data-name&#x3D;&quot;library-search-facet&quot; class&#x3D;&quot;bg_white-8 br_radius m-t_3 p_3 max-w_20:md Filter1&quot;&gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto  self_center p-l_0 lh_1 font-size_up font_medium&quot;&gt;Type Ahead Filter&lt;/div&gt;
+		    &lt;/header&gt;
+		    &lt;main class&#x3D;&quot;p_1 collapse show&quot;&gt;
+		        &lt;div class&#x3D;&quot;p_3 flex flex_row&quot;&gt;
+		            &lt;input class&#x3D;&quot;br-tr_square br-br_square&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;&quot; id&#x3D;&quot;&quot; placeholder&#x3D;&quot;Filter Name&quot;&gt;
+		            &lt;button class&#x3D;&quot;btn btn-secondary br-tl_square br-bl_square&quot;&gt;&lt;i class&#x3D;&quot;fas fa-users&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+		        &lt;/div&gt;
+		    &lt;/main&gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 lh_1 font-size_down font_bold opacity_8&quot;&gt;Filtering By&lt;/div&gt;
+		        &lt;div class&#x3D;&quot;c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#collapseTypeAhead&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#collapseTypeAhead&quot;&gt;
+		          &lt;div class&#x3D;&quot;flex_none self_center&quot;&gt; collapse &lt;/div&gt;
+		          &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+		              &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+		                &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+		                &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+		              &lt;/span&gt;
+		          &lt;/div&gt;
+		        &lt;/div&gt;    &lt;/header&gt;
+		    &lt;main id&#x3D;&quot;collapseTypeAhead&quot; class&#x3D;&quot;p_1 collapse show&quot; style&#x3D;&quot;&quot;&gt;
+		        &lt;ul class&#x3D;&quot;p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid&quot;&gt;
+		            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacetfacet_9964&quot; id&#x3D;&quot;checkfacetfacet_9964&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacetfacet_9964&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt;  type ahead filter facet_9964&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;&quot;&gt;
+		                        &lt;button class&#x3D;&quot;bg_transparent br_0 br_radius c_alert h:bg_alert-3 h:c_alert-n3 p-y_2&quot;&gt;&lt;i class&#x3D;&quot;fas fa-trash&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+		                    &lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacetfacet_5573&quot; id&#x3D;&quot;checkfacetfacet_5573&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacetfacet_5573&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt;  type ahead filter facet_5573&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;&quot;&gt;
+		                        &lt;button class&#x3D;&quot;bg_transparent br_0 br_radius c_alert h:bg_alert-3 h:c_alert-n3 p-y_2&quot;&gt;&lt;i class&#x3D;&quot;fas fa-trash&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+		                    &lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;        &lt;/ul&gt;
+		        &lt;footer class&#x3D;&quot;text_center font-size_down c_primary-n1 p-t_3&quot;&gt;&lt;span class&#x3D;&quot;cursor_not-allowed c_black-3&quot;&gt;less&lt;/span&gt;&lt;span class&#x3D;&quot;c_primary&quot;&gt; | &lt;/span&gt;&lt;span class&#x3D;&quot;link h:underline h:black link h:underline h:black cursor_pointer&quot;&gt;more&lt;/span&gt;&lt;/footer&gt;
+		    &lt;/main&gt;
+		&lt;/li&gt;		&lt;li data-name&#x3D;&quot;library-search-facet&quot; class&#x3D;&quot;bg_white-8 br_radius m-t_3 p_3  max-w_20:md Filter2&quot; &gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto  self_center p-l_0 lh_1 font-size_up font_medium&quot;&gt;Primary Category &lt;/div&gt;
+		         &lt;div class&#x3D;&quot;c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#CollapseFacetGroupPrimaryID&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#CollapseFacetGroupPrimaryID&quot;&gt;
+		           &lt;div class&#x3D;&quot;flex_none self_center&quot;&gt; collapse &lt;/div&gt;
+		           &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+		               &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+		                 &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+		                 &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+		               &lt;/span&gt;
+		           &lt;/div&gt;
+		         &lt;/div&gt;    &lt;/header&gt;
+		    &lt;main id&#x3D;&quot;CollapseFacetGroupPrimaryID&quot; class&#x3D;&quot;p_1 collapse show&quot; style&#x3D;&quot;&quot;&gt;
+		        &lt;ul class&#x3D;&quot;p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid&quot;&gt;
+		            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_6471&quot; id&#x3D;&quot;checkfacet_6471&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_6471&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_6471ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_8366&quot; id&#x3D;&quot;checkfacet_8366&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_8366&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_8366ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_5846&quot; id&#x3D;&quot;checkfacet_5846&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_5846&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_5846ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_2369&quot; id&#x3D;&quot;checkfacet_2369&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_2369&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_2369ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_6025&quot; id&#x3D;&quot;checkfacet_6025&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_6025&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_6025ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;        &lt;/ul&gt;
+		        &lt;footer class&#x3D;&quot;text_center font-size_down c_primary-n1 p-t_3&quot;&gt;&lt;span class&#x3D;&quot;cursor_not-allowed c_black-3&quot;&gt;less&lt;/span&gt;&lt;span class&#x3D;&quot;c_primary&quot;&gt; | &lt;/span&gt;&lt;span class&#x3D;&quot;link h:underline h:black link h:underline h:black cursor_pointer&quot;&gt;more&lt;/span&gt;&lt;/footer&gt;
+		    &lt;/main&gt;
+		&lt;/li&gt;		&lt;li data-name&#x3D;&quot;library-search-facet&quot; class&#x3D;&quot;bg_white-8 br_radius m-t_3 p_3  max-w_20:md Filter3&quot; &gt;
+		    &lt;header class&#x3D;&quot;flex font-size_up m-y_2&quot;&gt;
+		        &lt;div class&#x3D;&quot;flex_auto  self_center p-l_0 lh_1 font-size_up font_medium&quot;&gt;Drugs Generic &lt;/div&gt;
+		          &lt;div class&#x3D;&quot;c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#CollapseFacetGroupID&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;#CollapseFacetGroupID&quot;&gt;
+		            &lt;div class&#x3D;&quot;flex_none self_center&quot;&gt; collapse &lt;/div&gt;
+		            &lt;div class&#x3D;&quot;flex_none&quot; &gt;
+		                &lt;span class&#x3D;&quot;fa-stack&quot;&gt;
+		                  &lt;i class&#x3D;&quot;fas fa-minus fa-stack-1x&quot;&gt;&lt;/i&gt;
+		                  &lt;i class&#x3D;&quot;fas fa-minus rotate_90 a:rotation fa-stack-1x &quot;&gt;&lt;/i&gt;
+		                &lt;/span&gt;
+		            &lt;/div&gt;
+		          &lt;/div&gt;    &lt;/header&gt;
+		    &lt;main id&#x3D;&quot;CollapseFacetGroupID&quot; class&#x3D;&quot;p_1 collapse show&quot; style&#x3D;&quot;&quot;&gt;
+		        &lt;ul class&#x3D;&quot;p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid&quot;&gt;
+		            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_5096&quot; id&#x3D;&quot;checkfacet_5096&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_5096&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_5096ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_4206&quot; id&#x3D;&quot;checkfacet_4206&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_4206&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_4206ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_3451&quot; id&#x3D;&quot;checkfacet_3451&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_3451&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_3451ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_6129&quot; id&#x3D;&quot;checkfacet_6129&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_6129&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_6129ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;            &lt;li class&#x3D;&quot;m-y_2&quot;&gt;
+		                &lt;div class&#x3D;&quot;input flex user-select_none relative h:bg_black-1 br_radius&quot;&gt;
+		                    &lt;div class&#x3D;&quot;flex_none p-l_3 p-r_3 self_center&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkfacet_4012&quot; id&#x3D;&quot;checkfacet_4012&quot; class&#x3D;&quot;font-size_up&quot;&gt;&lt;/div&gt;
+		                    &lt;div class&#x3D;&quot;flex_auto self_center p-l_2 p-y_2&quot;&gt;&lt;label for&#x3D;&quot;checkfacet_4012&quot; class&#x3D;&quot;font-size_up lh_2 block&quot;&gt;&lt;span class&#x3D;&quot;font_regular p-y_2 inline-block p-y_1:md&quot;&gt; facet_4012ut nobis est&lt;small class&#x3D;&quot;flex_auto p-l_2 font_light c_accent font-size_down-1&quot;&gt;58&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;
+		                    &lt;!----&gt;
+		                &lt;/div&gt;
+		            &lt;/li&gt;        &lt;/ul&gt;
+		        &lt;footer class&#x3D;&quot;text_center font-size_down c_primary-n1 p-t_3&quot;&gt;&lt;span class&#x3D;&quot;cursor_not-allowed c_black-3&quot;&gt;less&lt;/span&gt;&lt;span class&#x3D;&quot;c_primary&quot;&gt; | &lt;/span&gt;&lt;span class&#x3D;&quot;link h:underline h:black link h:underline h:black cursor_pointer&quot;&gt;more&lt;/span&gt;&lt;/footer&gt;
+		    &lt;/main&gt;
+		&lt;/li&gt;	&lt;/ul&gt;
+	&lt;script&gt;
+		let filterZone &#x3D; document.getElementById(&quot;filterZone&quot;);
+		let filterZoneNav &#x3D; filterZone.querySelector(&quot;nav&quot;);
+		let filterFacets &#x3D; filterZone.querySelector(&quot;#filterFacets&quot;);
+		let filterZoneExpanded &#x3D; true;
+		filterZoneNav.addEventListener(&quot;click&quot;, function () {
+			if (filterZoneExpanded) {
+				filterFacets.classList.toggle(&quot;opacity_0&quot;);
+				filterFacets.classList.toggle(&quot;opacity_none&quot;);
+				setTimeout(function () {
+					filterFacets.classList.toggle(&quot;{display_none}&quot;);
+					filterFacets.classList.toggle(&quot;display_none&quot;);
+					filterFacets.classList.toggle(&quot;min-h_0:md&quot;);
+					filterFacets.classList.toggle(&quot;min-h_50:md&quot;);
+					filterZone.classList.remove(&quot;{aspect_1x1:md}&quot;, &quot;{nav-mined}&quot;, &quot;nav-maxed&quot;);
+					filterZone.classList.add(&quot;aspect_1x1:md&quot;, &quot;nav-mined&quot;, &quot;{nav-maxed}&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;{display_none:md}&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;display_none:md&quot;);
+					filterZoneExpanded &#x3D; false;
+				}, 300);
+				return;
+			} else {
+				filterZone.classList.add(&quot;{aspect_1x1:md}&quot;, &quot;{nav-mined}&quot;, &quot;nav-maxed&quot;);
+				filterZone.classList.remove(&quot;aspect_1x1:md&quot;, &quot;nav-mined&quot;, &quot;{nav-maxed}&quot;);
+				filterFacets.classList.toggle(&quot;min-h_0:md&quot;);
+				filterFacets.classList.toggle(&quot;min-h_50:md&quot;);
+				filterFacets.classList.toggle(&quot;{display_none}&quot;);
+				filterFacets.classList.toggle(&quot;display_none&quot;);
+				setTimeout(function () {
+					filterFacets.classList.toggle(&quot;opacity_0&quot;);
+					filterFacets.classList.toggle(&quot;opacity_none&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;{display_none:md}&quot;);
+					filterZoneNav.querySelector(&quot;span.label&quot;).classList.toggle(&quot;display_none:md&quot;);
+					filterZoneExpanded &#x3D; true;
+				}, 300);
+				return;
+			}
+		});
+	&lt;/script&gt;
+&lt;/div&gt;</textarea>
+                            </main>
+                            <header class="flex_row flex shadow_n1 br-br_radius br-bl_radius">
+                                <div class="flex flex_row flex_auto collapsed h:bg_black-7 br-bl_radius c_black-8 h:c_white"
+                                    aria-expanded="false" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse-sub-search-filterrail"
+                                    aria-controls="#collapse-sub-search-filterrail">
+                                    <div class="flex_none p_2 font_1">
+                                        <i class="a:rotation fa-fw fa-chevron-up fas self_center text_center"></i>
+                                    </div>
+                                    <div class="flex_auto flex flex_row">
+                                        <h4 class="font_0 font_bold flex_auto p-l_2 self_center m_0 text_left">Code
+                                            Sample</h4>
+                                    </div>
+                                </div>
+                                <a class="bg_primary br_1 br_black-3 br_solid c_white flex_none font_medium font_ui h:bg_primary-n2 h:undecorated m-l_auto p-x_3 p-y_2 br-br_radius"
+                                    onclick="CopyCode( 'input-sub-search-filterrail')"><i class="fas fa-copy"></i> Copy
+                                    Code</a>
+                            </header>
+                        </section>
+                </header>
+            </main>
+        </div>
+        </section>
+        <div id="CopyDOM"></div>
+        <!-- /documentation. -->
+        <!-- scripts. -->
+        <script src="kss-assets/vendor/jquery.js"></script>
+        <script src="kss-assets/vendor/prism.js"></script>
+        <script src="kss-assets/js/kss.js"></script>
+        <script>
+            var CopyCode = function ($id) {
+                console.log('event triggered with ' + $id);
+                var codeToBeCopied = document.getElementById($id).innerText;
+                var emptyArea =  document.createElement('TEXTAREA');
+                emptyArea.innerHTML = codeToBeCopied;
+                const parentElement = document.getElementById('CopyDOM');
+                parentElement.appendChild(emptyArea);
+                emptyArea.select();
+                document.execCommand('copy');
+                parentElement.removeChild(emptyArea);
+            };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/toggleActive.js"></script>
+
+        <!-- /scripts. -->
+</body>
+
+</html>
