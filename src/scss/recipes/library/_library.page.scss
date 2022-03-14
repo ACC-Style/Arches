@@ -1,3 +1,5 @@
+@import  "../virtual/data/virtual.helper.randomWords";
+
 /*
 
 Not Home Page
@@ -9,15 +11,14 @@ Markup:
 	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea z_4" }}
-			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> "Sub.ClassList.Inset.level_up"}} {{> "Sub.ClassList.Inset.padding"}}">
+			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> "Sub.ClassList.Inset.level_up"}} {{> "Sub.ClassList.Inset.padding_up-1"}}">
 				{{> "Navigation.Breadcrumb"}}
 			</header>
 			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md z_1">
-				{{> "Sub.Search.FilterRail"  modifier_class="col-start_filterArea col-end_filterArea order_last order_unset:md"}}
-				<div class="col-start_insertArea-1 col-end_insertArea-3	 row-start_1 {{> "Sub.ClassList.Inset.level_up-1"}} {{> "Sub.ClassList.Inset.padding"}}"> 
+				<div class="col-start col-end_insertArea-2 {{> "Sub.ClassList.Inset.level_up-1"}} {{> "Sub.ClassList.Inset.padding_up-1"}}"> 
 					{{> "Page.Layouts.Filler"  modifier_class="Insert Primary"}}
 				</div>
-				<div class="col-start_insertArea-4 col-end_insertArea-4  row-start_1{{> "Sub.ClassList.Inset.level_up-1"}} {{> "Sub.ClassList.Inset.padding"}}">
+				<div class="col-start_insertArea-3 col-end_insertArea-4  {{> "Sub.ClassList.Inset.level_up-1"}} {{> "Sub.ClassList.Inset.padding_up-1"}}">
 					{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert Secondary"}}
 				</div>
 			</section>
@@ -37,4 +38,73 @@ NOTE: This page will not render 100% correctly because it is calculated based on
 Weight:0
  
 Styleguide Page.Layouts.NotHome
+*/
+
+/*
+
+Search Page
+
+The sub pages have a common layouts.
+ 
+Markup:
+<div class="BODY_TAG-stand-in h_100 grid {{> "Sub.ClassList.Body"}}">	
+	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
+		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
+			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea z_4" }}
+			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> "Sub.ClassList.Inset.level_up"}} {{> "Sub.ClassList.Inset.padding_up-1"}}">
+				{{> "Navigation.Breadcrumb"}}
+			</header>
+			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md z_1 font_1:lg font_0">
+				{{> "Sub.Search.FilterRail"  modifier_class="col-start_filterArea col-end_filterArea order_last order_unset:md"}}
+				<div class="col-start_insertArea-1 col-end_insertArea-4 	 row-start_1"> 
+					{{> "Sub.Search.Bar"  }}
+					<div class="{{> 'Sub.ClassList.Vertical.padding_up-1' }}">
+						{{> "Sub.Search.ResultOverview"}}
+					</div>
+					<div class="{{> "Sub.ClassList.Inset.level_down-1"}} {{> 'Sub.ClassList.Inset.padding' }} ">
+					<nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light" id="tabContentLight" role="tablist">
+						<ul class="flex_column flex_row:md  nav">
+							{{> "Structures.Tabs.Tabs.LinkActive" }}
+							{{> "Structures.Tabs.Tabs.Link" }}
+							</li>
+						</ul>
+					</nav>
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
+							<ul class="ul_none flex flex_column gap_2 gap_3:md gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
+								<li class="">{{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
+							</ul>
+							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
+							</div>
+						<div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
+							<ul class="ul_none flex flex_column gap_2 gap_3:md gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
+							</ul>
+							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</section>
+			<footer class="grid:md flex flex_column grid-template_content grid-area_footerArea m-t_auto gap_4:md gap_3 p_3 z_1">
+				{{> "Navigation.Footer.Links" modifier_class="col-end_insertArea-3 col-start" }}
+				{{> "Navigation.Footer.Logo"  modifier_class="col-start_insertArea-4 col-end" }}
+			</footer>
+		</div>
+	</div>
+</div>
+
+MarkupWrapperClasses: 
+
+
+NOTE: This page will not render 100% correctly because it is calculated based on the whole viewport and the styleguide has it wrapped in page dynamics..
+ 
+Weight:0
+ 
+Styleguide Page.Layouts.Search
 */
