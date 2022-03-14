@@ -447,6 +447,21 @@
                                 <p>The header nav for the website.</p>
 
                             </div>
+                            <div class="bg_black-1 br-l_1 br_ br_radius kss-section__section__subComponents p-x_4 p_3">
+                                <div class="kss-section__section__subComponent">
+                                    Navigation.HeaderNav.MobileButton - Primary
+Navigation.HeaderNav.Active - Primary: Active
+Navigation.HeaderNav.Disabled - Primary: Disabled
+Navigation.HeaderNav.MobileToggle - Mobile Menu Toggle
+Navigation.HeaderNav.MobileHidden - Secondary
+Navigation.HeaderNav.MobileHiddenDisabled - Secondary: Disabled
+Navigation.HeaderNav.ExpandMobileLinks - Mobile Menu Link
+Navigation.HeaderNav.ExpandMobileLinksDisabled - Mobile Menu Link: Disabled
+                                </div>
+                                <h6 class="c_black-6 inline p-r_3"><i class="fal fa-object-group p-r_3"></i>Sub
+                                    Components in Design:</h6>
+                                <ul class="list ul_inline-pipe"></ul>
+                            </div>
                         </article>
                         <article class="kss-section__modifiers">
                             <h1 class="kss-modifiers__heading"> Example 
@@ -461,16 +476,16 @@
             <li class="nav-item flex_auto [ active ]">
                 <a class="[ active ][ text-shadow_black-1 ] a:bg_accent flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/" target="_self">
                     <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-home-heart display_none:lg"></i>
-                    <span class="block lh_0 p-y_0 p-y_2:md text_center">Active</span>
+                    <span class="block lh_0 p-y_0 p-y_2:md text_center">Primary: Active</span>
                 </a>
             </li>            <!-- All areas that have `[ ]` in the design are areas where classes might be added or removed. -->
             <li class="nav-item flex_auto [~]">
                 <a class="a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/program" target="_self">
-                    <!-- icon is needed for the Mobile Button Nav -->
+                    <!-- icon is needed for the Primary Button Nav -->
                     <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-calendar-alt display_none:lg"></i>
                     <span class="block lh_0 p-y_0 p-y_2:md text_center">
                     <!--  []  -->
-                    Base Link Design
+                    Primary
                     </span>
                 </a>
             </li>            <li class="nav-item flex_auto ">
@@ -479,33 +494,38 @@
                     <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-users display_none:lg"></i>
                     <span class="block lh_0 p-y_0 p-y_2:md  text_center">
                         <!-- If Button Disabled Add This Icon --><i class="fas fa-lock p-r_3"></i>
-                        Faculty
+                        Primary: Disabled
                     </span>
                 </a>
-            </li>            <!-- menu toggle for mobile -->
+            </li>            <!-- MENU toggle for mobile is a unique pattern -->
             <li class="nav-item flex_auto block display_none:lg">
                 <a class="bg_secondary h:bg_secondary-n2 flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 font_medium h:c_white text-shadow_black-1 h:c_white justify_center nav-link text_center p-y_3:md" aria-expanded="false" aria-label="Toggle Extra Nav" data-bs-toggle="collapse" data-bs-target="#ExpandingMobileMenu" aria-controls="ExpandingMobileMenu"
                 >
                     <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-ellipsis-h-alt"></i>
                     <span class="block lh_0 p-y_0 p-y_2:md text_center">More</span>
                 </a>
-            </li>            <!-- menu items that hide when in mobile under the expanded area -->
-            <!-- add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
+            </li>
+            <!-- MENU toggle for mobile is a unique pattern -->            <!-- menu items that hide when in mobile under the expanded area -->
+            <!-- if button shouldn't show in the main area on mobile add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
             <li class="nav-item flex_auto [ display_none block:lg ]">
                 <a class="a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/convocation" target="_self">
-                    <span class="block lh_0 p-y_0 p-y_2:md text_center">Nav Link</span>
+                    <!-- [~] -->
+                    <span class="block lh_0 p-y_0 p-y_2:md text_center">Secondary</span>
                 </a>
-            </li>            <li class="nav-item flex_auto display_none block:lg">
+            </li>            <!-- if button shouldn't show in the main area on mobile add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
+            <li class="nav-item flex_auto [ display_none block:lg ]">
                 <a class="a:bg_accent [ bg_secondary-2 c_secondary-3 disabled  ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/convocation" target="_self">
                     <span class="block lh_0 p-y_0 p-y_2:md text_center">
+                        <!-- If Button Disabled Add This Icon -->
                         <i class="fas fa-lock p-r_3"></i>
-                        Menu Secondary Link
+                        Secondary: Disabled
                     </span>
                 </a>
-            </li>            <!-- add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
+            </li>            <!-- if button shouldn't show in the main area on mobile add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
             <li class="nav-item flex_auto [ display_none block:lg ]">
                 <a class="a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/convocation" target="_self">
-                    <span class="block lh_0 p-y_0 p-y_2:md text_center">Nav Link</span>
+                    <!-- [~] -->
+                    <span class="block lh_0 p-y_0 p-y_2:md text_center">Secondary</span>
                 </a>
             </li>        </ul>
         <!-- Expanding Mobile Menu -->
@@ -514,19 +534,19 @@
                 <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
                     <a class="[~] a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
                         <!-- [~] -->
-                        Mobile Nav Link
+                        Mobile Menu Link
                     </a>
                 </li>                <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
                     <!-- if disabled add these classes to the a tag -->
                     <a class=" [ bg_secondary-2 c_secondary-3 disabled ]  a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg" href="/convocation" target="_self">
-                        <!-- add lock icon -->
+                        <!-- If Button Disabled Add This Icon -->
                         <i class="fas fa-lock p-l_3"></i>
-                        Mobile Nav Link
+                        Mobile Menu Link: Disablled
                     </a>
                 </li>                <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
                     <a class="[~] a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
                         <!-- [~] -->
-                        Mobile Nav Link
+                        Mobile Menu Link
                     </a>
                 </li>            </ul>
         </div>
@@ -547,16 +567,16 @@
             &lt;li class&#x3D;&quot;nav-item flex_auto [ active ]&quot;&gt;
                 &lt;a class&#x3D;&quot;[ active ][ text-shadow_black-1 ] a:bg_accent flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/&quot; target&#x3D;&quot;_self&quot;&gt;
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-home-heart display_none:lg&quot;&gt;&lt;/i&gt;
-                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Active&lt;/span&gt;
+                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Primary: Active&lt;/span&gt;
                 &lt;/a&gt;
             &lt;/li&gt;            &lt;!-- All areas that have &#x60;[ ]&#x60; in the design are areas where classes might be added or removed. --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto [~]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/program&quot; target&#x3D;&quot;_self&quot;&gt;
-                    &lt;!-- icon is needed for the Mobile Button Nav --&gt;
+                    &lt;!-- icon is needed for the Primary Button Nav --&gt;
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-calendar-alt display_none:lg&quot;&gt;&lt;/i&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;
                     &lt;!--  []  --&gt;
-                    Base Link Design
+                    Primary
                     &lt;/span&gt;
                 &lt;/a&gt;
             &lt;/li&gt;            &lt;li class&#x3D;&quot;nav-item flex_auto &quot;&gt;
@@ -565,33 +585,38 @@
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-users display_none:lg&quot;&gt;&lt;/i&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md  text_center&quot;&gt;
                         &lt;!-- If Button Disabled Add This Icon --&gt;&lt;i class&#x3D;&quot;fas fa-lock p-r_3&quot;&gt;&lt;/i&gt;
-                        Faculty
+                        Primary: Disabled
                     &lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;!-- menu toggle for mobile --&gt;
+            &lt;/li&gt;            &lt;!-- MENU toggle for mobile is a unique pattern --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto block display_none:lg&quot;&gt;
                 &lt;a class&#x3D;&quot;bg_secondary h:bg_secondary-n2 flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 font_medium h:c_white text-shadow_black-1 h:c_white justify_center nav-link text_center p-y_3:md&quot; aria-expanded&#x3D;&quot;false&quot; aria-label&#x3D;&quot;Toggle Extra Nav&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#ExpandingMobileMenu&quot; aria-controls&#x3D;&quot;ExpandingMobileMenu&quot;
                 &gt;
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-ellipsis-h-alt&quot;&gt;&lt;/i&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;More&lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;!-- menu items that hide when in mobile under the expanded area --&gt;
-            &lt;!-- add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
+            &lt;/li&gt;
+            &lt;!-- MENU toggle for mobile is a unique pattern --&gt;            &lt;!-- menu items that hide when in mobile under the expanded area --&gt;
+            &lt;!-- if button shouldn&#x27;t show in the main area on mobile add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto [ display_none block:lg ]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
-                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Nav Link&lt;/span&gt;
+                    &lt;!-- [~] --&gt;
+                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Secondary&lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;li class&#x3D;&quot;nav-item flex_auto display_none block:lg&quot;&gt;
+            &lt;/li&gt;            &lt;!-- if button shouldn&#x27;t show in the main area on mobile add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
+            &lt;li class&#x3D;&quot;nav-item flex_auto [ display_none block:lg ]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ bg_secondary-2 c_secondary-3 disabled  ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;
+                        &lt;!-- If Button Disabled Add This Icon --&gt;
                         &lt;i class&#x3D;&quot;fas fa-lock p-r_3&quot;&gt;&lt;/i&gt;
-                        Menu Secondary Link
+                        Secondary: Disabled
                     &lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;!-- add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
+            &lt;/li&gt;            &lt;!-- if button shouldn&#x27;t show in the main area on mobile add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto [ display_none block:lg ]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
-                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Nav Link&lt;/span&gt;
+                    &lt;!-- [~] --&gt;
+                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Secondary&lt;/span&gt;
                 &lt;/a&gt;
             &lt;/li&gt;        &lt;/ul&gt;
         &lt;!-- Expanding Mobile Menu --&gt;
@@ -600,19 +625,19 @@
                 &lt;li class&#x3D;&quot;nav-item flex_auto br-b_1 br_solid br_black-2&quot;&gt;
                     &lt;a class&#x3D;&quot;[~] a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
                         &lt;!-- [~] --&gt;
-                        Mobile Nav Link
+                        Mobile Menu Link
                     &lt;/a&gt;
                 &lt;/li&gt;                &lt;li class&#x3D;&quot;nav-item flex_auto br-b_1 br_solid br_black-2&quot;&gt;
                     &lt;!-- if disabled add these classes to the a tag --&gt;
                     &lt;a class&#x3D;&quot; [ bg_secondary-2 c_secondary-3 disabled ]  a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg&quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
-                        &lt;!-- add lock icon --&gt;
+                        &lt;!-- If Button Disabled Add This Icon --&gt;
                         &lt;i class&#x3D;&quot;fas fa-lock p-l_3&quot;&gt;&lt;/i&gt;
-                        Mobile Nav Link
+                        Mobile Menu Link: Disablled
                     &lt;/a&gt;
                 &lt;/li&gt;                &lt;li class&#x3D;&quot;nav-item flex_auto br-b_1 br_solid br_black-2&quot;&gt;
                     &lt;a class&#x3D;&quot;[~] a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
                         &lt;!-- [~] --&gt;
-                        Mobile Nav Link
+                        Mobile Menu Link
                     &lt;/a&gt;
                 &lt;/li&gt;            &lt;/ul&gt;
         &lt;/div&gt;
@@ -625,16 +650,16 @@
             &lt;li class&#x3D;&quot;nav-item flex_auto [ active ]&quot;&gt;
                 &lt;a class&#x3D;&quot;[ active ][ text-shadow_black-1 ] a:bg_accent flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/&quot; target&#x3D;&quot;_self&quot;&gt;
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-home-heart display_none:lg&quot;&gt;&lt;/i&gt;
-                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Active&lt;/span&gt;
+                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Primary: Active&lt;/span&gt;
                 &lt;/a&gt;
             &lt;/li&gt;            &lt;!-- All areas that have &#x60;[ ]&#x60; in the design are areas where classes might be added or removed. --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto [~]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/program&quot; target&#x3D;&quot;_self&quot;&gt;
-                    &lt;!-- icon is needed for the Mobile Button Nav --&gt;
+                    &lt;!-- icon is needed for the Primary Button Nav --&gt;
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-calendar-alt display_none:lg&quot;&gt;&lt;/i&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;
                     &lt;!--  []  --&gt;
-                    Base Link Design
+                    Primary
                     &lt;/span&gt;
                 &lt;/a&gt;
             &lt;/li&gt;            &lt;li class&#x3D;&quot;nav-item flex_auto &quot;&gt;
@@ -643,33 +668,38 @@
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-users display_none:lg&quot;&gt;&lt;/i&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md  text_center&quot;&gt;
                         &lt;!-- If Button Disabled Add This Icon --&gt;&lt;i class&#x3D;&quot;fas fa-lock p-r_3&quot;&gt;&lt;/i&gt;
-                        Faculty
+                        Primary: Disabled
                     &lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;!-- menu toggle for mobile --&gt;
+            &lt;/li&gt;            &lt;!-- MENU toggle for mobile is a unique pattern --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto block display_none:lg&quot;&gt;
                 &lt;a class&#x3D;&quot;bg_secondary h:bg_secondary-n2 flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 font_medium h:c_white text-shadow_black-1 h:c_white justify_center nav-link text_center p-y_3:md&quot; aria-expanded&#x3D;&quot;false&quot; aria-label&#x3D;&quot;Toggle Extra Nav&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#ExpandingMobileMenu&quot; aria-controls&#x3D;&quot;ExpandingMobileMenu&quot;
                 &gt;
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-ellipsis-h-alt&quot;&gt;&lt;/i&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;More&lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;!-- menu items that hide when in mobile under the expanded area --&gt;
-            &lt;!-- add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
+            &lt;/li&gt;
+            &lt;!-- MENU toggle for mobile is a unique pattern --&gt;            &lt;!-- menu items that hide when in mobile under the expanded area --&gt;
+            &lt;!-- if button shouldn&#x27;t show in the main area on mobile add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto [ display_none block:lg ]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
-                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Nav Link&lt;/span&gt;
+                    &lt;!-- [~] --&gt;
+                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Secondary&lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;li class&#x3D;&quot;nav-item flex_auto display_none block:lg&quot;&gt;
+            &lt;/li&gt;            &lt;!-- if button shouldn&#x27;t show in the main area on mobile add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
+            &lt;li class&#x3D;&quot;nav-item flex_auto [ display_none block:lg ]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ bg_secondary-2 c_secondary-3 disabled  ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;
+                        &lt;!-- If Button Disabled Add This Icon --&gt;
                         &lt;i class&#x3D;&quot;fas fa-lock p-r_3&quot;&gt;&lt;/i&gt;
-                        Menu Secondary Link
+                        Secondary: Disabled
                     &lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;!-- add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
+            &lt;/li&gt;            &lt;!-- if button shouldn&#x27;t show in the main area on mobile add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto [ display_none block:lg ]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
-                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Nav Link&lt;/span&gt;
+                    &lt;!-- [~] --&gt;
+                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Secondary&lt;/span&gt;
                 &lt;/a&gt;
             &lt;/li&gt;        &lt;/ul&gt;
         &lt;!-- Expanding Mobile Menu --&gt;
@@ -678,19 +708,19 @@
                 &lt;li class&#x3D;&quot;nav-item flex_auto br-b_1 br_solid br_black-2&quot;&gt;
                     &lt;a class&#x3D;&quot;[~] a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
                         &lt;!-- [~] --&gt;
-                        Mobile Nav Link
+                        Mobile Menu Link
                     &lt;/a&gt;
                 &lt;/li&gt;                &lt;li class&#x3D;&quot;nav-item flex_auto br-b_1 br_solid br_black-2&quot;&gt;
                     &lt;!-- if disabled add these classes to the a tag --&gt;
                     &lt;a class&#x3D;&quot; [ bg_secondary-2 c_secondary-3 disabled ]  a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg&quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
-                        &lt;!-- add lock icon --&gt;
+                        &lt;!-- If Button Disabled Add This Icon --&gt;
                         &lt;i class&#x3D;&quot;fas fa-lock p-l_3&quot;&gt;&lt;/i&gt;
-                        Mobile Nav Link
+                        Mobile Menu Link: Disablled
                     &lt;/a&gt;
                 &lt;/li&gt;                &lt;li class&#x3D;&quot;nav-item flex_auto br-b_1 br_solid br_black-2&quot;&gt;
                     &lt;a class&#x3D;&quot;[~] a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
                         &lt;!-- [~] --&gt;
-                        Mobile Nav Link
+                        Mobile Menu Link
                     &lt;/a&gt;
                 &lt;/li&gt;            &lt;/ul&gt;
         &lt;/div&gt;
@@ -705,16 +735,16 @@
             &lt;li class&#x3D;&quot;nav-item flex_auto [ active ]&quot;&gt;
                 &lt;a class&#x3D;&quot;[ active ][ text-shadow_black-1 ] a:bg_accent flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/&quot; target&#x3D;&quot;_self&quot;&gt;
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-home-heart display_none:lg&quot;&gt;&lt;/i&gt;
-                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Active&lt;/span&gt;
+                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Primary: Active&lt;/span&gt;
                 &lt;/a&gt;
             &lt;/li&gt;            &lt;!-- All areas that have &#x60;[ ]&#x60; in the design are areas where classes might be added or removed. --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto [~]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/program&quot; target&#x3D;&quot;_self&quot;&gt;
-                    &lt;!-- icon is needed for the Mobile Button Nav --&gt;
+                    &lt;!-- icon is needed for the Primary Button Nav --&gt;
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-calendar-alt display_none:lg&quot;&gt;&lt;/i&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;
                     &lt;!--  []  --&gt;
-                    Base Link Design
+                    Primary
                     &lt;/span&gt;
                 &lt;/a&gt;
             &lt;/li&gt;            &lt;li class&#x3D;&quot;nav-item flex_auto &quot;&gt;
@@ -723,33 +753,38 @@
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-users display_none:lg&quot;&gt;&lt;/i&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md  text_center&quot;&gt;
                         &lt;!-- If Button Disabled Add This Icon --&gt;&lt;i class&#x3D;&quot;fas fa-lock p-r_3&quot;&gt;&lt;/i&gt;
-                        Faculty
+                        Primary: Disabled
                     &lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;!-- menu toggle for mobile --&gt;
+            &lt;/li&gt;            &lt;!-- MENU toggle for mobile is a unique pattern --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto block display_none:lg&quot;&gt;
                 &lt;a class&#x3D;&quot;bg_secondary h:bg_secondary-n2 flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 font_medium h:c_white text-shadow_black-1 h:c_white justify_center nav-link text_center p-y_3:md&quot; aria-expanded&#x3D;&quot;false&quot; aria-label&#x3D;&quot;Toggle Extra Nav&quot; data-bs-toggle&#x3D;&quot;collapse&quot; data-bs-target&#x3D;&quot;#ExpandingMobileMenu&quot; aria-controls&#x3D;&quot;ExpandingMobileMenu&quot;
                 &gt;
                     &lt;i class&#x3D;&quot;font-size_up fa-fw fas p_2 inline-block m_auto fa-ellipsis-h-alt&quot;&gt;&lt;/i&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;More&lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;!-- menu items that hide when in mobile under the expanded area --&gt;
-            &lt;!-- add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
+            &lt;/li&gt;
+            &lt;!-- MENU toggle for mobile is a unique pattern --&gt;            &lt;!-- menu items that hide when in mobile under the expanded area --&gt;
+            &lt;!-- if button shouldn&#x27;t show in the main area on mobile add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto [ display_none block:lg ]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
-                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Nav Link&lt;/span&gt;
+                    &lt;!-- [~] --&gt;
+                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Secondary&lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;li class&#x3D;&quot;nav-item flex_auto display_none block:lg&quot;&gt;
+            &lt;/li&gt;            &lt;!-- if button shouldn&#x27;t show in the main area on mobile add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
+            &lt;li class&#x3D;&quot;nav-item flex_auto [ display_none block:lg ]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ bg_secondary-2 c_secondary-3 disabled  ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
                     &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;
+                        &lt;!-- If Button Disabled Add This Icon --&gt;
                         &lt;i class&#x3D;&quot;fas fa-lock p-r_3&quot;&gt;&lt;/i&gt;
-                        Menu Secondary Link
+                        Secondary: Disabled
                     &lt;/span&gt;
                 &lt;/a&gt;
-            &lt;/li&gt;            &lt;!-- add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
+            &lt;/li&gt;            &lt;!-- if button shouldn&#x27;t show in the main area on mobile add in classes &#x60;display_none block:lg&#x60; to hide on mobile so they only show up in the mobile expand area. --&gt;
             &lt;li class&#x3D;&quot;nav-item flex_auto [ display_none block:lg ]&quot;&gt;
                 &lt;a class&#x3D;&quot;a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
-                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Nav Link&lt;/span&gt;
+                    &lt;!-- [~] --&gt;
+                    &lt;span class&#x3D;&quot;block lh_0 p-y_0 p-y_2:md text_center&quot;&gt;Secondary&lt;/span&gt;
                 &lt;/a&gt;
             &lt;/li&gt;        &lt;/ul&gt;
         &lt;!-- Expanding Mobile Menu --&gt;
@@ -758,19 +793,19 @@
                 &lt;li class&#x3D;&quot;nav-item flex_auto br-b_1 br_solid br_black-2&quot;&gt;
                     &lt;a class&#x3D;&quot;[~] a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
                         &lt;!-- [~] --&gt;
-                        Mobile Nav Link
+                        Mobile Menu Link
                     &lt;/a&gt;
                 &lt;/li&gt;                &lt;li class&#x3D;&quot;nav-item flex_auto br-b_1 br_solid br_black-2&quot;&gt;
                     &lt;!-- if disabled add these classes to the a tag --&gt;
                     &lt;a class&#x3D;&quot; [ bg_secondary-2 c_secondary-3 disabled ]  a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg&quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
-                        &lt;!-- add lock icon --&gt;
+                        &lt;!-- If Button Disabled Add This Icon --&gt;
                         &lt;i class&#x3D;&quot;fas fa-lock p-l_3&quot;&gt;&lt;/i&gt;
-                        Mobile Nav Link
+                        Mobile Menu Link: Disablled
                     &lt;/a&gt;
                 &lt;/li&gt;                &lt;li class&#x3D;&quot;nav-item flex_auto br-b_1 br_solid br_black-2&quot;&gt;
                     &lt;a class&#x3D;&quot;[~] a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 &quot; href&#x3D;&quot;/convocation&quot; target&#x3D;&quot;_self&quot;&gt;
                         &lt;!-- [~] --&gt;
-                        Mobile Nav Link
+                        Mobile Menu Link
                     &lt;/a&gt;
                 &lt;/li&gt;            &lt;/ul&gt;
         &lt;/div&gt;

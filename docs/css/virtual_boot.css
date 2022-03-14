@@ -6801,7 +6801,6 @@ Markup:
             {{> "Navigation.HeaderNav.Active" }}
             {{> "Navigation.HeaderNav.MobileButton"}}
             {{> "Navigation.HeaderNav.Disabled"}}
-            <!-- menu toggle for mobile -->
             {{> "Navigation.HeaderNav.MobileToggle"}}
             <!-- menu items that hide when in mobile under the expanded area -->
             {{> "Navigation.HeaderNav.MobileHidden" }}
@@ -6821,10 +6820,20 @@ Markup:
 
 Weight: 0
 
+SubComponents: 
+Navigation.HeaderNav.MobileButton - Primary
+Navigation.HeaderNav.Active - Primary: Active
+Navigation.HeaderNav.Disabled - Primary: Disabled
+Navigation.HeaderNav.MobileToggle - Mobile Menu Toggle
+Navigation.HeaderNav.MobileHidden - Secondary
+Navigation.HeaderNav.MobileHiddenDisabled - Secondary: Disabled
+Navigation.HeaderNav.ExpandMobileLinks - Mobile Menu Link
+Navigation.HeaderNav.ExpandMobileLinksDisabled - Mobile Menu Link: Disabled
+
 Styleguide Navigation.HeaderNav
 */
 /*
-Base Header Nav
+Base Header Nav (Primary)
 
 Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
 
@@ -6832,11 +6841,11 @@ Markup:
 <!-- All areas that have `[ ]` in the design are areas where classes might be added or removed. -->
 <li class="nav-item flex_auto [~]">
     <a class="a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/program" target="_self">
-        <!-- icon is needed for the Mobile Button Nav -->
+        <!-- icon is needed for the Primary Button Nav -->
         <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-calendar-alt display_none:lg"></i>
         <span class="block lh_0 p-y_0 p-y_2:md text_center">
         <!--  []  -->
-        Base Link Design 
+        Primary
         </span>
     </a>
 </li>
@@ -6853,6 +6862,7 @@ Mobile Toggle
 Toggle button for the expanding mobile menu.
 
 Markup:
+<!-- MENU toggle for mobile is a unique pattern -->
 <li class="nav-item flex_auto block display_none:lg">
     <a class="bg_secondary h:bg_secondary-n2 flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 font_medium h:c_white text-shadow_black-1 h:c_white justify_center nav-link text_center p-y_3:md" aria-expanded="false" aria-label="Toggle Extra Nav" data-bs-toggle="collapse" data-bs-target="#ExpandingMobileMenu" aria-controls="ExpandingMobileMenu"
     >
@@ -6860,6 +6870,7 @@ Markup:
         <span class="block lh_0 p-y_0 p-y_2:md text_center">More</span>
     </a>
 </li>
+<!-- MENU toggle for mobile is a unique pattern -->
 
 MarkupWrapperClasses: ul_none
 
@@ -6868,15 +6879,16 @@ Weight: 0
 Styleguide Navigation.HeaderNav.MobileToggle
 */
 /*
-Base Header Nav - Hide on Mobile
+Base Header Nav (Secondary)
 
 Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
 
 Markup:
-<!-- add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
+<!-- if button shouldn't show in the main area on mobile add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
 <li class="nav-item flex_auto [ display_none block:lg ]">
     <a class="a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/convocation" target="_self">
-        <span class="block lh_0 p-y_0 p-y_2:md text_center">Nav Link</span>
+        <!-- [~] -->
+        <span class="block lh_0 p-y_0 p-y_2:md text_center">Secondary</span>
     </a>
 </li>
 
@@ -6892,11 +6904,13 @@ Mobile Hidden Header Nav Disabled
 Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
 
 Markup:
-<li class="nav-item flex_auto display_none block:lg">
+<!-- if button shouldn't show in the main area on mobile add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
+<li class="nav-item flex_auto [ display_none block:lg ]">
     <a class="a:bg_accent [ bg_secondary-2 c_secondary-3 disabled  ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/convocation" target="_self">
         <span class="block lh_0 p-y_0 p-y_2:md text_center">
+            <!-- If Button Disabled Add This Icon -->
             <i class="fas fa-lock p-r_3"></i>
-            Menu Secondary Link
+            Secondary: Disabled
         </span>
     </a>
 </li>
@@ -6908,7 +6922,7 @@ Weight: 0
 Styleguide Navigation.HeaderNav.MobileHiddenDisabled
 */
 /*
-Expanded Mobile Nav List
+Mobile Menu Link
 
 Header Nav in mobile view has an expanded more list that hides the secondary nav items. 
 
@@ -6916,7 +6930,7 @@ Markup:
 <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
     <a class="[~] a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
         <!-- [~] -->
-        Mobile Nav Link
+        Mobile Menu Link
     </a>
 </li>
 
@@ -6927,7 +6941,7 @@ Weight: 0
 Styleguide Navigation.HeaderNav.ExpandMobileLinks
 */
 /*
-Expanded Mobile Nav List Disabled
+Mobile Menu Link Disabled
 
 Header Nav in mobile view has an expanded more list that hides the secondary nav items. 
 
@@ -6935,9 +6949,9 @@ Markup:
 <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
     <!-- if disabled add these classes to the a tag -->
     <a class=" [ bg_secondary-2 c_secondary-3 disabled ]  a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg" href="/convocation" target="_self">
-        <!-- add lock icon -->
+        <!-- If Button Disabled Add This Icon -->
         <i class="fas fa-lock p-l_3"></i>
-        Mobile Nav Link
+        Mobile Menu Link: Disablled
     </a>
 </li>
 
@@ -6957,7 +6971,7 @@ Markup:
 <li class="nav-item flex_auto [ active ]">
     <a class="[ active ][ text-shadow_black-1 ] a:bg_accent flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/" target="_self">
         <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-home-heart display_none:lg"></i>
-        <span class="block lh_0 p-y_0 p-y_2:md text_center">Active</span>
+        <span class="block lh_0 p-y_0 p-y_2:md text_center">Primary: Active</span>
     </a>
 </li>
 
@@ -6979,7 +6993,7 @@ Markup:
         <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-users display_none:lg"></i>
         <span class="block lh_0 p-y_0 p-y_2:md  text_center">
             <!-- If Button Disabled Add This Icon --><i class="fas fa-lock p-r_3"></i>
-            Faculty
+            Primary: Disabled
         </span>
     </a>
 </li> 
@@ -8146,11 +8160,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9375" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9520" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5277" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6314" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1784" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0776" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7411" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6043" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9848" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7489" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8182,11 +8196,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5298" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7738" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8633" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4295" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4641" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6632" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5624" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5048" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5231" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9123" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8227,8 +8241,8 @@ Markup:
     </header>
     <main id="collapseTypeAhead" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_5578" }}
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_7944" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_7815" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_3200" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -9292,7 +9306,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_2955">
+<div class="flex_column flex" id="session_2750">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -9316,7 +9330,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2955">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2750">top</a>
                 </div>
             </section>
         </div>
@@ -9328,7 +9342,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2955">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2750">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9360,7 +9374,7 @@ Channel Player External Content
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_2955">
+<div class="flex_column flex" id="session_2750">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -9390,7 +9404,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2955">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2750">top</a>
                 </div>
             </section>
         </div>
@@ -9401,7 +9415,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2955">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2750">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9434,7 +9448,7 @@ Channel Player No Schedule
 description
 
 Markup:
-<div class="flex_column flex" id="session_2955">
+<div class="flex_column flex" id="session_2750">
     <header class="flex flex_column-reverse font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -9455,7 +9469,7 @@ Markup:
         <h2 class="font_bold font_display c_primary-n1 m-b_4"><div class="flex_row:md flex flex_column">
             <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
         </h2>
-        {{> Program.GridFormat.WhatsNext modifier_class="Arteriosclerosis Pericardial " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Side Effect Clinical Chest Pain Arteriosclerosis Electrocardiogram Myocardial Arrhythmia Electrocardiographic Arteriosclerosis " }}
         </div>
     </section>
 </div>
@@ -9473,7 +9487,7 @@ Channel Player:Non Accredited
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_2955">
+<div class="flex_column flex" id="session_2750">
     <div class="bg_secondary-n3 c_white font_bold font_ui p_3 p-x_4 m-b_4 shadow_overlap-light br_radius" > {{> "Sub.Credits.NonAccredited" }}: These sessions are ineligible to receive credit</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
@@ -9498,7 +9512,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2955">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_2750">top</a>
                 </div>
             </section>
         </div>
@@ -9510,7 +9524,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2955">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_2750">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData.NotAccredited" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9884,7 +9898,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_9711">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_1760">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -9918,7 +9932,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_9711">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_1760">top</a></div>
     </div>
 </article>
 
@@ -10230,8 +10244,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="Valvular Electrocardiogram Valvular Clinical Electrocardiogram Arteriosclerosis Myocardial Chest Pain Electrocardiographic "  }}
-    {{> Program.GridFormat.Abstract modifier_class="Blood Vessel Cardiovascular Electrocardiogram "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="Pericardial Chest Pain Clinical Blood Vessel Arrhythmia Pharmacologic Chest Pain Cardiovascular "  }}
+    {{> Program.GridFormat.Abstract modifier_class="Arteriosclerosis Chest Pain Chest Pain Cardiovascular Cardiovascular Electrocardiogram "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -10306,8 +10320,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Valvular Valvular Cardiovascular Arteriosclerosis Side Effect Side Effect " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Valvular Heart Disease Arteriosclerosis " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Electrocardiogram Myocardial Chest Pain Pericardial Electrocardiogram " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Side Effect " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -10425,9 +10439,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="Cardiovascular Clinical Electrocardiogram Valvular " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Side Effect Electrocardiographic Myocardial Electrocardiogram " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Arrhythmia " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Blood Vessel Pericardial Electrocardiographic " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Myocardial Cardiovascular Pharmacologic Valvular Heart Disease Valvular Valvular " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Chest Pain Valvular Heart Disease Valvular Electrocardiogram Pericardial Pericardial Myocardial Valvular Myocardial " }}
     </div>
 </section>
 
@@ -10490,9 +10504,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNext modifier_class="Arrhythmia Electrocardiogram Cardiovascular Arteriosclerosis Valvular Heart Disease Electrocardiographic Clinical Side Effect Myocardial " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="Clinical Pericardial Pharmacologic Blood Vessel " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="Myocardial Side Effect Electrocardiogram Clinical " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Pharmacologic Electrocardiographic Pericardial Side Effect Side Effect " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Pericardial Pharmacologic Cardiovascular Pericardial Arrhythmia Clinical Chest Pain Clinical " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Valvular Heart Disease Blood Vessel Pharmacologic Electrocardiogram Clinical Electrocardiogram Pharmacologic " }}
     </div>
 </section>
 

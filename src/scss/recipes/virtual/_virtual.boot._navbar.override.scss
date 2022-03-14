@@ -11,7 +11,6 @@ Markup:
             {{> "Navigation.HeaderNav.Active" }}
             {{> "Navigation.HeaderNav.MobileButton"}}
             {{> "Navigation.HeaderNav.Disabled"}}
-            <!-- menu toggle for mobile -->
             {{> "Navigation.HeaderNav.MobileToggle"}}
             <!-- menu items that hide when in mobile under the expanded area -->
             {{> "Navigation.HeaderNav.MobileHidden" }}
@@ -30,12 +29,22 @@ Markup:
 </div>
  
 Weight: 0
+
+SubComponents: 
+Navigation.HeaderNav.MobileButton - Primary
+Navigation.HeaderNav.Active - Primary: Active
+Navigation.HeaderNav.Disabled - Primary: Disabled
+Navigation.HeaderNav.MobileToggle - Mobile Menu Toggle
+Navigation.HeaderNav.MobileHidden - Secondary
+Navigation.HeaderNav.MobileHiddenDisabled - Secondary: Disabled
+Navigation.HeaderNav.ExpandMobileLinks - Mobile Menu Link
+Navigation.HeaderNav.ExpandMobileLinksDisabled - Mobile Menu Link: Disabled
  
 Styleguide Navigation.HeaderNav
 */
 
 /*
-Base Header Nav
+Base Header Nav (Primary)
  
 Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
  
@@ -43,11 +52,11 @@ Markup:
 <!-- All areas that have `[ ]` in the design are areas where classes might be added or removed. -->
 <li class="nav-item flex_auto [~]">
     <a class="a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/program" target="_self">
-        <!-- icon is needed for the Mobile Button Nav -->
+        <!-- icon is needed for the Primary Button Nav -->
         <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-calendar-alt display_none:lg"></i>
         <span class="block lh_0 p-y_0 p-y_2:md text_center">
         <!--  []  -->
-        Base Link Design 
+        Primary
         </span>
     </a>
 </li>
@@ -65,6 +74,7 @@ Mobile Toggle
 Toggle button for the expanding mobile menu.
  
 Markup:
+<!-- MENU toggle for mobile is a unique pattern -->
 <li class="nav-item flex_auto block display_none:lg">
     <a class="bg_secondary h:bg_secondary-n2 flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 font_medium h:c_white text-shadow_black-1 h:c_white justify_center nav-link text_center p-y_3:md" aria-expanded="false" aria-label="Toggle Extra Nav" data-bs-toggle="collapse" data-bs-target="#ExpandingMobileMenu" aria-controls="ExpandingMobileMenu"
     >
@@ -72,6 +82,7 @@ Markup:
         <span class="block lh_0 p-y_0 p-y_2:md text_center">More</span>
     </a>
 </li>
+<!-- MENU toggle for mobile is a unique pattern -->
 
 MarkupWrapperClasses: ul_none
  
@@ -82,15 +93,16 @@ Styleguide Navigation.HeaderNav.MobileToggle
 
 
 /*
-Base Header Nav - Hide on Mobile
+Base Header Nav (Secondary)
  
 Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
  
 Markup:
-<!-- add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
+<!-- if button shouldn't show in the main area on mobile add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
 <li class="nav-item flex_auto [ display_none block:lg ]">
     <a class="a:bg_accent [ text-shadow_black-1 ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/convocation" target="_self">
-        <span class="block lh_0 p-y_0 p-y_2:md text_center">Nav Link</span>
+        <!-- [~] -->
+        <span class="block lh_0 p-y_0 p-y_2:md text_center">Secondary</span>
     </a>
 </li>
 
@@ -107,11 +119,13 @@ Mobile Hidden Header Nav Disabled
 Header Nav basic design that is not hidden when in mobile viewport have an included icon that makes it easier to see and click on when in mobile viewport. 
  
 Markup:
-<li class="nav-item flex_auto display_none block:lg">
+<!-- if button shouldn't show in the main area on mobile add in classes `display_none block:lg` to hide on mobile so they only show up in the mobile expand area. -->
+<li class="nav-item flex_auto [ display_none block:lg ]">
     <a class="a:bg_accent [ bg_secondary-2 c_secondary-3 disabled  ] flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/convocation" target="_self">
         <span class="block lh_0 p-y_0 p-y_2:md text_center">
+            <!-- If Button Disabled Add This Icon -->
             <i class="fas fa-lock p-r_3"></i>
-            Menu Secondary Link
+            Secondary: Disabled
         </span>
     </a>
 </li>
@@ -125,7 +139,7 @@ Styleguide Navigation.HeaderNav.MobileHiddenDisabled
 
 
 /*
-Expanded Mobile Nav List
+Mobile Menu Link
  
 Header Nav in mobile view has an expanded more list that hides the secondary nav items. 
  
@@ -133,7 +147,7 @@ Markup:
 <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
     <a class="[~] a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg text-shadow_black-1 " href="/convocation" target="_self">
         <!-- [~] -->
-        Mobile Nav Link
+        Mobile Menu Link
     </a>
 </li>
 
@@ -145,7 +159,7 @@ Styleguide Navigation.HeaderNav.ExpandMobileLinks
 */
 
 /*
-Expanded Mobile Nav List Disabled
+Mobile Menu Link Disabled
  
 Header Nav in mobile view has an expanded more list that hides the secondary nav items. 
  
@@ -153,9 +167,9 @@ Markup:
 <li class="nav-item flex_auto br-b_1 br_solid br_black-2">
     <!-- if disabled add these classes to the a tag -->
     <a class=" [ bg_secondary-2 c_secondary-3 disabled ]  a:bg_accent-n1 nav-link font_medium h:bg_acc-n2 h:c_white text_left text_center:lg p-l_4 p-l_0:lg" href="/convocation" target="_self">
-        <!-- add lock icon -->
+        <!-- If Button Disabled Add This Icon -->
         <i class="fas fa-lock p-l_3"></i>
-        Mobile Nav Link
+        Mobile Menu Link: Disablled
     </a>
 </li>
 
@@ -175,7 +189,7 @@ Markup:
 <li class="nav-item flex_auto [ active ]">
     <a class="[ active ][ text-shadow_black-1 ] a:bg_accent flex flex_column flex_row:lg font_medium gap-x_4 gap-y_3 h:bg_acc-n2 h:c_white justify_center nav-link text_center p-y_3:md " href="/" target="_self">
         <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-home-heart display_none:lg"></i>
-        <span class="block lh_0 p-y_0 p-y_2:md text_center">Active</span>
+        <span class="block lh_0 p-y_0 p-y_2:md text_center">Primary: Active</span>
     </a>
 </li>
 
@@ -197,7 +211,7 @@ Markup:
         <i class="font-size_up fa-fw fas p_2 inline-block m_auto fa-users display_none:lg"></i>
         <span class="block lh_0 p-y_0 p-y_2:md  text_center">
             <!-- If Button Disabled Add This Icon --><i class="fas fa-lock p-r_3"></i>
-            Faculty
+            Primary: Disabled
         </span>
     </a>
 </li> 
