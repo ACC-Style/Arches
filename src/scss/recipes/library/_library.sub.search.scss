@@ -9,7 +9,7 @@ The filter box on the search page.
  
 Markup:
 <div id="filterZone" class="{aspect_1_1:md} {nav-mined} nav-maxed self_start bg_black-3 br_1 br_black-2 br_radius br_solid flex_auto p_2 p_3:md  shadow_emboss-light transition_3 flex flex_column {{modifier_class}}">
-	<nav class="flex_auto overflow_hidden self_stretch font_4:lg font_3:md font_2 font_display font_display">
+	<nav id="FilterNavContainer" class="flex_auto overflow_hidden self_stretch font_4:lg font_3:md font_2 font_display font_display">
 		<ul class="flex flex_column:md flex_row gap_3 justify_start:md ul_none w_100 w_auto:md">
 			<li class="a:bg_primary a:c_white a:shadow_overlap-light {aspect_1_1:md} br_radius c_white-8 flex_none grid h:bg_black-7 h:c_white h:shadow_overlap-light nav-item p_0:md p_3">
 				<a class="c_inherit-all h:undecorated p_3 lh_1 m-x_n1">
@@ -86,3 +86,10 @@ Weight:0
  
 Styleguide Sub.YoutubeEmbedPlaylist
 */
+
+.jump-buttons_top{
+	top:3.5rem;
+	@media #{$large-up} {
+		top:0;
+	}
+}

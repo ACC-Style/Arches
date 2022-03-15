@@ -56,7 +56,7 @@ Markup:
 			</header>
 			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md z_1 font_1:lg font_0">
 				{{> "Sub.Search.FilterRail"  modifier_class="col-start_filterArea col-end_filterArea order_last order_unset:md"}}
-				<div class="col-start_insertArea-1 col-end_insertArea-4 	 row-start_1"> 
+				<div class="col-start_insertArea-1 col-end_insertArea-4 row-start_1" id="SearchBarTop"> 
 					{{> "Sub.Search.Bar"  }}
 					<div class="{{> 'Sub.ClassList.Vertical.padding_up-1' }}">
 						{{> "Sub.Search.ResultOverview"}}
@@ -71,7 +71,7 @@ Markup:
 					</nav>
 					<div class="tab-content" id="nav-tabContent">
 						<div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
-							<ul class="ul_none flex flex_column gap_2 gap_3:md gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
+							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
 								<li class="">{{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
 								<li class="">{{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
 								<li class="">{{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
@@ -79,7 +79,7 @@ Markup:
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 							</div>
 						<div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
-							<ul class="ul_none flex flex_column gap_2 gap_3:md gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
+							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
 								<li class=""> {{> "Program.Presentation.Search"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
 								<li class=""> {{> "Program.Presentation.Search"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
 								<li class=""> {{> "Program.Presentation.Search"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
