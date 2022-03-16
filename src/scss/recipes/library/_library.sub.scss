@@ -45,6 +45,23 @@ Styleguide Sub.ActionButtons.Favorite
 
 /*
 
+Section Header
+
+Section Headers are styled the same
+
+default - plan header
+ 
+Markup:
+<header class="font_display font_regular font_3:lg font_2:md font_1 c_primary-n1 m-b_3 lh_1 m-t_4:md m-t_3 "><h2 class="lh_1 m_0 font_regular lowercase">{{modifier_class}}</h2></header>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Sub.Section.h2
+*/
+/*
+
 Progress Player Bar
 
 shows users where they left off with the player. 
@@ -171,7 +188,7 @@ Duration
 The length of the clip of video or all the of the lengths of the combined clips. 
 
 Markup:
-<li class="inline-block p-r_3 p_2">
+<li class="inline-block p-r_3 p_2 lh_0">
     <span class="font-size_up c_accent-n2 block"><i class="fal fa-clock"></i> 15</span>
     minutes
 </li>
@@ -192,7 +209,7 @@ Presentation Count
 Number of presentations in the session. 
 
 Markup:
-<li class="inline-block p-r_3 p_2">
+<li class="inline-block p-r_3 p_2 lh_0">
     <span class="font-size_up c_accent-n2 block">4</span>
     presentations
 </li>
@@ -210,9 +227,9 @@ Attachment Link
 Link to attachments. it should state pdf or zip depending 
 
 Markup:
-<li class="inline-block br_radius p-x_3 m-l_n3 p_2 z_3 self_end relative h:bg_black-2">
+<li class="inline-block br_radius p-x_3 m-l_n3 p_2 z_3 self_end relative h:bg_black-2 lh_0">
     <a href="" class="undecorated h:undecorated expanded-click-area">
-    <span class="font-size_up c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span>PDF</span></span> 
+    <span class="font-size_up c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> 
         Attachments
     </a>
 </li>
@@ -231,9 +248,9 @@ Attachment Link ZIP
 Link to attachments. it should state pdf or zip depending 
 
 Markup:
-<li class="inline-block br_radius p-x_3 m-l_n3 p_2 z_3 self_end relative h:bg_black-2">
+<li class="inline-block br_radius p-x_3 m-l_n3 p_2 z_3 self_end relative h:bg_black-2 lh_0">
     <a href="" class="undecorated h:undecorated expanded-click-area">
-    <span class="font-size_up c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span>ZIP</span></span> 
+    <span class="font-size_up c_primary-n2 block"><i class="fal fa-paperclip"></i><span class="p-r_3">ZIP</span></span> 
         Attachments
     </a>
 </li>
@@ -245,7 +262,31 @@ Weight: 0
 Styleguide Sub.Data.AttachmentLink.ZIP
 */
 
+/*
 
+Like Buttons
+
+This buttons are used to rate the videos and download the attachments.
+ 
+Markup:
+<ul class="ul_none flex flex_row lowercase flex flex_row gap_2">
+    <li class="br_solid br_black-3 br_radius br_1 h:bg_black-3">
+        <a class="p-y_3 p-x_4 p-x_5:lg" href=""><i class="fal fa-thumbs-up"></i></a>
+    </li>
+    <li class="br_solid br_black-3 br_radius br_1 h:bg_black-3">
+        <a class="p-y_3 p-x_4 p-x_5:lg" href=""><i class="fal fa-thumbs-down"></i></a>
+    </li>
+    <li class="br_solid br_black-3 br_radius br_1 h:bg_black-3 m-l_auto">
+        <a class="p-y_3 p-x_4 p-x_5:lg" href=""><i class="fal fa-paperclip"></i> Attachments</a>
+    </li>
+</ul>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Sub.ActionButtons.LikeAndAttachments
+*/
 /*
 
 Breadcrumb First Item
@@ -314,4 +355,101 @@ MarkupWrapperClasses: ul_none
 Weight:0
  
 Styleguide Sub.Navigation.Breadcrumb.LastItem
+*/
+
+/*
+
+Credit Chiclets Horizontal
+
+Horizontal list of credit chiclets.
+ 
+Markup:
+<ul
+    class="flex flex_row flex_wrap font_n3 gap_2 justify_start self_center ul_none uppercase items_center">
+    <li class="lh_0 flex_shrink">
+        {{> 'Sub.Credit' modifier_class="CME"}}
+    </li>
+    <li class="lh_0 flex_shrink">
+        {{> 'Sub.Credit' modifier_class="CNE"}}
+    </li>
+</ul>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Sub.Credit.Chiclets.Horizontal
+*/
+
+/*
+Auxiliary Data
+ 
+Description: Most players have auxiliary data zones that describe the playing element through credits, tags, and categories.
+ 
+Markup:
+<aside class="flex_none max-w_20:md max-w_25:lg w_100 {{ modifier_class }}">    
+    {{> "Sub.FacultyList.AuxSession"  modifier_class=""}}
+    <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-file-certificate p-r_3"></i> Credits</h4>
+    <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down-1">
+      {{> "Sub.Credit.Chiclets.Horizontal" }}
+    </div>
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
+        {{> "Sub.Tags.Category" }}
+    </div>
+    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
+    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
+      {{> "Sub.Tags.Filter" }}
+    </div>
+</aside>
+
+SubComponents:
+Sub.Credits.NonAccredited - Non Accredited
+Sub.FacultyList.AuxSession - Session Faculty Lists
+Sub.Credit.Chiclets.Horizontal - Credit Chiclets Horizontal
+Sub.Tags.Category - Category
+Sub.Tags.Filter - Tags
+ 
+Weight:0
+ 
+Styleguide Sub.Player.AuxData
+*/
+
+
+/*
+Category Tag
+ 
+Category Tags are singular tags that divide content.  An item can only have a single tag from a category group. 
+ 
+Markup:
+<ul class="ul_inline-comma">
+  <li>Channel 1</li>
+  <li>{{>"Data.Agenda.ChannelName"}}</li>
+</ul>
+ 
+
+Weight:0
+ 
+Styleguide Sub.Tags.Category
+
+*/
+
+/*
+Filter Tags
+ 
+Filter Tags are decorative tags that are used to filter content. Many tags from a single group can be applied to a single item.
+ 
+Markup:
+<ul class="ul_inline-comma">
+  <li>Tag Name 1</li>
+  <li>Daugherty - Larkin</li>
+  <li>relationships</li>  
+  <li>web-readiness</li>
+</ul>
+ 
+
+Weight:0
+ 
+Styleguide Sub.Tags.Filter
+
 */

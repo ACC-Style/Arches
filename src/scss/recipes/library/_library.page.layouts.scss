@@ -11,23 +11,29 @@ Markup:
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			<div class="grid-area_menuArea">{{> "Page.Layouts.GridFiller"  modifier_class="M"}}</div>
 			<header class="grid-area_headerArea">{{> "Page.Layouts.GridFiller"  modifier_class="BreadCrumb"}}</header>
-			<section class="grid:md flex flex_column grid-template_content grid-area_mainArea gap_4 p-y_3 p-y_0:md">
-				<aside class="col-start_filterArea col-end_filterArea order_last order_unset:md">
-				{{> "Page.Layouts.SubGridFiller"  modifier_class="Filter"}}</aside>
-				<div class="col-start_insertArea-1 col-end_insertArea-1 ">
-					{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert 1"}}
-				</div>
-				<div class="col-start_insertArea-2 col-end_insertArea-2 ">
-					{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert 2"}}
-				</div>
-				<div class="col-start_insertArea-3 col-end_insertArea-3 ">
-					{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert 3"}}
-				</div>
-				<div class="col-start_insertArea-4 col-end_insertArea-4 ">
-					{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert 4"}}
+			<section class="grid:md flex flex_column grid-template_filterAndContent grid-area_mainArea gap_4 p-y_3 p-y_0:md">
+				<aside class="grid-area_filterArea col-end_filterArea order_last order_unset:md">
+				{{> "Page.Layouts.SubGridFiller"  modifier_class="Filter"}}
+				</aside>
+				<div class="grid-area_contentArea grid:md flex flex_column grid-col_5 gap_4">
+					<div class="col-start_1 col-end_1">
+						{{> "Page.Layouts.SubGridFiller"  modifier_class="Grid Area 1"}}
+					</div>
+					<div class="col-start_2 col-end_2 ">
+						{{> "Page.Layouts.SubGridFiller"  modifier_class="Grid Area 2"}}
+					</div>
+					<div class="col-start_3 col-end_3">
+						{{> "Page.Layouts.SubGridFiller"  modifier_class="Grid Area 3"}}
+					</div>
+					<div class="col-start_4 col-end_4">
+						{{> "Page.Layouts.SubGridFiller"  modifier_class="Grid Area 4"}}
+						</div>
+					<div class="col-start_5 col-end_5">
+						{{> "Page.Layouts.SubGridFiller"  modifier_class="Grid Area 5"}}
+					</div>
 				</div>
 			</section>
-			<footer class="grid:md flex flex_column grid-template_content grid-area_footerArea m-t_auto">
+			<footer class="flex flex_column gap_4 grid-area_footerArea grid-col_5 grid:md m-t_auto p-y_0:md p-y_3">
 				<div class="col-start col-end">{{> "Page.Layouts.SubGridFiller"  modifier_class="Footer"}}</div>
 			</footer>
 		</div>
@@ -47,24 +53,12 @@ Styleguide Page.Layouts.PageGrid
 	grid-template-rows:  4rem 1fr  auto;
 	grid-template-areas: 'menuArea headerArea' 'menuArea mainArea' 'menuArea footerArea';
 }
-.grid-template_content {
-	grid-template-columns: auto repeat( 4, 1fr);
+.grid-template_filterAndContent {
+	grid-template-columns: auto 1fr;
 	grid-template-rows: 1fr;
-	grid-template-areas: 'filterArea insertArea1 insertArea2 insertArea3 insertArea4';
+	grid-template-areas: 'filterArea contentArea';
 }
 
-@media #{$large-up} {
-	.grid-template_page {
-		grid-template-columns: 4rem 1fr;
-		grid-template-rows:  4rem 1fr  auto;
-		grid-template-areas: 'menuArea headerArea' 'menuArea mainArea' 'menuArea footerArea';
-	}
-	.grid-template_content {
-		grid-template-columns: auto repeat( 4, 1fr);
-		grid-template-rows: 1fr;
-		grid-template-areas: 'filterArea insertArea1 insertArea2 insertArea3 insertArea4';
-	}
-}
 
 
 .grid-area_headerArea{
@@ -79,18 +73,13 @@ Styleguide Page.Layouts.PageGrid
 .grid-area_footerArea{
 	grid-area: footerArea;
 }
-.row-start_filterArea{
-	grid-row-start: filterArea;
+.grid-area_filterArea{
+	grid-area: filterArea;
 }
-.row-end_filterArea{
-	grid-row-end: filterArea;
+.grid-area_contentArea{
+	grid-area: contentArea;
 }
-.col-start_filterArea {
-	grid-column-start: filterArea;
-}
-.col-end_filterArea {
-	grid-column-end: filterArea;
-}
+
 .col-start{
 	grid-column-start: 1
 }
@@ -102,52 +91,5 @@ Styleguide Page.Layouts.PageGrid
 }
 .row-end{
 	grid-row-end: -1
-}
-
-@for $c from 1 through 4 {
-	.row-start_insertArea-#{$c}{
-		grid-row-start: insertArea-#{$c};
-	}
-	.row-end_insertArea-#{$c}{
-		grid-row-end: insertArea-#{$c};
-	}
-    .col-start_insertArea-#{$c} {
-        grid-column-start: insertArea#{$c};
-    }
-    .col-end_insertArea-#{$c} {
-        grid-column-end: insertArea#{$c};
-    }
-}
-@media #{$medium-up} {
-	@for $c from 1 through 4 {
-		.row-start_insertArea-#{$c}#{$bp-label_medium} {
-			grid-row-start: insertArea-#{$c};
-		}
-		.row-end_insertArea-#{$c}#{$bp-label_medium} {
-			grid-row-end: insertArea-#{$c};
-		}
-		.col-start_insertArea-#{$c}#{$bp-label_medium}  {
-			grid-column-start: insertArea#{$c};
-		}
-		.col-end_insertArea-#{$c}#{$bp-label_medium} {
-			grid-column-end: insertArea#{$c};
-		}
-	}	
-}
-@media #{$large-up} {
-	@for $c from 1 through 4 {
-		.row-start_insertArea-#{$c}#{$bp-label_large} {
-			grid-row-start: insertArea-#{$c};
-		}
-		.row-end_insertArea-#{$c}#{$bp-label_large} {
-			grid-row-end: insertArea-#{$c};
-		}
-		.col-start_insertArea-#{$c}#{$bp-label_large}  {
-			grid-column-start: insertArea#{$c};
-		}
-		.col-end_insertArea-#{$c}#{$bp-label_large} {
-			grid-column-end: insertArea#{$c};
-		}
-	}	
 }
 
