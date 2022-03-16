@@ -7,7 +7,7 @@ Sub Page No Filter
 The sub pages have a common layouts.
  
 Markup:
-<div class="BODY_TAG-stand-in h_100 grid {{> "Sub.ClassList.Body"}}">	
+<div class="BODY_TAG-stand-in grid {{> "Sub.ClassList.Body"}}">	
 	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea z_4" }}
@@ -48,7 +48,7 @@ Search Page
 The sub pages have a common layouts.
  
 Markup:
-<div class="BODY_TAG-stand-in h_100 grid {{> "Sub.ClassList.Body"}}">	
+<div class="BODY_TAG-stand-in grid {{> "Sub.ClassList.Body"}}">	
 	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea z_4" }}
@@ -119,20 +119,20 @@ Session Data Page
 The sub pages have a common layouts.
  
 Markup:
-<div class="BODY_TAG-stand-in h_100 grid {{> 'Sub.ClassList.Body'}}">
-	<div class="page-wrapper grid {{> 'Sub.ClassList.Page'}}">
+<div class="BODY_TAG-stand-in grid:md {{> 'Sub.ClassList.Body'}}">
+	<div class="page-wrapper grid:md {{> 'Sub.ClassList.Page'}}">
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> 'Navigation.MainNav' modifier_class='grid-area_menuArea z_4' }}
 			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
 				{{> 'Navigation.Breadcrumb'}}
 			</header>
-			<section class="flex flex_column font_0 font_1:lg gap_4 grid-area_mainArea grid-col_6 grid:md p-y_0:md p-y_3">
+			<section class="flex flex_column font_0 font_1:lg gap_4 grid-area_mainArea grid-col_6 grid-col_5:lg grid:md p-y_0:md p-y_3">
 				<div class="col-start col-end_3:lg col-end_4 flex flex_column gap_4 row-start_1">
 					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
-							<main class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate font_4:lg font_3:md font_2 {{>'Sub.ClassList.Inset.padding_up-2'}}">
-								<h1 class="font-size_up-1 font_display lh_2 c_primary c_primary-n3 m-t_2"> {{> 'Data.Session.Title'}} #{ call(get-function('randomWords'), random(10)) }</h1>
-							</main>
+						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding_up-2'}}">
+							<h1 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Session.Title'}} #{ call(get-function('randomWords'), random(10)) }</h1>
+							</main>	
 							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
 								<ul class="flex flex_column flex_wrap gap_2 justify_start self_center ul_none uppercase p-x_3">
 									<li class="flex_auto">
@@ -141,26 +141,21 @@ Markup:
 								</ul>
 							</aside>
 						</div>
-						<div class="font_0 {{>'Sub.ClassList.Inset.padding_up-3'}}">
-							<h4 class="font-size_up c_black-6 font_medium capitalize">
-								<i class="fas fa-users p-r_3"></i> Session Faculty
-							</h4>
-							<div class="p-y_3 br-t_1 br_black-2 br_solid font-size_down">
-								{{> 'Sub.FacultyList' }}
-							</div>
-						</div>
 						<nav class="{{>'Sub.ClassList.Inset.padding_up-3'}} font_2:lg font_1">
 							<h3 class="c_black-8">How did you like this session?</h3>
 							{{> 'Sub.ActionButtons.LikeAndAttachments' }}
 						</nav>
-					</section>
-					<section class="font_0 {{>'Sub.ClassList.Inset.level_up'}} {{>'Sub.ClassList.Inset.padding_up-2'}}">
-						{{> 'Sub.Section.h2' modifier_class='session data'}} {{> 'Sub.Player.AuxData'}}
+						<section class="font_0 m_3 {{>'Sub.ClassList.Inset.level_down-1'}} {{>'Sub.ClassList.Inset.padding_up-2'}}">
+							{{> 'Sub.Section.h3' modifier_class='session details'}} 
+							{{> 'Sub.Player.AuxData'}}
+						</section>
 					</section>
 				</div>
 				<div class="col-end col-start_3:lg col-start_4 row-start_1">
 					<section class="{{>'Sub.ClassList.Inset.level_up'}} {{>'Sub.ClassList.Inset.padding_up-2'}}">
-						{{> 'Sub.Section.h2' modifier_class='presentations'}}
+						<div class="flex flex_row items_center">
+						<span class="c_black-4 font_1 font_2:md font_3:lg font_display font_regular lh_1 m-b_3 m-b_4:lg m-t_3 p-l_3 p-r_4 self_end"><i class="fa-list-alt fas font-size_up-2"></i></span>
+						{{> 'Sub.Section.h2' modifier_class='presentation playlist'}}</div>
 						<div class="font_0 font_1:lg relative isolation_isolate">
 							<ul class="flex flex_column justify_stretch gap_4 ul_none">
 								{{> "Program.Presentation.List"}}
@@ -189,4 +184,89 @@ NOTE: This page will not render 100% correctly because it is calculated based on
 Weight:0
  
 Styleguide Page.Pages.Session
+*/
+
+/*
+
+Presentation Player
+
+The sub pages have a common layouts.
+ 
+Markup:
+<div class="BODY_TAG-stand-in grid:md {{> 'Sub.ClassList.Body'}}">
+	<div class="page-wrapper grid:md {{> 'Sub.ClassList.Page'}}">
+		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
+			{{> 'Navigation.MainNav' modifier_class='grid-area_menuArea z_4' }}
+			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
+				{{> 'Navigation.Breadcrumb'}}
+			</header>
+			<section class="flex flex_column font_0 font_1:lg gap_4 grid-area_mainArea grid-col_6 grid-col_5:lg grid:md p-y_0:md p-y_3">
+				<div class="col-start col-end_4:lg col-end flex flex_column gap_4 row-start_1">
+					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
+						<div class="flex flex_row font_ui justify_start relative w_100">
+						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding_up-2'}}">
+							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} #{ call(get-function('randomWords'), random(10)) }</h1>
+							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}} #{ call(get-function('randomWords'), random(10)) } </h2>
+							</main>	
+							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
+								<ul class="flex flex_column flex_wrap gap_2 justify_start self_center ul_none uppercase p-x_3">
+									<li class="flex_auto">
+										{{> 'Sub.ActionButtons.Favorite' }}
+									</li>
+								</ul>
+							</aside>
+						</div>
+						<div class="player hd full flex_auto w_100 p_4:lg p_3">
+							<div class="bg_acc aspect_16x9 c_white text_center  justify_center flex items_center">VIDEO EMBED</div>
+						</div>
+						<nav class="{{>'Sub.ClassList.Inset.padding_up-3'}} font_2:lg font_1">
+							{{> 'Sub.Search.TimeMarkers'}}
+							<h3 class="c_black-8">How did you like this presentation?</h3>
+							{{> 'Sub.ActionButtons.LikeAndAttachments' }}
+						</nav>
+					</section>
+				</div>
+				<div class="col-end col-start_4:lg col-start flex flex_column flex_row:md flex_column:lg gap_4">
+					<section class="flex_auto flex_50:md  flex_auto:lg flex_none:lg font_0 {{>'Sub.ClassList.Inset.level_up'}} {{>'Sub.ClassList.Inset.padding_up-2'}}">
+						{{> 'Sub.Section.h2' modifier_class='presentation details'}}
+						{{> 'Sub.Player.AuxData'}}
+					</section>	
+					<section class="flex_auto flex_50:md  flex_auto:lg flex_none:lg  font_0 {{>'Sub.ClassList.Inset.level_up'}} {{>'Sub.ClassList.Inset.padding_up-2'}}">
+						{{> 'Sub.Section.h2' modifier_class='session details'}}
+						<div class="p-y_3 br-t_1 br_black-2 br_solid font-size_down">
+							{{> "Sub.FacultyList.AuxSession"  modifier_class=""}}
+						</div>
+						<section class="{{>'Sub.ClassList.Inset.level_down-1'}} {{>'Sub.ClassList.Inset.padding_up-2'}}">
+							<div class="flex flex_row items_center">
+							<span class="c_black-4 font_0 font_1:md font_2:lg font_display font_regular lh_1 m-b_3 m-b_4:lg m-t_3 p-l_3 p-r_4 self_end"><i class="fa-list-alt fas font-size_up-2"></i></span>
+							{{> 'Sub.Section.h3' modifier_class='presentation playlist'}}</div>
+							<div class="font_n2 font_n1:lg relative isolation_isolate">
+								<ul class="flex flex_column justify_stretch gap_3 ul_none">
+									{{> "Program.Presentation.Condensed" modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+									{{> "Program.Presentation.CondensedPlaying" modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+									{{> "Program.Presentation.Condensed" modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+									{{> "Program.Presentation.Condensed" modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+								</ul>
+							</div>
+						</section>
+					</section>	
+				</div>
+			</section>
+			<footer class="flex flex_column gap_4 grid-area_footerArea grid-col_5 grid:md m-t_auto p-y_0:md p-y_3">
+				{{> "Navigation.Footer.Links" modifier_class="col-start
+				col-end_4" }} {{> "Navigation.Footer.Logo"
+				modifier_class="col-start_4 col-end" }}
+			</footer>
+		</div>
+	</div>
+</div>
+
+MarkupWrapperClasses: 
+
+
+NOTE: This page will not render 100% correctly because it is calculated based on the whole viewport and the styleguide has it wrapped in page dynamics..
+ 
+Weight:0
+ 
+Styleguide Page.Pages.Presentation
 */

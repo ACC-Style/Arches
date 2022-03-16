@@ -52,13 +52,64 @@ Section Headers are styled the same
 default - plan header
  
 Markup:
-<header class="font_display font_regular font_3:lg font_2:md font_1 c_primary-n1 m-b_3 lh_1 m-t_4:md m-t_3 "><h2 class="lh_1 m_0 font_regular lowercase">{{modifier_class}}</h2></header>
+<header class="font_display font_regular  c_primary-n1 m-b_3 lh_1 m-b_4:lg m-t_3 "><h2 class="lh_1 m_0 font_regular lowercase font_3:lg font_2:md font_1">{{modifier_class}}</h2></header>
 
 MarkupWrapperClasses: 
  
 Weight:0
  
 Styleguide Sub.Section.h2
+*/
+/*
+
+Section Header Down
+
+Section Headers are styled the same
+
+default - plan header
+ 
+Markup:
+<header class="font_display font_regular  c_primary-n2 m-b_2 lh_1 m-b_3:lg m-t_2 "><h3 class="lh_1 m_0 font_regular lowercase font_2:lg font_1:md font_0">{{modifier_class}}</h3></header>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Sub.Section.h3
+*/
+/*
+
+Section Header
+
+Section Headers are styled the same
+
+default - plan header
+ 
+Markup:
+<header class="p-x_4 font_display font_regular  c_primary-n1 m-b_3 lh_1 m-b_4:lg m-t_3 "><h2 class="lh_1 m_0 font_regular lowercase font_3:lg font_2:md font_1">{{modifier_class}}</h2></header>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Sub.Section.h2.with-padding
+*/
+/*
+
+Section Header Down
+
+Section Headers are styled the same
+
+default - plan header
+ 
+Markup:
+<header class="p-x_4 font_display font_regular  c_primary-n2 m-b_2 lh_1 m-b_3:lg m-t_2 "><h3 class="lh_1 m_0 font_regular lowercase font_2:lg font_1:md font_0">{{modifier_class}}</h3></header>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Sub.Section.h3.with-padding
 */
 /*
 
@@ -271,13 +322,13 @@ This buttons are used to rate the videos and download the attachments.
 Markup:
 <ul class="ul_none flex flex_row lowercase flex flex_row gap_2">
     <li class="br_solid br_black-3 br_radius br_1 h:bg_black-3">
-        <a class="p-y_3 p-x_4 p-x_5:lg" href=""><i class="fal fa-thumbs-up"></i></a>
+        <a class="p-y_3 p-x_4 " href=""><i class="fal fa-thumbs-up"></i></a>
     </li>
     <li class="br_solid br_black-3 br_radius br_1 h:bg_black-3">
-        <a class="p-y_3 p-x_4 p-x_5:lg" href=""><i class="fal fa-thumbs-down"></i></a>
+        <a class="p-y_3 p-x_4 " href=""><i class="fal fa-thumbs-down"></i></a>
     </li>
     <li class="br_solid br_black-3 br_radius br_1 h:bg_black-3 m-l_auto">
-        <a class="p-y_3 p-x_4 p-x_5:lg" href=""><i class="fal fa-paperclip"></i> Attachments</a>
+        <a class="p-y_3 p-x_4 " href=""><i class="fal fa-paperclip"></i> Attachments</a>
     </li>
 </ul>
 
@@ -387,7 +438,7 @@ Auxiliary Data
 Description: Most players have auxiliary data zones that describe the playing element through credits, tags, and categories.
  
 Markup:
-<aside class="flex_none max-w_20:md max-w_25:lg w_100 {{ modifier_class }}">    
+<aside class="{{ modifier_class }}">    
     {{> "Sub.FacultyList.AuxSession"  modifier_class=""}}
     <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-file-certificate p-r_3"></i> Credits</h4>
     <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down-1">

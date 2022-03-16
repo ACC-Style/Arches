@@ -6,7 +6,7 @@ Base Grid Areas
 The library base is a grid system that is used for the library page.
  
 Markup:
-<div class="BODY_TAG-stand-in h_100 grid:md flex flex_column {{> "Sub.ClassList.Body"}}">	
+<div class="BODY_TAG-stand-in grid:md flex flex_column {{> "Sub.ClassList.Body"}}">	
 	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			<div class="grid-area_menuArea">{{> "Page.Layouts.GridFiller"  modifier_class="M"}}</div>
@@ -50,7 +50,7 @@ Styleguide Page.Layouts.PageGrid
 
 .grid-template_page {
 	grid-template-columns: 4rem 1fr;
-	grid-template-rows:  4rem 1fr  auto;
+	grid-template-rows:  auto 1fr  auto;
 	grid-template-areas: 'menuArea headerArea' 'menuArea mainArea' 'menuArea footerArea';
 }
 .grid-template_filterAndContent {
