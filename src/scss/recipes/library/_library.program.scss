@@ -414,20 +414,16 @@ Presentation - Condensed Playable
 Presentation designs on the Search page.
 
 Markup:
-<article class="flex flex_column flex_grow w_100">
-    <div class="flex flex_row font_ui justify_start relative w_100 gap_3 {{> 'Sub.ClassList.Inset.padding'}} h:bg_white-8 br_radius relative">
-         <main class="flex_auto">
-            <h2 class="font-size_up-1 lh_2 font_display font_regular lh_1 c_primary-n3 m_0">
-                Presentation of the findings {{ modifier_class }} 
-            </h2>
-        </main>
-        <aside class="flex_none flex flex_column items_center justify_center ">
-            <a class="font-size_up-2 inline-block lh_0 c_primary br_radius aspect_1x1 text_center expanded-click-area nowrap p_4 h:bg_primary-n2 h:c_white bg_white-5 shadow_bevel-light">
-                <i class="fas fa-play"></i>
-            </a>
-        </aside>
-    </div>
-</article>
+<li class="flex flex_row font_ui justify_between br-t_1 br-b_1  br_solid br_black-1 m-b_n1 items_center relative w_100 gap_3 {{> 'Sub.ClassList.Inset.padding'}} h:bg_white-8 br_radius relative">
+    <h3 class="font-size_up-1 lh_2 font_display font_regular lh_1 c_primary-n3 m_0 flex_auto">
+        Presentation of the findings {{ modifier_class }} 
+    </h3>
+    <span class="flex_none flex flex_column items_center justify_center ">
+        <a class="font-size_up-2 self_center block lh_0 c_primary br_radius aspect_1x1 text_center expanded-click-area nowrap p_4 h:bg_primary-n2 h:c_white bg_white-5 shadow_bevel-light">
+            <i class="fas fa-play"></i>
+        </a>
+    </span>
+</li>
 
 
 MarkupWrapperClasses: ul_none

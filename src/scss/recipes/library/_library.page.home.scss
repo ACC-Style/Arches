@@ -14,18 +14,18 @@ Markup:
 			{{> "Structures.Home.Header" modifier_class="grid-area_headerArea" }}
 			<section class="grid:md flex flex_column grid-col_5 gap_4  grid-area_mainArea p-y_3 p-y_0:md font_1:lg font_0 w_100">
 				<div class="flex flex_column col-start col-end_5:lg col-end_4 font_0 font_1:lg font_ui font_regular w_100 {{> 'Sub.ClassList.Inset.level_up-1'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-                        {{> 'Sub.Section.h2' modifier_class='Featured' }}
-						{{> 'Structures.Home.Carousel'}}
-						{{> 'Sub.Section.Footer'  modifier_class='Featured' }}
-						{{> 'Sub.Section.h2' modifier_class='Hot Topics' }}
-						{{> 'Structures.Home.Carousel.Empty' modifier_class='Hot Topics'}}
-						{{> 'Sub.Section.Footer'  modifier_class='Hot Topics' }}
+                    {{> 'Sub.Section.h2' modifier_class='Featured' }}    
+                    {{> 'Structures.Home.Carousel'}}
+                    {{> 'Sub.Section.Footer'  modifier_class='Featured' }}
+                    {{> 'Sub.Section.h2' modifier_class='Hot Topics' }}
+                    {{> 'Structures.Home.Carousel.Empty' modifier_class='Hot Topics'}}
+                    {{> 'Sub.Section.Footer'  modifier_class='Hot Topics' }}
 				</div>
 				<div class="flex flex_column col-start_5:lg col-end col-start_4 w_100">
 					<section class="font_0 font_1:lg font_ui font_regular flex_100 flex_auto {{> 'Sub.ClassList.Inset.level_up-1'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
 						{{> 'Sub.Section.h2' modifier_class="Continue Watching" }}
 						<div class="font_n2 font_n1:lg relative isolation_isolate">
-							<ul class="flex flex_column justify_stretch gap_3 ul_none {{> 'Sub.ClassList.Inset.level_down-1'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
+							<ul class="flex flex_column justify_stretch gap_0 ul_none {{> 'Sub.ClassList.Inset.level_down-1'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
 								{{> 'Program.Presentation.Condensed.Playable' modifier_class='#{ call(get-function('randomWords'), random(10)) }'}}
 								{{> 'Program.Presentation.Condensed.Playable' modifier_class='#{ call(get-function('randomWords'), random(10)) }'}}
 								{{> 'Program.Presentation.Condensed.Playable' modifier_class='#{ call(get-function('randomWords'), random(10)) }'}}
@@ -128,46 +128,50 @@ Horizontal Carousels to have discoverable areas on the home pages.
 
 
 Markup:
-<div class="w_100 relative isolation_isolate overflow_hidden {{>'Sub.ClassList.Inset.margin_down-1'}}">
-    <div id="slider1" class="flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.level_down-1'}} ">
+<div class="relative isolation_isolate overflow_hidden {{>'Sub.ClassList.Inset.margin_down-1'}}">
+        <div id="slider1" class=" flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3 {{> 'Sub.ClassList.Inset.level_down-1'}} ">
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+        {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+        {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}        
+        {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
+        {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}        
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
     </div>
     {{> 'Sub.Carousel.CustomTools'}}
 </div>
 <script>
-document.addEventListener("DOMContentLoaded", function(event) { 
-let args ={
-    items:1,
-    mouseDrag: true,
-    slideBy: "page",
-    swipeAngle: false,
-    autoplay: false,
-    controls: true,
-    nav: false,
-    edgePadding: 0,
-    loop:true,
-    edgePadding:48,
-    center:false,
-    gutter:16,
-    responsive: {
-        1: {
-            items: 1
-        },
-                768: {
-            items: 1
-        },
-        1024: {
-            items: 2
-        },
-        1200: {
-            items: 3
-        }
-    }};
-    let slider1 = tns({ container: '#slider1', controlsContainer: "#slider1-customize-controls", ...args });
-});
+    document.addEventListener("DOMContentLoaded", function(event) { 
+    let args ={
+        items:1,
+        mouseDrag: true,
+        slideBy: "page",
+        swipeAngle: false,
+        autoplay: false,
+        controls: true,
+        nav: false,
+        edgePadding: 0,
+        loop:true,
+        edgePadding:48,
+        center:false,
+        gutter:16,
+        responsive: {
+            1: {
+                items: 1
+            },
+                    768: {
+                items: 1
+            },
+            1024: {
+                items: 2
+            },
+            1200: {
+                items: 3
+            }
+        }};
+        let slider1 = tns({ container: '#slider1', controlsContainer: "#slider1-customize-controls", ...args });
+    });
 </script>
 
 MarkupWrapperClasses: 
