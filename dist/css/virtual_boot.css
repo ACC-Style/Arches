@@ -8160,11 +8160,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0359" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7777" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6163" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2867" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7977" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8051" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8952" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5049" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0145" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0346" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8196,11 +8196,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9468" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5538" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5104" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2561" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6389" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9346" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6763" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8113" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5079" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4629" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8241,8 +8241,8 @@ Markup:
     </header>
     <main id="collapseTypeAhead" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_1448" }}
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_1074" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_8609" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_3456" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8351,7 +8351,7 @@ Simple Search Bar
 
 
 Markup:
-<div class=" sticky t_0 r_0 z_1">
+<div class=" sticky jump-buttons_top  r_0 z_1">
 <div class="absolute r_4 t_0  flex flex_row flex_nowrap gap-x_3">
 <!--  Helper Jump links -->
   <a class="br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#SearchBarTop">
@@ -8389,12 +8389,16 @@ Weight: 0
 
 Styleguide  Sub.Search.Bar
 */
+.jump-buttons_top {
+  top: 0;
+}
+
 /*
 
 
-Search Bar
+Program Bar
 
-Simple Search Bar
+Some events don't need a search bar the program bar remains because it is need to hide the jump links.
 
 
 Markup:
@@ -8432,20 +8436,20 @@ Result Overview
 Small strip of data that shows the number of results and the time it took to search.
 
 Markup:
-<div class="c_secondary-2 font_medium font_n3 font_ui p_2 {{modifier_class}}">
+<div class="c_secondary-n1 font_medium font-size_down-2 font_ui p_2 {{modifier_class}}">
   <ul class="ul_inline-pipe">
       <li>
-        <ul class="c_primary-2 ul_inline-comma">
-            <li class="font_xbold no-after uppercase">Results:</li>
-            <li>230</li>  
+        <ul class="ul_inline-comma">
+            <li class="font_bold   no-after uppercase">Results:</li>
+            <li class="c_accent-n1">230</li>  
         </ul>
       </li>
       <li>
         <ul class="ul_inline-comma">
-            <li class="font_xbold no-after uppercase">Filters:</li>
-            <li><a class="h:underline">Category A <i class="fas fa-times"></i></a></li>
-            <li><a class="h:underline">Tag B  <i class="fas fa-times"></i></a></li>
-            <li><a class="h:underline">Tag C <i class="fas fa-times"></i></a></li>
+            <li class="font_bold no-after uppercase">Filters:</li>
+            <li><a class="h:underline c_primary-n1 c_primary-n2">Category A <i class="fas fa-times c_alert-n1 p_2"></i></a></li>
+            <li><a class="h:underline c_primary-n1 c_primary-n2">Tag B  <i class="fas fa-times c_alert-n1 p_2"></i></a></li>
+            <li><a class="h:underline c_primary-n1 c_primary-n2">Tag C <i class="fas fa-times c_alert-n1 p_2"></i></a></li>
         </ul>
       </li>
   </ul>
@@ -9306,7 +9310,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_3261">
+<div class="flex_column flex" id="session_7574">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -9330,7 +9334,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3261">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_7574">top</a>
                 </div>
             </section>
         </div>
@@ -9342,7 +9346,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3261">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_7574">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9374,7 +9378,7 @@ Channel Player External Content
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_3261">
+<div class="flex_column flex" id="session_7574">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -9404,7 +9408,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3261">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_7574">top</a>
                 </div>
             </section>
         </div>
@@ -9415,7 +9419,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3261">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_7574">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9448,7 +9452,7 @@ Channel Player No Schedule
 description
 
 Markup:
-<div class="flex_column flex" id="session_3261">
+<div class="flex_column flex" id="session_7574">
     <header class="flex flex_column-reverse font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -9469,7 +9473,7 @@ Markup:
         <h2 class="font_bold font_display c_primary-n1 m-b_4"><div class="flex_row:md flex flex_column">
             <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
         </h2>
-        {{> Program.GridFormat.WhatsNext modifier_class="Myocardial Valvular Chest Pain Blood Vessel Arteriosclerosis Cardiovascular Pericardial Arteriosclerosis Electrocardiographic " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Valvular Heart Disease Arrhythmia Electrocardiographic Pericardial Side Effect " }}
         </div>
     </section>
 </div>
@@ -9487,7 +9491,7 @@ Channel Player:Non Accredited
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_3261">
+<div class="flex_column flex" id="session_7574">
     <div class="bg_secondary-n3 c_white font_bold font_ui p_3 p-x_4 m-b_4 shadow_overlap-light br_radius" > {{> "Sub.Credits.NonAccredited" }}: These sessions are ineligible to receive credit</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
@@ -9512,7 +9516,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3261">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_7574">top</a>
                 </div>
             </section>
         </div>
@@ -9524,7 +9528,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3261">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_7574">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData.NotAccredited" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9898,7 +9902,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_8834">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_5527">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -9932,7 +9936,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_8834">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_5527">top</a></div>
     </div>
 </article>
 
@@ -10244,8 +10248,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="Arrhythmia "  }}
-    {{> Program.GridFormat.Abstract modifier_class="Cardiovascular Arrhythmia Clinical "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="Valvular Heart Disease Clinical Pharmacologic Clinical Valvular Heart Disease Myocardial Myocardial Arteriosclerosis "  }}
+    {{> Program.GridFormat.Abstract modifier_class="Pericardial Cardiovascular Blood Vessel "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -10320,8 +10324,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Myocardial Arrhythmia Pericardial Clinical " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Chest Pain Clinical Pharmacologic " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Electrocardiographic Valvular Heart Disease Pharmacologic Myocardial Arrhythmia Clinical Valvular Heart Disease Electrocardiogram " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Valvular Arteriosclerosis Valvular Heart Disease Pericardial Pericardial Myocardial Pericardial Clinical " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -10439,9 +10443,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="Side Effect Pharmacologic Electrocardiographic Arteriosclerosis Cardiovascular Pharmacologic Blood Vessel Clinical " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Myocardial Pharmacologic Side Effect Clinical Cardiovascular Cardiovascular " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Clinical Electrocardiographic " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Electrocardiographic Electrocardiographic " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Chest Pain Pharmacologic Valvular Heart Disease Arrhythmia Valvular Electrocardiographic Electrocardiographic " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Side Effect Blood Vessel Cardiovascular Electrocardiographic Arteriosclerosis Clinical Chest Pain Cardiovascular Pharmacologic " }}
     </div>
 </section>
 
@@ -10504,9 +10508,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNext modifier_class="Pharmacologic Pharmacologic Arteriosclerosis Valvular Heart Disease Clinical " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="Valvular Blood Vessel Electrocardiogram Chest Pain Chest Pain Pharmacologic Pharmacologic Electrocardiographic " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="" }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Myocardial Arteriosclerosis Myocardial Arteriosclerosis Pharmacologic Blood Vessel " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Pericardial Clinical Chest Pain " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Pericardial Valvular Heart Disease Valvular Heart Disease Valvular Heart Disease Cardiovascular Side Effect Myocardial Side Effect Valvular Heart Disease " }}
     </div>
 </section>
 

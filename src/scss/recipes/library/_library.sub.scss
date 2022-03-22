@@ -492,10 +492,10 @@ Filter Tags are decorative tags that are used to filter content. Many tags from 
  
 Markup:
 <ul class="ul_inline-comma">
-  <li>Tag Name 1</li>
-  <li>Daugherty - Larkin</li>
-  <li>relationships</li>  
-  <li>web-readiness</li>
+    <li>Tag Name 1</li>
+    <li>Daugherty - Larkin</li>
+    <li>relationships</li>  
+    <li>web-readiness</li>
 </ul>
  
 
@@ -503,4 +503,62 @@ Weight:0
  
 Styleguide Sub.Tags.Filter
 
+*/
+
+/*
+
+Credit Chart
+
+The credit consumption chart. 
+ 
+Markup:
+<section class="br_radius overflow_hidden relative z_1" id="CreditChartContainer" style="width:100%; height:500px;">
+</section>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Credit Type', 'Watched Hours' ,{ role: 'style' }],
+            ['AAPA', 1.45, '#e8c536' ],
+            ['available', 28.55, '#a4a4a4' ],
+            ['', null, '' ],
+            ['ABP', 0, "#007a5b"],
+            ['available', 100, '#a4a4a4' ],
+            ['', null, '' ],
+            ['CME', 8.94, '#00a15b'],      
+            ['available', 91.06, '#a4a4a4' ],
+            ['', null, '' ],
+            ['CNE', 10.49, '#198dae'],   
+            ['available', 89.51, '#a4a4a4' ],
+            ['', null, '' ],       
+            ['MOC', 19.30, '#9a1267'],
+            ['available', 80.70, '#a4a4a4' ],
+            ['', null, '' ],
+            ]);
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,{ calc: "stringify",  sourceColumn: 1, type: "string", role: "annotation" },2]);
+        var options = {
+            title: "Claimable Credits based on Watched Hours of Education",
+            bar: {groupWidth: "70%"},
+            legend: { position: "none" }
+        };
+        var chart =      new google.visualization.BarChart(document.getElementById("CreditChartContainer"));
+        chart.draw(view, options);
+    }
+    const element = document.querySelectorAll('#CreditChartContainer');
+    const observer = new ResizeObserver( element[0],()=>{ drawChart();
+    });
+});
+</script>
+
+MarkupWrapperClasses: 
+
+NOTE: This requires Javascript to be loaded.
+ 
+Weight:0
+ 
+Styleguide Sub.Credit.Chart
 */

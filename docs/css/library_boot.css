@@ -6916,11 +6916,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3143" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3604" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6325" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5932" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0875" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7181" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6773" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5851" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3546" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0526" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6952,11 +6952,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1941" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8828" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7397" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0624" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3448" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9871" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2493" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3827" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0474" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5606" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6997,8 +6997,8 @@ Markup:
     </header>
     <main id="collapseTypeAhead" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_9225" }}
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_3457" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_0220" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_5491" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8220,10 +8220,10 @@ Filter Tags are decorative tags that are used to filter content. Many tags from 
 
 Markup:
 <ul class="ul_inline-comma">
-  <li>Tag Name 1</li>
-  <li>Daugherty - Larkin</li>
-  <li>relationships</li>  
-  <li>web-readiness</li>
+    <li>Tag Name 1</li>
+    <li>Daugherty - Larkin</li>
+    <li>relationships</li>  
+    <li>web-readiness</li>
 </ul>
 
 
@@ -8231,6 +8231,63 @@ Weight:0
 
 Styleguide Sub.Tags.Filter
 
+*/
+/*
+
+Credit Chart
+
+The credit consumption chart. 
+
+Markup:
+<section class="br_radius overflow_hidden relative z_1" id="CreditChartContainer" style="width:100%; height:500px;">
+</section>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Credit Type', 'Watched Hours' ,{ role: 'style' }],
+            ['AAPA', 1.45, '#e8c536' ],
+            ['available', 28.55, '#a4a4a4' ],
+            ['', null, '' ],
+            ['ABP', 0, "#007a5b"],
+            ['available', 100, '#a4a4a4' ],
+            ['', null, '' ],
+            ['CME', 8.94, '#00a15b'],      
+            ['available', 91.06, '#a4a4a4' ],
+            ['', null, '' ],
+            ['CNE', 10.49, '#198dae'],   
+            ['available', 89.51, '#a4a4a4' ],
+            ['', null, '' ],       
+            ['MOC', 19.30, '#9a1267'],
+            ['available', 80.70, '#a4a4a4' ],
+            ['', null, '' ],
+            ]);
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,{ calc: "stringify",  sourceColumn: 1, type: "string", role: "annotation" },2]);
+        var options = {
+            title: "Claimable Credits based on Watched Hours of Education",
+            bar: {groupWidth: "70%"},
+            legend: { position: "none" }
+        };
+        var chart =      new google.visualization.BarChart(document.getElementById("CreditChartContainer"));
+        chart.draw(view, options);
+    }
+    const element = document.querySelectorAll('#CreditChartContainer');
+    const observer = new ResizeObserver( element[0],()=>{ drawChart();
+    });
+});
+</script>
+
+MarkupWrapperClasses: 
+
+NOTE: This requires Javascript to be loaded.
+
+Weight:0
+
+Styleguide Sub.Credit.Chart
 */
 /*
 
@@ -8505,18 +8562,18 @@ Markup:
 					<div class="tab-content" id="nav-tabContent">
 						<div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
 							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
-								<li class="">{{> "Program.Session.Home"  modifier_class="Chest Pain Side Effect Valvular Blood Vessel " }}</li>
-								<li class="">{{> "Program.Session.Home"  modifier_class="Arrhythmia Valvular Heart Disease " }}</li>
-								<li class="">{{> "Program.Session.Home"  modifier_class="Pharmacologic Electrocardiogram Arrhythmia Electrocardiogram " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Valvular " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Cardiovascular Chest Pain Pharmacologic " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Pharmacologic Chest Pain " }}</li>
 							</ul>
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 							</div>
 						<div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
 							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Valvular Heart Disease Blood Vessel Pharmacologic Blood Vessel Chest Pain Arteriosclerosis Pharmacologic " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="" }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Cardiovascular Blood Vessel Pericardial " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Electrocardiogram Myocardial Electrocardiogram Valvular Electrocardiographic Myocardial " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Valvular Heart Disease Electrocardiographic " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Cardiovascular Cardiovascular " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Electrocardiogram " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Chest Pain Pericardial Arrhythmia Electrocardiographic Valvular Arrhythmia " }}</li>
 							</ul>
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 						</div>
@@ -8560,7 +8617,7 @@ Markup:
 					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
 						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding_up-2'}}">
-							<h1 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Session.Title'}} Chest Pain Arrhythmia Blood Vessel </h1>
+							<h1 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Session.Title'}} Arteriosclerosis Pericardial Cardiovascular </h1>
 							</main>	
 							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
 								<ul class="flex flex_column flex_wrap gap_2 justify_start self_center ul_none uppercase p-x_3">
@@ -8633,8 +8690,8 @@ Markup:
 					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
 						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding_up-2'}}">
-							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} Electrocardiographic Side Effect Valvular </h1>
-							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}} Valvular Heart Disease Valvular Blood Vessel  </h2>
+							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} Pharmacologic Myocardial Side Effect Valvular Heart Disease Arrhythmia Side Effect Chest Pain Myocardial Arteriosclerosis </h1>
+							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}} Myocardial Arteriosclerosis Arrhythmia Valvular Heart Disease Electrocardiogram Pharmacologic Clinical  </h2>
 							</main>	
 							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
 								<ul class="flex flex_column flex_wrap gap_2 justify_start self_center ul_none uppercase p-x_3">
@@ -8670,10 +8727,10 @@ Markup:
 							{{> 'Sub.Section.h3' modifier_class='presentation playlist'}}</div>
 							<div class="font_n2 font_n1:lg relative isolation_isolate">
 								<ul class="flex flex_column justify_stretch gap_3 ul_none">
-									{{> "Program.Presentation.Condensed" modifier_class="Chest Pain Side Effect Cardiovascular Pharmacologic Myocardial Electrocardiogram Side Effect "}}
-									{{> "Program.Presentation.CondensedPlaying" modifier_class="Side Effect Arrhythmia Blood Vessel Valvular Heart Disease Pericardial Side Effect Valvular Arrhythmia "}}
-									{{> "Program.Presentation.Condensed" modifier_class="Pharmacologic Blood Vessel Clinical Valvular Heart Disease "}}
-									{{> "Program.Presentation.Condensed" modifier_class="Electrocardiographic Arteriosclerosis Chest Pain Side Effect Electrocardiogram Arteriosclerosis Pharmacologic Pericardial "}}
+									{{> "Program.Presentation.Condensed" modifier_class="Pharmacologic Arteriosclerosis Clinical Valvular Electrocardiographic Arteriosclerosis "}}
+									{{> "Program.Presentation.CondensedPlaying" modifier_class="Pericardial Pharmacologic Pharmacologic Chest Pain Myocardial Electrocardiogram Valvular Heart Disease Arrhythmia Electrocardiogram "}}
+									{{> "Program.Presentation.Condensed" modifier_class="Valvular "}}
+									{{> "Program.Presentation.Condensed" modifier_class="Cardiovascular Arteriosclerosis Chest Pain "}}
 								</ul>
 							</div>
 						</section>
@@ -8716,6 +8773,7 @@ Markup:
 				<div class="flex_auto w_50:lg br-r_1 br_dotted:lg br_none br_primary-3 reading-typography font-size_up p_5:lg p_4">
 					<h1 class="font_8">	Claim Credit Based on Total Watch Time<sup>*</sup></h1>
 					<p> We’re keeping track of the time you spend watching videos to make it easier for you to claim credit. The chart below shows total watch time by credit type. ​ </p>
+					{{> 'Sub.Credit.Chart'}}
 					<h2 class="">You have watched a lot of this education.</h2>
 					<p class="font-size_down c_primary-n2">
 						<sup>*</sup>claimed credits and watched video can take up to 24 hours to reflect in your profile.
@@ -8728,7 +8786,7 @@ Markup:
 							<p> Credit claiming will be available beginning December 12, 2021, at noon ET. Credit must be claimed by March 12, 2022, at 11:59 p.m. ET. You may only complete the evaluation and claim credit once; therefore, please do not proceed until you have finished your participation in the certified content for which you wish to claim credit. </p>
 						</div>
 						<div class="m-t_4 c_black br_warning-n2 c_warning-n3  br_round text_center bg_warning-5 {{> 'Sub.ClassList.Inset.level_up-1' }} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-							<h3 class="c_warning-n4 font_bold font_4 br-b_2 br_solid br_warning p-y_3 p-x_5:lg p-x_4">
+							<h3 class="c_warning-n4 font_bold font_4 br-b_2 br_solid br_warning p-y_3 p-x_5:lg p-x_4 m_0">
 								<i class="fas fa-exclamation-triangle"></i> Caution <i class="fas fa-exclamation-triangle"></i>
 							</h3>
 							<p class="font-size_up m-t_4"> You can only claim once so please watch as much as you want before claiming. </p>
@@ -8756,6 +8814,103 @@ Styleguide Page.Pages.NoFilter
 */
 /*
 
+Legal Roadblock
+
+A roadblock page that forces users to log in to view and agree to the legal terms of the product.
+
+Markup:
+<div class="BODY_TAG-stand-in bg_black-4 w_100 p_4:md p_2 grid:md min-h_100">
+	<div class="bg_white-8 br_radius grid:md isolation_isolate items_center justify_center m_auto max-w_50 p_2 p_3:md page-wrapper shadow_bevel-light">
+		<div class="bg_black-2 br_radius">
+			<section class="reading-typography inset-level_down-1 bg_black-1 shadow_emboss-light br_solid br_1 br_black-2 br_radius p_5:lg p_4 flex flex_column gap_3">
+				<div>
+					<div class="relative z_0 br_radius overflow_hidden ">
+						<picture class="w_100 ">
+							<source class="w_100" srcset=" https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_600x225.jpg" media="(min-width: 400px)">
+							<img src="https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_400x300.jpg" class="w_100" alt="">
+						</picture>
+					</div>
+					<div class="bg_white br_1 br_black-3 br_radius br_solid inset-level_up-1 m-t_n5 m-x_5 p_4 relative shadow_bevel-light t_n5 text_center">
+						<h1 class="c_primary font_regular font_display">Legal Agreements</h1>
+						<p class="font-size_up font_bold"> Please agree to all the legal agreements. </p>
+					</div>
+				</div>
+				<div class="inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative isolation_isolate" id="TopAgreement1">
+					<div class="sticky t_0 r_0 z_1">
+						<div class="absolute r_4 t_0 flex flex_row flex_nowrap gap-x_3">
+							<!--  Helper Jump links -->
+							<a class="c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#TopAgreement1">
+								<span><i class="fas fa-arrow-up p-r_2"></i>top</span>
+							</a>
+							<a class="c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#Agreement1" >
+								<span><i class="fas fa-arrow-down p-r_2"></i>scroll down</span>
+							</a>
+							<!--  Helper Jump links -->
+						</div>
+					</div>
+					<div class="bg_white br-b_1 br_primary br_solid m-t_n5 p-t_0 relative z_2" >
+						<h2>Method of Participation and Claiming Credit</h2>
+						<p class="font-size_up"> You may claim credit for this Product up to the maximum credit amounts noted above based on the number of hours You spend watching presentations. You may re-enter the Product as many times as You wish, but You can claim credit only once and must claim credit by 11:59 p.m. March 1, 2023. </p>
+					</div>
+					<main class="z_0 isolation_isolate">
+						<h3>To receive credit for this Product, You must:</h3>
+						<ol>
+							<li>Purchase the Product</li>
+							<li> Read the Credit Information when You first enter the Product. </li>
+							<li>View the presentations of your choosing.</li>
+							<li> Click credits from the left navigation bar after You have completed viewing all presentations for which You intend to claim credit. </li>
+							<li>Complete the evaluation.</li>
+							<li> Enter the number of credits You wish to claim. Credits claimed should reflect the total number of hours that You spent watching presentations. </li>
+							<li> If you are an ABIM or ABP Diplomate, You will need to enter your ABIM or ABP ID and Date of Birth to claim MOC points. </li>
+							<li> Generate and print your certificate. If You are an ABIM or ABP Diplomate and claimed MOC points, your completion information will be transmitted to the ACCME/ABIM/ABP on your behalf. </li>
+						</ol>
+					</main>
+					<footer id="Agreement1">
+						<a href="" class="btn btn-success c_white h:undecorated float_right"><i class="fas fa-check"></i> I agree</a>
+					</footer>
+				</div>
+				<div class="inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative isolation_isolate" id="TopAgreement1">
+					<div class="sticky t_0 r_0 z_1">
+						<div class="absolute r_4 t_0 flex flex_row flex_nowrap gap-x_3">
+							<!--  Helper Jump links -->
+							<a class="c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#TopAgreement1">
+								<span><i class="fas fa-arrow-up p-r_2"></i>top</span>
+							</a>
+							<a class="c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#Agreement1" >
+								<span><i class="fas fa-arrow-down p-r_2"></i>scroll down</span>
+							</a>
+							<!--  Helper Jump links -->
+						</div>
+					</div>
+					<div class="bg_white br-b_1 br_primary br_solid m-t_n5 p-t_0 relative z_2" >
+						<h2>Cookies and Privacy</h2>
+						<p class="font-size_up"> Iure ut ratione magnam similique delectus deserunt occaecati.</p>
+					</div>
+					<main class="z_0 isolation_isolate">
+						<p > Alias nulla qui eos fuga eos eligendi aut tempora. Nisi dicta aut non totam illo consequuntur. Aut aut voluptas est aspernatur placeat distinctio similique dolore laboriosam. Iure velit doloremque dolorum maiores praesentium. Animi exercitationem reiciendis incidunt rerum. Quam consequatur maiores officiis sit enim quidem.Libero dolores aspernatur consequatur labore consequatur sint sint atque. Quo commodi quod repellendus laborum natus amet. Enim aliquam sunt. Nesciunt repellat provident mollitia. Quis nemo modi. Unde ut nisi. Laboriosam et natus saepe a enim aut in voluptates quia. Sed libero alias voluptatum soluta accusantium nesciunt commodi. Eaque cumque quos neque cumque maiores. </p>
+					</main>
+					<footer id="Agreement1">
+						<a href="" class="btn btn-secondary c_white h:undecorated float_right">I agree</a>
+					</footer>
+				</div>
+				<div class="inset-level_up-1 bg_white br_radius relative p_4">
+					<h4 class="font_bold"> You can continue when all legal terms are agreed to. </h4>
+					<a href="" class="btn btn-disabled disabled block">Continue</a>
+				</div>
+			</section>
+		</div>
+	</div>
+</div> 
+
+
+MarkupWrapperClasses:
+
+Weight:0
+
+Styleguide Page.Pages.Legal
+*/
+/*
+
 Home
 
 The sub pages have a common layouts.
@@ -8780,11 +8935,11 @@ Markup:
 						{{> 'Sub.Section.h2' modifier_class="Continue Watching" }}
 						<div class="font_n2 font_n1:lg relative isolation_isolate">
 							<ul class="flex flex_column justify_stretch gap_0 ul_none {{> 'Sub.ClassList.Inset.level_down-1'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Electrocardiogram Electrocardiographic Clinical Valvular Heart Disease '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Chest Pain Arrhythmia Arteriosclerosis Electrocardiogram Pericardial '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Valvular Pericardial Clinical Arrhythmia Electrocardiogram Myocardial '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Cardiovascular Clinical Valvular Side Effect Myocardial '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Electrocardiogram Pharmacologic Myocardial Blood Vessel '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class=''}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class=''}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Myocardial Chest Pain Arrhythmia Valvular Heart Disease '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Side Effect Cardiovascular Electrocardiographic '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Valvular Cardiovascular Chest Pain Valvular Heart Disease Pericardial Myocardial Valvular Arrhythmia Valvular Heart Disease '}}
 							</ul>
 						</div>
 						{{> 'Sub.Section.Footer'  modifier_class="Continue Watching" }}
@@ -8878,14 +9033,14 @@ Horizontal Carousels to have discoverable areas on the home pages.
 Markup:
 <div class="relative isolation_isolate overflow_hidden {{>'Sub.ClassList.Inset.margin_down-1'}}">
         <div id="slider1" class=" flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3 {{> 'Sub.ClassList.Inset.level_down-1'}} ">
-        {{> "Program.Session.Home"  modifier_class="Electrocardiographic Myocardial Electrocardiographic Myocardial Arteriosclerosis Arrhythmia "}}
-        {{> "Program.Session.Home"  modifier_class="Pericardial Cardiovascular Valvular "}}
+        {{> "Program.Session.Home"  modifier_class="Side Effect Valvular Heart Disease Chest Pain Valvular Heart Disease "}}
+        {{> "Program.Session.Home"  modifier_class="Electrocardiogram "}}
+        {{> "Program.Session.Home"  modifier_class="Cardiovascular Clinical Blood Vessel "}}
+        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Arrhythmia Cardiovascular Arrhythmia "}}        
         {{> "Program.Session.Home"  modifier_class=""}}
-        {{> "Program.Session.Home"  modifier_class="Pharmacologic Pharmacologic Myocardial Myocardial Electrocardiogram Pericardial Cardiovascular Side Effect Electrocardiogram "}}        
-        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Electrocardiographic Electrocardiographic "}}
-        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Side Effect Electrocardiogram Side Effect Blood Vessel "}}        
-        {{> "Program.Session.Home"  modifier_class="Chest Pain Pharmacologic Valvular Chest Pain Arrhythmia Myocardial Valvular Side Effect Pericardial "}}
-        {{> "Program.Session.Home"  modifier_class="Side Effect Electrocardiogram Blood Vessel Cardiovascular Cardiovascular Electrocardiogram Arrhythmia Valvular Heart Disease "}}
+        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Myocardial Arrhythmia "}}        
+        {{> "Program.Session.Home"  modifier_class="Myocardial Cardiovascular Myocardial Pharmacologic Valvular Chest Pain Pericardial Valvular Heart Disease Pericardial "}}
+        {{> "Program.Session.Home"  modifier_class="Blood Vessel Valvular Heart Disease Arteriosclerosis Pharmacologic "}}
     </div>
     {{> 'Sub.Carousel.CustomTools'}}
 </div>
@@ -8911,10 +9066,10 @@ Markup:
                     768: {
                 items: 1
             },
-            1024: {
+            1200: {
                 items: 2
             },
-            1200: {
+            1400: {
                 items: 3
             }
         }};
@@ -9042,11 +9197,11 @@ Markup:
     {{> 'Sub.Section.h2' modifier_class="continue watching" }}
     <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.ClassList.Inset.level_down-1'}} ">
         <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.level_down'}} ">
-        {{> "Program.Presentation.Condensed"  modifier_class="Chest Pain Arteriosclerosis Side Effect Valvular Heart Disease Blood Vessel Blood Vessel Valvular Valvular Heart Disease Pericardial "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Valvular Arteriosclerosis Side Effect Blood Vessel Arrhythmia "}}
-        {{> "Program.Presentation.Condensed"  modifier_class=""}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Cardiovascular Blood Vessel Pharmacologic Cardiovascular Myocardial "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Chest Pain Electrocardiographic Cardiovascular Pharmacologic Arrhythmia Myocardial Side Effect "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Myocardial Pharmacologic Arteriosclerosis Chest Pain Electrocardiographic Pharmacologic Arrhythmia Pericardial "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Pericardial "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Valvular Heart Disease Myocardial Side Effect Valvular Clinical Arteriosclerosis "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Arrhythmia Arteriosclerosis Myocardial Electrocardiogram Electrocardiographic "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Valvular Heart Disease Pericardial Valvular Heart Disease Valvular Valvular Pericardial Arrhythmia "}}
         </div>
         {{> 'Sub.Carousel.CustomToolsVertical'}}
     </div>

@@ -29,7 +29,7 @@ html {
 }
 
 /**  Textures  **/
-.disabled, .texture-dynamic, .texture_cross, .texture_disabled, .texture_dust, .texture_dark, .texture_medium, .texture_light {
+.disabled, .texture_dynamic, .texture_cross, .texture_disabled, .texture_dust, .texture_dark, .texture_medium, .texture_light {
   background-position: top right;
   background-repeat: repeat;
   background-origin: border-box;
@@ -395,9 +395,6 @@ Styleguide Anatomy.ExtraCredit
 .reading-typography h4 {
   font-size: 20.25px;
   font-size: 1.265625rem;
-}
-.reading-typography h5 {
-  font-weight: 700;
 }
 .reading-typography h5,.reading-typography h6 {
   font-size: 18px;
@@ -1361,23 +1358,39 @@ Weight: -80
   Styleguide Typography.Font.Weight
  */
 .font_light {
-  font-weight: 100 !important;
+  font-weight: 300;
 }
 
 .font_regular {
-  font-weight: 400 !important;
+  font-weight: 400;
 }
 
 .font_medium, .btn_acc-primary {
-  font-weight: 500 !important;
+  font-weight: 500;
 }
 
 .font_bold {
-  font-weight: 700 !important;
+  font-weight: 700;
 }
 
 .font_xbold {
-  font-weight: 900 !important;
+  font-weight: 800;
+}
+
+.font_display.font_light, .font_light .font_display, .font_display .font_light {
+  font-weight: 400;
+}
+.font_display.font_regular, .font_regular .font_display, .font_display .font_regular {
+  font-weight: 500;
+}
+.font_display.font_medium, .font_display.btn_acc-primary, .font_medium .font_display, .btn_acc-primary .font_display, .font_display .font_medium, .font_display .btn_acc-primary {
+  font-weight: 600;
+}
+.font_display.font_bold, .font_bold .font_display, .font_display .font_bold {
+  font-weight: 700;
+}
+.font_display.font_xbold, .font_xbold .font_display, .font_display .font_xbold {
+  font-weight: 900;
 }
 
 /*
@@ -2110,6 +2123,404 @@ Styleguide Typography.Text.Indent
   }
 }
 /*
+List
+
+Description: A major part of the construction of the web and the content of the web are lists.
+
+Weight: 110
+
+Styleguide List
+*/
+/*
+  List Type
+
+  Change the type of a list.
+
+  .ul_none            -  none
+  .ul_bullet          -  bullet          
+  .ul_square          -  square      
+
+Markup:
+  <div class="font_normal font_1 p_3">
+    <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
+    <ul class="{{modifier_class}}">
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    </ul>
+</div>
+
+Weight: 0
+
+  Styleguide List.Type
+ */
+.ul_none {
+  margin: 0;
+  padding: 0;
+  list-style-type: none !important;
+}
+
+.ul_bullet {
+  list-style-type: disc !important;
+}
+
+.ul_circle {
+  list-style-type: circle !important;
+}
+
+.ul_square {
+  list-style-type: square !important;
+}
+
+.ul_lowercase {
+  list-style-type: lower-alpha !important;
+}
+
+.ul_uppercase {
+  list-style-type: upper-alpha !important;
+}
+
+/*
+Marker
+
+Markers classes change the styles and looks of the the list item maker.  Marker must attach to the parent UL or Ol and will not style the grand children.
+
+.marker_primary - primary colored list markers.
+.marker_secondary - secondary colored list markers.
+.marker_accent - accent colored list markers.
+.marker_alert - alert colored list markers.
+.marker_warning - warning colored list markers.
+.marker_success - success colored list markers.
+.marker_highlight - highlight colored list markers.
+.marker_black - black colored list markers.
+.marker_white - white colored list markers.
+
+Markup:
+<ul class="{{ modifier_class }}">
+    <li>List Item Text</li>
+    <li>List Item Text</li>
+    <li>List Item Text
+    <ul class="">
+        <li>List Item Grand Children</li>
+        <li>List Item Grand Children</li>
+    </ul>
+    </li>
+</ul>
+<ol class="{{ modifier_class }}">
+    <li>List Item Text</li>
+    <li>List Item Text</li>
+    <li>List Item Text</li>
+</ol>
+
+MarkupWrapperClasses: bg_black-2 p_5
+
+Weight:10
+
+Styleguide List.Marker
+*/
+.marker_primary > *::marker {
+  color: #015697;
+}
+
+.marker_secondary > *::marker {
+  color: #009db1;
+}
+
+.marker_success > *::marker {
+  color: #468847;
+}
+
+.marker_shade > *::marker {
+  color: #898989;
+}
+
+.marker_warning > *::marker {
+  color: #c67605;
+}
+
+.marker_alert > *::marker {
+  color: #953b39;
+}
+
+.marker_navigation > *::marker {
+  color: #2b58c0;
+}
+
+.marker_accent > *::marker {
+  color: #e17009;
+}
+
+.marker_info > *::marker {
+  color: #a3988c;
+}
+
+.marker_highlight > *::marker {
+  color: #f5ca4f;
+}
+
+.marker_acc > *::marker {
+  color: #004176;
+}
+
+.marker_black > *::marker {
+  color: #131212;
+}
+
+.marker_white > *::marker {
+  color: white;
+}
+
+/*
+Counters
+
+Add counters in front of collections without the need of an OL or UL for an advanced list type. Counters cannot be nested!
+
+Weight: 250
+
+Styleguide List.counters
+
+*/
+/* No styleguide reference. */
+/*
+	Counter Basics
+
+	Counter can be incremented by the `counter_increment` class.  
+
+	Markup:
+    <div class="counter_reset">
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment">:</span> Item, Object, or Section</div>
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment">:</span> Item, Object, or Section</div>
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment">:</span> Item, Object, or Section</div>
+ 	</div>
+
+	 Weight: -100
+
+	Styleguide List.counters.basics
+
+*/
+.counter_reset {
+  counter-reset: a;
+}
+
+.counter_increment {
+  counter-increment: a;
+}
+
+.counter:before {
+  content: counter(a);
+}
+
+/*
+	Counter Sub
+
+	Counter Subs can be nested inside of counters
+
+	Markup:
+    <div class="counter_reset ">
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment counter_upper-alpha"></span> Item, Object, or Section</div>
+            <div class="counter-sub_reset">
+                <div class="m_3 p_2 p-l_4 bg_primary-3"><span class="font_bold counter counter_upper-alpha"></span>.<span class="font_bold counter-sub counter-sub_increment counter-sub_lower-alpha"></span> Sub Item</div>
+                <div class="m_3 p_2 p-l_4 bg_primary-3"><span class="font_bold counter counter_upper-alpha"></span>.<span class="font_bold counter-sub counter-sub_increment counter-sub_lower-alpha"></span> Sub Item</div>
+                <div class="m_3 p_2 p-l_4 bg_primary-3"><span class="font_bold counter counter_upper-alpha"></span>.<span class="font_bold counter-sub counter-sub_increment counter-sub_lower-alpha"></span> Sub Item</div>
+            </div>
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment counter_upper-alpha"></span> Item, Object, or Section</div>
+        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment counter_upper-alpha"></span> Item, Object, or Section</div>
+ 	</div>
+
+	Styleguide List.counters.sub counters
+
+*/
+.counter-sub_reset {
+  counter-reset: b;
+}
+
+.counter-sub_increment {
+  counter-increment: b;
+}
+
+/*
+	Counter Types
+
+	Create different types of list with the counter types
+
+	counter 										- Defualt Number Listing
+	counter_lower-alpha         - Lowercase Alphabetic Listing
+	counter_upper-alpha         - Uppercase Alphabetic Listing
+	counter_lower-roman         - Lowercase Roman Listing
+	counter_upper-roman         - Uppercase Roman Listing
+
+	Markup:
+	<div class="counter_reset">
+			<div class="m_3 p_3 bg_primary-2"><span class="{{modifier_class}} font_bold counter_increment"></span> Item, Object, or Section</div>
+			<div class="m_3 p_3 bg_primary-2"><span class="{{modifier_class}} font_bold counter_increment"></span> Item, Object, or Section</div>
+			<div class="m_3 p_3 bg_primary-2"><span class="{{modifier_class}} font_bold counter_increment"></span> Item, Object, or Section</div>
+ 	</div>
+
+	Styleguide List.counters.types
+
+*/
+.counter_lower-alpha:before {
+  content: counter(a, lower-alpha);
+}
+
+.counter_upper-alpha:before {
+  content: counter(a, upper-alpha);
+}
+
+.counter_lower-roman:before {
+  content: counter(a, lower-roman);
+}
+
+.counter_upper-roman:before {
+  content: counter(a, upper-roman);
+}
+
+.counter-sub:before {
+  content: counter(b);
+}
+
+.counter-sub_lower-alpha:before {
+  content: counter(b, lower-alpha);
+}
+
+.counter-sub_upper-alpha:before {
+  content: counter(b, upper-alpha);
+}
+
+.counter-sub_lower-roman:before {
+  content: counter(b, lower-roman);
+}
+
+.counter-sub_upper-roman:before {
+  content: counter(b, upper-roman);
+}
+
+/*
+	Order Markers
+
+	Quickly decorate the counter with a circle.  Change the  bgground and font color with utility classes to acheive different effects.
+
+
+	Markup:
+    <div class="counter_reset">
+        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker bg_primary-2"></span> Item, Object, or Section</div>
+        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker font_10 br-tr_round br-br_round bg_highlight-2"></span> Item, Object, or Section</div>
+        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker bg_info-2"></span> Item, Object, or Section</div>
+        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker bg_warning-2"></span> Item, Object, or Section</div>
+    </div>
+
+	Weight: 100
+
+	Styleguide List.counters.markers
+
+*/
+.order-marker {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0;
+  margin-right: 0.5em;
+  margin-bottom: 0;
+  padding: 0.75em 0 0 0;
+  line-height: 0;
+  text-align: center;
+  vertical-align: top;
+}
+
+/*
+Inline Lists
+
+Inline Lists are for separated items on a single line.
+
+.ul_inline-comma            -  wrapping line of text that is separated by commas
+.ul_inline-semicolon          -  wrapping line of text that is separated by semicolons          
+.ul_inline-pipe          -  wrapping line of text that is separated by pipes     
+
+Markup:
+<div class="font_normal font_1 p_3">
+  <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
+  <ul class="{{modifier_class}}">
+    <li>Evelyn Watsica II</li>
+    <li>Linda Lang</li>
+    <li>Laurie Greenfelder</li>
+    <li>Katie Wiegand</li>
+    <li>Brittany Conn</li>
+  </ul>
+</div>
+<style>
+[class^="ul_inline"] > li:last-child::after {
+    content:"" !important;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+}
+</style>
+
+
+NOTE: The limitations of the styleguide around compound pseudo selector :not(:last-child):after means a trailing divider shows up in documentation but not in production applications. Added a workaround to hide the divider via the following style tag in the example.  This is not necessary in production applications.
+
+
+Weight: 1000
+
+Styleguide List.InlineType
+
+*/
+.ul_inline-comma,
+.ul_inline-semicolon,
+.ul_inline-pipe {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ul_inline-comma > li,
+.ul_inline-semicolon > li,
+.ul_inline-pipe > li {
+  flex: 0 1 auto;
+}
+.ul_inline-comma > li:not(:last-child)::after,
+.ul_inline-semicolon > li:not(:last-child)::after,
+.ul_inline-pipe > li:not(:last-child)::after {
+  -webkit-padding-start: 0.1em;
+          padding-inline-start: 0.1em;
+  -webkit-padding-end: 0.5em;
+          padding-inline-end: 0.5em;
+  opacity: 0.6;
+}
+.ul_inline-comma li.no-after,
+.ul_inline-semicolon li.no-after,
+.ul_inline-pipe li.no-after {
+  -webkit-padding-end: 0.5em;
+          padding-inline-end: 0.5em;
+}
+.ul_inline-comma li.no-after::after,
+.ul_inline-semicolon li.no-after::after,
+.ul_inline-pipe li.no-after::after {
+  display: none;
+}
+
+.ul_inline-comma > li:not(:last-child)::after {
+  content: ",";
+}
+
+.ul_inline-semicolon > li:not(:last-child)::after {
+  content: ";";
+}
+
+.ul_inline-pipe > li:not(:last-child)::after {
+  -webkit-padding-start: 0.5em;
+          padding-inline-start: 0.5em;
+  content: "|";
+}
+
+/*
 Margin
 
 <div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Margin classes are mobile first with postfix modifier for `:md`and `:lg` variations for responsive sizing. Margins that use the short codes of all margin, auto, x margins, and y margin are overriden by specific side margins. 			
@@ -2135,6 +2546,11 @@ Styleguide Layouts.Margin
  */
 .m_0 {
   margin: 0  !important;
+}
+
+.m_n6 {
+  margin: -64px  !important;
+  margin: -4rem  !important;
 }
 
 .m_n5 {
@@ -2185,6 +2601,11 @@ Styleguide Layouts.Margin
   margin: 2rem  !important;
 }
 
+.m_6 {
+  margin: 64px  !important;
+  margin: 4rem  !important;
+}
+
 .m_auto {
   margin: auto  !important;
 }
@@ -2196,6 +2617,13 @@ Styleguide Layouts.Margin
 .m-y_0 {
   margin-top: 0  !important;
   margin-bottom: 0  !important;
+}
+
+.m-y_n6 {
+  margin-top: -64px  !important;
+  margin-top: -4rem  !important;
+  margin-bottom: -64px  !important;
+  margin-bottom: -4rem  !important;
 }
 
 .m-y_n5 {
@@ -2264,6 +2692,13 @@ Styleguide Layouts.Margin
   margin-bottom: 2rem  !important;
 }
 
+.m-y_6 {
+  margin-top: 64px  !important;
+  margin-top: 4rem  !important;
+  margin-bottom: 64px  !important;
+  margin-bottom: 4rem  !important;
+}
+
 .m-y_auto {
   margin-top: auto  !important;
   margin-bottom: auto  !important;
@@ -2277,6 +2712,13 @@ Styleguide Layouts.Margin
 .m-x_0 {
   margin-right: 0  !important;
   margin-left: 0  !important;
+}
+
+.m-x_n6 {
+  margin-right: -64px  !important;
+  margin-right: -4rem  !important;
+  margin-left: -64px  !important;
+  margin-left: -4rem  !important;
 }
 
 .m-x_n5 {
@@ -2345,6 +2787,13 @@ Styleguide Layouts.Margin
   margin-left: 2rem  !important;
 }
 
+.m-x_6 {
+  margin-right: 64px  !important;
+  margin-right: 4rem  !important;
+  margin-left: 64px  !important;
+  margin-left: 4rem  !important;
+}
+
 .m-x_auto {
   margin-right: auto  !important;
   margin-left: auto  !important;
@@ -2357,6 +2806,11 @@ Styleguide Layouts.Margin
 
 .m-t_0 {
   margin-top: 0  !important;
+}
+
+.m-t_n6 {
+  margin-top: -64px  !important;
+  margin-top: -4rem  !important;
 }
 
 .m-t_n5 {
@@ -2407,6 +2861,11 @@ Styleguide Layouts.Margin
   margin-top: 2rem  !important;
 }
 
+.m-t_6 {
+  margin-top: 64px  !important;
+  margin-top: 4rem  !important;
+}
+
 .m-t_auto {
   margin-top: auto  !important;
 }
@@ -2417,6 +2876,11 @@ Styleguide Layouts.Margin
 
 .m-b_0 {
   margin-bottom: 0  !important;
+}
+
+.m-b_n6 {
+  margin-bottom: -64px  !important;
+  margin-bottom: -4rem  !important;
 }
 
 .m-b_n5 {
@@ -2467,6 +2931,11 @@ Styleguide Layouts.Margin
   margin-bottom: 2rem  !important;
 }
 
+.m-b_6 {
+  margin-bottom: 64px  !important;
+  margin-bottom: 4rem  !important;
+}
+
 .m-b_auto {
   margin-bottom: auto  !important;
 }
@@ -2477,6 +2946,11 @@ Styleguide Layouts.Margin
 
 .m-l_0 {
   margin-left: 0  !important;
+}
+
+.m-l_n6 {
+  margin-left: -64px  !important;
+  margin-left: -4rem  !important;
 }
 
 .m-l_n5 {
@@ -2527,6 +3001,11 @@ Styleguide Layouts.Margin
   margin-left: 2rem  !important;
 }
 
+.m-l_6 {
+  margin-left: 64px  !important;
+  margin-left: 4rem  !important;
+}
+
 .m-l_auto {
   margin-left: auto  !important;
 }
@@ -2537,6 +3016,11 @@ Styleguide Layouts.Margin
 
 .m-r_0 {
   margin-right: 0  !important;
+}
+
+.m-r_n6 {
+  margin-right: -64px  !important;
+  margin-right: -4rem  !important;
 }
 
 .m-r_n5 {
@@ -2587,6 +3071,11 @@ Styleguide Layouts.Margin
   margin-right: 2rem  !important;
 }
 
+.m-r_6 {
+  margin-right: 64px  !important;
+  margin-right: 4rem  !important;
+}
+
 .m-r_auto {
   margin-right: auto  !important;
 }
@@ -2598,6 +3087,10 @@ Styleguide Layouts.Margin
 @media only screen and (min-width : 768px) {
   .m_0\:md {
     margin: 0  !important;
+  }
+
+  .m_n6\:md {
+    margin: -4rem  !important;
   }
 
   .m_n5\:md {
@@ -2640,6 +3133,10 @@ Styleguide Layouts.Margin
     margin: 2rem  !important;
   }
 
+  .m_6\:md {
+    margin: 4rem  !important;
+  }
+
   .m_auto\:md {
     margin: auto  !important;
   }
@@ -2651,6 +3148,11 @@ Styleguide Layouts.Margin
   .m-y_0\:md {
     margin-top: 0  !important;
     margin-bottom: 0  !important;
+  }
+
+  .m-y_n6\:md {
+    margin-top: -4rem  !important;
+    margin-bottom: -4rem  !important;
   }
 
   .m-y_n5\:md {
@@ -2703,6 +3205,11 @@ Styleguide Layouts.Margin
     margin-bottom: 2rem  !important;
   }
 
+  .m-y_6\:md {
+    margin-top: 4rem  !important;
+    margin-bottom: 4rem  !important;
+  }
+
   .m-y_auto\:md {
     margin-top: auto  !important;
     margin-bottom: auto  !important;
@@ -2716,6 +3223,11 @@ Styleguide Layouts.Margin
   .m-x_0\:md {
     margin-right: 0  !important;
     margin-left: 0  !important;
+  }
+
+  .m-x_n6\:md {
+    margin-right: -4rem  !important;
+    margin-left: -4rem  !important;
   }
 
   .m-x_n5\:md {
@@ -2768,6 +3280,11 @@ Styleguide Layouts.Margin
     margin-left: 2rem  !important;
   }
 
+  .m-x_6\:md {
+    margin-right: 4rem  !important;
+    margin-left: 4rem  !important;
+  }
+
   .m-x_auto\:md {
     margin-right: auto  !important;
     margin-left: auto  !important;
@@ -2780,6 +3297,10 @@ Styleguide Layouts.Margin
 
   .m-t_0\:md {
     margin-top: 0  !important;
+  }
+
+  .m-t_n6\:md {
+    margin-top: -4rem  !important;
   }
 
   .m-t_n5\:md {
@@ -2822,6 +3343,10 @@ Styleguide Layouts.Margin
     margin-top: 2rem  !important;
   }
 
+  .m-t_6\:md {
+    margin-top: 4rem  !important;
+  }
+
   .m-t_auto\:md {
     margin-top: auto  !important;
   }
@@ -2832,6 +3357,10 @@ Styleguide Layouts.Margin
 
   .m-b_0\:md {
     margin-bottom: 0  !important;
+  }
+
+  .m-b_n6\:md {
+    margin-bottom: -4rem  !important;
   }
 
   .m-b_n5\:md {
@@ -2874,6 +3403,10 @@ Styleguide Layouts.Margin
     margin-bottom: 2rem  !important;
   }
 
+  .m-b_6\:md {
+    margin-bottom: 4rem  !important;
+  }
+
   .m-b_auto\:md {
     margin-bottom: auto  !important;
   }
@@ -2884,6 +3417,10 @@ Styleguide Layouts.Margin
 
   .m-l_0\:md {
     margin-left: 0  !important;
+  }
+
+  .m-l_n6\:md {
+    margin-left: -4rem  !important;
   }
 
   .m-l_n5\:md {
@@ -2926,6 +3463,10 @@ Styleguide Layouts.Margin
     margin-left: 2rem  !important;
   }
 
+  .m-l_6\:md {
+    margin-left: 4rem  !important;
+  }
+
   .m-l_auto\:md {
     margin-left: auto  !important;
   }
@@ -2936,6 +3477,10 @@ Styleguide Layouts.Margin
 
   .m-r_0\:md {
     margin-right: 0  !important;
+  }
+
+  .m-r_n6\:md {
+    margin-right: -4rem  !important;
   }
 
   .m-r_n5\:md {
@@ -2978,6 +3523,10 @@ Styleguide Layouts.Margin
     margin-right: 2rem  !important;
   }
 
+  .m-r_6\:md {
+    margin-right: 4rem  !important;
+  }
+
   .m-r_auto\:md {
     margin-right: auto  !important;
   }
@@ -2989,6 +3538,10 @@ Styleguide Layouts.Margin
 @media only screen and (min-width : 1024px) {
   .m_0\:lg {
     margin: 0  !important;
+  }
+
+  .m_n6\:lg {
+    margin: -4rem  !important;
   }
 
   .m_n5\:lg {
@@ -3031,6 +3584,10 @@ Styleguide Layouts.Margin
     margin: 2rem  !important;
   }
 
+  .m_6\:lg {
+    margin: 4rem  !important;
+  }
+
   .m_auto\:lg {
     margin: auto  !important;
   }
@@ -3042,6 +3599,11 @@ Styleguide Layouts.Margin
   .m-y_0\:lg {
     margin-top: 0  !important;
     margin-bottom: 0  !important;
+  }
+
+  .m-y_n6\:lg {
+    margin-top: -4rem  !important;
+    margin-bottom: -4rem  !important;
   }
 
   .m-y_n5\:lg {
@@ -3094,6 +3656,11 @@ Styleguide Layouts.Margin
     margin-bottom: 2rem  !important;
   }
 
+  .m-y_6\:lg {
+    margin-top: 4rem  !important;
+    margin-bottom: 4rem  !important;
+  }
+
   .m-y_auto\:lg {
     margin-top: auto  !important;
     margin-bottom: auto  !important;
@@ -3107,6 +3674,11 @@ Styleguide Layouts.Margin
   .m-x_0\:lg {
     margin-right: 0  !important;
     margin-left: 0  !important;
+  }
+
+  .m-x_n6\:lg {
+    margin-right: -4rem  !important;
+    margin-left: -4rem  !important;
   }
 
   .m-x_n5\:lg {
@@ -3159,6 +3731,11 @@ Styleguide Layouts.Margin
     margin-left: 2rem  !important;
   }
 
+  .m-x_6\:lg {
+    margin-right: 4rem  !important;
+    margin-left: 4rem  !important;
+  }
+
   .m-x_auto\:lg {
     margin-right: auto  !important;
     margin-left: auto  !important;
@@ -3171,6 +3748,10 @@ Styleguide Layouts.Margin
 
   .m-t_0\:lg {
     margin-top: 0  !important;
+  }
+
+  .m-t_n6\:lg {
+    margin-top: -4rem  !important;
   }
 
   .m-t_n5\:lg {
@@ -3213,6 +3794,10 @@ Styleguide Layouts.Margin
     margin-top: 2rem  !important;
   }
 
+  .m-t_6\:lg {
+    margin-top: 4rem  !important;
+  }
+
   .m-t_auto\:lg {
     margin-top: auto  !important;
   }
@@ -3223,6 +3808,10 @@ Styleguide Layouts.Margin
 
   .m-b_0\:lg {
     margin-bottom: 0  !important;
+  }
+
+  .m-b_n6\:lg {
+    margin-bottom: -4rem  !important;
   }
 
   .m-b_n5\:lg {
@@ -3265,6 +3854,10 @@ Styleguide Layouts.Margin
     margin-bottom: 2rem  !important;
   }
 
+  .m-b_6\:lg {
+    margin-bottom: 4rem  !important;
+  }
+
   .m-b_auto\:lg {
     margin-bottom: auto  !important;
   }
@@ -3275,6 +3868,10 @@ Styleguide Layouts.Margin
 
   .m-l_0\:lg {
     margin-left: 0  !important;
+  }
+
+  .m-l_n6\:lg {
+    margin-left: -4rem  !important;
   }
 
   .m-l_n5\:lg {
@@ -3317,6 +3914,10 @@ Styleguide Layouts.Margin
     margin-left: 2rem  !important;
   }
 
+  .m-l_6\:lg {
+    margin-left: 4rem  !important;
+  }
+
   .m-l_auto\:lg {
     margin-left: auto  !important;
   }
@@ -3327,6 +3928,10 @@ Styleguide Layouts.Margin
 
   .m-r_0\:lg {
     margin-right: 0  !important;
+  }
+
+  .m-r_n6\:lg {
+    margin-right: -4rem  !important;
   }
 
   .m-r_n5\:lg {
@@ -3369,6 +3974,10 @@ Styleguide Layouts.Margin
     margin-right: 2rem  !important;
   }
 
+  .m-r_6\:lg {
+    margin-right: 4rem  !important;
+  }
+
   .m-r_auto\:lg {
     margin-right: auto  !important;
   }
@@ -3380,7 +3989,7 @@ Styleguide Layouts.Margin
 /*
 Padding
 
-<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Quickly alter the padding of an object. <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th>responsive modifiers</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .p_0</td><td class=''>.p_0:md, .p_0:lg</td><td class='text_right'> padding :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .p_1</td><td class=''>.p_1:md, .p_1:lg</td><td class='text_right'> padding :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .p_2</td><td class=''>.p_2:md, .p_2:lg</td><td class='text_right'> padding :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .p_3</td><td class=''>.p_3:md, .p_3:lg</td><td class='text_right'> padding :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .p_4</td><td class=''>.p_4:md, .p_4:lg</td><td class='text_right'> padding :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .p_5</td><td class=''>.p_5:md, .p_5:lg</td><td class='text_right'> padding :</td><td> 2rem </td></tr> </tbody></table>
+<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div>Quickly alter the padding of an object. <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th>responsive modifiers</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .p_0</td><td class=''>.p_0:md, .p_0:lg</td><td class='text_right'> padding :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .p_1</td><td class=''>.p_1:md, .p_1:lg</td><td class='text_right'> padding :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .p_2</td><td class=''>.p_2:md, .p_2:lg</td><td class='text_right'> padding :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .p_3</td><td class=''>.p_3:md, .p_3:lg</td><td class='text_right'> padding :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .p_4</td><td class=''>.p_4:md, .p_4:lg</td><td class='text_right'> padding :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .p_5</td><td class=''>.p_5:md, .p_5:lg</td><td class='text_right'> padding :</td><td> 2rem </td></tr> <tr><td class='c_primary-n2'> .p_6</td><td class=''>.p_6:md, .p_6:lg</td><td class='text_right'> padding :</td><td> 4rem </td></tr> </tbody></table>
 
 .p_0      	-  padding: 0 
 .p_1   				-  padding: 1px
@@ -3431,6 +4040,11 @@ Styleguide Layouts.Padding
   padding: 2rem  !important;
 }
 
+.p_6 {
+  padding: 64px  !important;
+  padding: 4rem  !important;
+}
+
 .p-y_0 {
   padding-top: 0  !important;
   padding-bottom: 0  !important;
@@ -3467,6 +4081,13 @@ Styleguide Layouts.Padding
   padding-top: 2rem  !important;
   padding-bottom: 32px  !important;
   padding-bottom: 2rem  !important;
+}
+
+.p-y_6 {
+  padding-top: 64px  !important;
+  padding-top: 4rem  !important;
+  padding-bottom: 64px  !important;
+  padding-bottom: 4rem  !important;
 }
 
 .p-x_0 {
@@ -3507,6 +4128,13 @@ Styleguide Layouts.Padding
   padding-left: 2rem  !important;
 }
 
+.p-x_6 {
+  padding-right: 64px  !important;
+  padding-right: 4rem  !important;
+  padding-left: 64px  !important;
+  padding-left: 4rem  !important;
+}
+
 .p-t_0 {
   padding-top: 0  !important;
 }
@@ -3533,6 +4161,11 @@ Styleguide Layouts.Padding
 .p-t_5 {
   padding-top: 32px  !important;
   padding-top: 2rem  !important;
+}
+
+.p-t_6 {
+  padding-top: 64px  !important;
+  padding-top: 4rem  !important;
 }
 
 .p-b_0 {
@@ -3563,6 +4196,11 @@ Styleguide Layouts.Padding
   padding-bottom: 2rem  !important;
 }
 
+.p-b_6 {
+  padding-bottom: 64px  !important;
+  padding-bottom: 4rem  !important;
+}
+
 .p-l_0 {
   padding-left: 0  !important;
 }
@@ -3589,6 +4227,11 @@ Styleguide Layouts.Padding
 .p-l_5 {
   padding-left: 32px  !important;
   padding-left: 2rem  !important;
+}
+
+.p-l_6 {
+  padding-left: 64px  !important;
+  padding-left: 4rem  !important;
 }
 
 .p-r_0 {
@@ -3619,6 +4262,11 @@ Styleguide Layouts.Padding
   padding-right: 2rem  !important;
 }
 
+.p-r_6 {
+  padding-right: 64px  !important;
+  padding-right: 4rem  !important;
+}
+
 @media only screen and (min-width : 768px) {
   .p_0\:md {
     padding: 0  !important;
@@ -3642,6 +4290,10 @@ Styleguide Layouts.Padding
 
   .p_5\:md {
     padding: 2rem  !important;
+  }
+
+  .p_6\:md {
+    padding: 4rem  !important;
   }
 
   .p-y_0\:md {
@@ -3674,6 +4326,11 @@ Styleguide Layouts.Padding
     padding-bottom: 2rem  !important;
   }
 
+  .p-y_6\:md {
+    padding-top: 4rem  !important;
+    padding-bottom: 4rem  !important;
+  }
+
   .p-x_0\:md {
     padding-right: 0  !important;
     padding-left: 0  !important;
@@ -3704,6 +4361,11 @@ Styleguide Layouts.Padding
     padding-left: 2rem  !important;
   }
 
+  .p-x_6\:md {
+    padding-right: 4rem  !important;
+    padding-left: 4rem  !important;
+  }
+
   .p-t_0\:md {
     padding-top: 0  !important;
   }
@@ -3726,6 +4388,10 @@ Styleguide Layouts.Padding
 
   .p-t_5\:md {
     padding-top: 2rem  !important;
+  }
+
+  .p-t_6\:md {
+    padding-top: 4rem  !important;
   }
 
   .p-b_0\:md {
@@ -3752,6 +4418,10 @@ Styleguide Layouts.Padding
     padding-bottom: 2rem  !important;
   }
 
+  .p-b_6\:md {
+    padding-bottom: 4rem  !important;
+  }
+
   .p-l_0\:md {
     padding-left: 0  !important;
   }
@@ -3774,6 +4444,10 @@ Styleguide Layouts.Padding
 
   .p-l_5\:md {
     padding-left: 2rem  !important;
+  }
+
+  .p-l_6\:md {
+    padding-left: 4rem  !important;
   }
 
   .p-r_0\:md {
@@ -3799,6 +4473,10 @@ Styleguide Layouts.Padding
   .p-r_5\:md {
     padding-right: 2rem  !important;
   }
+
+  .p-r_6\:md {
+    padding-right: 4rem  !important;
+  }
 }
 @media only screen and (min-width : 1024px) {
   .p_0\:lg {
@@ -3823,6 +4501,10 @@ Styleguide Layouts.Padding
 
   .p_5\:lg {
     padding: 2rem  !important;
+  }
+
+  .p_6\:lg {
+    padding: 4rem  !important;
   }
 
   .p-y_0\:lg {
@@ -3855,6 +4537,11 @@ Styleguide Layouts.Padding
     padding-bottom: 2rem  !important;
   }
 
+  .p-y_6\:lg {
+    padding-top: 4rem  !important;
+    padding-bottom: 4rem  !important;
+  }
+
   .p-x_0\:lg {
     padding-right: 0  !important;
     padding-left: 0  !important;
@@ -3885,6 +4572,11 @@ Styleguide Layouts.Padding
     padding-left: 2rem  !important;
   }
 
+  .p-x_6\:lg {
+    padding-right: 4rem  !important;
+    padding-left: 4rem  !important;
+  }
+
   .p-t_0\:lg {
     padding-top: 0  !important;
   }
@@ -3907,6 +4599,10 @@ Styleguide Layouts.Padding
 
   .p-t_5\:lg {
     padding-top: 2rem  !important;
+  }
+
+  .p-t_6\:lg {
+    padding-top: 4rem  !important;
   }
 
   .p-b_0\:lg {
@@ -3933,6 +4629,10 @@ Styleguide Layouts.Padding
     padding-bottom: 2rem  !important;
   }
 
+  .p-b_6\:lg {
+    padding-bottom: 4rem  !important;
+  }
+
   .p-l_0\:lg {
     padding-left: 0  !important;
   }
@@ -3957,6 +4657,10 @@ Styleguide Layouts.Padding
     padding-left: 2rem  !important;
   }
 
+  .p-l_6\:lg {
+    padding-left: 4rem  !important;
+  }
+
   .p-r_0\:lg {
     padding-right: 0  !important;
   }
@@ -3979,6 +4683,10 @@ Styleguide Layouts.Padding
 
   .p-r_5\:lg {
     padding-right: 2rem  !important;
+  }
+
+  .p-r_6\:lg {
+    padding-right: 4rem  !important;
   }
 }
 /*
@@ -4125,6 +4833,11 @@ Styleguide Layouts.Location
   top: 0;
 }
 
+.t_n6 {
+  top: -64px;
+  top: -4rem;
+}
+
 .t_n5 {
   top: -32px;
   top: -2rem;
@@ -4168,7 +4881,7 @@ Styleguide Layouts.Location
   top: 1rem;
 }
 
-.t_5 {
+.t_5,.t_6 {
   top: 32px;
   top: 2rem;
 }
@@ -4187,6 +4900,11 @@ Styleguide Layouts.Location
 
 .b_0 {
   bottom: 0;
+}
+
+.b_n6 {
+  bottom: -64px;
+  bottom: -4rem;
 }
 
 .b_n5 {
@@ -4232,7 +4950,7 @@ Styleguide Layouts.Location
   bottom: 1rem;
 }
 
-.b_5 {
+.b_5,.b_6 {
   bottom: 32px;
   bottom: 2rem;
 }
@@ -4251,6 +4969,11 @@ Styleguide Layouts.Location
 
 .l_0 {
   left: 0;
+}
+
+.l_n6 {
+  left: -64px;
+  left: -4rem;
 }
 
 .l_n5 {
@@ -4296,7 +5019,7 @@ Styleguide Layouts.Location
   left: 1rem;
 }
 
-.l_5 {
+.l_5,.l_6 {
   left: 32px;
   left: 2rem;
 }
@@ -4315,6 +5038,11 @@ Styleguide Layouts.Location
 
 .r_0 {
   right: 0;
+}
+
+.r_n6 {
+  right: -64px;
+  right: -4rem;
 }
 
 .r_n5 {
@@ -4360,7 +5088,7 @@ Styleguide Layouts.Location
   right: 1rem;
 }
 
-.r_5 {
+.r_5,.r_6 {
   right: 32px;
   right: 2rem;
 }
@@ -4380,6 +5108,10 @@ Styleguide Layouts.Location
 
   .t_0\:md {
     top: 0;
+  }
+
+  .t_n6\:md {
+    top: -4rem;
   }
 
   .t_n5\:md {
@@ -4418,7 +5150,7 @@ Styleguide Layouts.Location
     top: 1rem;
   }
 
-  .t_5\:md {
+  .t_5\:md,.t_6\:md {
     top: 2rem;
   }
 
@@ -4436,6 +5168,10 @@ Styleguide Layouts.Location
 
   .b_0\:md {
     bottom: 0;
+  }
+
+  .b_n6\:md {
+    bottom: -4rem;
   }
 
   .b_n5\:md {
@@ -4474,7 +5210,7 @@ Styleguide Layouts.Location
     bottom: 1rem;
   }
 
-  .b_5\:md {
+  .b_5\:md,.b_6\:md {
     bottom: 2rem;
   }
 
@@ -4492,6 +5228,10 @@ Styleguide Layouts.Location
 
   .l_0\:md {
     left: 0;
+  }
+
+  .l_n6\:md {
+    left: -4rem;
   }
 
   .l_n5\:md {
@@ -4530,7 +5270,7 @@ Styleguide Layouts.Location
     left: 1rem;
   }
 
-  .l_5\:md {
+  .l_5\:md,.l_6\:md {
     left: 2rem;
   }
 
@@ -4548,6 +5288,10 @@ Styleguide Layouts.Location
 
   .r_0\:md {
     right: 0;
+  }
+
+  .r_n6\:md {
+    right: -4rem;
   }
 
   .r_n5\:md {
@@ -4586,7 +5330,7 @@ Styleguide Layouts.Location
     right: 1rem;
   }
 
-  .r_5\:md {
+  .r_5\:md,.r_6\:md {
     right: 2rem;
   }
 }
@@ -4605,6 +5349,10 @@ Styleguide Layouts.Location
 
   .t_0\:lg {
     top: 0;
+  }
+
+  .t_n6\:lg {
+    top: -4rem;
   }
 
   .t_n5\:lg {
@@ -4643,7 +5391,7 @@ Styleguide Layouts.Location
     top: 1rem;
   }
 
-  .t_5\:lg {
+  .t_5\:lg,.t_6\:lg {
     top: 2rem;
   }
 
@@ -4661,6 +5409,10 @@ Styleguide Layouts.Location
 
   .b_0\:lg {
     bottom: 0;
+  }
+
+  .b_n6\:lg {
+    bottom: -4rem;
   }
 
   .b_n5\:lg {
@@ -4699,7 +5451,7 @@ Styleguide Layouts.Location
     bottom: 1rem;
   }
 
-  .b_5\:lg {
+  .b_5\:lg,.b_6\:lg {
     bottom: 2rem;
   }
 
@@ -4717,6 +5469,10 @@ Styleguide Layouts.Location
 
   .l_0\:lg {
     left: 0;
+  }
+
+  .l_n6\:lg {
+    left: -4rem;
   }
 
   .l_n5\:lg {
@@ -4755,7 +5511,7 @@ Styleguide Layouts.Location
     left: 1rem;
   }
 
-  .l_5\:lg {
+  .l_5\:lg,.l_6\:lg {
     left: 2rem;
   }
 
@@ -4773,6 +5529,10 @@ Styleguide Layouts.Location
 
   .r_0\:lg {
     right: 0;
+  }
+
+  .r_n6\:lg {
+    right: -4rem;
   }
 
   .r_n5\:lg {
@@ -4811,7 +5571,7 @@ Styleguide Layouts.Location
     right: 1rem;
   }
 
-  .r_5\:lg {
+  .r_5\:lg,.r_6\:lg {
     right: 2rem;
   }
 }
@@ -5390,6 +6150,10 @@ Styleguide Layouts.Isolation
   order: 99999;
 }
 
+.order_unset {
+  order: unset;
+}
+
 .flex-grow_2 {
   flex-grow: 2;
 }
@@ -5569,6 +6333,10 @@ Styleguide Layouts.Isolation
 
   .order_last\:md {
     order: 99999;
+  }
+
+  .order_unset\:md {
+    order: unset;
   }
 
   .flex-grow_2\:md {
@@ -5752,6 +6520,10 @@ Styleguide Layouts.Isolation
     order: 99999;
   }
 
+  .order_unset\:lg {
+    order: unset;
+  }
+
   .flex-grow_2\:lg {
     flex-grow: 2;
   }
@@ -5768,6 +6540,296 @@ Styleguide Layouts.Isolation
     flex-shrink: 1;
   }
 }
+.flex_auto {
+  flex-basis: auto !important;
+}
+
+.flex_0 {
+  flex-basis: 0% !important;
+}
+
+.flex_5 {
+  flex-basis: 5% !important;
+}
+
+.flex_10 {
+  flex-basis: 10% !important;
+}
+
+.flex_15 {
+  flex-basis: 15% !important;
+}
+
+.flex_20 {
+  flex-basis: 20% !important;
+}
+
+.flex_25 {
+  flex-basis: 25% !important;
+}
+
+.flex_30 {
+  flex-basis: 30% !important;
+}
+
+.flex_35 {
+  flex-basis: 35% !important;
+}
+
+.flex_40 {
+  flex-basis: 40% !important;
+}
+
+.flex_45 {
+  flex-basis: 45% !important;
+}
+
+.flex_50 {
+  flex-basis: 50% !important;
+}
+
+.flex_55 {
+  flex-basis: 55% !important;
+}
+
+.flex_60 {
+  flex-basis: 60% !important;
+}
+
+.flex_65 {
+  flex-basis: 65% !important;
+}
+
+.flex_70 {
+  flex-basis: 70% !important;
+}
+
+.flex_75 {
+  flex-basis: 75% !important;
+}
+
+.flex_80 {
+  flex-basis: 80% !important;
+}
+
+.flex_85 {
+  flex-basis: 85% !important;
+}
+
+.flex_90 {
+  flex-basis: 90% !important;
+}
+
+.flex_95 {
+  flex-basis: 95% !important;
+}
+
+.flex_100 {
+  flex-basis: 100% !important;
+}
+
+.flex_third-1 {
+  flex-basis: 33% !important;
+}
+
+.flex_third-2 {
+  flex-basis: 66% !important;
+}
+
+@media only screen and (min-width : 768px) {
+  .flex_auto\:md {
+    flex-basis: auto !important;
+  }
+
+  .flex_0\:md {
+    flex-basis: 0% !important;
+  }
+
+  .flex_5\:md {
+    flex-basis: 5% !important;
+  }
+
+  .flex_10\:md {
+    flex-basis: 10% !important;
+  }
+
+  .flex_15\:md {
+    flex-basis: 15% !important;
+  }
+
+  .flex_20\:md {
+    flex-basis: 20% !important;
+  }
+
+  .flex_25\:md {
+    flex-basis: 25% !important;
+  }
+
+  .flex_30\:md {
+    flex-basis: 30% !important;
+  }
+
+  .flex_35\:md {
+    flex-basis: 35% !important;
+  }
+
+  .flex_40\:md {
+    flex-basis: 40% !important;
+  }
+
+  .flex_45\:md {
+    flex-basis: 45% !important;
+  }
+
+  .flex_50\:md {
+    flex-basis: 50% !important;
+  }
+
+  .flex_55\:md {
+    flex-basis: 55% !important;
+  }
+
+  .flex_60\:md {
+    flex-basis: 60% !important;
+  }
+
+  .flex_65\:md {
+    flex-basis: 65% !important;
+  }
+
+  .flex_70\:md {
+    flex-basis: 70% !important;
+  }
+
+  .flex_75\:md {
+    flex-basis: 75% !important;
+  }
+
+  .flex_80\:md {
+    flex-basis: 80% !important;
+  }
+
+  .flex_85\:md {
+    flex-basis: 85% !important;
+  }
+
+  .flex_90\:md {
+    flex-basis: 90% !important;
+  }
+
+  .flex_95\:md {
+    flex-basis: 95% !important;
+  }
+
+  .flex_100\:md {
+    flex-basis: 100% !important;
+  }
+
+  .flex_third-1\:md {
+    flex-basis: 33% !important;
+  }
+
+  .flex_third-2\:md {
+    flex-basis: 66% !important;
+  }
+}
+@media only screen and (min-width : 1024px) {
+  .flex_auto\:lg {
+    flex-basis: auto !important;
+  }
+
+  .flex_0\:lg {
+    flex-basis: 0% !important;
+  }
+
+  .flex_5\:lg {
+    flex-basis: 5% !important;
+  }
+
+  .flex_10\:lg {
+    flex-basis: 10% !important;
+  }
+
+  .flex_15\:lg {
+    flex-basis: 15% !important;
+  }
+
+  .flex_20\:lg {
+    flex-basis: 20% !important;
+  }
+
+  .flex_25\:lg {
+    flex-basis: 25% !important;
+  }
+
+  .flex_30\:lg {
+    flex-basis: 30% !important;
+  }
+
+  .flex_35\:lg {
+    flex-basis: 35% !important;
+  }
+
+  .flex_40\:lg {
+    flex-basis: 40% !important;
+  }
+
+  .flex_45\:lg {
+    flex-basis: 45% !important;
+  }
+
+  .flex_50\:lg {
+    flex-basis: 50% !important;
+  }
+
+  .flex_55\:lg {
+    flex-basis: 55% !important;
+  }
+
+  .flex_60\:lg {
+    flex-basis: 60% !important;
+  }
+
+  .flex_65\:lg {
+    flex-basis: 65% !important;
+  }
+
+  .flex_70\:lg {
+    flex-basis: 70% !important;
+  }
+
+  .flex_75\:lg {
+    flex-basis: 75% !important;
+  }
+
+  .flex_80\:lg {
+    flex-basis: 80% !important;
+  }
+
+  .flex_85\:lg {
+    flex-basis: 85% !important;
+  }
+
+  .flex_90\:lg {
+    flex-basis: 90% !important;
+  }
+
+  .flex_95\:lg {
+    flex-basis: 95% !important;
+  }
+
+  .flex_100\:lg {
+    flex-basis: 100% !important;
+  }
+
+  .flex_third-1\:lg {
+    flex-basis: 33% !important;
+  }
+
+  .flex_third-2\:lg {
+    flex-basis: 66% !important;
+  }
+}
 /*
 Grid
 
@@ -5779,7 +6841,7 @@ Styleguide  Layouts.Grid
 /*
 Grid Gap
 
-Description: Grid Gap  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-x_0</td><td class='text_right'> grid-column-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-x_1</td><td class='text_right'> grid-column-gap :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .gap-x_2</td><td class='text_right'> grid-column-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_3</td><td class='text_right'> grid-column-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_4</td><td class='text_right'> grid-column-gap :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_5</td><td class='text_right'> grid-column-gap :</td><td> 2rem </td></tr> </tbody></table>  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-y_0</td><td class='text_right'> grid-row-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-y_1</td><td class='text_right'> grid-row-gap :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .gap-y_2</td><td class='text_right'> grid-row-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_3</td><td class='text_right'> grid-row-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_4</td><td class='text_right'> grid-row-gap :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_5</td><td class='text_right'> grid-row-gap :</td><td> 2rem </td></tr> </tbody></table>  
+Description: Grid Gap  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-x_0</td><td class='text_right'> grid-column-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-x_1</td><td class='text_right'> grid-column-gap :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .gap-x_2</td><td class='text_right'> grid-column-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_3</td><td class='text_right'> grid-column-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_4</td><td class='text_right'> grid-column-gap :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_5</td><td class='text_right'> grid-column-gap :</td><td> 2rem </td></tr> <tr><td class='c_primary-n2'> .gap-x_6</td><td class='text_right'> grid-column-gap :</td><td> 4rem </td></tr> </tbody></table>  <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .gap-y_0</td><td class='text_right'> grid-row-gap :</td><td> 0 </td></tr> <tr><td class='c_primary-n2'> .gap-y_1</td><td class='text_right'> grid-row-gap :</td><td> 1px </td></tr> <tr><td class='c_primary-n2'> .gap-y_2</td><td class='text_right'> grid-row-gap :</td><td> 0.25rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_3</td><td class='text_right'> grid-row-gap :</td><td> 0.5rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_4</td><td class='text_right'> grid-row-gap :</td><td> 1rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_5</td><td class='text_right'> grid-row-gap :</td><td> 2rem </td></tr> <tr><td class='c_primary-n2'> .gap-y_6</td><td class='text_right'> grid-row-gap :</td><td> 4rem </td></tr> </tbody></table>  
 
 Weight: 0
 
@@ -5861,6 +6923,10 @@ Styleguide  Layouts.Grid.Gap
   grid-gap: 2rem;
 }
 
+.gap_6 {
+  grid-gap: 4rem;
+}
+
 .gap-x_0 {
   grid-column-gap: 0;
 }
@@ -5885,6 +6951,10 @@ Styleguide  Layouts.Grid.Gap
   grid-column-gap: 2rem;
 }
 
+.gap-x_6 {
+  grid-column-gap: 4rem;
+}
+
 .gap-y_0 {
   grid-row-gap: 0;
 }
@@ -5907,6 +6977,10 @@ Styleguide  Layouts.Grid.Gap
 
 .gap-y_5 {
   grid-row-gap: 2rem;
+}
+
+.gap-y_6 {
+  grid-row-gap: 4rem;
 }
 
 .col-start_1 {
@@ -6078,6 +7152,10 @@ Styleguide  Layouts.Grid.Gap
     grid-gap: 2rem;
   }
 
+  .gap_6\:md {
+    grid-gap: 4rem;
+  }
+
   .gap-y_0\:md {
     grid-row-gap: 0;
   }
@@ -6102,6 +7180,10 @@ Styleguide  Layouts.Grid.Gap
     grid-row-gap: 2rem;
   }
 
+  .gap-y_6\:md {
+    grid-row-gap: 4rem;
+  }
+
   .gap-x_0\:md {
     grid-column-gap: 0;
   }
@@ -6124,6 +7206,10 @@ Styleguide  Layouts.Grid.Gap
 
   .gap-x_5\:md {
     grid-column-gap: 2rem;
+  }
+
+  .gap-x_6\:md {
+    grid-column-gap: 4rem;
   }
 
   .col-start_1\:md {
@@ -6295,6 +7381,10 @@ Styleguide  Layouts.Grid.Gap
     grid-gap: 2rem;
   }
 
+  .gap_6\:lg {
+    grid-gap: 4rem;
+  }
+
   .gap-y_0\:lg {
     grid-row-gap: 0;
   }
@@ -6319,6 +7409,10 @@ Styleguide  Layouts.Grid.Gap
     grid-row-gap: 2rem;
   }
 
+  .gap-y_6\:lg {
+    grid-row-gap: 4rem;
+  }
+
   .gap-x_0\:lg {
     grid-column-gap: 0;
   }
@@ -6341,6 +7435,10 @@ Styleguide  Layouts.Grid.Gap
 
   .gap-x_5\:lg {
     grid-column-gap: 2rem;
+  }
+
+  .gap-x_6\:lg {
+    grid-column-gap: 4rem;
   }
 
   .col-start_1\:lg {
@@ -6553,6 +7651,17 @@ Styleguide Layouts.Display.overflow
 
 .overflow_scroll {
   overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.overflow_scroll-x {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.overflow_scroll-y {
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .overflow_clip {
@@ -6565,6 +7674,21 @@ Styleguide Layouts.Display.overflow
 
 .overflow_unset {
   overflow: unset;
+}
+
+.scroll-snap_y {
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-snap_x {
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-snap_y, .scroll-snap_x {
+  scroll-padding: 1rem;
+}
+.scroll-snap_y > *, .scroll-snap_x > * {
+  scroll-snap-align: start;
 }
 
 /*
@@ -6906,11 +8030,11 @@ Styleguide Layouts.Width
   width: 100% !important;
 }
 
-.w_1-third {
+.w_third-1 {
   width: 33% !important;
 }
 
-.w_2-thirds {
+.w_third-2 {
   width: 66% !important;
 }
 
@@ -7102,11 +8226,11 @@ Styleguide Layouts.Width
     width: 100% !important;
   }
 
-  .w_1-third\:md {
+  .w_third-1\:md {
     width: 33% !important;
   }
 
-  .w_2-thirds\:md {
+  .w_third-2\:md {
     width: 66% !important;
   }
 
@@ -7279,11 +8403,11 @@ Styleguide Layouts.Width
     width: 100% !important;
   }
 
-  .w_1-third\:lg {
+  .w_third-1\:lg {
     width: 33% !important;
   }
 
-  .w_2-thirds\:lg {
+  .w_third-2\:lg {
     width: 66% !important;
   }
 
@@ -7448,6 +8572,10 @@ Styleguide Layouts.MaxWidth
   height: 100vh;
 }
 
+.h_100p {
+  height: 100%;
+}
+
 .h_unset {
   height: unset;
 }
@@ -7474,6 +8602,31 @@ Styleguide Layouts.MaxWidth
 
 .h_5lh {
   height: 2.5em;
+}
+
+.h_1xlh {
+  height: 24px;
+  height: 1.5rem;
+}
+
+.h_2xlh {
+  height: 48px;
+  height: 3rem;
+}
+
+.h_3xlh {
+  height: 72px;
+  height: 4.5rem;
+}
+
+.h_4xlh {
+  height: 96px;
+  height: 6rem;
+}
+
+.h_5xlh {
+  height: 120px;
+  height: 7.5rem;
 }
 
 .min-h_auto {
@@ -7524,6 +8677,10 @@ Styleguide Layouts.MaxWidth
   min-height: 100vh;
 }
 
+.min-h_100p {
+  min-height: 100%;
+}
+
 .min-h_unset {
   min-height: unset;
 }
@@ -7550,6 +8707,31 @@ Styleguide Layouts.MaxWidth
 
 .min-h_5lh {
   min-height: 2.5em;
+}
+
+.min-h_1xlh {
+  min-height: 24px;
+  min-height: 1.5rem;
+}
+
+.min-h_2xlh {
+  min-height: 48px;
+  min-height: 3rem;
+}
+
+.min-h_3xlh {
+  min-height: 72px;
+  min-height: 4.5rem;
+}
+
+.min-h_4xlh {
+  min-height: 96px;
+  min-height: 6rem;
+}
+
+.min-h_5xlh {
+  min-height: 120px;
+  min-height: 7.5rem;
 }
 
 @media only screen and (min-width : 768px) {
@@ -7601,6 +8783,10 @@ Styleguide Layouts.MaxWidth
     height: 100vh;
   }
 
+  .h_100p\:md {
+    height: 100%;
+  }
+
   .h_unset\:md {
     height: unset;
   }
@@ -7627,6 +8813,26 @@ Styleguide Layouts.MaxWidth
 
   .h_5lh\:md {
     height: 2.5em;
+  }
+
+  .h_1xlh\:md {
+    height: 1.5rem;
+  }
+
+  .h_2xlh\:md {
+    height: 3rem;
+  }
+
+  .h_3xlh\:md {
+    height: 4.5rem;
+  }
+
+  .h_4xlh\:md {
+    height: 6rem;
+  }
+
+  .h_5xlh\:md {
+    height: 7.5rem;
   }
 
   .min-h_auto\:md {
@@ -7677,6 +8883,10 @@ Styleguide Layouts.MaxWidth
     min-height: 100vh;
   }
 
+  .min-h_100p\:md {
+    min-height: 100%;
+  }
+
   .min-h_unset\:md {
     min-height: unset;
   }
@@ -7703,6 +8913,26 @@ Styleguide Layouts.MaxWidth
 
   .min-h_5lh\:md {
     min-height: 2.5em;
+  }
+
+  .min-h_1xlh\:md {
+    min-height: 1.5rem;
+  }
+
+  .min-h_2xlh\:md {
+    min-height: 3rem;
+  }
+
+  .min-h_3xlh\:md {
+    min-height: 4.5rem;
+  }
+
+  .min-h_4xlh\:md {
+    min-height: 6rem;
+  }
+
+  .min-h_5xlh\:md {
+    min-height: 7.5rem;
   }
 }
 @media only screen and (min-width : 1024px) {
@@ -7754,6 +8984,10 @@ Styleguide Layouts.MaxWidth
     height: 100vh;
   }
 
+  .h_100p\:lg {
+    height: 100%;
+  }
+
   .h_unset\:lg {
     height: unset;
   }
@@ -7780,6 +9014,26 @@ Styleguide Layouts.MaxWidth
 
   .h_5lh\:lg {
     height: 2.5em;
+  }
+
+  .h_1xlh\:lg {
+    height: 1.5rem;
+  }
+
+  .h_2xlh\:lg {
+    height: 3rem;
+  }
+
+  .h_3xlh\:lg {
+    height: 4.5rem;
+  }
+
+  .h_4xlh\:lg {
+    height: 6rem;
+  }
+
+  .h_5xlh\:lg {
+    height: 7.5rem;
   }
 
   .min-h_auto\:lg {
@@ -7830,6 +9084,10 @@ Styleguide Layouts.MaxWidth
     min-height: 100vh;
   }
 
+  .min-h_100p\:lg {
+    min-height: 100%;
+  }
+
   .min-h_unset\:lg {
     min-height: unset;
   }
@@ -7857,6 +9115,26 @@ Styleguide Layouts.MaxWidth
   .min-h_5lh\:lg {
     min-height: 2.5em;
   }
+
+  .min-h_1xlh\:lg {
+    min-height: 1.5rem;
+  }
+
+  .min-h_2xlh\:lg {
+    min-height: 3rem;
+  }
+
+  .min-h_3xlh\:lg {
+    min-height: 4.5rem;
+  }
+
+  .min-h_4xlh\:lg {
+    min-height: 6rem;
+  }
+
+  .min-h_5xlh\:lg {
+    min-height: 7.5rem;
+  }
 }
 /*
 Height
@@ -7877,7 +9155,8 @@ Markup:
 <div class="flex_auto br_solid br_white-8 br_1 bg_primary h_70">.h_70</div>   
 <div class="flex_auto br_solid br_white-8 br_1 bg_primary h_80">.h_80</div>   
 <div class="flex_auto br_solid br_white-8 br_1 bg_primary h_90">.h_90</div>   
-<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_100">.h_100</div>  
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_100">.h_100 </div>  
+<div class="flex_auto br_solid br_white-8 br_1 bg_primary h_100p">.h_100p (percent) </div>  
 <div class="flex_auto br_solid br_white-8 br_1 bg_primary h_60 h_unset:lg">.h_60.h_unset:lg</div>
 </div>
 
@@ -8970,7 +10249,7 @@ Styleguide Decorator.Background.Textures
   background-image: url("../img/cross_color.png");
 }
 
-.texture-dynamic {
+.texture_dynamic {
   background-image: url("../img/connectwork.png");
 }
 
@@ -9382,6 +10661,168 @@ Styleguide Decorator.Border.Colors.Black
   border-bottom-left-radius: 100%;
 }
 
+@media only screen and (min-width : 768px) {
+  .br_square\:md {
+    border-radius: 0px;
+  }
+
+  .br_radius\:md {
+    border-radius: 6px;
+  }
+
+  .br_round\:md {
+    border-radius: 25px;
+  }
+
+  .br_circle\:md {
+    border-radius: 100%;
+  }
+
+  .br-tr_square\:md {
+    border-top-right-radius: 0px;
+  }
+
+  .br-tr_radius\:md {
+    border-top-right-radius: 6px;
+  }
+
+  .br-tr_round\:md {
+    border-top-right-radius: 25px;
+  }
+
+  .br-tr_circle\:md {
+    border-top-right-radius: 100%;
+  }
+
+  .br-tl_square\:md {
+    border-top-left-radius: 0px;
+  }
+
+  .br-tl_radius\:md {
+    border-top-left-radius: 6px;
+  }
+
+  .br-tl_round\:md {
+    border-top-left-radius: 25px;
+  }
+
+  .br-tl_circle\:md {
+    border-top-left-radius: 100%;
+  }
+
+  .br-br_square\:md {
+    border-bottom-right-radius: 0px;
+  }
+
+  .br-br_radius\:md {
+    border-bottom-right-radius: 6px;
+  }
+
+  .br-br_round\:md {
+    border-bottom-right-radius: 25px;
+  }
+
+  .br-br_circle\:md {
+    border-bottom-right-radius: 100%;
+  }
+
+  .br-bl_square\:md {
+    border-bottom-left-radius: 0px;
+  }
+
+  .br-bl_radius\:md {
+    border-bottom-left-radius: 6px;
+  }
+
+  .br-bl_round\:md {
+    border-bottom-left-radius: 25px;
+  }
+
+  .br-bl_circle\:md {
+    border-bottom-left-radius: 100%;
+  }
+}
+@media only screen and (min-width : 1024px) {
+  .br_square\:lg {
+    border-radius: 0px;
+  }
+
+  .br_radius\:lg {
+    border-radius: 6px;
+  }
+
+  .br_round\:lg {
+    border-radius: 25px;
+  }
+
+  .br_circle\:lg {
+    border-radius: 100%;
+  }
+
+  .br-tr_square\:lg {
+    border-top-right-radius: 0px;
+  }
+
+  .br-tr_radius\:lg {
+    border-top-right-radius: 6px;
+  }
+
+  .br-tr_round\:lg {
+    border-top-right-radius: 25px;
+  }
+
+  .br-tr_circle\:lg {
+    border-top-right-radius: 100%;
+  }
+
+  .br-tl_square\:lg {
+    border-top-left-radius: 0px;
+  }
+
+  .br-tl_radius\:lg {
+    border-top-left-radius: 6px;
+  }
+
+  .br-tl_round\:lg {
+    border-top-left-radius: 25px;
+  }
+
+  .br-tl_circle\:lg {
+    border-top-left-radius: 100%;
+  }
+
+  .br-br_square\:lg {
+    border-bottom-right-radius: 0px;
+  }
+
+  .br-br_radius\:lg {
+    border-bottom-right-radius: 6px;
+  }
+
+  .br-br_round\:lg {
+    border-bottom-right-radius: 25px;
+  }
+
+  .br-br_circle\:lg {
+    border-bottom-right-radius: 100%;
+  }
+
+  .br-bl_square\:lg {
+    border-bottom-left-radius: 0px;
+  }
+
+  .br-bl_radius\:lg {
+    border-bottom-left-radius: 6px;
+  }
+
+  .br-bl_round\:lg {
+    border-bottom-left-radius: 25px;
+  }
+
+  .br-bl_circle\:lg {
+    border-bottom-left-radius: 100%;
+  }
+}
 .square,
 .square .switch-paddle,
 .square .switch-paddle::after {
@@ -14291,404 +15732,6 @@ Weight: -100
 
 Styleguide Interaction.States
 */
-/*
-List
-
-Description: A major part of the construction of the web and the content of the web are lists.
-
-Weight: 110
-
-Styleguide List
-*/
-/*
-  List Type
-
-  Change the type of a list.
-
-  .ul_none            -  none
-  .ul_bullet          -  bullet          
-  .ul_square          -  square      
-
-Markup:
-  <div class="font_normal font_1 p_3">
-    <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
-    <ul class="{{modifier_class}}">
-    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-    </ul>
-</div>
-
-Weight: 0
-
-  Styleguide List.Type
- */
-.ul_none {
-  margin: 0;
-  padding: 0;
-  list-style-type: none !important;
-}
-
-.ul_bullet {
-  list-style-type: disc !important;
-}
-
-.ul_circle {
-  list-style-type: circle !important;
-}
-
-.ul_square {
-  list-style-type: square !important;
-}
-
-.ul_lowercase {
-  list-style-type: lower-alpha !important;
-}
-
-.ul_uppercase {
-  list-style-type: upper-alpha !important;
-}
-
-/*
-Marker
-
-Markers classes change the styles and looks of the the list item maker.  Marker must attach to the parent UL or Ol and will not style the grand children.
-
-.marker_primary - primary colored list markers.
-.marker_secondary - secondary colored list markers.
-.marker_accent - accent colored list markers.
-.marker_alert - alert colored list markers.
-.marker_warning - warning colored list markers.
-.marker_success - success colored list markers.
-.marker_highlight - highlight colored list markers.
-.marker_black - black colored list markers.
-.marker_white - white colored list markers.
-
-Markup:
-<ul class="{{ modifier_class }}">
-    <li>List Item Text</li>
-    <li>List Item Text</li>
-    <li>List Item Text
-    <ul class="">
-        <li>List Item Grand Children</li>
-        <li>List Item Grand Children</li>
-    </ul>
-    </li>
-</ul>
-<ol class="{{ modifier_class }}">
-    <li>List Item Text</li>
-    <li>List Item Text</li>
-    <li>List Item Text</li>
-</ol>
-
-MarkupWrapperClasses: bg_black-2 p_5
-
-Weight:10
-
-Styleguide List.Marker
-*/
-.marker_primary > *::marker {
-  color: #015697;
-}
-
-.marker_secondary > *::marker {
-  color: #009db1;
-}
-
-.marker_success > *::marker {
-  color: #468847;
-}
-
-.marker_shade > *::marker {
-  color: #898989;
-}
-
-.marker_warning > *::marker {
-  color: #c67605;
-}
-
-.marker_alert > *::marker {
-  color: #953b39;
-}
-
-.marker_navigation > *::marker {
-  color: #2b58c0;
-}
-
-.marker_accent > *::marker {
-  color: #e17009;
-}
-
-.marker_info > *::marker {
-  color: #a3988c;
-}
-
-.marker_highlight > *::marker {
-  color: #f5ca4f;
-}
-
-.marker_acc > *::marker {
-  color: #004176;
-}
-
-.marker_black > *::marker {
-  color: #131212;
-}
-
-.marker_white > *::marker {
-  color: white;
-}
-
-/*
-Counters
-
-Add counters in front of collections without the need of an OL or UL for an advanced list type. Counters cannot be nested!
-
-Weight: 250
-
-Styleguide List.counters
-
-*/
-/* No styleguide reference. */
-/*
-	Counter Basics
-
-	Counter can be incremented by the `counter_increment` class.  
-
-	Markup:
-    <div class="counter_reset">
-        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment">:</span> Item, Object, or Section</div>
-        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment">:</span> Item, Object, or Section</div>
-        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment">:</span> Item, Object, or Section</div>
- 	</div>
-
-	 Weight: -100
-
-	Styleguide List.counters.basics
-
-*/
-.counter_reset {
-  counter-reset: a;
-}
-
-.counter_increment {
-  counter-increment: a;
-}
-
-.counter:before {
-  content: counter(a);
-}
-
-/*
-	Counter Sub
-
-	Counter Subs can be nested inside of counters
-
-	Markup:
-    <div class="counter_reset ">
-        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment counter_upper-alpha"></span> Item, Object, or Section</div>
-            <div class="counter-sub_reset">
-                <div class="m_3 p_2 p-l_4 bg_primary-3"><span class="font_bold counter counter_upper-alpha"></span>.<span class="font_bold counter-sub counter-sub_increment counter-sub_lower-alpha"></span> Sub Item</div>
-                <div class="m_3 p_2 p-l_4 bg_primary-3"><span class="font_bold counter counter_upper-alpha"></span>.<span class="font_bold counter-sub counter-sub_increment counter-sub_lower-alpha"></span> Sub Item</div>
-                <div class="m_3 p_2 p-l_4 bg_primary-3"><span class="font_bold counter counter_upper-alpha"></span>.<span class="font_bold counter-sub counter-sub_increment counter-sub_lower-alpha"></span> Sub Item</div>
-            </div>
-        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment counter_upper-alpha"></span> Item, Object, or Section</div>
-        <div class="bg_primary-2 p_3 m_3"><span class="font_bold counter counter_increment counter_upper-alpha"></span> Item, Object, or Section</div>
- 	</div>
-
-	Styleguide List.counters.sub counters
-
-*/
-.counter-sub_reset {
-  counter-reset: b;
-}
-
-.counter-sub_increment {
-  counter-increment: b;
-}
-
-/*
-	Counter Types
-
-	Create different types of list with the counter types
-
-	counter 										- Defualt Number Listing
-	counter_lower-alpha         - Lowercase Alphabetic Listing
-	counter_upper-alpha         - Uppercase Alphabetic Listing
-	counter_lower-roman         - Lowercase Roman Listing
-	counter_upper-roman         - Uppercase Roman Listing
-
-	Markup:
-	<div class="counter_reset">
-			<div class="m_3 p_3 bg_primary-2"><span class="{{modifier_class}} font_bold counter_increment"></span> Item, Object, or Section</div>
-			<div class="m_3 p_3 bg_primary-2"><span class="{{modifier_class}} font_bold counter_increment"></span> Item, Object, or Section</div>
-			<div class="m_3 p_3 bg_primary-2"><span class="{{modifier_class}} font_bold counter_increment"></span> Item, Object, or Section</div>
- 	</div>
-
-	Styleguide List.counters.types
-
-*/
-.counter_lower-alpha:before {
-  content: counter(a, lower-alpha);
-}
-
-.counter_upper-alpha:before {
-  content: counter(a, upper-alpha);
-}
-
-.counter_lower-roman:before {
-  content: counter(a, lower-roman);
-}
-
-.counter_upper-roman:before {
-  content: counter(a, upper-roman);
-}
-
-.counter-sub:before {
-  content: counter(b);
-}
-
-.counter-sub_lower-alpha:before {
-  content: counter(b, lower-alpha);
-}
-
-.counter-sub_upper-alpha:before {
-  content: counter(b, upper-alpha);
-}
-
-.counter-sub_lower-roman:before {
-  content: counter(b, lower-roman);
-}
-
-.counter-sub_upper-roman:before {
-  content: counter(b, upper-roman);
-}
-
-/*
-	Order Markers
-
-	Quickly decorate the counter with a circle.  Change the  bgground and font color with utility classes to acheive different effects.
-
-
-	Markup:
-    <div class="counter_reset">
-        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker bg_primary-2"></span> Item, Object, or Section</div>
-        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker font_10 br-tr_round br-br_round bg_highlight-2"></span> Item, Object, or Section</div>
-        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker bg_info-2"></span> Item, Object, or Section</div>
-        <div class="m_3 p_3"><span class="font_bold counter counter_increment order-marker bg_warning-2"></span> Item, Object, or Section</div>
-    </div>
-
-	Weight: 100
-
-	Styleguide List.counters.markers
-
-*/
-.order-marker {
-  box-sizing: border-box;
-  display: inline-block;
-  position: relative;
-  width: 1.5em;
-  height: 1.5em;
-  margin-right: 0;
-  margin-right: 0.5em;
-  margin-bottom: 0;
-  padding: 0.75em 0 0 0;
-  line-height: 0;
-  text-align: center;
-  vertical-align: top;
-}
-
-/*
-Inline Lists
-
-Inline Lists are for separated items on a single line.
-
-.ul_inline-comma            -  wrapping line of text that is separated by commas
-.ul_inline-semicolon          -  wrapping line of text that is separated by semicolons          
-.ul_inline-pipe          -  wrapping line of text that is separated by pipes     
-
-Markup:
-<div class="font_normal font_1 p_3">
-  <h3 class="font_2 font_bold c_shade_3 p-b_3">{{modifier_class}}</h3>
-  <ul class="{{modifier_class}}">
-    <li>Evelyn Watsica II</li>
-    <li>Linda Lang</li>
-    <li>Laurie Greenfelder</li>
-    <li>Katie Wiegand</li>
-    <li>Brittany Conn</li>
-  </ul>
-</div>
-<style>
-[class^="ul_inline"] > li:last-child::after {
-    content:"" !important;
-    padding-inline-start: 0 !important;
-    padding-inline-end: 0 !important;
-}
-</style>
-
-
-NOTE: The limitations of the styleguide around compound pseudo selector :not(:last-child):after means a trailing divider shows up in documentation but not in production applications. Added a workaround to hide the divider via the following style tag in the example.  This is not necessary in production applications.
-
-
-Weight: 1000
-
-Styleguide List.InlineType
-
-*/
-.ul_inline-comma,
-.ul_inline-semicolon,
-.ul_inline-pipe {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  justify-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.ul_inline-comma > li,
-.ul_inline-semicolon > li,
-.ul_inline-pipe > li {
-  flex: 0 1 auto;
-}
-.ul_inline-comma > li:not(:last-child)::after,
-.ul_inline-semicolon > li:not(:last-child)::after,
-.ul_inline-pipe > li:not(:last-child)::after {
-  -webkit-padding-start: 0.1em;
-          padding-inline-start: 0.1em;
-  -webkit-padding-end: 0.5em;
-          padding-inline-end: 0.5em;
-  opacity: 0.6;
-}
-.ul_inline-comma li.no-after,
-.ul_inline-semicolon li.no-after,
-.ul_inline-pipe li.no-after {
-  -webkit-padding-end: 0.5em;
-          padding-inline-end: 0.5em;
-}
-.ul_inline-comma li.no-after::after,
-.ul_inline-semicolon li.no-after::after,
-.ul_inline-pipe li.no-after::after {
-  display: none;
-}
-
-.ul_inline-comma > li:not(:last-child)::after {
-  content: ",";
-}
-
-.ul_inline-semicolon > li:not(:last-child)::after {
-  content: ";";
-}
-
-.ul_inline-pipe > li:not(:last-child)::after {
-  -webkit-padding-start: 0.5em;
-          padding-inline-start: 0.5em;
-  content: "|";
-}
-
 .display_none\:screen {
   display: none !important;
 }

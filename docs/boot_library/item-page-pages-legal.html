@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Video Library</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="kss-node" name="generator">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet">
+    <link href="kss-assets/vendor/prism.css" rel="stylesheet">
+    <link href="kss-assets/css/kss.css" rel="stylesheet">
+    <link rel="stylesheet" href="../icons/css/fontawesome.css"/>
+<link rel="stylesheet" href="../icons/css/solid.css"/>
+<link rel="stylesheet" href="../icons/css/regular.css"/>
+<link rel="stylesheet" href="../icons/css/brands.css"/>
+<link rel="stylesheet" href="../icons/css/light.css"/>
+<link rel="stylesheet" href="../icons/css/light.css"/>
+<link rel="stylesheet" href="../css/styleguide_override.css"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab:wght@300;400;500;700;800&display=swap"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Maven+Pro:wght@300;400;500;700;800&display=swap"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"/>
+<link rel="stylesheet" href="../css/color-code_social.css"/>
+<link rel="stylesheet" href="../css/color-code_credits.css"/>
+<link rel="stylesheet" href="../css/library_boot.css"/>
+<link rel="stylesheet" href="../css/library_uc.css"/>
+
+</head>
+
+<body class="kss-body texture_light font_ui">
+    <!-- header. -->
+    <section class="display_none block:md" id="topbody">
+        <aside
+            class="m_auto font_ui font_n1 display_none block:md bg_secondary-n2 br_solid br_black-4 p-y_3 br-b_1 shadow_emboss-light">
+            <ul class="ul_none flex flex_row:md flex_column justify_center ">
+                <li class="w_auto:md w_100 md p_2 self_center">
+                    <span
+                        class="block inline-block:md c_white-8 undecorated p_2 nowrap uppercase font_xbold">Brands</span>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../" id="home_nav">Arches</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../utility_classes/" id="utility_classes">Utility Classes</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_acc/" id="boot_acc">ACC</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_cardiosmart/" id="uc_cardiosmart">CardioSmart</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_cvquality/" id="boot_cvquality">CVQuality</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_virtual/" id="boot_virtual">Virtual</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center is-active active">
+                    <a class="
+                is-active active font_bold 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_library/" id="boot_library">Library</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_journal/" id="boot_journal">JACC</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../color_codes/" id="color_codes">Color Codes</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="https://acc-style.github.io/IconDictionary/" id="icon_dictionary">Icon Dictionary</a>
+                </li>
+                <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center">
+                    <a class=" block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap"
+                        href="https://acc-style.github.io/origami6/?path=/story/introduction--page" id="origami"><i
+                            class="fas fa-paper-plane p-r_3"></i><span>Project Origami</span></a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <header
+        class="bg_white shadow_overlap-light br_black-1 br_solid br_1 sticky t_0 display_none:md flex flex_inline z_5">
+        <h1 class="self_center m_3">
+            <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">Arches</a>: Online Video Library
+        </h1>
+        <a class="m-l_auto self_center m_3 kss-header__hamburger-trigger">
+            <div class="kss-header__hamburger"></div>
+        </a>
+    </header>
+    <!-- /header. -->
+    <!-- navigation. -->
+    <!-- /navigation. -->
+    <!-- documentation. -->
+    <header class="p_4 text_center">
+        <h1 class="font_display font_10 font_light display_none block:md">
+            <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">Arches:</a>Online Video Library
+        </h1>
+        <small class="font_0 m-t_n3 block m-b_4 font_xbold font_display display_none block:md">Multi Product Brand Style
+            System by the American College of Cardiology</small>
+    </header>
+    <section class="display_none block:md">
+        <aside class="m_auto font_copy display_none block:md sticky t_0">
+            <ul
+                class="ul_none flex flex_row:md flex_column flex_wrap justify_center br-t_1 br_solid br_black-4 p-y_3 br-b_1 ">
+                <li class=" w_auto:md w_100 p_2 self_center ">
+                    <a class="block inline-block:md undecorated  bg_primary-n1 h:bg_primary-n3 h:undecorated c_white p_3 br_radius nowrap"
+                        href="https://acc-style.github.io/Arches/index.html">
+                        <span class=""><i class="fas fa-chevron-left p-x_2"></i> Arches</span>
+                    </a>
+                </li>
+                <li class=" w_auto:md w_100 p_2 self_center ">
+                    <a class="block inline-block:md undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated c_black-8 h:c_black-9 p_3 br_radius nowrap"
+                        href="index.html">
+                        <span class=""><i class="fas fa-home p-x_2"></i></span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-designbase.html">
+                        <span class="">Design Base</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-html.html">
+                        <span class="">Basic HTML</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-bootstrap.html">
+                        <span class="">Bootstrap</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-data.html">
+                        <span class="">Data</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-navigation.html">
+                        <span class="">Navigation</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-page.html">
+                        <span class="">Page</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-program.html">
+                        <span class="">Program</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-recipes.html">
+                        <span class="">Recipes</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-structures.html">
+                        <span class="">Structures</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-sub.html">
+                        <span class="">Sub</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <section id="MobleNav"
+        class="bg_secondary-n3 display_none:lg font_0 font_ui kss-navigation overflow_auto p-b_2 p-x_3 scrollbar-mini shadow_overlap-bold z_4"
+        style="padding-top:70px">
+        <aside class="display_none:md flex flex_column-reverse">
+            <ul class="block flex flex_column ul_none w_100 ul_none lh_3" id="sitenav">
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../" id="home_nav">Arches</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../utility_classes/" id="utility_classes">Utility Classes</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_acc/" id="boot_acc">ACC</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_cardiosmart/" id="uc_cardiosmart">CardioSmart</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_cvquality/" id="boot_cvquality">CVQuality</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_virtual/" id="boot_virtual">Virtual</a>
+                </li>
+                <li class="flex_auto is-active active m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_library/" id="boot_library">Library</a>
+                </li>
+                <li class="flex_auto m-y_2 p_3 bg_black-5 br_radius p_3 shadow_emboss-light">
+                    <ul class="block flex flex_column ul_none w_100 ul_none lh_3">
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_black-5 relative br_radius p_2 m-b_1">
+                            <a class="  a:c_white c_white-8 h:c_white"
+                                href="index.html">
+                                <span class=""><i class="fas fa-home p-x_2"></i> Home</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-designbase.html">
+                                <span class="">Design Base</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-html.html">
+                                <span class="">Basic HTML</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-bootstrap.html">
+                                <span class="">Bootstrap</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-data.html">
+                                <span class="">Data</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-navigation.html">
+                                <span class="">Navigation</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-page.html">
+                                <span class="">Page</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-program.html">
+                                <span class="">Program</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-recipes.html">
+                                <span class="">Recipes</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-structures.html">
+                                <span class="">Structures</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-sub.html">
+                                <span class="">Sub</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_journal/" id="boot_journal">JACC</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../color_codes/" id="color_codes">Color Codes</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="https://acc-style.github.io/IconDictionary/" id="icon_dictionary">Icon Dictionary</a>
+                </li>
+                <li class="flex_auto m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="https://acc-style.github.io/origami6/?path=/story/introduction--page" id="origami"><i
+                            class="fas fa-paper-plane p-r_3"></i><span>Project Origami</span></a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <div class="m_auto p-x_4 ">
+        <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
+        <div class="flex flex_column flex_row:md gap-x_5 p-t_4 max-w_90 m_auto">
+            <main class="w_100 flex_auto">
+                <header
+                    class="bg_white kss-section kss-section--depth-3 br_radius shadow_overlap-light br_radius"
+                    id="kssref-page-pages-legal">
+                        <article class="kss-section__content relative">
+                            <div class="absolute t_0 r_4 flex flex_row gap-x_2 justify_end">
+                                <a class="c_white bg_black-5 c_white flex_none h:bg_black-7 inline-block p_2 shadow_overlap-light"
+                                    target="_blank" href="item-page-pages-legal.html"
+                                    title="pop out component into new tab">
+                                    <i class="fa-external-link fa-fw fas fa-fw fas"></i>
+                                </a>
+                            </div>
+                            <p class="kss-section__source font_n3"> Source: <span>dist/css/library_boot.css</span>, line
+                                <span>8815</span>
+                            </p>
+                            <a class="kss-section__permalink" href="#kssref-page-pages-legal">
+                                <h3 class="kss-section__item c_primary kss-section__item--depth-3">
+                                    <span class="kss-section__ref">6.2.2</span>
+                                    <span class="kss-section__name">Legal Roadblock</span>
+                                </h3>
+                            </a>
+                            <div class="kss-section__description reading-typography font-size_up overflow_auto ">
+                                <div class="font_n1">
+                                </div>
+                                <p>A roadblock page that forces users to log in to view and agree to the legal terms of the product.</p>
+
+                            </div>
+                        </article>
+                        <article class="kss-section__modifiers">
+                            <h1 class="kss-modifiers__heading"> Example 
+                            </h1>
+                            <div class="kss-modifiers__example">
+                                <div class="
+MarkupWrapperClasses:">
+                                    <div class="BODY_TAG-stand-in bg_black-4 w_100 p_4:md p_2 grid:md min-h_100">
+	<div class="bg_white-8 br_radius grid:md isolation_isolate items_center justify_center m_auto max-w_50 p_2 p_3:md page-wrapper shadow_bevel-light">
+		<div class="bg_black-2 br_radius">
+			<section class="reading-typography inset-level_down-1 bg_black-1 shadow_emboss-light br_solid br_1 br_black-2 br_radius p_5:lg p_4 flex flex_column gap_3">
+				<div>
+					<div class="relative z_0 br_radius overflow_hidden ">
+						<picture class="w_100 ">
+							<source class="w_100" srcset=" https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_600x225.jpg" media="(min-width: 400px)">
+							<img src="https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_400x300.jpg" class="w_100" alt="">
+						</picture>
+					</div>
+					<div class="bg_white br_1 br_black-3 br_radius br_solid inset-level_up-1 m-t_n5 m-x_5 p_4 relative shadow_bevel-light t_n5 text_center">
+						<h1 class="c_primary font_regular font_display">Legal Agreements</h1>
+						<p class="font-size_up font_bold"> Please agree to all the legal agreements. </p>
+					</div>
+				</div>
+				<div class="inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative isolation_isolate" id="TopAgreement1">
+					<div class="sticky t_0 r_0 z_1">
+						<div class="absolute r_4 t_0 flex flex_row flex_nowrap gap-x_3">
+							<!--  Helper Jump links -->
+							<a class="c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#TopAgreement1">
+								<span><i class="fas fa-arrow-up p-r_2"></i>top</span>
+							</a>
+							<a class="c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#Agreement1" >
+								<span><i class="fas fa-arrow-down p-r_2"></i>scroll down</span>
+							</a>
+							<!--  Helper Jump links -->
+						</div>
+					</div>
+					<div class="bg_white br-b_1 br_primary br_solid m-t_n5 p-t_0 relative z_2" >
+						<h2>Method of Participation and Claiming Credit</h2>
+						<p class="font-size_up"> You may claim credit for this Product up to the maximum credit amounts noted above based on the number of hours You spend watching presentations. You may re-enter the Product as many times as You wish, but You can claim credit only once and must claim credit by 11:59 p.m. March 1, 2023. </p>
+					</div>
+					<main class="z_0 isolation_isolate">
+						<h3>To receive credit for this Product, You must:</h3>
+						<ol>
+							<li>Purchase the Product</li>
+							<li> Read the Credit Information when You first enter the Product. </li>
+							<li>View the presentations of your choosing.</li>
+							<li> Click credits from the left navigation bar after You have completed viewing all presentations for which You intend to claim credit. </li>
+							<li>Complete the evaluation.</li>
+							<li> Enter the number of credits You wish to claim. Credits claimed should reflect the total number of hours that You spent watching presentations. </li>
+							<li> If you are an ABIM or ABP Diplomate, You will need to enter your ABIM or ABP ID and Date of Birth to claim MOC points. </li>
+							<li> Generate and print your certificate. If You are an ABIM or ABP Diplomate and claimed MOC points, your completion information will be transmitted to the ACCME/ABIM/ABP on your behalf. </li>
+						</ol>
+					</main>
+					<footer id="Agreement1">
+						<a href="" class="btn btn-success c_white h:undecorated float_right"><i class="fas fa-check"></i> I agree</a>
+					</footer>
+				</div>
+				<div class="inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative isolation_isolate" id="TopAgreement1">
+					<div class="sticky t_0 r_0 z_1">
+						<div class="absolute r_4 t_0 flex flex_row flex_nowrap gap-x_3">
+							<!--  Helper Jump links -->
+							<a class="c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#TopAgreement1">
+								<span><i class="fas fa-arrow-up p-r_2"></i>top</span>
+							</a>
+							<a class="c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3" href="#Agreement1" >
+								<span><i class="fas fa-arrow-down p-r_2"></i>scroll down</span>
+							</a>
+							<!--  Helper Jump links -->
+						</div>
+					</div>
+					<div class="bg_white br-b_1 br_primary br_solid m-t_n5 p-t_0 relative z_2" >
+						<h2>Cookies and Privacy</h2>
+						<p class="font-size_up"> Iure ut ratione magnam similique delectus deserunt occaecati.</p>
+					</div>
+					<main class="z_0 isolation_isolate">
+						<p > Alias nulla qui eos fuga eos eligendi aut tempora. Nisi dicta aut non totam illo consequuntur. Aut aut voluptas est aspernatur placeat distinctio similique dolore laboriosam. Iure velit doloremque dolorum maiores praesentium. Animi exercitationem reiciendis incidunt rerum. Quam consequatur maiores officiis sit enim quidem.Libero dolores aspernatur consequatur labore consequatur sint sint atque. Quo commodi quod repellendus laborum natus amet. Enim aliquam sunt. Nesciunt repellat provident mollitia. Quis nemo modi. Unde ut nisi. Laboriosam et natus saepe a enim aut in voluptates quia. Sed libero alias voluptatum soluta accusantium nesciunt commodi. Eaque cumque quos neque cumque maiores. </p>
+					</main>
+					<footer id="Agreement1">
+						<a href="" class="btn btn-secondary c_white h:undecorated float_right">I agree</a>
+					</footer>
+				</div>
+				<div class="inset-level_up-1 bg_white br_radius relative p_4">
+					<h4 class="font_bold"> You can continue when all legal terms are agreed to. </h4>
+					<a href="" class="btn btn-disabled disabled block">Continue</a>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+                                </div>
+                            </div>
+                        </article>
+                        <section
+                            class="relative  br-t_1 br_solid br_black-2 bg_black-1 shadow_n1 texture_light">
+                            <main class="kss-section__markup overflow_scroll scrollbar-mini collapse transition_3"
+                                id="collapse-page-pages-legal">
+                                <pre><code class="language-markup"  id="code-page-pages-legal" value='&lt;div class&#x3D;&quot;BODY_TAG-stand-in bg_black-4 w_100 p_4:md p_2 grid:md min-h_100&quot;&gt;
+	&lt;div class&#x3D;&quot;bg_white-8 br_radius grid:md isolation_isolate items_center justify_center m_auto max-w_50 p_2 p_3:md page-wrapper shadow_bevel-light&quot;&gt;
+		&lt;div class&#x3D;&quot;bg_black-2 br_radius&quot;&gt;
+			&lt;section class&#x3D;&quot;reading-typography inset-level_down-1 bg_black-1 shadow_emboss-light br_solid br_1 br_black-2 br_radius p_5:lg p_4 flex flex_column gap_3&quot;&gt;
+				&lt;div&gt;
+					&lt;div class&#x3D;&quot;relative z_0 br_radius overflow_hidden &quot;&gt;
+						&lt;picture class&#x3D;&quot;w_100 &quot;&gt;
+							&lt;source class&#x3D;&quot;w_100&quot; srcset&#x3D;&quot; https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_600x225.jpg&quot; media&#x3D;&quot;(min-width: 400px)&quot;&gt;
+							&lt;img src&#x3D;&quot;https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_400x300.jpg&quot; class&#x3D;&quot;w_100&quot; alt&#x3D;&quot;&quot;&gt;
+						&lt;/picture&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;bg_white br_1 br_black-3 br_radius br_solid inset-level_up-1 m-t_n5 m-x_5 p_4 relative shadow_bevel-light t_n5 text_center&quot;&gt;
+						&lt;h1 class&#x3D;&quot;c_primary font_regular font_display&quot;&gt;Legal Agreements&lt;/h1&gt;
+						&lt;p class&#x3D;&quot;font-size_up font_bold&quot;&gt; Please agree to all the legal agreements. &lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative isolation_isolate&quot; id&#x3D;&quot;TopAgreement1&quot;&gt;
+					&lt;div class&#x3D;&quot;sticky t_0 r_0 z_1&quot;&gt;
+						&lt;div class&#x3D;&quot;absolute r_4 t_0 flex flex_row flex_nowrap gap-x_3&quot;&gt;
+							&lt;!--  Helper Jump links --&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#TopAgreement1&quot;&gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-up p-r_2&quot;&gt;&lt;/i&gt;top&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#Agreement1&quot; &gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-down p-r_2&quot;&gt;&lt;/i&gt;scroll down&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;!--  Helper Jump links --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;bg_white br-b_1 br_primary br_solid m-t_n5 p-t_0 relative z_2&quot; &gt;
+						&lt;h2&gt;Method of Participation and Claiming Credit&lt;/h2&gt;
+						&lt;p class&#x3D;&quot;font-size_up&quot;&gt; You may claim credit for this Product up to the maximum credit amounts noted above based on the number of hours You spend watching presentations. You may re-enter the Product as many times as You wish, but You can claim credit only once and must claim credit by 11:59 p.m. March 1, 2023. &lt;/p&gt;
+					&lt;/div&gt;
+					&lt;main class&#x3D;&quot;z_0 isolation_isolate&quot;&gt;
+						&lt;h3&gt;To receive credit for this Product, You must:&lt;/h3&gt;
+						&lt;ol&gt;
+							&lt;li&gt;Purchase the Product&lt;/li&gt;
+							&lt;li&gt; Read the Credit Information when You first enter the Product. &lt;/li&gt;
+							&lt;li&gt;View the presentations of your choosing.&lt;/li&gt;
+							&lt;li&gt; Click credits from the left navigation bar after You have completed viewing all presentations for which You intend to claim credit. &lt;/li&gt;
+							&lt;li&gt;Complete the evaluation.&lt;/li&gt;
+							&lt;li&gt; Enter the number of credits You wish to claim. Credits claimed should reflect the total number of hours that You spent watching presentations. &lt;/li&gt;
+							&lt;li&gt; If you are an ABIM or ABP Diplomate, You will need to enter your ABIM or ABP ID and Date of Birth to claim MOC points. &lt;/li&gt;
+							&lt;li&gt; Generate and print your certificate. If You are an ABIM or ABP Diplomate and claimed MOC points, your completion information will be transmitted to the ACCME/ABIM/ABP on your behalf. &lt;/li&gt;
+						&lt;/ol&gt;
+					&lt;/main&gt;
+					&lt;footer id&#x3D;&quot;Agreement1&quot;&gt;
+						&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-success c_white h:undecorated float_right&quot;&gt;&lt;i class&#x3D;&quot;fas fa-check&quot;&gt;&lt;/i&gt; I agree&lt;/a&gt;
+					&lt;/footer&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative isolation_isolate&quot; id&#x3D;&quot;TopAgreement1&quot;&gt;
+					&lt;div class&#x3D;&quot;sticky t_0 r_0 z_1&quot;&gt;
+						&lt;div class&#x3D;&quot;absolute r_4 t_0 flex flex_row flex_nowrap gap-x_3&quot;&gt;
+							&lt;!--  Helper Jump links --&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#TopAgreement1&quot;&gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-up p-r_2&quot;&gt;&lt;/i&gt;top&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#Agreement1&quot; &gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-down p-r_2&quot;&gt;&lt;/i&gt;scroll down&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;!--  Helper Jump links --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;bg_white br-b_1 br_primary br_solid m-t_n5 p-t_0 relative z_2&quot; &gt;
+						&lt;h2&gt;Cookies and Privacy&lt;/h2&gt;
+						&lt;p class&#x3D;&quot;font-size_up&quot;&gt; Iure ut ratione magnam similique delectus deserunt occaecati.&lt;/p&gt;
+					&lt;/div&gt;
+					&lt;main class&#x3D;&quot;z_0 isolation_isolate&quot;&gt;
+						&lt;p &gt; Alias nulla qui eos fuga eos eligendi aut tempora. Nisi dicta aut non totam illo consequuntur. Aut aut voluptas est aspernatur placeat distinctio similique dolore laboriosam. Iure velit doloremque dolorum maiores praesentium. Animi exercitationem reiciendis incidunt rerum. Quam consequatur maiores officiis sit enim quidem.Libero dolores aspernatur consequatur labore consequatur sint sint atque. Quo commodi quod repellendus laborum natus amet. Enim aliquam sunt. Nesciunt repellat provident mollitia. Quis nemo modi. Unde ut nisi. Laboriosam et natus saepe a enim aut in voluptates quia. Sed libero alias voluptatum soluta accusantium nesciunt commodi. Eaque cumque quos neque cumque maiores. &lt;/p&gt;
+					&lt;/main&gt;
+					&lt;footer id&#x3D;&quot;Agreement1&quot;&gt;
+						&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-secondary c_white h:undecorated float_right&quot;&gt;I agree&lt;/a&gt;
+					&lt;/footer&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;inset-level_up-1 bg_white br_radius relative p_4&quot;&gt;
+					&lt;h4 class&#x3D;&quot;font_bold&quot;&gt; You can continue when all legal terms are agreed to. &lt;/h4&gt;
+					&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-disabled disabled block&quot;&gt;Continue&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/section&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;'>&lt;div class&#x3D;&quot;BODY_TAG-stand-in bg_black-4 w_100 p_4:md p_2 grid:md min-h_100&quot;&gt;
+	&lt;div class&#x3D;&quot;bg_white-8 br_radius grid:md isolation_isolate items_center justify_center m_auto max-w_50 p_2 p_3:md page-wrapper shadow_bevel-light&quot;&gt;
+		&lt;div class&#x3D;&quot;bg_black-2 br_radius&quot;&gt;
+			&lt;section class&#x3D;&quot;reading-typography inset-level_down-1 bg_black-1 shadow_emboss-light br_solid br_1 br_black-2 br_radius p_5:lg p_4 flex flex_column gap_3&quot;&gt;
+				&lt;div&gt;
+					&lt;div class&#x3D;&quot;relative z_0 br_radius overflow_hidden &quot;&gt;
+						&lt;picture class&#x3D;&quot;w_100 &quot;&gt;
+							&lt;source class&#x3D;&quot;w_100&quot; srcset&#x3D;&quot; https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_600x225.jpg&quot; media&#x3D;&quot;(min-width: 400px)&quot;&gt;
+							&lt;img src&#x3D;&quot;https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_400x300.jpg&quot; class&#x3D;&quot;w_100&quot; alt&#x3D;&quot;&quot;&gt;
+						&lt;/picture&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;bg_white br_1 br_black-3 br_radius br_solid inset-level_up-1 m-t_n5 m-x_5 p_4 relative shadow_bevel-light t_n5 text_center&quot;&gt;
+						&lt;h1 class&#x3D;&quot;c_primary font_regular font_display&quot;&gt;Legal Agreements&lt;/h1&gt;
+						&lt;p class&#x3D;&quot;font-size_up font_bold&quot;&gt; Please agree to all the legal agreements. &lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative isolation_isolate&quot; id&#x3D;&quot;TopAgreement1&quot;&gt;
+					&lt;div class&#x3D;&quot;sticky t_0 r_0 z_1&quot;&gt;
+						&lt;div class&#x3D;&quot;absolute r_4 t_0 flex flex_row flex_nowrap gap-x_3&quot;&gt;
+							&lt;!--  Helper Jump links --&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#TopAgreement1&quot;&gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-up p-r_2&quot;&gt;&lt;/i&gt;top&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#Agreement1&quot; &gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-down p-r_2&quot;&gt;&lt;/i&gt;scroll down&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;!--  Helper Jump links --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;bg_white br-b_1 br_primary br_solid m-t_n5 p-t_0 relative z_2&quot; &gt;
+						&lt;h2&gt;Method of Participation and Claiming Credit&lt;/h2&gt;
+						&lt;p class&#x3D;&quot;font-size_up&quot;&gt; You may claim credit for this Product up to the maximum credit amounts noted above based on the number of hours You spend watching presentations. You may re-enter the Product as many times as You wish, but You can claim credit only once and must claim credit by 11:59 p.m. March 1, 2023. &lt;/p&gt;
+					&lt;/div&gt;
+					&lt;main class&#x3D;&quot;z_0 isolation_isolate&quot;&gt;
+						&lt;h3&gt;To receive credit for this Product, You must:&lt;/h3&gt;
+						&lt;ol&gt;
+							&lt;li&gt;Purchase the Product&lt;/li&gt;
+							&lt;li&gt; Read the Credit Information when You first enter the Product. &lt;/li&gt;
+							&lt;li&gt;View the presentations of your choosing.&lt;/li&gt;
+							&lt;li&gt; Click credits from the left navigation bar after You have completed viewing all presentations for which You intend to claim credit. &lt;/li&gt;
+							&lt;li&gt;Complete the evaluation.&lt;/li&gt;
+							&lt;li&gt; Enter the number of credits You wish to claim. Credits claimed should reflect the total number of hours that You spent watching presentations. &lt;/li&gt;
+							&lt;li&gt; If you are an ABIM or ABP Diplomate, You will need to enter your ABIM or ABP ID and Date of Birth to claim MOC points. &lt;/li&gt;
+							&lt;li&gt; Generate and print your certificate. If You are an ABIM or ABP Diplomate and claimed MOC points, your completion information will be transmitted to the ACCME/ABIM/ABP on your behalf. &lt;/li&gt;
+						&lt;/ol&gt;
+					&lt;/main&gt;
+					&lt;footer id&#x3D;&quot;Agreement1&quot;&gt;
+						&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-success c_white h:undecorated float_right&quot;&gt;&lt;i class&#x3D;&quot;fas fa-check&quot;&gt;&lt;/i&gt; I agree&lt;/a&gt;
+					&lt;/footer&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative isolation_isolate&quot; id&#x3D;&quot;TopAgreement1&quot;&gt;
+					&lt;div class&#x3D;&quot;sticky t_0 r_0 z_1&quot;&gt;
+						&lt;div class&#x3D;&quot;absolute r_4 t_0 flex flex_row flex_nowrap gap-x_3&quot;&gt;
+							&lt;!--  Helper Jump links --&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#TopAgreement1&quot;&gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-up p-r_2&quot;&gt;&lt;/i&gt;top&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#Agreement1&quot; &gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-down p-r_2&quot;&gt;&lt;/i&gt;scroll down&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;!--  Helper Jump links --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;bg_white br-b_1 br_primary br_solid m-t_n5 p-t_0 relative z_2&quot; &gt;
+						&lt;h2&gt;Cookies and Privacy&lt;/h2&gt;
+						&lt;p class&#x3D;&quot;font-size_up&quot;&gt; Iure ut ratione magnam similique delectus deserunt occaecati.&lt;/p&gt;
+					&lt;/div&gt;
+					&lt;main class&#x3D;&quot;z_0 isolation_isolate&quot;&gt;
+						&lt;p &gt; Alias nulla qui eos fuga eos eligendi aut tempora. Nisi dicta aut non totam illo consequuntur. Aut aut voluptas est aspernatur placeat distinctio similique dolore laboriosam. Iure velit doloremque dolorum maiores praesentium. Animi exercitationem reiciendis incidunt rerum. Quam consequatur maiores officiis sit enim quidem.Libero dolores aspernatur consequatur labore consequatur sint sint atque. Quo commodi quod repellendus laborum natus amet. Enim aliquam sunt. Nesciunt repellat provident mollitia. Quis nemo modi. Unde ut nisi. Laboriosam et natus saepe a enim aut in voluptates quia. Sed libero alias voluptatum soluta accusantium nesciunt commodi. Eaque cumque quos neque cumque maiores. &lt;/p&gt;
+					&lt;/main&gt;
+					&lt;footer id&#x3D;&quot;Agreement1&quot;&gt;
+						&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-secondary c_white h:undecorated float_right&quot;&gt;I agree&lt;/a&gt;
+					&lt;/footer&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;inset-level_up-1 bg_white br_radius relative p_4&quot;&gt;
+					&lt;h4 class&#x3D;&quot;font_bold&quot;&gt; You can continue when all legal terms are agreed to. &lt;/h4&gt;
+					&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-disabled disabled block&quot;&gt;Continue&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/section&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                <textarea class="display_none text-input html-code-input" type="text" name=""
+                                    id="input-page-pages-legal">&lt;div class&#x3D;&quot;BODY_TAG-stand-in bg_black-4 w_100 p_4:md p_2 grid:md min-h_100&quot;&gt;
+	&lt;div class&#x3D;&quot;bg_white-8 br_radius grid:md isolation_isolate items_center justify_center m_auto max-w_50 p_2 p_3:md page-wrapper shadow_bevel-light&quot;&gt;
+		&lt;div class&#x3D;&quot;bg_black-2 br_radius&quot;&gt;
+			&lt;section class&#x3D;&quot;reading-typography inset-level_down-1 bg_black-1 shadow_emboss-light br_solid br_1 br_black-2 br_radius p_5:lg p_4 flex flex_column gap_3&quot;&gt;
+				&lt;div&gt;
+					&lt;div class&#x3D;&quot;relative z_0 br_radius overflow_hidden &quot;&gt;
+						&lt;picture class&#x3D;&quot;w_100 &quot;&gt;
+							&lt;source class&#x3D;&quot;w_100&quot; srcset&#x3D;&quot; https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_600x225.jpg&quot; media&#x3D;&quot;(min-width: 400px)&quot;&gt;
+							&lt;img src&#x3D;&quot;https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_400x300.jpg&quot; class&#x3D;&quot;w_100&quot; alt&#x3D;&quot;&quot;&gt;
+						&lt;/picture&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;bg_white br_1 br_black-3 br_radius br_solid inset-level_up-1 m-t_n5 m-x_5 p_4 relative shadow_bevel-light t_n5 text_center&quot;&gt;
+						&lt;h1 class&#x3D;&quot;c_primary font_regular font_display&quot;&gt;Legal Agreements&lt;/h1&gt;
+						&lt;p class&#x3D;&quot;font-size_up font_bold&quot;&gt; Please agree to all the legal agreements. &lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative isolation_isolate&quot; id&#x3D;&quot;TopAgreement1&quot;&gt;
+					&lt;div class&#x3D;&quot;sticky t_0 r_0 z_1&quot;&gt;
+						&lt;div class&#x3D;&quot;absolute r_4 t_0 flex flex_row flex_nowrap gap-x_3&quot;&gt;
+							&lt;!--  Helper Jump links --&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#TopAgreement1&quot;&gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-up p-r_2&quot;&gt;&lt;/i&gt;top&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#Agreement1&quot; &gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-down p-r_2&quot;&gt;&lt;/i&gt;scroll down&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;!--  Helper Jump links --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;bg_white br-b_1 br_primary br_solid m-t_n5 p-t_0 relative z_2&quot; &gt;
+						&lt;h2&gt;Method of Participation and Claiming Credit&lt;/h2&gt;
+						&lt;p class&#x3D;&quot;font-size_up&quot;&gt; You may claim credit for this Product up to the maximum credit amounts noted above based on the number of hours You spend watching presentations. You may re-enter the Product as many times as You wish, but You can claim credit only once and must claim credit by 11:59 p.m. March 1, 2023. &lt;/p&gt;
+					&lt;/div&gt;
+					&lt;main class&#x3D;&quot;z_0 isolation_isolate&quot;&gt;
+						&lt;h3&gt;To receive credit for this Product, You must:&lt;/h3&gt;
+						&lt;ol&gt;
+							&lt;li&gt;Purchase the Product&lt;/li&gt;
+							&lt;li&gt; Read the Credit Information when You first enter the Product. &lt;/li&gt;
+							&lt;li&gt;View the presentations of your choosing.&lt;/li&gt;
+							&lt;li&gt; Click credits from the left navigation bar after You have completed viewing all presentations for which You intend to claim credit. &lt;/li&gt;
+							&lt;li&gt;Complete the evaluation.&lt;/li&gt;
+							&lt;li&gt; Enter the number of credits You wish to claim. Credits claimed should reflect the total number of hours that You spent watching presentations. &lt;/li&gt;
+							&lt;li&gt; If you are an ABIM or ABP Diplomate, You will need to enter your ABIM or ABP ID and Date of Birth to claim MOC points. &lt;/li&gt;
+							&lt;li&gt; Generate and print your certificate. If You are an ABIM or ABP Diplomate and claimed MOC points, your completion information will be transmitted to the ACCME/ABIM/ABP on your behalf. &lt;/li&gt;
+						&lt;/ol&gt;
+					&lt;/main&gt;
+					&lt;footer id&#x3D;&quot;Agreement1&quot;&gt;
+						&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-success c_white h:undecorated float_right&quot;&gt;&lt;i class&#x3D;&quot;fas fa-check&quot;&gt;&lt;/i&gt; I agree&lt;/a&gt;
+					&lt;/footer&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative isolation_isolate&quot; id&#x3D;&quot;TopAgreement1&quot;&gt;
+					&lt;div class&#x3D;&quot;sticky t_0 r_0 z_1&quot;&gt;
+						&lt;div class&#x3D;&quot;absolute r_4 t_0 flex flex_row flex_nowrap gap-x_3&quot;&gt;
+							&lt;!--  Helper Jump links --&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#TopAgreement1&quot;&gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-up p-r_2&quot;&gt;&lt;/i&gt;top&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;a class&#x3D;&quot;c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3&quot; href&#x3D;&quot;#Agreement1&quot; &gt;
+								&lt;span&gt;&lt;i class&#x3D;&quot;fas fa-arrow-down p-r_2&quot;&gt;&lt;/i&gt;scroll down&lt;/span&gt;
+							&lt;/a&gt;
+							&lt;!--  Helper Jump links --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;bg_white br-b_1 br_primary br_solid m-t_n5 p-t_0 relative z_2&quot; &gt;
+						&lt;h2&gt;Cookies and Privacy&lt;/h2&gt;
+						&lt;p class&#x3D;&quot;font-size_up&quot;&gt; Iure ut ratione magnam similique delectus deserunt occaecati.&lt;/p&gt;
+					&lt;/div&gt;
+					&lt;main class&#x3D;&quot;z_0 isolation_isolate&quot;&gt;
+						&lt;p &gt; Alias nulla qui eos fuga eos eligendi aut tempora. Nisi dicta aut non totam illo consequuntur. Aut aut voluptas est aspernatur placeat distinctio similique dolore laboriosam. Iure velit doloremque dolorum maiores praesentium. Animi exercitationem reiciendis incidunt rerum. Quam consequatur maiores officiis sit enim quidem.Libero dolores aspernatur consequatur labore consequatur sint sint atque. Quo commodi quod repellendus laborum natus amet. Enim aliquam sunt. Nesciunt repellat provident mollitia. Quis nemo modi. Unde ut nisi. Laboriosam et natus saepe a enim aut in voluptates quia. Sed libero alias voluptatum soluta accusantium nesciunt commodi. Eaque cumque quos neque cumque maiores. &lt;/p&gt;
+					&lt;/main&gt;
+					&lt;footer id&#x3D;&quot;Agreement1&quot;&gt;
+						&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-secondary c_white h:undecorated float_right&quot;&gt;I agree&lt;/a&gt;
+					&lt;/footer&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;inset-level_up-1 bg_white br_radius relative p_4&quot;&gt;
+					&lt;h4 class&#x3D;&quot;font_bold&quot;&gt; You can continue when all legal terms are agreed to. &lt;/h4&gt;
+					&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-disabled disabled block&quot;&gt;Continue&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/section&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</textarea>
+                            </main>
+                            <header class="flex_row flex shadow_n1 br-br_radius br-bl_radius">
+                                <div class="flex flex_row flex_auto collapsed h:bg_black-7 br-bl_radius c_black-8 h:c_white"
+                                    aria-expanded="false" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse-page-pages-legal"
+                                    aria-controls="#collapse-page-pages-legal">
+                                    <div class="flex_none p_2 font_1">
+                                        <i class="a:rotation fa-fw fa-chevron-up fas self_center text_center"></i>
+                                    </div>
+                                    <div class="flex_auto flex flex_row">
+                                        <h4 class="font_0 font_bold flex_auto p-l_2 self_center m_0 text_left">Code
+                                            Sample</h4>
+                                    </div>
+                                </div>
+                                <a class="bg_primary br_1 br_black-3 br_solid c_white flex_none font_medium font_ui h:bg_primary-n2 h:undecorated m-l_auto p-x_3 p-y_2 br-br_radius"
+                                    onclick="CopyCode( 'input-page-pages-legal')"><i class="fas fa-copy"></i> Copy
+                                    Code</a>
+                            </header>
+                        </section>
+                </header>
+            </main>
+        </div>
+        </section>
+        <div id="CopyDOM"></div>
+        <!-- /documentation. -->
+        <!-- scripts. -->
+        <script src="kss-assets/vendor/jquery.js"></script>
+        <script src="kss-assets/vendor/prism.js"></script>
+        <script src="kss-assets/js/kss.js"></script>
+        <script>
+            var CopyCode = function ($id) {
+                console.log('event triggered with ' + $id);
+                var codeToBeCopied = document.getElementById($id).innerText;
+                var emptyArea =  document.createElement('TEXTAREA');
+                emptyArea.innerHTML = codeToBeCopied;
+                const parentElement = document.getElementById('CopyDOM');
+                parentElement.appendChild(emptyArea);
+                emptyArea.select();
+                document.execCommand('copy');
+                parentElement.removeChild(emptyArea);
+            };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/toggleActive.js"></script>
+
+        <!-- /scripts. -->
+</body>
+
+</html>

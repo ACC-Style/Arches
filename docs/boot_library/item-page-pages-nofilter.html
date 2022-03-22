@@ -378,11 +378,11 @@
                                 </a>
                             </div>
                             <p class="kss-section__source font_n3"> Source: <span>dist/css/library_boot.css</span>, line
-                                <span>8701</span>
+                                <span>8758</span>
                             </p>
                             <a class="kss-section__permalink" href="#kssref-page-pages-nofilter">
                                 <h3 class="kss-section__item c_primary kss-section__item--depth-3">
-                                    <span class="kss-section__ref">6.2.2</span>
+                                    <span class="kss-section__ref">6.2.3</span>
                                     <span class="kss-section__name">Content Page</span>
                                 </h3>
                             </a>
@@ -476,7 +476,47 @@
 				<div class="flex_auto w_50:lg br-r_1 br_dotted:lg br_none br_primary-3 reading-typography font-size_up p_5:lg p_4">
 					<h1 class="font_8">	Claim Credit Based on Total Watch Time<sup>*</sup></h1>
 					<p> We’re keeping track of the time you spend watching videos to make it easier for you to claim credit. The chart below shows total watch time by credit type. ​ </p>
-					<h2 class="">You have watched a lot of this education.</h2>
+					<section class="br_radius overflow_hidden relative z_1" id="CreditChartContainer" style="width:100%; height:500px;">
+					</section>
+					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<script>
+					    document.addEventListener("DOMContentLoaded", function(event) {
+					    google.charts.load('current', {'packages':['corechart']});
+					    google.charts.setOnLoadCallback(drawChart);
+					    function drawChart() {
+					        var data = google.visualization.arrayToDataTable([
+					            ['Credit Type', 'Watched Hours' ,{ role: 'style' }],
+					            ['AAPA', 1.45, '#e8c536' ],
+					            ['available', 28.55, '#a4a4a4' ],
+					            ['', null, '' ],
+					            ['ABP', 0, "#007a5b"],
+					            ['available', 100, '#a4a4a4' ],
+					            ['', null, '' ],
+					            ['CME', 8.94, '#00a15b'],
+					            ['available', 91.06, '#a4a4a4' ],
+					            ['', null, '' ],
+					            ['CNE', 10.49, '#198dae'],
+					            ['available', 89.51, '#a4a4a4' ],
+					            ['', null, '' ],
+					            ['MOC', 19.30, '#9a1267'],
+					            ['available', 80.70, '#a4a4a4' ],
+					            ['', null, '' ],
+					            ]);
+					        var view = new google.visualization.DataView(data);
+					        view.setColumns([0, 1,{ calc: "stringify",  sourceColumn: 1, type: "string", role: "annotation" },2]);
+					        var options = {
+					            title: "Claimable Credits based on Watched Hours of Education",
+					            bar: {groupWidth: "70%"},
+					            legend: { position: "none" }
+					        };
+					        var chart =      new google.visualization.BarChart(document.getElementById("CreditChartContainer"));
+					        chart.draw(view, options);
+					    }
+					    const element = document.querySelectorAll('#CreditChartContainer');
+					    const observer = new ResizeObserver( element[0],()=>{ drawChart();
+					    });
+					});
+					</script>					<h2 class="">You have watched a lot of this education.</h2>
 					<p class="font-size_down c_primary-n2">
 						<sup>*</sup>claimed credits and watched video can take up to 24 hours to reflect in your profile.
 					</p>
@@ -488,7 +528,7 @@
 							<p> Credit claiming will be available beginning December 12, 2021, at noon ET. Credit must be claimed by March 12, 2022, at 11:59 p.m. ET. You may only complete the evaluation and claim credit once; therefore, please do not proceed until you have finished your participation in the certified content for which you wish to claim credit. </p>
 						</div>
 						<div class="m-t_4 c_black br_warning-n2 c_warning-n3  br_round text_center bg_warning-5 inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_2 p_3:md p_4:lg">
-							<h3 class="c_warning-n4 font_bold font_4 br-b_2 br_solid br_warning p-y_3 p-x_5:lg p-x_4">
+							<h3 class="c_warning-n4 font_bold font_4 br-b_2 br_solid br_warning p-y_3 p-x_5:lg p-x_4 m_0">
 								<i class="fas fa-exclamation-triangle"></i> Caution <i class="fas fa-exclamation-triangle"></i>
 							</h3>
 							<p class="font-size_up m-t_4"> You can only claim once so please watch as much as you want before claiming. </p>
@@ -607,7 +647,47 @@
 				&lt;div class&#x3D;&quot;flex_auto w_50:lg br-r_1 br_dotted:lg br_none br_primary-3 reading-typography font-size_up p_5:lg p_4&quot;&gt;
 					&lt;h1 class&#x3D;&quot;font_8&quot;&gt;	Claim Credit Based on Total Watch Time&lt;sup&gt;*&lt;/sup&gt;&lt;/h1&gt;
 					&lt;p&gt; We’re keeping track of the time you spend watching videos to make it easier for you to claim credit. The chart below shows total watch time by credit type. ​ &lt;/p&gt;
-					&lt;h2 class&#x3D;&quot;&quot;&gt;You have watched a lot of this education.&lt;/h2&gt;
+					&lt;section class&#x3D;&quot;br_radius overflow_hidden relative z_1&quot; id&#x3D;&quot;CreditChartContainer&quot; style&#x3D;&quot;width:100%; height:500px;&quot;&gt;
+					&lt;/section&gt;
+					&lt;script type&#x3D;&quot;text/javascript&quot; src&#x3D;&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
+					&lt;script&gt;
+					    document.addEventListener(&quot;DOMContentLoaded&quot;, function(event) {
+					    google.charts.load(&#x27;current&#x27;, {&#x27;packages&#x27;:[&#x27;corechart&#x27;]});
+					    google.charts.setOnLoadCallback(drawChart);
+					    function drawChart() {
+					        var data &#x3D; google.visualization.arrayToDataTable([
+					            [&#x27;Credit Type&#x27;, &#x27;Watched Hours&#x27; ,{ role: &#x27;style&#x27; }],
+					            [&#x27;AAPA&#x27;, 1.45, &#x27;#e8c536&#x27; ],
+					            [&#x27;available&#x27;, 28.55, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;ABP&#x27;, 0, &quot;#007a5b&quot;],
+					            [&#x27;available&#x27;, 100, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;CME&#x27;, 8.94, &#x27;#00a15b&#x27;],
+					            [&#x27;available&#x27;, 91.06, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;CNE&#x27;, 10.49, &#x27;#198dae&#x27;],
+					            [&#x27;available&#x27;, 89.51, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;MOC&#x27;, 19.30, &#x27;#9a1267&#x27;],
+					            [&#x27;available&#x27;, 80.70, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            ]);
+					        var view &#x3D; new google.visualization.DataView(data);
+					        view.setColumns([0, 1,{ calc: &quot;stringify&quot;,  sourceColumn: 1, type: &quot;string&quot;, role: &quot;annotation&quot; },2]);
+					        var options &#x3D; {
+					            title: &quot;Claimable Credits based on Watched Hours of Education&quot;,
+					            bar: {groupWidth: &quot;70%&quot;},
+					            legend: { position: &quot;none&quot; }
+					        };
+					        var chart &#x3D;      new google.visualization.BarChart(document.getElementById(&quot;CreditChartContainer&quot;));
+					        chart.draw(view, options);
+					    }
+					    const element &#x3D; document.querySelectorAll(&#x27;#CreditChartContainer&#x27;);
+					    const observer &#x3D; new ResizeObserver( element[0],()&#x3D;&gt;{ drawChart();
+					    });
+					});
+					&lt;/script&gt;					&lt;h2 class&#x3D;&quot;&quot;&gt;You have watched a lot of this education.&lt;/h2&gt;
 					&lt;p class&#x3D;&quot;font-size_down c_primary-n2&quot;&gt;
 						&lt;sup&gt;*&lt;/sup&gt;claimed credits and watched video can take up to 24 hours to reflect in your profile.
 					&lt;/p&gt;
@@ -619,7 +699,7 @@
 							&lt;p&gt; Credit claiming will be available beginning December 12, 2021, at noon ET. Credit must be claimed by March 12, 2022, at 11:59 p.m. ET. You may only complete the evaluation and claim credit once; therefore, please do not proceed until you have finished your participation in the certified content for which you wish to claim credit. &lt;/p&gt;
 						&lt;/div&gt;
 						&lt;div class&#x3D;&quot;m-t_4 c_black br_warning-n2 c_warning-n3  br_round text_center bg_warning-5 inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_2 p_3:md p_4:lg&quot;&gt;
-							&lt;h3 class&#x3D;&quot;c_warning-n4 font_bold font_4 br-b_2 br_solid br_warning p-y_3 p-x_5:lg p-x_4&quot;&gt;
+							&lt;h3 class&#x3D;&quot;c_warning-n4 font_bold font_4 br-b_2 br_solid br_warning p-y_3 p-x_5:lg p-x_4 m_0&quot;&gt;
 								&lt;i class&#x3D;&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt; Caution &lt;i class&#x3D;&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;
 							&lt;/h3&gt;
 							&lt;p class&#x3D;&quot;font-size_up m-t_4&quot;&gt; You can only claim once so please watch as much as you want before claiming. &lt;/p&gt;
@@ -726,7 +806,47 @@
 				&lt;div class&#x3D;&quot;flex_auto w_50:lg br-r_1 br_dotted:lg br_none br_primary-3 reading-typography font-size_up p_5:lg p_4&quot;&gt;
 					&lt;h1 class&#x3D;&quot;font_8&quot;&gt;	Claim Credit Based on Total Watch Time&lt;sup&gt;*&lt;/sup&gt;&lt;/h1&gt;
 					&lt;p&gt; We’re keeping track of the time you spend watching videos to make it easier for you to claim credit. The chart below shows total watch time by credit type. ​ &lt;/p&gt;
-					&lt;h2 class&#x3D;&quot;&quot;&gt;You have watched a lot of this education.&lt;/h2&gt;
+					&lt;section class&#x3D;&quot;br_radius overflow_hidden relative z_1&quot; id&#x3D;&quot;CreditChartContainer&quot; style&#x3D;&quot;width:100%; height:500px;&quot;&gt;
+					&lt;/section&gt;
+					&lt;script type&#x3D;&quot;text/javascript&quot; src&#x3D;&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
+					&lt;script&gt;
+					    document.addEventListener(&quot;DOMContentLoaded&quot;, function(event) {
+					    google.charts.load(&#x27;current&#x27;, {&#x27;packages&#x27;:[&#x27;corechart&#x27;]});
+					    google.charts.setOnLoadCallback(drawChart);
+					    function drawChart() {
+					        var data &#x3D; google.visualization.arrayToDataTable([
+					            [&#x27;Credit Type&#x27;, &#x27;Watched Hours&#x27; ,{ role: &#x27;style&#x27; }],
+					            [&#x27;AAPA&#x27;, 1.45, &#x27;#e8c536&#x27; ],
+					            [&#x27;available&#x27;, 28.55, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;ABP&#x27;, 0, &quot;#007a5b&quot;],
+					            [&#x27;available&#x27;, 100, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;CME&#x27;, 8.94, &#x27;#00a15b&#x27;],
+					            [&#x27;available&#x27;, 91.06, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;CNE&#x27;, 10.49, &#x27;#198dae&#x27;],
+					            [&#x27;available&#x27;, 89.51, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;MOC&#x27;, 19.30, &#x27;#9a1267&#x27;],
+					            [&#x27;available&#x27;, 80.70, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            ]);
+					        var view &#x3D; new google.visualization.DataView(data);
+					        view.setColumns([0, 1,{ calc: &quot;stringify&quot;,  sourceColumn: 1, type: &quot;string&quot;, role: &quot;annotation&quot; },2]);
+					        var options &#x3D; {
+					            title: &quot;Claimable Credits based on Watched Hours of Education&quot;,
+					            bar: {groupWidth: &quot;70%&quot;},
+					            legend: { position: &quot;none&quot; }
+					        };
+					        var chart &#x3D;      new google.visualization.BarChart(document.getElementById(&quot;CreditChartContainer&quot;));
+					        chart.draw(view, options);
+					    }
+					    const element &#x3D; document.querySelectorAll(&#x27;#CreditChartContainer&#x27;);
+					    const observer &#x3D; new ResizeObserver( element[0],()&#x3D;&gt;{ drawChart();
+					    });
+					});
+					&lt;/script&gt;					&lt;h2 class&#x3D;&quot;&quot;&gt;You have watched a lot of this education.&lt;/h2&gt;
 					&lt;p class&#x3D;&quot;font-size_down c_primary-n2&quot;&gt;
 						&lt;sup&gt;*&lt;/sup&gt;claimed credits and watched video can take up to 24 hours to reflect in your profile.
 					&lt;/p&gt;
@@ -738,7 +858,7 @@
 							&lt;p&gt; Credit claiming will be available beginning December 12, 2021, at noon ET. Credit must be claimed by March 12, 2022, at 11:59 p.m. ET. You may only complete the evaluation and claim credit once; therefore, please do not proceed until you have finished your participation in the certified content for which you wish to claim credit. &lt;/p&gt;
 						&lt;/div&gt;
 						&lt;div class&#x3D;&quot;m-t_4 c_black br_warning-n2 c_warning-n3  br_round text_center bg_warning-5 inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_2 p_3:md p_4:lg&quot;&gt;
-							&lt;h3 class&#x3D;&quot;c_warning-n4 font_bold font_4 br-b_2 br_solid br_warning p-y_3 p-x_5:lg p-x_4&quot;&gt;
+							&lt;h3 class&#x3D;&quot;c_warning-n4 font_bold font_4 br-b_2 br_solid br_warning p-y_3 p-x_5:lg p-x_4 m_0&quot;&gt;
 								&lt;i class&#x3D;&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt; Caution &lt;i class&#x3D;&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;
 							&lt;/h3&gt;
 							&lt;p class&#x3D;&quot;font-size_up m-t_4&quot;&gt; You can only claim once so please watch as much as you want before claiming. &lt;/p&gt;
@@ -847,7 +967,47 @@
 				&lt;div class&#x3D;&quot;flex_auto w_50:lg br-r_1 br_dotted:lg br_none br_primary-3 reading-typography font-size_up p_5:lg p_4&quot;&gt;
 					&lt;h1 class&#x3D;&quot;font_8&quot;&gt;	Claim Credit Based on Total Watch Time&lt;sup&gt;*&lt;/sup&gt;&lt;/h1&gt;
 					&lt;p&gt; We’re keeping track of the time you spend watching videos to make it easier for you to claim credit. The chart below shows total watch time by credit type. ​ &lt;/p&gt;
-					&lt;h2 class&#x3D;&quot;&quot;&gt;You have watched a lot of this education.&lt;/h2&gt;
+					&lt;section class&#x3D;&quot;br_radius overflow_hidden relative z_1&quot; id&#x3D;&quot;CreditChartContainer&quot; style&#x3D;&quot;width:100%; height:500px;&quot;&gt;
+					&lt;/section&gt;
+					&lt;script type&#x3D;&quot;text/javascript&quot; src&#x3D;&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
+					&lt;script&gt;
+					    document.addEventListener(&quot;DOMContentLoaded&quot;, function(event) {
+					    google.charts.load(&#x27;current&#x27;, {&#x27;packages&#x27;:[&#x27;corechart&#x27;]});
+					    google.charts.setOnLoadCallback(drawChart);
+					    function drawChart() {
+					        var data &#x3D; google.visualization.arrayToDataTable([
+					            [&#x27;Credit Type&#x27;, &#x27;Watched Hours&#x27; ,{ role: &#x27;style&#x27; }],
+					            [&#x27;AAPA&#x27;, 1.45, &#x27;#e8c536&#x27; ],
+					            [&#x27;available&#x27;, 28.55, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;ABP&#x27;, 0, &quot;#007a5b&quot;],
+					            [&#x27;available&#x27;, 100, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;CME&#x27;, 8.94, &#x27;#00a15b&#x27;],
+					            [&#x27;available&#x27;, 91.06, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;CNE&#x27;, 10.49, &#x27;#198dae&#x27;],
+					            [&#x27;available&#x27;, 89.51, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            [&#x27;MOC&#x27;, 19.30, &#x27;#9a1267&#x27;],
+					            [&#x27;available&#x27;, 80.70, &#x27;#a4a4a4&#x27; ],
+					            [&#x27;&#x27;, null, &#x27;&#x27; ],
+					            ]);
+					        var view &#x3D; new google.visualization.DataView(data);
+					        view.setColumns([0, 1,{ calc: &quot;stringify&quot;,  sourceColumn: 1, type: &quot;string&quot;, role: &quot;annotation&quot; },2]);
+					        var options &#x3D; {
+					            title: &quot;Claimable Credits based on Watched Hours of Education&quot;,
+					            bar: {groupWidth: &quot;70%&quot;},
+					            legend: { position: &quot;none&quot; }
+					        };
+					        var chart &#x3D;      new google.visualization.BarChart(document.getElementById(&quot;CreditChartContainer&quot;));
+					        chart.draw(view, options);
+					    }
+					    const element &#x3D; document.querySelectorAll(&#x27;#CreditChartContainer&#x27;);
+					    const observer &#x3D; new ResizeObserver( element[0],()&#x3D;&gt;{ drawChart();
+					    });
+					});
+					&lt;/script&gt;					&lt;h2 class&#x3D;&quot;&quot;&gt;You have watched a lot of this education.&lt;/h2&gt;
 					&lt;p class&#x3D;&quot;font-size_down c_primary-n2&quot;&gt;
 						&lt;sup&gt;*&lt;/sup&gt;claimed credits and watched video can take up to 24 hours to reflect in your profile.
 					&lt;/p&gt;
@@ -859,7 +1019,7 @@
 							&lt;p&gt; Credit claiming will be available beginning December 12, 2021, at noon ET. Credit must be claimed by March 12, 2022, at 11:59 p.m. ET. You may only complete the evaluation and claim credit once; therefore, please do not proceed until you have finished your participation in the certified content for which you wish to claim credit. &lt;/p&gt;
 						&lt;/div&gt;
 						&lt;div class&#x3D;&quot;m-t_4 c_black br_warning-n2 c_warning-n3  br_round text_center bg_warning-5 inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_2 p_3:md p_4:lg&quot;&gt;
-							&lt;h3 class&#x3D;&quot;c_warning-n4 font_bold font_4 br-b_2 br_solid br_warning p-y_3 p-x_5:lg p-x_4&quot;&gt;
+							&lt;h3 class&#x3D;&quot;c_warning-n4 font_bold font_4 br-b_2 br_solid br_warning p-y_3 p-x_5:lg p-x_4 m_0&quot;&gt;
 								&lt;i class&#x3D;&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt; Caution &lt;i class&#x3D;&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;
 							&lt;/h3&gt;
 							&lt;p class&#x3D;&quot;font-size_up m-t_4&quot;&gt; You can only claim once so please watch as much as you want before claiming. &lt;/p&gt;
