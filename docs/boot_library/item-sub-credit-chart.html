@@ -402,43 +402,6 @@
 </section>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Credit Type', 'Watched Hours' ,{ role: 'style' }],
-            ['AAPA', 1.45, '#e8c536' ],
-            ['available', 28.55, '#a4a4a4' ],
-            ['', null, '' ],
-            ['ABP', 0, "#007a5b"],
-            ['available', 100, '#a4a4a4' ],
-            ['', null, '' ],
-            ['CME', 8.94, '#00a15b'],
-            ['available', 91.06, '#a4a4a4' ],
-            ['', null, '' ],
-            ['CNE', 10.49, '#198dae'],
-            ['available', 89.51, '#a4a4a4' ],
-            ['', null, '' ],
-            ['MOC', 19.30, '#9a1267'],
-            ['available', 80.70, '#a4a4a4' ],
-            ['', null, '' ],
-            ]);
-        var view = new google.visualization.DataView(data);
-        view.setColumns([0, 1,{ calc: "stringify",  sourceColumn: 1, type: "string", role: "annotation" },2]);
-        var options = {
-            title: "Claimable Credits based on Watched Hours of Education",
-            bar: {groupWidth: "70%"},
-            legend: { position: "none" }
-        };
-        var chart =      new google.visualization.BarChart(document.getElementById("CreditChartContainer"));
-        chart.draw(view, options);
-    }
-    const element = document.querySelectorAll('#CreditChartContainer');
-    const observer = new ResizeObserver( element[0],()=>{ drawChart();
-    });
-});
-</script>
                                 </div>
                             </div>
                         </article>
@@ -453,126 +416,15 @@
                                 <pre><code class="language-markup"  id="code-sub-credit-chart" value='&lt;section class&#x3D;&quot;br_radius overflow_hidden relative z_1&quot; id&#x3D;&quot;CreditChartContainer&quot; style&#x3D;&quot;width:100%; height:500px;&quot;&gt;
 &lt;/section&gt;
 &lt;script type&#x3D;&quot;text/javascript&quot; src&#x3D;&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-    document.addEventListener(&quot;DOMContentLoaded&quot;, function(event) {
-    google.charts.load(&#x27;current&#x27;, {&#x27;packages&#x27;:[&#x27;corechart&#x27;]});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-        var data &#x3D; google.visualization.arrayToDataTable([
-            [&#x27;Credit Type&#x27;, &#x27;Watched Hours&#x27; ,{ role: &#x27;style&#x27; }],
-            [&#x27;AAPA&#x27;, 1.45, &#x27;#e8c536&#x27; ],
-            [&#x27;available&#x27;, 28.55, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;ABP&#x27;, 0, &quot;#007a5b&quot;],
-            [&#x27;available&#x27;, 100, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;CME&#x27;, 8.94, &#x27;#00a15b&#x27;],
-            [&#x27;available&#x27;, 91.06, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;CNE&#x27;, 10.49, &#x27;#198dae&#x27;],
-            [&#x27;available&#x27;, 89.51, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;MOC&#x27;, 19.30, &#x27;#9a1267&#x27;],
-            [&#x27;available&#x27;, 80.70, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            ]);
-        var view &#x3D; new google.visualization.DataView(data);
-        view.setColumns([0, 1,{ calc: &quot;stringify&quot;,  sourceColumn: 1, type: &quot;string&quot;, role: &quot;annotation&quot; },2]);
-        var options &#x3D; {
-            title: &quot;Claimable Credits based on Watched Hours of Education&quot;,
-            bar: {groupWidth: &quot;70%&quot;},
-            legend: { position: &quot;none&quot; }
-        };
-        var chart &#x3D;      new google.visualization.BarChart(document.getElementById(&quot;CreditChartContainer&quot;));
-        chart.draw(view, options);
-    }
-    const element &#x3D; document.querySelectorAll(&#x27;#CreditChartContainer&#x27;);
-    const observer &#x3D; new ResizeObserver( element[0],()&#x3D;&gt;{ drawChart();
-    });
-});
-&lt;/script&gt;'>&lt;section class&#x3D;&quot;br_radius overflow_hidden relative z_1&quot; id&#x3D;&quot;CreditChartContainer&quot; style&#x3D;&quot;width:100%; height:500px;&quot;&gt;
+&lt;script&gt;'>&lt;section class&#x3D;&quot;br_radius overflow_hidden relative z_1&quot; id&#x3D;&quot;CreditChartContainer&quot; style&#x3D;&quot;width:100%; height:500px;&quot;&gt;
 &lt;/section&gt;
 &lt;script type&#x3D;&quot;text/javascript&quot; src&#x3D;&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-    document.addEventListener(&quot;DOMContentLoaded&quot;, function(event) {
-    google.charts.load(&#x27;current&#x27;, {&#x27;packages&#x27;:[&#x27;corechart&#x27;]});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-        var data &#x3D; google.visualization.arrayToDataTable([
-            [&#x27;Credit Type&#x27;, &#x27;Watched Hours&#x27; ,{ role: &#x27;style&#x27; }],
-            [&#x27;AAPA&#x27;, 1.45, &#x27;#e8c536&#x27; ],
-            [&#x27;available&#x27;, 28.55, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;ABP&#x27;, 0, &quot;#007a5b&quot;],
-            [&#x27;available&#x27;, 100, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;CME&#x27;, 8.94, &#x27;#00a15b&#x27;],
-            [&#x27;available&#x27;, 91.06, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;CNE&#x27;, 10.49, &#x27;#198dae&#x27;],
-            [&#x27;available&#x27;, 89.51, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;MOC&#x27;, 19.30, &#x27;#9a1267&#x27;],
-            [&#x27;available&#x27;, 80.70, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            ]);
-        var view &#x3D; new google.visualization.DataView(data);
-        view.setColumns([0, 1,{ calc: &quot;stringify&quot;,  sourceColumn: 1, type: &quot;string&quot;, role: &quot;annotation&quot; },2]);
-        var options &#x3D; {
-            title: &quot;Claimable Credits based on Watched Hours of Education&quot;,
-            bar: {groupWidth: &quot;70%&quot;},
-            legend: { position: &quot;none&quot; }
-        };
-        var chart &#x3D;      new google.visualization.BarChart(document.getElementById(&quot;CreditChartContainer&quot;));
-        chart.draw(view, options);
-    }
-    const element &#x3D; document.querySelectorAll(&#x27;#CreditChartContainer&#x27;);
-    const observer &#x3D; new ResizeObserver( element[0],()&#x3D;&gt;{ drawChart();
-    });
-});
-&lt;/script&gt;</code></pre>
+&lt;script&gt;</code></pre>
                                 <textarea class="display_none text-input html-code-input" type="text" name=""
                                     id="input-sub-credit-chart">&lt;section class&#x3D;&quot;br_radius overflow_hidden relative z_1&quot; id&#x3D;&quot;CreditChartContainer&quot; style&#x3D;&quot;width:100%; height:500px;&quot;&gt;
 &lt;/section&gt;
 &lt;script type&#x3D;&quot;text/javascript&quot; src&#x3D;&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-    document.addEventListener(&quot;DOMContentLoaded&quot;, function(event) {
-    google.charts.load(&#x27;current&#x27;, {&#x27;packages&#x27;:[&#x27;corechart&#x27;]});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-        var data &#x3D; google.visualization.arrayToDataTable([
-            [&#x27;Credit Type&#x27;, &#x27;Watched Hours&#x27; ,{ role: &#x27;style&#x27; }],
-            [&#x27;AAPA&#x27;, 1.45, &#x27;#e8c536&#x27; ],
-            [&#x27;available&#x27;, 28.55, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;ABP&#x27;, 0, &quot;#007a5b&quot;],
-            [&#x27;available&#x27;, 100, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;CME&#x27;, 8.94, &#x27;#00a15b&#x27;],
-            [&#x27;available&#x27;, 91.06, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;CNE&#x27;, 10.49, &#x27;#198dae&#x27;],
-            [&#x27;available&#x27;, 89.51, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            [&#x27;MOC&#x27;, 19.30, &#x27;#9a1267&#x27;],
-            [&#x27;available&#x27;, 80.70, &#x27;#a4a4a4&#x27; ],
-            [&#x27;&#x27;, null, &#x27;&#x27; ],
-            ]);
-        var view &#x3D; new google.visualization.DataView(data);
-        view.setColumns([0, 1,{ calc: &quot;stringify&quot;,  sourceColumn: 1, type: &quot;string&quot;, role: &quot;annotation&quot; },2]);
-        var options &#x3D; {
-            title: &quot;Claimable Credits based on Watched Hours of Education&quot;,
-            bar: {groupWidth: &quot;70%&quot;},
-            legend: { position: &quot;none&quot; }
-        };
-        var chart &#x3D;      new google.visualization.BarChart(document.getElementById(&quot;CreditChartContainer&quot;));
-        chart.draw(view, options);
-    }
-    const element &#x3D; document.querySelectorAll(&#x27;#CreditChartContainer&#x27;);
-    const observer &#x3D; new ResizeObserver( element[0],()&#x3D;&gt;{ drawChart();
-    });
-});
-&lt;/script&gt;</textarea>
+&lt;script&gt;</textarea>
                             </main>
                             <header class="flex_row flex shadow_n1 br-br_radius br-bl_radius">
                                 <div class="flex flex_row flex_auto collapsed h:bg_black-7 br-bl_radius c_black-8 h:c_white"

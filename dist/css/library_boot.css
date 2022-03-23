@@ -6916,11 +6916,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7181" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6773" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5851" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3546" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0526" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0918" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5592" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3329" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5694" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3208" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6952,11 +6952,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9871" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2493" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3827" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0474" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5606" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2834" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4939" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5069" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2624" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9688" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6997,8 +6997,8 @@ Markup:
     </header>
     <main id="collapseTypeAhead" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_0220" }}
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_5491" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_4086" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_5805" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8243,41 +8243,42 @@ Markup:
 </section>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function(event) { 
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Credit Type', 'Watched Hours' ,{ role: 'style' }],
-            ['AAPA', 1.45, '#e8c536' ],
-            ['available', 28.55, '#a4a4a4' ],
-            ['', null, '' ],
-            ['ABP', 0, "#007a5b"],
-            ['available', 100, '#a4a4a4' ],
-            ['', null, '' ],
-            ['CME', 8.94, '#00a15b'],      
-            ['available', 91.06, '#a4a4a4' ],
-            ['', null, '' ],
-            ['CNE', 10.49, '#198dae'],   
-            ['available', 89.51, '#a4a4a4' ],
-            ['', null, '' ],       
-            ['MOC', 19.30, '#9a1267'],
-            ['available', 80.70, '#a4a4a4' ],
-            ['', null, '' ],
-            ]);
-        var view = new google.visualization.DataView(data);
-        view.setColumns([0, 1,{ calc: "stringify",  sourceColumn: 1, type: "string", role: "annotation" },2]);
-        var options = {
-            title: "Claimable Credits based on Watched Hours of Education",
-            bar: {groupWidth: "70%"},
-            legend: { position: "none" }
-        };
-        var chart =      new google.visualization.BarChart(document.getElementById("CreditChartContainer"));
-        chart.draw(view, options);
-    }
-    const element = document.querySelectorAll('#CreditChartContainer');
-    const observer = new ResizeObserver( element[0],()=>{ drawChart();
-    });
+
+document.addEventListener("DOMContentLoaded", function (event) {
+	google.charts.load('current', { 'packages': ['corechart'] });
+	google.charts.setOnLoadCallback(drawChart);
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable([
+			['Credit Type', 'Watched Hours', { role: 'style' },'Total Credit Hours',{ role: 'style' }],
+			['AAPA', 1.45, "#e8c536",  28.55, '#cccccc'],
+			['ABP', 2,  "#007a5b", 100, "#cccccc"],
+			['CME', 8.94, "#00a15b",  91, '#cccccc'],
+			['CNE', 10.49, "#198dae",  89, '#cccccc'],
+			['MOC', 19.30, "#9a1267",  80, '#cccccc'],
+		]);
+		var view = new google.visualization.DataView(data);
+		var options = {
+        title: "My Watch Time (by credit type) Your watch time = colored bars; total credit available = gray bars",
+        subtitle: 'Your watch time = colored bars; total credit available = gray bars',
+        bars:'horizontal',
+			  legend: {
+					position: "right",
+          },
+        series: {
+          0: { haxis: 'Watched Hours' },
+          1: { haxis: 'Total Credit Hours' },
+        },
+         hAxis:{title: 'Total Credit Hours in Grey' , side:'top' },
+         vAxis: {title: 'Credit Types', titleTextStyle: {color: 'black'}},
+      	colors: ['blue','#cccccc'],
+			};
+		var chart = new google.visualization.BarChart(document.getElementById("CreditChartContainer"));
+		chart.draw(view, options);
+	}
+	const element = document.querySelectorAll('#CreditChartContainer');
+	const observer = new ResizeObserver(element[0], () => {
+		drawChart();
+	});
 });
 </script>
 
@@ -8562,18 +8563,18 @@ Markup:
 					<div class="tab-content" id="nav-tabContent">
 						<div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
 							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
-								<li class="">{{> "Program.Session.Home"  modifier_class="Valvular " }}</li>
-								<li class="">{{> "Program.Session.Home"  modifier_class="Cardiovascular Chest Pain Pharmacologic " }}</li>
-								<li class="">{{> "Program.Session.Home"  modifier_class="Pharmacologic Chest Pain " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Side Effect Pericardial Electrocardiogram Clinical Valvular Heart Disease Myocardial Electrocardiographic Electrocardiogram " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Clinical Electrocardiographic Cardiovascular Arrhythmia Arrhythmia Chest Pain Arrhythmia Pharmacologic Valvular Heart Disease " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="" }}</li>
 							</ul>
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 							</div>
 						<div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
 							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Valvular Heart Disease Electrocardiographic " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Cardiovascular Cardiovascular " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Electrocardiogram " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Chest Pain Pericardial Arrhythmia Electrocardiographic Valvular Arrhythmia " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Blood Vessel Pericardial " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Arrhythmia Chest Pain Arrhythmia Chest Pain Myocardial " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Electrocardiographic Arteriosclerosis Valvular Heart Disease " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Cardiovascular Valvular Valvular Cardiovascular Myocardial Arteriosclerosis Electrocardiographic Valvular Electrocardiogram " }}</li>
 							</ul>
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 						</div>
@@ -8617,7 +8618,7 @@ Markup:
 					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
 						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding_up-2'}}">
-							<h1 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Session.Title'}} Arteriosclerosis Pericardial Cardiovascular </h1>
+							<h1 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Session.Title'}} </h1>
 							</main>	
 							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
 								<ul class="flex flex_column flex_wrap gap_2 justify_start self_center ul_none uppercase p-x_3">
@@ -8690,8 +8691,8 @@ Markup:
 					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
 						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding_up-2'}}">
-							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} Pharmacologic Myocardial Side Effect Valvular Heart Disease Arrhythmia Side Effect Chest Pain Myocardial Arteriosclerosis </h1>
-							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}} Myocardial Arteriosclerosis Arrhythmia Valvular Heart Disease Electrocardiogram Pharmacologic Clinical  </h2>
+							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} Electrocardiogram Blood Vessel Side Effect Valvular Heart Disease Electrocardiographic Pharmacologic Chest Pain Pericardial </h1>
+							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}} Arrhythmia Arteriosclerosis Electrocardiographic  </h2>
 							</main>	
 							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
 								<ul class="flex flex_column flex_wrap gap_2 justify_start self_center ul_none uppercase p-x_3">
@@ -8727,10 +8728,10 @@ Markup:
 							{{> 'Sub.Section.h3' modifier_class='presentation playlist'}}</div>
 							<div class="font_n2 font_n1:lg relative isolation_isolate">
 								<ul class="flex flex_column justify_stretch gap_3 ul_none">
-									{{> "Program.Presentation.Condensed" modifier_class="Pharmacologic Arteriosclerosis Clinical Valvular Electrocardiographic Arteriosclerosis "}}
-									{{> "Program.Presentation.CondensedPlaying" modifier_class="Pericardial Pharmacologic Pharmacologic Chest Pain Myocardial Electrocardiogram Valvular Heart Disease Arrhythmia Electrocardiogram "}}
-									{{> "Program.Presentation.Condensed" modifier_class="Valvular "}}
-									{{> "Program.Presentation.Condensed" modifier_class="Cardiovascular Arteriosclerosis Chest Pain "}}
+									{{> "Program.Presentation.Condensed" modifier_class=""}}
+									{{> "Program.Presentation.CondensedPlaying" modifier_class="Myocardial Arteriosclerosis Chest Pain Pericardial Electrocardiogram Arrhythmia "}}
+									{{> "Program.Presentation.Condensed" modifier_class=""}}
+									{{> "Program.Presentation.Condensed" modifier_class="Valvular Chest Pain Valvular Arteriosclerosis "}}
 								</ul>
 							</div>
 						</section>
@@ -8935,11 +8936,11 @@ Markup:
 						{{> 'Sub.Section.h2' modifier_class="Continue Watching" }}
 						<div class="font_n2 font_n1:lg relative isolation_isolate">
 							<ul class="flex flex_column justify_stretch gap_0 ul_none {{> 'Sub.ClassList.Inset.level_down-1'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class=''}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class=''}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Myocardial Chest Pain Arrhythmia Valvular Heart Disease '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Side Effect Cardiovascular Electrocardiographic '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Valvular Cardiovascular Chest Pain Valvular Heart Disease Pericardial Myocardial Valvular Arrhythmia Valvular Heart Disease '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Valvular Heart Disease Side Effect Pericardial Electrocardiographic Pharmacologic Blood Vessel Chest Pain Electrocardiographic '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Electrocardiogram Valvular Cardiovascular Side Effect Arteriosclerosis Valvular Heart Disease Cardiovascular '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Pharmacologic Clinical Cardiovascular Electrocardiogram Clinical Blood Vessel Chest Pain Valvular Pharmacologic '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Arrhythmia Blood Vessel Cardiovascular Side Effect Valvular Heart Disease '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Arrhythmia Arteriosclerosis Electrocardiogram Clinical Valvular Heart Disease Valvular Heart Disease '}}
 							</ul>
 						</div>
 						{{> 'Sub.Section.Footer'  modifier_class="Continue Watching" }}
@@ -9033,14 +9034,14 @@ Horizontal Carousels to have discoverable areas on the home pages.
 Markup:
 <div class="relative isolation_isolate overflow_hidden {{>'Sub.ClassList.Inset.margin_down-1'}}">
         <div id="slider1" class=" flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3 {{> 'Sub.ClassList.Inset.level_down-1'}} ">
-        {{> "Program.Session.Home"  modifier_class="Side Effect Valvular Heart Disease Chest Pain Valvular Heart Disease "}}
-        {{> "Program.Session.Home"  modifier_class="Electrocardiogram "}}
-        {{> "Program.Session.Home"  modifier_class="Cardiovascular Clinical Blood Vessel "}}
-        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Arrhythmia Cardiovascular Arrhythmia "}}        
-        {{> "Program.Session.Home"  modifier_class=""}}
-        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Myocardial Arrhythmia "}}        
-        {{> "Program.Session.Home"  modifier_class="Myocardial Cardiovascular Myocardial Pharmacologic Valvular Chest Pain Pericardial Valvular Heart Disease Pericardial "}}
-        {{> "Program.Session.Home"  modifier_class="Blood Vessel Valvular Heart Disease Arteriosclerosis Pharmacologic "}}
+        {{> "Program.Session.Home"  modifier_class="Valvular Heart Disease Electrocardiographic Chest Pain Arteriosclerosis Myocardial Blood Vessel Arrhythmia Blood Vessel "}}
+        {{> "Program.Session.Home"  modifier_class="Pharmacologic Chest Pain Electrocardiographic Myocardial Pericardial Arrhythmia Blood Vessel "}}
+        {{> "Program.Session.Home"  modifier_class="Myocardial Blood Vessel Myocardial Valvular Clinical "}}
+        {{> "Program.Session.Home"  modifier_class="Valvular "}}        
+        {{> "Program.Session.Home"  modifier_class="Side Effect Blood Vessel Valvular Heart Disease Arrhythmia Valvular Heart Disease Electrocardiographic Arteriosclerosis "}}
+        {{> "Program.Session.Home"  modifier_class="Clinical "}}        
+        {{> "Program.Session.Home"  modifier_class="Chest Pain Arrhythmia Electrocardiogram Arteriosclerosis Electrocardiographic Myocardial Chest Pain "}}
+        {{> "Program.Session.Home"  modifier_class="Electrocardiographic Valvular Chest Pain Myocardial Side Effect Pericardial Arrhythmia Pharmacologic Pharmacologic "}}
     </div>
     {{> 'Sub.Carousel.CustomTools'}}
 </div>
@@ -9197,11 +9198,11 @@ Markup:
     {{> 'Sub.Section.h2' modifier_class="continue watching" }}
     <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.ClassList.Inset.level_down-1'}} ">
         <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.level_down'}} ">
-        {{> "Program.Presentation.Condensed"  modifier_class="Myocardial Pharmacologic Arteriosclerosis Chest Pain Electrocardiographic Pharmacologic Arrhythmia Pericardial "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Pericardial "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Valvular Heart Disease Myocardial Side Effect Valvular Clinical Arteriosclerosis "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Arrhythmia Arteriosclerosis Myocardial Electrocardiogram Electrocardiographic "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Valvular Heart Disease Pericardial Valvular Heart Disease Valvular Valvular Pericardial Arrhythmia "}}
+        {{> "Program.Presentation.Condensed"  modifier_class=""}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Myocardial Electrocardiogram Chest Pain Arteriosclerosis Pericardial Arrhythmia "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Electrocardiogram Clinical Valvular Blood Vessel Arteriosclerosis "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Chest Pain Pericardial Electrocardiographic Electrocardiographic Blood Vessel Valvular Cardiovascular "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Pharmacologic Arrhythmia Myocardial "}}
         </div>
         {{> 'Sub.Carousel.CustomToolsVertical'}}
     </div>
