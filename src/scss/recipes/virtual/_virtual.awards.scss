@@ -39,6 +39,27 @@ Styleguide Awards.Awardee.Avatar
 */
 /*
 
+Awardee Avatar No Video
+
+When a head shot is missing it should use the avatar.
+
+Markup:
+<div class="aspect_4x3:lg bg_black-3 c_black-3 font_10 font_5 grid items_center justify_center text_center w_100" data-name="awardee__no_video">
+	<span class="fa-stack"> 
+		<i class="fas fa-rectangle-landscape fa-stack-2x"></i>
+		<i style="font-size: 70%;" class="fa-video-slash fas fa-stack-1x"></i>
+	</span>
+</div>
+
+
+MarkupWrapperClasses: br_round br_solid br_black-3 br_1 overflow_hidden shadow_bevel-light max-w_20 
+
+Weight: 0
+
+Styleguide Awards.Awardee.AvatarNoVideo
+*/
+/*
+
 Awardee Premium
 
 The base DOM and Data that represent an awardee. Head shots images are maxed at 350px wide.
@@ -271,8 +292,8 @@ Award Premiere Tier Stacked
 Awards are blocks design to display the awards for the conference.
 
 Markup:
-<div class="grid grid-col_3:lg gap_5">
-	<div data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column flex_column:lg flex_row:md  shadow_overlap-light">
+<ul class="ul_none m_0 m-b_4 p_0 grid grid-col_3:lg gap_5">
+	<li data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column flex_column:lg flex_row:md  shadow_overlap-light">
 		{{> "Awards.Awardee.Premium" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
 		<div data-name="award__detail" class="font_0">   
 		<div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
@@ -282,8 +303,8 @@ Markup:
 				{{> "Data.Award.Description" }}
 			</div>
 		</div>
-	</div>
-	<div data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column flex_column:lg flex_row:md shadow_overlap-light">
+	</li>
+	<li data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column flex_column:lg flex_row:md shadow_overlap-light">
 		{{> "Awards.Awardee.Premium" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
 		<div data-name="award__detail" class="font_0">   
 		<div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
@@ -293,8 +314,8 @@ Markup:
 				{{> "Data.Award.Description" }}
 			</div>
 		</div>
-	</div>	
-</div>
+	</li>	
+</ul>
 
 MarkupWrapperClasses:  
 
@@ -311,7 +332,7 @@ Awards are blocks design to display the awards for the conference.
 
 
 Markup:
-<div data-name="award__container" class="{{ modifier_class }} flex_row:md flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
+<li data-name="award__container" class="{{ modifier_class }} flex_row:md flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
 	{{> "Awards.Awardee.Premium" modifier_class="font_3:lg font_2:md font_1 flex_column bg_white-8 p_3 br_radius shadow_n1 p-t_4 br_solid br_black-1 br_1" }}
 	<div data-name="award__detail" class="font_0">   
 		<div data-name="awardee__title" class="font_medium font_display c_primary-n3 lh_1 m-b_2 m-t_3 font-size_up-1">
@@ -321,7 +342,7 @@ Markup:
 			{{> "Data.Award.Description" }}
 		</div>
 	</div>
-</div>
+</li>
 
 MarkupWrapperClasses:
 
@@ -337,17 +358,17 @@ Award Premiere Video
 Awards are blocks design to display the awards for the conference.
 
 Markup:
-<div class="grid grid-col_3:lg grid-col_2:md grid-col_1 gap_4">
-<div data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
+<ul class="ul_none m_0 m-b_4 p_0 grid grid-col_3:lg grid-col_2:md grid-col_1 gap_4">
+<li data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
 	{{> "Awards.Awardee.Premium.Video" modifier_class="font_2:lg font_1:md font_0 flex_column" }}
-</div>
-<div data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
+</li>
+<li data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
 	{{> "Awards.Awardee.Premium.Video" modifier_class="font_2:lg font_1:md font_0 flex_column" }}
-</div>
-<div data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
+</li>
+<li data-name="award__container" class="{{ modifier_class }} flex gap_4 gap_5:lg bg_black-1 p_4 br_radius br_black-3 br_solid br_1 flex_column shadow_overlap-light">
 	{{> "Awards.Awardee.Premium.Video" modifier_class="font_2:lg font_1:md font_0 flex_column" }}
-</div>
-</div>
+</li>
+</ul>
 
 Weight: 0
 
@@ -363,59 +384,59 @@ Awards are blocks design to display the awards for the conference.
 
 Markup:
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Column]</h2>
-<div class="grid grid-col_4:lg gap_4 grid-col_3:md grid-col_1">
-	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
+<ul class="ul_none m_0 m-b_4 p_0 grid grid-col_4:lg gap_4 grid-col_3:md grid-col_1">
+	<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
 		{{> "Awards.Awardee.Standard" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
-	</div>
-	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+	</li>
+	<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
 		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
-	</div>
-		<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+	</li>
+		<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
 		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
-	</div>
-	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+	</li>
+	<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
 		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
-	</div>
-	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+	</li>
+	<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
 		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
-	</div>
-		<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
+	</li>
+		<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column relative br_black-1 br_solid br_1">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>st</sup> place</div>
 		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_column font_1:lg font_0 m-t_5" }}
-	</div>
-</div>
+	</li>
+</ul>
 <h2 class="font_3:lg font_2 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
-<div class="grid grid-col_2:lg grid-col_1  gap_4">
-	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
+<ul class="ul_none m_0 m-b_4 p_0 grid grid-col_2:lg grid-col_1  gap_4">
+	<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
 		{{> "Awards.Awardee.Standard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
-	</div>
-	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
+	</li>
+	<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
 		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
-	</div>
-	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
+	</li>
+	<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
 		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
-	</div>
-	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
+	</li>
+	<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">1<sup>st</sup> place</div>
 		{{> "Awards.Awardee.Standard" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
-	</div>
-	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
+	</li>
+	<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
 		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
-	</div>
-	<div data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
-		<div class="absolute bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
+	</li>
+	<li data-name="award__container" class="flex gap_4 gap_5:lg bg_black-1 p_4 flex_column flex_row:md relative br_black-1 br_solid br_1 m-b_3">
+		<div class="absolute nowrap overflow_ellipsis bg_acc br-bl_radius br-br_radius br_1 br_solid br_square br_white-4 c_white font_xbold p-t_3 p-x_4 p_3 r_4 r_5:lg shadow_overlap-light uppercase t_n1 text_center">2<sup>nd</sup> place</div>
 		{{> "Awards.Awardee.Standard.Avatar" modifier_class="flex_row:lg font_1:lg font_0 items_start m-t_5 m-t_0:lg" }}
-	</div>
-</div>
+	</li>
+</ul>
 
 MarkupWrapperClasses:
 
@@ -433,44 +454,44 @@ Awards are blocks design to display the awards for the conference.
 
 Markup:
 <h2 class="font_2:lg font_1 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Column]</h2>
-<div class="grid grid-col_5:lg grid-col_3:md grid-col_2 gap_4">
-	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+<ul class="ul_none m_0 m-b_4 p_0 grid grid-col_5:lg grid-col_3:md grid-col_2 gap_4">
+	<li data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
 		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-	</div>
-	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+	</li>
+	<li data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
 		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-	</div>
-	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+	</li>
+	<li data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
 		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-	</div>
-	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+	</li>
+	<li data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
 		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-	</div>
-	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+	</li>
+	<li data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
 		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-	</div>
-	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+	</li>
+	<li data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
 		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-	</div>
-	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+	</li>
+	<li data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
 		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-	</div>
-	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+	</li>
+	<li data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
 		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-	</div>
-	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
+	</li>
+	<li data-name="award__container" class="flex bg_black-1 p_4 flex_column relative">
 		{{> "Awards.Awardee.Condensed" modifier_class="flex_column font_0" }}
-	</div>
-</div>
+	</li>
+</ul>
 <h2 class="font_2:lg font_1 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }} [Row]</h2>
-<div class="grid grid-col_2 gap_4">
-	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
+<ul class="ul_none m_0 m-b_4 p_0 grid grid-col_2 gap_4">
+	<li data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
 		{{> "Awards.Awardee.Condensed" modifier_class="flex_row:lg font_0 items_start" }}
-	</div>
-	<div data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
+	</li>
+	<li data-name="award__container" class="flex bg_black-1 p_4 flex_column flex_row:md relative m-b_2">
 		{{> "Awards.Awardee.Condensed" modifier_class="flex_row:lg font_0 items_start" }}
-	</div>
-</div>
+	</li>
+</ul>
 
 
 Weight:  100
@@ -488,30 +509,30 @@ Awards are blocks design to display the awards for the conference.
 Markup:
 <h3 class="font_1:lg font_0 font_display font_bold c_primary-n3">{{> "Data.Award.Title" }}</h3>
 <ul class="ul_none grid grid-col_3:lg grid-col_2:md grid-col_1 gap_4">
-<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
-	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
-</li>
-<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
-	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
-</li>
-<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
-	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
-</li>
-<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
-	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
-</li>
-<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
-	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
-</li>
-<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
-	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
-</li>
-<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
-	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
-</li>
-<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
-	{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
-</li>
+	<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+		{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	</li>
+	<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+		{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	</li>
+	<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+		{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	</li>
+	<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+		{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	</li>
+	<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+		{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	</li>
+	<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+		{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	</li>
+	<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+		{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	</li>
+	<li data-name="award__container" class="p-y_3 br-b_1 br_dotted br_primary-3">
+		{{> "Awards.Awardee.UltraCondensed" modifier_class="flex_row:lg font_0 items_start" }}
+	</li>
 </ul>
 
 MarkupWrapperClasses:

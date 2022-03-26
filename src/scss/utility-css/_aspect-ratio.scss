@@ -12,14 +12,6 @@ Styleguide Layouts.AspectRatio
 	width: 100%;
 	overflow: hidden;
 }
-@include loop-style(aspect-ratio);
-@media #{$medium-up} {
-	@include loop-style(aspect-ratio, $bp-label_medium);
-}
-@media #{$large-up} {
-	@include loop-style(aspect-ratio, $bp-label_large);
-}
-
 .aspect_leaderboard{
 	max-width: 728px;
 }
@@ -32,3 +24,35 @@ Styleguide Layouts.AspectRatio
 .aspect_skyscraper{
 	max-width: 160px;
 }
+@include loop-style(aspect-ratio);
+@media #{$medium-up} {
+	.aspect_leaderboard#{$bp-label_medium}{
+		max-width: 728px;
+	}
+	.aspect_billboard#{$bp-label_medium}{
+		max-width: 970px;
+	}
+	.aspect_bigbox#{$bp-label_medium}{
+		max-width: 300px;
+	}
+	.aspect_skyscraper#{$bp-label_medium}{
+		max-width: 160px;
+	}
+	@include loop-style(aspect-ratio, $bp-label_medium);
+}
+@media #{$large-up} {
+	.aspect_leaderboard#{$bp-label_large}{
+		max-width: 728px;
+	}
+	.aspect_billboard#{$bp-label_large}{
+		max-width: 970px;
+	}
+	.aspect_bigbox#{$bp-label_large}{
+		max-width: 300px;
+	}
+	.aspect_skyscraper#{$bp-label_large}{
+		max-width: 160px;
+	}
+	@include loop-style(aspect-ratio, $bp-label_large);
+}
+
