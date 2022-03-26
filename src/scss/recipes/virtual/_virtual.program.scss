@@ -357,7 +357,7 @@ Markup:
         </div>
     </div>
     <div class="c_black flex flex_wrap font_n3 justify_start p_3 br-br_radius br-bl_radius bg_black-2 br_solid br_1 br-t_0 br_black-3">
-        <div class="flex_grow uppercase m-l_auto c_secondary-n2"">
+        <div class="flex_grow uppercase m-l_auto c_secondary-n2">
             {{> "Sub.Credits.NonAccredited" }}
         </div>
     </div>
@@ -581,6 +581,57 @@ Styleguide Program.GridFormat.WhatsNow
 
 */
 
+/*
+
+Whats Happening Now NON-Accredited
+ 
+Condensed Sessions are used for listing designs that are not full featured.
+
+
+Markup:
+<article class="relative isolation_isolate flex flex_column">
+    <div class="b_n5 m-b_n5 p-x_4:md p-x_5:lg relative z_1">
+    {{> "Sub.Header.VideoThumbnail" }}
+    </div>
+    <div class="br-t_3 br_secondary-n2 br_radius br_solid c_black flex flex_column font_0 m-b_4 p-t_5 p_4 shadow_overlap-light t_n5 z_0 flex_column flex gap_3 bg_white flex_auto">
+    <div class="p_2">&nbsp;</div>    
+    <header class="p-t_3">
+        <h3 class="font_display lh_2 c_primary-n2 font_1 m_0">
+            <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6 m-t_n3">{{> "Data.Session.ID" }}</strong>
+            <span class="font_display lh_2 c_primary-n2 m_0 font-size_up-2">
+                {{> "Data.Session.Title" }} {{ modifier_class }}
+            </span>
+        </h3>
+    </header>
+    <div class="font_n1 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
+    <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> Sub.Tags.Category }}</div>
+    <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100 m-t_auto">
+    <div class="bg_secondary-n2 br_radius c_white p_3 p-y_2 font-size_down-1">
+    {{> "Sub.Credits.NonAccredited" }}
+    </div>    
+        <a href="" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
+    </aside>
+    </div>
+</article>
+
+MarkupWrapperClasses: max-w_30:md
+
+Data:
+Data.Session.ID - Session ID
+Data.Session.Title - Session Title
+Data.Agenda.EndTime - Session End Time
+
+SubComponents:
+Sub.Header.VideoThumbnail - Thumbnail of Video
+Sub.Tags.Category - Category Tag
+Sub.ActionButtons - Watch Button
+
+Weight: 10000
+ 
+Styleguide Program.GridFormat.WhatsNow.NonAccredited
+
+*/
+
 
 /*
 
@@ -700,6 +751,52 @@ Styleguide Program.GridFormat.WhatsNext
 
 /*
 
+Whats Happening Next - Non Accredited
+ 
+During the day there will be gaps that will not have a video or session playing so we want to broadcast the information of what will be playing soon. 
+
+
+Markup:
+<article class="relative isolation_isolate flex flex_column">
+    <div class="bg_white br-t_3 br_radius br_secondary-2 br_solid c_black flex flex_auto flex_column font_0 gap_3 m-b_4 p-t_4 p_4 shadow_emboss-light t_n5 texture_light z_0">
+    <header>
+        <h3 class="font_display lh_2 c_secondary-n2 font_0 m_0">
+            <strong class="font_bold font-size_down-2 p-r_3 block uppercase c_black-6 m-t_n3">{{> "Data.Session.ID" }}</strong>
+            <span class="font_display lh_2 c_secondary-n2 m_0 font-size_up-2">
+                {{> "Data.Session.Title" }} {{ modifier_class }}
+            </span>
+        </h3>
+    </header>
+    <div class="font_n1 font_ui c_accent-n1">Starting  @ {{>  Data.Agenda.ReleaseTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
+    <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> Sub.Tags.Category }}</div>
+    <div class="c_secondary-n1 m-t_auto font-size_down-2"> {{> "Sub.Credits.NonAccredited" }}</div>
+    </div>
+</article>
+
+MarkupWrapperClasses: max-w_30:md
+
+Data:
+Data.Session.ID - Session ID
+Data.Session.Title - Session Title
+Data.Agenda.EndTime - Session End Time
+
+SubComponents:
+Sub.Header.VideoThumbnail - Thumbnail of Video
+Sub.Tags.Category - Category Tag
+Sub.ActionButtons - Watch Button
+Sub.Credits.NonAccredited - Non Accredited Tag
+
+
+NOTE: the Date in the Starting message is conditional. If the session starts on a day that isn't today then the date will be displayed. 
+
+Weight: 10000
+ 
+Styleguide Program.GridFormat.WhatsNext.NonAccredited
+*/
+
+
+/*
+
 Whats Happening Next - Grid
 
 At times between breaks of sessions the whats happening next will be a grid will show a whats happening next grid because there are no sessions playing.
@@ -710,7 +807,7 @@ Markup:
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
         {{> Program.GridFormat.WhatsNext modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}
         {{> Program.GridFormat.WhatsNext modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}
-        {{> Program.GridFormat.WhatsNext modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}
+        {{> Program.GridFormat.WhatsNext.NonAccredited modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}
     </div>
 </section>
 
