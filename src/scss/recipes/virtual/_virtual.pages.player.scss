@@ -70,6 +70,119 @@ Styleguide Page.Player.Channel
 */
 
 /*
+Channel Player - UP NEXT
+ 
+Description: 
+ 
+Markup:
+<div class="flex_column flex" id="#{$sessionID}">
+	<header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
+		<h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
+			<span class="block"> Your Watching Channel "Hot Topics" </span>
+		</h3>
+		<div class="self_start flex gap_2">
+			{{> "Sub.ActionButtons.Favorite.Disabled"}}
+			{{> "Sub.Attachments.BigButton.Disabled"}}
+		</div>
+	</header>
+	<section class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3">
+		<div class="flex_auto w_100">
+			<div class="bg_black-2 br_radius flex flex_column flex_row:md gap-x_4 gap-y_3 shadow_emboss-light">
+				<div class="flex_auto font-size_up-2 p-t_4 p_5 w_100">
+					<h1 class="m-t_4">No Current Schedule</h1>
+					<p>The schedule for this channel doesn't have any sessions at this time. Please check back later.</p>
+					<a title="back to program" class="bg_primary nowrap text_center br_radius c_white font-size_down-1 h:bg_primary-n3 h:c_primary-n3 h:c_white h:undecorated p-x_4 p_3" href="../program/" target="_blank">
+						<i class="far fa-arrow-left"></i>
+						<span class="display_none inline-block:md"> Back to Program</span>
+					</a>
+				</div>
+				<div class="bg_white br_square flex flex_auto flex_column gap-y_3 justify_start m_4 max-w_20:md max-w_25:lg p-b_0 p_4 shadow_bevel-light w_100">
+					<h2 class="c_primary-n1 font_bold font_display m_0">Coming Soon</h2>
+					{{> Program.GridFormat.WhatsNext modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}
+				</div>
+			</div>
+		</div>
+		<div class="flex_auto max-w_25:lg max-w_20:md w_100 flex flex_column gap-y_3 justify_start">
+			{{> "Sub.Player.Chat" modifier_class="flex_0"}}
+		</div>
+	</section>
+</div>
+
+SubComponents:
+Sub.Attachments.BigButton.Disabled - Attachments Disabled
+Sub.FacultyList - Faculty List
+Sub.Player.AuxData - Aux Data
+Sub.ActionButtons.Favorite.Disabled - Favorite Button Disabled
+Sub.Player.CIO - CIO
+Sub.Player.Chat - Chat
+
+Data:
+Data.Session.Title - Title
+Data.Session.ID - Session ID
+Sub.Presentation.List - Presentation List
+
+ 
+Weight:0
+ 
+Styleguide Page.Player.Channel.UpNext
+*/
+
+/*
+Channel Player - UP NEXT
+ 
+Description: 
+ 
+Markup:
+<div class="flex_column flex" id="#{$sessionID}">
+    <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
+        <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
+                <span class="block">
+                    You have reached the end of this schedule</span>
+            </h3>
+            <div class="self_start flex gap_2">
+            {{> "Sub.ActionButtons.Favorite.Disabled"}}
+            {{> "Sub.Attachments.BigButton.Disabled"}}
+            </div>
+    </header>
+    <section class="page-main fullscreen-player flex flex_row:md flex_column gap-x_4 gap-y_3">
+        <div class="flex_auto w_100">
+<div class="bg_black-2 br_radius flex flex_column flex_row:md gap-x_4 gap-y_3 shadow_emboss-light">
+            <div class="flex_auto font-size_up-2 p-t_4 p_5 w_100">
+                <h1 class="m-t_4">End of Current Schedule</h1>
+                <p>The Current Program has ended for the day. Please check the program for more.</p>
+                <p>Check back soon for more information or view pass sessions from the On Demand Page.</p>
+                <a title="back to program" class="bg_primary nowrap text_center br_radius c_white font-size_down-1 h:bg_primary-n3 h:c_primary-n3 h:c_white h:undecorated p-x_4 p_3" href="../program/" target="_blank">
+                <i class="far fa-arrow-left"></i>
+                <span class="display_none inline-block:md"> Back to Program</span>
+                </a>
+            </div>
+    </div>
+        </div>       
+    </section>
+</div>
+
+SubComponents:
+Sub.Attachments.BigButton.Disabled - Attachments Disabled
+Sub.FacultyList - Faculty List
+Sub.Player.AuxData - Aux Data
+Sub.ActionButtons.Favorite.Disabled - Favorite Button Disabled
+Sub.Player.CIO - CIO
+Sub.Player.Chat - Chat
+
+Data:
+Data.Session.Title - Title
+Data.Session.ID - Session ID
+Sub.Presentation.List - Presentation List
+
+ 
+Weight:0
+ 
+Styleguide Page.Player.Channel.EndOfChannel
+*/
+
+
+
+/*
 Channel Player External Content
  
 Description: 
@@ -143,46 +256,7 @@ Weight:0
 Styleguide Page.Player.Channel.External
 */
 
-/*
 
-Channel Player No Schedule
-
-description
- 
-Markup:
-<div class="flex_column flex" id="#{$sessionID}">
-    <header class="flex flex_column-reverse font_0 font_1:md font_3:lg p-y_3">
-        <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
-                <span class="block">
-                    <strong class="font_bold p-r_3">CHANNEL:</strong> 
-                    Hot Topics</span>
-            </h3>
-    </header>
-    <section class="bg_black-2 br_round flex flex_column flex_row:md gap-x_4 gap-y_3 shadow_overlap-light">
-        <div class="flex_auto font-size_up-2 p-t_4 p_5 w_100">
-            <h1 class="m-t_4">No Current Schedule</h1>
-            <p>The schedule for this channel doesn't have any sessions at this time. Please check back later.</p>
-            <a title="back to program" class="bg_primary nowrap text_center br_radius c_white font-size_down-1 h:bg_primary-n3 h:c_primary-n3 h:c_white h:undecorated p-x_4 p_3" href="../program/" target="_blank">
-              <i class="far fa-arrow-left"></i>
-              <span class="display_none inline-block:md"> Back to Program</span>
-            </a>
-        </div>
-        <div class="bg_black-2 br_round flex flex_auto flex_column gap-y_3 justify_start m_4 max-w_20:md max-w_25:lg p_5 shadow_emboss-light w_100">
-        <h2 class="font_bold font_display c_primary-n1 m-b_4"><div class="flex_row:md flex flex_column">
-            <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
-        </h2>
-        {{> Program.GridFormat.WhatsNext modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}
-        </div>
-    </section>
-</div>
-        
-
-MarkupWrapperClasses: 
- 
-Weight:0
- 
-Styleguide Page.Player.Channel.NoData
-*/
 
 /*
 Channel Player:Non Accredited

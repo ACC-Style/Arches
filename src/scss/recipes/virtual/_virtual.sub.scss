@@ -447,12 +447,28 @@ The favorite button is a simple icon that can be used to add or remove a favorit
 active   - when the favorite is active
 
 Markup:
-<a href="" aria-label="mark as favorite" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 flex_none {{ modifier_class }}" ><i class="fas fa-heart"></i></a>
+<a href="" aria-label="mark as favorite" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 flex_none  grid items_center text_center {{ modifier_class }}" ><i class="fas fa-heart"></i></a>
 
 Weight:0
 
 Styleguide Sub.ActionButtons.Favorite
 */
+
+/*
+Favorite Button (Disabled)
+ 
+The favorite button is a simple icon that can be used to add or remove a favorite. This button reflects the state of the favorite.
+
+active   - when the favorite is active
+
+Markup:
+<span  class="btn btn-secondary flex_none flex_none disabled grid items_center text_center " ><i class="fas fa-heart"></i></span>
+
+Weight:0
+
+Styleguide Sub.ActionButtons.Favorite.Disabled
+*/
+
 
 /*
 Favorite Button Small
@@ -673,7 +689,7 @@ Attachments Big Button
 On player pages use the big button for attachments. The text only displays when the view port is medium and up.
  
 Markup:
-<a title="download attachments" class="bg_secondary nowrap text_center br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/Tweat_DrSoda" target="_blank"> 
+<a title="download attachments" class="btn btn-secondary btn-lg  p-x_4 p_3 c_white" href="https://www.twitter.com/Tweat_DrSoda" target="_blank"> 
   <i class="far fa-paperclip"></i>
   <span class="display_none inline-block:md"> Attachments</span> 
 </a>
@@ -683,6 +699,24 @@ Weight:0
  
 Styleguide Sub.Attachments.BigButton
 */
+
+/*
+Attachments Big Button (Disabled)
+ 
+On player pages use the big button for attachments. The text only displays when the view port is medium and up.
+ 
+Markup:
+<span class="btn btn-secondary btn-lg disabled p-x_4 p_3 c_white" href="https://www.twitter.com/Tweat_DrSoda" target="_blank"> 
+  <i class="far fa-paperclip"></i>
+  <span class="display_none inline-block:md"> Attachments</span> 
+</span>
+        
+ 
+Weight:0
+ 
+Styleguide Sub.Attachments.BigButton.Disabled
+*/
+
 
 /*
 Chat Window
