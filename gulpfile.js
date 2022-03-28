@@ -162,7 +162,7 @@ var buildbrand = function(base, brand, framework) {
         default:
             construct.pipe(
                 header(
-                    "\n/**Set Active Class**/ \n $active-class-name: 'active';\n\n/** No Framework **/ \n"
+                    "\n/**Set Active Class**/ \n $active-class-name: 'active';\n\n/** No Framework or is a Style Sheet that Should be used as an augmenting stylesheet **/ \n"
                 )
             );
             break;
@@ -528,6 +528,28 @@ gulp.task(
         },
         function STYLEGUIDE() {
             return run("npm run boot_acc").exec();
+        }
+    )
+);
+gulp.task(
+    "build-coveo_acc",
+    gulp.series(
+        function SCSS() {
+            return constructSassFiles("acc", "coveo");
+        },
+        function CSS() {
+            return runSass("acc");
+        },
+        function CONCAT() {
+            return concatCSS("acc", "coveo");
+        },
+        "copy-to-dist",
+        "copy-to-styleguide",
+        function Markdown() {
+            return constructMarkdown("acc", "coveo");
+        },
+        function STYLEGUIDE() {
+            return run("npm run coveo_acc").exec();
         }
     )
 );
