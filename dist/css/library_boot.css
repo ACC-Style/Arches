@@ -6916,11 +6916,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2427" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2266" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2875" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7734" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8435" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3747" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9961" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5175" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0471" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1412" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6952,11 +6952,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4014" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0823" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4328" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3139" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1109" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1287" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2016" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9629" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1086" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5197" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -6997,8 +6997,8 @@ Markup:
     </header>
     <main id="collapseTypeAhead" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_1659" }}
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_4788" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_2467" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_6113" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -7659,7 +7659,7 @@ Inset padding Level 3
 The list of classes used on the body tag
 
 Markup:
-p_4
+p_4 p_5:lg
 
 MarkupWrapperClasses: 
 
@@ -8324,6 +8324,18 @@ Styleguide Sub.YoutubeEmbedPlaylist
 
 /*
 
+Layouts
+
+This app design is based on levels of inset and overlaps in grid areas.
+
+MarkupWrapperClasses: 
+
+Weight: 100
+
+Styleguide Page.Layouts
+*/
+/*
+
 Base Grid Areas
 
 The library base is a grid system that is used for the library page.
@@ -8362,6 +8374,7 @@ Markup:
 		</div>
 	</div>
 </div>
+
 MarkupWrapperClasses: 
 
 Weight:0
@@ -8435,6 +8448,18 @@ Styleguide Page.Layouts.PageGrid
 
 /*
 
+Pages
+
+Most of the pages in the design don't display correctly. in this styleguide because the the design is calculated off of the whole viewport.
+
+MarkupWrapperClasses: 
+
+Weight: -100
+
+Styleguide Page.Pages
+*/
+/*
+
 Sub Page No Filter
 
 The sub pages have a common layouts.
@@ -8444,9 +8469,7 @@ Markup:
 	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea z_4" }}
-			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-				{{> "Navigation.Breadcrumb"}}
-			</header>
+			{{> "Navigation.Breadcrumb"}}
 			<section class="grid:md flex flex_column grid-template_filterAndContent grid-area_mainArea gap_4 p-y_3 p-y_0:md font_1:lg font_0">
 				<div class="grid:md flex flex_column grid-col_5 gap_4 col-start col-end">
 					{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert"}}
@@ -8484,9 +8507,7 @@ Markup:
 	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea z_4" }}
-			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-				{{> "Navigation.Breadcrumb"}}
-			</header>
+			{{> "Navigation.Breadcrumb"}}
 			<section class="grid:md flex flex_column grid-template_filterAndContent grid-area_mainArea gap_4 p-y_3 p-y_0:md font_1:lg font_0">
 				{{> "Sub.Search.FilterRail"  modifier_class="grid-area_filterArea order_last order_unset:md"}}
 				<div class="grid-area_contentArea row-start_1" id="SearchBarTop"> 
@@ -8505,18 +8526,18 @@ Markup:
 					<div class="tab-content" id="nav-tabContent">
 						<div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
 							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
-								<li class="">{{> "Program.Session.Home"  modifier_class="Valvular Blood Vessel " }}</li>
-								<li class="">{{> "Program.Session.Home"  modifier_class="Clinical Cardiovascular Clinical Myocardial " }}</li>
-								<li class="">{{> "Program.Session.Home"  modifier_class="Arteriosclerosis Cardiovascular Chest Pain Pharmacologic " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Blood Vessel Valvular Heart Disease Pharmacologic Cardiovascular Side Effect Side Effect Valvular Heart Disease Blood Vessel Pericardial " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Cardiovascular " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Electrocardiographic Cardiovascular Chest Pain " }}</li>
 							</ul>
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 							</div>
 						<div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
 							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Blood Vessel Electrocardiogram Side Effect Electrocardiographic " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Clinical Electrocardiogram Blood Vessel Arteriosclerosis Myocardial Myocardial Electrocardiographic " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Pericardial Clinical " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Cardiovascular Pharmacologic Pericardial Electrocardiogram Myocardial Side Effect " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Pericardial Arrhythmia Arrhythmia " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Cardiovascular Arrhythmia Electrocardiogram Side Effect Myocardial Clinical " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Myocardial Blood Vessel Valvular Blood Vessel Pharmacologic Pericardial Valvular Heart Disease " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Blood Vessel Myocardial Valvular Pharmacologic Electrocardiographic Myocardial Arrhythmia Side Effect " }}</li>
 							</ul>
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 						</div>
@@ -8533,6 +8554,9 @@ Markup:
 </div>
 
 MarkupWrapperClasses: 
+
+SubComponents:
+Navigation.Breadcrumb -  Breadcrumb Bar
 
 
 NOTE: This page will not render 100% correctly because it is calculated based on the whole viewport and the styleguide has it wrapped in page dynamics..
@@ -8552,15 +8576,13 @@ Markup:
 	<div class="page-wrapper grid:md {{> 'Sub.ClassList.Page'}}">
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> 'Navigation.MainNav' modifier_class='grid-area_menuArea z_4' }}
-			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-				{{> 'Navigation.Breadcrumb'}}
-			</header>
+			{{> 'Navigation.Breadcrumb'}}
 			<section class="flex flex_column font_0 font_1:lg gap_4 grid-area_mainArea grid-col_6 grid-col_5:lg grid:md p-y_0:md p-y_3">
 				<div class="col-start col-end_3:lg col-end_4 flex flex_column gap_4 row-start_1">
 					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
 						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding_up-2'}}">
-							<h1 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Session.Title'}} Pericardial Valvular Clinical Side Effect Pericardial Electrocardiographic </h1>
+							<h1 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Session.Title'}} Cardiovascular Chest Pain </h1>
 							</main>	
 							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
 								<ul class="flex flex_column flex_wrap gap_2 justify_start self_center ul_none uppercase p-x_3">
@@ -8625,16 +8647,14 @@ Markup:
 	<div class="page-wrapper grid:md {{> 'Sub.ClassList.Page'}}">
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> 'Navigation.MainNav' modifier_class='grid-area_menuArea z_4' }}
-			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-				{{> 'Navigation.Breadcrumb'}}
-			</header>
+			{{> 'Navigation.Breadcrumb'}}
 			<section class="flex flex_column font_0 font_1:lg gap_4 grid-area_mainArea grid-col_6 grid-col_5:lg grid:md p-y_0:md p-y_3">
 				<div class="col-start col-end_4:lg col-end flex flex_column gap_4 row-start_1">
 					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
 						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding_up-2'}}">
-							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} Pharmacologic Blood Vessel Arrhythmia Valvular Heart Disease Electrocardiographic Valvular Electrocardiographic Electrocardiogram </h1>
-							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}} Arrhythmia Side Effect Arrhythmia Cardiovascular Valvular Pharmacologic Arteriosclerosis Myocardial Electrocardiogram  </h2>
+							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} Chest Pain </h1>
+							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}} Chest Pain Electrocardiographic Pericardial  </h2>
 							</main>	
 							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
 								<ul class="flex flex_column flex_wrap gap_2 justify_start self_center ul_none uppercase p-x_3">
@@ -8670,10 +8690,10 @@ Markup:
 							{{> 'Sub.Section.h3' modifier_class='presentation playlist'}}</div>
 							<div class="font_n2 font_n1:lg relative isolation_isolate">
 								<ul class="flex flex_column justify_stretch gap_3 ul_none">
-									{{> "Program.Presentation.Condensed" modifier_class="Electrocardiogram Chest Pain Arteriosclerosis Pharmacologic Clinical Pharmacologic Cardiovascular Electrocardiogram Cardiovascular "}}
-									{{> "Program.Presentation.CondensedPlaying" modifier_class="Chest Pain Pericardial Electrocardiographic Chest Pain Arteriosclerosis Cardiovascular Side Effect Arrhythmia "}}
-									{{> "Program.Presentation.Condensed" modifier_class="Electrocardiographic Pericardial Chest Pain Pharmacologic Pharmacologic Pharmacologic Clinical Valvular Heart Disease "}}
-									{{> "Program.Presentation.Condensed" modifier_class="Valvular Cardiovascular "}}
+									{{> "Program.Presentation.Condensed" modifier_class=""}}
+									{{> "Program.Presentation.CondensedPlaying" modifier_class="Pericardial Valvular Electrocardiogram Valvular Blood Vessel Electrocardiographic Pharmacologic "}}
+									{{> "Program.Presentation.Condensed" modifier_class="Clinical Side Effect Valvular Heart Disease Pharmacologic Pharmacologic Arteriosclerosis "}}
+									{{> "Program.Presentation.Condensed" modifier_class=""}}
 								</ul>
 							</div>
 						</section>
@@ -8705,6 +8725,7 @@ Credit Page
 Credits Pages
 
 Markup:
+<a class="link" href="https://acc-style.github.io/PrototypingACCorg/library/credits/">LINK TO PROTOTYPE FOR THIS PAGE</a>
 
 
 MarkupWrapperClasses: 
@@ -8712,7 +8733,7 @@ MarkupWrapperClasses:
 
 NOTE: This page will not render 100% correctly because it is calculated based on the whole viewport and the styleguide has it wrapped in page dynamics..
 
-Weight:0
+Weight:1000
 
 Styleguide Page.Pages.Credit
 */
@@ -8807,7 +8828,7 @@ Markup:
 
 MarkupWrapperClasses:
 
-Weight:0
+Weight:-100
 
 Styleguide Page.Pages.Legal
 */
@@ -8857,7 +8878,7 @@ Markup:
 
 MarkupWrapperClasses:
 
-Weight:0
+Weight:-50
 
 Styleguide Page.Pages.NoAccess
 */
@@ -8887,11 +8908,11 @@ Markup:
 						{{> 'Sub.Section.h2' modifier_class="Continue Watching" }}
 						<div class="font_n2 font_n1:lg relative isolation_isolate">
 							<ul class="flex flex_column justify_stretch gap_0 ul_none {{> 'Sub.ClassList.Inset.level_down-1'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class=''}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Pericardial Pharmacologic '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Pericardial '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Clinical Valvular Heart Disease Pharmacologic Chest Pain Valvular Heart Disease Myocardial Valvular Heart Disease '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Blood Vessel Clinical Arrhythmia Valvular Electrocardiogram Pharmacologic Arrhythmia '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Clinical Clinical Pericardial Pharmacologic Electrocardiographic Valvular Heart Disease Myocardial Electrocardiographic '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Myocardial Cardiovascular '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Arteriosclerosis Chest Pain Electrocardiographic '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Clinical Electrocardiogram Pharmacologic Arrhythmia Arrhythmia Blood Vessel '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Electrocardiographic Cardiovascular '}}
 							</ul>
 						</div>
 						{{> 'Sub.Section.Footer'  modifier_class="Continue Watching" }}
@@ -8944,13 +8965,7 @@ Markup:
         </picture>
     </section>
     <div class="m_auto m-t_n4 t_n4 t_n5:lg m-t_n5:lg max-w_60:lg max-w_40:md p-x_3 p-x_5:md z_2 relative">
-        <div class="bg_white br_radius shadow_overlap-light p_5:lg p_4">
-            <div class="input-holder flex flex_row self_end relative w_100">
-                <input id="input_uniqueTextAndButton" name="input_uniqueTextAndButton" type="text" placeholder="Search" class="br_2 flex_auto p-y_2 br_solid flex_auto p-l_4 lh_3 br_radius bg_white c_black bg_white f:bg_primary br_black-2  font_2"/>
-                <button  class="disabled ease_out transition_1 f:outline_none text_center br_none inline-block w_auto font_regular font_ui absolute t_0 b_0 r_0 h:underline undecorated bg_primary c_white h:br_primary-n3 br-br_radius br-tr_radius br_square font_2" >Search</button>
-            </div>
-           {{> 'Navigation.Home.Utility' }} 
-        </div>
+        {{> "Sub.Section.SearchBar"}}
     </div>
 </header>
 
@@ -8959,6 +8974,37 @@ MarkupWrapperClasses:
 Weight:0
 
 Styleguide Structures.Home.Header
+*/
+/*
+
+Home Search Bar and Quick Links
+
+A central interaction point for the user on the homepage. 
+
+Markup:
+<div class="{{> 'Sub.ClassList.Inset.level_up-1'}}  {{> 'Sub.ClassList.Inset.padding_up-3'}}">
+    <div class="input-holder flex flex_row self_end relative w_100">
+        <input id="input_uniqueTextAndButton" name="input_uniqueTextAndButton" type="text" placeholder="Search" class="br_2 flex_auto p-y_2 br_solid flex_auto p-l_4 lh_3 br_radius bg_white c_black bg_white f:bg_primary br_black-2  font_2"/>
+        <button  class="disabled ease_out transition_1 f:outline_none text_center br_none inline-block w_auto font_regular font_ui absolute t_0 b_0 r_0 h:underline undecorated bg_primary c_white h:br_primary-n3 br-br_radius br-tr_radius br_square font_2" >
+        <i class="fas fa-search"></i>
+        <span class="inline-block:md display_none">Search</span>
+        </button>
+    </div>
+    {{> 'Navigation.Home.Utility' }} 
+</div>
+
+MarkupWrapperClasses: 
+
+SubComponents:
+Navigation.Home.Utility - Quick Links
+
+ClassList:
+Sub.ClassList.Inset.level_up-1  - Inset level_up-1
+Sub.ClassList.Inset.padding_up-3 - Inset padding_up-3
+
+Weight:0
+
+Styleguide Sub.Section.SearchBar
 */
 /*
 
@@ -8985,14 +9031,14 @@ Horizontal Carousels to have discoverable areas on the home pages.
 Markup:
 <div class="relative isolation_isolate overflow_hidden {{>'Sub.ClassList.Inset.margin_down-1'}}">
         <div id="slider1" class=" flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3 {{> 'Sub.ClassList.Inset.level_down-1'}} ">
-        {{> "Program.Session.Home"  modifier_class="Clinical Cardiovascular Side Effect Electrocardiogram Arteriosclerosis "}}
-        {{> "Program.Session.Home"  modifier_class="Myocardial "}}
-        {{> "Program.Session.Home"  modifier_class="Electrocardiographic Myocardial Valvular Heart Disease Electrocardiographic Electrocardiographic Myocardial Blood Vessel Valvular Heart Disease Cardiovascular "}}
-        {{> "Program.Session.Home"  modifier_class="Side Effect Arteriosclerosis "}}        
-        {{> "Program.Session.Home"  modifier_class="Pericardial Clinical Pericardial Electrocardiogram Electrocardiographic Side Effect "}}
-        {{> "Program.Session.Home"  modifier_class="Cardiovascular Pharmacologic Pharmacologic Arrhythmia Arteriosclerosis Valvular Heart Disease Pharmacologic "}}        
-        {{> "Program.Session.Home"  modifier_class="Cardiovascular Pharmacologic Valvular Heart Disease Valvular Heart Disease Arteriosclerosis Chest Pain Arrhythmia "}}
-        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Electrocardiogram Chest Pain Electrocardiographic Myocardial "}}
+        {{> "Program.Session.Home"  modifier_class="Arteriosclerosis Myocardial Pericardial Pharmacologic Chest Pain Arteriosclerosis Arteriosclerosis "}}
+        {{> "Program.Session.Home"  modifier_class="Cardiovascular Chest Pain "}}
+        {{> "Program.Session.Home"  modifier_class="Myocardial Myocardial Cardiovascular Myocardial Valvular Electrocardiographic Chest Pain Blood Vessel "}}
+        {{> "Program.Session.Home"  modifier_class="Electrocardiographic Pericardial Pharmacologic Cardiovascular Side Effect Chest Pain Electrocardiographic "}}        
+        {{> "Program.Session.Home"  modifier_class="Valvular Heart Disease "}}
+        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Side Effect Valvular Clinical "}}        
+        {{> "Program.Session.Home"  modifier_class="Cardiovascular Arrhythmia Blood Vessel Pericardial Blood Vessel Arteriosclerosis Pharmacologic "}}
+        {{> "Program.Session.Home"  modifier_class="Pericardial Blood Vessel Electrocardiographic Myocardial "}}
     </div>
     {{> 'Sub.Carousel.CustomTools'}}
 </div>
@@ -9149,11 +9195,11 @@ Markup:
     {{> 'Sub.Section.h2' modifier_class="continue watching" }}
     <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.ClassList.Inset.level_down-1'}} ">
         <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.level_down'}} ">
-        {{> "Program.Presentation.Condensed"  modifier_class="Clinical Arrhythmia Pericardial Pharmacologic Valvular Myocardial Side Effect "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Electrocardiogram "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Myocardial Pharmacologic "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Myocardial Pharmacologic Chest Pain Cardiovascular Cardiovascular Pharmacologic Blood Vessel Blood Vessel "}}
         {{> "Program.Presentation.Condensed"  modifier_class=""}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Cardiovascular "}}
+        {{> "Program.Presentation.Condensed"  modifier_class=""}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Side Effect "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Arteriosclerosis Cardiovascular Clinical Electrocardiographic Cardiovascular Valvular Heart Disease Clinical Cardiovascular "}}
         </div>
         {{> 'Sub.Carousel.CustomToolsVertical'}}
     </div>
@@ -9182,6 +9228,8 @@ let args2 ={
 MarkupWrapperClasses: main-area-offset p_2 p-x_5:md p-y_4:md isolation_isolate br_radius bg_white-7
 
 NOTE: container: '#SliderContinueWatching', controlsContainer: "#slider-customize-controls-vertical" need to be unique to the slider. 
+
+EXPERIMENTAL: this design is new and is not being used.
 
 Weight: 0
 
@@ -9297,26 +9345,31 @@ MarkupWrapperClasses:
 
 Weight: 0
 
-FORMAT: This uses a strick data format look at x
 
 Styleguide Navigation.Home.Utility
 */
 /*
 
-Breadcrumb
+Breadcrumb Bar
 
 Basic Nav that helps the user orientate the context of the page.
 
 Markup:
-<nav class="overflow_hidden lh_0  font_ui font_2 font_regular c_black-7 {{modifier_class}}">
+<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
+    <nav class="overflow_hidden lh_0  font_ui font_2 font_regular c_black-7 {{modifier_class}}">
     <ol class="flex flex_no-wrap flex_row items_center overflow_hidden ul_none w_100"> 
         {{> 'Sub.Navigation.Breadcrumb.FirstItem' }}
         {{> 'Sub.Navigation.Breadcrumb.NotFirstItem' modifier_class="Session Shorten Name" }}
         {{> 'Sub.Navigation.Breadcrumb.LastItem' modifier_class="Presentation Shorten Name" }}
     </ol>   
 </nav>
+</header>
 
 MarkupWrapperClasses: 
+
+ClassList:
+Sub.ClassList.Inset.padding_up-1 - Inset Padding Up 1
+Sub.ClassList.Inset.level_up - Inset Level Up Decoration
 
 SubComponents:
 Sub.Navigation.Breadcrumb.FirstItem - First item

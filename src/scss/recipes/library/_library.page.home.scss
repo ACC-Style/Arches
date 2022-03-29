@@ -86,13 +86,7 @@ Markup:
         </picture>
     </section>
     <div class="m_auto m-t_n4 t_n4 t_n5:lg m-t_n5:lg max-w_60:lg max-w_40:md p-x_3 p-x_5:md z_2 relative">
-        <div class="bg_white br_radius shadow_overlap-light p_5:lg p_4">
-            <div class="input-holder flex flex_row self_end relative w_100">
-                <input id="input_uniqueTextAndButton" name="input_uniqueTextAndButton" type="text" placeholder="Search" class="br_2 flex_auto p-y_2 br_solid flex_auto p-l_4 lh_3 br_radius bg_white c_black bg_white f:bg_primary br_black-2  font_2"/>
-                <button  class="disabled ease_out transition_1 f:outline_none text_center br_none inline-block w_auto font_regular font_ui absolute t_0 b_0 r_0 h:underline undecorated bg_primary c_white h:br_primary-n3 br-br_radius br-tr_radius br_square font_2" >Search</button>
-            </div>
-           {{> 'Navigation.Home.Utility' }} 
-        </div>
+        {{> "Sub.Section.SearchBar"}}
     </div>
 </header>
 
@@ -102,6 +96,39 @@ Weight:0
  
 Styleguide Structures.Home.Header
 */
+
+/*
+
+Home Search Bar and Quick Links
+
+A central interaction point for the user on the homepage. 
+ 
+Markup:
+<div class="{{> 'Sub.ClassList.Inset.level_up-1'}}  {{> 'Sub.ClassList.Inset.padding_up-3'}}">
+    <div class="input-holder flex flex_row self_end relative w_100">
+        <input id="input_uniqueTextAndButton" name="input_uniqueTextAndButton" type="text" placeholder="Search" class="br_2 flex_auto p-y_2 br_solid flex_auto p-l_4 lh_3 br_radius bg_white c_black bg_white f:bg_primary br_black-2  font_2"/>
+        <button  class="disabled ease_out transition_1 f:outline_none text_center br_none inline-block w_auto font_regular font_ui absolute t_0 b_0 r_0 h:underline undecorated bg_primary c_white h:br_primary-n3 br-br_radius br-tr_radius br_square font_2" >
+        <i class="fas fa-search"></i>
+        <span class="inline-block:md display_none">Search</span>
+        </button>
+    </div>
+    {{> 'Navigation.Home.Utility' }} 
+</div>
+
+MarkupWrapperClasses: 
+
+SubComponents:
+Navigation.Home.Utility - Quick Links
+
+ClassList:
+Sub.ClassList.Inset.level_up-1  - Inset level_up-1
+Sub.ClassList.Inset.padding_up-3 - Inset padding_up-3
+
+Weight:0
+ 
+Styleguide Sub.Section.SearchBar
+*/
+
 
 
 /*
@@ -329,6 +356,8 @@ let args2 ={
 MarkupWrapperClasses: main-area-offset p_2 p-x_5:md p-y_4:md isolation_isolate br_radius bg_white-7
 
 NOTE: container: '#SliderContinueWatching', controlsContainer: "#slider-customize-controls-vertical" need to be unique to the slider. 
+
+EXPERIMENTAL: this design is new and is not being used.
 
 Weight: 0
 

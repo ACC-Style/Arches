@@ -1,5 +1,16 @@
 @import  "../virtual/data/virtual.helper.randomWords";
+/*
 
+Pages
+
+Most of the pages in the design don't display correctly. in this styleguide because the the design is calculated off of the whole viewport.
+
+MarkupWrapperClasses: 
+
+Weight: -100
+ 
+Styleguide Page.Pages
+*/
 /*
 
 Sub Page No Filter
@@ -11,9 +22,7 @@ Markup:
 	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea z_4" }}
-			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-				{{> "Navigation.Breadcrumb"}}
-			</header>
+			{{> "Navigation.Breadcrumb"}}
 			<section class="grid:md flex flex_column grid-template_filterAndContent grid-area_mainArea gap_4 p-y_3 p-y_0:md font_1:lg font_0">
 				<div class="grid:md flex flex_column grid-col_5 gap_4 col-start col-end">
 					{{> "Page.Layouts.SubGridFiller"  modifier_class="Insert"}}
@@ -52,9 +61,7 @@ Markup:
 	<div class="page-wrapper grid {{> "Sub.ClassList.Page"}}">	
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea z_4" }}
-			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-				{{> "Navigation.Breadcrumb"}}
-			</header>
+			{{> "Navigation.Breadcrumb"}}
 			<section class="grid:md flex flex_column grid-template_filterAndContent grid-area_mainArea gap_4 p-y_3 p-y_0:md font_1:lg font_0">
 				{{> "Sub.Search.FilterRail"  modifier_class="grid-area_filterArea order_last order_unset:md"}}
 				<div class="grid-area_contentArea row-start_1" id="SearchBarTop"> 
@@ -102,6 +109,9 @@ Markup:
 
 MarkupWrapperClasses: 
 
+SubComponents:
+Navigation.Breadcrumb -  Breadcrumb Bar
+
 
 NOTE: This page will not render 100% correctly because it is calculated based on the whole viewport and the styleguide has it wrapped in page dynamics..
  
@@ -123,9 +133,7 @@ Markup:
 	<div class="page-wrapper grid:md {{> 'Sub.ClassList.Page'}}">
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> 'Navigation.MainNav' modifier_class='grid-area_menuArea z_4' }}
-			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-				{{> 'Navigation.Breadcrumb'}}
-			</header>
+			{{> 'Navigation.Breadcrumb'}}
 			<section class="flex flex_column font_0 font_1:lg gap_4 grid-area_mainArea grid-col_6 grid-col_5:lg grid:md p-y_0:md p-y_3">
 				<div class="col-start col-end_3:lg col-end_4 flex flex_column gap_4 row-start_1">
 					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
@@ -197,9 +205,7 @@ Markup:
 	<div class="page-wrapper grid:md {{> 'Sub.ClassList.Page'}}">
 		<div class="grid:md grid-template_page flex flex_column gap_4:md gap_3">
 			{{> 'Navigation.MainNav' modifier_class='grid-area_menuArea z_4' }}
-			<header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-				{{> 'Navigation.Breadcrumb'}}
-			</header>
+			{{> 'Navigation.Breadcrumb'}}
 			<section class="flex flex_column font_0 font_1:lg gap_4 grid-area_mainArea grid-col_6 grid-col_5:lg grid:md p-y_0:md p-y_3">
 				<div class="col-start col-end_4:lg col-end flex flex_column gap_4 row-start_1">
 					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
@@ -278,6 +284,7 @@ Credit Page
 Credits Pages
  
 Markup:
+<a class="link" href="https://acc-style.github.io/PrototypingACCorg/library/credits/">LINK TO PROTOTYPE FOR THIS PAGE</a>
 
 
 MarkupWrapperClasses: 
@@ -285,7 +292,7 @@ MarkupWrapperClasses:
 
 NOTE: This page will not render 100% correctly because it is calculated based on the whole viewport and the styleguide has it wrapped in page dynamics..
  
-Weight:0
+Weight:1000
  
 Styleguide Page.Pages.Credit
 */
@@ -382,7 +389,7 @@ Markup:
 
 MarkupWrapperClasses:
 
-Weight:0
+Weight:-100
  
 Styleguide Page.Pages.Legal
 */
@@ -434,7 +441,7 @@ Markup:
 
 MarkupWrapperClasses:
 
-Weight:0
+Weight:-50
  
 Styleguide Page.Pages.NoAccess
 */
