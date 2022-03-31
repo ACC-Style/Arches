@@ -140,7 +140,7 @@ Time Markers
 shows users where they results can be found in the result. 
  
 Markup:
-<aside class="bg_black-_05 p-x_4 p-y_3 br_radius flex flex_row flex_wrap texture_light br_solid br_black-1 br_1 font_ui">
+<aside class="flex flex_row flex_wrap font_ui {{> 'Sub.ClassList.Inset.down-1'}} {{> 'Sub.ClassList.Inset.padding'}}">
     <strong class="p-r_3 block w_100">Search Word Found At These Time Markers</strong>
     <ul class="ul_inline-pipe">
         <li class="c_primary uppercase font_medium"><a href="" class="link"><i class="fas fa-play c_primary font-size_down-1 self_center"></i> start</a></li>
@@ -150,6 +150,11 @@ Markup:
 </aside>
 
 MarkupWrapperClasses: 
+
+
+ClassList:
+Sub.ClassList.Inset.down-1 - Inset Down 1
+Sub.ClassList.Inset.padding - Inset Padding
  
 Weight:0
  
@@ -440,17 +445,24 @@ Description: Most players have auxiliary data zones that describe the playing el
 Markup:
 <aside class="{{ modifier_class }}">    
     {{> "Sub.FacultyList.AuxSession"  modifier_class=""}}
-    <h4 class="font-size_up c_black-6 font_medium capitalize"><i class="fas fa-file-certificate p-r_3"></i> Credits</h4>
-    <div class="p-y_3 br-t_1  br_primary-2 br_solid font-size_down-1">
-      {{> "Sub.Credit.Chiclets.Horizontal" }}
+    <h4 class="font-size_up c_black-6 font_medium capitalize">
+        <i class="fas fa-file-certificate p-r_3"></i> Credits
+    </h4>
+    <div class="p-y_3 {{> 'Sub.ClassList.Border.PrimaryTop'}} font-size_down-1">
+        {{> "Sub.Credit.Chiclets.Horizontal" }}
     </div>
-    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tag p-r_3"></i>category</h4>
-    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
+    <h4 class="font-size_up  c_black-6 font_medium">
+        <i class="fas fa-tag p-r_3"></i>
+        category
+    </h4>
+    <div class="{{> 'Sub.ClassList.Border.PrimaryTop'}} font-size_down">
         {{> "Sub.Tags.Category" }}
     </div>
-    <h4 class="font-size_up  c_black-6 font_medium"><i class="fas fa-tags p-r_3"></i>tags</h4>
-    <div class="br-t_1  br_primary-2 br_solid p-y_3 c_black-7 font-size_down">
-      {{> "Sub.Tags.Filter" }}
+    <h4 class="font-size_up  c_black-6 font_medium">
+        <i class="fas fa-tags p-r_3"></i> tags
+    </h4>
+    <div class="{{> 'Sub.ClassList.Border.PrimaryTop'}} font-size_down">
+        {{> "Sub.Tags.Filter" }}
     </div>
 </aside>
 
@@ -460,12 +472,14 @@ Sub.FacultyList.AuxSession - Session Faculty Lists
 Sub.Credit.Chiclets.Horizontal - Credit Chiclets Horizontal
 Sub.Tags.Category - Category
 Sub.Tags.Filter - Tags
+
+ClassList:
+Sub.ClassList.Border.PrimaryTop - Border Primary Top
  
 Weight:0
  
 Styleguide Sub.Player.AuxData
 */
-
 
 /*
 Category Tag
@@ -507,3 +521,98 @@ Styleguide Sub.Tags.Filter
 
 
 
+/*
+
+Footer Logo
+
+The ACC Logo in the footer.
+ 
+Markup:
+<div id="logo" class="bg_white br_1 br_black-1 br_round br-br_radius br-tl_radius  br_solid flex flex_none flex_row items_center justify_center  shadow_bevel-light {{> 'Sub.ClassList.Inset.padding.up-1'}} {{ modifier_class}} ">
+    <h2 class="logo_condensed w_100 max-w_20">American College of Cardiology</h2>
+</div>
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Sub.Footer.Logo
+*/
+
+/*
+
+Legal RoadBlock Sub Components
+
+The legal roadblock is a page that stops the user when they haven't accepted the terms of use or any other legal agreements needed for the use of the product.
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Sub.Legal
+*/
+/*
+
+Legal Content Block
+
+A legal block will block a user from the program if they user has not signed it.  If there is more then one user block all must be accepted before the user can proceed.
+ 
+Markup:
+<article class="isolation_isolate p_1 p-b_4 relative">
+    <nav class="r_0 sticky t_0 z_1">
+        <div class="absolute flex flex_nowrap flex_row gap-x_3 r_4">
+            <!--  Helper Jump links -->
+            <a class="c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_2" href="#TopAgreement1">
+                <span><i class="fas fa-arrow-up p-r_2"></i>top</span>
+            </a>
+            <a class="c_white br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_2" href="#Agreement1">
+                <span><i class="fas fa-arrow-down p-r_2"></i>scroll down</span>
+            </a>
+            <!--  Helper Jump links -->
+        </div>
+    </nav>
+    <header class="bg_white p-t_0 p-b_3 relative z_3">
+        <h2 class="bg_white m-t_n2 m_0 {{> 'Sub.ClassList.Vertical.padding.up-1'}}">ACC Anywhere 2022 Credit Information, Terms of Service, and License Agreement </h2>
+    </header>
+    <main class="z_0 isolation_isolate {{> 'Sub.ClassList.Vertical.padding.up-1'}} {{> 'Sub.ClassList.Border.PrimaryTop' }}">
+    <!---  Agreement HTML START -->
+        <p class="font-size_up">The Terms of Service and License Agreement set forth below constitute a legal agreement (collectively, the "Agreement") between the American College of Cardiology Foundation ("ACCF") and You and your agents ("You" or “Your”) for the use of the ACC Anywhere 2022 (the "Product”).    </p><p class="font-size_up">
+            By clicking on the Agree button below, and by using the Product, You accept and agree to be bound by all of the terms and conditions set forth in this Agreement. If You do not wish to accept the terms and conditions of this Agreement, You may not proceed to use the Product. </p>
+        <p class="font-size_up"><a href="" class="c_accent-n2 font_bold font_ui link" target="_blank">Click to Read Full Terms of Service.</a></p>
+            <p class="">I hereby certify that I understand and agree to the terms stated in this Agreement and that this Agreement applies to my initial use of the Product and all other subsequent uses of the Product.</p>
+            <!---  Agreement HTML END -->
+    </main>
+</article>
+
+MarkupWrapperClasses: 
+
+ClassList:
+Sub.ClassList.Vertical.padding.up-1 - Vertical Padding Up 1
+Sub.ClassList.Border.PrimaryTop - Border Primary Top
+
+Weight:0
+ 
+Styleguide Sub.Legal.ContentBlock
+*/
+
+/*
+
+Legal Attestation Statement
+
+This statement is used to attest that the user has read and accepted the legal agreement. This follows all Legal Content Blocks. Clicking the button will flip the `btn-secondary` state to 'btn-sucess active'
+
+.btn-success.active - the accepted state
+
+Markup:
+<footer id="Agreement1">
+    <div class="bg_acc br_radius c_white font_2 font_bold font_medium font_ui lh_1 m-b_3 p-y_4 p_3 text_center uppercase">By Clicking The Button Below, I Hereby Affirm That I Have Read, Fully Understand, And Agree To The Above Statements. </div>
+    <button class="btn btn-secondary {{ modifier_class }} c_white h:undecorated float_right"><i class="fas fa-check display_none a:inline-block"></i> I agree</button>
+</footer>
+
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Sub.Legal.AgreeButton
+*/

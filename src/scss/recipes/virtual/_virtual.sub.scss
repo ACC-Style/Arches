@@ -196,18 +196,13 @@ Presentation List Item
 When sessions have more then one presentation they are listed in a list. Presentations are colored with bg_white and bg_white-9 to have color differences. 
  
 Markup:
-<li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white relative font_ui">
+<li class="{{> 'Sub.ClassList.Border.BlackTop'}} p-x_4 p-y_3 m_0 lh_2 bg_white relative font_ui">
   <div class="float_right inline p_3 m-r_n3 m-t_n3">{{> "Sub.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
   <span data-title="title" class="font-size_up-1 inline font_display lh_2">{{> "Data.Presentation.Title" }}</span>
   <span class="font-size-down ">{{> "Sub.FacultyList" modifier_class="block w_100 font-size_down-1"}}</span>
   <span class="font-size-down-1 c_accent-n1 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
 </li>
-<li class="br-t_1 br_black-2 br_solid p-x_4 p-y_3 m_0 lh_2 bg_white-9 relative font_ui">
-  <div class="float_right inline p_3 m-r_n3 m-t_n3">{{> "Sub.ActionButtons.Favorite.Small" modifier_class="font-size_down-2"}}</div>
-  <span data-title="title" class="font-size_up-1 inline font_display lh_2">Necessitatibus Eum Quasi</span>
-  <span class="font-size-down ">{{> "Sub.FacultyList" modifier_class="block w_100 font-size_down-1"}}</span>
-  <span class="font-size-down-1 c_accent-n1 font_italic block">{{> "Data.Presentation.LiveTime" }}</span>
-</li>
+
  
 MarkupWrapperClasses: ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3
 
@@ -221,6 +216,8 @@ SubComponents:
 Sub.FacultyList - Faculty List
 Sub.ActionButtons.Favorite.Small - Small Action Button
 
+ClassList:
+Sub.ClassList.Border.BlackTop - Border Top
 
 Weight:0
  
@@ -235,6 +232,8 @@ List of Presentations is similar DOM independent of the context.
 Markup:
 <h4 class="font-size_up p-x_3 c_primary-n2 font_medium">Presentations</h4>
 <ul class="ul_none br-t_1 br_solid br_primary p_0 font_n1 bg_primary-n3">
+  {{> Sub.Presentation.ListItem }}
+  {{> Sub.Presentation.ListItem }}
   {{> Sub.Presentation.ListItem }}
   {{> Sub.Presentation.ListItem }}
 </ul>

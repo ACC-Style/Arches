@@ -34,7 +34,7 @@ Markup:
 			</section>
 			<footer class="flex flex_column gap_4 grid-area_footerArea grid-col_5 grid:md m-t_auto p-y_0:md p-y_3">
 				{{> "Navigation.Footer.Links" modifier_class="col-start col-end_4" }}
-				{{> "Navigation.Footer.Logo"  modifier_class="col-start_4 col-end" }}
+				{{> "Sub.Footer.Logo"  modifier_class="col-start_4 col-end" }}
 			</footer>
 		</div>
 	</div>
@@ -66,10 +66,10 @@ Markup:
 				{{> "Sub.Search.FilterRail"  modifier_class="grid-area_filterArea order_last order_unset:md"}}
 				<div class="grid-area_contentArea row-start_1" id="SearchBarTop"> 
 					{{> "Sub.Search.Bar"  }}
-					<div class="{{> 'Sub.ClassList.Vertical.padding_up-1' }}">
+					<div class="{{> 'Sub.ClassList.Vertical.padding.up-1' }}">
 						{{> "Sub.Search.ResultOverview"}}
 					</div>
-					<div class="{{> "Sub.ClassList.Inset.level_down-1"}} {{> 'Sub.ClassList.Inset.padding' }} ">
+					<div class="{{> "Sub.ClassList.Inset.down-1"}} {{> 'Sub.ClassList.Inset.padding' }} ">
 					<nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light" id="tabContentLight" role="tablist">
 						<ul class="flex_column flex_row:md  nav">
 							{{> "Structures.Tabs.Tabs.LinkActive" }}
@@ -79,7 +79,7 @@ Markup:
 					</nav>
 					<div class="tab-content" id="nav-tabContent">
 						<div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
-							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
+							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding.up-1' }}">
 								<li class="">{{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
 								<li class="">{{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
 								<li class="">{{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
@@ -87,7 +87,7 @@ Markup:
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 							</div>
 						<div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
-							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding_up-1' }}">
+							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding.up-1' }}">
 								<li class=""> {{> "Program.Presentation.Search"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
 								<li class=""> {{> "Program.Presentation.Search"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
 								<li class=""> {{> "Program.Presentation.Search"  modifier_class="#{ call(get-function('randomWords'), random(10)) }" }}</li>
@@ -101,7 +101,7 @@ Markup:
 			</section>
 			<footer class="flex flex_column gap_4 grid-area_footerArea grid-col_5 grid:md m-t_auto p-y_0:md p-y_3">
 				{{> "Navigation.Footer.Links" modifier_class="col-start col-end_4" }}
-				{{> "Navigation.Footer.Logo"  modifier_class="col-start_4 col-end" }}
+				{{> "Sub.Footer.Logo"  modifier_class="col-start_4 col-end" }}
 			</footer>
 		</div>
 	</div>
@@ -136,9 +136,9 @@ Markup:
 			{{> 'Navigation.Breadcrumb'}}
 			<section class="flex flex_column font_0 font_1:lg gap_4 grid-area_mainArea grid-col_6 grid-col_5:lg grid:md p-y_0:md p-y_3">
 				<div class="col-start col-end_3:lg col-end_4 flex flex_column gap_4 row-start_1">
-					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
+					<section class="{{>'Sub.ClassList.Inset.up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
-						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding_up-2'}}">
+						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding.up-2'}}">
 							<h1 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Session.Title'}} #{ call(get-function('randomWords'), random(10)) }</h1>
 							</main>	
 							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
@@ -149,18 +149,18 @@ Markup:
 								</ul>
 							</aside>
 						</div>
-						<nav class="{{>'Sub.ClassList.Inset.padding_up-3'}} font_2:lg font_1">
+						<nav class="{{>'Sub.ClassList.Inset.padding.up-3'}} font_2:lg font_1">
 							<h3 class="c_black-8">How did you like this session?</h3>
 							{{> 'Sub.ActionButtons.LikeAndAttachments' }}
 						</nav>
-						<section class="font_0 m_3 {{>'Sub.ClassList.Inset.level_down-1'}} {{>'Sub.ClassList.Inset.padding_up-2'}}">
+						<section class="font_0 m_3 {{>'Sub.ClassList.Inset.down-1'}} {{>'Sub.ClassList.Inset.padding.up-2'}}">
 							{{> 'Sub.Section.h3' modifier_class='session details'}} 
 							{{> 'Sub.Player.AuxData'}}
 						</section>
 					</section>
 				</div>
 				<div class="col-end col-start_3:lg col-start_4 row-start_1">
-					<section class="{{>'Sub.ClassList.Inset.level_up'}} {{>'Sub.ClassList.Inset.padding_up-2'}}">
+					<section class="{{>'Sub.ClassList.Inset.up'}} {{>'Sub.ClassList.Inset.padding.up-2'}}">
 						<div class="flex flex_row items_center">
 						<span class="c_black-4 font_1 font_2:md font_3:lg font_display font_regular lh_1 m-b_3 m-b_4:lg m-t_3 p-l_3 p-r_4 self_end"><i class="fa-list-alt fas font-size_up-2"></i></span>
 						{{> 'Sub.Section.h2' modifier_class='presentation playlist'}}</div>
@@ -177,7 +177,7 @@ Markup:
 			</section>
 			<footer class="flex flex_column gap_4 grid-area_footerArea grid-col_5 grid:md m-t_auto p-y_0:md p-y_3">
 				{{> "Navigation.Footer.Links" modifier_class="col-start
-				col-end_4" }} {{> "Navigation.Footer.Logo"
+				col-end_4" }} {{> "Sub.Footer.Logo"
 				modifier_class="col-start_4 col-end" }}
 			</footer>
 		</div>
@@ -208,9 +208,9 @@ Markup:
 			{{> 'Navigation.Breadcrumb'}}
 			<section class="flex flex_column font_0 font_1:lg gap_4 grid-area_mainArea grid-col_6 grid-col_5:lg grid:md p-y_0:md p-y_3">
 				<div class="col-start col-end_4:lg col-end flex flex_column gap_4 row-start_1">
-					<section class="{{>'Sub.ClassList.Inset.level_up-1'}}">
+					<section class="{{>'Sub.ClassList.Inset.up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
-						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding_up-2'}}">
+						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding.up-2'}}">
 							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} #{ call(get-function('randomWords'), random(10)) }</h1>
 							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}} #{ call(get-function('randomWords'), random(10)) } </h2>
 							</main>	
@@ -225,7 +225,7 @@ Markup:
 						<div class="player hd full flex_auto w_100 p_4:lg p_3">
 							<div class="bg_acc aspect_16x9 c_white text_center  justify_center flex items_center">VIDEO EMBED</div>
 						</div>
-						<nav class="{{>'Sub.ClassList.Inset.padding_up-3'}} font_2:lg font_1">
+						<nav class="{{>'Sub.ClassList.Inset.padding.up-3'}} font_2:lg font_1">
 							{{> 'Sub.Search.TimeMarkers'}}
 							<h3 class="c_black-8">How did you like this presentation?</h3>
 							{{> 'Sub.ActionButtons.LikeAndAttachments' }}
@@ -233,16 +233,16 @@ Markup:
 					</section>
 				</div>
 				<div class="col-end col-start_4:lg col-start flex flex_column flex_row:md flex_column:lg gap_4">
-					<section class="flex_auto flex_50:md  flex_auto:lg flex_none:lg font_0 {{>'Sub.ClassList.Inset.level_up'}} {{>'Sub.ClassList.Inset.padding_up-2'}}">
+					<section class="flex_auto flex_50:md  flex_auto:lg flex_none:lg font_0 {{>'Sub.ClassList.Inset.up'}} {{>'Sub.ClassList.Inset.padding.up-2'}}">
 						{{> 'Sub.Section.h2' modifier_class='presentation details'}}
 						{{> 'Sub.Player.AuxData'}}
 					</section>	
-					<section class="flex_auto flex_50:md  flex_auto:lg flex_none:lg  font_0 {{>'Sub.ClassList.Inset.level_up'}} {{>'Sub.ClassList.Inset.padding_up-2'}}">
+					<section class="flex_auto flex_50:md  flex_auto:lg flex_none:lg  font_0 {{>'Sub.ClassList.Inset.up'}} {{>'Sub.ClassList.Inset.padding.up-2'}}">
 						{{> 'Sub.Section.h2' modifier_class='session details'}}
 						<div class="p-y_3 br-t_1 br_black-2 br_solid font-size_down">
 							{{> "Sub.FacultyList.AuxSession"  modifier_class=""}}
 						</div>
-						<section class="{{>'Sub.ClassList.Inset.level_down-1'}} {{>'Sub.ClassList.Inset.padding_up-2'}}">
+						<section class="{{>'Sub.ClassList.Inset.down-1'}} {{>'Sub.ClassList.Inset.padding.up-2'}}">
 							<div class="flex flex_row items_center">
 							<span class="c_black-4 font_0 font_1:md font_2:lg font_display font_regular lh_1 m-b_3 m-b_4:lg m-t_3 p-l_3 p-r_4 self_end"><i class="fa-list-alt fas font-size_up-2"></i></span>
 							{{> 'Sub.Section.h3' modifier_class='presentation playlist'}}</div>
@@ -260,7 +260,7 @@ Markup:
 			</section>
 			<footer class="flex flex_column gap_4 grid-area_footerArea grid-col_5 grid:md m-t_auto p-y_0:md p-y_3">
 				{{> "Navigation.Footer.Links" modifier_class="col-start
-				col-end_4" }} {{> "Navigation.Footer.Logo"
+				col-end_4" }} {{> "Sub.Footer.Logo"
 				modifier_class="col-start_4 col-end" }}
 			</footer>
 		</div>

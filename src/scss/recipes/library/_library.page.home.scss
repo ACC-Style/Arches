@@ -13,7 +13,7 @@ Markup:
 			{{> "Navigation.MainNav" modifier_class="grid-area_menuArea z_4" }}
 			{{> "Structures.Home.Header" modifier_class="grid-area_headerArea" }}
 			<section class="grid:md flex flex_column grid-col_5 gap_4  grid-area_mainArea p-y_3 p-y_0:md font_1:lg font_0 w_100">
-				<div class="flex flex_column col-start col-end_5:lg col-end_4 font_0 font_1:lg font_ui font_regular w_100 {{> 'Sub.ClassList.Inset.level_up-1'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
+				<div class="flex flex_column col-start col-end_5:lg col-end_4 font_0 font_1:lg font_ui font_regular w_100 {{> 'Sub.ClassList.Inset.up-1'}} {{> 'Sub.ClassList.Inset.padding.up-1'}}">
                     {{> 'Sub.Section.h2' modifier_class='Featured' }}    
                     {{> 'Structures.Home.Carousel'}}
                     {{> 'Sub.Section.Footer'  modifier_class='Featured' }}
@@ -22,10 +22,10 @@ Markup:
                     {{> 'Sub.Section.Footer'  modifier_class='Hot Topics' }}
 				</div>
 				<div class="flex flex_column col-start_5:lg col-end col-start_4 w_100">
-					<section class="font_0 font_1:lg font_ui font_regular flex_100 flex_auto {{> 'Sub.ClassList.Inset.level_up-1'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
-						{{> 'Sub.Section.h2' modifier_class="Continue Watching" }}
+					<section class="font_0 font_1:lg font_ui font_regular flex_100 flex_auto {{> 'Sub.ClassList.Inset.up-1'}} {{> 'Sub.ClassList.Inset.padding.up-1'}}">
+						{{> 'Sub.Section.h2' modifier_class="continue watching" }}
 						<div class="font_n2 font_n1:lg relative isolation_isolate">
-							<ul class="flex flex_column justify_stretch gap_0 ul_none {{> 'Sub.ClassList.Inset.level_down-1'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}">
+							<ul class="flex flex_column justify_stretch gap_0 ul_none {{> 'Sub.ClassList.Inset.down-1'}} {{> 'Sub.ClassList.Inset.padding.up-1'}}">
 								{{> 'Program.Presentation.Condensed.Playable' modifier_class='#{ call(get-function('randomWords'), random(10)) }'}}
 								{{> 'Program.Presentation.Condensed.Playable' modifier_class='#{ call(get-function('randomWords'), random(10)) }'}}
 								{{> 'Program.Presentation.Condensed.Playable' modifier_class='#{ call(get-function('randomWords'), random(10)) }'}}
@@ -33,22 +33,22 @@ Markup:
 								{{> 'Program.Presentation.Condensed.Playable' modifier_class='#{ call(get-function('randomWords'), random(10)) }'}}
 							</ul>
 						</div>
-						{{> 'Sub.Section.Footer'  modifier_class="Continue Watching" }}
+						{{> 'Sub.Section.Footer'  modifier_class="continue watching" }}
 					</section>
 				</div>
 				<div class="col-start col-end w_100">
-					<section class='font_0 font_1:lg font_ui font_regular flex_100 flex_auto {{> 'Sub.ClassList.Inset.level_up'}} {{> 'Sub.ClassList.Inset.padding_up-1'}}'> {{> 'Sub.Section.h2' modifier_class='Watch Again' }}
-						{{> 'Structures.Home.Carousel.Empty' modifier_class='Watch Again'}}
-						{{> 'Sub.Section.Footer'  modifier_class='Watch Again' }}
-						{{> 'Sub.Section.h2' modifier_class='Favorites' }}
-						{{> 'Structures.Home.Carousel.Empty' modifier_class='Favorites' }}
-						{{> 'Sub.Section.Footer'  modifier_class='Favorites' }}
+					<section class='font_0 font_1:lg font_ui font_regular flex_100 flex_auto {{> 'Sub.ClassList.Inset.up'}} {{> 'Sub.ClassList.Inset.padding.up-1'}}'> {{> 'Sub.Section.h2' modifier_class='watch again' }}
+						{{> 'Structures.Home.Carousel.Empty' modifier_class='watch again'}}
+						{{> 'Sub.Section.Footer'  modifier_class='watch again' }}
+						{{> 'Sub.Section.h2' modifier_class='saved' }}
+						{{> 'Structures.Home.Carousel.Empty' modifier_class='saved' }}
+						{{> 'Sub.Section.Footer'  modifier_class='saved' }}
 					</section>
 				</div>
 			</section>
 			<footer class="flex flex_column gap_4 grid-area_footerArea grid-col_5 grid:md m-t_auto p-y_0:md p-y_3">
 				{{> 'Navigation.Footer.Links' modifier_class='col-start col-end_4' }}
-				{{> 'Navigation.Footer.Logo'  modifier_class='col-start_4 col-end' }}
+				{{> 'Sub.Footer.Logo'  modifier_class='col-start_4 col-end' }}
 			</footer>
 		</div>
 	</div>
@@ -76,7 +76,7 @@ Home page branding splash with ka site search.
  
 Markup:
 <header class="p_3 p_0:md {{modifier_class}}">
-    <section class="br_radius overflow_hidden relative z_1 m-x_n3:md">
+    <section class="br_radius overflow_hidden relative z_1">
         <picture class="w_100">
             <source class="w_100" srcset="https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_1440x250.jpg" media="(min-width: 1200px)">
             <source class="w_100" srcset="https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_1200x250.jpg" media="(min-width: 1024px)">
@@ -86,11 +86,14 @@ Markup:
         </picture>
     </section>
     <div class="m_auto m-t_n4 t_n4 t_n5:lg m-t_n5:lg max-w_60:lg max-w_40:md p-x_3 p-x_5:md z_2 relative">
-        {{> "Sub.Section.SearchBar"}}
+        {{> "Sub.Section.HeaderPanel"}}
     </div>
 </header>
 
 MarkupWrapperClasses: 
+
+SubComponent: 
+Sub.Section.HeaderPanel - Search Bar
  
 Weight:0
  
@@ -99,43 +102,59 @@ Styleguide Structures.Home.Header
 
 /*
 
-Home Search Bar and Quick Links
+Home Search Link Inset
 
 A central interaction point for the user on the homepage. 
  
 Markup:
-<div class="{{> 'Sub.ClassList.Inset.level_up-1'}}  {{> 'Sub.ClassList.Inset.padding_up-3'}}">
-    <div class="input-holder flex flex_row self_end relative w_100">
-        <input id="input_uniqueTextAndButton" name="input_uniqueTextAndButton" type="text" placeholder="Search" class="br_2 flex_auto p-y_2 br_solid flex_auto p-l_4 lh_3 br_radius bg_white c_black bg_white f:bg_primary br_black-2  font_2"/>
-        <button  class="disabled ease_out transition_1 f:outline_none text_center br_none inline-block w_auto font_regular font_ui absolute t_0 b_0 r_0 h:underline undecorated bg_primary c_white h:br_primary-n3 br-br_radius br-tr_radius br_square font_2" >
-        <i class="fas fa-search"></i>
-        <span class="inline-block:md display_none">Search</span>
-        </button>
-    </div>
+<div class="{{> 'Sub.ClassList.Inset.up-1'}}  {{> 'Sub.ClassList.Inset.padding.up-4'}}">
+    {{> 'Sub.Section.SearchBar' modifier_class="disabled" }}
     {{> 'Navigation.Home.Utility' }} 
 </div>
 
 MarkupWrapperClasses: 
 
 SubComponents:
+Sub.Section.SearchBar - Search Bar with `disabled` Class
 Navigation.Home.Utility - Quick Links
 
 ClassList:
-Sub.ClassList.Inset.level_up-1  - Inset level_up-1
-Sub.ClassList.Inset.padding_up-3 - Inset padding_up-3
+Sub.ClassList.Inset.up-1  - Inset up 1
+Sub.ClassList.Inset.padding.up-4 - Padding up 4
 
+Weight:0
+ 
+Styleguide Sub.Section.HeaderPanel
+*/
+
+/*
+
+Home Search Bar
+
+The Search Bar is disabled on the Home Page when there is no content in the input field.
+
+ 
+Markup:
+<div class="input-holder flex flex_row self_end relative w_100 {{> "Sub.ClassList.Inset.padding"}}">
+    <input id="input_uniqueTextAndButton" name="input_uniqueTextAndButton" type="text" placeholder="Search" class="br_2 flex_auto p-y_2 br_solid flex_auto p-l_4 lh_3 br_radius bg_white c_black bg_white f:bg_primary br_black-2  font_2"/>
+    <button  class="{{ modifier_class }} b_0 br-br_radius br-tr_radius br_none br_square btn btn-primary c_white ease_out f:outline_none font_2 font_regular font_ui h:br_primary-n3 h:underline inline-block r_0 t_0 text_center transition_1 undecorated w_auto" >
+    <i class="fas fa-search"></i>
+    <span class="inline-block:md display_none">Search</span>
+    </button>
+</div>
+
+MarkupWrapperClasses: 
+ 
 Weight:0
  
 Styleguide Sub.Section.SearchBar
 */
 
-
-
 /*
 
 Section Footer
 
-Footer with links to the various sections.
+Section footer links to the Search Collection Page.
  
 Markup:
 <footer class="flex flex_row-reverse p-t_3 p-b_4"><a href="" class="link self_end ">view all from &quot;{{modifier_class}}&quot; <i class="fal fa-chevron-circle-right m-r_3"></i></a></footer>   
@@ -155,8 +174,8 @@ Horizontal Carousels to have discoverable areas on the home pages.
 
 
 Markup:
-<div class="relative isolation_isolate overflow_hidden {{>'Sub.ClassList.Inset.margin_down-1'}}">
-        <div id="slider1" class=" flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3 {{> 'Sub.ClassList.Inset.level_down-1'}} ">
+<div class="relative isolation_isolate overflow_hidden {{>'Sub.ClassList.Inset.margin.down-1'}}">
+        <div id="slider1" class=" flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3 {{> 'Sub.ClassList.Inset.down-1'}} ">
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Session.Home"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
@@ -208,6 +227,10 @@ Weight: 0
 SubComponents:
 Program.Session.Home    - Session
 
+ClassList:
+Sub.ClassList.Inset.margin.down-1 - Margin down 1
+Sub.ClassList.Inset.down-1 - Inset down 1
+
 NOTE: This design requires javascript. (tiny slider js)
 
 Styleguide Structures.Home.Carousel
@@ -230,15 +253,8 @@ MarkupWrapperClasses:
 
 Weight: 0
 
-NOTE: nothing
 
-EXPERIMENTAL: this design is new
-
-DEPRECATED: this design is old
-
-FORMAT: This uses a strick data format look at x
-
-Styleguide 
+Styleguide Structures.Home.TinySlider
 */
 
 
@@ -250,8 +266,8 @@ Carousel Empty State
 The empty state of the carousel
 
 Markup:
-<div class="p-y_3 relative {{>'Sub.ClassList.Inset.margin_down-1'}}"> 
-    <div class="tns-outer {{> 'Sub.ClassList.Inset.level_down'}}  font_0 font_ui font_regular" >
+<div class="p-y_3 relative {{>'Sub.ClassList.Inset.margin.down-1'}}"> 
+    <div class="tns-outer {{> 'Sub.ClassList.Inset.down-1'}}  font_0 font_ui font_regular" >
         <div class="tns-ovh">
             <div class="tns-inner" >
                 <div id="slider3" class=" flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" >
@@ -275,6 +291,13 @@ Markup:
 </div>
 
 MarkupWrapperClasses: 
+
+SubComponents:
+Sub.Carousel.CustomTools.Disabled - Disabled Navigation
+
+ClassList:
+Sub.ClassList.Inset.margin.down-1 - Margin down 1
+Sub.ClassList.Inset.down-1 - Inset Down 1
 
 Weight: 0
 
@@ -321,8 +344,8 @@ default		 -
 
 Markup:
     {{> 'Sub.Section.h2' modifier_class="continue watching" }}
-    <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.ClassList.Inset.level_down-1'}} ">
-        <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.level_down'}} ">
+    <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.ClassList.Inset.down-1'}} ">
+        <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.down'}} ">
         {{> "Program.Presentation.Condensed"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Presentation.Condensed"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
         {{> "Program.Presentation.Condensed"  modifier_class="#{ call(get-function('randomWords'), random(10)) }"}}
