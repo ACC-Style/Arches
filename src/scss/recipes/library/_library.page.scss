@@ -391,7 +391,7 @@ MarkupWrapperClasses:
 
 Weight:-100
  
-Styleguide Page.Pages.Legal
+Styleguide Page.Pages.OUTSIDE_APP.Legal
 */
 
 
@@ -443,6 +443,46 @@ MarkupWrapperClasses:
 
 Weight:-50
  
-Styleguide Page.Pages.NoAccess
+Styleguide Page.Pages.OUTSIDE_APP.NoAccess
 */
 
+
+
+/*
+
+EMPTY OUTSIDE APP TEMPLATE
+
+There are some pages that live outside of access to the product.  They are used to provide information to the user.  This is the template for those pages.
+ 
+Markup:
+<div class="BODY_TAG-stand-in bg_black-4 w_100 p_4:md p_2 grid:md min-h_100">
+	<div class="bg_white-8 br_radius grid:md isolation_isolate items_center justify_center m_auto max-w_50 p_2 p_3:md page-wrapper shadow_bevel-light">
+		<div class="bg_black-2 br_radius">
+			<section class="reading-typography  inset-level_down-1 bg_black-1 shadow_emboss-light br_solid br_1 br_black-2 br_radius p_4:lg p_3 flex flex_column gap_4 ">
+				<div>
+					<div class="relative z_0 br_radius overflow_hidden ">
+						<picture class="w_100 ">
+							<source class="w_100" srcset=" https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_600x225.jpg" media="(min-width: 400px)">
+							<img src="https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_400x300.jpg" class="w_100" alt="">
+						</picture>
+					</div>
+					<div class="bg_white br_1 br_black-3 br_radius br_solid inset-level_up-1 m-t_n5 m-x_5 p_4 relative shadow_bevel-light t_n5 text_center">
+						<h1 class="c_primary font_regular font_display">No Access</h1>
+						<p class="font-size_up font_bold"> We are sorry you don't seem to have access to this product.</p>
+					</div>
+				</div>
+				<div class="inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative " id="TopAgreement1">
+					<!-- EMPTY  TEMPLATE SPACE FOR AGREEMENTS OR NO ACCESS. These Cards can be duplicated depending on need. -->
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+ 
+
+MarkupWrapperClasses:
+
+Weight:-50
+ 
+Styleguide Page.Pages.OUTSIDE_APP
+*/

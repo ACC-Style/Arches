@@ -109,6 +109,16 @@ Styleguide Layouts.Padding
 	@include loop-style(padding-left, $bp-label_large, ' !important');
 	@include loop-style(padding-right, $bp-label_large, ' !important');
 }
+
+@media #{$input-touch} {
+	@include loop-style(padding, $bp-label_touch, ' !important');
+	@include loop-style(padding-vertical, $bp-label_touch, ' !important');
+	@include loop-style(padding-horizontal, $bp-label_touch, ' !important');
+	@include loop-style(padding-top, $bp-label_touch, ' !important');
+	@include loop-style(padding-bottom, $bp-label_touch, ' !important');
+	@include loop-style(padding-left, $bp-label_touch, ' !important');
+	@include loop-style(padding-right, $bp-label_touch, ' !important');
+}
 // @debug modifierClassList(position, "");
 /*
 Position Type
