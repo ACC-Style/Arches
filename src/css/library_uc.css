@@ -2471,23 +2471,25 @@ Styleguide List.InlineType
 .ul_inline-comma,
 .ul_inline-semicolon,
 .ul_inline-pipe {
-  display: inline-flex;
+  display: inline-flex !important;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   justify-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
 }
 .ul_inline-comma > li,
 .ul_inline-semicolon > li,
 .ul_inline-pipe > li {
   flex: 0 1 auto;
+  margin: 0 !important;
 }
 .ul_inline-comma > li:not(:last-child)::after,
 .ul_inline-semicolon > li:not(:last-child)::after,
 .ul_inline-pipe > li:not(:last-child)::after {
+  margin: 0;
   -webkit-padding-start: 0.1em;
           padding-inline-start: 0.1em;
   -webkit-padding-end: 0.5em;

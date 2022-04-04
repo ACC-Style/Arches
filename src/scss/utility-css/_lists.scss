@@ -87,20 +87,22 @@ Styleguide List.InlineType
 .ul_inline-comma,
 .ul_inline-semicolon,
 .ul_inline-pipe{
-    padding: 0;
-    margin: 0;
-    display:  inline-flex;
+    padding: 0 !important;
+    margin: 0 !important;
+    display:  inline-flex !important;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
     justify-items: center;
-    list-style: none;
+    list-style: none !important;
     & > li {
         flex: 0 1 auto;
+        margin:0 !important;
         &:not(:last-child)::after{
           padding-inline-end: .5em;
           padding-inline-start: .1em;
           opacity: .6;
+          margin:0;
         }
     }
     li.no-after{padding-inline-end: .5em;}
