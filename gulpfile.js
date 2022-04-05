@@ -65,7 +65,7 @@ var PATHS = {
 // Style Tasks
 var runSass = function(brand) {
     var plugins = [
-        //postcssNormalize( /* pluginOptions */ ),
+        // postcssNormalize( pluginOptions),
         pixrem(),
         cssDeclarationSorter({
             order: "smacss",

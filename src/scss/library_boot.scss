@@ -205,7 +205,8 @@ $line-height_1: get-css-size(line-height, 1);
 $line-height_2: get-css-size(line-height, 2);
 $line-height_3: get-css-size(line-height, 3);
 $line-height_4: get-css-size(line-height, 4);
-$line-height_5: get-css-size(line-height, 5);// /*Bootstrap Framework Setup Files.*/
+$line-height_5: get-css-size(line-height, 5);
+// /*Bootstrap Framework Setup Files.*/
 
 // /*!
 //  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -309,7 +310,13 @@ $line-height_5: get-css-size(line-height, 5);// /*Bootstrap Framework Setup File
 // scss-docs-end import-stack
 
 
-@import 'recipes/base/base.page.layouts';
+@import "recipes/boot/_boot.basic_nav";
+@import "recipes/boot/_boot.tabs";
+@import "recipes/boot/_boot.ui.tabs";
+@import "recipes/boot/_boot.sidebar_nav";
+@import "recipes/boot/_boot.toggle_icon";
+@import "recipes/boot/_boot._accordion";
+@import "recipes/boot/_boot.buttons";@import 'recipes/base/base.page.layouts';
 @import 'recipes/virtual/data/_virtual.helper.randomWords';
 @import 'recipes/virtual/data/virtual.data';
 @import 'recipes/virtual/virtual.sub.search';
