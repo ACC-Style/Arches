@@ -111,6 +111,9 @@ var buildbrand = function(base, brand, framework) {
         case "boot":
             construct.pipe(headerFromFile("/setup/__setup.boot.scss"));
             break;
+            case "coveo":
+                construct.pipe(headerFromFile("/setup/__setup.coveo.scss"));
+                break;
         default:
             construct.pipe(headerFromFile("/setup/__setup.none.scss"));
             break;
@@ -191,6 +194,7 @@ var constructFrameworkStyleSheet = function(brand, framework) {
         .pipe(headerFromFile("/components/__components." + framework + ".scss"))
         .pipe(headerFromFile("/components/__components.base.scss"))
         .pipe(headerFromFile("/recipes/__recipes." + brand + ".scss"))
+        .pipe(headerFromFile("/recipes/__recipes." + framework + ".scss"))
         .pipe(headerFromFile("/recipes/__recipes.base.scss"))
         .pipe(headerFromFile("/base/__base." + brand + ".scss"));
     return base;

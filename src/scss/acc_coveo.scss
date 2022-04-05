@@ -206,7 +206,35 @@ $line-height_2: get-css-size(line-height, 2);
 $line-height_3: get-css-size(line-height, 3);
 $line-height_4: get-css-size(line-height, 4);
 $line-height_5: get-css-size(line-height, 5);
-@import "recipes/__recipes.common";
+/* For things that use standard Arches and mark up and nothing crazy  ~~PURE~~ */
+
+/*
+
+recipe title
+
+description
+
+default		 -   Grid
+
+Markup:
+{{modifier_class}}
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: nothing
+
+EXPERIMENTAL: this design is new
+
+DEPRECATED: this design is old
+
+FORMAT: This uses a strick data format look at x
+
+
+Styleguide section
+
+*/@import "recipes/__recipes.common";
 @import "recipes/_recipes.boot";
 @import "recipes/acc/_acc._footer";
 @import "recipes/acc/_acc._page-hub";
@@ -220,5 +248,33 @@ $line-height_5: get-css-size(line-height, 5);
 @import "containers/containers";
 
 
-@import "components/acc/_acc.boot._navbar.override";
+/* For those things that require custom things and random stuff... */
+
+/*
+
+comp title
+
+description
+
+default		 -   Grid
+
+Markup:
+{{modifier_class}}
+
+MarkupWrapperClasses: 
+
+Weight: 0
+
+NOTE: nothing
+
+EXPERIMENTAL: this design is new
+
+DEPRECATED: this design is old
+
+FORMAT: This uses a strick data format look at x
+
+
+Styleguide section
+
+*/@import "components/acc/_acc.boot._navbar.override";
 @import "components/acc/_acc.boot._coveosearchbar.override";
