@@ -111,6 +111,9 @@ var buildbrand = function(base, brand, framework) {
         case "boot":
             construct.pipe(headerFromFile("/setup/__setup.boot.scss"));
             break;
+            case "coveo":
+                construct.pipe(headerFromFile("/setup/__setup.coveo.scss"));
+                break;
         default:
             construct.pipe(headerFromFile("/setup/__setup.none.scss"));
             break;
@@ -162,7 +165,7 @@ var buildbrand = function(base, brand, framework) {
         default:
             construct.pipe(
                 header(
-                    "\n/**Set Active Class**/ \n $active-class-name: 'active';\n\n/** No Framework **/ \n"
+                    "\n/**Set Active Class**/ \n $active-class-name: 'active';\n\n/** No Framework or is a Style Sheet that Should be used as an augmenting stylesheet **/ \n"
                 )
             );
             break;
@@ -191,6 +194,7 @@ var constructFrameworkStyleSheet = function(brand, framework) {
         .pipe(headerFromFile("/components/__components." + framework + ".scss"))
         .pipe(headerFromFile("/components/__components.base.scss"))
         .pipe(headerFromFile("/recipes/__recipes." + brand + ".scss"))
+        .pipe(headerFromFile("/recipes/__recipes." + framework + ".scss"))
         .pipe(headerFromFile("/recipes/__recipes.base.scss"))
         .pipe(headerFromFile("/base/__base." + brand + ".scss"));
     return base;
@@ -528,6 +532,28 @@ gulp.task(
         },
         function STYLEGUIDE() {
             return run("npm run boot_acc").exec();
+        }
+    )
+);
+gulp.task(
+    "build-coveo_acc",
+    gulp.series(
+        function SCSS() {
+            return constructSassFiles("acc", "coveo");
+        },
+        function CSS() {
+            return runSass("acc");
+        },
+        function CONCAT() {
+            return concatCSS("acc", "coveo");
+        },
+        "copy-to-dist",
+        "copy-to-styleguide",
+        function Markdown() {
+            return constructMarkdown("acc", "coveo");
+        },
+        function STYLEGUIDE() {
+            return run("npm run coveo_acc").exec();
         }
     )
 );

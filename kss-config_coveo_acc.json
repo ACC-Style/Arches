@@ -1,0 +1,84 @@
+{
+    "title": "ACC Branded Coveo",
+    "mask": "acc_coveo.css",
+    "builder": "michelangelo/kss_styleguide/brand-template/",
+    "source": "./dist/css/",
+    "destination": "docs/coveo_acc/",
+    "//": "relative to source.",
+    "homepage": "./markdown/acc_coveo_readme.md",
+    "//": "relative to the generated style guide.",
+    "css": [
+        "../icons/css/fontawesome.css",
+        "../icons/css/solid.css",
+        "../icons/css/regular.css",
+        "../icons/css/brands.css",
+        "../icons/css/light.css",
+        "../icons/css/light.css",
+        "../css/styleguide_override.css",
+        "//fonts.googleapis.com/css?family=Roboto+Slab&display=swap",
+        "//fonts.googleapis.com/css?family=Muli&display=swap",
+        "//fonts.googleapis.com/css?family=Roboto&display=swap",
+        "../css/color-code_LOE_COR.css",
+        "../css/color-code_pathway.css",
+        "../css/color-code_pathwayV2.css",
+        "../css/color-code_credits.css",
+        "../css/color-code_social.css",
+        "../css/color-code_registry.css",
+        "../css/acc_boot.css",
+		"../css/acc_coveo.css",
+        "../css/acc_uc.css"
+    ],"js": ["https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js","https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js", "../js/toggleActive.js"],
+    
+    "custom": ["MarkupWrapperClasses","HideCodeBlock","Note","HideDefault","Format"],
+    "site_nav": [
+        { "title": "Arches", "id": "home_nav", "url": "../" },
+        {
+            "title": "Utility Classes",
+            "id": "utility_classes",
+            "url": "../utility_classes/"
+        },
+        {
+            "title": "ACC",
+            "id": "boot_acc",
+            "url": "../boot_acc/"
+            ,"isActive": true         
+        },
+		{
+            "title": "Coveo",
+            "id": "coveo_acc",
+            "url": "../coveo_acc/"
+            ,"isActive": true         
+        },
+        {
+            "title": "CardioSmart",
+            "id": "uc_cardiosmart",
+            "url": "../boot_cardiosmart/"
+        },
+        {
+            "title": "CVQualtiy",
+            "id": "boot_cvquality",
+            "url": "../boot_cvquality/"
+        },
+        {
+            "title": "Virtual",
+            "id": "boot_virtual",
+            "url": "../boot_virtual/"     
+        },
+        {
+            "title": "JACC",
+            "id": "boot_journal",
+            "url": "../boot_journal/"
+        },
+        {
+            "title": "Color Codes",
+            "id": "color_codes",
+            "url": "../color_codes/"
+        },
+        {
+            "title": "Icon Dictionary",
+            "id": "icon_dictionary",
+            "url": "https://acc-style.github.io/IconDictionary/"
+            
+        }
+    ]
+}
