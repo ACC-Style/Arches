@@ -1,3 +1,6 @@
+@import  "../virtual/data/virtual.helper.randomWords";
+
+
 /*
 
 Sessions - Homepage
@@ -11,9 +14,9 @@ Markup:
     <div class="flex flex_row font_ui justify_start relative w_100">
         <main
             class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}}">
-            <h2 class="font-size_up-1 font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
+            <h2 class="font-size_up font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
                 <a class="c_inherit-all expanded-click-area z_1">
-                    Clinical Update for the {{ modifier_class}} 
+                    Clinical Update for the #{ call(get-function('randomWords'), random(10)) } {{ modifier_class}} 
                 </a>
             </h2>
             <ul
@@ -22,27 +25,31 @@ Markup:
                 {{> 'Sub.Data.PresentationCount'}}
                 {{> 'Sub.Data.AttachmentLink.ZIP'}}
             </ul>
-        </main>
-        <aside class="flex_none p-x_3:md p-b_3">
-            <ul
-                class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
-                <li class="flex_auto p-b_3 m-b_auto">
-                   {{> 'Sub.ActionButtons.Favorite' }}
-                </li>
-                <li class="lh_0 w_100">
+            <ul class="flex flex_row font_n3 gap_2 justify_start flex_wrap  self_start ul_none uppercase">
+                <li class="lh_0 flex_none">
                     {{> 'Sub.Credit' modifier_class='CME' }}
                 </li>
-                <li class="lh_0 w_100">
+                <li class="lh_0 flex_none">
                     {{> 'Sub.Credit' modifier_class='CNE' }}
                 </li>
-                <li class="lh_0 w_100">
+                <li class="lh_0 flex_none">
                     {{> 'Sub.Credit' modifier_class='AAPA' }}
+                </li>
+            </ul>
+        </main>
+        <aside class="flex_none p-x_3:md p-b_3 absolute flex_none p-b_3 p-r_2 r_0 t_n1">
+            <ul
+                class="b_3 flex flex_column flex_wrap font_n4 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
+                <li class="flex_auto p-b_3 m-b_auto">
+                    {{> 'Sub.ActionButtons.Favorite' }}
                 </li>
             </ul>
         </aside>
     </div>
 </article>
 </div>
+
+
 
 
 MarkupWrapperClasses: 
@@ -62,6 +69,70 @@ Styleguide Program.Session.Home
 
 /*
 
+Sessions - Homepage Version 2
+
+Session Designs on the home page.
+
+
+Markup:
+<div>
+<article class="flex flex_grow w_100 {{> 'Sub.ClassList.Inset.up-1'}}">
+    <div class="flex flex_row font_ui justify_start relative w_100">
+        <main
+            class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate gap_3 {{> 'Sub.ClassList.Inset.padding.up-3'}}">
+            <h2 class="font-size_up font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
+                <span class="aspect_1x1 float_right font_n3 m-r_n3 m-t_n4 p-x_3" style="width:3.5em">
+                    <span class="absolute t_n2 z_3 p-x_3 r_0">
+                    {{> 'Sub.ActionButtons.Favorite' }}
+                    </span>
+                </span>
+                <a class="c_inherit-all expanded-click-area z_1 inline">
+                    Clinical Update for the  #{ call(get-function('randomWords'), 15) } {{ modifier_class }} 
+                </a>
+            </h2>
+            <ul
+                class="ul_none flex flex_row flex_wrap justify_start font-size_down-1 c_black-7 m-t_auto lh_0 items_end gap_2 clear_both">
+                {{> 'Sub.Data.Duration'}}
+                {{> 'Sub.Data.PresentationCount'}}
+                {{> 'Sub.Data.AttachmentLink.ZIP'}}
+            </ul>
+            <ul class="flex flex_row font_n3 gap_2 justify_start flex_wrap  self_start ul_none uppercase">
+                <li class="lh_0 flex_none">
+                    {{> 'Sub.Credit' modifier_class='CME' }}
+                </li>
+                <li class="lh_0 flex_none">
+                    {{> 'Sub.Credit' modifier_class='CNE' }}
+                </li>
+                <li class="lh_0 flex_none">
+                    {{> 'Sub.Credit' modifier_class='AAPA' }}
+                </li>
+            </ul>
+        </main>
+    </div>
+</article>
+</div>
+
+EXPERIMENTAL: Testing a new design to wrap the headline around the favorite button.
+
+
+MarkupWrapperClasses: 
+
+Data:
+Data.Session.Title - Title
+
+SubComponents: 
+Sub.Credits - Credits
+
+
+
+Weight: 0
+
+Styleguide Program.Session.Home_v2
+*/
+
+
+/*
+
 Sessions - Search
 
 Session Designs on the home page.
@@ -75,7 +146,7 @@ Markup:
             class="flex flex_column gap_3 flex_auto justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}}">
             <h2 class="font-size_up-1 font_display font_regular lh_1 h:underline c_primary-n3 m-t_2">
                 <a class="c_inherit-all expanded-click-area z_1">
-                    Clinical Update for the {{ modifier_class}} 
+                    Clinical Update for the {{ modifier_class }} 
                 </a>
             </h2>
             <ul
