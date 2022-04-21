@@ -121,8 +121,8 @@ Basic Nav that helps the user orientate the context of the page.
  
 Markup:
 <header class="grid-area_headerArea flex flex_row items_center justify_start flex_none z_1 {{> 'Sub.ClassList.Inset.up'}} {{> 'Sub.ClassList.Inset.padding.up-1'}}">
-    <nav class="overflow_hidden lh_0  font_ui font_2 font_regular c_black-7 {{modifier_class}}">
-    <ol class="flex flex_no-wrap flex_row items_center overflow_hidden ul_none w_100"> 
+    <nav class="overflow_hidden lh_0  font_ui font_2 font_regular c_black-7 {{modifier_class}}" aria-label="Breadcrumb">
+    <ol class="flex flex_no-wrap flex_row items_center overflow_hidden ul_none w_100 max-w_100"> 
         {{> 'Sub.Navigation.Breadcrumb.FirstItem' }}
         {{> 'Sub.Navigation.Breadcrumb.NotFirstItem' modifier_class="Session Shorten Name" }}
         {{> 'Sub.Navigation.Breadcrumb.LastItem' modifier_class="Presentation Shorten Name" }}
