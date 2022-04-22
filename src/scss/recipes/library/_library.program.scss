@@ -155,21 +155,23 @@ Markup:
                 {{> 'Sub.Data.PresentationCount'}}
                  {{> 'Sub.Data.AttachmentLink.ZIP'}}
             </ul>
+            <ul class="flex flex_row font_n3 gap_2 justify_start flex_wrap  self_start ul_none uppercase">
+                <li class="lh_0 flex_none">
+                    {{> 'Sub.Credit' modifier_class='CME' }}
+                </li>
+                <li class="lh_0 flex_none">
+                    {{> 'Sub.Credit' modifier_class='CNE' }}
+                </li>
+                <li class="lh_0 flex_none">
+                    {{> 'Sub.Credit' modifier_class='AAPA' }}
+                </li>
+            </ul>
         </main>
         <aside class="flex_none p-x_3:md p-b_3">
             <ul
                 class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
                 <li class="flex_auto p-b_3 m-b_auto">
                    {{> 'Sub.ActionButtons.Favorite' }}
-                </li>
-                <li class="lh_0 w_100">
-                    {{> 'Sub.Credit' modifier_class='CME' }}
-                </li>
-                <li class="lh_0 w_100">
-                    {{> 'Sub.Credit' modifier_class='CNE' }}
-                </li>
-                <li class="lh_0 w_100">
-                    {{> 'Sub.Credit' modifier_class='AAPA' }}
                 </li>
             </ul>
         </aside>
@@ -201,45 +203,33 @@ Presentation designs on the home page.
 
 Markup:
 <div>
-    <article class="flex flex_grow flex_column w_100  {{> 'Sub.ClassList.Inset.up-1'}}">
-        <div class="flex flex_row font_ui justify_start relative w_100 gap_3">
-            <main
-                class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
-                <div class="font_display m-b_3 lh_2 ">
-                    <h1 class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 m-t_"> {{> 'Data.Session.Title'}}</h1>
-                    <h2 class="font-size_up-1 font_display font_regular lh_2 h:underline c_primary-n3">
-                    <a class="c_inherit-all expanded-click-area z_1">
-                        Presentation of the findings {{ modifier_class}} 
-                    </a>
-                    </h2>
-                </div>
-                <div class="c_black-8 font_copy font-size_down-1">
-                    {{> 'Sub.FacultyList' }}
-                </div>
-                <ul class="ul_none flex flex_row flex_wrap justify_start font-size_down-1 c_black-7 m-t_auto lh_0 items_end gap_2">
-                {{> 'Sub.Data.Duration'}}
-                {{> 'Sub.Data.AttachmentLink'}}
-                </ul>
-            </main>
-            <aside class="flex_none p-x_3:md p-b_3">
-                <ul
-                    class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
-                    <li class="flex_auto p-b_3 m-b_auto">
-                        {{> 'Sub.ActionButtons.Favorite' }}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CME"}}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CNE"}}
-                    </li>
-                </ul>
-            </aside>
-        </div>
-        <div class="{{> 'Sub.ClassList.Inset.padding'}}">
-            {{> 'Sub.ProgressBar' modifier_class="" }}
-        </div>
-    </article>
+	<article class="flex flex_grow flex_column w_100  {{> 'Sub.ClassList.Inset.up-1'}}">
+		<div class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
+			<div class="font_display m-b_3 lh_2 ">
+				<h2 class="font-size_up font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
+					<span class="aspect_1x1 float_right font_n3 m-r_n3 m-t_n4 p-x_3" style="width:3.5em">
+						<span class="absolute t_n2 z_3 p-x_3 r_0">
+							{{> 'Sub.ActionButtons.Favorite' }}
+						</span>
+					</span>
+					<strong class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 "> {{> 'Data.Session.Title'}}</strong>
+					<a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the #{ call(get-function('randomWords'), 15) } {{ modifier_class }}
+					</a>
+				</h2>
+			</div>
+			<div class="c_black-8 font_copy font-size_down-1">
+				{{> 'Sub.FacultyList' }}
+			</div>
+			<ul class="ul_none flex flex_row flex_wrap justify_start font-size_down-1 c_black-7 m-t_auto lh_0 items_end gap_2">
+				{{> 'Sub.Data.Duration'}}
+				{{> 'Sub.Data.AttachmentLink'}}
+			</ul>
+            {{> 'Sub.Credit.Chiclets.Horizontal'}}
+		</div>
+		<div class="{{> 'Sub.ClassList.Inset.padding'}}">
+			{{> 'Sub.ProgressBar' modifier_class="" }}
+		</div>
+	</article>
 </div>
 
 
@@ -259,6 +249,71 @@ Sub.Credits - Credits
 Styleguide Program.Presentation.Home
 */
 
+/*
+
+Presentation - Home Version 2
+
+Presentation designs on the home page.
+
+Markup:
+<div>
+    <article class="flex flex_grow flex_column w_100  {{> 'Sub.ClassList.Inset.up-1'}}">
+        <div class="flex flex_row font_ui justify_start relative w_100 gap_3">
+            <main
+                class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
+                <div class="font_display m-b_3 lh_2 ">
+                    <h2 class="font-size_up font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
+					<span class="aspect_1x1 float_right font_n3 m-r_n3 m-t_n4 p-x_3" style="width:3.5em">
+						<span class="absolute t_n2 z_3 p-x_3 r_0">
+							{{> 'Sub.ActionButtons.Favorite' }}
+						</span>
+					</span>
+					<strong class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 "> {{> 'Data.Session.Title'}}</strong>
+					<a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the #{ call(get-function('randomWords'), 15) } {{ modifier_class }}
+					</a>
+				</h2>
+                </div>
+                <div class="c_black-8 font_copy font-size_down-1">
+                    {{> 'Sub.FacultyList' }}
+                </div>
+                <ul class="ul_none flex flex_row flex_wrap justify_start font-size_down-1 c_black-7 m-t_auto lh_0 items_end gap_2">
+                {{> 'Sub.Data.Duration'}}
+                {{> 'Sub.Data.AttachmentLink'}}
+                </ul>
+                {{> 'Sub.Credit.Chiclets.Horizontal'}}
+            </main>
+            <aside class="flex_none p-x_3:md p-b_3">
+                <ul
+                    class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
+                    <li class="flex_auto p-b_3 m-b_auto">
+                        {{> 'Sub.ActionButtons.Favorite' }}
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <div class="{{> 'Sub.ClassList.Inset.padding'}}">
+            {{> 'Sub.ProgressBar' modifier_class="" }}
+        </div>
+    </article>
+</div>
+
+Experimental: Clean up and refactored design. 
+
+MarkupWrapperClasses: ul_none
+
+Weight: 0
+
+Data:
+Data.Session.Title - Session Title
+Data.Presentation.Title - Presentation Title
+
+SubComponents: 
+Sub.FacultyList - Faculty List
+Sub.ProgressBar - Progress
+Sub.Credits - Credits
+
+Styleguide Program.Presentation.Home_V2
+*/
 
 /*
 
@@ -269,15 +324,17 @@ Presentation designs on the Search page.
 Markup:
 <div>
     <article class="flex flex_grow flex_column w_100  {{> 'Sub.ClassList.Inset.up-1'}}">
-        <div class="flex flex_row font_ui justify_start relative w_100 gap_3" >
-            <main
-                class="flex flex_column flex_auto gap_3 justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
+        <div class="flex flex_column flex_auto gap_3 justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
                 <div class="font_display m-b_3 lh_2 ">
-                    <h1 class="block c_black-6 uppercase font_bold font-size_down lh_2 m-y_2"> {{> 'Data.Session.Title'}}</h1>
-                    <h2 class="font-size_up-1 font_display font_regular lh_1 h:underline c_primary-n3 m_0">
-                    <a class="c_inherit-all expanded-click-area z_1">
-                        Presentation of the findings {{ modifier_class}} 
-                    </a>
+                    <h2 class="font-size_up font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
+                        <span class="aspect_1x1 float_right font_n3 m-r_n3 m-t_n4 p-x_3" style="width:3.5em">
+                            <span class="absolute t_n2 z_3 p-x_3 r_0">
+                                {{> 'Sub.ActionButtons.Favorite' }}
+                            </span>
+                        </span>
+                        <strong class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 "> {{> 'Data.Session.Title'}}</strong>
+                        <a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the #{ call(get-function('randomWords'), 15) } {{ modifier_class }}
+                        </a>
                     </h2>
                 </div>
                 <div class="c_black-8 font_copy font-size_down-1">
@@ -287,21 +344,7 @@ Markup:
                 {{> 'Sub.Data.Duration'}}
                 {{> 'Sub.Data.AttachmentLink'}}
                 </ul>
-            </main>
-            <aside class="flex_none p-x_3:md p-b_3">
-                <ul
-                    class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
-                    <li class="flex_auto p-b_3 m-b_auto">
-                        {{> 'Sub.ActionButtons.Favorite' }}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CME"}}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CNE"}}
-                    </li>
-                </ul>
-            </aside>
+                {{> 'Sub.Credit.Chiclets.Horizontal'}}
         </div>
         <div class="{{> 'Sub.ClassList.Inset.padding'}}">
             {{> 'Sub.Search.TimeMarkers' modifier_class="" }}
@@ -336,9 +379,7 @@ Presentation designs on the Search page.
 Markup:
 <div>
     <article class="flex flex_grow flex_column w_100  p-x_3:lg br-t_1 br_solid br_black-3">
-        <div class="flex flex_row font_ui justify_start relative w_100 gap_3" >
-            <main
-                class="flex flex_column flex_auto gap_3 justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
+        <div class="flex flex_column flex_auto gap_3 justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
                 <div class="font_display m-b_3 lh_2 ">
                     <h2 class="font-size_up-1 font_display font_regular lh_1 h:underline c_primary-n3 m_0">
                     <a class="c_inherit-all expanded-click-area z_1">
@@ -353,21 +394,6 @@ Markup:
                 {{> 'Sub.Data.Duration'}}
                 {{> 'Sub.Data.AttachmentLink'}}
                 </ul>
-            </main>
-            <aside class="flex_none p-x_3:md p-b_3">
-                <ul
-                    class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
-                    <li class="flex_auto p-b_3 m-b_auto">
-                        {{> 'Sub.ActionButtons.Favorite' }}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CME"}}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CNE"}}
-                    </li>
-                </ul>
-            </aside>
         </div>
         <div class="{{> 'Sub.ClassList.Inset.padding'}}">
             {{> 'Sub.Search.TimeMarkers' modifier_class="" }}
