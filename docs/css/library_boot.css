@@ -7722,11 +7722,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3158" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0232" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7211" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7823" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7446" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5672" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9779" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4439" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0693" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2675" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -7758,11 +7758,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2626" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7372" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1897" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2246" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2844" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8655" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4114" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9688" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_1921" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7145" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -7803,8 +7803,8 @@ Markup:
     </header>
     <main id="collapseTypeAhead" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_4605" }}
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_6745" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_7423" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_8547" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8122,9 +8122,9 @@ inline-block  - use inline-block on the role type label to keep all the faculty 
 
 Markup:
 <ul class="ul_inline-semicolon font_regular font_copy">
-  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
+  <li class="no-after font_medium c_primary-n1 block w_100 {{ modifier_class }}">Role Type 1:</li>
   <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
+  <li class="no-after font_medium c_primary-n1 block w_100  {{ modifier_class }}">Role Type 2:</li>
   <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
   <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
   <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
@@ -9019,13 +9019,15 @@ Credit Chiclets Horizontal
 Horizontal list of credit chiclets.
 
 Markup:
-<ul
-    class="flex flex_row flex_wrap font_n3 gap_2 justify_start self_center ul_none uppercase items_center">
-    <li class="lh_0 flex_shrink">
-        {{> 'Sub.Credit' modifier_class="CME"}}
+<ul class="flex flex_row font_n3 gap_2 justify_start flex_wrap  self_start ul_none uppercase">
+    <li class="lh_0 flex_none">
+        {{> 'Sub.Credit' modifier_class='CME' }}
     </li>
-    <li class="lh_0 flex_shrink">
-        {{> 'Sub.Credit' modifier_class="CNE"}}
+    <li class="lh_0 flex_none">
+        {{> 'Sub.Credit' modifier_class='CNE' }}
+    </li>
+    <li class="lh_0 flex_none">
+        {{> 'Sub.Credit' modifier_class='AAPA' }}
     </li>
 </ul>
 
@@ -9504,18 +9506,18 @@ Markup:
 					<div class="tab-content" id="nav-tabContent">
 						<div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
 							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding.up-1' }}">
-								<li class="">{{> "Program.Session.Home"  modifier_class="Myocardial " }}</li>
-								<li class="">{{> "Program.Session.Home"  modifier_class="Electrocardiographic Myocardial Chest Pain " }}</li>
-								<li class="">{{> "Program.Session.Home"  modifier_class="Electrocardiographic Pericardial Electrocardiogram Pericardial Chest Pain Electrocardiogram Blood Vessel Electrocardiogram " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Electrocardiogram Blood Vessel Pericardial Clinical Chest Pain " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Clinical Electrocardiogram Electrocardiogram Cardiovascular Electrocardiogram Valvular Heart Disease Side Effect " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Side Effect Electrocardiographic Arrhythmia Electrocardiographic " }}</li>
 							</ul>
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 							</div>
 						<div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
 							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding.up-1' }}">
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Electrocardiographic " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Clinical Cardiovascular Valvular Heart Disease Chest Pain Arrhythmia Cardiovascular Electrocardiographic Arrhythmia " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Pharmacologic Myocardial Blood Vessel Side Effect " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Electrocardiographic Pericardial Electrocardiographic Chest Pain Valvular Heart Disease Clinical Chest Pain Chest Pain Blood Vessel " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Side Effect Clinical Arteriosclerosis Myocardial Arteriosclerosis Blood Vessel Clinical Side Effect " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Clinical Arrhythmia " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Side Effect Electrocardiographic " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Blood Vessel " }}</li>
 							</ul>
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 						</div>
@@ -9631,8 +9633,8 @@ Markup:
 					<section class="{{>'Sub.ClassList.Inset.up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
 						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding.up-2'}}">
-							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} Blood Vessel </h1>
-							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}}  </h2>
+							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} Side Effect Pharmacologic Arteriosclerosis Valvular Pericardial </h1>
+							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}} Pericardial Side Effect Electrocardiogram Blood Vessel Electrocardiogram Chest Pain  </h2>
 							</main>	
 							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
 								<ul class="flex flex_column flex_wrap gap_2 justify_start self_center ul_none uppercase p-x_3">
@@ -9668,10 +9670,10 @@ Markup:
 							{{> 'Sub.Section.h3' modifier_class='presentation playlist'}}</div>
 							<div class="font_n2 font_n1:lg relative isolation_isolate">
 								<ul class="flex flex_column justify_stretch gap_3 ul_none">
-									{{> "Program.Presentation.Condensed" modifier_class="Arteriosclerosis "}}
-									{{> "Program.Presentation.CondensedPlaying" modifier_class="Valvular Heart Disease Clinical "}}
-									{{> "Program.Presentation.Condensed" modifier_class=""}}
-									{{> "Program.Presentation.Condensed" modifier_class="Arteriosclerosis Chest Pain Myocardial Pharmacologic Cardiovascular Pericardial "}}
+									{{> "Program.Presentation.Condensed" modifier_class="Valvular Arteriosclerosis Clinical Clinical Myocardial Pharmacologic Clinical Blood Vessel Cardiovascular "}}
+									{{> "Program.Presentation.CondensedPlaying" modifier_class="Cardiovascular Blood Vessel Myocardial Myocardial Valvular Heart Disease Arteriosclerosis Myocardial Arteriosclerosis "}}
+									{{> "Program.Presentation.Condensed" modifier_class="Blood Vessel Chest Pain Arrhythmia Pericardial Valvular Pericardial Electrocardiographic "}}
+									{{> "Program.Presentation.Condensed" modifier_class="Arteriosclerosis Valvular Heart Disease Clinical Myocardial Electrocardiographic Chest Pain Cardiovascular "}}
 								</ul>
 							</div>
 						</section>
@@ -9924,11 +9926,11 @@ Markup:
 						{{> 'Sub.Section.h2' modifier_class="continue watching" }}
 						<div class="font_n2 font_n1:lg relative isolation_isolate">
 							<ul class="flex flex_column justify_stretch gap_0 ul_none {{> 'Sub.ClassList.Inset.down-1'}} {{> 'Sub.ClassList.Inset.padding.up-1'}}">
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Clinical Pericardial Clinical Electrocardiogram Valvular Heart Disease Arteriosclerosis Electrocardiographic '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class=''}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Electrocardiographic Pharmacologic Electrocardiogram Electrocardiogram Chest Pain Blood Vessel Electrocardiogram Electrocardiogram Electrocardiogram '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Blood Vessel Arteriosclerosis Valvular Pharmacologic Side Effect Cardiovascular '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Myocardial '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Arteriosclerosis Side Effect '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Valvular Myocardial Myocardial Blood Vessel Arrhythmia Myocardial Electrocardiographic '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Pharmacologic Side Effect Electrocardiogram Valvular Valvular Valvular Heart Disease Arrhythmia Clinical '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Arrhythmia Side Effect Side Effect Blood Vessel Pericardial Arteriosclerosis '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Arrhythmia Electrocardiographic Arteriosclerosis Clinical Arrhythmia Blood Vessel Electrocardiogram Clinical Pericardial '}}
 							</ul>
 						</div>
 						{{> 'Sub.Section.Footer'  modifier_class="continue watching" }}
@@ -10067,14 +10069,14 @@ Horizontal Carousels to have discoverable areas on the home pages.
 Markup:
 <div class="relative isolation_isolate overflow_hidden {{>'Sub.ClassList.Inset.margin.down-1'}}">
         <div id="slider1" class=" flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3 {{> 'Sub.ClassList.Inset.down-1'}} ">
-        {{> "Program.Session.Home"  modifier_class="Pericardial Blood Vessel Cardiovascular Chest Pain Electrocardiographic Blood Vessel "}}
-        {{> "Program.Session.Home"  modifier_class="Myocardial Arteriosclerosis Side Effect Blood Vessel Electrocardiogram "}}
-        {{> "Program.Session.Home"  modifier_class="Electrocardiogram Side Effect Cardiovascular Side Effect Side Effect Electrocardiogram "}}
-        {{> "Program.Session.Home"  modifier_class="Electrocardiographic Valvular Heart Disease Electrocardiographic Clinical Arteriosclerosis "}}        
-        {{> "Program.Session.Home"  modifier_class="Side Effect Clinical Side Effect Arteriosclerosis Arrhythmia Cardiovascular Arrhythmia "}}
-        {{> "Program.Session.Home"  modifier_class="Electrocardiographic Electrocardiographic Valvular Valvular Heart Disease Valvular Pharmacologic "}}        
-        {{> "Program.Session.Home"  modifier_class="Side Effect "}}
-        {{> "Program.Session.Home"  modifier_class="Pharmacologic Electrocardiogram Clinical Electrocardiographic Chest Pain Blood Vessel Pericardial Blood Vessel Pericardial "}}
+        {{> "Program.Session.Home"  modifier_class="Cardiovascular Valvular Heart Disease Electrocardiographic Myocardial Blood Vessel Chest Pain Pericardial Arteriosclerosis "}}
+        {{> "Program.Session.Home"  modifier_class="Myocardial Blood Vessel Myocardial Myocardial "}}
+        {{> "Program.Session.Home"  modifier_class="Chest Pain Pericardial Myocardial "}}
+        {{> "Program.Session.Home"  modifier_class="Electrocardiographic Pharmacologic Pharmacologic Myocardial Cardiovascular Electrocardiographic Valvular Heart Disease Clinical Blood Vessel "}}        
+        {{> "Program.Session.Home"  modifier_class="Clinical Chest Pain Arrhythmia Chest Pain Valvular Heart Disease Chest Pain Blood Vessel Clinical Valvular Heart Disease "}}
+        {{> "Program.Session.Home"  modifier_class="Arrhythmia Electrocardiogram Pericardial Cardiovascular Clinical Pharmacologic Valvular "}}        
+        {{> "Program.Session.Home"  modifier_class="Pharmacologic Arrhythmia Cardiovascular Arrhythmia Arteriosclerosis Clinical Valvular Valvular Heart Disease Clinical "}}
+        {{> "Program.Session.Home"  modifier_class="Chest Pain Valvular Arrhythmia Arteriosclerosis Myocardial Arteriosclerosis Pharmacologic Electrocardiogram "}}
     </div>
     {{> 'Sub.Carousel.CustomTools'}}
 </div>
@@ -10235,11 +10237,11 @@ Markup:
     {{> 'Sub.Section.h2' modifier_class="continue watching" }}
     <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.ClassList.Inset.down-1'}} ">
         <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.down'}} ">
-        {{> "Program.Presentation.Condensed"  modifier_class="Chest Pain Arrhythmia Chest Pain Valvular Blood Vessel Chest Pain Valvular Heart Disease "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Cardiovascular Electrocardiogram Cardiovascular "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Pharmacologic "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Arteriosclerosis Valvular Heart Disease Valvular "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Electrocardiographic Arrhythmia Chest Pain Pericardial Pericardial "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Arteriosclerosis "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Clinical Arteriosclerosis "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Chest Pain Myocardial Blood Vessel Arteriosclerosis Cardiovascular "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Chest Pain Arteriosclerosis "}}
+        {{> "Program.Presentation.Condensed"  modifier_class=""}}
         </div>
         {{> 'Sub.Carousel.CustomToolsVertical'}}
     </div>
@@ -10472,7 +10474,7 @@ Markup:
             class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}}">
             <h2 class="font-size_up font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
                 <a class="c_inherit-all expanded-click-area z_1">
-                    Clinical Update for the Pericardial Arteriosclerosis Valvular Arrhythmia Valvular Heart Disease Blood Vessel Valvular Myocardial  {{ modifier_class}} 
+                    Clinical Update for the Side Effect Blood Vessel Pericardial Electrocardiogram Chest Pain  {{ modifier_class}} 
                 </a>
             </h2>
             <ul
@@ -10542,7 +10544,7 @@ Markup:
                     </span>
                 </span>
                 <a class="c_inherit-all expanded-click-area z_1 inline">
-                    Clinical Update for the  Myocardial Clinical Pharmacologic Clinical Electrocardiogram Clinical Electrocardiogram Pharmacologic Cardiovascular Valvular Electrocardiogram Myocardial Chest Pain Valvular Heart Disease  {{ modifier_class }} 
+                    Clinical Update for the  Myocardial Arrhythmia Blood Vessel Clinical Myocardial Myocardial Myocardial Valvular Heart Disease Arteriosclerosis Myocardial Myocardial Pericardial Arrhythmia Side Effect  {{ modifier_class }} 
                 </a>
             </h2>
             <ul
@@ -10608,21 +10610,23 @@ Markup:
                 {{> 'Sub.Data.PresentationCount'}}
                  {{> 'Sub.Data.AttachmentLink.ZIP'}}
             </ul>
+            <ul class="flex flex_row font_n3 gap_2 justify_start flex_wrap  self_start ul_none uppercase">
+                <li class="lh_0 flex_none">
+                    {{> 'Sub.Credit' modifier_class='CME' }}
+                </li>
+                <li class="lh_0 flex_none">
+                    {{> 'Sub.Credit' modifier_class='CNE' }}
+                </li>
+                <li class="lh_0 flex_none">
+                    {{> 'Sub.Credit' modifier_class='AAPA' }}
+                </li>
+            </ul>
         </main>
         <aside class="flex_none p-x_3:md p-b_3">
             <ul
                 class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
                 <li class="flex_auto p-b_3 m-b_auto">
                    {{> 'Sub.ActionButtons.Favorite' }}
-                </li>
-                <li class="lh_0 w_100">
-                    {{> 'Sub.Credit' modifier_class='CME' }}
-                </li>
-                <li class="lh_0 w_100">
-                    {{> 'Sub.Credit' modifier_class='CNE' }}
-                </li>
-                <li class="lh_0 w_100">
-                    {{> 'Sub.Credit' modifier_class='AAPA' }}
                 </li>
             </ul>
         </aside>
@@ -10653,45 +10657,33 @@ Presentation designs on the home page.
 
 Markup:
 <div>
-    <article class="flex flex_grow flex_column w_100  {{> 'Sub.ClassList.Inset.up-1'}}">
-        <div class="flex flex_row font_ui justify_start relative w_100 gap_3">
-            <main
-                class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
-                <div class="font_display m-b_3 lh_2 ">
-                    <h1 class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 m-t_"> {{> 'Data.Session.Title'}}</h1>
-                    <h2 class="font-size_up-1 font_display font_regular lh_2 h:underline c_primary-n3">
-                    <a class="c_inherit-all expanded-click-area z_1">
-                        Presentation of the findings {{ modifier_class}} 
-                    </a>
-                    </h2>
-                </div>
-                <div class="c_black-8 font_copy font-size_down-1">
-                    {{> 'Sub.FacultyList' }}
-                </div>
-                <ul class="ul_none flex flex_row flex_wrap justify_start font-size_down-1 c_black-7 m-t_auto lh_0 items_end gap_2">
-                {{> 'Sub.Data.Duration'}}
-                {{> 'Sub.Data.AttachmentLink'}}
-                </ul>
-            </main>
-            <aside class="flex_none p-x_3:md p-b_3">
-                <ul
-                    class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
-                    <li class="flex_auto p-b_3 m-b_auto">
-                        {{> 'Sub.ActionButtons.Favorite' }}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CME"}}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CNE"}}
-                    </li>
-                </ul>
-            </aside>
-        </div>
-        <div class="{{> 'Sub.ClassList.Inset.padding'}}">
-            {{> 'Sub.ProgressBar' modifier_class="" }}
-        </div>
-    </article>
+	<article class="flex flex_grow flex_column w_100  {{> 'Sub.ClassList.Inset.up-1'}}">
+		<div class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
+			<div class="font_display m-b_3 lh_2 ">
+				<h2 class="font-size_up font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
+					<span class="aspect_1x1 float_right font_n3 m-r_n3 m-t_n4 p-x_3" style="width:3.5em">
+						<span class="absolute t_n2 z_3 p-x_3 r_0">
+							{{> 'Sub.ActionButtons.Favorite' }}
+						</span>
+					</span>
+					<strong class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 "> {{> 'Data.Session.Title'}}</strong>
+					<a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the Arrhythmia Arteriosclerosis Side Effect Pharmacologic Chest Pain Valvular Heart Disease Electrocardiographic Pericardial Clinical Chest Pain Myocardial Myocardial Arteriosclerosis Valvular Heart Disease  {{ modifier_class }}
+					</a>
+				</h2>
+			</div>
+			<div class="c_black-8 font_copy font-size_down-1">
+				{{> 'Sub.FacultyList' }}
+			</div>
+			<ul class="ul_none flex flex_row flex_wrap justify_start font-size_down-1 c_black-7 m-t_auto lh_0 items_end gap_2">
+				{{> 'Sub.Data.Duration'}}
+				{{> 'Sub.Data.AttachmentLink'}}
+			</ul>
+            {{> 'Sub.Credit.Chiclets.Horizontal'}}
+		</div>
+		<div class="{{> 'Sub.ClassList.Inset.padding'}}">
+			{{> 'Sub.ProgressBar' modifier_class="" }}
+		</div>
+	</article>
 </div>
 
 
@@ -10712,6 +10704,71 @@ Styleguide Program.Presentation.Home
 */
 /*
 
+Presentation - Home Version 2
+
+Presentation designs on the home page.
+
+Markup:
+<div>
+    <article class="flex flex_grow flex_column w_100  {{> 'Sub.ClassList.Inset.up-1'}}">
+        <div class="flex flex_row font_ui justify_start relative w_100 gap_3">
+            <main
+                class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
+                <div class="font_display m-b_3 lh_2 ">
+                    <h2 class="font-size_up font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
+					<span class="aspect_1x1 float_right font_n3 m-r_n3 m-t_n4 p-x_3" style="width:3.5em">
+						<span class="absolute t_n2 z_3 p-x_3 r_0">
+							{{> 'Sub.ActionButtons.Favorite' }}
+						</span>
+					</span>
+					<strong class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 "> {{> 'Data.Session.Title'}}</strong>
+					<a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the Side Effect Blood Vessel Blood Vessel Arteriosclerosis Blood Vessel Side Effect Blood Vessel Chest Pain Arteriosclerosis Myocardial Chest Pain Arrhythmia Clinical Pharmacologic  {{ modifier_class }}
+					</a>
+				</h2>
+                </div>
+                <div class="c_black-8 font_copy font-size_down-1">
+                    {{> 'Sub.FacultyList' }}
+                </div>
+                <ul class="ul_none flex flex_row flex_wrap justify_start font-size_down-1 c_black-7 m-t_auto lh_0 items_end gap_2">
+                {{> 'Sub.Data.Duration'}}
+                {{> 'Sub.Data.AttachmentLink'}}
+                </ul>
+                {{> 'Sub.Credit.Chiclets.Horizontal'}}
+            </main>
+            <aside class="flex_none p-x_3:md p-b_3">
+                <ul
+                    class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
+                    <li class="flex_auto p-b_3 m-b_auto">
+                        {{> 'Sub.ActionButtons.Favorite' }}
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <div class="{{> 'Sub.ClassList.Inset.padding'}}">
+            {{> 'Sub.ProgressBar' modifier_class="" }}
+        </div>
+    </article>
+</div>
+
+Experimental: Clean up and refactored design. 
+
+MarkupWrapperClasses: ul_none
+
+Weight: 0
+
+Data:
+Data.Session.Title - Session Title
+Data.Presentation.Title - Presentation Title
+
+SubComponents: 
+Sub.FacultyList - Faculty List
+Sub.ProgressBar - Progress
+Sub.Credits - Credits
+
+Styleguide Program.Presentation.Home_V2
+*/
+/*
+
 Presentation - Search
 
 Presentation designs on the Search page.
@@ -10719,15 +10776,17 @@ Presentation designs on the Search page.
 Markup:
 <div>
     <article class="flex flex_grow flex_column w_100  {{> 'Sub.ClassList.Inset.up-1'}}">
-        <div class="flex flex_row font_ui justify_start relative w_100 gap_3" >
-            <main
-                class="flex flex_column flex_auto gap_3 justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
+        <div class="flex flex_column flex_auto gap_3 justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
                 <div class="font_display m-b_3 lh_2 ">
-                    <h1 class="block c_black-6 uppercase font_bold font-size_down lh_2 m-y_2"> {{> 'Data.Session.Title'}}</h1>
-                    <h2 class="font-size_up-1 font_display font_regular lh_1 h:underline c_primary-n3 m_0">
-                    <a class="c_inherit-all expanded-click-area z_1">
-                        Presentation of the findings {{ modifier_class}} 
-                    </a>
+                    <h2 class="font-size_up font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
+                        <span class="aspect_1x1 float_right font_n3 m-r_n3 m-t_n4 p-x_3" style="width:3.5em">
+                            <span class="absolute t_n2 z_3 p-x_3 r_0">
+                                {{> 'Sub.ActionButtons.Favorite' }}
+                            </span>
+                        </span>
+                        <strong class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 "> {{> 'Data.Session.Title'}}</strong>
+                        <a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the Electrocardiographic Electrocardiographic Electrocardiographic Cardiovascular Electrocardiogram Myocardial Pericardial Electrocardiogram Pericardial Valvular Heart Disease Valvular Valvular Chest Pain Pericardial  {{ modifier_class }}
+                        </a>
                     </h2>
                 </div>
                 <div class="c_black-8 font_copy font-size_down-1">
@@ -10737,21 +10796,7 @@ Markup:
                 {{> 'Sub.Data.Duration'}}
                 {{> 'Sub.Data.AttachmentLink'}}
                 </ul>
-            </main>
-            <aside class="flex_none p-x_3:md p-b_3">
-                <ul
-                    class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
-                    <li class="flex_auto p-b_3 m-b_auto">
-                        {{> 'Sub.ActionButtons.Favorite' }}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CME"}}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CNE"}}
-                    </li>
-                </ul>
-            </aside>
+                {{> 'Sub.Credit.Chiclets.Horizontal'}}
         </div>
         <div class="{{> 'Sub.ClassList.Inset.padding'}}">
             {{> 'Sub.Search.TimeMarkers' modifier_class="" }}
@@ -10784,9 +10829,7 @@ Presentation designs on the Search page.
 Markup:
 <div>
     <article class="flex flex_grow flex_column w_100  p-x_3:lg br-t_1 br_solid br_black-3">
-        <div class="flex flex_row font_ui justify_start relative w_100 gap_3" >
-            <main
-                class="flex flex_column flex_auto gap_3 justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
+        <div class="flex flex_column flex_auto gap_3 justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}} ">
                 <div class="font_display m-b_3 lh_2 ">
                     <h2 class="font-size_up-1 font_display font_regular lh_1 h:underline c_primary-n3 m_0">
                     <a class="c_inherit-all expanded-click-area z_1">
@@ -10801,21 +10844,6 @@ Markup:
                 {{> 'Sub.Data.Duration'}}
                 {{> 'Sub.Data.AttachmentLink'}}
                 </ul>
-            </main>
-            <aside class="flex_none p-x_3:md p-b_3">
-                <ul
-                    class="b_3 flex flex_column flex_wrap font_n3 gap_2 justify_end:md justify_start r_4 self_center ul_none uppercase p-x_3 m-t_n2 items_center">
-                    <li class="flex_auto p-b_3 m-b_auto">
-                        {{> 'Sub.ActionButtons.Favorite' }}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CME"}}
-                    </li>
-                    <li class="lh_0 w_100">
-                        {{> 'Sub.Credit' modifier_class="CNE"}}
-                    </li>
-                </ul>
-            </aside>
         </div>
         <div class="{{> 'Sub.ClassList.Inset.padding'}}">
             {{> 'Sub.Search.TimeMarkers' modifier_class="" }}
