@@ -405,34 +405,19 @@ Markup:
 <div class="BODY_TAG-stand-in bg_black-4 w_100 p_4:md p_2 grid:md min-h_100">
 	<div class="bg_white-8 br_radius grid:md isolation_isolate items_center justify_center m_auto max-w_50 p_2 p_3:md page-wrapper shadow_bevel-light">
 		<div class="bg_black-2 br_radius">
-			<section class="reading-typography  inset-level_down-1 bg_black-1 shadow_emboss-light br_solid br_1 br_black-2 br_radius p_4:lg p_3 flex flex_column gap_4 ">
+			<section class=" inset-level_down-1 bg_black-1 shadow_emboss-light br_solid br_1 br_black-2 br_radius p_4:lg p_3 flex flex_column gap_4 ">
 				<div>
-					<div class="relative z_0 br_radius overflow_hidden ">
+					<div class="relative z_0 br_radius overflow_hidden reading-typography ">
 						<picture class="w_100 ">
 							<source class="w_100" srcset=" https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_600x225.jpg" media="(min-width: 400px)">
 							<img src="https://acc-style.github.io/PrototypingACCorg/assets/images/lib/J22043_400x300.jpg" class="w_100" alt="">
 						</picture>
 					</div>
 					<div class="bg_white br_1 br_black-3 br_radius br_solid inset-level_up-1 m-t_n5 m-x_5 p_4 relative shadow_bevel-light t_n5 text_center">
-						<h1 class="c_primary font_regular font_display">No Access</h1>
-						<p class="font-size_up font_bold"> We are sorry you don't seem to have access to this product.</p>
+						<h1 class="font_display font_6 c_primary m-t_4">Sorry, but it appears this account doesn't have access to [PRODUCT NAME ShortCode]</h1>
 					</div>
 				</div>
-				<div class="inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative " id="TopAgreement1">
-					<div class="reading-typography">
-						<h1 class="font_display font_6 c_primary m-t_4">Sorry, but it appears you have not yet purchased ACC Anywhere&trade;  </h1>
-						<p>To purchase, please click the Register button below.  Once you have completed your purchase, please wait 15 minutes to allow the system to process the information. To access, visit www.ACC.org/ACCAnywhere and click the Launch button. </p>
-						<p>If you believe you have received this message in error, please contact <i><a href="mailto:ACC@maritz.com" target="_blank" rel="noreferrer noopener">ACC@maritz.com</a></i></p>
-						<p><strong>For additional questions, please contact ACC Member Care.&nbsp;</strong> 
-						<br>Email:&nbsp;<a href="mailto:MemberCare@ACC.org"><em>MemberCare@ACC.org</em></a> 
-						<br>Phone: 202-375-6000 ext. 5603 &nbsp; 
-						<br>Toll-Free: 800-253-4636 ext. 5603&nbsp;</p>
-						<div class="flex flex_row gap_3 justify_center">
-							<a href="https://ebiz.acc.org/Meetings?ProductId=174240365" class=" btn btn-primary c_white font_bold font_ui h:c_white shadow_overlap-light uppercase">Register</a> 
-							<a href=" https://www.acc.org/Education-and-Meetings/Meetings/Meeting-Items/2022/01/01/01/04/ACC-Anywhere-ACC22-On-Demand" class=" btn btn-secondary c_white font_bold font_ui h:c_white shadow_overlap-light uppercase">Learn More</a> 
-						</div>
-					</div>
-				</div>
+				{{> 'Sub.System.AccessTroubleShooting'}}
 			</section>
 		</div>
 	</div>

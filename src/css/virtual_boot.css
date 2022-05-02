@@ -6125,6 +6125,812 @@ textarea.form-control-lg {
 }
 
 /*
+Pagination
+
+Pagination Design
+
+<ul class="br-t_3 br_0 br_secondary br_solid font_n2 justify_end lh_2 pagination ul_none">
+  <li class="disabled page-item">
+    <a class="a:bg_secondary a:c_white-9 br_none h:bg_primary-n2 h:c_white lh_2 p_2 p-x_3 m-l_1 page-link disabled" href="#"><i class="fas fa-chevron-left"></i></a>
+  </li>
+  <li class="page-item">
+    <a class="a:bg_secondary a:c_white-9 br_none h:bg_primary-n2 h:c_white lh_2 p_2 p-x_3 m-l_1 page-link" href="#">1</a>
+  </li>
+  <li class="page-item active">
+    <a class="a:bg_secondary a:c_white-9 br_none h:bg_primary-n2 h:c_white lh_2 p_2 p-x_3 m-l_1 page-link"> 2 </a>
+  </li>
+  <li class="page-item">
+    <a class="a:bg_secondary a:c_white-9 br_none h:bg_primary-n2 h:c_white lh_2 p_2 p-x_3 m-l_1 page-link" href="#">3</a>
+  </li>
+  <li class="page-item">
+    <a class="a:bg_secondary a:c_white-9 br_none h:bg_primary-n2 h:c_white lh_2 p_2 p-x_3 m-l_1 page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+  </li>
+</ul>
+
+Weight: 100
+
+Styleguide  Bootstrap.Pagination
+
+*/
+/*
+Tabs
+
+Description: A simple way to show small groups of content that should have the same level of reading hierarchy.  
+
+Markup:
+<nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light" id="tabContentLight" role="tablist">
+    <ul class="flex_column flex_row:md  nav">
+        {{> "Structures.Tabs.Tabs.LinkActive" }}
+        {{> "Structures.Tabs.Tabs.Link" }}
+        {{> "Structures.Tabs.Tabs.LinkDisabled" }}
+        </li>
+    </ul>
+</nav>
+<div class="bg_black-_05 br-bl_radius br-br_radius m-x_3 p_4 reading-typography shadow_emboss-light tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
+        <h2 class="capitalize"> consectetur adipisicing elit </h2>
+        Lorem ipsum dolor sit amet. Quisquam maxime consectetur, nisi sed ea perspiciatis a sit porro laboriosam ab sequi est quas optio dolorum at maiores quis incidunt inventore.</div>
+    <div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
+        <h2 class="capitalize">Lorem ipsum dolor sit </h2>
+        Amet consectetur adipisicing elit. Vero enim provident consequuntur perspiciatis. Eligendi placeat consequuntur veniam quidem temporibus labore quisquam commodi rem error cumque fugit suscipit nulla, excepturi eos.</div>
+</div>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+Weight:0
+
+Styleguide Structures.Tabs
+*/
+/*
+Simple Tabs
+
+Simple in page tabs 
+
+Markup:
+<nav class="bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light">
+    <ul class="flex_column flex_row:md  nav">
+        {{> "Structures.Tabs.Tabs.LinkActive" }}
+        {{> "Structures.Tabs.Tabs.Link" }}
+        {{> "Structures.Tabs.Tabs.Link" }}
+        {{> "Structures.Tabs.Tabs.LinkDisabled" }}
+    </ul>
+</nav>
+
+Styleguide  Structures.Tabs.Tabs
+
+*/
+/*
+Simple Tabs: Dark Mode
+
+Reverse Colored Tabs for when on dark background
+
+Markup:
+<div class="m-y_4 bg_acc p_4" id="nav_jump">
+    <nav class="bg_black-2 c_white br_3 br_radius br_solid br_white-5 font_0 font_bold font_ui p-x_0 p-x_4:md shadow_overlap-light">
+        <ul class="flex_column flex_row:md ul_none nav">
+        {{> "Structures.Tabs.TabsDark.LinkActive" }}
+        {{> "Structures.Tabs.TabsDark.Link" }}
+        {{> "Structures.Tabs.TabsDark.Link" }}
+        {{> "Structures.Tabs.TabsDark.LinkDisabled" }}
+        </ul>
+    </nav>
+</div>
+
+Weight: 0
+
+Styleguide  Structures.Tabs.TabsDark
+*/
+/*
+Tab Dark: Active
+
+Description: Active State of Dark Tab.  Add and remove the `active is-active` class from the li-tag toggle the active effect
+
+Markup:
+<li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item ">
+    <a class="a:bg_accent h:underline-none c_white text-shadow_black-1 br-b_3 br_white-0 br_solid:md:md h:bg_secondary h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4 active">
+        Active
+    </a>
+</li>
+
+MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_acc br_3 br_radius br_solid br_acc-3 p-l_4
+
+Weight:0
+
+Styleguide  Structures.Tabs.TabsDark.LinkActive
+*/
+/*
+Tab Dark: Basic
+
+Description: Dark Tab Basic Nav
+
+Markup:
+<li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item">
+    <a class="a:bg_accent h:underline-none c_white text-shadow_black-1 br-b_3 br_white-0 br_solid:md h:bg_secondary h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4">
+        Link
+    </a>
+</li>
+
+
+MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_acc br_3 br_radius br_solid br_acc-3 p-l_4
+
+Weight:0
+
+
+Styleguide  Structures.Tabs.TabsDark.Link
+*/
+/*
+Tab Dark: Disabled
+
+Description: Disabled decorations is a swap of many of the decoration classes with the removal of the hover and active classes.
+
+Markup:
+<li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item ">
+    <a class="bg_white-2 br-b_3 br_solid:md br_white-0 c_white-4 cursor_not-allowed disabled h:underline-none m-y_n2:md nav-link opacity-5 p-x_4 p-y_3:md" href="/on-demand/industry-stage#nav_jump" target="_self">
+        Disabled
+    </a>
+</li>
+
+MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_acc br_3 br_radius br_solid br_acc-3 p-l_4 
+
+Weight:0
+
+
+Styleguide  Structures.Tabs.TabsDark.LinkDisabled
+*/
+/*
+Tab: Active
+
+Description: Active State of Dark Tab.  Add and remove the `active is-active` class from the li-tag toggle the active effect
+
+Markup:
+<li class=" br-t_3 br_solid:md br_white-0 m-l_1 nav-item">
+    <a 
+        id="ActiveLink-tab" data-bs-toggle="tab" data-bs-target="#ActiveLink"  role="tab" aria-controls="ActiveLink" aria-selected="true"
+        class="active a:bg_accent-n2 h:underline-none a:c_white br-b_3 br_white-0 br_solid:md c_primary h:bg_acc-n3 h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4" 
+        href="#">Active</a>
+</li>
+
+MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light
+
+Weight:0
+
+Styleguide  Structures.Tabs.Tabs.LinkActive
+*/
+/*
+Tab: Basic
+
+Description: Active State of Dark Tab.  Add and remove the `active is-active` class from the li-tag toggle the active effect
+
+Markup:
+<li class="br-t_3 br_solid:md br_white-0 m-l_1 nav-item">
+    <a 
+    id="BasicLink-tab" data-bs-toggle="tab" data-bs-target="#BasicLink"  role="tab" aria-controls="BasicLink" aria-selected="true"
+    class="a:bg_accent-n2 h:underline-none a:c_white br-b_3 br_white-0 br_solid:md c_primary h:bg_acc-n3 h:br_accent h:c_white m-y_n2:md nav-link p-y_3:md p-x_4" href="#">Link</a>
+</li>
+
+
+MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light
+
+Weight:0
+
+Styleguide  Structures.Tabs.Tabs.Link
+*/
+/*
+Tab: Disabled
+
+Description: Disabled decorations is a swap of many of the decoration classes with the removal of the hover and active classes.
+
+Markup:
+<li class="br-t_3 br_white-0 br_solid:md m-l_1 nav-item">
+    <a class="br-b_3 br_solid:md br_white-0 c_black-4 opacity-5 bg_black-1 disabled h:underline-none m-y_n2:md nav-link p-x_3 p-x_4" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+</li>
+
+MarkupWrapperClasses: flex_column flex_row:md ul_none nav bg_black-2 br_3 br_radius br_solid br_white-9 c_primary font_0 font_bold font_accent: p-x_0 p-x_4:md shadow_bevel-light
+
+Weight:0
+
+Styleguide  Structures.Tabs.Tabs.LinkDisabled
+*/
+/*
+UI Tabs
+
+The application systems of acc.org have tabs that sometimes overrun the tabs space areas because they need to show many options.
+
+Markup:
+<div class="br_solid br_1 br_black-3">
+    <nav class="flex flex_row font_ui relative" id="tabContentLight" role="tablist">
+        <ul class="flex flex_auto flex_nowrap flex_row:md flex_column nav overflow_hidden font-size_up ul_none">
+            {{> "Structures.UITabs.Tabs.LinkActive" }}
+            {{> "Structures.UITabs.Tabs" }}
+            {{> "Structures.UITabs.Tabs.LinkDisabled" }}
+        </ul>
+    </nav>
+    <div class="p_4 reading-typography tab-content br-t_1 br_solid br_black-3" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="ActiveLinkUI" role="tabpanel" aria-labelledby="ActiveLinkUI">
+            {{> HTML.Typography.Sample }}
+        </div>
+        <div class="tab-pane fade" id="LinkUI" role="tabpanel" aria-labelledby="LinkUI">
+            {{> HTML.Typography.Sample }}
+        </div>
+    </div>
+</div>
+
+
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+Weight:0
+
+Styleguide Structures.UITabs
+*/
+/*
+UI Tabs Overflow
+
+The application systems of acc.org have tabs that sometimes overrun the tabs space areas because they need to show many options.
+
+Markup:
+<div class="br_solid br_1 br_black-3">
+    <nav class="flex flex_row font_ui relative" id="tabOverflow" role="tablist"> 
+        <a class="disabled flex_row flex text_center bg_disabled bg_white br-r_1 br_black-3 br_solid c_black-8 c_disabled flex_auto flex_none h:bg_black-3 h:c_black h:undecorated nav-item opacity_disabled p-x_4:md p_3 relative text_center z_3">
+                <i class="flex_auto self_center far fa-chevron-left"></i>
+        </a>
+        <ul class="flex flex_auto flex_nowrap flex_row:md nav overflow_hidden font-size_up ul_none">
+            {{> "Structures.UITabs.Tabs.LinkActive" }}
+            {{> "Structures.UITabs.Tabs" }}
+            {{> "Structures.UITabs.Tabs" }}
+            {{> "Structures.UITabs.Tabs" }}
+            {{> "Structures.UITabs.Tabs" }}
+            {{> "Structures.UITabs.Tabs" }}
+            {{> "Structures.UITabs.Tabs.LinkDisabled" }}
+        </ul>
+        <a class="disabled flex_row flex text_center bg_disabled bg_white br-l_1 br_black-3 br_solid c_black-8 c_disabled flex_auto flex_none h:bg_black-3 h:c_black h:undecorated nav-item opacity_disabled p-x_4:md p_3 relative text_center z_3">
+                <i class="flex_auto self_center far fa-chevron-right"></i>
+        </a>
+    </nav>
+    <div class="p_4 reading-typography tab-content br-t_1 br_solid br_black-3" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="ActiveLinkUI" role="tabpanel" aria-labelledby="ActiveLinkUI">
+            {{> HTML.Typography.Sample }}
+        </div>
+        <div class="tab-pane fade" id="LinkUI" role="tabpanel" aria-labelledby="LinkUI">
+            {{> HTML.Typography.Sample }}
+        </div>
+    </div>
+</div>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Custom JavaScript is needed to make this scroll back and forth, and will need to have disables applied when overflow has reached a max or min. 
+
+Weight:0
+
+Styleguide Structures.UITabs.Overflow
+*/
+/*
+Tab: Default
+
+Description: Active State of Tab.  Add and remove the `active is-active` class from the li-tag toggle the active effect
+
+Markup:
+<li id="LinkUI-tab" data-bs-toggle="tab" data-bs-target="#LinkUI"  role="tab" aria-controls="LinkUI" aria-selected="true" class=" nav-item relative p_3 p-x_4:md h:bg_black-3 br-l_1 br_black-3 br_solid flex_grow text_center bg_disabled opacity_disabled a:bg_accent-n1">
+    <span 
+         class="c_disabled h:undecorated expanded-click-area c_black-8 a:c_white-9 h:c_black " 
+        >Link</span>
+</li>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+MarkupWrapperClasses: flex ul_none
+
+Weight:0
+
+Styleguide  Structures.UITabs.Tabs
+*/
+/*
+Tab: Active
+
+Description: Active State of Dark Tab.  Add and remove the `active is-active` class from the li-tag toggle the active effect
+
+Markup:
+<li class="active nav-item relative p_3 p-x_4:md h:bg_black-3 br-l_1 br_black-3 br_solid flex_grow text_center bg_disabled opacity_disabled a:bg_accent-n1">
+    <a 
+        id="ActiveLinkUI-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#ActiveLinkUI"
+        role="tab"
+        aria-controls="ActiveLinkUI"
+        aria-selected="true"
+        class="c_disabled h:undecorated expanded-click-area c_black-8 a:c_white-9 h:c_black " 
+        href="#">Active</a>
+</li>
+
+MarkupWrapperClasses: flex ul_none
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+Weight:0
+
+Styleguide  Structures.UITabs.Tabs.LinkActive
+*/
+/*
+Tab: Disabled
+
+Description: Disabled decorations is a swap of many of the decoration classes with the removal of the hover and active classes.
+
+Markup:
+<li class="disabled nav-item relative p_3 p-x_4:md h:bg_black-3 br-l_1 br_black-3 br_solid flex_grow text_center bg_disabled opacity_disabled a:bg_accent-n1">
+    <a class="c_disabled h:undecorated expanded-click-area c_black-8 a:c_white-9 h:c_black "
+        href="#"
+        tabindex="-1"
+        aria-disabled="true">
+        Disabled</a>
+</li>
+
+Experimental: This design is currently being reworked and might possibly change. (June 2021)
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+MarkupWrapperClasses: flex ul_none
+
+Weight:0
+
+Styleguide  Structures.UITabs.Tabs.LinkDisabled
+*/
+/*
+Scroll Overflow Script
+
+Description: Javascript is needed to make the scrolls work on the page
+
+Markup:
+
+
+Weight:0
+
+Styleguide  Structures.UITabs.Script
+*/
+/*
+Sidebar Nav
+
+Description: Side bar for any 3 layer nav on the site. the parent node is from the main nav.
+
+Markup:
+<nav class="nav-sub bg_primary c_white font_2 font_ui ">
+    <ul class="ul_none flex_column flex">
+        {{> "Navigation.Sidebar.Parent"}}
+        {{> "Navigation.Sidebar.Child"}}
+        {{> "Navigation.Sidebar.ChildWithChildren"}}
+        {{> "Navigation.Sidebar.Child"}}
+        {{> "Navigation.Sidebar.Child"}}
+        {{> "Navigation.Sidebar.ChildWithGrandChildren"}}
+    </ul>
+</nav>
+
+Weight:-1000
+
+MarkupWrapperClasses: max-w_25 m_auto 
+
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+
+Styleguide Navigation.Sidebar
+*/
+/*
+Parent NavItem
+
+Description: The parent is singular in this nav it is always active and its direct children are always expanded so there is not need for a toggle.
+
+Markup:
+<li class="nav-item font-size_up" data-nav="parent">
+    <div class="bg_black-4 ">
+        <a class="text-shadow_black-1 block w_100 c_white p-y_2 p-x_4 w_100 h:c_white inline-block h:underline self_center">Parent Link: Tree starts from this node</a>
+    </div>
+</li>
+
+Weight: -100
+
+MarkupWrapperClasses: bg_primary c_white font_ui ul_none
+
+Styleguide Navigation.Sidebar.Parent
+*/
+/*
+Child NavItem
+
+Description: Child and Grandchild nav items are built the same way with a spacer with or without a toggle depending on if they have children.
+
+default     -  No added class 
+active      -  Nav Item changes its decoration if this the page the user is on.
+
+Markup:
+<li class="nav-item {{modifier_class}}" data-nav="child">
+    <div class="flex flex_row">
+        <div class="flex flex_column flex_none justify_start">
+            <div class="flex_none">
+                <span class="fa-stack">
+                    <i class="fas fa-spacer fa-stack-1x"></i>
+                </span>
+            </div>
+        </div>
+        <div class="flex_auto self_center">
+            <a class="text-shadow_black-1 {{modifier_class}} c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child Link</a>
+        </div>
+    </div>
+</li>
+
+Weight: 10
+
+MarkupWrapperClasses: bg_primary c_white font_ui ul_none
+
+Styleguide Navigation.Sidebar.Child
+*/
+/*
+Toggle Child
+
+Description: Toggle elements are set to active if the attached node or its children are active. If the toggle is active the collapsed children navigation are open by default.
+
+default     -  the toggle when it doesn't have an active class still shades on hover
+active      -  shade the toggle
+
+Markup:
+<div class="{{modifier_class}} br-r_1 br_solid br_white-2 flex flex_column flex_none justify_start text-shadow_black-n1 c_white">
+    {{> "Navigation.Toggle.Advanced" modifier_class=".childNavCollapse" }}
+</div>
+
+Weight: -10
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+
+MarkupWrapperClasses: bg_primary c_white font_ui ul_none
+
+Styleguide Navigation.Sidebar.ChildToggle
+*/
+/*
+Child NavItem With Children
+
+Description: Child and Grandchild nav items are built the same way with a spacer with or without a toggle depending on if they have children.
+
+
+Markup:
+<li class="nav-item {{modifier_class}}" data-nav="child">
+    <div class="flex flex_row">
+        {{> "Navigation.Sidebar.ChildToggle" modifier_class="collapsed"}}
+        <div class="flex_auto self_center">
+            <a class="text-shadow_black-1 {{modifier_class}} c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child with Children Links</a>
+            <nav class="nav-sub-child bg_white-2 font-size_down collapse childNavCollapse" >
+                <ul class="ul_none flex_column flex">
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</li>
+
+Weight: 15
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+
+MarkupWrapperClasses: bg_primary c_white font_ui ul_none
+
+Styleguide Navigation.Sidebar.ChildWithChildren
+*/
+/*
+Child NavItem With Grand Children
+
+Description: Child and Grandchild nav items are built the same way with a spacer with or without a toggle depending on if they have children.
+
+Markup:
+<li class="nav-item active" data-nav="child">
+    <div class="flex flex_row">
+        {{> "Navigation.Sidebar.ChildToggle"  modifier_class="active"}}
+        <div class="flex_auto self_center">
+            <a class="text-shadow_black-1 active c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child with Children Links</a>
+            <nav class="nav-sub-child bg_white-2 font-size_down collapse childNavCollapse show">
+                <ul class="ul_none flex_column flex">
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                    {{> "Navigation.Sidebar.Child" }}
+                    <li class="nav-item  active " data-nav="grandchild">
+                        <div class="flex flex_row">
+                            {{> "Navigation.Sidebar.ChildToggle"  modifier_class="active"}}
+                            <div class="flex_auto self_center">
+                                <a class="text-shadow_black-1 active c_white-9 p-y_2 p-x_3 w_100 h:c_white inline-block h:underline self_center  a:bg_black-3">Child with Children Links</a>
+                                <nav class="nav-sub-child bg_white-2 collapse show childNavCollapse">
+                                    <ul class="ul_none flex_column flex">
+                                        {{> "Navigation.Sidebar.GreatGrandchild"  }}
+                                        {{> "Navigation.Sidebar.GreatGrandchild" }}
+                                        {{> "Navigation.Sidebar.GreatGrandchild"  modifier_class="active"}}
+                                        {{> "Navigation.Sidebar.GreatGrandchild" }}
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</li>
+
+Weight: 15
+
+MarkupWrapperClasses: bg_primary c_white font_ui ul_none
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+Styleguide Navigation.Sidebar.ChildWithGrandChildren
+*/
+/*
+Great Grandchild NavItem
+
+Description: Great Grand Children loose the spacer for toggles because they don't have any child navs and don't need the use of a toggle.
+
+default     -  No added class 
+active      -  Nav Item changes its decoration if this the page the user is on.
+
+Markup:
+<li class="nav-item {{modifier_class}} " data-nav="greatGrandChild">
+    <div class="flex flex_row"> 
+        <div class="flex_auto self_center">
+            <a class=" {{modifier_class}} text-shadow_black-1  a:bg_black-3 c_white-9 p-y_2 p-r_3 p-l_4 w_100 h:c_white inline-block h:underline self_center">Great Grand Child Links</a>
+        </div>
+    </div>
+</li>
+
+Weight: 100
+
+MarkupWrapperClasses: bg_primary c_white font_ui ul_none
+
+Styleguide Navigation.Sidebar.GreatGrandchild
+*/
+/*
+Bootstrap Toggle Rotation
+
+The toggles for bootstrap collapses use a `+` icon that twists to an `x` when the elements doesn't have `collapsed` or `show` as a class. to reduce confusion the class has a set rotation and speed attached to it. `a:rotation` is applied to the tow specific icons `fa-times` and `fa-chevron-up` only.<div class="p-b_3"><span class="bg_highlight br_radius c_white inline-block font_n1 p-y_3 p-x_5 sg">These classes are effected by the parent having `collapsed` state.</span></div>
+
+expanded                  - when the associated content is expanded the toggle will look like this
+collapsed                       - when the associated content is collapsed the class is added to the toggle and it will look like this. 
+
+Markup:
+<div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <i class="a:rotation c_primary fa-fw fa-times fas self_center text_center"></i>
+</div>
+<div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <i class="a:rotation c_primary fa-fw fa-chevron-up fas self_center text_center"></i>
+</div>
+<div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-minus fa-stack-1x"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+        </span>
+</div>
+<div class="flex_none p_2 {{modifier_class}}" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#pageHubChild" aria-controls="#pageHubChild">
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-square fa-stack-2x c_black"></i>
+        <i class="fas fa-minus fa-stack-1x c_white"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x  c_white"></i>
+        </span>
+</div>
+
+
+Weight: 100
+
+Styleguide Navigation.Toggle.Rotation
+
+*/
+/*
+Toggle 
+
+Toggle elements of a collapse with user feed back of the icon rotating.
+
+#targetName -  the name of the target of the collapse
+
+Markup:
+<div class="flex_none p_2" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}" aria-expanded="true">
+        <i class="a:rotation fa-fw fa-times fas self_center text_center"></i>
+</div>
+
+Weight: -10
+
+MarkupWrapperClasses: bg_white font_ui flex c_primary
+
+Styleguide Navigation.Toggle
+*/
+/*
+Toggle Chevron
+
+Toggle elements of a collapse with user feed back of the icon rotating.
+
+#targetName -  the name of the target of the collapse
+
+Markup:
+<div class="a:bg_black-3 h:bg_black-4 flex_none p_2" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}" aria-expanded="true">
+        <i class="a:rotation fa-fw fa-chevron-up fas self_center text_center"></i>
+</div>
+
+Weight: -80
+
+MarkupWrapperClasses: bg_white font_ui flex c_primary
+
+Styleguide Navigation.Toggle.Chevron
+*/
+/*
+Collapse Toggle Advanced
+
+Toggle elements of a collapse with user feed back of the icon morphing.
+
+#targetName -  the name of the target of the collapse
+
+Markup:
+<div class="flex_none" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}">
+        <span class="fa-stack">
+        <i class="fas fa-minus fa-stack-1x"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x "></i>
+        </span>
+</div>
+
+Weight: -100
+
+MarkupWrapperClasses: bg_white font_ui flex c_primary
+
+Styleguide Navigation.Toggle.Advanced
+*/
+/*
+Collapse Toggle Advanced with Square
+
+Toggle elements of a collapse with user feed back of the icon morphing.
+
+#targetName -  the name of the target of the collapse
+
+Markup:
+<div class="flex_none" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="{{modifier_class}}" aria-controls="{{modifier_class}}">
+        <span class="fa-stack">
+        <i class="fas fa-square fa-stack-2x"></i>
+        <i class="fas fa-minus fa-stack-1x c_white"></i>
+        <i class="fas fa-minus rotate_90 a:rotation fa-stack-1x  c_white"></i>
+        </span>
+</div>
+
+Weight: -90
+
+MarkupWrapperClasses: bg_white font_ui flex c_primary
+
+Styleguide Navigation.Toggle.AdvancedSquare
+*/
+/*
+Accordion
+
+In content accordions are styled differently to User interface accordions.  The text of the header should allow for header tags to be added so the style should respond to the surrounding typography sizes.
+
+Markup:
+<div class="relative">
+    <header id="accordion_header" class="flex flex_row sticky t_n2 bg_white shadow_overlap-light br_solid br_1 br_black-2 z_2 ">
+        <div class="h:bg_primary-5 m_2 c_primary h:c_primary-n2 br_radius">
+            {{> "Navigation.Toggle.Advanced" modifier_class="#content_accordion"}}
+        </div>
+        <div class=" font-size_up flex_auto flex flex_row justify_center p-y_2">
+            <div class="flex_auto self_center reading-typography no-margins">
+               <h3> Accordion Header Level 3</h3>
+            </div>
+        </div>
+    </header>
+    <main id="content_accordion" class="bg_black-_05 br-bl_radius br-br_radius m-x_0 m-x_3:md p_3 p_4:md reading-typography shadow_emboss-light tab-content transition_4"  aria-labelledby="accordion_header m-x_3" >
+    {{> HTML.Typography.Sample }}
+    </main>
+</div>
+
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+
+Weight:0
+
+Styleguide  Structures.Accordion
+*/
+/*
+Accordion Child
+
+Description: Sometimes the content needs be collapsed at a secondary level to make it scannable. 
+
+Markup:
+<div class="relative m-b_2">
+    <header id="accordion_header-child" class="flex flex_row sticky t_5 bg_white shadow_bevel-light br_radius br_solid br_1 br_black-2 z_3 ">
+        <div class="h:bg_primary-4 m_2 c_primary h:c_primary-n3 br_radius">
+            {{> "Navigation.Toggle" modifier_class="#content_accordion-child"}}
+        </div>
+        <div class=" flex_auto flex flex_row justify_center p-y_2">
+            <div class="flex_auto self_center reading-typography no-margins">
+                <h4> Nested Accordion Header Level 4</h4>
+            </div>
+        </div>
+    </header>
+    <main id="content_accordion-child" class="bg_black-1 m-t_n2 br_radius p-t_3 p-x_3 p-x_4:md p-b_4 reading-typography tab-content transition_4 shadow_emboss-light"  aria-labelledby="accordion_header-child" >
+    {{> HTML.Typography.Sample }}
+    </main>
+</div>
+
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+
+Weight:0
+
+Styleguide Structures.Accordion.Child
+*/
+/*
+Accordion Nested Example
+
+In content accordions are styled differently to User interface accordions.  The text of the header should allow for header tags to be added so the style should respond to the surrounding typography sizes.
+
+Markup:
+<div class="relative">
+    <header id="accordion_header-nested" class="flex flex_row sticky t_n2 bg_white shadow_overlap-light br_solid br_1 br_black-2 z_2 ">
+        <div class="h:bg_primary-5 m_2 c_primary h:c_primary-n2 br_radius">
+            {{> "Navigation.Toggle.Advanced" modifier_class="#content_accordion-parent"}}
+        </div>
+        <div class=" font-size_up flex_auto flex flex_row justify_center p-y_2">
+            <div class="flex_auto self_center reading-typography no-margins">
+               <h3> Accordion Header Level 3</h3>
+            </div>
+        </div>
+    </header>
+    <main id="content_accordion-parent" class="bg_black-_05 br-bl_radius br-br_radius m-x_3:md p_3 p_4:md reading-typography shadow_emboss-light tab-content transition_4"  aria-labelledby="accordion_header-nested" >
+        <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+        elit. Aenean commodo ligula eget dolor. Aenean massa. 
+        Cum sociis natoque penatibus et magnis dis parturient 
+        montes, nascetur ridiculus mus. Donec quam felis, 
+        ultricies nec, pellentesque eu, pretium quis, sem.</p>    
+        {{> Structures.Accordion.Child }}
+        {{> Structures.Accordion.Child }}
+    </main>
+</div>
+
+
+Note: Limitations to the documentation system might cause javascript effects to animate or trigger incorrectly. 
+
+
+Weight:0
+
+Styleguide  Structures.Accordion.Nested
+*/
+/*
+Buttons
+
+Basic Buttons
+
+default		            - Medium buttons (default)
+.btn-primary	            - Primary Class Button (default)
+.btn-secondary 	            - Second Class Button
+.btn-accent             - Button for call out actions
+.btn-success                - Success State.
+.btn-danger                  - Alert State.
+.btn-warning	            - Warning State
+.clear		            - All button states can become hollow
+.radius		            - Give the button softer corners
+.shadow.clear		    - Give a button a shadow
+.btn-sm		            - Small buttons
+.btn-lg		            - Large buttons
+.disabled	            - Disabled buttons
+
+Markup:
+<a class="btn btn-primary {{modifier_class}}" href="#">{{modifier_class}} button</a>
+<button class="btn btn-primary {{modifier_class}}" href="#">{{modifier_class}} button</button>
+
+ Styleguide  Bootstrap.Button
+
+*/
+/*
 Agenda Item
 
 Description:
@@ -8027,9 +8833,9 @@ inline-block  - use inline-block on the role type label to keep all the faculty 
 
 Markup:
 <ul class="ul_inline-semicolon font_regular font_copy">
-  <li class="no-after font_medium c_primary-n1 {{ modifier_class }}">Role Type 1:</li>
+  <li class="no-after font_medium c_primary-n1 block w_100 {{ modifier_class }}">Role Type 1:</li>
   <li>{{> "Data.Faculty.FullName" }} <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
-  <li class="no-after font_medium c_primary-n1  {{ modifier_class }}">Role Type 2:</li>
+  <li class="no-after font_medium c_primary-n1 block w_100  {{ modifier_class }}">Role Type 2:</li>
   <li>Dianna Denesik III <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
   <li>Miguel Romaguera <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>  
   <li>Jeanette Franecki <span class="opacity_9 font_light m-l_2">( {{> "Data.Faculty.Location" }})<span></li>
@@ -8204,11 +9010,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6371" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0791" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7144" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9210" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5844" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0482" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3792" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5448" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5534" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6876" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8240,11 +9046,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7223" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5986" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0791" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8002" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3927" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7731" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4440" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9797" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9497" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9764" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8285,8 +9091,8 @@ Markup:
     </header>
     <main id="collapseTypeAhead" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_4121" }}
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_6870" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_0147" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_7546" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8591,6 +9397,102 @@ MarkupWrapperClasses:
 Weight:0
 
 Styleguide Sub.Pagination
+*/
+/*
+
+Member Profile Data
+
+Data for the Member Profile that is visible for the user.
+
+Markup:
+<section class="bg_acc-n2 br_1 br_black-2 br_round br_solid p-x_5:lg p_4 inset-level_up shadow_bevel-bold">
+  <div class="c_white">
+    <h2 class="br-b_1 br_solid br_white-6 c_white m-t_2 p-b_3 text_center">Account Information</h2>
+    <ul class="ul_none p_0 m_0">
+    <li class=""><strong>User Name:</strong> <span data-type="User Full Name">Regina Rutherford</span> </li>
+    <li class=""><strong>Member ID:</strong> <span data-type="Member ID">0152151214</span> </li><li class=""><strong>Email:</strong> <span data-type="email">test@boo.com</span> </li>
+    </ul>
+  </div>
+  <div class="bg_black-4 br_radius c_white m-b_n2 m-t_4 m-x_n4 p_4 shadow_emboss-light">
+    <p class=""><strong>Click the 'Member Help' button to send along your member information to help diagnose this issue.</strong></p><div class="text_center"><a href="mailTO:membercare@acc.org?body='name,email,personify'" class="btn btn-primary c_white inline-block m-x_auto shadow_overlap-light text_center w_auto">Member Care</a></div>
+  </div>
+</section>
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Sub.System.MemberData
+
+*/
+/*
+
+No Access Trouble Shooting
+
+The instructions to the user when they land on the "No Access" to the page.
+
+Markup:
+<div class="inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative ">
+	<div class="reading-typography flex flex_column gap_4">
+		<h2 class="">No Access to [PRODUCT NAME]</h2>
+		<p>[PRODUCT DESCRIPTION].  To read more about the details of [PRODUCT NAME] click the learn more button.</p>
+		<div class="flex flex_row gap_3 justify_center">
+			<a href="[PRODUCT MARKETING URL]" class="w_100 block max-w_20 btn btn-secondary c_white font_bold font_ui h:c_white shadow_overlap-light " title="Navigate to [PRODUCT NAME] detail page">Learn More</a>
+		</div>
+	</div>
+</div>	
+<div class="inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative ">
+	<div class="reading-typography flex flex_column gap_4">
+		<h2 class="font_bold">Registration Steps</h2>
+		<ol class="counter_reset m_0 p_0 ul_none flex_column flex gap_4">
+			<li class="flex flex_row">
+				<span class="c_primary counter counter_increment flex_none float_left font_9 font_accent font_xbold lh_0 p-r_4 self_top p-t_4"></span>
+				<div class="flex_auto">
+					<p>To purchase, please click the "Register" button below. Once you have completed your purchase, please <strong class="uppercase m-x_2 p_2 bg_warning-3 br_radius p-x_3 font_xbold">wait 15 minutes</strong> to allow the system to process the information. </p>
+				</div>
+			</li>
+			<li class="flex flex_row gap_3 justify_center">
+				<a title="register for the  [PRODUCT NAME]" href="https://www.acc.org/Education-and-Meetings/Meetings/Meeting-Items/2022/01/01/01/04/ACC-Anywhere-ACC22-On-Demand" class="w_100 block max-w_20 btn btn-primary c_white font_bold font_ui h:c_white shadow_overlap-light ">Register</a>
+			</li>
+			<li class="flex flex_row">
+				<span class="c_primary counter counter_increment flex_none float_left font_9 font_accent font_xbold lh_0 p-r_4 self_top p-t_4"></span>
+				<div class="flex_auto">
+					<p>If you have just registered and you have <strong class="uppercase m-x_2 p_2 bg_warning-3 br_radius p-x_3 font_xbold">waited 15 minutes</strong> and you have arrived here in error click the "Refresh Access" Button to get into [PRODUCT NAME].</p>
+				</div>
+			</li>
+			<li class="flex flex_row gap_3 justify_center">
+				<a title="reset the access from you account" href="[EVENT AUTHENTICATION URL]" class="w_100 block max-w_20 btn btn-primary c_white font_bold font_ui h:c_white shadow_overlap-light ">Refresh Access</a>
+			</li>
+			<li class="flex flex_row">
+				<span class="c_primary counter counter_increment flex_none float_left font_9 font_accent font_xbold lh_0 p-r_4 self_top p-t_4"></span>
+				<div class="flex_auto">
+					<div class="flex flex_row:md flex_column">
+						<div class="reading-typography flex flex_column gap_4 flex_50 p-r_5:md">
+							<p class="font_bold">If you believe you have received this message in error, please contact <a href="mailto:MemberCare@ACC.org"><em>Member Care</em></a> </p>
+							<ul class="ul_none p_3">
+								<li class="font_bold">For additional questions, please contact ACC Member Care.</li>
+								<li><strong>Email:</strong> <a href="mailto:MemberCare@ACC.org"><em>MemberCare@ACC.org</em></a></li>
+								<li><strong>Phone:</strong> 202-375-6000 ext. 5603   </li>
+								<li><strong>Toll-Free:</strong> 800-253-4636 ext. 5603</li>
+							</ul>
+						</div>
+						<div class=" flex_50"`>
+							{{> 'Sub.System.MemberData' }}
+						</div>
+					</div>
+				</div>
+			</li>
+		</ol>
+	</div>
+</div>
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Sub.System.AccessTroubleShooting
+
+
 */
 /*
 Image and content
@@ -9375,7 +10277,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_3574">
+<div class="flex_column flex" id="session_1593">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -9399,7 +10301,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3574">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_1593">top</a>
                 </div>
             </section>
         </div>
@@ -9411,7 +10313,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3574">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_1593">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9443,7 +10345,7 @@ Channel Player - UP NEXT
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_3574">
+<div class="flex_column flex" id="session_1593">
 	<header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
 		<h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
 			<span class="block"> Your Watching Channel "Hot Topics" </span>
@@ -9466,7 +10368,7 @@ Markup:
 				</div>
 				<div class="bg_white br_square flex flex_auto flex_column gap-y_3 justify_start m_4 max-w_20:md max-w_25:lg p-b_0 p_4 shadow_bevel-light w_100">
 					<h2 class="c_primary-n1 font_bold font_display m_0">Coming Soon</h2>
-					{{> Program.GridFormat.WhatsNext modifier_class="Myocardial Pericardial Electrocardiographic Side Effect Chest Pain " }}
+					{{> Program.GridFormat.WhatsNext modifier_class="Myocardial Chest Pain Valvular Pericardial Electrocardiogram Chest Pain Side Effect Side Effect " }}
 				</div>
 			</div>
 		</div>
@@ -9500,7 +10402,7 @@ Channel Player - UP NEXT
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_3574">
+<div class="flex_column flex" id="session_1593">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -9552,7 +10454,7 @@ Channel Player External Content
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_3574">
+<div class="flex_column flex" id="session_1593">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -9582,7 +10484,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3574">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_1593">top</a>
                 </div>
             </section>
         </div>
@@ -9593,7 +10495,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3574">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_1593">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9625,7 +10527,7 @@ Channel Player:Non Accredited
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_3574">
+<div class="flex_column flex" id="session_1593">
     <div class="bg_secondary-n3 c_white font_bold font_ui p_3 p-x_4 m-b_4 shadow_overlap-light br_radius" > {{> "Sub.Credits.NonAccredited" }}: These sessions are ineligible to receive credit</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
@@ -9650,7 +10552,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3574">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_1593">top</a>
                 </div>
             </section>
         </div>
@@ -9662,7 +10564,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3574">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_1593">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData.NotAccredited" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -9960,99 +10862,82 @@ Program.Session.NoResults - No Result Response
 Styleguide Page.Search.NoResults
 */
 /*
-No Access with Ticket Preview
+No Access with Registration Preview
 
 Description: 
 
 Markup:
 <div class="page-main">
-	<h1 class="font_display font_6 c_primary m-t_4">Sorry, but this account doesn't have access to <span data-type="Event Name">EVENT NAME</span>.<small class="block c_black-5 font_n2 font_xbold uppercase">Product Code: <span data-type="Event Product Codes Array">VAB325, VA52225</span></small> </h1>
+	<h1 class="font_display font_6 c_primary m-t_4">Sorry, but it appears this account doesn't have access to [PRODUCT NAME ShortCode]</h1>
 	<div class="bg_black-1 br_1 br_black-1 br_radius br_solid flex flex_column flex_row:lg gap_5 inset-level_down p_4:lg shadow_emboss-light">
-		<div class="flex_50:lg flex_50:md flex_auto reading-typography">	
-			<section class="bg_acc-n2 br_1 br_black-2 br_round br_solid p-x_5:lg p_4 inset-level_up shadow_bevel-bold">
-				<div class="c_white">
-					<h2 class="br-b_1 br_solid br_white-6 c_white m-t_2 p-b_3 text_center">Account Information</h2>
-					<li class=""><strong>User Name:</strong> <span data-type="User Fulll Naem">Regina Rutherford</span> </li>
-					<li class=""><strong>Member ID:</strong> <span data-type="Member ID">0152151214</span> </li><li class=""><strong>Email:</strong> <span data-type="email">test@boo.com</span> </li>
-				</div>
-				<div class="bg_black-4 br_radius c_white m-b_n2 m-t_4 m-x_n4 p_4 shadow_emboss-light">
-					<p class=""><strong>Click the 'Member Help' button to send along your member information to help diagnose this issue.</strong></p><div class="text_center"><a href="mailTO:membercare@acc.org?body='name,email,personify'" class="btn btn-primary c_white inline-block m-x_auto shadow_overlap-light text_center w_auto">Member Help</a></div>
-				</div>
-			</section>
+		<div class="flex_70:lg flex_50:md flex_auto reading-typography flex_column flex gap_4">	
+			{{> 'Sub.System.AccessTroubleShooting'}}
 		</div>
-		<div class="flex_auto">
-			<h2 class="c_primary">The Tickets We Have On This Account</h2>
+		<div class="flex_30:lg flex_50:md flex_auto">
+			<h2 class="c_primary">Registration information on this account</h2>
 			<div class="">
 				<ul class="flex flex_column gap_4 ul_none">
-					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column flex_row:md gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
-						<article class="reading-typography">
-							<h3>In Person Only Ticket <small class="block c_black-5 font_n2 font_xbold uppercase">PRODUCT CODE: pme2343</small>
+					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
+						<article class="">
+							<h3 class="c_primary-n2">Correct Registration <small class="block c_black-5 font_n2 font_xbold uppercase">[ PRODUCT NAME ]</small>
 							</h3>
-							<p>Gain access to conference hall in Washington DC. Maiores necessitatibus quis. Numquam tenetur dolorem voluptatem. Eum cum ipsam atque tempore velit tempora cupiditate deleniti et.</p>
+							<p>You do have a Registration for [ PRODUCT NAME ]. Some how you have gotten here by mistake. </p>
+							<p><strong>Please click the "Refresh Access" button to get to the homepage.</strong></p>
+						</article>
+						<aside class="flex flex_column flex_none justify_around">
+							<a href="" class="btn btn-primary">Refresh Access</a>
+						</aside>
+					</li>
+					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
+						<article class="">
+							<h3 class="c_primary-n2">Wrong type of Registration to give you access. <small class="block c_black-5 font_n2 font_xbold uppercase">[Product Code Title]</small>
+							</h3>
+							<p>[ Product Code Description ... ] Gain access to conference hall in Washington DC. Maiores necessitatibus quis. Numquam tenetur dolorem voluptatem. Eum cum ipsam atque tempore velit tempora cupiditate deleniti et.</p>
 							<p>Voluptas sint fugiat molestiae error. Culpa odit quas consequuntur. Ut non qui.</p>
-							<p><strong>You can purchase the upgrade to your ticket to include the virtual platform by clicking the button.</strong></p>
+							<p><strong>You can purchase the upgrade to your Registration to include the virtual platform by clicking the button.</strong></p>
 						</article>
 						<aside class="flex flex_column flex_none justify_around">
 							<a href="" class="btn btn-primary">Purchase Upgrade</a>
 						</aside>
 					</li>
-					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column flex_row:md gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
-						<article class="reading-typography">
-							<h3>Correct Event Ticket <small class="block c_black-5 font_n2 font_xbold uppercase">PRODUCT CODE: pme2343</small>
-							</h3>
-							<p>You do have a ticket for this event. Some how you have gotten here by mistake. </p>
-							<p><strong>Please go to the homepage of the event by clicking the button.</strong></p>
+					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
+						<article class="">
+							<h3 class="c_primary-n2">Event Registrations Found</h3>
+							<p>You <strong class="uppercase">do</strong> have Registrations on this account but it is <strong class="uppercase">not</strong> for [ PRODUCT NAME ]. Could you have possibly registered for [PRODUCT NAME] on another account?</p>
+							<h4 class="c_primary-n3">Do you have a Secondary Account?</h4>
+							<p>If you do have a secondary account you might try to logging out of this account and logging into that account and return to [PRODUCT NAME].</p>
 						</article>
 						<aside class="flex flex_column flex_none justify_around">
-							<a href="" class="btn btn-primary">Click Here</a>
+							<a href="" class="btn btn-primary">Log Out</a>
+						</aside>
+						<div>
+							<h5>Event Registrations On this Account</h5>
+							<ul class="ul_bullets">
+							<li class="c_black-6 font_n2 font_xbold uppercase">[Product Code Title X]</li>
+							<li class="c_black-6 font_n2 font_xbold uppercase">[Product Code Title Y]</li>
+							<li class="c_black-6 font_n2 font_xbold uppercase">[Product Code Title Z]</li>
+							</ul>
+						</div>
+					</li>
+					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
+						<article class="">
+							<h3 class="c_primary-n2" class="c_primary">You have <strong class="font_xbold">NO</strong> Registrations Associated with this Account</h3>
+							<h4 class="c_primary-n3">Do you have a Secondary Account?</h4>
+							<p>If you do have a secondary account you might try to logging out of this account and logging into that account and return to [PRODUCT NAME].</p>
+						</article>
+						<aside class="flex flex_column flex_none justify_around">
+							<a href="" class="btn btn-primary">Log Out</a>
 						</aside>
 					</li>
 				</ul>
-			</div>
-			<h2 class="c_primary">You have no Tickets Associated with this Account</h2>
-			<div class="">
-				<ul class="flex flex_column gap_4 ul_none">
-					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column flex_row:md gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
-						<article class="reading-typography">
-							<h3>In Person Only Ticket <small class="block c_black-5 font_n2 font_xbold uppercase">PRODUCT CODE: pme2343</small>
-							</h3>
-							<p>Gain access to conference hall in Washington DC. Maiores necessitatibus quis. Numquam tenetur dolorem voluptatem. Eum cum ipsam atque tempore velit tempora cupiditate deleniti et.</p>
-							<p>Voluptas sint fugiat molestiae error. Culpa odit quas consequuntur. Ut non qui.</p>
-							<p><strong>You can purchase the upgrade to your ticket to include the virtual platform by clicking the button.</strong></p>
-						</article>
-						<aside class="flex flex_column flex_none justify_around">
-							<a href="" class="btn btn-primary">Purchase Upgrade</a>
-						</aside>
-					</li>
-					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column flex_row:md gap_4 inset-level_up p_2 p_3:md p_4:lg">
-						<article class="reading-typography">
-							<h3>Correct Event Ticket <small class="block c_black-5 font_n2 font_xbold uppercase">PRODUCT CODE: pme2343</small>
-							</h3>
-							<p>You do have a ticket for this event. Some how you have gotten here by mistake. </p>
-							<p><strong>Please go to the homepage of the event by clicking the button.</strong></p>
-						</article>
-						<aside class="flex flex_column flex_none justify_around">
-							<a href="" class="btn btn-primary">Click Here</a>
-						</aside>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="flex flex_column flex_row:lg">
-		<div>
-			<p>To register, please click the register button below. Once you have registered, please return to the conference page. Please allow 15 minutes between registration and logging in to the virtual platform to allow the system to process your registration.</p>
-			<p>If you believe you have received this message in error, please contact <i>&nbsp;<a href="mailto:ACC@maritz.com" target="_blank" rel="noreferrer noopener">ACC@maritz.com</a></i></p>
-			<p><strong>For additional questions, please contact ACC Member Care.&nbsp;</strong>
-				<br>Email:&nbsp;<a href="mailto:MemberCare@ACC.org"><em>MemberCare@ACC.org</em></a>
-				<br>Phone: 202-375-6000 ext. 5603 &nbsp; <br>Toll-Free: 800-253-4636 ext. 5603&nbsp;
-			</p>
-		</div>
-		<div>
-			<p><a href="https://auth.acc.org/ACCFederatedLogin/Login?SP=Experient" class="br_1 br_black-2 br_solid btn btn-primary c_white font_bold font_ui h:c_white shadow_overlap-light uppercase">Register Now</a></p>
+			</div>	
 		</div>
 	</div>
 </div>
+
+
+NOTE: Only one of the "Event Registrations Found Cards" show at a time. The cards fail in the order of the above list. 
+
 
 
 Weight:0
@@ -10137,7 +11022,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_0299">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_0481">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -10171,7 +11056,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_0299">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_0481">top</a></div>
     </div>
 </article>
 
@@ -10483,8 +11368,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="Myocardial "  }}
-    {{> Program.GridFormat.Abstract modifier_class="Myocardial Pharmacologic "  }}
+    {{> Program.GridFormat.Abstract  modifier_class=""  }}
+    {{> Program.GridFormat.Abstract modifier_class=""  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -10559,8 +11444,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Pharmacologic Electrocardiographic " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Valvular Pharmacologic " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Arrhythmia Pharmacologic Valvular Valvular Heart Disease Chest Pain Pharmacologic Clinical " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Arteriosclerosis Electrocardiogram Cardiovascular Electrocardiographic Arrhythmia Myocardial Electrocardiographic Electrocardiogram " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -10728,9 +11613,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="Myocardial Clinical Pericardial Chest Pain Chest Pain Electrocardiographic " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Pharmacologic Clinical Chest Pain Electrocardiographic Pericardial " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Cardiovascular Chest Pain " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Clinical Myocardial Valvular Heart Disease Myocardial Valvular Heart Disease Cardiovascular " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="" }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Arrhythmia Electrocardiographic Arteriosclerosis Valvular Cardiovascular " }}
     </div>
 </section>
 
@@ -10837,9 +11722,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNext modifier_class="Side Effect Valvular " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="Cardiovascular Side Effect Valvular Arrhythmia Chest Pain Valvular Heart Disease " }}
-        {{> Program.GridFormat.WhatsNext.NonAccredited modifier_class="Arteriosclerosis Chest Pain Electrocardiogram Cardiovascular Clinical Myocardial Myocardial " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Pharmacologic Electrocardiographic Clinical Chest Pain Pharmacologic Cardiovascular Clinical Pericardial Arteriosclerosis " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Clinical Valvular Blood Vessel Myocardial " }}
+        {{> Program.GridFormat.WhatsNext.NonAccredited modifier_class="Blood Vessel Arteriosclerosis Electrocardiographic Blood Vessel " }}
     </div>
 </section>
 
@@ -13616,7 +14501,7 @@ Styleguide DesignBase.Seals
 
 */
 .seal_normal {
-  background-image: url("../img/ACC_seal.svg");
+  background-image: url("../img/ACC_Seal.svg");
 }
 .seal_normal:before {
   padding-top: 100%;

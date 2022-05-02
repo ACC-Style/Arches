@@ -3,99 +3,82 @@ $sessionID :randomID("session");
 
 
 /*
-No Access with Ticket Preview
+No Access with Registration Preview
  
 Description: 
  
 Markup:
 <div class="page-main">
-	<h1 class="font_display font_6 c_primary m-t_4">Sorry, but this account doesn't have access to <span data-type="Event Name">EVENT NAME</span>.<small class="block c_black-5 font_n2 font_xbold uppercase">Product Code: <span data-type="Event Product Codes Array">VAB325, VA52225</span></small> </h1>
+	<h1 class="font_display font_6 c_primary m-t_4">Sorry, but it appears this account doesn't have access to [PRODUCT NAME ShortCode]</h1>
 	<div class="bg_black-1 br_1 br_black-1 br_radius br_solid flex flex_column flex_row:lg gap_5 inset-level_down p_4:lg shadow_emboss-light">
-		<div class="flex_50:lg flex_50:md flex_auto reading-typography">	
-			<section class="bg_acc-n2 br_1 br_black-2 br_round br_solid p-x_5:lg p_4 inset-level_up shadow_bevel-bold">
-				<div class="c_white">
-					<h2 class="br-b_1 br_solid br_white-6 c_white m-t_2 p-b_3 text_center">Account Information</h2>
-					<li class=""><strong>User Name:</strong> <span data-type="User Fulll Naem">Regina Rutherford</span> </li>
-					<li class=""><strong>Member ID:</strong> <span data-type="Member ID">0152151214</span> </li><li class=""><strong>Email:</strong> <span data-type="email">test@boo.com</span> </li>
-				</div>
-				<div class="bg_black-4 br_radius c_white m-b_n2 m-t_4 m-x_n4 p_4 shadow_emboss-light">
-					<p class=""><strong>Click the 'Member Help' button to send along your member information to help diagnose this issue.</strong></p><div class="text_center"><a href="mailTO:membercare@acc.org?body='name,email,personify'" class="btn btn-primary c_white inline-block m-x_auto shadow_overlap-light text_center w_auto">Member Help</a></div>
-				</div>
-			</section>
+		<div class="flex_70:lg flex_50:md flex_auto reading-typography flex_column flex gap_4">	
+			{{> 'Sub.System.AccessTroubleShooting'}}
 		</div>
-		<div class="flex_auto">
-			<h2 class="c_primary">The Tickets We Have On This Account</h2>
+		<div class="flex_30:lg flex_50:md flex_auto">
+			<h2 class="c_primary">Registration information on this account</h2>
 			<div class="">
 				<ul class="flex flex_column gap_4 ul_none">
-					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column flex_row:md gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
-						<article class="reading-typography">
-							<h3>In Person Only Ticket <small class="block c_black-5 font_n2 font_xbold uppercase">PRODUCT CODE: pme2343</small>
+					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
+						<article class="">
+							<h3 class="c_primary-n2">Correct Registration <small class="block c_black-5 font_n2 font_xbold uppercase">[ PRODUCT NAME ]</small>
 							</h3>
-							<p>Gain access to conference hall in Washington DC. Maiores necessitatibus quis. Numquam tenetur dolorem voluptatem. Eum cum ipsam atque tempore velit tempora cupiditate deleniti et.</p>
+							<p>You do have a Registration for [ PRODUCT NAME ]. Some how you have gotten here by mistake. </p>
+							<p><strong>Please click the "Refresh Access" button to get to the homepage.</strong></p>
+						</article>
+						<aside class="flex flex_column flex_none justify_around">
+							<a href="" class="btn btn-primary">Refresh Access</a>
+						</aside>
+					</li>
+					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
+						<article class="">
+							<h3 class="c_primary-n2">Wrong type of Registration to give you access. <small class="block c_black-5 font_n2 font_xbold uppercase">[Product Code Title]</small>
+							</h3>
+							<p>[ Product Code Description ... ] Gain access to conference hall in Washington DC. Maiores necessitatibus quis. Numquam tenetur dolorem voluptatem. Eum cum ipsam atque tempore velit tempora cupiditate deleniti et.</p>
 							<p>Voluptas sint fugiat molestiae error. Culpa odit quas consequuntur. Ut non qui.</p>
-							<p><strong>You can purchase the upgrade to your ticket to include the virtual platform by clicking the button.</strong></p>
+							<p><strong>You can purchase the upgrade to your Registration to include the virtual platform by clicking the button.</strong></p>
 						</article>
 						<aside class="flex flex_column flex_none justify_around">
 							<a href="" class="btn btn-primary">Purchase Upgrade</a>
 						</aside>
 					</li>
-					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column flex_row:md gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
-						<article class="reading-typography">
-							<h3>Correct Event Ticket <small class="block c_black-5 font_n2 font_xbold uppercase">PRODUCT CODE: pme2343</small>
-							</h3>
-							<p>You do have a ticket for this event. Some how you have gotten here by mistake. </p>
-							<p><strong>Please go to the homepage of the event by clicking the button.</strong></p>
+					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
+						<article class="">
+							<h3 class="c_primary-n2">Event Registrations Found</h3>
+							<p>You <strong class="uppercase">do</strong> have Registrations on this account but it is <strong class="uppercase">not</strong> for [ PRODUCT NAME ]. Could you have possibly registered for [PRODUCT NAME] on another account?</p>
+							<h4 class="c_primary-n3">Do you have a Secondary Account?</h4>
+							<p>If you do have a secondary account you might try to logging out of this account and logging into that account and return to [PRODUCT NAME].</p>
 						</article>
 						<aside class="flex flex_column flex_none justify_around">
-							<a href="" class="btn btn-primary">Click Here</a>
+							<a href="" class="btn btn-primary">Log Out</a>
+						</aside>
+						<div>
+							<h5>Event Registrations On this Account</h5>
+							<ul class="ul_bullets">
+							<li class="c_black-6 font_n2 font_xbold uppercase">[Product Code Title X]</li>
+							<li class="c_black-6 font_n2 font_xbold uppercase">[Product Code Title Y]</li>
+							<li class="c_black-6 font_n2 font_xbold uppercase">[Product Code Title Z]</li>
+							</ul>
+						</div>
+					</li>
+					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
+						<article class="">
+							<h3 class="c_primary-n2" class="c_primary">You have <strong class="font_xbold">NO</strong> Registrations Associated with this Account</h3>
+							<h4 class="c_primary-n3">Do you have a Secondary Account?</h4>
+							<p>If you do have a secondary account you might try to logging out of this account and logging into that account and return to [PRODUCT NAME].</p>
+						</article>
+						<aside class="flex flex_column flex_none justify_around">
+							<a href="" class="btn btn-primary">Log Out</a>
 						</aside>
 					</li>
 				</ul>
-			</div>
-			<h2 class="c_primary">You have no Tickets Associated with this Account</h2>
-			<div class="">
-				<ul class="flex flex_column gap_4 ul_none">
-					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column flex_row:md gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
-						<article class="reading-typography">
-							<h3>In Person Only Ticket <small class="block c_black-5 font_n2 font_xbold uppercase">PRODUCT CODE: pme2343</small>
-							</h3>
-							<p>Gain access to conference hall in Washington DC. Maiores necessitatibus quis. Numquam tenetur dolorem voluptatem. Eum cum ipsam atque tempore velit tempora cupiditate deleniti et.</p>
-							<p>Voluptas sint fugiat molestiae error. Culpa odit quas consequuntur. Ut non qui.</p>
-							<p><strong>You can purchase the upgrade to your ticket to include the virtual platform by clicking the button.</strong></p>
-						</article>
-						<aside class="flex flex_column flex_none justify_around">
-							<a href="" class="btn btn-primary">Purchase Upgrade</a>
-						</aside>
-					</li>
-					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column flex_row:md gap_4 inset-level_up p_2 p_3:md p_4:lg">
-						<article class="reading-typography">
-							<h3>Correct Event Ticket <small class="block c_black-5 font_n2 font_xbold uppercase">PRODUCT CODE: pme2343</small>
-							</h3>
-							<p>You do have a ticket for this event. Some how you have gotten here by mistake. </p>
-							<p><strong>Please go to the homepage of the event by clicking the button.</strong></p>
-						</article>
-						<aside class="flex flex_column flex_none justify_around">
-							<a href="" class="btn btn-primary">Click Here</a>
-						</aside>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="flex flex_column flex_row:lg">
-		<div>
-			<p>To register, please click the register button below. Once you have registered, please return to the conference page. Please allow 15 minutes between registration and logging in to the virtual platform to allow the system to process your registration.</p>
-			<p>If you believe you have received this message in error, please contact <i>&nbsp;<a href="mailto:ACC@maritz.com" target="_blank" rel="noreferrer noopener">ACC@maritz.com</a></i></p>
-			<p><strong>For additional questions, please contact ACC Member Care.&nbsp;</strong>
-				<br>Email:&nbsp;<a href="mailto:MemberCare@ACC.org"><em>MemberCare@ACC.org</em></a>
-				<br>Phone: 202-375-6000 ext. 5603 &nbsp; <br>Toll-Free: 800-253-4636 ext. 5603&nbsp;
-			</p>
-		</div>
-		<div>
-			<p><a href="https://auth.acc.org/ACCFederatedLogin/Login?SP=Experient" class="br_1 br_black-2 br_solid btn btn-primary c_white font_bold font_ui h:c_white shadow_overlap-light uppercase">Register Now</a></p>
+			</div>	
 		</div>
 	</div>
 </div>
+
+
+NOTE: Only one of the "Event Registrations Found Cards" show at a time. The cards fail in the order of the above list. 
+
 
  
 Weight:0

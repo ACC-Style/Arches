@@ -6,7 +6,7 @@
  */
 /** /setup/__preheader.scss **/
 /**Set Active Class**/
-/** No Framework **/
+/** No Framework or is a Style Sheet that Should be used as an augmenting stylesheet **/
 /** Built With Base Branding 1.02.0 **/
 /**  ACC Brands    *********************************/
 /** Built With virtual Branding **/
@@ -2490,8 +2490,8 @@ Styleguide List.InlineType
 .ul_inline-semicolon > li:not(:last-child)::after,
 .ul_inline-pipe > li:not(:last-child)::after {
   margin: 0;
-  -webkit-padding-start: 0.1em;
-          padding-inline-start: 0.1em;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
   -webkit-padding-end: 0.5em;
           padding-inline-end: 0.5em;
   opacity: 0.6;
@@ -5925,7 +5925,7 @@ Styleguide Layouts
 /*
 	Display
 
-	<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div> Alter the display of an object to create more complicated UI and Layouts. <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .block</td><td class='text_right'> display :</td><td> block </td></tr> <tr><td class='c_primary-n2'> .inline</td><td class='text_right'> display :</td><td> inline </td></tr> <tr><td class='c_primary-n2'> .inline-block</td><td class='text_right'> display :</td><td> inline-block </td></tr> <tr><td class='c_primary-n2'> .table-cell</td><td class='text_right'> display :</td><td> table-cell </td></tr> <tr><td class='c_primary-n2'> .table</td><td class='text_right'> display :</td><td> table </td></tr> <tr><td class='c_primary-n2'> .table-row</td><td class='text_right'> display :</td><td> table-row </td></tr> <tr><td class='c_primary-n2'> .flex</td><td class='text_right'> display :</td><td> flex </td></tr> <tr><td class='c_primary-n2'> .inline-flex</td><td class='text_right'> display :</td><td> inline-flex </td></tr> <tr><td class='c_primary-n2'> .grid</td><td class='text_right'> display :</td><td> grid </td></tr> <tr><td class='c_primary-n2'> .display_none</td><td class='text_right'> display :</td><td> none </td></tr> </tbody></table>  
+	<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div> Alter the display of an object to create more complicated UI and Layouts. <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .block</td><td class='text_right'> display :</td><td> block </td></tr> <tr><td class='c_primary-n2'> .inline</td><td class='text_right'> display :</td><td> inline </td></tr> <tr><td class='c_primary-n2'> .inline-block</td><td class='text_right'> display :</td><td> inline-block </td></tr> <tr><td class='c_primary-n2'> .table-cell</td><td class='text_right'> display :</td><td> table-cell </td></tr> <tr><td class='c_primary-n2'> .table</td><td class='text_right'> display :</td><td> table </td></tr> <tr><td class='c_primary-n2'> .table-row</td><td class='text_right'> display :</td><td> table-row </td></tr> <tr><td class='c_primary-n2'> .flex</td><td class='text_right'> display :</td><td> flex </td></tr> <tr><td class='c_primary-n2'> .inline-flex</td><td class='text_right'> display :</td><td> inline-flex </td></tr> <tr><td class='c_primary-n2'> .grid</td><td class='text_right'> display :</td><td> grid </td></tr> <tr><td class='c_primary-n2'> .display_contents</td><td class='text_right'> display :</td><td> contents </td></tr> <tr><td class='c_primary-n2'> .display_none</td><td class='text_right'> display :</td><td> none </td></tr> </tbody></table>  
 
 	Styleguide Layouts.Display
 
@@ -5964,6 +5964,10 @@ Styleguide Layouts
 
 .grid {
   display: grid;
+}
+
+.display_contents {
+  display: contents;
 }
 
 .display_none {
@@ -6007,6 +6011,10 @@ Styleguide Layouts
     display: grid;
   }
 
+  .display_contents\:md {
+    display: contents;
+  }
+
   .display_none\:md {
     display: none;
   }
@@ -6048,6 +6056,10 @@ Styleguide Layouts
     display: grid;
   }
 
+  .display_contents\:lg {
+    display: contents;
+  }
+
   .display_none\:lg {
     display: none;
   }
@@ -6085,6 +6097,10 @@ Styleguide Layouts
 
   .grid\:lg {
     display: grid;
+  }
+
+  .display_contents\:lg {
+    display: contents;
   }
 
   .display_none\:lg {
@@ -6128,6 +6144,10 @@ Styleguide Layouts
 
   .grid\:touch {
     display: grid;
+  }
+
+  .display_contents\:touch {
+    display: contents;
   }
 
   .display_none\:touch {
