@@ -22354,22 +22354,33 @@ textarea.form-control-lg {
   opacity: 0.25;
 }
 
-a.btn[href=""]:after {
+a.btn[href=""] {
+  background: #8b1010 !important;
+}
+
+a.btn[href=""]:after, a.link[href=""]:after {
   content: " [!] NO URL [!] ";
   font-weight: 900;
   font-family: sans-serif;
 }
 
-a.link[href=""] {
-  color: red !important;
-}
+/*
 
-a.link[href=""]:after {
-  content: " [!] NO URL [!] ";
-  font-weight: 900;
-  font-family: sans-serif;
-}
+Button and Link Failure On No Href
 
+The button and link will auto style when the href is empty.
+
+Markup:
+<a href="" class="btn br_radius max-w_30 m_auto m-b_3 block shadow_overlap-light btn-primary c_white h:undecorated" target="_blank">Button</a>
+<a href="https://www.facebook.com/AmericanCollegeofCardiology/" class="btn br_radius max-w_30 m_auto m-b_3 block shadow_overlap-light btn-primary c_white h:undecorated" target="_blank">Button</a>
+<a href="" class="link" target="_blank">Text Link</a>
+<a href="https://www.facebook.com/AmericanCollegeofCardiology/" class="link" target="_blank">Text Link</a>
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide HTML.NoHref.Failure
+*/
 /*
 Pagination
 
@@ -24649,7 +24660,7 @@ The favorite button is a simple icon that can be used to add or remove a favorit
 active   - when the favorite is active
 
 Markup:
-<a href="" aria-label="mark as favorite" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 flex_none  grid items_center text_center {{ modifier_class }}" ><i class="fas fa-heart"></i></a>
+<a href="#" aria-label="mark as favorite" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 flex_none  grid items_center text_center {{ modifier_class }}" ><i class="fas fa-heart"></i></a>
 
 Weight:0
 
@@ -24677,7 +24688,7 @@ The favorite button is a simple icon that can be used to add or remove a favorit
 active   - when the favorite is active
 
 Markup:
-<a href="" aria-label="mark as favorite" class="btn btn-secondary btn-sm flex_none a:bg_alert-n2  h:bg_alert-n4 {{ modifier_class }}" ><i class="fas fa-heart"></i></a>
+<a href="#" aria-label="mark as favorite" class="btn btn-secondary btn-sm flex_none a:bg_alert-n2  h:bg_alert-n4 {{ modifier_class }}" ><i class="fas fa-heart"></i></a>
 
 Weight:0
 
@@ -24698,10 +24709,10 @@ Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
         {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
-        <a href="" aria-label="download calendar reminder"  class="btn flex_none btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
-        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
+        <a href="#" aria-label="download calendar reminder"  class="btn flex_none btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="#" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
-      <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
+      <a href="#" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
       <a aria-label="show or hide details"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">Show Details</a>
 </aside>
 
@@ -24735,8 +24746,8 @@ Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
         {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
-        <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
-        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
+        <a href="#" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="#" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
       </nav>
       {{> Sub.ActionButtons.LockedAttachments }}
 </aside>
@@ -24758,10 +24769,10 @@ Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
         {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
-        <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
-        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
+        <a href="#" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="#" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
-      <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
+      <a href="#" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
 </aside>
 
 Weight:0
@@ -24780,8 +24791,8 @@ Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-l_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
         {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
-        <a href="" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
-        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
+        <a href="#" aria-label="download calendar reminder"  class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="#" aria-label="navigate to" class="btn btn-primary flex_auto">{{ modifier_class }}</a>
       </nav>
 </aside>
 
@@ -24801,9 +24812,9 @@ Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md p-b_4 p-b_4:md w_100">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
         {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
-        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
+        <a href="#" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
       </nav>
-      <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
+      <a href="#" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
 </aside>
 
 Weight:200
@@ -24821,9 +24832,9 @@ Markup:
 <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100 m-t_auto">
       <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
         {{> "Sub.ActionButtons.Favorite" modifier_class="[active]"}}
-        <a href="" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
+        <a href="#" aria-label="navigate to" class="btn btn-primary flex_auto">Watch</a>
       </nav>
-      <a href="" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
+      <a href="#" aria-label="download attachments"  class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100"><i class="far fa-paperclip"></i> Attachments</a>
 </aside>
 
 Weight:200
@@ -25256,11 +25267,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2880" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6779" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7190" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4568" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5080" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2732" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4673" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4149" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7783" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7163" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -25292,11 +25303,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7234" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6146" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9644" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0337" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3409" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5516" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8169" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0439" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8711" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5742" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -25337,8 +25348,8 @@ Markup:
     </header>
     <main id="collapseTypeAhead" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_8225" }}
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_2925" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_4612" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_1914" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -26523,7 +26534,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_0045">
+<div class="flex_column flex" id="session_5009">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -26547,7 +26558,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_0045">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_5009">top</a>
                 </div>
             </section>
         </div>
@@ -26559,7 +26570,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_0045">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_5009">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -26591,7 +26602,7 @@ Channel Player - UP NEXT
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_0045">
+<div class="flex_column flex" id="session_5009">
 	<header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
 		<h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
 			<span class="block"> Your Watching Channel "Hot Topics" </span>
@@ -26614,7 +26625,7 @@ Markup:
 				</div>
 				<div class="bg_white br_square flex flex_auto flex_column gap-y_3 justify_start m_4 max-w_20:md max-w_25:lg p-b_0 p_4 shadow_bevel-light w_100">
 					<h2 class="c_primary-n1 font_bold font_display m_0">Coming Soon</h2>
-					{{> Program.GridFormat.WhatsNext modifier_class="" }}
+					{{> Program.GridFormat.WhatsNext modifier_class="Arrhythmia Valvular Blood Vessel Electrocardiographic Valvular Heart Disease Electrocardiographic Pharmacologic " }}
 				</div>
 			</div>
 		</div>
@@ -26648,7 +26659,7 @@ Channel Player - UP NEXT
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_0045">
+<div class="flex_column flex" id="session_5009">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -26700,7 +26711,7 @@ Channel Player External Content
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_0045">
+<div class="flex_column flex" id="session_5009">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -26730,7 +26741,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_0045">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_5009">top</a>
                 </div>
             </section>
         </div>
@@ -26741,7 +26752,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_0045">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_5009">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -26773,7 +26784,7 @@ Channel Player:Non Accredited
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_0045">
+<div class="flex_column flex" id="session_5009">
     <div class="bg_secondary-n3 c_white font_bold font_ui p_3 p-x_4 m-b_4 shadow_overlap-light br_radius" > {{> "Sub.Credits.NonAccredited" }}: These sessions are ineligible to receive credit</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
@@ -26798,7 +26809,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_0045">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_5009">top</a>
                 </div>
             </section>
         </div>
@@ -26810,7 +26821,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_0045">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_5009">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData.NotAccredited" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -27131,7 +27142,7 @@ Markup:
 							<p><strong>Please click the "Refresh Access" button to get to the homepage.</strong></p>
 						</article>
 						<aside class="flex flex_column flex_none justify_around">
-							<a href="" class="btn btn-primary">Refresh Access</a>
+							<a href="#" class="btn btn-primary">Refresh Access</a>
 						</aside>
 					</li>
 					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
@@ -27143,7 +27154,7 @@ Markup:
 							<p><strong>You can purchase the upgrade to your Registration to include the virtual platform by clicking the button.</strong></p>
 						</article>
 						<aside class="flex flex_column flex_none justify_around">
-							<a href="" class="btn btn-primary">Purchase Upgrade</a>
+							<a href="#" class="btn btn-primary">Purchase Upgrade</a>
 						</aside>
 					</li>
 					<li class="bg_white br_1 br_black-2 br_radius br_solid flex flex_column gap_4 inset-level_up p_2 p_3:md p_4:lg shadow_overlap-light">
@@ -27154,7 +27165,7 @@ Markup:
 							<p>If you do have a secondary account you might try to logging out of this account and logging into that account and return to [PRODUCT NAME].</p>
 						</article>
 						<aside class="flex flex_column flex_none justify_around">
-							<a href="" class="btn btn-primary">Log Out</a>
+							<a href="#" class="btn btn-primary">Log Out</a>
 						</aside>
 						<div>
 							<h5>Event Registrations On this Account</h5>
@@ -27172,7 +27183,7 @@ Markup:
 							<p>If you do have a secondary account you might try to logging out of this account and logging into that account and return to [PRODUCT NAME].</p>
 						</article>
 						<aside class="flex flex_column flex_none justify_around">
-							<a href="" class="btn btn-primary">Log Out</a>
+							<a href="#" class="btn btn-primary">Log Out</a>
 						</aside>
 					</li>
 				</ul>
@@ -27268,7 +27279,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_9588">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_8927">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -27302,7 +27313,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_9588">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_8927">top</a></div>
     </div>
 </article>
 
@@ -27438,7 +27449,7 @@ Markup:
 </header>
 <div class="font_0 font_ui c_accent-n1">{{>  Data.Agenda.LiveTime }}</div>
 <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
-    <a href="" aria-label="navigate to" class="btn btn-outline-primary flex_auto">Watch</a>
+    <a href="#" aria-label="navigate to" class="btn btn-outline-primary flex_auto">Watch</a>
 </aside>
 </article>
 
@@ -27575,7 +27586,7 @@ Markup:
         </header>
         <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md m-t_auto w_100">
             <nav aria-label="session actions" class="flex flex_none flex_row gap-x_2 gap-y_3 justify_between">
-                <a href="" aria-label="navigate to" class="btn btn-primary flex_auto w_70">View</a>
+                <a href="#" aria-label="navigate to" class="btn btn-primary flex_auto w_70">View</a>
             </nav>
         </aside>
         <div class="p-b_4:lg p-b_3 font_n1">{{> "Sub.FacultyList.NoLocation"  modifier_class="block w_100 font-size_down" }}</div>
@@ -27614,8 +27625,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="Clinical Electrocardiogram Electrocardiographic Valvular "  }}
-    {{> Program.GridFormat.Abstract modifier_class="Blood Vessel Valvular Heart Disease Side Effect Clinical "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="Myocardial Clinical Cardiovascular Valvular Heart Disease Myocardial Myocardial "  }}
+    {{> Program.GridFormat.Abstract modifier_class="Pharmacologic Side Effect Myocardial Myocardial Electrocardiographic "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -27690,8 +27701,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Clinical Valvular Heart Disease Pericardial Blood Vessel Arteriosclerosis " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Clinical Blood Vessel Valvular Cardiovascular " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Pharmacologic Chest Pain Electrocardiogram Pharmacologic Side Effect Electrocardiographic " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Valvular Electrocardiographic Side Effect Electrocardiographic " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -27729,7 +27740,7 @@ Markup:
     <div class="font_n1 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
     <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> Sub.Tags.Category }}</div>
     <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100 m-t_auto">
-        <a href="" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
+        <a href="#" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
     </aside>
     </div>
 </article>
@@ -27779,7 +27790,7 @@ Markup:
     <div class="bg_secondary-n2 br_radius c_white p_3 p-y_2 font-size_down-1">
     {{> "Sub.Credits.NonAccredited" }}
     </div>    
-        <a href="" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
+        <a href="#" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
     </aside>
     </div>
 </article>
@@ -27826,7 +27837,7 @@ Markup:
             <div class="font_n1 font_ui c_accent-n1">Ending @ {{>  Data.Agenda.EndTime }} <abbr title="EASTERN TIME, UTC -4">EDT</abbr> </div>
             <div class="font_ui font_n3 uppercase c_black-6"><strong class="c_black-5 p-r_2">Category:</strong>{{> Sub.Tags.Category }}</div>
             <aside class="flex flex_none flex_column gap-y_3 m-x_auto:md  max-w_30:md w_100">
-                <a href="" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
+                <a href="#" aria-label="navigate to" class="btn btn-outline-primary btn-sm flex_auto expanded-click-area">Watch</a>
             </aside>
         </div>
     </div>
@@ -27859,9 +27870,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="Myocardial " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Pericardial Arteriosclerosis Clinical Arteriosclerosis Valvular Myocardial " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Clinical Side Effect Electrocardiographic Electrocardiographic " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Cardiovascular Side Effect Chest Pain Side Effect Arteriosclerosis " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="" }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Arteriosclerosis Electrocardiographic Electrocardiographic Electrocardiographic Blood Vessel Valvular Heart Disease Blood Vessel " }}
     </div>
 </section>
 
@@ -27968,9 +27979,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNext modifier_class="Blood Vessel Valvular Pericardial Electrocardiogram Arrhythmia " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="Pharmacologic Chest Pain Clinical Valvular Pericardial Arrhythmia " }}
-        {{> Program.GridFormat.WhatsNext.NonAccredited modifier_class="Side Effect " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Chest Pain Electrocardiographic " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Arteriosclerosis Pericardial Electrocardiographic Pharmacologic Side Effect " }}
+        {{> Program.GridFormat.WhatsNext.NonAccredited modifier_class="Clinical Clinical Cardiovascular Arteriosclerosis Myocardial " }}
     </div>
 </section>
 
@@ -29966,10 +29977,10 @@ Description: Workshops are interactive buttons that open a webex page and have t
 
 Markup:
 <footer class="flex flex_auto flex_wrap gap_3 m_auto m-t_auto max-w_15 p-b_4 p-b_4:lg w_100">
-        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 [active]"><i class="fas fa-heart"></i></a>
-        <a href="" class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
-        <a href="" target="blank" class="btn btn-primary flex_auto">Join Now</a>
-        <a href="" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">show details</a>
+        <a href="#" class="btn btn-secondary flex_none a:bg_alert-n2  h:bg_alert-n4 [active]"><i class="fas fa-heart"></i></a>
+        <a href="#" class="btn btn-secondary flex_none a:bg_alert-n2"><i class="fas fa-calendar"></i></a>
+        <a href="#" target="blank" class="btn btn-primary flex_auto">Join Now</a>
+        <a href="#" class="br_radius btn btn-outline-secondary btn-sm flex_auto font-size_down-1 w_100">show details</a>
 </footer>
 
 Weight:0
@@ -30234,8 +30245,8 @@ Markup:
                 </h3>
                 <div class="flex_grow m-l_auto:lg">
                     <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
-                        <a href="" class="btn btn-primary h:bg_secondary-n3 z_5">Watch </a>
-                        <a href="" class="btn btn-secondary z_5 a:bg_alert h:bg_alert-n3 { active }"><i class="fas fa-heart c_white"></i></a>
+                        <a href="#" class="btn btn-primary h:bg_secondary-n3 z_5">Watch </a>
+                        <a href="#" class="btn btn-secondary z_5 a:bg_alert h:bg_alert-n3 { active }"><i class="fas fa-heart c_white"></i></a>
                     </div>
                 </div>
             </div>
@@ -30298,8 +30309,8 @@ Markup:
                 </h3>
                 <div class="flex_grow m-l_auto:lg">
                     <div class="flex flex_column-reverse flex_row-reverse:lg flex_wrap gap-x_3 gap-y_3 p-y_3 p-y_0:lg justify_start">
-                        <a href="" class="btn btn-primary h:bg_secondary-n3 z_5">Watch </a>
-                        <a href="" class="btn btn-secondary z_5 a:bg_alert h:bg_alert-n3 { active }"><i class="fas fa-heart c_white"></i></a>
+                        <a href="#" class="btn btn-primary h:bg_secondary-n3 z_5">Watch </a>
+                        <a href="#" class="btn btn-secondary z_5 a:bg_alert h:bg_alert-n3 { active }"><i class="fas fa-heart c_white"></i></a>
                     </div>
                 </div>
             </div>
