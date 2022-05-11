@@ -1,3 +1,5 @@
+// TODO: Fix the link decorators from google analytics auto adding query params to links. 
+
 /*
 Link Decorator
 
@@ -62,6 +64,7 @@ Markup:
 	}
 }
 
+a.btn,
 a.link,
 a.link-light,
 .reading-typography a {
@@ -70,30 +73,30 @@ a.link-light,
 		text-decoration: underline;
 	}
 	// Content Types show Icons in Front
-	&[href$=".pdf"]:before,
-	&[href$=".doc"]:before,
-	&[href$=".docx"]:before,
-	&[href$=".txt"]:before,
-	&[href$=".zip"]:before,
+	&[href*=".pdf"]:before,
+	&[href*=".doc"]:before,
+	&[href*=".docx"]:before,
+	&[href*=".txt"]:before,
+	&[href*=".zip"]:before,
 	&[href*=".ppt"]:before,
 	&[href*=".pptx"]:before,
-	&[href$=".csv"]:before,
-	&[href$=".xls"]:before,
-	&[href$=".xlsx"]:before,
-	&[href$=".mp4"]:before,
-	&[href$=".mov"]:before  {
+	&[href*=".csv"]:before,
+	&[href*=".xls"]:before,
+	&[href*=".xlsx"]:before,
+	&[href*=".mp4"]:before,
+	&[href*=".mov"]:before  {
 		@extend .icon-before;
 	}
-	&[href$=".pdf"]:before {
+	&[href*=".pdf"]:before {
 		content: "\f1c1";
 	}
-	&[href$=".doc"]:before,
-	&[href$=".docx"]:before,
-	&[href$=".txt"]:before {
+	&[href*=".doc"]:before,
+	&[href*=".docx"]:before,
+	&[href*=".txt"]:before {
 		content: "\f1c2";
 	}
 
-	&[href$=".zip"]:before {
+	&[href*=".zip"]:before {
 		content: "\f1c6";
 	}
 
@@ -101,14 +104,14 @@ a.link-light,
 	&[href*=".pptx"]:before {
 		content: "\f685";
 	}
-	&[href$=".csv"]:before,
-	&[href$=".xls"]:before,
-	&[href$=".xlsx"]:before {
+	&[href*=".csv"]:before,
+	&[href*=".xls"]:before,
+	&[href*=".xlsx"]:before {
 		content: "\f0ce";
 	}
 
-	&[href$=".mp4"]:before,
-	&[href$=".mov"]:before {
+	&[href*=".mp4"]:before,
+	&[href*=".mov"]:before {
 		content: "\f03d";
 	}
 

@@ -5,7 +5,12 @@
  * @link https://github.com/ACC-Style/Arches/
  */
 /** /setup/__preheader.scss **/
-.carousel-alt.chevron-on .carousel-indicators li.active:before, .icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
+.carousel-alt.chevron-on .carousel-indicators li.active:before, .icon-after:after, a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after, a.btn[href^="mailto:"]:after, a.btn[href^="tel:"]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
+a.link[href^="mailto:"]:after,
+a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -15,31 +20,43 @@ a.link-light[href^="tel:"]:after,
 .reading-typography a[href^=http][target=_blank]:after,
 .reading-typography a[href^=https][target=_blank]:after,
 .reading-typography a[href^="mailto:"]:after,
-.reading-typography a[href^="tel:"]:after, .icon-before:before, a.link[href$=".pdf"]:before, a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before, a.link[href$=".zip"]:before, a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before, a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before, a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".pdf"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-a.link-light[href$=".zip"]:before,
+.reading-typography a[href^="tel:"]:after, .icon-before:before, a.btn[href*=".pdf"]:before, a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before, a.btn[href*=".zip"]:before, a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before, a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before, a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".pdf"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link[href*=".zip"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".pdf"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+a.link-light[href*=".zip"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".pdf"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before,
-.reading-typography a[href$=".zip"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".pdf"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before,
+.reading-typography a[href*=".zip"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   -webkit-font-smoothing: antialiased;
   text-rendering: auto;
   display: inline-block;
@@ -8982,11 +8999,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5266" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0550" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3252" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4182" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5708" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0253" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0715" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5827" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9749" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9993" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -9018,11 +9035,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2152" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8113" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2770" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9762" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7956" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7226" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3106" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0605" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4090" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2748" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -9063,8 +9080,8 @@ Markup:
     </header>
     <main id="collapseTypeAhead" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_2817" }}
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_9167" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_3033" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_4115" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -10249,7 +10266,7 @@ Channel Player
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_6675">
+<div class="flex_column flex" id="session_3531">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -10273,7 +10290,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_6675">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3531">top</a>
                 </div>
             </section>
         </div>
@@ -10285,7 +10302,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_6675">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3531">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -10317,7 +10334,7 @@ Channel Player - UP NEXT
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_6675">
+<div class="flex_column flex" id="session_3531">
 	<header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
 		<h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
 			<span class="block"> Your Watching Channel "Hot Topics" </span>
@@ -10340,7 +10357,7 @@ Markup:
 				</div>
 				<div class="bg_white br_square flex flex_auto flex_column gap-y_3 justify_start m_4 max-w_20:md max-w_25:lg p-b_0 p_4 shadow_bevel-light w_100">
 					<h2 class="c_primary-n1 font_bold font_display m_0">Coming Soon</h2>
-					{{> Program.GridFormat.WhatsNext modifier_class="Pharmacologic Chest Pain Cardiovascular Valvular Heart Disease Cardiovascular Valvular " }}
+					{{> Program.GridFormat.WhatsNext modifier_class="Valvular Arrhythmia Myocardial Valvular Heart Disease Cardiovascular " }}
 				</div>
 			</div>
 		</div>
@@ -10374,7 +10391,7 @@ Channel Player - UP NEXT
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_6675">
+<div class="flex_column flex" id="session_3531">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -10426,7 +10443,7 @@ Channel Player External Content
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_6675">
+<div class="flex_column flex" id="session_3531">
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
                 <span class="block">
@@ -10456,7 +10473,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_6675">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3531">top</a>
                 </div>
             </section>
         </div>
@@ -10467,7 +10484,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_6675">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3531">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -10499,7 +10516,7 @@ Channel Player:Non Accredited
 Description: 
 
 Markup:
-<div class="flex_column flex" id="session_6675">
+<div class="flex_column flex" id="session_3531">
     <div class="bg_secondary-n3 c_white font_bold font_ui p_3 p-x_4 m-b_4 shadow_overlap-light br_radius" > {{> "Sub.Credits.NonAccredited" }}: These sessions are ineligible to receive credit</div>
     <header class="flex flex_row font_0 font_1:md font_3:lg p-y_3">
         <h3 class="c_primary-n2 flex_auto font-size_up-1 font_display lh_1 lh_2 m-b_3 m_0 p-l_3:lg w_100">
@@ -10524,7 +10541,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_6675">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1"  href="#session_3531">top</a>
                 </div>
             </section>
         </div>
@@ -10536,7 +10553,7 @@ Markup:
                 {{> "Sub.Presentation.List"}}
                 </div>
                 <div class="font_bold font_n4 h_3lh m-b_4 relative uppercase">
-                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_6675">top</a>
+                    <a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_n1" href="#session_3531">top</a>
                 </div>
             </section>
             {{> "Sub.Player.AuxData.NotAccredited" modifier_class="p_4 bg_black-1 br_radius self_start shadow_emboss-light font_n1"}}
@@ -10994,7 +11011,7 @@ Session Collapse
 
 
 Markup:
-<article class="{{> Sub.Style.OuterBorder }}" id="session_6096">
+<article class="{{> Sub.Style.OuterBorder }}" id="session_4400">
     <div class="{{> Sub.Style.InnerBorder }}">
         <div class="br-b_1 br_solid br_primary-2">
             {{> "Sub.CategoryFlags" }}          
@@ -11028,7 +11045,7 @@ Markup:
         <div class="flex_grow uppercase m-l_auto">
             {{> "Sub.Credits.Dots" }}
         </div>
-        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_6096">top</a></div>
+        <div><a class="absolute bg_primary br-bl_radius br-br_radius c_white p-x_3 p_2 r_3 t_0" href="#session_4400">top</a></div>
     </div>
 </article>
 
@@ -11340,8 +11357,8 @@ Markup:
 <section class="grid grid-col_3:lg grid-col_2:md grid-col_1 grid gap_4 gap_5:lg">
     {{> Program.GridFormat.Abstract }}
     <!-- DUPLICATE -->
-    {{> Program.GridFormat.Abstract  modifier_class="Side Effect Arteriosclerosis Myocardial Arteriosclerosis Clinical Cardiovascular Electrocardiographic Cardiovascular "  }}
-    {{> Program.GridFormat.Abstract modifier_class="Valvular Heart Disease Myocardial Clinical "  }}
+    {{> Program.GridFormat.Abstract  modifier_class="Arrhythmia Pharmacologic Chest Pain Cardiovascular Electrocardiographic Electrocardiogram Valvular Heart Disease Clinical Arteriosclerosis "  }}
+    {{> Program.GridFormat.Abstract modifier_class="Clinical Side Effect Arteriosclerosis Side Effect Cardiovascular Chest Pain "  }}
 </section>
 
 MarkupWrapperClasses: 
@@ -11416,8 +11433,8 @@ Markup:
 <div  class="p_4:lg p_3 grid-col_3:lg grid-col_2:md grid-col_1 grid gap-x_5 gap-y_5 {{modifier_class}}">
 {{> "Program.GridFormat.FeaturedPresentation" }}
 <!-- DUPLICATE -->
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Chest Pain Valvular Heart Disease Myocardial Valvular Heart Disease " }}
-{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Valvular Pharmacologic " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Pharmacologic Valvular Pericardial " }}
+{{> "Program.GridFormat.FeaturedPresentation" modifier_class="Myocardial Clinical Blood Vessel Cardiovascular " }}
 <!-- End DUPLICATE -->
 </div>
 </section>
@@ -11585,9 +11602,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Playing Now" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNow modifier_class="Arrhythmia Side Effect " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Chest Pain Arrhythmia " }}
-        {{> Program.GridFormat.WhatsNow modifier_class="Pharmacologic Arteriosclerosis Side Effect Blood Vessel Pharmacologic Pericardial Cardiovascular " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Valvular Arteriosclerosis " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Electrocardiogram Side Effect Arrhythmia Chest Pain Valvular Heart Disease Pericardial Pericardial Cardiovascular Chest Pain " }}
+        {{> Program.GridFormat.WhatsNow modifier_class="Valvular Cardiovascular Side Effect Electrocardiographic Valvular Heart Disease Side Effect Valvular Heart Disease Valvular " }}
     </div>
 </section>
 
@@ -11694,9 +11711,9 @@ Markup:
 <section class="">
     <h2 class="font_bold font_display c_primary-n1 m-b_4">{{> "Sub.SectionHeader" modifier_class="Coming Soon" }}</h2>
     <div class="gap_5 grid grid-col_3:lg grid-col_2:md grid-col_1">
-        {{> Program.GridFormat.WhatsNext modifier_class="Electrocardiogram Pharmacologic Chest Pain Electrocardiographic Chest Pain Blood Vessel Side Effect Electrocardiographic Myocardial " }}
-        {{> Program.GridFormat.WhatsNext modifier_class="Electrocardiographic Myocardial Arrhythmia Pharmacologic Electrocardiogram Valvular Heart Disease Side Effect Clinical " }}
-        {{> Program.GridFormat.WhatsNext.NonAccredited modifier_class="Blood Vessel Chest Pain Pericardial " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Side Effect Cardiovascular Cardiovascular " }}
+        {{> Program.GridFormat.WhatsNext modifier_class="Chest Pain Electrocardiographic " }}
+        {{> Program.GridFormat.WhatsNext.NonAccredited modifier_class="Valvular " }}
     </div>
 </section>
 
@@ -14647,38 +14664,55 @@ Markup:
 
  Styleguide Recipes.InteractiveExtras.Links
  */
-.icon-before:before, a.link[href$=".pdf"]:before, a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before, a.link[href$=".zip"]:before, a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before, a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before, a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".pdf"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-a.link-light[href$=".zip"]:before,
+.icon-before:before, a.btn[href*=".pdf"]:before, a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before, a.btn[href*=".zip"]:before, a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before, a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before, a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".pdf"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link[href*=".zip"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".pdf"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+a.link-light[href*=".zip"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".pdf"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before,
-.reading-typography a[href$=".zip"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".pdf"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before,
+.reading-typography a[href*=".zip"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   width: 1.28571429em;
   margin-right: 4px;
   margin-right: 0.25rem;
   text-align: center;
 }
 
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
+.icon-after:after, a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after, a.btn[href^="mailto:"]:after, a.btn[href^="tel:"]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
+a.link[href^="mailto:"]:after,
+a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -14709,54 +14743,70 @@ a.link-light[href^="tel:"]:after,
   color: #92f0dc;
 }
 
+a.btn:hover,
 a.link:hover,
 a.link-light:hover,
 .reading-typography a:hover {
   text-decoration: underline;
 }
-a.link[href$=".pdf"]:before,
-a.link-light[href$=".pdf"]:before,
-.reading-typography a[href$=".pdf"]:before {
+a.btn[href*=".pdf"]:before,
+a.link[href*=".pdf"]:before,
+a.link-light[href*=".pdf"]:before,
+.reading-typography a[href*=".pdf"]:before {
   content: "\f1c1";
 }
-a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before {
+a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before {
   content: "\f1c2";
 }
-a.link[href$=".zip"]:before,
-a.link-light[href$=".zip"]:before,
-.reading-typography a[href$=".zip"]:before {
+a.btn[href*=".zip"]:before,
+a.link[href*=".zip"]:before,
+a.link-light[href*=".zip"]:before,
+.reading-typography a[href*=".zip"]:before {
   content: "\f1c6";
 }
-a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before,
+a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before {
   content: "\f685";
 }
-a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before {
+a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before {
   content: "\f0ce";
 }
-a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   content: "\f03d";
 }
-a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after,
+a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -14765,16 +14815,19 @@ a.link-light[href^=https][target=_blank]:after,
 .reading-typography a[href^=https][target=_blank]:after {
   content: "\f14c";
 }
+a.btn[href^="mailto:"]:after,
 a.link[href^="mailto:"]:after,
 a.link-light[href^="mailto:"]:after,
 .reading-typography a[href^="mailto:"]:after {
   content: "\f0e0";
 }
+a.btn[href^="tel:"]:after,
 a.link[href^="tel:"]:after,
 a.link-light[href^="tel:"]:after,
 .reading-typography a[href^="tel:"]:after {
   content: "\f095";
 }
+a.btn[href^="fax:"]:after,
 a.link[href^="fax:"]:after,
 a.link-light[href^="fax:"]:after,
 .reading-typography a[href^="fax:"]:after {
