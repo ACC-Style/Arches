@@ -307,10 +307,19 @@ $line-height_5: get-css-size(line-height, 5);
 
 // Utilities
 // @import "../../node_modules/bootstrap/scss/utilities/api";
-// scss-docs-end import-stack
+// scss-docs-end import-stacka.btn[href=''] {background:red !important;}
+a.btn[href='']:after {content:' [!] NO URL [!] ';
+                      font-family:sans-serif;
+                      font-weight:900;
+                     }
 
 
-@import "recipes/boot/_boot.basic_nav";
+a.link[href=''] {color:red !important;}
+a.link[href='']:after {content:' [!] NO URL [!] ';
+					font-family:sans-serif;
+					font-weight:900;
+					}
+					 @import "recipes/boot/_boot.basic_nav";
 @import "recipes/boot/_boot.tabs";
 @import "recipes/boot/_boot.ui.tabs";
 @import "recipes/boot/_boot.sidebar_nav";
