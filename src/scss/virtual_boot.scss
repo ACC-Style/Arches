@@ -307,31 +307,7 @@ $line-height_5: get-css-size(line-height, 5);
 
 // Utilities
 // @import "../../node_modules/bootstrap/scss/utilities/api";
-// scss-docs-end import-stacka.link[href=''] {color:get-themecolor(alert , -2 ) !important;}
-a.btn[href=''] {background:get-themecolor(alert , -2 )  !important;}
-a.btn[href='']:after, a.link[href='']:after  {content:' [!] NO URL [!] ';
-                      font-family:sans-serif;
-                      font-weight:900;
-                     }
-
-
-/*
-
-Button and Link Failure On No Href
-
-The button and link will auto style when the href is empty.
- 
-Markup:
-<a href="" class="btn br_radius max-w_30 m_auto m-b_3 block shadow_overlap-light btn-primary c_white h:undecorated" target="_blank">Button</a>
-<a href="https://www.facebook.com/AmericanCollegeofCardiology/" class="btn br_radius max-w_30 m_auto m-b_3 block shadow_overlap-light btn-primary c_white h:undecorated" target="_blank">Button</a>
-<a href="" class="link" target="_blank">Text Link</a>
-<a href="https://www.facebook.com/AmericanCollegeofCardiology/" class="link" target="_blank">Text Link</a>
-MarkupWrapperClasses: 
- 
-Weight:0
- 
-Styleguide HTML.NoHref.Failure
-*/@import "recipes/boot/_boot.basic_nav";
+// scss-docs-end import-stack@import "recipes/boot/_boot.basic_nav";
 @import "recipes/boot/_boot.tabs";
 @import "recipes/boot/_boot.ui.tabs";
 @import "recipes/boot/_boot.sidebar_nav";
@@ -408,7 +384,10 @@ Styleguide Page
 @import 'components/virtual/virtual.locked_graphic';
 @import 'components/virtual/virtual.ondemand_graphic';
 @import 'components/virtual/virtual.agenda_grid';
+@import 'components/virtual/virtual.no_href_faulure';
 
 .thumb>i{
     font-size:clamp(3em, 8vw, 8em);
   }
+
+
