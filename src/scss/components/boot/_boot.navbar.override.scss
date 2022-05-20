@@ -54,7 +54,7 @@ $navbar-bgcolor_shade: map-get($theme-palette, accent);
 		border-top: $border-width_3 $navbar-bgcolor_primary solid;
 		border-bottom: $border-width_3 $navbar-bgcolor_primary solid;
 
-		&:hover, &:focus-visible, &:active {
+		&:hover, &:focus-visible, &.active {
 			border-top-color: $navbar-bgcolor_shade;
 			border-bottom-color: #fff;
 			background-color: #fff;
@@ -67,16 +67,16 @@ $navbar-bgcolor_shade: map-get($theme-palette, accent);
 	@media #{$large-up} {
 		border-top: $border-width_3 $navbar-bgcolor_primary solid;
 		border-bottom: $border-width_3 $navbar-bgcolor_primary solid;
-		.nav-link{ &, &:hover, &:focus-visible, &:active {
+		.nav-link{ &, &:hover, &:focus-visible, &.active {
 			color:#fff; }
 		}
-		&:hover, &:focus-visible, &:active {
+		&:hover, &:focus-visible, &.active {
 			border-top-color: $navbar-bgcolor_shade;
 			border-bottom-color: #fff;
 			background-color: #fff;
 			color: $navbar-bgcolor_primary;
 			.nav-link{ 
-				&, &:hover, &:focus-visible, &:active {
+				&, &:hover, &:focus-visible, &.active {
 					color:$navbar-bgcolor_primary;
 				 }	
 			}
