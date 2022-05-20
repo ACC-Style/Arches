@@ -1,29 +1,32 @@
 /* For those things that require custom things and random stuff... */
 
-/*
+.CoveoDynamicFacet {
+    border: 1px solid get-themecolor(secondary,3);
+    padding: 1em 1em 0 1em;
+    margin-bottom: 1em;
+    font: $font-ui;
 
-comp title
+    .coveo-dynamic-facet-header {
+        border: none;
+        .coveo-dynamic-facet-header-title {
+            font-weight: normal;
+            font-family: $font-ui;
+            font-size: $font_0;
+            color: $teal;
+        }
+    }
 
-description
+    .coveo-combobox-input-icon {
+        font-size: $font_n2;
+    }
 
-default		 -   Grid
+    button {
+        color: $teal;
+    }
 
-Markup:
-{{modifier_class}}
-
-MarkupWrapperClasses: 
-
-Weight: 0
-
-NOTE: nothing
-
-EXPERIMENTAL: this design is new
-
-DEPRECATED: this design is old
-
-FORMAT: This uses a strick data format look at x
-
-
-Styleguide section
-
-*/
+    .coveo-checkbox-button {
+        min-height: 0;
+    }
+    
+    
+}

@@ -2,28 +2,514 @@
 
 /*
 
-recipe title
+Coveo
 
-description
-
-default		 -   Grid
-
-Markup:
-{{modifier_class}}
-
-MarkupWrapperClasses: 
+Put a description here about Coveo when words are easier.
 
 Weight: 0
 
-NOTE: nothing
+Styleguide Coveo
 
-EXPERIMENTAL: this design is new
+*/
 
-DEPRECATED: this design is old
+/*
 
-FORMAT: This uses a strick data format look at x
+Clinical Topics: Latest
 
+Latest result tab in Clinical Topics Section. 
+<a href="https://www.acc.org/Clinical-Topics/Acute-Coronary-Syndromes#sort=%40commonsortdate%20descending" target="_blank">On site example</a>
 
-Styleguide section
+Markup:
+<div class="coveo-list-layout CoveoResult font-size_down">
+    <article class="article-tease flex gap-x_4">
+        <div class="main-image">
+            <img src="https://picsum.photos/110/110" height="110" width="110">
+        </div>
+        <div class="article-content font_copy ">
+            <h1 class="coveo-title c_primary-n2 font_1 font_display">
+                <a href="/" class="CoveoResultLink">Outcomes Associated With PAD in MI With Cardiogenic Shock</a>
+            </h1>
+            <p class="date font_medium font_n1 lh_0 m-b_2">Apr 11, 2022 &nbsp;&nbsp;|&nbsp;&nbsp;<a href="/">Julianne Fallon, PharmD</a></p>
+            <h2 class="journal-title font_copy font_n1 font_medium">Journal Scan</h2>
+            <div class="article-tools float_right m-x_5">
+                <div class="flex">
+                    <div class="flex_shrink justify_center p_2 text_center w-grid_3">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="flex_auto p_2 self_center">
+                        <span class="text">Editors' Pick</span>
+                    </div>
+                </div>
+            </div>
+            <p class="coveo-excerpt">What is the relationship between lower extremity peripheral artery disease (PAD) and
+                outcomes in patients presenting with acute myocardial infarction (AMI) and cardiogenic shock?</p>
+            <p class="topics-list"><b>Clinical Topics:</b> 
+                <a href="/">Acute Coronary Syndromes</a>, <a href="/">Arrhythmias and Clinical EP</a>, <a href="/">Cardiac Surgery</a>, <a href="/">Heart Failure and Cardiomyopathies</a>, <a href="/">Invasive Cardiovascular Angiography and Intervention</a>, <a href="/">Prevention</a>, <a href="/">Vascular Medicine</a>, <a href="/">Atherosclerotic Disease (CAD/PAD)</a>, <a href="/">Implantable Devices</a>, <a href="/">SCD/Ventricular Arrhythmias</a>, <a href="/">Aortic Surgery</a>, <a href="/">Cardiac Surgery and Arrhythmias</a>, <a href="/">Cardiac Surgery and Heart Failure</a>, <a href="/">Acute Heart Failure</a>, <a href="/">Interventions and ACS</a>, <a href="/">Interventions and Vascular Medicine</a></p>
+            <p class="keywords-list"><b>Keywords:</b> <i>Acute Coronary Syndrome, </i><i>Cardiac Surgical Procedures,
+                </i><i>Coronary Artery Bypass, </i><i>Heart Arrest, </i><i>Heart Failure, </i><i>Hemorrhage, </i><i>Hospital
+                    Mortality, </i><i>Ischemic Attack, Transient, </i><i>Lower Extremity, </i><i>Myocardial Infarction,
+                </i><i>Myocardial Revascularization, </i><i>Patient Care Team, </i><i>Percutaneous Coronary Intervention,
+                </i><i>Peripheral Arterial Disease, </i><i>Risk Factors, </i><i>Secondary Prevention, </i><i>Shock,
+                    Cardiogenic, </i><i>Stroke, </i><i>Vascular Diseases</i> </p>
+        </div>
+    </article>
+</div> 
+
+Weight: 0
+
+Styleguide Coveo.Current.CTLatest
+
+*/
+
+/*
+
+Clinical Topics: Education
+
+Education result tab in Clinical Topics Section. 
+<a href="https://www.acc.org/Clinical-Topics/Arrhythmias-and-Clinical-EP#sort=%40originalz32xpostedz32xdate%20descending&tab=education" target="_blank">On site example</a>
+
+Markup:
+<div class="coveo-list-layout CoveoResult font-size_down">
+    <article class="article-tease">
+        <div class="article-content">
+            <h1 class="coveo-title c_primary-n2 font_1 font_display">
+                <a href="/" class="CoveoResultLink">Resuscitation Using ECPR during In-Hospital Cardiac Arrest (Rescue-IHCA) Mortality Prediction Score and External Validation (JACC Cardiovascular Interventions February 2022)</a>
+            </h1>
+            <p class="date font_medium font_n1 lh_0 m-b_2">Feb 07, 2022</p>
+            <div class="article-tools"></div>
+            <p></p>
+            <ul class="educational-details list-unstyled">
+                <li class="credits">
+                    <ul class="educational-credits ul_inline-pipe font-size_down">
+                        <li><span class="ABIM-MOC bg_MOC br_1 br_radius c_white br_solid br_MOC-1 p_2">ABIM-MOC</span> 1</li>
+                        <li><span class="CME bg_CME bg_CME br_1 br_radius c_white br_solid br_CME-1 p_2">CME</span> 1</li>
+                        <li><span class="COP bg_COP bg_COP br_1 br_radius c_white br_solid br_COP-1 p_2">COP</span> 1</li>
+                        <li><span class="ECME bg_ECME bg_ECME br_1 br_radius c_white br_solid br_ECME-1 p_2">ECME</span> 1</li>
+                    </ul>
+                </li>
+                <li class="price display_none" data-product-code=""></li>
+            </ul>
+            <p class="coveo-excerpt">Extracorporeal cardiopulmonary resuscitation (ECPR) is being increasingly utilized
+                to treat refractory in-hospital cardiac arrest (IHCA), but survival varies from 20-40%. Factors
+                associated with death in patients who receive extracorporeal membrane o</p>
+        </div>
+    </article>
+</div>
+
+Weight: 0
+
+Styleguide Coveo.Current.CTEducation
+
+*/
+
+/*
+
+Clinical Topics: Meetings
+
+Meetings result tab in Clinical Topics Section. 
+<a href="https://www.acc.org/Clinical-Topics/Arrhythmias-and-Clinical-EP#sort=%40originalz32xpostedz32xdate%20descending&tab=meetings" target="_blank">On site example</a>
+
+Markup:
+<div class="coveo-list-layout CoveoResult font-size_down">
+    <article class="article-tease flex gap-x_4">
+        <div class="cal-date text_center">
+            <a class="c_white bg_primary block" href="">
+                <span class="block p-y_1">Apr</span>
+                <span class="block br-t_2 br_solid font_7 p-x_4">16</span>
+            </a>
+        </div>
+        <div class="article-content netflix-hover">
+            <h1 class="coveo-title c_primary-n2 font_1 font_display">
+                <a href="/" class="CoveoResultLink">ACC/SCAI Monthly Cath Case Discussion: Contemporary Controversies in TAVR</a>
+            </h1>
+            <p class="date font_medium font_n1 lh_0 m-b_2">April 16, 2022</p>
+            <div class="article-tools"><a href="/" target="_blank" class="date">iCal</a></div>
+            <ul class="meeting-details list-unstyled font_0">
+                <li class="meeting-type">Webinars - Live</li>
+                <li class="meeting-venue">Online</li>
+                <li class="price">Price: </li>
+            </ul>
+            <p class="coveo-excerpt">The ACC Interventional, Peripheral Vascular Disease, Early Career, and
+                Fellows-in-Training Sections have partnered with SCAI to host a monthly Cath Discussion focusing on hot
+                topics.</p>
+            <p class="topics-list"><b>Clinical Topics:</b> <a href="/">Acute
+                    Coronary Syndromes</a>, <a href="/">Cardiac Surgery</a>, <a href="/">Invasive Cardiovascular Angiography and Intervention</a></p>
+        </div>
+    </article>
+</div>
+
+Weight: 0
+
+Styleguide Coveo.Current.CTMeetings
+
+*/
+
+/*
+
+Clinical Topics: Section News
+
+Section News result tab in Clinical Topics Section. 
+<a href="https://www.acc.org/Clinical-Topics/Arrhythmias-and-Clinical-EP#sort=%40commonsortdate%20descending&tab=sections" target="_blank">On site example</a>
+
+Markup:
+<div class="coveo-list-layout CoveoResult">
+    <article class="article-tease flex gap-x_4">
+        <div class="main-image">
+            <img src="https://picsum.photos/110/110">
+        </div>
+        <div class="article-content font_copy">
+            <h1 class="coveo-title c_primary-n2 font_1 font_display">
+                <a href="/" class="CoveoResultLink" tabindex="0">Engage With Sports Cardiology Experts in June</a>
+            </h1>
+            <p class="date font_medium font_n1 lh_0 m-b_2">Apr 14, 2022</p>
+            <h2 class="journal-title font_copy font_n1 font_medium">Cardiovascular Team Section</h2>
+            <div class="article-tools"></div>
+            <p class="coveo-excerpt">Join your colleagues virtually and register for Care of the Athletic Heart on June
+                3 for live sessions, panel discussions, debates and a Q&amp;A! Learn about fundamental cardiovascular
+                diagnostic and management strategies from sports cardiology...</p>
+        </div>
+    </article>
+</div>
+
+Weight: 0
+
+Styleguide Coveo.Current.CTSectionNews
+
+*/
+
+/*
+
+Latest in Cardiology with Audio
+
+Result from Latest in Cardiology with audio summary function. 
+<a href="https://www.acc.org/Latest-in-Cardiology#sort=%40whatstrendingscore%20descending" target="_blank">On site example</a>
+
+Markup:
+<div class="coveo-list-layout CoveoResult font-size_down">
+    <article class="article-tease flex gap-x_4">
+        <div class="main-image">
+            <img src="https://picsum.photos/110/110" height="110" width="110">
+        </div>
+        <div class="article-content font_copy">
+            <h1 class="coveo-title c_primary-n2 font_1 font_display">
+                <a href="/" class="CoveoResultLink">Long-Term Cardiovascular Outcomes After Bariatric Surgery in the Medicare Population | Journal of the American College of Cardiology</a>
+            </h1>
+            <p class="date font_medium font_n1 lh_0 m-b_2">Apr 14, 2022 (Issue Date: Apr 19, 2022)
+                <span class="audio-listing float_right"><a class="audio-link" href="/">Summary <i class="fas fa-volume c_black"></i></a></span>
+            </p>
+            <h2 class="journal-title font_copy font_n1 font_medium">JACC Journal Article</h2>
+            <p class="authors">Amgad Mentias, MD, MS;Ali Aminian, MD;Dalia Youssef, MD;Ambarish Pandey, MD;Venu Menon,
+                MD;Leslie Cho, MD;Steven E. Nissen, MD;Milind Y. Desai, MD, MBA</p>
+            <p class="coveo-excerpt"></p>
+        </div>
+    </article>
+</div>
+
+Weight: 0
+
+Styleguide Coveo.Current.LICWithAudio
+
+*/
+
+/*
+
+Global Search: Guidelines
+
+Search content type Guidelines. 
+<a href="https://www.acc.org/search#q=afib&sort=relevancy&f:@contentitemtype=[Guidelines]" target="_blank">On site example</a>
+
+Markup:
+<div class="coveo-list-layout CoveoResult font-size_down">
+    <article class="article-tease flex gap-x_4">
+        <div class="flex_grow">
+            <h1 class="coveo-title c_primary-n2 font_1 font_display">
+                Atrial Fibrillation: Guideline For the Management of Patients
+            </h1>
+            <dl class="guideline-meta">
+                <dt>document type:</dt>
+                <dd>Guidelines</dd>
+                <dt>publish date:</dt>
+                <dd>Mar 28, 2014</dd>
+                <dt><a href="http://www.onlinejacc.org/content/early/2019/01/21/j.jacc.2019.01.011" target="_blank">focused update:</a></dt>
+                <dd>Jan 28, 2019</dd>
+                <dt><a href="/guidelines">Go To Search within Guidelines</a></dt>
+            </dl>
+        </div>
+        <div class="flex_auto">
+            <ul class="guideline-links ul_none">
+                <li>
+                    <a href="http://www.onlinejacc.org/content/64/21/e1" target="_blank" data-hover-tooltip="" title="" data-original-title="HTML article on JACC">
+                        <i class="fas fa-file-medical-alt"></i><span>JACC</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.onlinejacc.org/content/64/21/e1.full.pdf" target="_blank" data-hover-tooltip="" title="" data-original-title="PDF article on JACC">
+                        <i class="fas fa-file-pdf"></i><span>PDF</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Guidelines/Hubs/Atrial-Fibrillation" data-hover-tooltip="" title="" data-original-title="Go to the hub page to see guideline resources such as key points, slides and other essentials.">
+                        <i class="fas fa-book-medical"></i><span>Hub</span>
+                    </a>
+                </li>
+            </ul>
+        </div>    
+    </article>
+</div>
+
+Weight: -400
+
+Styleguide Coveo.Current.SearchGuidelines
+
+*/
+
+/*
+
+Global Search: Images and Slides
+
+Search content type Images and Slides. 
+<a href="https://www.acc.org/search#q=afib&sort=relevancy&f:@contentitemtype=[Images%20and%20Slides]" target="_blank">On site example</a>
+
+Markup:
+<div class="coveo-list-layout CoveoResult font-size_down">
+    <article class="article-tease">
+        <div class="article-content font_copy">
+            <h1 class="coveo-title c_primary-n2 font_1 font_display">
+                <a class="link-header CoveoResultLink" href="/">Visual Abstract | FIDELIO-DKD</a>
+            </h1>
+            <div class="flex">
+                <div class="flex_shrink justify_center p_2 text_center w-grid_3">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <div class="flex_auto p_2 self_center">
+                    <span class="text">PDF (170 KB)</span>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+Weight: 0
+
+Styleguide Coveo.Current.SearchImagesSlides
+
+*/
+
+/*
+
+Global Search: Educational Activities
+
+Search content type Educational Activities. 
+<a href="https://www.acc.org/search#q=afib&sort=relevancy&f:@contentitemtype=[Educational%20Activities]" target="_blank">On site example</a>
+
+Markup:
+<div class="coveo-list-layout CoveoResult font-size_down">
+    <article class="article-tease">
+        <div class="article-content font_copy">
+            <h1 class="coveo-title c_primary-n2 font_1 font_display">
+                <a href="/" class="CoveoResultLink">A 65-Year-Old Male With Symptomatic Paroxysmal and Persistent AFib</a>
+            </h1>
+            <p class="date font_medium font_n1 lh_0 m-b_2">Jun 29, 2012 &nbsp;&nbsp;|&nbsp;&nbsp;<a href="/">Nagesh Chopra, MD</a></p>
+            <h2 class="journal-title font_copy font_n1 font_medium">Patient Case Quiz</h2>
+            <p class="access-type"><b>Access Type: </b>Free</p>
+            <p class="coveo-excerpt">A 65-year-old male has symptomatic episodes of paroxysmal AF despite treatment with
+                sotalol 80 mg twice daily or flecainide 150 mg twice daily. When he elected to discontin...</p>
+        </div>
+    </article>
+</div>
+
+Weight: 0
+
+Styleguide Coveo.Current.SearchEducationalActivities
+
+*/
+
+/*
+
+Arches Coveo Result: Main
+
+New and hopefully improved Coveo result list layout.
+
+Markup:
+<article class="br_radius br_1 br_black-2 bg_black_-05 br_solid p-x_3 p_4 relative m-b_4 font_ui">
+    <div class="absolute r_n1 t_3 text_center flex flex_column:md justify_end align-right font_n2:md font_n3 overflow_hidden">
+        <div class="flex flex_row justify_end c_white"><span class="flex_shrink p-y_2 p-x_3 br_1 br_solid br_white-7 bg_acc-1"><span class="p-x_2 m-t_1 m-b_2">editor’s pick</span> <i class="fas fa-fw m-t_1 m-b_2 fa-thumbs-up"></i></span></div>
+    </div>
+    <div class="flex flex_row:md flex_column gap-x_4">
+        <div class="flex_none font_n3 font_n2:md text_left flex_row flex_column:md flex p-l_4:md p-r_3:lg p-l_3 p-t_0 p-t_4 m-t_2 p-t_0:md m-t_0:md ">
+            <div class="m-t_2:md m-l_3 m-l_0:md m-b_3 m-b_0:md font_bold">
+                <img src="https://picsum.photos/110/110" alt="" class="cursor_pointer" style="width: clamp(75px, 10vw, 125px); height: clamp(75px, 10vw, 125px);">
+            </div>
+            <div class="cal-date text_center">
+                <a class="c_white bg_primary block" href="">
+                    <span class="block p-y_1">Apr</span>
+                    <span class="block br-t_2 br-b_2 br_solid font_7 p-x_4">16</span>
+                    <span class="block p-y_1">2022</span>
+                </a>
+            </div>
+        </div>
+        <div class="flex_auto m-r_4:md">
+            <span class="journal-title c_accent-2 font_bold uppercase wrap block:md font_n1">Cardiovascular Team Section</span>
+            <h2 class="article-title c_primary-n2 cursor_pointer font_1 font_3:md font_display font_medium  h:underline lh_1 m-y_2">Long-Term Cardiovascular Outcomes After Bariatric Surgery in the Medicare Population | Journal of the American College of Cardiology</h2>
+            <div class="flex flex_column-reverse flex_row:md gap-x_4">
+                <div class="article-content">
+                    <ul class="credits ul_none flex flex_wrap font_n2 font_n1:md font_n1:print self_end">
+                        <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+                            <div class="inline-block br_1 br_radius c_white br_MOC-n1 bg_MOC br_solid">
+                                <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
+                                    <span class="flex_auto">ABIM-MOC</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+                            <div class="inline-block br_1 br_radius c_white br_CME-n1 bg_CME br_solid">
+                                <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
+                                    <span class="flex_auto">CME</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">2</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+                            <div class="inline-block br_1 br_radius c_white br_COP-n1 bg_COP br_solid">
+                                <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
+                                    <span class="flex_auto">COP</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">3</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+                            <div class="inline-block br_1 br_radius c_white br_ECME-n1 bg_ECME br_solid">
+                                <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
+                                    <span class="flex_auto">ECME</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="meta m-t_2:md m-l_3 m-l_0:md m-b_3 m-b_0:md font_bold">
+                        <span class="c_black-7 m-r_3">Apr 11, 2022</span>
+                        <a href="/">Julianne Fallon, PharmD</a><br>
+                    </div>
+                    <p class="excerpt font_copy font_0 lh_2 m-b_3 m-t_2 z_1 display_none block:md max-w_50">The patient is an 80-year-old male with a history of diabetes mellitus type 2, end stage renal disease, chronic obstructive pulmonary disease (COPD), and lung cancer with recent radiation therapy. He is seen in the emergency department because of...</p>
+                    <div class="authors-list p-y_1 font_n2:md font_n3">
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Ty J. Gluckman, MD, MHA, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Nicole M. Bhave, MD, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Larry A. Allen, MD, MHS, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Eugene H. Chung, MD, MSc, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Erica S. Spatz, MD, MHS, FACC</a>
+                        <span class="collapse" id="authorToggle">
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Enrico Ammirati, MD, PhD</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Aaron L. Baggish, MD, FACC</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Biykem Bozkurt, MD, PhD, FACC</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>William K. Cornwell, III, MD, MSCS</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Kimberly G. Harmon, MD</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Jonathan H. Kim, MD, MSc, FACC</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Anuradha Lala, MD, FACC</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Benjamin D. Levine, MD, FACC</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Matthew W. Martinez, MD, FACC</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Oyere Onuma, MD, MSc</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Dermot Phelan, MD, PhD, FACC</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Valentina O. Puntmann, MD, PhD</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Saurabh Rajpal, MD, FACC</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Pam R. Taub, MD, FACC</a>
+                            <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Amanda K. Verma, MD, FACC</a>
+                        </span>
+                        <a class="font_bold" data-bs-toggle="collapse" href="#authorToggle" role="button" aria-expanded="false" aria-controls="authorToggle">Show More</a>
+                    </div>
+                    <div class="topics-list p-y_1 font_n2:md font_n3">
+                        <ul class="ul_inline-comma">
+                            <li class="no-after font_bold">Clinical Topics: </li>
+                            <li><a href="/">Acute Coronary Syndromes</a></li>
+                            <li><a href="/">Arrhythmias and Clinical EP</a></li>
+                            <li><a href="/">Cardiac Surgery</a></li>
+                            <li><a href="/">Heart Failure and Cardiomyopathies</a></li>
+                            <li><a href="/">Invasive Cardiovascular Angiography and Intervention</a></li>
+                            <li><a href="/">Prevention</a></li>
+                        </ul>
+                        <div class="collapse" id="topicsToggle">
+                            <ul class="ul_inline-comma">
+                                <li><a href="/">Vascular Medicine</a></li>
+                                <li><a href="/">Atherosclerotic Disease (CAD/PAD)</a></li>
+                                <li><a href="/">Implantable Devices</a></li>
+                                <li><a href="/">SCD/Ventricular Arrhythmias</a></li>
+                                <li><a href="/">Aortic Surgery</a></li>
+                                <li><a href="/">Cardiac Surgery and Arrhythmias</a></li>
+                                <li><a href="/">Cardiac Surgery and Heart Failure</a></li>
+                                <li><a href="/">Acute Heart Failure</a></li>
+                                <li><a href="/">Interventions and ACS</a></li>
+                                <li><a href="/">Interventions and Vascular Medicine</a></li>
+                            </ul>
+                        </div>
+                        <a class="font_bold" data-bs-toggle="collapse" href="#topicsToggle" role="button" aria-expanded="false" aria-controls="topicsToggle">Show More</a>
+                    </div>
+                    <div class="keywords-list p-y_1 font_n2:md font_n3">
+                        <ul class="ul_inline-comma">
+                            <li class="no-after font_bold">Keywords: </li>
+                            <li>Acute Coronary Syndrome</li>
+                            <li>Cardiac Surgical Procedures</li>
+                            <li>Coronary Artery Bypass</li>
+                            <li>Heart Arrest</li>
+                            <li>Heart Failure</li>
+                        </ul>
+                        <div class="collapse" id="keywordsToggle">
+                            <ul class="ul_inline-comma">
+                                <li>Hemorrhage</li>
+                                <li>Hospital Mortality</li>
+                                <li>Ischemic Attack, Transient</li>
+                                <li>Lower Extremity</li>
+                                <li>Myocardial Infarction</li>
+                                <li>Myocardial Revascularization</li>
+                                <li>Patient Care Team</li>
+                                <li>Percutaneous Coronary Intervention</li>
+                                <li>Peripheral Arterial Disease</li>
+                                <li>Risk Factors</li>
+                                <li>Secondary Prevention</li>
+                                <li>Shock, Cardiogenic</li>
+                                <li>Stroke</li>
+                                <li>Vascular Diseases</li>
+                            </ul>
+                        </div>
+                        <a class="font_bold" data-bs-toggle="collapse" href="#keywordsToggle" role="button" aria-expanded="false" aria-controls="keywordsToggle">Show More</a>
+                    </div>
+                    <div>
+                        <ul class="additional-details list-unstyled font_n1">
+                            <li><span class="font_bold">Webinars: </span> Live</li>
+                            <li><span class="font_bold">Online: </span> Yes</li>
+                            <li><span class="font_bold">Price: </span> $888</li>
+                            <li><span class="font_bold">Document Type:</span> Guidelines</li>
+                            <li><span class="font_bold">Publish Date:</span> Mar 28, 2014</li>
+                            <li><span class="highlight font_bold c_primary">Focused Update::</span> Jan 28, 2019</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="article-tools m-l_0 m-l_4:md m-y_2">
+                    <button type="button" class="br_none br_square font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md">
+                            <i class="fas fa-volume m-r_3"></i>
+                            <span class="nowrap text">Summary</span>
+                    </button>
+                    <button type="button" class="br_none br_square font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md">
+                            <i class="fas fa-calendar m-r_3"></i>
+                            <span class="nowrap text">iCal</span>
+                    </button>
+                    <button type="button" class="br_none br_square font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md">
+                            <i class="fas fa-file-pdf m-r_3"></i>
+                            <span class="nowrap text">PDF</span>
+                    </button>
+                    <button type="button" class="br_none br_square font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md">
+                            <i class="fas fa-file-medical-alt m-r_3"></i>
+                            <span class="nowrap text">JACC</span>
+                    </button>
+                    <button type="button" class="br_none br_square font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md">
+                            <i class="fas fa-search alt m-r_3"></i>
+                            <span class="nowrap text">Search</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+Weight: 0
+
+NOTE: Merge all the things.
+
+Styleguide Coveo.Arches.Main
 
 */
