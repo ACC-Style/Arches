@@ -1,7 +1,7 @@
-$navbar-font_primary: $font_accent !default;
-$navbar-font_shade: $font_ui !default;
-$navbar-bgcolor_primary: map-get($theme-palette, acc);
-$navbar-bgcolor_shade: map-get($theme-palette, accent);
+$navbar_primary: map-get($theme-palette, acc);
+$navbar_hover: map-get($theme-palette, accent);
+$navbar_active: get-themecolor(secondary,2);
+
 
 .icon-toggle_bars-times:before {
 	content: '\f2d3';
@@ -24,17 +24,17 @@ $navbar-bgcolor_shade: map-get($theme-palette, accent);
 }
 
 .navbar {
-	font-family: $navbar-font_primary;
+	font-family:  $font_accent;
 }
-.dropdown-menu font_copy br-t_0 {
-	font-family: $navbar-font_shade;
+.dropdown-menu{
+	font-family:  $font_ui;
 }
 .nav-link {
 	
 	padding-left: $padding_2;
 	padding-right: $padding_2;
 }
-.navbar-dark .navbar-nav .nav-link{color: white;}
+.navbar-dark .navbar-nav .nav-link{color: inherit;}
 
 .navbar-primary .dropdown-toggle:after {
 	display: none;
@@ -44,40 +44,40 @@ $navbar-bgcolor_shade: map-get($theme-palette, accent);
 }
 
 .navbar-primary .nav-item {
-	&:hover, &:focus-visible, &.active {
-		border-top-color: $navbar-bgcolor_shade;
+	&:hover, &:focus-visible{
+		border-top-color: $navbar_hover;
 		border-bottom-color: #fff;
 		background-color: #fff;
-		color:$navbar-bgcolor_primary;
+		color:$navbar_primary;
 	}
 	@media #{$medium-up} {
-		border-top: $border-width_3 $navbar-bgcolor_primary solid;
-		border-bottom: $border-width_3 $navbar-bgcolor_primary solid;
-
-		&:hover, &:focus-visible, &.active {
-			border-top-color: $navbar-bgcolor_shade;
+		border-top: $border-width_3 $navbar_primary solid;
+		border-bottom: $border-width_3 $navbar_primary solid;
+		&:hover, &:focus-visible {
+			border-top-color: $navbar_hover;
 			border-bottom-color: #fff;
 			background-color: #fff;
-			color: $navbar-bgcolor_primary;
+			color: $navbar_primary;
 
 		}
 	}
 }
 .navbar-primary .navbar-nav .nav-item {
 	@media #{$large-up} {
-		border-top: $border-width_3 $navbar-bgcolor_primary solid;
-		border-bottom: $border-width_3 $navbar-bgcolor_primary solid;
-		.nav-link{ &, &:hover, &:focus-visible, &.active {
-			color:#fff; }
+		border-top: $border-width_3 $navbar_primary solid;
+		border-bottom: $border-width_3 $navbar_primary solid;
+		.nav-link{ 
+			&, &:hover, &:focus-visible{
+			color:inherit; }
 		}
-		&:hover, &:focus-visible, &.active {
-			border-top-color: $navbar-bgcolor_shade;
+		&:hover, &:focus-visible{
+			border-top-color: $navbar_hover;
 			border-bottom-color: #fff;
 			background-color: #fff;
-			color: $navbar-bgcolor_primary;
+			color: $navbar_primary;
 			.nav-link{ 
-				&, &:hover, &:focus-visible, &.active {
-					color:$navbar-bgcolor_primary;
+				&, &:hover, &:focus-visible{
+					color:inherit;
 				 }	
 			}
 		}
@@ -105,4 +105,21 @@ $navbar-bgcolor_shade: map-get($theme-palette, accent);
 .dropdown_column{
 	min-width: 20rem;
 }
+}
+
+// Active /*
+
+.navbar-primary .navbar-nav .nav-item {
+	&.active {
+		border-top-color: $navbar_active;
+		border-bottom-color: $navbar_active;
+		background-color: $navbar_active;
+		color: #fff;
+		.nav-link{ 
+			&.active {
+				color:inherit;
+				}	
+		}
+		&:hover{border-top-color: $navbar_hover; color:$navbar_primary}
+	}
 }
