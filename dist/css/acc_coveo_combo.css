@@ -2490,8 +2490,8 @@ Styleguide List.InlineType
 .ul_inline-semicolon > li:not(:last-child)::after,
 .ul_inline-pipe > li:not(:last-child)::after {
   margin: 0;
-  -webkit-padding-start: 0.1em;
-          padding-inline-start: 0.1em;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
   -webkit-padding-end: 0.5em;
           padding-inline-end: 0.5em;
   opacity: 0.6;
@@ -5925,7 +5925,7 @@ Styleguide Layouts
 /*
 	Display
 
-	<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div> Alter the display of an object to create more complicated UI and Layouts. <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .block</td><td class='text_right'> display :</td><td> block </td></tr> <tr><td class='c_primary-n2'> .inline</td><td class='text_right'> display :</td><td> inline </td></tr> <tr><td class='c_primary-n2'> .inline-block</td><td class='text_right'> display :</td><td> inline-block </td></tr> <tr><td class='c_primary-n2'> .table-cell</td><td class='text_right'> display :</td><td> table-cell </td></tr> <tr><td class='c_primary-n2'> .table</td><td class='text_right'> display :</td><td> table </td></tr> <tr><td class='c_primary-n2'> .table-row</td><td class='text_right'> display :</td><td> table-row </td></tr> <tr><td class='c_primary-n2'> .flex</td><td class='text_right'> display :</td><td> flex </td></tr> <tr><td class='c_primary-n2'> .inline-flex</td><td class='text_right'> display :</td><td> inline-flex </td></tr> <tr><td class='c_primary-n2'> .grid</td><td class='text_right'> display :</td><td> grid </td></tr> <tr><td class='c_primary-n2'> .display_none</td><td class='text_right'> display :</td><td> none </td></tr> </tbody></table>  
+	<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div> Alter the display of an object to create more complicated UI and Layouts. <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .block</td><td class='text_right'> display :</td><td> block </td></tr> <tr><td class='c_primary-n2'> .inline</td><td class='text_right'> display :</td><td> inline </td></tr> <tr><td class='c_primary-n2'> .inline-block</td><td class='text_right'> display :</td><td> inline-block </td></tr> <tr><td class='c_primary-n2'> .table-cell</td><td class='text_right'> display :</td><td> table-cell </td></tr> <tr><td class='c_primary-n2'> .table</td><td class='text_right'> display :</td><td> table </td></tr> <tr><td class='c_primary-n2'> .table-row</td><td class='text_right'> display :</td><td> table-row </td></tr> <tr><td class='c_primary-n2'> .flex</td><td class='text_right'> display :</td><td> flex </td></tr> <tr><td class='c_primary-n2'> .inline-flex</td><td class='text_right'> display :</td><td> inline-flex </td></tr> <tr><td class='c_primary-n2'> .grid</td><td class='text_right'> display :</td><td> grid </td></tr> <tr><td class='c_primary-n2'> .display_contents</td><td class='text_right'> display :</td><td> contents </td></tr> <tr><td class='c_primary-n2'> .display_none</td><td class='text_right'> display :</td><td> none </td></tr> </tbody></table>  
 
 	Styleguide Layouts.Display
 
@@ -5964,6 +5964,10 @@ Styleguide Layouts
 
 .grid {
   display: grid;
+}
+
+.display_contents {
+  display: contents;
 }
 
 .display_none {
@@ -6007,6 +6011,10 @@ Styleguide Layouts
     display: grid;
   }
 
+  .display_contents\:md {
+    display: contents;
+  }
+
   .display_none\:md {
     display: none;
   }
@@ -6048,6 +6056,10 @@ Styleguide Layouts
     display: grid;
   }
 
+  .display_contents\:lg {
+    display: contents;
+  }
+
   .display_none\:lg {
     display: none;
   }
@@ -6085,6 +6097,10 @@ Styleguide Layouts
 
   .grid\:lg {
     display: grid;
+  }
+
+  .display_contents\:lg {
+    display: contents;
   }
 
   .display_none\:lg {
@@ -6128,6 +6144,10 @@ Styleguide Layouts
 
   .grid\:touch {
     display: grid;
+  }
+
+  .display_contents\:touch {
+    display: contents;
   }
 
   .display_none\:touch {
@@ -16215,7 +16235,12 @@ Styleguide Interaction.User
  * @link https://github.com/ACC-Style/Arches/
  */
 /** /setup/__preheader.scss **/
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
+.icon-after:after, a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after, a.btn[href^="mailto:"]:after, a.btn[href^="tel:"]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
+a.link[href^="mailto:"]:after,
+a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -16225,31 +16250,43 @@ a.link-light[href^="tel:"]:after,
 .reading-typography a[href^=http][target=_blank]:after,
 .reading-typography a[href^=https][target=_blank]:after,
 .reading-typography a[href^="mailto:"]:after,
-.reading-typography a[href^="tel:"]:after, .icon-before:before, a.link[href$=".pdf"]:before, a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before, a.link[href$=".zip"]:before, a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before, a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before, a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".pdf"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-a.link-light[href$=".zip"]:before,
+.reading-typography a[href^="tel:"]:after, .icon-before:before, a.btn[href*=".pdf"]:before, a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before, a.btn[href*=".zip"]:before, a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before, a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before, a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".pdf"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link[href*=".zip"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".pdf"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+a.link-light[href*=".zip"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".pdf"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before,
-.reading-typography a[href$=".zip"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".pdf"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before,
+.reading-typography a[href*=".zip"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   -webkit-font-smoothing: antialiased;
   text-rendering: auto;
   display: inline-block;
@@ -16421,11 +16458,11 @@ Arches Coveo Result: Guidelines
 Markup:
 <article class="br_radius br_1 br_black-2 bg_black_-05 br_solid p_4 relative m-b_4 font_ui">
     <div class="flex flex_row:md flex_column gap-x_4">
-        <div class="flex flex_column-reverse flex_row:md gap-x_4 w_100">
+        <div class="flex flex_column flex_row:md gap-x_4 w_100">
             <div class="article-content flex-grow_1">
                 <span class="journal-title c_accent-2 font_bold uppercase wrap block:md font_n1">Guidelines</span>
                 <h2 class="article-title c_primary-n2 cursor_pointer font_1 font_3:md font_display font_medium  h:underline lh_1 m-y_2">Atrial Fibrillation: Guideline For the Management of Patients</h2>
-                <div class="meta m-t_2:md m-l_3 m-l_0:md m-b_3 m-b_0:md font_bold">
+                <div class="meta m-t_2:md m-l_0 m-b_3 m-b_0:md font_bold">
                     <span class="c_black-7 m-r_3">Mar 28, 2014</span>
                 </div>
                 <div>
@@ -16434,22 +16471,22 @@ Markup:
                     </ul>
                 </div>
             </div>
-            <div class="article-tools m-l_0 m-l_4:md m-y_2">
-                <button type="button" class="br_none br_square font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md">
-                        <i class="fas fa-file-medical-alt m-r_3"></i>
-                        <span class="nowrap text">JACC</span>
+            <div class="article-tools m-l_0 m-l_4:md m-y_2 flex text_center gap_2">
+                <button type="button" class="block:md br_none br_square c_primary font_ui h:bg_primary h:c_white p-y_3:md p-x_5:md p-y_4 p-x_4">
+                        <i class="fas fa-book-alt font_5 font_9:md m-b_2:md"></i>
+                        <span class="text block lh_2">JACC</span>
                 </button>
-                <button type="button" class="br_none br_square font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md">
-                        <i class="fas fa-file-pdf m-r_3"></i>
-                        <span class="nowrap text">PDF</span>
+                <button type="button" class="block:md br_none br_square c_primary font_ui h:bg_primary h:c_white p-y_3:md p-x_5:md p-y_4 p-x_4">
+                        <i class="fas fa-file-pdf font_5 font_9:md m-b_2:md"></i>
+                        <span class="text block lh_2">PDF</span>
                 </button>
-                <button type="button" class="br_none br_square font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md">
-                        <i class="fas fa-book-medical m-r_3"></i>
-                        <span class="nowrap text">Hub</span>
+                <button type="button" class="block:md br_none br_square c_primary font_ui h:bg_primary h:c_white p-y_3:md p-x_5:md p-y_4 p-x_4">
+                        <i class="fab fa-hubspot font_5 font_9:md m-b_2:md"></i>
+                        <span class="text block lh_2">Hub</span>
                 </button>
-                <button type="button" class="br_none br_square font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md">
-                        <i class="fas fa-search alt m-r_3"></i>
-                        <span class="nowrap text">Search within Guidelines</span>
+                <button type="button" class="block:md br_none br_square c_primary font_ui h:bg_primary h:c_white p-y_3:md p-x_5:md p-y_4 p-x_4">
+                        <i class="fas fa-search alt font_5 font_9:md m-b_2:md"></i>
+                        <span class="text block lh_2 max-w_10:md">Search within Guidelines</span>
                 </button>
             </div>
         </div>
@@ -17210,7 +17247,7 @@ Markup:
     <h2 class="font_2 font_3:lg font_display p-t_2 m-b_0:md m-b_2 br_none:md ">
         <span class="toggle display_none:md ">
         <i class="fas fa-minus-square c_white-8 p-r_4"></i></span>
-        <a class="c_accent h:c_secondary-3" href="">Conditions &amp; Topics</a>
+        <a class="c_accent h:c_secondary-3" href="#">Conditions &amp; Topics</a>
     </h2>
     <ul class="block:md display_none font_0:lg font_n1 m-b_4 ul_none a:_block">
         <li class="text-indent_n1 p-l_4">
@@ -19178,7 +19215,7 @@ Styleguide DesignBase.Seals
 
 */
 .seal_normal {
-  background-image: url("../img/ACC_seal.svg");
+  background-image: url("../img/ACC_Seal.svg");
 }
 .seal_normal:before {
   padding-top: 100%;
@@ -19352,38 +19389,55 @@ Markup:
 
  Styleguide Recipes.InteractiveExtras.Links
  */
-.icon-before:before, a.link[href$=".pdf"]:before, a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before, a.link[href$=".zip"]:before, a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before, a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before, a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".pdf"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-a.link-light[href$=".zip"]:before,
+.icon-before:before, a.btn[href*=".pdf"]:before, a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before, a.btn[href*=".zip"]:before, a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before, a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before, a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".pdf"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link[href*=".zip"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".pdf"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+a.link-light[href*=".zip"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".pdf"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before,
-.reading-typography a[href$=".zip"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".pdf"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before,
+.reading-typography a[href*=".zip"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   width: 1.28571429em;
   margin-right: 4px;
   margin-right: 0.25rem;
   text-align: center;
 }
 
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
+.icon-after:after, a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after, a.btn[href^="mailto:"]:after, a.btn[href^="tel:"]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
+a.link[href^="mailto:"]:after,
+a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -19414,54 +19468,70 @@ a.link-light[href^="tel:"]:after,
   color: #92f0dc;
 }
 
+a.btn:hover,
 a.link:hover,
 a.link-light:hover,
 .reading-typography a:hover {
   text-decoration: underline;
 }
-a.link[href$=".pdf"]:before,
-a.link-light[href$=".pdf"]:before,
-.reading-typography a[href$=".pdf"]:before {
+a.btn[href*=".pdf"]:before,
+a.link[href*=".pdf"]:before,
+a.link-light[href*=".pdf"]:before,
+.reading-typography a[href*=".pdf"]:before {
   content: "\f1c1";
 }
-a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before {
+a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before {
   content: "\f1c2";
 }
-a.link[href$=".zip"]:before,
-a.link-light[href$=".zip"]:before,
-.reading-typography a[href$=".zip"]:before {
+a.btn[href*=".zip"]:before,
+a.link[href*=".zip"]:before,
+a.link-light[href*=".zip"]:before,
+.reading-typography a[href*=".zip"]:before {
   content: "\f1c6";
 }
-a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before,
+a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before {
   content: "\f685";
 }
-a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before {
+a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before {
   content: "\f0ce";
 }
-a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   content: "\f03d";
 }
-a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after,
+a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -19470,16 +19540,19 @@ a.link-light[href^=https][target=_blank]:after,
 .reading-typography a[href^=https][target=_blank]:after {
   content: "\f14c";
 }
+a.btn[href^="mailto:"]:after,
 a.link[href^="mailto:"]:after,
 a.link-light[href^="mailto:"]:after,
 .reading-typography a[href^="mailto:"]:after {
   content: "\f0e0";
 }
+a.btn[href^="tel:"]:after,
 a.link[href^="tel:"]:after,
 a.link-light[href^="tel:"]:after,
 .reading-typography a[href^="tel:"]:after {
   content: "\f095";
 }
+a.btn[href^="fax:"]:after,
 a.link[href^="fax:"]:after,
 a.link-light[href^="fax:"]:after,
 .reading-typography a[href^="fax:"]:after {
@@ -19569,7 +19642,7 @@ Styleguide Recipes.InteractiveExtras.ToggleIcons
   content: "\f0c9";
 }
 .active .icon-toggle_bars-times:before, .icon-toggle_bars-times:before.show, .show > .icon-toggle_bars-times:before, .active > .icon-toggle_bars-times:before {
-  content: "\f2d3";
+  content: "\f00d";
 }
 
 .icon-toggle_plus-minus:before {
@@ -24112,15 +24185,15 @@ Markup:
 				<li class="display_none:lg relative nav-item relative text_left text_center:lg  flex_auto">
 					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="//www.acc.org/guidelines#doctype=Guidelines" title="Access ACC guidelines and clinical policy documents as well as related resources">Guidelines</a>
 				</li>
-				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown  ">
-<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
+				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown  [ active ]">
+<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle [a:c_white] display_none:lg inline-block"
 	id="clinicalTopicsDropdown"
 	role="button"
 	data-bs-toggle="dropdown"
 	aria-haspopup="true"
 	aria-expanded="false"><i
 		class="far fa icon-toggle_plus-minus m-l_n2 m-r_2 "></i></a>
-<a class="nav-link nowrap p-l_0  a:c_white inline-block"
+<a class="nav-link nowrap p-l_0  [a:c_white] inline-block"
 	href="/clinical-topics">Clinical
 	Topics</a>
 					<div class="dropdown-menu font_copy br-t_0 br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="clinicalTopicsDropdown">
@@ -24131,7 +24204,7 @@ Markup:
 					<a class="nav-link expanded-click-area nowrap p-l_4 p-l_0:lg" href="#">Latest In Cardiology</a>
 				</li>
 				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown ">
-					<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
+					<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle [a:c_white] display_none:lg inline-block"
 						id="eduDropdown"
 						role="button"
 						data-bs-toggle="dropdown"
@@ -24139,14 +24212,14 @@ Markup:
 						aria-expanded="false"><i
 							class="far fa icon-toggle_plus-minus m-l_n2 m-r_2 "></i>
 					</a>
-					<a class="nav-link nowrap p-l_0  a:c_white inline-block"
+					<a class="nav-link nowrap p-l_0  [a:c_white] inline-block"
 						href="/Edu-Edu">Education and Meetings</a>
 					<div class="dropdown-menu font_copy br-t_0 dropdown-menu-end  br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="eduDropdown">
 						{{> "Recipes.BrandedNav.Dropdown" }}
 					</div>
 				</li>
 				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown ">
-					<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle a:c_white display_none:lg inline-block"
+					<a class="nav-link nowrap p-l_4 p-l_0:lg dropdown-toggle [a:c_white] display_none:lg inline-block"
 						id="toolDropdown"
 						role="button"
 						data-bs-toggle="dropdown"
@@ -24154,7 +24227,7 @@ Markup:
 						aria-expanded="false"><i
 							class="far fa icon-toggle_plus-minus m-l_n2 m-r_2 "></i>
 					</a>
-					<a class="nav-link nowrap p-l_0  a:c_white inline-block"
+					<a class="nav-link nowrap p-l_0  [a:c_white] inline-block"
 						href="/Edu-Edu">Tools &amp; Practice Support</a>	
 					<div class="dropdown-menu font_copy br-t_0  dropdown-menu-end br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="toolDropdown">
 						{{> "Recipes.BrandedNav.Dropdown.DoubleColumn" }}
@@ -24211,10 +24284,10 @@ Login Nav
 The ACC.org Nav has a shade nav that houses the login and profile nav with a shade color. To make sure it doesn't resize when the main nav expands the login nav needs to be placed absolutely. 
 
 Markup:
-<nav class="absolute bg_primary br-t_1 br-b_1  br_primary br_solid br_none flex_shrink font_0 font_1:lg m-l_auto navbar navbar-dark navbar-expand p-y_2 r_0 t_0 relative:lg" >
+<nav class="font_1 absolute bg_primary br-t_1 br_primary br_solid br_none flex_shrink font_0 font_0:lg m-l_auto navbar navbar-dark navbar-expand p-y_2 r_0 t_0 b_0:lg relative:lg" >
 	<ul class="navbar-nav">
 		<li class="nav-item relative flex_shrink dropdown">
-			<a class="nav-link expanded-click-area a:c_white h:c_white nowrap"
+			<a class="nav-link expanded-click-area [a:c_white] h:c_white nowrap"
 				 role="button"
 				 id="dropdownMyACC"
 				 data-bs-toggle="dropdown"
@@ -24602,7 +24675,7 @@ Markup:
     <li class="m-b_2">
         <div
              class="flex justify_start transition_4 dropdown-item">
-            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit-all h:undecorated collapsed display_none:lg"
+            <button class="flex_none p-r_2 p_0 self_center toggler inline-block br_none bg_transparent c_inherit-all h:undecorated display_none:lg"
                     data-bs-toggle="collapse"
                     role="button"
                     aria-expanded="true"
@@ -24641,7 +24714,7 @@ Markup:
     <li class="m-b_2">
         <div
              class="flex justify_start transition_4 dropdown-item">
-            <button class="flex_shrink p-r_2 p_0 self_center toggler inline-block br_none bg_tansparent c_inherit-all h:undecorated collapsed display_none:lg"
+            <a class="flex_none p-r_2 p_0 self_center toggler inline-block br_none bg_transparent c_inherit-all h:undecorated display_none:lg"
                     data-bs-toggle="collapse"
                     role="button"
                     aria-expanded="true"
@@ -24650,7 +24723,7 @@ Markup:
                     onclick="event.stopPropagation()">
                 <i
                    class="far fa icon-toggle_plus-minus-sub display_none:lg m-l_n2 m-r_2"></i>
-            </button>
+            </a>
             <a class="flex_grow self_center wrap w_100 text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated p-r_3"
                href="/education-and-meetings/education-catalog">Products</a>
         </div>
