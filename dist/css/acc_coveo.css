@@ -241,22 +241,22 @@ Markup:
                     </ul>
                 </div>
             </div>
-            <div class="article-tools m-l_0 m-l_4:md m-y_2 flex text_center gap_2">
-                <button type="button" class="block:md br_none br_square c_primary font_ui h:bg_primary h:c_white p-y_3:md p-x_5:md p-y_4 p-x_4">
-                        <i class="fas fa-book-alt font_5 font_9:md m-b_2:md"></i>
-                        <span class="text block lh_2">JACC</span>
+            <div class="article-tools flex flex_nowrap:lg flex_wrap m-l_0 m-l_4:md m-y_2 self_start:md self_stretch text_center">
+                <button type="button" class="br_2 br_solid br_square br_white-9 c_primary flex flex_50 flex_auto:md flex_column h:bg_primary h:c_white items_center justify_center p-x_4 p-x_5:md p-y_3:md p-y_4">
+                    <i class="fas fa-book-alt font_5 font_9:lg m-b_2:md"></i>
+                    <span class="text block lh_2">JACC</span>
                 </button>
-                <button type="button" class="block:md br_none br_square c_primary font_ui h:bg_primary h:c_white p-y_3:md p-x_5:md p-y_4 p-x_4">
-                        <i class="fas fa-file-pdf font_5 font_9:md m-b_2:md"></i>
-                        <span class="text block lh_2">PDF</span>
+                <button type="button" class="br_2 br_solid br_square br_white-9 c_primary flex flex_50 flex_auto:md flex_column h:bg_primary h:c_white items_center justify_center p-x_4 p-x_5:md p-y_3:md p-y_4">
+                    <i class="fas fa-file-pdf font_5 font_9:lg m-b_2:md"></i>
+                    <span class="text block lh_2">PDF</span>
                 </button>
-                <button type="button" class="block:md br_none br_square c_primary font_ui h:bg_primary h:c_white p-y_3:md p-x_5:md p-y_4 p-x_4">
-                        <i class="fab fa-hubspot font_5 font_9:md m-b_2:md"></i>
-                        <span class="text block lh_2">Hub</span>
+                <button type="button" class="br_2 br_solid br_square br_white-9 c_primary flex flex_50 flex_auto:md flex_column h:bg_primary h:c_white items_center justify_center p-x_4 p-x_5:md p-y_3:md p-y_4">
+                    <i class="fab fa-hubspot font_5 font_9:lg m-b_2:md"></i>
+                    <span class="text block lh_2">Hub</span>
                 </button>
-                <button type="button" class="block:md br_none br_square c_primary font_ui h:bg_primary h:c_white p-y_3:md p-x_5:md p-y_4 p-x_4">
-                        <i class="fas fa-search alt font_5 font_9:md m-b_2:md"></i>
-                        <span class="text block lh_2 max-w_10:md">Search within Guidelines</span>
+                <button type="button" class="br_2 br_solid br_square br_white-9 c_primary flex flex_50 flex_auto:md flex_column h:bg_primary h:c_white items_center justify_center p-x_4 p-x_5:md p-y_3:md p-y_4">
+                    <i class="fas fa-search alt font_5 font_9:lg m-b_2:md"></i>
+                    <span class="text block lh_2 max-w_10:md">Search within Guidelines</span>
                 </button>
             </div>
         </div>
@@ -3200,6 +3200,7 @@ a.link-light[href*=".mov"]:before,
   margin-right: 4px;
   margin-right: 0.25rem;
   text-align: center;
+  text-indent: 0;
 }
 
 .icon-after:after, a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after, a.btn[href^="mailto:"]:after, a.btn[href^="tel:"]:after,
@@ -3222,6 +3223,7 @@ a.link-light[href^="tel:"]:after,
   margin-left: 4px;
   margin-left: 0.25rem;
   text-align: center;
+  text-indent: 0;
 }
 
 .link, .reading-typography a {
@@ -8009,7 +8011,7 @@ The Header Nav of ACC.org. <span class="font_n1 font_italic c_warning">This is s
 Markup:
 <div class="flex c_white relative">
 	<nav class="flex_auto navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_2 font_1:lg relative">
-		{{> "Recipes.BrandedNav.Hamburger" }}
+		{{> "Navigation.BrandedNav.Hamburger" }}
 		<div class="collapse navbar-collapse" id="navBarMainNav">
 			<ul class="navbar-nav flex flex_row:lg flex_column justify_around w_100">
 				<li class="nav-item relative text_left text_center:lg  flex_shrink">
@@ -8030,7 +8032,7 @@ Markup:
 	href="/clinical-topics">Clinical
 	Topics</a>
 					<div class="dropdown-menu font_copy br-t_0 br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="clinicalTopicsDropdown">
-						{{> "Recipes.BrandedNav.Dropdown.AltContent" }}
+						{{> "Navigation.BrandedNav.Dropdown.AltContent" }}
 					</div>
 				</li>
 				<li class="nav-item relative text_left text_center:lg  flex_auto ">
@@ -8048,7 +8050,7 @@ Markup:
 					<a class="nav-link nowrap p-l_0  [a:c_white] inline-block"
 						href="/Edu-Edu">Education and Meetings</a>
 					<div class="dropdown-menu font_copy br-t_0 dropdown-menu-end  br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="eduDropdown">
-						{{> "Recipes.BrandedNav.Dropdown" }}
+						{{> "Navigation.BrandedNav.Dropdown" }}
 					</div>
 				</li>
 				<li class="nav-item relative text_left text_center:lg  flex_auto dropdown ">
@@ -8063,7 +8065,7 @@ Markup:
 					<a class="nav-link nowrap p-l_0  [a:c_white] inline-block"
 						href="/Edu-Edu">Tools &amp; Practice Support</a>	
 					<div class="dropdown-menu font_copy br-t_0  dropdown-menu-end br_none br_solid:lg br_square m-t_0 m-t_2:lg" aria-labelledby="toolDropdown">
-						{{> "Recipes.BrandedNav.Dropdown.DoubleColumn" }}
+						{{> "Navigation.BrandedNav.Dropdown.DoubleColumn" }}
 					</div>
 				</li>
 				<li class="display_none:lg nav-item relative text_left text_center:lg  flex_auto ">
@@ -8081,7 +8083,7 @@ Markup:
 			</ul>
 		</div>
 	</nav>
-	{{> "Recipes.BrandedNav.Login" }}
+	{{> "Navigation.BrandedNav.Login" }}
 </div>
 
 MarkupWrapperClasses:
@@ -8089,7 +8091,7 @@ MarkupWrapperClasses:
 
 Weight: -100 
 
-Styleguide Recipes.BrandedNav
+Styleguide Navigation.BrandedNav
 
 */
 /*
@@ -8109,7 +8111,7 @@ flex_auto navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_1 s
 
 Weight:0
 
-Styleguide Recipes.BrandedNav.Hamburger
+Styleguide Navigation.BrandedNav.Hamburger
 */
 /*
 Login Nav
@@ -8133,41 +8135,41 @@ Markup:
 					<div class="p-x_2 p-y_0 dropdown_column">
 						<ul class="ul_none lh_2 m_0">
 							<li>
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-profile">My Profile</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-profile">My Profile</a>
 							</li>
 							<li>
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-training-program">My Training Programs</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-training-program">My Training Programs</a>
 							</li>
 							<li>
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-membership">My Membership</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-membership">My Membership</a>
 							</li>
 							<li>
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-library">My Library</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-library">My Library</a>
 							</li>
 							<li>
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="http://edu.acc.org/diweb/dashboard">My Learning Dashboard</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="http://edu.acc.org/diweb/dashboard">My Learning Dashboard</a>
 							</li>
 							<li>
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="http://edu.acc.org/diweb/grades">My Transcript</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="http://edu.acc.org/diweb/grades">My Transcript</a>
 							</li>
 							<li>
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/ncdr-physician-dashboard">NCDR Physician Dashboard</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/ncdr-physician-dashboard">NCDR Physician Dashboard</a>
 							</li>
 							<li>
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-communication-preferences">My Communication Preferences</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-communication-preferences">My Communication Preferences</a>
 							</li>
 							<li>
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="https://memberhub.acc.org/">ACC Member Hub</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="https://memberhub.acc.org/">ACC Member Hub</a>
 							</li>
 							<li>
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-purchase-history">My Purchases</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/my-purchase-history">My Purchases</a>
 							</li>
 							<li>
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/personalization">Personalize ACC.org</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/my-acc/personalization">Personalize ACC.org</a>
 							</li>
 							<div class="dropdown-divider m-y_3"></div>
 							<li class="">
-								<a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/RemoteLogOff"> Logout</a>
+								<a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5 lh_2" href="/RemoteLogOff"> Logout</a>
 							</li>
 						</ul>
 					</div>
@@ -8191,7 +8193,7 @@ Weight: 100
 MarkupWrapperClasses:
     flex max-w_60 m_auto
 
-Styleguide Recipes.BrandedNav.Login
+Styleguide Navigation.BrandedNav.Login
 
 */
 /*
@@ -8232,7 +8234,7 @@ if (window.innerWidth > 992) {
 
 Weight:0
 
-Styleguide Recipes.BrandedNav.JavaScript
+Styleguide Navigation.BrandedNav.JavaScript
 */
 /*
 Responsive Top Nav with Single Layer Nav
@@ -8241,7 +8243,7 @@ The Header Nav with no dropdown navs but with elements that show up only in the 
 
 Markup:
 <nav class="navbar navbar-primary p_0 navbar-expand-lg navbar-dark bg_acc font_1">
-	{{> "Recipes.BrandedNav.Hamburger" }}
+	{{> "Navigation.BrandedNav.Hamburger" }}
 	<div class="collapse navbar-collapse" id="navBarMainNav">
 		<ul class="navbar-nav">
 			<li class="display_none:lg nav-item">
@@ -8294,7 +8296,7 @@ MarkupWrapperClasses:
 
 Weight: 1
 
-Styleguide Recipes.BrandedNav.Simple
+Styleguide Navigation.BrandedNav.Simple
 
 */
 /*
@@ -8305,12 +8307,12 @@ The Header Nav of ACC.org
 Markup:
 <div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
 	<div class="p-x_2 p-y_0 p-y_2:md dropdown_column w_50:md">
-		{{> "Recipes.BrandedNav.Dropdown.List.Simple" }}
+		{{> "Navigation.BrandedNav.Dropdown.List.Simple" }}
 	</div>
 	<div
 		class="p-x_2 p-y_0 p-y_2:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md dropdown_column w_50:md"
 	>
-		{{> "Recipes.BrandedNav.Dropdown.List.SubLinks" }}
+		{{> "Navigation.BrandedNav.Dropdown.List.SubLinks" }}
 	</div>
 </div>
 
@@ -8320,7 +8322,7 @@ MarkupWrapperClasses:
 
 Weight: 55
 
-	Styleguide Recipes.BrandedNav.Dropdown.DoubleColumn
+	Styleguide Navigation.BrandedNav.Dropdown.DoubleColumn
 
 */
 /*
@@ -8331,7 +8333,7 @@ The Header Nav of ACC.org
 Markup:
 <div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
 	<div class="p-x_2 p-y_0 p-y_2:md dropdown_column">
-		{{> "Recipes.BrandedNav.Dropdown.List.Simple" }}
+		{{> "Navigation.BrandedNav.Dropdown.List.Simple" }}
 	</div>
 </div>
 
@@ -8341,7 +8343,7 @@ MarkupWrapperClasses:
 
 Weight: 50
 
-	Styleguide Recipes.BrandedNav.Dropdown
+	Styleguide Navigation.BrandedNav.Dropdown
 
 */
 /*
@@ -8352,7 +8354,7 @@ The Header Nav of ACC.org
 Markup:
 <div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
 	<div class="p-x_2 p-y_0 p-y_3:md dropdown_column">
-		{{> "Recipes.BrandedNav.Dropdown.List.SubLinks" }}
+		{{> "Navigation.BrandedNav.Dropdown.List.SubLinks" }}
 	</div>
 </div>
 
@@ -8361,7 +8363,7 @@ MarkupWrapperClasses:
 
 Weight: 2
 
-Styleguide Recipes.BrandedNav.Dropdown.SubLinks
+Styleguide Navigation.BrandedNav.Dropdown.SubLinks
 
 */
 /*
@@ -8372,12 +8374,12 @@ It is easy to add images in replace of text links in the navs.
 Markup:
 <div class="flex flex_column flex_row:md p-x_2:lg m-x_n1 m-x_0:lg">
 	<div class="p-x_2 p-y_0 p-y_2:md order_2 order_1:md dropdown_column w_50:md">
-				{{> "Recipes.BrandedNav.Dropdown.List.AltContent" }}
+				{{> "Navigation.BrandedNav.Dropdown.List.AltContent" }}
 	</div>
 	<div
 		class="p-x_2 p-y_0 p-y_2:md br-l_1 br_none br_shade-4 br_solid:lg br_solid:md order_1 order_2:md dropdown_column w_50:md"
 	>
-			{{> "Recipes.BrandedNav.Dropdown.List.SubLinks" }}
+			{{> "Navigation.BrandedNav.Dropdown.List.SubLinks" }}
 	</div>
 </div>
 
@@ -8387,7 +8389,7 @@ MarkupWrapperClasses:
 
 Weight: 60
 
-Styleguide Recipes.BrandedNav.Dropdown.AltContent
+Styleguide Navigation.BrandedNav.Dropdown.AltContent
 
 */
 /*
@@ -8399,64 +8401,65 @@ Markup:
 <ul class="ul_none lh_2 m_0 max-w_25 w_100">
 	<li class="m-b_2">
 		<a
-			class="dropdown-item transition_4 wrap"
-			href="/clinical-topics/acute-coronary-syndromes"
+			class="dropdown-item link transition_4 wrap"
+			href="/clinical-topics/acute-coronary-syndromes.pdf"
 			><span class="text-indent_n1 inline-block m-l_4">Acute Coronary Syndromes</span></span></a
 		>
 	</li>
 	<li class="m-b_2">
 		<a
-			class="dropdown-item transition_4 wrap"
+			class="dropdown-item link transition_4 wrap"
 			href="/clinical-topics/anticoagulation-management"
 			title="Anticoagulation Management"
+			target="_blank"
 			><span class="text-indent_n1 inline-block m-l_4">Anticoagulation Management</span></a
 		>
 	</li>
 	<li class="m-b_2">
 		<a
-			class="dropdown-item transition_4 wrap"
+			class="dropdown-item link transition_4 wrap"
 			href="/clinical-topics/arrhythmias-and-clinical-ep"
 			><span class="text-indent_n1 inline-block m-l_4">Arrhythmias and Clinical EP</span></a
 		>
 	</li>
 	<li class="m-b_2">
 		<a
-			class="dropdown-item transition_4 wrap"
+			class="dropdown-item link transition_4 wrap"
 			href="/clinical-topics/acute-coronary-syndromes/atherosclerotic-disease-cad-pad"
 			><span class="text-indent_n1 inline-block m-l_4">Atherosclerotic Disease (CAD/PAD)</span></a
 		>
 	</li>
 	<li class="m-b_2">
 		<a
-			class="dropdown-item transition_4 wrap"
+			class="dropdown-item link transition_4 wrap"
 			href="/clinical-topics/cardiac-surgery"
 			><span class="text-indent_n1 inline-block m-l_4">Cardiac Surgery</span></a
 		>
 	</li>
 	<li class="m-b_2">
 		<a
-			class="dropdown-item transition_4 wrap"
+			class="dropdown-item link transition_4 wrap"
 			href="/clinical-topics/cardio-oncology"
 			><span class="text-indent_n1 inline-block m-l_4">Cardio-Oncology</span></a
 		>
 	</li>
 	<li class="m-b_2">
 		<a
-			class="dropdown-item transition_4 wrap"
+			class="dropdown-item link transition_4 wrap"
 			href="/clinical-topics/congenital-heart-disease-pediatric-cardiology"
 			><span class="text-indent_n1 inline-block m-l_4">Congenital Heart Disease and Pediatric Cardiology</span></a
 		>
 	</li>
 	<li class="m-b_2">
 		<a
-			class="dropdown-item transition_4 wrap"
-			href="/clinical-topics/diabetes-and-cardiometabolic-disease"
+			class="dropdown-item link transition_4 wrap"
+			href="/clinical-topics/diabetes-and-cardiometabolic-disease.zip"
 			><span class="text-indent_n1 inline-block m-l_4">Diabetes and Cardiometabolic Disease</span></a
 		>
 	</li>
 	<li class="m-b_2">
 		<a
-			class="dropdown-item transition_4 wrap"
+			class="dropdown-item link transition_4 wrap"
 			href="/clinical-topics/dyslipidemia"
 			title="Dyslipidemia"
 			><span class="text-indent_n1 inline-block m-l_4">Dyslipidemia</span></a
@@ -8464,14 +8467,14 @@ Markup:
 	</li>
 	<li class="m-b_2">
 		<a
-			class="dropdown-item transition_4 wrap"
+			class="dropdown-item link transition_4 wrap"
 			href="/clinical-topics/geriatric-cardiology"
 			><span class="text-indent_n1 inline-block m-l_4">Geriatric Cardiology</span></a
 		>
 	</li>
 	<li class="m-b_2">
 		<a
-			class="dropdown-item transition_4 wrap"
+			class="dropdown-item link transition_4 wrap"
 			href="/clinical-topics/heart-failure-and-cardiomyopathies"
 			title="Heart Failure and Cardiomyopathies"
 			><span class="text-indent_n1 inline-block m-l_4">Heart Failure and Cardiomyopathies</span></a
@@ -8482,7 +8485,7 @@ Markup:
 
 Weight:1000
 
-Styleguide Recipes.BrandedNav.Dropdown.List.Simple
+Styleguide Navigation.BrandedNav.Dropdown.List.Simple
 */
 /*
 Dropdown Nav List with Sub Links
@@ -8493,13 +8496,13 @@ Markup:
 <ul class="ul_none lh_2"
     id="SubLinkCollapseParent">
     <li class="m-b_2">
-        <a class="dropdown-item transition_4 wrap"
+        <a class="dropdown-item link transition_4 wrap"
            href="/clinical-topics/acute-coronary-syndromes"><span
                   class="text-indent_n1 inline-block m-l_4">Acute
                 Coronary Syndromes</span></span></a>
     </li>
     <li class="m-b_2">
-        <a class="dropdown-item transition_4 wrap"
+        <a class="dropdown-item link transition_4 wrap"
            href="/clinical-topics/anticoagulation-management"
            title="Anticoagulation Management"><span
                   class="text-indent_n1 inline-block m-l_4">Anticoagulation
@@ -8507,7 +8510,7 @@ Markup:
     </li>
     <li class="m-b_2">
         <div
-             class="flex justify_start transition_4 dropdown-item">
+             class="flex justify_start transition_4 dropdown-item link">
             <button class="flex_none p-r_2 p_0 self_center toggler inline-block br_none bg_transparent c_inherit-all h:undecorated display_none:lg"
                     data-bs-toggle="collapse"
                     role="button"
@@ -8524,20 +8527,20 @@ Markup:
         <ul class="ul_none lh_3 font-size_down collapse transition_4 block:lg"
             id="learningCollapse">
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/earncredit"><span
                           class="text-indent_n1 inline-block m-l_5">Earn
                         Credit</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/board-prep-offerings"
                    title="Board Prep Offerings"><span
                           class="text-indent_n1 inline-block m-l_5">Board
                         Prep Offerings</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/education-catalog"><span
                           class="text-indent_n1 inline-block m-l_5">View
                         the Entire Catalog</span></a>
@@ -8546,7 +8549,7 @@ Markup:
     </li>
     <li class="m-b_2">
         <div
-             class="flex justify_start transition_4 dropdown-item">
+             class="flex justify_start transition_4 dropdown-item link">
             <a class="flex_none p-r_2 p_0 self_center toggler inline-block br_none bg_transparent c_inherit-all h:undecorated display_none:lg"
                     data-bs-toggle="collapse"
                     role="button"
@@ -8563,65 +8566,65 @@ Markup:
         <ul class="ul_none lh_3 font-size_down collapse transition_4 block:lg"
             id="productsCollapse">
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/accsap"><span
                           class="text-indent_n1 inline-block m-l_5">ACCSAP</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/accel-audio"><span
                           class="text-indent_n1 inline-block m-l_5">ACCEL</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/cardiosource-plus"><span
                           class="text-indent_n1 inline-block m-l_5">CardioSource
                         Plus for Institutions and
                         Practices</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/cathsap"><span
                           class="text-indent_n1 inline-block m-l_5">CathSAP</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/ecg-drill-and-practice"
                    title="ECG Drill and Practice"><span
                           class="text-indent_n1 inline-block m-l_5">ECG
                         Drill and Practice</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/echosap"><span
                           class="text-indent_n1 inline-block m-l_5">EchoSAP</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/epsap"><span
                           class="text-indent_n1 inline-block m-l_5">EP
                         SAP</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/heart-songs-5"><span
                           class="text-indent_n1 inline-block m-l_5">Heart
                         Songs</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/iscience"><span
                           class="text-indent_n1 inline-block m-l_5">iScience</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/recent-advances-in-clinical-nuclear-cardiology-and-cardiac-ct-mod"><span
                           class="text-indent_n1 inline-block m-l_5">Nuclear
                         Cardiology and Cardiac CT Meeting on
                         Demand</span></a>
             </li>
             <li class="">
-                <a class="dropdown-item transition_4 wrap text-indent_n1 p-l_5"
+                <a class="dropdown-item link transition_4 wrap text-indent_n1 p-l_5"
                    href="/education-and-meetings/products-and-resources/rightsteps-optimizing-medical-therapy-for-chronic-heart-failure"><span
                           class="text-indent_n1 inline-block m-l_5">RightSTEPS
                         Optimizing Medical Therapy for
@@ -8639,7 +8642,7 @@ MarkupWrapperClasses:
  flex_grow self_center wrap w_100 text-indent_n1 inline-block m-l_4 c_inherit-all h:undecorated p-r_3
 
 
-Styleguide Recipes.BrandedNav.Dropdown.List.SubLinks
+Styleguide Navigation.BrandedNav.Dropdown.List.SubLinks
 */
 /*
 Dropdown Nav List with Alt Content
@@ -8665,7 +8668,7 @@ Markup:
 
 Weight:1010
 
-Styleguide Recipes.BrandedNav.Dropdown.List.AltContent
+Styleguide Navigation.BrandedNav.Dropdown.List.AltContent
 */
 #search-holder {
   z-index: 3000;
