@@ -6,7 +6,7 @@
  */
 /** /setup/__preheader.scss **/
 /**Set Active Class**/
-/** No Framework **/
+/** No Framework or is a Style Sheet that Should be used as an augmenting stylesheet **/
 /** Built With Base Branding 1.02.0 **/
 /**  ACC Brands    *********************************/
 /** Built With mobile Branding **/
@@ -2471,25 +2471,27 @@ Styleguide List.InlineType
 .ul_inline-comma,
 .ul_inline-semicolon,
 .ul_inline-pipe {
-  display: inline-flex;
+  display: inline-flex !important;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   justify-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
 }
 .ul_inline-comma > li,
 .ul_inline-semicolon > li,
 .ul_inline-pipe > li {
   flex: 0 1 auto;
+  margin: 0 !important;
 }
 .ul_inline-comma > li:not(:last-child)::after,
 .ul_inline-semicolon > li:not(:last-child)::after,
 .ul_inline-pipe > li:not(:last-child)::after {
-  -webkit-padding-start: 0.1em;
-          padding-inline-start: 0.1em;
+  margin: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
   -webkit-padding-end: 0.5em;
           padding-inline-end: 0.5em;
   opacity: 0.6;
@@ -4689,6 +4691,217 @@ Styleguide Layouts.Padding
     padding-right: 4rem  !important;
   }
 }
+@media (hover: none) and (pointer: coarse) {
+  .p_0\:touch {
+    padding: 0  !important;
+  }
+
+  .p_1\:touch {
+    padding: 1px  !important;
+  }
+
+  .p_2\:touch {
+    padding: 0.25rem  !important;
+  }
+
+  .p_3\:touch {
+    padding: 0.5rem  !important;
+  }
+
+  .p_4\:touch {
+    padding: 1rem  !important;
+  }
+
+  .p_5\:touch {
+    padding: 2rem  !important;
+  }
+
+  .p_6\:touch {
+    padding: 4rem  !important;
+  }
+
+  .p-y_0\:touch {
+    padding-top: 0  !important;
+    padding-bottom: 0  !important;
+  }
+
+  .p-y_1\:touch {
+    padding-top: 1px  !important;
+    padding-bottom: 1px  !important;
+  }
+
+  .p-y_2\:touch {
+    padding-top: 0.25rem  !important;
+    padding-bottom: 0.25rem  !important;
+  }
+
+  .p-y_3\:touch {
+    padding-top: 0.5rem  !important;
+    padding-bottom: 0.5rem  !important;
+  }
+
+  .p-y_4\:touch {
+    padding-top: 1rem  !important;
+    padding-bottom: 1rem  !important;
+  }
+
+  .p-y_5\:touch {
+    padding-top: 2rem  !important;
+    padding-bottom: 2rem  !important;
+  }
+
+  .p-y_6\:touch {
+    padding-top: 4rem  !important;
+    padding-bottom: 4rem  !important;
+  }
+
+  .p-x_0\:touch {
+    padding-right: 0  !important;
+    padding-left: 0  !important;
+  }
+
+  .p-x_1\:touch {
+    padding-right: 1px  !important;
+    padding-left: 1px  !important;
+  }
+
+  .p-x_2\:touch {
+    padding-right: 0.25rem  !important;
+    padding-left: 0.25rem  !important;
+  }
+
+  .p-x_3\:touch {
+    padding-right: 0.5rem  !important;
+    padding-left: 0.5rem  !important;
+  }
+
+  .p-x_4\:touch {
+    padding-right: 1rem  !important;
+    padding-left: 1rem  !important;
+  }
+
+  .p-x_5\:touch {
+    padding-right: 2rem  !important;
+    padding-left: 2rem  !important;
+  }
+
+  .p-x_6\:touch {
+    padding-right: 4rem  !important;
+    padding-left: 4rem  !important;
+  }
+
+  .p-t_0\:touch {
+    padding-top: 0  !important;
+  }
+
+  .p-t_1\:touch {
+    padding-top: 1px  !important;
+  }
+
+  .p-t_2\:touch {
+    padding-top: 0.25rem  !important;
+  }
+
+  .p-t_3\:touch {
+    padding-top: 0.5rem  !important;
+  }
+
+  .p-t_4\:touch {
+    padding-top: 1rem  !important;
+  }
+
+  .p-t_5\:touch {
+    padding-top: 2rem  !important;
+  }
+
+  .p-t_6\:touch {
+    padding-top: 4rem  !important;
+  }
+
+  .p-b_0\:touch {
+    padding-bottom: 0  !important;
+  }
+
+  .p-b_1\:touch {
+    padding-bottom: 1px  !important;
+  }
+
+  .p-b_2\:touch {
+    padding-bottom: 0.25rem  !important;
+  }
+
+  .p-b_3\:touch {
+    padding-bottom: 0.5rem  !important;
+  }
+
+  .p-b_4\:touch {
+    padding-bottom: 1rem  !important;
+  }
+
+  .p-b_5\:touch {
+    padding-bottom: 2rem  !important;
+  }
+
+  .p-b_6\:touch {
+    padding-bottom: 4rem  !important;
+  }
+
+  .p-l_0\:touch {
+    padding-left: 0  !important;
+  }
+
+  .p-l_1\:touch {
+    padding-left: 1px  !important;
+  }
+
+  .p-l_2\:touch {
+    padding-left: 0.25rem  !important;
+  }
+
+  .p-l_3\:touch {
+    padding-left: 0.5rem  !important;
+  }
+
+  .p-l_4\:touch {
+    padding-left: 1rem  !important;
+  }
+
+  .p-l_5\:touch {
+    padding-left: 2rem  !important;
+  }
+
+  .p-l_6\:touch {
+    padding-left: 4rem  !important;
+  }
+
+  .p-r_0\:touch {
+    padding-right: 0  !important;
+  }
+
+  .p-r_1\:touch {
+    padding-right: 1px  !important;
+  }
+
+  .p-r_2\:touch {
+    padding-right: 0.25rem  !important;
+  }
+
+  .p-r_3\:touch {
+    padding-right: 0.5rem  !important;
+  }
+
+  .p-r_4\:touch {
+    padding-right: 1rem  !important;
+  }
+
+  .p-r_5\:touch {
+    padding-right: 2rem  !important;
+  }
+
+  .p-r_6\:touch {
+    padding-right: 4rem  !important;
+  }
+}
 /*
 Position Type
 
@@ -5712,7 +5925,7 @@ Styleguide Layouts
 /*
 	Display
 
-	<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div> Alter the display of an object to create more complicated UI and Layouts. <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .block</td><td class='text_right'> display :</td><td> block </td></tr> <tr><td class='c_primary-n2'> .inline</td><td class='text_right'> display :</td><td> inline </td></tr> <tr><td class='c_primary-n2'> .inline-block</td><td class='text_right'> display :</td><td> inline-block </td></tr> <tr><td class='c_primary-n2'> .table-cell</td><td class='text_right'> display :</td><td> table-cell </td></tr> <tr><td class='c_primary-n2'> .table</td><td class='text_right'> display :</td><td> table </td></tr> <tr><td class='c_primary-n2'> .table-row</td><td class='text_right'> display :</td><td> table-row </td></tr> <tr><td class='c_primary-n2'> .flex</td><td class='text_right'> display :</td><td> flex </td></tr> <tr><td class='c_primary-n2'> .inline-flex</td><td class='text_right'> display :</td><td> inline-flex </td></tr> <tr><td class='c_primary-n2'> .grid</td><td class='text_right'> display :</td><td> grid </td></tr> <tr><td class='c_primary-n2'> .display_none</td><td class='text_right'> display :</td><td> none </td></tr> </tbody></table>  
+	<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div> Alter the display of an object to create more complicated UI and Layouts. <table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody><tr><td class='c_primary-n2'> .block</td><td class='text_right'> display :</td><td> block </td></tr> <tr><td class='c_primary-n2'> .inline</td><td class='text_right'> display :</td><td> inline </td></tr> <tr><td class='c_primary-n2'> .inline-block</td><td class='text_right'> display :</td><td> inline-block </td></tr> <tr><td class='c_primary-n2'> .table-cell</td><td class='text_right'> display :</td><td> table-cell </td></tr> <tr><td class='c_primary-n2'> .table</td><td class='text_right'> display :</td><td> table </td></tr> <tr><td class='c_primary-n2'> .table-row</td><td class='text_right'> display :</td><td> table-row </td></tr> <tr><td class='c_primary-n2'> .flex</td><td class='text_right'> display :</td><td> flex </td></tr> <tr><td class='c_primary-n2'> .inline-flex</td><td class='text_right'> display :</td><td> inline-flex </td></tr> <tr><td class='c_primary-n2'> .grid</td><td class='text_right'> display :</td><td> grid </td></tr> <tr><td class='c_primary-n2'> .display_contents</td><td class='text_right'> display :</td><td> contents </td></tr> <tr><td class='c_primary-n2'> .display_none</td><td class='text_right'> display :</td><td> none </td></tr> </tbody></table>  
 
 	Styleguide Layouts.Display
 
@@ -5751,6 +5964,10 @@ Styleguide Layouts
 
 .grid {
   display: grid;
+}
+
+.display_contents {
+  display: contents;
 }
 
 .display_none {
@@ -5794,6 +6011,10 @@ Styleguide Layouts
     display: grid;
   }
 
+  .display_contents\:md {
+    display: contents;
+  }
+
   .display_none\:md {
     display: none;
   }
@@ -5835,7 +6056,101 @@ Styleguide Layouts
     display: grid;
   }
 
+  .display_contents\:lg {
+    display: contents;
+  }
+
   .display_none\:lg {
+    display: none;
+  }
+  .block\:lg {
+    display: block;
+  }
+
+  .inline\:lg {
+    display: inline;
+  }
+
+  .inline-block\:lg {
+    display: inline-block;
+  }
+
+  .table-cell\:lg {
+    display: table-cell;
+  }
+
+  .table\:lg {
+    display: table;
+  }
+
+  .table-row\:lg {
+    display: table-row;
+  }
+
+  .flex\:lg {
+    display: flex;
+  }
+
+  .inline-flex\:lg {
+    display: inline-flex;
+  }
+
+  .grid\:lg {
+    display: grid;
+  }
+
+  .display_contents\:lg {
+    display: contents;
+  }
+
+  .display_none\:lg {
+    display: none;
+  }
+}
+@media only screen and (min-width : 1024px) {
+}
+@media (hover: none) and (pointer: coarse) {
+  .block\:touch {
+    display: block;
+  }
+
+  .inline\:touch {
+    display: inline;
+  }
+
+  .inline-block\:touch {
+    display: inline-block;
+  }
+
+  .table-cell\:touch {
+    display: table-cell;
+  }
+
+  .table\:touch {
+    display: table;
+  }
+
+  .table-row\:touch {
+    display: table-row;
+  }
+
+  .flex\:touch {
+    display: flex;
+  }
+
+  .inline-flex\:touch {
+    display: inline-flex;
+  }
+
+  .grid\:touch {
+    display: grid;
+  }
+
+  .display_contents\:touch {
+    display: contents;
+  }
+
+  .display_none\:touch {
     display: none;
   }
 }
@@ -7706,6 +8021,22 @@ Styleguide Layouts.AspectRatio
   overflow: hidden;
 }
 
+.aspect_leaderboard {
+  max-width: 728px;
+}
+
+.aspect_billboard {
+  max-width: 970px;
+}
+
+.aspect_bigbox {
+  max-width: 300px;
+}
+
+.aspect_skyscraper {
+  max-width: 160px;
+}
+
 .aspect_8x10 {
   aspect-ratio: 8 / 10;
 }
@@ -7759,6 +8090,22 @@ Styleguide Layouts.AspectRatio
 }
 
 @media only screen and (min-width : 768px) {
+  .aspect_leaderboard\:md {
+    max-width: 728px;
+  }
+
+  .aspect_billboard\:md {
+    max-width: 970px;
+  }
+
+  .aspect_bigbox\:md {
+    max-width: 300px;
+  }
+
+  .aspect_skyscraper\:md {
+    max-width: 160px;
+  }
+
   .aspect_8x10\:md {
     aspect-ratio: 8 / 10;
   }
@@ -7812,6 +8159,22 @@ Styleguide Layouts.AspectRatio
   }
 }
 @media only screen and (min-width : 1024px) {
+  .aspect_leaderboard\:lg {
+    max-width: 728px;
+  }
+
+  .aspect_billboard\:lg {
+    max-width: 970px;
+  }
+
+  .aspect_bigbox\:lg {
+    max-width: 300px;
+  }
+
+  .aspect_skyscraper\:lg {
+    max-width: 160px;
+  }
+
   .aspect_8x10\:lg {
     aspect-ratio: 8 / 10;
   }
@@ -7864,22 +8227,6 @@ Styleguide Layouts.AspectRatio
     aspect-ratio: 970 / 250;
   }
 }
-.aspect_leaderboard {
-  max-width: 728px;
-}
-
-.aspect_billboard {
-  max-width: 970px;
-}
-
-.aspect_bigbox {
-  max-width: 300px;
-}
-
-.aspect_skyscraper {
-  max-width: 160px;
-}
-
 /*
 Width 
 
@@ -15888,7 +16235,12 @@ Styleguide Interaction.User
  * @link https://github.com/ACC-Style/Arches/
  */
 /** /setup/__preheader.scss **/
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
+.icon-after:after, a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after, a.btn[href^="mailto:"]:after, a.btn[href^="tel:"]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
+a.link[href^="mailto:"]:after,
+a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -15898,31 +16250,43 @@ a.link-light[href^="tel:"]:after,
 .reading-typography a[href^=http][target=_blank]:after,
 .reading-typography a[href^=https][target=_blank]:after,
 .reading-typography a[href^="mailto:"]:after,
-.reading-typography a[href^="tel:"]:after, .icon-before:before, a.link[href$=".pdf"]:before, a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before, a.link[href$=".zip"]:before, a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before, a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before, a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".pdf"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-a.link-light[href$=".zip"]:before,
+.reading-typography a[href^="tel:"]:after, .icon-before:before, a.btn[href*=".pdf"]:before, a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before, a.btn[href*=".zip"]:before, a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before, a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before, a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".pdf"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link[href*=".zip"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".pdf"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+a.link-light[href*=".zip"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".pdf"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before,
-.reading-typography a[href$=".zip"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".pdf"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before,
+.reading-typography a[href*=".zip"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   -webkit-font-smoothing: antialiased;
   text-rendering: auto;
   display: inline-block;
@@ -22870,6 +23234,256 @@ html.is-reveal-open body {
   }
 }
 
+/*
+	Foundation
+
+	Combination of UCs and Base Components from the Framework can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to Foudations Components with the Utiltity Classes. 
+
+	Weight: 1000
+
+	Styleguide  Recipes Zurb
+
+*/
+/* Styleguide recipes.zurb */
+/* Styleguide Recipes.010 */
+/*
+	Quicklinks
+
+	small list navs used in header structures of websites.
+
+	<ul class="menu quicklinks ul_none">
+		<li class="quicklinks__item br_solid br_0 br-r_1 br_primary-1 p-x_2"><a href="#" class="quicklinks__link h:bg_primary-5 c_black font_n1 lh_1 p-x_2">First</a></li>
+		<li class="quicklinks__item br_solid br_0 br-r_1 br_primary-1 p-x_2"><a href="#" class="quicklinks__link h:bg_primary-5 c_black font_n1 lh_1 p-x_2">One</a></li>
+		<li class="quicklinks__item br_solid br_0 br-r_1 br_primary-1 p-x_2"><a href="#" class="quicklinks__link h:bg_primary-5 c_black font_n1 lh_1 p-x_2">Two</a></li>
+		<li class="quicklinks__item br_solid br_0 br-r_1 br_primary-1 p-x_2"><a href="#" class="quicklinks__link h:bg_primary-5 c_black font_n1 lh_1 p-x_2">Three</a></li>
+		<li class="quicklinks__item"><a href="#" class="quicklinks__link  h:bg_primary-5 c_black font_n1 lh_1 p-x_2">End</a></li>
+	</ul>
+
+	Styleguide   Recipes Zurb.Quicklinks
+ */
+/*
+Cards
+
+Build from the basicfoundation card utility classes can be added to make many variations on the theme.
+
+bg_primary			- textures are slightly transparent so they can be colored with background-color classess
+bg_shade		- textures are slightly transparent so they can be colored with background-color classess
+bg_highlight 		- textures are slightly transparent so they can be colored with background-color classess
+bg_warning			- textures are slightly transparent so they can be colored with background-color classess
+bg_alert			- textures are slightly transparent so they can be colored with background-color classess
+
+Markup:
+<div class="p_4 texture_light bg_shade-4">
+	<div class="card shadow_2 max-w_30">
+		<div class="card-divider font_accent: border-top-left-square c_white font_3 p_4 texture_dust {{modifier_class}}">
+			This is a header
+		</div>
+		<img src="https://picsum.photos/400/300">
+		<div class="card-section">
+			<h4>This is a card.</h4>
+			<p>It has an easy to override visual style, and is appropriately subdued.</p>
+		</div>
+	</div>
+</div>
+
+
+Styleguide Containers.Cards
+
+ */
+/*
+Page Messages
+
+Page Messages are altered cards to bring attention to the content we are trying to convey to the user
+
+primary				- This page message is used for X
+shade			- This page message is used for X
+highlight 		- This page message is used for X
+warning				- This page message is used for X
+alert					- This page message is used for X
+
+Markup:
+<div class="p_5 texture_light bg_shade-4">
+	<div class="card shadow_2 bg_{{modifier_class}}-5">
+		<div class=" font_accent: br-tl_square c_white font_3 p_4 texture_dust bg_{{modifier_class}}">
+			This is page message
+		</div>
+		<div class="card-section">
+			<div class="grid-x">
+				<div class="cell shrink p_4 font_5 c_{{modifier_class}}-n3"><i class="fas fa-check"></i></div>
+				<div class="cell auto p_4">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptate
+					consectetur ab pariatur ullam quo sit maiores corrupti voluptates neque
+					illum aperiam laudantium provident fugit, nihil labore incidunt at
+					impedit?
+				</div>
+			</div>
+		</div>
+		<div class="card-section br_0 br-t_1 br_solid br_{{modifier_class}}">
+			<a href="#" class="button br_radius float-right bg_{{modifier_class}}-n1"><i class="fas fa-times"></i>&nbsp;close</a>
+		</div>
+	</div>
+</div>
+
+Styleguide  Recipes Zurb.Page Messages
+*/
+/*
+User Card
+
+Member Cards Used in the CSTool give a great represendation on how complex the UI can be with a combination of UCs
+
+Markup:
+<div class="p_5 p-t_3 p-b_3 texture_light bg_shade-4">
+<div class="user-card shadow br_solid br_black-1 bg_white">
+   <div class="grid-x">
+      <div class="cell auto p_3">
+         <div class="member-name font_1 font_accent: lh_2 member-name p-x_3 p-y-l_4">David Y. Wilder <a class="bg_shade-4 float-right font_0 hover:bg_shade p-l_3 p-r_3 p_2"><i class="fas fa-share-alt-square"></i></a>
+         </div>
+         <div>
+            <ul class="details no-bullet p-l_3 p-r_3 m_0 font_0 grid-x grid-margin-x">
+            <li class="br_0 br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-user-slash"></i>NPI
+            </li>
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-hashtag"></i>1696062374299
+            </li>
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-at"></i>Donec@quis.org <a class="link float-right p_2"><i class="fal fa-pencil"></i></a>
+            </li>
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-map-pin"></i>Polatlı
+            </li>
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-badge-check"></i>75988 <a href="#" class="link float-right p_2"><i class="fal fa-exchange-alt"></i></a>
+            </li>
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-user-circle"></i>neque.et@neque.net <a href="#" class="link float-right p_2"><i class="fal fa-pencil"></i></a>
+            </li>
+            <li class="br-b_1 br_shade-5 br_0 br_solid p_2 cell small-12"><i class="m-l_3 m-r_3 c_shade-2 fal fa-key"></i>GRW95WZD9VY <a href="#" class="link float-right p_2"><i class="fal fa-pencil"></i></a>
+            </li></ul>
+      <div class="p_4 flex font_n1">
+         <i class="m-l_3 c_shade-2 fal fa-users-crown flex-shrink"></i>
+         <a class="link m-l_3 m-r_3 flex-auto"> <i class="fas fa-chevron-circle-right p-r_3"></i>1 linked account(s) </a>
+         <a class="link float-right m-l_3 m-r_3 flex-1">manage &nbsp; <i class="fal fa-pencil"></i></a>
+      </div>
+   </div>
+   </div>
+      <div class="cell shrink texture_light bg_shade-3 m-r_3 c_shade-1 font_n2">
+         <ul class="flag no-bullet">
+            <li class="is-active_toggle-function center member">
+               <div class="a:bg_acc a:color_white p_3"><i class="fal fa-user-md"></i>
+               </div>
+            </li>
+            <li class="is-active_toggle-function center accbadge active">
+               <div class="a:bg_success-n1 a:color_white p_3"><i class="fal fa-badge-check"></i>
+               </div>
+            </li>
+            <li class="is-active_toggle-function center iscience">
+               <div class="a:bg_hightlight a:color_white p_3"><i class="fal fa-flask"></i>
+               </div>
+            </li>
+            <li class="is-active_toggle-function center bruteforce">
+               <div class="a:bg_alert a:color_white p_3"><i class="fal fa-lock-alt"></i>
+               </div>
+            </li>
+            <li class="is-active_toggle-function center expobadge">
+               <div class="a:bg_warning-n3 a:color_white p_3"><i class="fal fa-exclamation-circle"></i>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>
+</div>
+
+Styleguide  Recipes Zurb.User Card
+*/
+/*
+	Button Group
+
+	Markup:
+	<div class="button-group">
+		<a class="button is-active primary"><i class="far icon-toggle_arrow-circle"></i> One</a>
+		<a class="button shade"><i class="far icon-toggle_arrow-circle"></i> Two</a>
+		<a class="button shade"><i class="far icon-toggle_arrow-circle"></i> Three</a>
+	</div>
+
+	Styleguide  Foundation.Navigation.Button Group
+*/
+/* 
+    Grid Button Splash
+
+    Markup:
+    <div class="grid-y lh_1 " style="width:412px;height: 732px; background-image:url('https://picsum.photos/412/732/?image=857')">
+        <div class="cell small-6 grid-x">
+            <div class="small-8 cell c_white p_5 lh_1 text-left">
+                <h1 class="font_5 font_display lh_1">Annual Scientific Session</h1>
+                <h2 class="font_1 font_bold">2018 | New Orleans</h2>
+            </div>
+            <div class="small-4 cell c_white text_center">
+                <div class="grid-y grid-frame">
+                    <div class="small-6 cell p-t_5 shaddow_n2 br_solid h:bg_black-8 br_white-1 br_1 bg_black-1 "><i class="fas m_2 fa-users-class font_4"></i>
+                    <div class="font_0 m-t_3">Conference</div></div>
+                    <div class="small-6 cell p-t_5 shaddow_n2 br_solid h:bg_black-8 br_white-1 br_1 bg_black-2"><i class="fas m_2 fa-users-crown font_4"></i>
+                    <div class="font_0 m-t_3">After Party</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="cell small-3 grid-x">
+            <div class="small-4 cell shadow_n1 br_white-1 br_1 br_solid h:bg_black-8 bg_black-2 c_white p-t_5 text_center"><i
+                    class="fas m_2 fa-calendar-alt font_4"></i>
+                <div class="font_0 m-t_3">Events</div>
+            </div>
+            <div class="small-4 cell shadow_n2 br_white-1 br_1 br_solid h:bg_black-8 bg_black-3 c_white p-t_5 text_center"><i
+                    class="fas m_2 fa-map-marked  font_4"></i>
+                <div class="font_0 m-t_3">Maps</div>
+            </div>
+            <div class="small-4 cell shadow_n3 br_white-1 br_1 br_solid h:bg_black-8 bg_black-4 c_white p-t_5 text_center"><i
+                    class="fas m_2 fa-cogs font_4"></i>
+                <div class="font_0 m-t_3">Options</div>
+            </div>
+        </div>
+        <div class="cell small-3 grid-x">
+            <div class="small-4 cell shadow_n2 br_white-1 br_1 br_solid h:bg_black-8 bg_black-5 c_white p-t_5 text_center"><i
+                    class="fas m_2 fa-alarm-clock font_4"></i>
+                <div class="font_0 m-t_3">Upcoming</div>
+            </div>
+            <div class="small-4 cell shadow_n3 br_white-1 br_1 br_solid h:bg_black-8 bg_black-4 c_white p-t_5 text_center"><i
+                    class="fas m_2 fa-badge-check font_4"></i>
+                <div class="font_0 m-t_3">Claim Credits</div>
+            </div>
+            <div class="small-4 cell shadow_n3 br_white-1 br_1 br_solid h:bg_black-8 bg_black-6 c_white p-t_5 text_center"><i
+                    class="fas m_2 fa-chess-rook font_4"></i>
+                <div class="font_0 m-t_3">Find a Room</div>
+            </div>
+        </div>
+    </div>  
+
+    Styleguide  Foundation.Grid Buttons
+    */
+/*
+    RECIPE: Accordians
+
+    Accordions are elements that help you organize and navigate multiple documents in a single container. They can be used for switching between items in the container.
+
+    Markup: 
+    <ul class="accordion" data-accordion>
+        <li class="accordion-item is-active" data-accordion-item>
+            <!-- Accordion tab title -->
+            <a href="#" class="accordion-title font_1 font_accent: hover:bg_primary-4"><i class="fas icon-toggle_plus-minus fa-fw"></i> Accordion 1</a>
+            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+            <div class="accordion-content" data-tab-content>
+                <p>Panel 1. Lorem ipsum dolor</p>
+                <a href="#">Nowhere to Go</a>
+            </div>
+        </li>
+        <li class="accordion-item" data-accordion-item>
+            <!-- Accordion tab title -->
+            <a href="#"class="accordion-title  font_1 font_accent: hover:bg_primary-4"><i class="fas icon-toggle_plus-minus fa-fw"></i>Accordion 2</a>
+            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+            <div class="accordion-content" data-tab-content>
+                <p>Panel 1. Lorem ipsum dolor</p>
+                <a href="#">Nowhere to Go</a>
+            </div>
+        </li>
+    </ul>
+
+    Styleguide  Recipes Zurb.Accordians
+
+*/
 body {
   font-size: 16px;
   font-size: 1rem;
@@ -23440,38 +24054,56 @@ Markup:
 
  Styleguide Recipes.InteractiveExtras.Links
  */
-.icon-before:before, a.link[href$=".pdf"]:before, a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before, a.link[href$=".zip"]:before, a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before, a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before, a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".pdf"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-a.link-light[href$=".zip"]:before,
+.icon-before:before, a.btn[href*=".pdf"]:before, a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before, a.btn[href*=".zip"]:before, a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before, a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before, a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".pdf"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link[href*=".zip"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".pdf"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+a.link-light[href*=".zip"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".pdf"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before,
-.reading-typography a[href$=".zip"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".pdf"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before,
+.reading-typography a[href*=".zip"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   width: 1.28571429em;
   margin-right: 4px;
   margin-right: 0.25rem;
   text-align: center;
+  text-indent: 0;
 }
 
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
+.icon-after:after, a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after, a.btn[href^="mailto:"]:after, a.btn[href^="tel:"]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
+a.link[href^="mailto:"]:after,
+a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -23486,6 +24118,7 @@ a.link-light[href^="tel:"]:after,
   margin-left: 4px;
   margin-left: 0.25rem;
   text-align: center;
+  text-indent: 0;
 }
 
 .link, .reading-typography a {
@@ -23502,54 +24135,70 @@ a.link-light[href^="tel:"]:after,
   color: #92f0dc;
 }
 
+a.btn:hover,
 a.link:hover,
 a.link-light:hover,
 .reading-typography a:hover {
   text-decoration: underline;
 }
-a.link[href$=".pdf"]:before,
-a.link-light[href$=".pdf"]:before,
-.reading-typography a[href$=".pdf"]:before {
+a.btn[href*=".pdf"]:before,
+a.link[href*=".pdf"]:before,
+a.link-light[href*=".pdf"]:before,
+.reading-typography a[href*=".pdf"]:before {
   content: "\f1c1";
 }
-a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before {
+a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before {
   content: "\f1c2";
 }
-a.link[href$=".zip"]:before,
-a.link-light[href$=".zip"]:before,
-.reading-typography a[href$=".zip"]:before {
+a.btn[href*=".zip"]:before,
+a.link[href*=".zip"]:before,
+a.link-light[href*=".zip"]:before,
+.reading-typography a[href*=".zip"]:before {
   content: "\f1c6";
 }
-a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before,
+a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before {
   content: "\f685";
 }
-a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before {
+a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before {
   content: "\f0ce";
 }
-a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   content: "\f03d";
 }
-a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after,
+a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -23558,16 +24207,19 @@ a.link-light[href^=https][target=_blank]:after,
 .reading-typography a[href^=https][target=_blank]:after {
   content: "\f14c";
 }
+a.btn[href^="mailto:"]:after,
 a.link[href^="mailto:"]:after,
 a.link-light[href^="mailto:"]:after,
 .reading-typography a[href^="mailto:"]:after {
   content: "\f0e0";
 }
+a.btn[href^="tel:"]:after,
 a.link[href^="tel:"]:after,
 a.link-light[href^="tel:"]:after,
 .reading-typography a[href^="tel:"]:after {
   content: "\f095";
 }
+a.btn[href^="fax:"]:after,
 a.link[href^="fax:"]:after,
 a.link-light[href^="fax:"]:after,
 .reading-typography a[href^="fax:"]:after {
@@ -23657,7 +24309,7 @@ Styleguide Recipes.InteractiveExtras.ToggleIcons
   content: "\f0c9";
 }
 .is-active .icon-toggle_bars-times:before, .icon-toggle_bars-times:before.show, .show > .icon-toggle_bars-times:before, .is-active > .icon-toggle_bars-times:before {
-  content: "\f2d3";
+  content: "\f00d";
 }
 
 .icon-toggle_plus-minus:before {

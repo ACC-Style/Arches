@@ -106,11 +106,29 @@ $line-height_1: get-css-size(line-height, 1);
 $line-height_2: get-css-size(line-height, 2);
 $line-height_3: get-css-size(line-height, 3);
 $line-height_4: get-css-size(line-height, 4);
-$line-height_5: get-css-size(line-height, 5);/**  Zurb Foundation Framework Setup Files. ***************************************/
+$line-height_5: get-css-size(line-height, 5);
+/**  Zurb Foundation Framework Setup Files. ***************************************/
 @import '../../node_modules/foundation-sites/scss/util/util';
 @import 'setup/config/__config.zurb';
 @import '../../node_modules/foundation-sites/scss/foundation.scss';
 @include foundation-everything();
+/*
+	Foundation
+
+	Combination of UCs and Base Components from the Framework can make an infinate amount of alterations to designs and layouts. Bellow are some alteratoins to Foudations Components with the Utiltity Classes. 
+
+	Weight: 1000
+
+	Styleguide  Recipes Zurb
+
+*/
+/* Styleguide recipes.zurb */
+/* Styleguide Recipes.010 */
+@import "recipes/zurb/zurb.quicklinks";
+@import "recipes/zurb/zurb.cards";
+@import "recipes/zurb/zurb.button_group";
+@import "recipes/zurb/zurb.grid_button_splash";
+@import "recipes/zurb/zurb.accordians";
 @import "recipes/mobile/_mobile._footer";
 
 // ACC Design Alterations
