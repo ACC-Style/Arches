@@ -92,6 +92,95 @@ html {
 
 /**  Textures  **/
 /**  Logos  **/
+/*
+
+Calendar Block
+
+Calendars show the range of dates from start to end of the live moments of the date. It doesn't include the extended dates of on demand.
+
+Markup:
+<div class="aspect_1x1 flex_none" style="width: clamp(75px, 10vw, 125px);">
+	<div class="cal-date text_center font_3">
+		<a class="bg_primary block c_white flex_column flex justify_stretch h:bg_pimary-n2 h:undecorated" href="">
+			<span class="block flex_none font-size_down p-y_1">Apr</span>
+			<span class="block br-b_2 br-t_2 br_solid flex_auto font-size_up-1 font_xbold grid items_center p-x_4 text_center"><span class="nowrap">22 -23
+			</span></span>
+			<span class="block flex_none font-size_down p-y_1">2022</span>
+		</a>
+	</div>
+</div>
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Sub.Coveo.Calendar
+
+*/
+/*
+
+Image Thumbnails
+
+images thumbnails are used to display the images associated with the content. the aspect of the images are 1:1.
+
+Markup:
+<div class="aspect_1x1 flex_none" style="width: clamp(75px, 10vw, 125px);">
+	<img src="https://picsum.photos/110/110" alt="" class="w_100">
+</div>
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Sub.Coveo.Thumbnail
+
+*/
+/*
+
+Credits
+
+Credits are used to display the value of the content and what type of certification it offers.
+
+Markup:
+<div class="credits">
+	<ul class="ul_none flex flex_wrap font_n2 font_n1:md font_n1:print self_end">
+		<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+			<div class="inline-block br_1 br_radius c_white br_MOC-n1 bg_MOC br_solid">
+				<div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
+					<span class="flex_auto">ABIM-MOC</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
+				</div>
+			</div>
+		</li>
+		<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+			<div class="inline-block br_1 br_radius c_white br_CME-n1 bg_CME br_solid">
+				<div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
+					<span class="flex_auto">CME</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">2</span>
+				</div>
+			</div>
+		</li>
+		<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+			<div class="inline-block br_1 br_radius c_white br_COP-n1 bg_COP br_solid">
+				<div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
+					<span class="flex_auto">COP</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">3</span>
+				</div>
+			</div>
+		</li>
+		<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+			<div class="inline-block br_1 br_radius c_white br_ECME-n1 bg_ECME br_solid">
+				<div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
+					<span class="flex_auto">ECME</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+MarkupWrapperClasses: 
+
+Weight:0
+
+Styleguide Sub.Coveo.Credits
+*/
 /* For things that use standard Arches and mark up and nothing crazy  ~~PURE~~ */
 /*
 
@@ -111,57 +200,17 @@ Arches Coveo Result: Calendar
 Markup:
 <article class="br_radius br_1 br_black-2 bg_black_-05 br_solid p_4 relative m-b_4 font_ui">
     <div class="flex flex_row:md flex_column gap-x_4">
-        <div class="flex_auto w_100 max-w_5">
-            <div class="cal-date text_center font_3">
-                <a class="bg_primary block c_white flex_column flex justify_stretch h:bg_pimary-n2 h:undecorated" href="">
-                    <span class="block flex_none font-size_down p-y_1">Apr</span>
-                    <span class="block br-b_2 br-t_2 br_solid flex_auto font-size_up-2 font_xbold grid items_center p-x_4 text_center"><span>22
-                    </span></span>
-                    <span class="block flex_none font-size_down p-y_1">2022</span>
-                </a>
-            </div>
-        </div>
+        {{> Sub.Coveo.Calendar }}
         <div class="flex_auto m-r_4:md">
             <span class="journal-title c_accent-2 font_bold uppercase wrap block:md font_n1">Live Meetings</span>
             <h2 class="article-title c_primary-n2 cursor_pointer font_1 font_3:md font_display font_medium  h:underline lh_1 m-y_2">ACC Anywhere is a comprehensive digital library of more than 220 sessions from ACC.22. Purchase today and start expanding your knowledge of the field!</h2>
             <div class="meta m-t_2:md m-l_3 m-l_0:md m-b_3 m-b_0:md font_bold">
                 <span class="c_black-7 m-r_3">April 22, 2022 - March 01, 2023</span>
             </div>
-             <div class="meta m-t_2:md m-l_3 m-l_0:md m-b_3 m-b_0:md font_bold">
+            <div class="font-size_down font_bold m-b_0:md m-b_3 m-l_0:md m-l_3 meta">
                 <span class="c_black-6 font_italic m-r_3"><strong class="p-r_3">On Demand Till:</strong>June 11, 2022</span>
-            </div>      
-            <div class="credits">
-                <ul class="ul_none flex flex_wrap font_n2 font_n1:md font_n1:print self_end">
-                    <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-                        <div class="inline-block br_1 br_radius c_white br_MOC-n1 bg_MOC br_solid">
-                            <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-                                <span class="flex_auto">ABIM-MOC</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-                        <div class="inline-block br_1 br_radius c_white br_CME-n1 bg_CME br_solid">
-                            <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-                                <span class="flex_auto">CME</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">2</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-                        <div class="inline-block br_1 br_radius c_white br_COP-n1 bg_COP br_solid">
-                            <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-                                <span class="flex_auto">COP</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">3</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-                        <div class="inline-block br_1 br_radius c_white br_ECME-n1 bg_ECME br_solid">
-                            <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-                                <span class="flex_auto">ECME</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            </div>  
+            {{> Sub.Coveo.Credits }}
         </div>
     </div>
     <div class="flex flex_row:md flex_column gap-x_4">
@@ -184,6 +233,11 @@ Markup:
     </div>
 </article>
 
+SubComponents:
+Sub.Coveo.Calendar - Calendar
+Sub.Coveo.Credits - Credits
+
+
 Weight: 0
 
 Styleguide Coveo.Arches.Calendar
@@ -196,9 +250,7 @@ Arches Coveo Result: Simple
 Markup:
 <article class="br_radius br_1 br_black-2 bg_black_-05 br_solid p_4 relative m-b_4 font_ui">
     <div class="flex flex_row:md flex_column gap-x_4">
-        <div class="flex_row flex_column:md">
-            <img src="https://picsum.photos/110/110" alt="" class="cursor_pointer" style="width: clamp(75px, 10vw, 125px); height: clamp(75px, 10vw, 125px);">
-        </div>
+        {{> Sub.Coveo.Thumbnail }}
         <div class="flex_auto m-r_4:md">
             <span class="journal-title c_accent-2 font_bold uppercase wrap block:md font_n1">Cardiovascular Team Section</span>
             <h2 class="article-title c_primary-n2 cursor_pointer font_1 font_3:md font_display font_medium  h:underline lh_1 m-y_2">Long-Term Cardiovascular Outcomes After Bariatric Surgery in the Medicare Population | Journal of the American College of Cardiology</h2>
@@ -278,9 +330,7 @@ Arches Coveo Result: Images
 Markup:
 <article class="br_radius br_1 br_black-2 bg_black_-05 br_solid p_4 relative m-b_4 font_ui">
     <div class="flex flex_row:md flex_column gap-x_4">
-        <div class="flex_row flex_column:md">
-            <img src="https://picsum.photos/110/110" alt="" class="cursor_pointer" style="width: clamp(75px, 10vw, 125px); height: clamp(75px, 10vw, 125px);">
-        </div>
+        {{> Sub.Coveo.Thumbnail }}
         <div class="flex_auto m-r_4:md">
             <span class="journal-title c_accent-2 font_bold uppercase wrap block:md font_n1">Slides</span>
             <h2 class="article-title c_primary-n2 cursor_pointer font_1 font_3:md font_display font_medium  h:underline lh_1 m-y_2">Slide Set | 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure</h2>
@@ -308,59 +358,18 @@ Markup:
         <div class="flex flex_row justify_end c_white"><span class="flex_shrink p-y_2 p-x_3 br_1 br_solid br_white-7 bg_acc-1"><span class="p-x_2 m-t_1 m-b_2">editor’s pick</span> <i class="fas fa-fw m-t_1 m-b_2 fa-thumbs-up"></i></span></div>
     </div>
     <div class="flex flex_row:md flex_column gap-x_4">
-        <div class="flex_row flex_column:md">
-            <img src="https://picsum.photos/110/110" alt="" class="cursor_pointer" style="width: clamp(75px, 10vw, 125px); height: clamp(75px, 10vw, 125px);">
-            <div class="cal-date text_center display_none">
-                <a class="aspect_1x1 bg_primary block c_white flex_column flex justify_stretch h:bg_pimary-n2 h:undecorated" href="">
-                    <span class="block flex_none font-size_down p-y_1">Apr</span>
-                    <span class="block br-b_2 br-t_2 br_solid flex_auto font-size_up-2 font_xbold grid items_center p-x_4 text_center"><span>16
-                    </span></span>
-                    <span class="block flex_none font-size_down p-y_1">2022</span>
-                </a>
-            </div>
-        </div>
+        {{> Sub.Coveo.Thumbnail }}
         <div class="flex_auto m-r_4:md">
             <span class="journal-title c_accent-2 font_bold uppercase wrap block:md font_n1">Cardiovascular Team Section</span>
             <h2 class="article-title c_primary-n2 cursor_pointer font_1 font_3:md font_display font_medium  h:underline lh_1 m-y_2">Long-Term Cardiovascular Outcomes After Bariatric Surgery in the Medicare Population | Journal of the American College of Cardiology</h2>
             <div class="meta m-t_2:md m-l_3 m-l_0:md m-b_3 m-b_0:md font_bold">
                 <span class="c_black-7 m-r_3">Apr 11, 2022</span>
-                <a href="/">Julianne Fallon, PharmD</a><br>
+                <a href="/">Julianne Fallon, PharmD</a>
             </div>
-            <div class="meta m-t_2:md m-l_3 m-l_0:md m-b_3 m-b_0:md font_bold font-size_down">
-                <span class="c_black-6 font_italic m-r_3"><strong class='p-r_3'>On Demand Till:</strong>June 11, 2022</span>
+            <div class="font-size_down font_bold m-b_0:md m-b_3 m-l_0:md m-l_3 meta">
+                <span class="c_black-6 font_italic m-r_3"><strong class="p-r_3">On Demand Till:</strong>June 11, 2022</span>
             </div>
-            <div class="credits">
-                <ul class="ul_none flex flex_wrap font_n2 font_n1:md font_n1:print self_end">
-                    <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-                        <div class="inline-block br_1 br_radius c_white br_MOC-n1 bg_MOC br_solid">
-                            <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-                                <span class="flex_auto">ABIM-MOC</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-                        <div class="inline-block br_1 br_radius c_white br_CME-n1 bg_CME br_solid">
-                            <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-                                <span class="flex_auto">CME</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">2</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-                        <div class="inline-block br_1 br_radius c_white br_COP-n1 bg_COP br_solid">
-                            <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-                                <span class="flex_auto">COP</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">3</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-                        <div class="inline-block br_1 br_radius c_white br_ECME-n1 bg_ECME br_solid">
-                            <div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-                                <span class="flex_auto">ECME</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            {{> Sub.Coveo.Credits }}
         </div>
     </div>
     <div class="flex flex_row:md flex_column gap-x_4">
@@ -472,6 +481,10 @@ Markup:
 </article>
 
 Weight: 100
+
+SubComponent:
+Sub.Coveo.Credits - Credits
+Sub.Coveo.Thumbnail - Thumbnail
 
 NOTE: Merge all the things.
 
