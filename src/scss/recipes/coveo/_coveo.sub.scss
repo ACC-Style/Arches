@@ -5,11 +5,11 @@ Calendar Block
 Calendars show the range of dates from start to end of the live moments of the date. It doesn't include the extended dates of on demand.
  
 Markup:
-<div class="aspect_1x1 flex_none" style="width: clamp(75px, 10vw, 125px);">
+<div class="flex_none" style="width: clamp(75px, 10vw, 125px);">
 	<div class="cal-date text_center font_3">
 		<a class="bg_primary block c_white flex_column flex justify_stretch h:bg_pimary-n2 h:undecorated" href="">
 			<span class="block flex_none font-size_down p-y_1">Apr</span>
-			<span class="block br-b_2 br-t_2 br_solid flex_auto font-size_up-1 font_xbold grid items_center p-x_4 text_center"><span class="nowrap">22 -23
+			<span class="block br-b_2 br-t_2 br_solid flex_auto font-size_up-1 font_xbold grid items_center p-x_4 text_center aspect_16x9 "><span class="nowrap">22 - 23
 			</span></span>
 			<span class="block flex_none font-size_down p-y_1">2022</span>
 		</a>
@@ -45,6 +45,34 @@ Styleguide Sub.Coveo.Thumbnail
 
 /*
 
+Credit Chiclets
+
+This pattern is exactly the same with the needed markup class of the credit color. 
+
+CNE 	- Nursing Education
+CME 	- Medical Education
+ 
+Markup:
+<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+	<div class="inline-block br_1 br_radius c_white br_{{ modifier_class }}-n1 bg_{{ modifier_class }} br_solid">
+		<div class="flex flex_nowrap p-y_2 p-x_3 lh_2">
+			<span class="flex_auto">{{ modifier_class }}</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
+		</div>
+	</div>
+</li>
+
+NOTE:
+This pattern relies on the the inclusion of the credit color codes style sheet.
+
+MarkupWrapperClasses: 
+ 
+Weight:0
+ 
+Styleguide Sub.Coveo.SingleCredit
+*/
+
+/*
+
 Credits
 
 Credits are used to display the value of the content and what type of certification it offers.
@@ -52,34 +80,9 @@ Credits are used to display the value of the content and what type of certificat
 Markup:
 <div class="credits">
 	<ul class="ul_none flex flex_wrap font_n2 font_n1:md font_n1:print self_end">
-		<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-			<div class="inline-block br_1 br_radius c_white br_MOC-n1 bg_MOC br_solid">
-				<div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-					<span class="flex_auto">ABIM-MOC</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
-				</div>
-			</div>
-		</li>
-		<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-			<div class="inline-block br_1 br_radius c_white br_CME-n1 bg_CME br_solid">
-				<div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-					<span class="flex_auto">CME</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">2</span>
-				</div>
-			</div>
-		</li>
-		<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-			<div class="inline-block br_1 br_radius c_white br_COP-n1 bg_COP br_solid">
-				<div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-					<span class="flex_auto">COP</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">3</span>
-				</div>
-			</div>
-		</li>
-		<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
-			<div class="inline-block br_1 br_radius c_white br_ECME-n1 bg_ECME br_solid">
-				<div class="flex flex_nowrap p-y_2 p-x_2 lh_2">
-					<span class="flex_auto">ECME</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
-				</div>
-			</div>
-		</li>
+		{{> Sub.Coveo.SingleCredit modifier_class="CNE" }}
+		{{> Sub.Coveo.SingleCredit modifier_class="CME" }}
+		{{> Sub.Coveo.SingleCredit modifier_class="COP" }}
 	</ul>
 </div>
 
