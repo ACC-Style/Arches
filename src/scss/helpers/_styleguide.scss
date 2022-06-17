@@ -11,10 +11,10 @@
 @function modifierClassTable($CSS-property,  $responsive: false) {
 	$table: "";
 	@if($responsive){
-		$table: 	#{$table} + "<table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th>responsive modifiers</th><th class='text_right'>css property</th><th>value</th></thead><tbody>";
+		$table: 	#{$table} + "<table class='clear_both'><thead class='font_bold uppercase'><th>class</th><th>responsive modifiers</th><th class='text_right'>css property</th><th>value</th></thead><tbody>";
 	}
 	@else{
-		$table: #{$table} + "<table class='clear_both'><thead class='font_bold uppercase'><th>classs</th><th class='text_right'>css property</th><th>value</th></thead><tbody>";
+		$table: #{$table} + "<table class='clear_both'><thead class='font_bold uppercase'><th>class</th><th class='text_right'>css property</th><th>value</th></thead><tbody>";
 	}
 	@each $unit, $value in get-all-css-sizes($CSS-property){ 
 		@if($responsive){

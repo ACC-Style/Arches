@@ -5,11 +5,51 @@
 /*
 	Display
 
-	<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div> Alter the display of an object to create more complicated UI and Layouts. #{modifierClassTable(display)}  
+	<div class="p-b_3"><span class="bg_accent br_radius c_white inline-block font_n1 p-7_3 p-x_5 sg">Is Responsive: breakpoint modifiers</span></div> Alter the display of an object to create more complicated UI and Layouts. #{modifierClassTable(display , true)}  
 
 	Styleguide Layouts.Display
 
  */
+
+/*
+	Display Nothing on Empty
+
+	This utility class is used to hide an element when it contains no content. This is super useful for creating a space that needs to be decorated but also doesn't need to be shown when empty. 
+
+	Markup:
+	<h2> <strong class="font_bold c_primary-n2 uppercase">Does Not Have</strong> class display_none:empty and has <strong class="font_bold c_primary-n2 uppercase">No Content</strong></h2>
+	<div class="p-b_3 br_solid br_primary br_1"></div>
+	<h2> <strong class="font_bold c_primary-n2 uppercase">Has</strong> class display_none:empty and has <strong class="font_bold c_primary-n2 uppercase">No Content</strong></h2>
+	<div class="p-b_3 br_solid br_primary br_1 display_none:empty"></div>
+	<h2> <strong class="font_bold c_primary-n2 uppercase">Has</strong> class display_none:empty has <strong class="font_bold c_primary-n2 uppercase">Content</strong></h2>
+	<div class="p-b_3 br_solid br_primary br_1 display_none:empty">any content including space will show the element</div>
+
+	 MarkupWrapperClasses: w_100
+
+	  Weight:10
+
+	Styleguide Layouts.Display.Empty
+
+ */
+ /*
+ 
+ Display For Touch Devices
+ 
+ Display has extra breakpoints `:touch` that can be used to create layouts that are more friendly for touch screen inputs. Touch devices are often smaller than desktop devices and input method is a finger that can't hover.  This utility class  can be used to create a layout that is more friendly for touch devices. Touch layouts are often needed to uncover UI that only appears on Hover.
+  
+ Markup:
+ <div class="p_3 font_bold">This element shows for both <strong class="font_bold c_primary-n2 uppercase"><i class="fas fa-desktop"></i> desktop</strong> and <strong class="font_bold c_primary-n2 uppercase"><i class="fas fa-hand-pointer"></i>Touch </strong> devices</div>
+ <div class="p_3 font_bold display_none:touch">This element shows only for <strong class="font_bold c_primary-n2 uppercase"><i class="fas fa-desktop"></i> desktop</strong> devices</div>
+ <div class="p_3 font_bold block:touch display_none">This element shows only for <strong class="font_bold c_primary-n2 uppercase"><i class="fas fa-hand-pointer"></i>Touch </strong> devices</div> 
+ 
+ MarkupWrapperClasses: w_100
+  
+ Weight:0
+  
+ Styleguide Layouts.Display.ExtraBreakpoints
+ 
+ */
+
 
 @include loop-style(display);
 
@@ -26,6 +66,9 @@
 
 @media #{$input_touch} {
 	@include loop-style(display, $bp-label_touch);
+}
+.display_none#{$bp-label_empty}:empty {
+	display: none;
 }
 
 /*
