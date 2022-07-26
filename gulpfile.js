@@ -113,9 +113,6 @@ var buildbrand = function (base, brand, framework) {
 		case "boot":
 			construct.pipe(headerFromFile("/setup/__setup.boot.scss"));
 			break;
-		case "coveo":
-			construct.pipe(headerFromFile("/setup/__setup.coveo.scss"));
-			break;
 		default:
 			construct.pipe(headerFromFile("/setup/__setup.none.scss"));
 			break;
