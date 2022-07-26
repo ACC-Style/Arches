@@ -1,8 +1,10 @@
+
 /**
  * arches - Global style system focused on utility classes
- * @version v1.02.0
+ * @version v1.52.0
  * @link https://github.com/ACC-Style/Arches/
  */
+
 
 /** /setup/__preheader.scss **/ 
 @use "sass:math";
@@ -34,7 +36,9 @@ $theme-palette: ();
  $active-class-name: 'active';
 
 /** Utility Class Built on top of Bootstrap ^4.4.1 **/ 
-/** Built With Base Branding 1.02.0 **//**  ACC Brands    *********************************/
+
+ /** Built With Base Branding 1.52.0 **/
+ /**  ACC Brands    *********************************/
 $teal: #198dae;
 $green-blue: #16a385;
 $dark-grey: #676a72;
@@ -238,7 +242,8 @@ $line-height_1: get-css-size(line-height, 1);
 $line-height_2: get-css-size(line-height, 2);
 $line-height_3: get-css-size(line-height, 3);
 $line-height_4: get-css-size(line-height, 4);
-$line-height_5: get-css-size(line-height, 5);// /*Bootstrap Framework Setup Files.*/
+$line-height_5: get-css-size(line-height, 5);
+// /*Bootstrap Framework Setup Files.*/
 
 // /*!
 //  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -339,7 +344,13 @@ $line-height_5: get-css-size(line-height, 5);// /*Bootstrap Framework Setup File
 
 // Utilities
 // @import "../../node_modules/bootstrap/scss/utilities/api";
-// scss-docs-end import-stack@import 'recipes/journal/_journal._footer';
+// scss-docs-end import-stack@import "recipes/boot/_boot.basic_nav";
+@import "recipes/boot/_boot.tabs";
+@import "recipes/boot/_boot.ui.tabs";
+@import "recipes/boot/_boot.sidebar_nav";
+@import "recipes/boot/_boot.toggle_icon";
+@import "recipes/boot/_boot._accordion";
+@import "recipes/boot/_boot.buttons";@import 'recipes/journal/_journal._footer';
 // ACC Design Alterations
 @import "base/base";
 @import "components/logo";

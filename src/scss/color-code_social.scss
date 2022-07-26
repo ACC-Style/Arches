@@ -1,9 +1,10 @@
 /*** COLOR CODES 3 **/
 /**
  * arches - Global style system focused on utility classes
- * @version v1.02.0
+ * @version v1.6.0
  * @link https://github.com/ACC-Style/Arches/
  */
+
 
 /** /setup/__preheader.scss **/ 
 @use "sass:math";
@@ -34,8 +35,8 @@ $theme-palette: ();
 /**Set Active Class**/ 
  $active-class-name: 'active';
 
-/** No Framework **/ 
-/** Built With Base Branding 1.02.0 **//**  Default Brands    *********************************/
+/** No Framework or is a Style Sheet that Should be used as an augmenting stylesheet **/ 
+/** Built With Base Branding 1.6.0 **//**  Default Brands    *********************************/
 /**  Colors  **/
 
 @import 'setup/config/colors';
@@ -106,7 +107,8 @@ $line-height_1: get-css-size(line-height, 1);
 $line-height_2: get-css-size(line-height, 2);
 $line-height_3: get-css-size(line-height, 3);
 $line-height_4: get-css-size(line-height, 4);
-$line-height_5: get-css-size(line-height, 5);/** Base UC File **/@each $color-name, $color in $SocialColors {
+$line-height_5: get-css-size(line-height, 5);
+/** Base UC File **/@each $color-name, $color in $SocialColors {
     .c_#{$color-name} {
         color: $color !important;
     }
@@ -117,7 +119,4 @@ $line-height_5: get-css-size(line-height, 5);/** Base UC File **/@each $color-na
     .#{$color-name} {
         background-color: $color !important;
     }
-}
-.updateDecoration{
-    background-color: get-themecolor(highlight,3) !important;
 }

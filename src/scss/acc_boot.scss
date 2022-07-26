@@ -1,8 +1,9 @@
 /**
  * arches - Global style system focused on utility classes
- * @version v1.02.0
+ * @version v1.6.0
  * @link https://github.com/ACC-Style/Arches/
  */
+
 
 /** /setup/__preheader.scss **/ 
 @use "sass:math";
@@ -34,7 +35,9 @@ $theme-palette: ();
  $active-class-name: 'active';
 
 /** Utility Class Built on top of Bootstrap ^4.4.1 **/ 
-/** Built With Base Branding 1.02.0 **//**  ACC Brands    *********************************/
+
+ /** Built With Base Branding 1.6.0 **/
+ /**  ACC Brands    *********************************/
 
 $teal: #198dae;
 $green-blue: #16a385;
@@ -318,6 +321,9 @@ $line-height_5: get-css-size(line-height, 5);
 @import "recipes/acc/_acc.footer";
 @import "recipes/acc/_acc.page-hub";
 @import "recipes/acc/_acc.price-table";
+.updateDecoration{
+    background-color: get-themecolor(highlight,3) !important;
+}
 
 // ACC Design Alterations
 @import "base/base";

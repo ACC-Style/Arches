@@ -126,17 +126,60 @@
       });
     }
   })();
+// subComponents.
+(function () {
+  console.log($('.kss-section__section__subComponents'));
+  $('.kss-section__section__subComponents').each(function (item) {
+    var nodeHTML = $(this).find('.kss-section__section__subComponent').parent().find(".list")[0];
+    // remove nodeHTML from the dom.
+    
+    console.log(nodeHTML);
+    var parameters = $(this).find('.kss-section__section__subComponent').text().trim().replace(/; +/g, ';');
+    $(this).find('.kss-section__section__subComponent').remove();
+    if (parameters) {
+      // split parameters into array of string on line break.
+      var parametersArray = parameters.split('\n');
+      console.log(parametersArray);
+      // loop through each parameter.
+      var output = [];
+      parametersArray.forEach(function (parameter) {
+        var regex = /^(\S+)\s*\s*(?:\s*-\s*(.*))?$/gm;
+        // regex group all text split by '.' by new line
 
-  // subComponents.
+        var test;
+        var obj;
+        if ((test = regex.exec(parameter)) !== null) {
+          obj = {};
+          obj.line = test.slice(1);
+          obj.name = test[2];
+          obj.path = test[1];
+          output.push(obj);
+        }
+
+      });
+      console.log(output);
+      output.forEach(function (o, index, array) {
+        // var subCompHTML = '<li><a href="'+ o.path +'"class="kss-subComponent__name lh_1 font_0 p-b_3">' + o.name + '</a></li>';
+        // append subCompHTML the html. 
+        var li = document.createElement("li");
+        var link = o.path.split('.').reduce(function (acc, curr) { return acc+"-"+curr; }, '');
+        li.innerHTML = '<a href="item' + link.toLowerCase() + '.html" class="kss-subComponent__name lh_1 font_0 p-b_3">' + o.name + '</a>';
+        nodeHTML.append(li);
+      });
+    }
+    });
+
+})();
+  // classLists.
   (function () {
-    console.log($('.kss-section__section__subComponents'));
-    $('.kss-section__section__subComponents').each(function (item) {
-      var nodeHTML = $(this).find('.kss-section__section__subComponent').parent().find(".list")[0];
+    console.log($('.kss-section__section__classLists'));
+    $('.kss-section__section__classLists').each(function (item) {
+      var nodeHTML = $(this).find('.kss-section__section__classList').parent().find(".list")[0];
       // remove nodeHTML from the dom.
       
       console.log(nodeHTML);
-      var parameters = $(this).find('.kss-section__section__subComponent').text().trim().replace(/; +/g, ';');
-      $(this).find('.kss-section__section__subComponent').remove();
+      var parameters = $(this).find('.kss-section__section__classList').text().trim().replace(/; +/g, ';');
+      $(this).find('.kss-section__section__classList').remove();
       if (parameters) {
         // split parameters into array of string on line break.
         var parametersArray = parameters.split('\n');
@@ -160,11 +203,11 @@
         });
         console.log(output);
         output.forEach(function (o, index, array) {
-          // var subCompHTML = '<li><a href="'+ o.path +'"class="kss-subComponent__name lh_1 font_0 p-b_3">' + o.name + '</a></li>';
+          // var subCompHTML = '<li><a href="'+ o.path +'"class="kss-classList__name lh_1 font_0 p-b_3">' + o.name + '</a></li>';
           // append subCompHTML the html. 
           var li = document.createElement("li");
           var link = o.path.split('.').reduce(function (acc, curr) { return acc+"-"+curr; }, '');
-          li.innerHTML = '<a href="item' + link.toLowerCase() + '.html" class="kss-subComponent__name lh_1 font_0 p-b_3">' + o.name + '</a>';
+          li.innerHTML = '<a href="item' + link.toLowerCase() + '.html" class="kss-classList__name lh_1 font_0 p-b_3">' + o.name + '</a>';
           nodeHTML.append(li);
         });
       }

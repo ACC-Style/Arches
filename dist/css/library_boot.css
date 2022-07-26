@@ -1,11 +1,16 @@
 @charset "UTF-8";
 /**
  * arches - Global style system focused on utility classes
- * @version v1.02.0
+ * @version v1.52.0
  * @link https://github.com/ACC-Style/Arches/
  */
 /** /setup/__preheader.scss **/
-.carousel-alt.chevron-on .carousel-indicators li.active:before, .icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
+.carousel-alt.chevron-on .carousel-indicators li.active:before, .icon-after:after, a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after, a.btn[href^="mailto:"]:after, a.btn[href^="tel:"]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
+a.link[href^="mailto:"]:after,
+a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -15,31 +20,43 @@ a.link-light[href^="tel:"]:after,
 .reading-typography a[href^=http][target=_blank]:after,
 .reading-typography a[href^=https][target=_blank]:after,
 .reading-typography a[href^="mailto:"]:after,
-.reading-typography a[href^="tel:"]:after, .icon-before:before, a.link[href$=".pdf"]:before, a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before, a.link[href$=".zip"]:before, a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before, a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before, a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".pdf"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-a.link-light[href$=".zip"]:before,
+.reading-typography a[href^="tel:"]:after, .icon-before:before, a.btn[href*=".pdf"]:before, a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before, a.btn[href*=".zip"]:before, a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before, a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before, a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".pdf"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link[href*=".zip"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".pdf"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+a.link-light[href*=".zip"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".pdf"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before,
-.reading-typography a[href$=".zip"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".pdf"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before,
+.reading-typography a[href*=".zip"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   -webkit-font-smoothing: antialiased;
   text-rendering: auto;
   display: inline-block;
@@ -52,7 +69,7 @@ a.link-light[href$=".mov"]:before,
 
 /**Set Active Class**/
 /** Utility Class Built on top of Bootstrap ^4.4.1 **/
-/** Built With Base Branding 1.02.0 **/
+/** Built With Base Branding 1.52.0 **/
 /**  ACC Brands    *********************************/
 /** Built With library Branding **/
 /**  Default Brands    *********************************/
@@ -7722,11 +7739,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2198" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0412" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0713" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8057" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6651" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4854" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_5209" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4188" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7745" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3542" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -7758,11 +7775,11 @@ Markup:
     </header>
     <main id="CollapseFacetGroupPrimaryID" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6731" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_0077" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7030" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_2440" }}
-            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_4094" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_7239" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_9938" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_3411" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_8122" }}
+            {{>  "Sub.Search.FacetCheckbox" modifier_class="facet_6027" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -7803,8 +7820,8 @@ Markup:
     </header>
     <main id="collapseTypeAhead" class="p_1 collapse show" style="">
         <ul class="p-y_3 ul_none br-t_1 br-b_1 br_primary-3 transition_3 br_solid">
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_9391" }}
-            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_6239" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_3016" }}
+            {{>  "Sub.Search.FacetCheckboxWithTrash" modifier_class="facet_0636" }}
         </ul>
         <footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
     </main>
@@ -8845,9 +8862,9 @@ Markup:
 <aside class="flex flex_row flex_wrap font_ui {{> 'Sub.ClassList.Inset.down-1'}} {{> 'Sub.ClassList.Inset.padding'}}">
     <strong class="p-r_3 block w_100">Search Word Found At These Time Markers</strong>
     <ul class="ul_inline-pipe">
-        <li class="c_primary uppercase font_medium"><a href="" class="link"><i class="fas fa-play c_primary font-size_down-1 self_center"></i> start</a></li>
-        <li><a href="" class="link"><i class="fas fa-step-forward c_primary font-size_down-1 self_center"></i>  0:53</a></li>
-        <li><a href="" class="link"><i class="fas fa-step-forward c_primary font-size_down-1 self_center"></i>  2:30</a></li>
+        <li class="c_primary uppercase font_medium"><a href="#" class="link"><i class="fas fa-play c_primary font-size_down-1 self_center"></i> start</a></li>
+        <li><a href="#" class="link"><i class="fas fa-step-forward c_primary font-size_down-1 self_center"></i>  0:53</a></li>
+        <li><a href="#" class="link"><i class="fas fa-step-forward c_primary font-size_down-1 self_center"></i>  2:30</a></li>
     </ul>
 </aside>
 
@@ -8983,7 +9000,7 @@ Link to attachments. it should state pdf or zip depending
 
 Markup:
 <li class="inline-block br_radius p-x_3 m-l_n3 p_2 z_3 self_end relative h:bg_black-2 lh_0">
-    <a href="" class="undecorated h:undecorated expanded-click-area">
+    <a href="#" class="undecorated h:undecorated expanded-click-area">
     <span class="font-size_up c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> 
         Attachments
     </a>
@@ -9003,7 +9020,7 @@ Link to attachments. it should state pdf or zip depending
 
 Markup:
 <li class="inline-block br_radius p-x_3 m-l_n3 p_2 z_3 self_end relative h:bg_black-2 lh_0">
-    <a href="" class="undecorated h:undecorated expanded-click-area">
+    <a href="#" class="undecorated h:undecorated expanded-click-area">
     <span class="font-size_up c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i><span class="p-r_3">ZIP</span></span> 
         Attachments
     </a>
@@ -9024,13 +9041,13 @@ This buttons are used to rate the videos and download the attachments.
 Markup:
 <ul class="ul_none flex flex_row lowercase flex flex_row gap_2">
     <li class="br_solid br_black-3 br_radius br_1 h:bg_black-3">
-        <a class="p-y_3 p-x_4 " href=""><i class="fal fa-thumbs-up"></i></a>
+        <a class="p-y_3 p-x_4 " href="#"><i class="fal fa-thumbs-up"></i></a>
     </li>
     <li class="br_solid br_black-3 br_radius br_1 h:bg_black-3">
-        <a class="p-y_3 p-x_4 " href=""><i class="fal fa-thumbs-down"></i></a>
+        <a class="p-y_3 p-x_4 " href="#"><i class="fal fa-thumbs-down"></i></a>
     </li>
     <li class="br_solid br_black-3 br_radius br_1 h:bg_black-3 m-l_auto">
-        <a class="p-y_3 p-x_4 " href=""><i class="fal fa-paperclip"></i> Attachments</a>
+        <a class="p-y_3 p-x_4 " href="#"><i class="fal fa-paperclip"></i> Attachments</a>
     </li>
 </ul>
 
@@ -9271,7 +9288,7 @@ Markup:
     <!---  Agreement HTML START -->
         <p class="font-size_up">The Terms of Service and License Agreement set forth below constitute a legal agreement (collectively, the "Agreement") between the American College of Cardiology Foundation ("ACCF") and You and your agents ("You" or “Your”) for the use of the ACC Anywhere 2022 (the "Product”).    </p><p class="font-size_up">
             By clicking on the Agree button below, and by using the Product, You accept and agree to be bound by all of the terms and conditions set forth in this Agreement. If You do not wish to accept the terms and conditions of this Agreement, You may not proceed to use the Product. </p>
-        <p class="font-size_up"><a href="" class="c_accent-n2 font_bold font_ui link" target="_blank">Click to Read Full Terms of Service.</a></p>
+        <p class="font-size_up"><a href="#" class="c_accent-n2 font_bold font_ui link" target="_blank">Click to Read Full Terms of Service.</a></p>
             <p class="">I hereby certify that I understand and agree to the terms stated in this Agreement and that this Agreement applies to my initial use of the Product and all other subsequent uses of the Product.</p>
             <!---  Agreement HTML END -->
     </main>
@@ -9602,18 +9619,18 @@ Markup:
 					<div class="tab-content" id="nav-tabContent">
 						<div class="tab-pane fade show active" id="ActiveLink" role="tabpanel" aria-labelledby="ActiveLink">
 							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding.up-1' }}">
-								<li class="">{{> "Program.Session.Home"  modifier_class="Arrhythmia Pericardial Electrocardiogram Blood Vessel Blood Vessel Pharmacologic Pericardial Cardiovascular " }}</li>
-								<li class="">{{> "Program.Session.Home"  modifier_class="Clinical Arrhythmia Cardiovascular Side Effect Side Effect Valvular Blood Vessel " }}</li>
-								<li class="">{{> "Program.Session.Home"  modifier_class="Valvular Arrhythmia Blood Vessel Chest Pain Side Effect " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Valvular Arrhythmia Electrocardiogram Valvular Heart Disease Blood Vessel Blood Vessel Pharmacologic " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Electrocardiographic Valvular Heart Disease Clinical Cardiovascular Pharmacologic " }}</li>
+								<li class="">{{> "Program.Session.Home"  modifier_class="Valvular Heart Disease " }}</li>
 							</ul>
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 							</div>
 						<div class="tab-pane fade" id="BasicLink" role="tabpanel" aria-labelledby="BasicLink">
 							<ul class="ul_none flex flex_column gap_3 gap_4:lg {{> 'Sub.ClassList.Vertical.padding.up-1' }}">
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Arrhythmia Electrocardiogram Arrhythmia Valvular Heart Disease Electrocardiographic " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Chest Pain Pharmacologic Cardiovascular Arteriosclerosis Electrocardiogram Blood Vessel " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Pharmacologic Blood Vessel " }}</li>
-								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Cardiovascular Arteriosclerosis Arteriosclerosis Side Effect Arteriosclerosis Clinical Side Effect Pharmacologic " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Chest Pain Electrocardiographic Blood Vessel Pericardial Cardiovascular Electrocardiogram " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="" }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="Pericardial Side Effect Electrocardiographic " }}</li>
+								<li class=""> {{> "Program.Presentation.Search"  modifier_class="" }}</li>
 							</ul>
 							<div class=""><button class="block btn btn-outline-secondary btn-sm m-b_3 m_auto p-x_5">Load More</button></div>
 						</div>
@@ -9658,7 +9675,7 @@ Markup:
 					<section class="{{>'Sub.ClassList.Inset.up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
 						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding.up-2'}}">
-							<h1 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Session.Title'}} Pharmacologic Chest Pain Pharmacologic Side Effect Arteriosclerosis Pharmacologic Arteriosclerosis Valvular </h1>
+							<h1 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Session.Title'}} Arrhythmia Electrocardiogram Clinical Pharmacologic </h1>
 							</main>	
 							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
 								<ul class="flex flex_column flex_wrap gap_2 justify_start self_center ul_none uppercase p-x_3">
@@ -9729,8 +9746,8 @@ Markup:
 					<section class="{{>'Sub.ClassList.Inset.up-1'}}">
 						<div class="flex flex_row font_ui justify_start relative w_100">
 						<main class="flex flex_auto flex_column font_0 font_1:md font_2:lg isolation_isolate justify_between relative w_100 {{>'Sub.ClassList.Inset.padding.up-2'}}">
-							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} Valvular </h1>
-							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}} Side Effect Chest Pain  </h2>
+							<h1 class="c_black-5 font-size_down-1 font_medium font_ui lh_1 m-b_2 m-t_2 m_0">{{> 'Data.Session.Title'}} Pharmacologic Pericardial Pericardial Blood Vessel </h1>
+							<h2 class="c_primary c_primary-n3 font-size_up-2 font_display font_regular lh_1 m_0"> {{> 'Data.Presentation.Title'}} Side Effect  </h2>
 							</main>	
 							<aside class="flex_none m-t_n2 m-t_n2:md m-t_n3:lg p-x_3:md">
 								<ul class="flex flex_column flex_wrap gap_2 justify_start self_center ul_none uppercase p-x_3">
@@ -9766,10 +9783,10 @@ Markup:
 							{{> 'Sub.Section.h3' modifier_class='presentation playlist'}}</div>
 							<div class="font_n2 font_n1:lg relative isolation_isolate">
 								<ul class="flex flex_column justify_stretch gap_3 ul_none">
-									{{> "Program.Presentation.Condensed" modifier_class="Electrocardiogram Electrocardiogram Clinical "}}
-									{{> "Program.Presentation.CondensedPlaying" modifier_class="Clinical Pericardial Valvular Valvular Heart Disease Valvular Heart Disease Valvular "}}
-									{{> "Program.Presentation.Condensed" modifier_class=""}}
-									{{> "Program.Presentation.Condensed" modifier_class="Electrocardiogram Arrhythmia Electrocardiogram Valvular Heart Disease Clinical Blood Vessel Valvular "}}
+									{{> "Program.Presentation.Condensed" modifier_class="Pharmacologic "}}
+									{{> "Program.Presentation.CondensedPlaying" modifier_class="Arteriosclerosis Valvular Heart Disease Clinical Myocardial "}}
+									{{> "Program.Presentation.Condensed" modifier_class="Blood Vessel Myocardial Clinical Arrhythmia Blood Vessel Side Effect "}}
+									{{> "Program.Presentation.Condensed" modifier_class="Electrocardiographic "}}
 								</ul>
 							</div>
 						</section>
@@ -9856,13 +9873,13 @@ Markup:
 						<main class="z_0 isolation_isolate">
 							<p class="font-size_up">The Terms of Service and License Agreement set forth below constitute a legal agreement (collectively, the "Agreement") between the American College of Cardiology Foundation ("ACCF") and You and your agents ("You" or “Your”) for the use of the ACC Anywhere 2022 (the "Product”).    </p><p class="font-size_up">
 								By clicking on the Agree button below, and by using the Product, You accept and agree to be bound by all of the terms and conditions set forth in this Agreement. If You do not wish to accept the terms and conditions of this Agreement, You may not proceed to use the Product. </p>
-							<p class="font-size_up"><a href="" class="c_accent-n2 font_bold font_ui link" target="_blank">Click to Read Full Terms of Service.</a></p>
+							<p class="font-size_up"><a href="#" class="c_accent-n2 font_bold font_ui link" target="_blank">Click to Read Full Terms of Service.</a></p>
 								<p class="">I hereby certify that I understand and agree to the terms stated in this Agreement and that this Agreement applies to my initial use of the Product and all other subsequent uses of the Product.</p>
 						</main>
 					</div>
 					<footer id="Agreement1">
 						<div class="bg_acc br_radius c_white font_2 font_bold font_medium font_ui lh_1 m-b_3 p-y_4 p_3 text_center uppercase">By Clicking The Button Below, I Hereby Affirm That I Have Read, Fully Understand, And Agree To The Above Statements. </div>
-						<a href="" class="btn btn-success c_white h:undecorated float_right"><i class="fas fa-check"></i> I agree</a>
+						<a href="#" class="btn btn-success c_white h:undecorated float_right"><i class="fas fa-check"></i> I agree</a>
 					</footer>
 				</div>
 				<div class="inset-level_up-1 bg_white br_radius shadow_overlap-light relative br_solid br_1 br_black-2 p_4 relative isolation_isolate" id="TopAgreement2">
@@ -9889,12 +9906,12 @@ Markup:
 					</div>
 					<footer id="Agreement2">
 						<div class="bg_acc br_radius c_white font_2 font_bold font_medium font_ui lh_1 m-b_3 p-y_4 p_3 text_center uppercase">By Clicking The Button Below, I Hereby Affirm That I Have Read, Fully Understand, And Agree To The Above Statements. </div>
-						<a href="" class="btn btn-secondary c_white h:undecorated float_right">I agree</a>
+						<a href="#" class="btn btn-secondary c_white h:undecorated float_right">I agree</a>
 					</footer>
 				</div>
 				<div class="inset-level_up-1 bg_white br_radius relative p_4 text_center">
 					<h4 class="font_bold c_primary-n2"> You can continue when all legal terms are agreed to. </h4>
-					<a href="" class="btn btn-disabled disabled block">Continue</a>
+					<a href="#" class="btn btn-disabled disabled block">Continue</a>
 				</div>
 			</section>
 		</div>
@@ -10007,11 +10024,11 @@ Markup:
 						{{> 'Sub.Section.h2' modifier_class="continue watching" }}
 						<div class="font_n2 font_n1:lg relative isolation_isolate">
 							<ul class="flex flex_column justify_stretch gap_0 ul_none {{> 'Sub.ClassList.Inset.down-1'}} {{> 'Sub.ClassList.Inset.padding.up-1'}}">
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Clinical '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Side Effect Arteriosclerosis Cardiovascular Side Effect '}}
 								{{> 'Program.Presentation.Condensed.Playable' modifier_class=''}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Side Effect Blood Vessel Chest Pain Valvular Blood Vessel Side Effect '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Pharmacologic Pharmacologic Side Effect '}}
-								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Valvular Electrocardiogram Cardiovascular '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Myocardial Cardiovascular Valvular Heart Disease Electrocardiographic Myocardial '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Clinical Side Effect Pericardial Cardiovascular Cardiovascular '}}
+								{{> 'Program.Presentation.Condensed.Playable' modifier_class='Electrocardiographic Arteriosclerosis '}}
 							</ul>
 						</div>
 						{{> 'Sub.Section.Footer'  modifier_class="continue watching" }}
@@ -10132,7 +10149,7 @@ Section Footer
 Section footer links to the Search Collection Page.
 
 Markup:
-<footer class="flex flex_row-reverse p-t_3 p-b_4"><a href="" class="link self_end ">view all from &quot;{{modifier_class}}&quot; <i class="fal fa-chevron-circle-right m-r_3"></i></a></footer>   
+<footer class="flex flex_row-reverse p-t_3 p-b_4"><a href="#" class="link self_end ">view all from &quot;{{modifier_class}}&quot; <i class="fal fa-chevron-circle-right m-r_3"></i></a></footer>   
 
 MarkupWrapperClasses: 
 
@@ -10150,14 +10167,14 @@ Horizontal Carousels to have discoverable areas on the home pages.
 Markup:
 <div class="relative isolation_isolate overflow_hidden {{>'Sub.ClassList.Inset.margin.down-1'}}">
         <div id="slider1" class=" flex flex_row justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3 {{> 'Sub.ClassList.Inset.down-1'}} ">
-        {{> "Program.Session.Home"  modifier_class="Electrocardiographic Arrhythmia Chest Pain Arrhythmia Electrocardiogram "}}
-        {{> "Program.Session.Home"  modifier_class="Blood Vessel Pericardial "}}
-        {{> "Program.Session.Home"  modifier_class="Chest Pain Valvular Heart Disease Pericardial Cardiovascular Pharmacologic Blood Vessel Myocardial Pericardial Pericardial "}}
-        {{> "Program.Session.Home"  modifier_class="Arteriosclerosis Clinical Chest Pain Pericardial Valvular "}}        
-        {{> "Program.Session.Home"  modifier_class="Valvular Heart Disease Electrocardiographic Side Effect "}}
-        {{> "Program.Session.Home"  modifier_class="Side Effect Arrhythmia Chest Pain Pharmacologic Valvular Valvular Heart Disease Valvular "}}        
-        {{> "Program.Session.Home"  modifier_class=""}}
-        {{> "Program.Session.Home"  modifier_class="Valvular Heart Disease Electrocardiogram "}}
+        {{> "Program.Session.Home"  modifier_class="Pharmacologic Pericardial Clinical Arteriosclerosis Arrhythmia Blood Vessel Electrocardiographic Pericardial Myocardial "}}
+        {{> "Program.Session.Home"  modifier_class="Arteriosclerosis Pharmacologic Valvular Heart Disease Cardiovascular Valvular Heart Disease Cardiovascular Arteriosclerosis "}}
+        {{> "Program.Session.Home"  modifier_class="Blood Vessel Valvular Heart Disease Arrhythmia Side Effect "}}
+        {{> "Program.Session.Home"  modifier_class="Chest Pain Valvular Heart Disease Cardiovascular "}}        
+        {{> "Program.Session.Home"  modifier_class="Pericardial Valvular Heart Disease "}}
+        {{> "Program.Session.Home"  modifier_class="Arrhythmia Electrocardiogram Cardiovascular Blood Vessel "}}        
+        {{> "Program.Session.Home"  modifier_class="Blood Vessel "}}
+        {{> "Program.Session.Home"  modifier_class="Myocardial Blood Vessel Arrhythmia Clinical Cardiovascular Side Effect "}}
     </div>
     {{> 'Sub.Carousel.CustomTools'}}
 </div>
@@ -10318,15 +10335,15 @@ Markup:
     {{> 'Sub.Section.h2' modifier_class="continue watching" }}
     <div class="relative isolation_isolate overflow_hidden  {{> 'Sub.ClassList.Inset.down-1'}} ">
         <div id="SliderContinueWatching" class="flex flex_column gap_3 justify_stretch p-y_4 p-x_3 overflow_hidden m-y_3  {{> 'Sub.ClassList.Inset.down'}} ">
-        {{> "Program.Presentation.Condensed"  modifier_class="Blood Vessel Arrhythmia Pericardial Clinical "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Cardiovascular Pericardial Cardiovascular Arteriosclerosis Cardiovascular Valvular Heart Disease Side Effect Electrocardiogram Clinical "}}
-        {{> "Program.Presentation.Condensed"  modifier_class=""}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Clinical "}}
-        {{> "Program.Presentation.Condensed"  modifier_class="Chest Pain Arteriosclerosis Chest Pain Pharmacologic Cardiovascular "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Electrocardiogram Arteriosclerosis Pharmacologic Valvular Arteriosclerosis Chest Pain Pharmacologic Pericardial "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Valvular Heart Disease Electrocardiographic Arteriosclerosis Valvular Heart Disease Valvular Heart Disease Valvular Pharmacologic "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Pharmacologic Clinical Cardiovascular Side Effect Myocardial Chest Pain Arteriosclerosis Side Effect Blood Vessel "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Clinical Blood Vessel "}}
+        {{> "Program.Presentation.Condensed"  modifier_class="Side Effect Arteriosclerosis Arteriosclerosis "}}
         </div>
         {{> 'Sub.Carousel.CustomToolsVertical'}}
     </div>
-    <footer class="flex flex_row-reverse p-t_3 p-b_4"><a href="" class="link self_end ">view all from &quot;{{modifier_class}}&quot; <i class="fal fa-chevron-circle-right m-r_3"></i></a></footer>      
+    <footer class="flex flex_row-reverse p-t_3 p-b_4"><a href="#" class="link self_end ">view all from &quot;{{modifier_class}}&quot; <i class="fal fa-chevron-circle-right m-r_3"></i></a></footer>      
 <script>
 document.addEventListener("DOMContentLoaded", function(event) {   
 let args2 ={
@@ -10555,7 +10572,7 @@ Markup:
             class="flex flex_column flex_auto justify_between flex_auto relative w_100 isolation_isolate {{> 'Sub.ClassList.Inset.padding.up-3'}}">
             <h2 class="font-size_up font_display font_regular lh_2 h:underline c_primary-n3 m-t_2">
                 <a class="c_inherit-all expanded-click-area z_1">
-                    Clinical Update for the Valvular Heart Disease Electrocardiogram Pericardial Pharmacologic  {{ modifier_class}} 
+                    Clinical Update for the Arrhythmia Clinical Valvular Valvular Cardiovascular Electrocardiogram Blood Vessel  {{ modifier_class}} 
                 </a>
             </h2>
             <ul
@@ -10625,7 +10642,7 @@ Markup:
                     </span>
                 </span>
                 <a class="c_inherit-all expanded-click-area z_1 inline">
-                    Clinical Update for the  Pericardial Pericardial Pharmacologic Side Effect Clinical Valvular Heart Disease Valvular Arrhythmia Arrhythmia Electrocardiographic Cardiovascular Chest Pain Arteriosclerosis Arrhythmia  {{ modifier_class }} 
+                    Clinical Update for the  Pharmacologic Electrocardiographic Electrocardiographic Myocardial Myocardial Blood Vessel Valvular Blood Vessel Chest Pain Arteriosclerosis Pericardial Cardiovascular Side Effect Clinical  {{ modifier_class }} 
                 </a>
             </h2>
             <ul
@@ -10748,7 +10765,7 @@ Markup:
 						</span>
 					</span>
 					<strong class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 "> {{> 'Data.Session.Title'}}</strong>
-					<a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the Chest Pain Clinical Side Effect Chest Pain Valvular Heart Disease Pharmacologic Clinical Electrocardiogram Valvular Heart Disease Clinical Chest Pain Pericardial Arrhythmia Valvular Heart Disease  {{ modifier_class }}
+					<a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the Arteriosclerosis Clinical Clinical Blood Vessel Valvular Pericardial Cardiovascular Arrhythmia Arteriosclerosis Clinical Side Effect Side Effect Pericardial Clinical  {{ modifier_class }}
 					</a>
 				</h2>
 			</div>
@@ -10803,7 +10820,7 @@ Markup:
 						</span>
 					</span>
 					<strong class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 "> {{> 'Data.Session.Title'}}</strong>
-					<a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the Myocardial Cardiovascular Pharmacologic Pharmacologic Chest Pain Valvular Valvular Pharmacologic Valvular Heart Disease Cardiovascular Valvular Heart Disease Arrhythmia Electrocardiographic Blood Vessel  {{ modifier_class }}
+					<a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the Arteriosclerosis Pharmacologic Chest Pain Valvular Heart Disease Blood Vessel Arteriosclerosis Clinical Electrocardiogram Arrhythmia Cardiovascular Arteriosclerosis Arrhythmia Chest Pain Cardiovascular  {{ modifier_class }}
 					</a>
 				</h2>
                 </div>
@@ -10866,7 +10883,7 @@ Markup:
                             </span>
                         </span>
                         <strong class="block c_black-6 uppercase font_bold font-size_down lh_1 m_0 "> {{> 'Data.Session.Title'}}</strong>
-                        <a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the Electrocardiogram Blood Vessel Cardiovascular Side Effect Cardiovascular Chest Pain Clinical Blood Vessel Arrhythmia Arteriosclerosis Clinical Chest Pain Valvular Valvular Heart Disease  {{ modifier_class }}
+                        <a class="c_inherit-all expanded-click-area z_1 inline"> Clinical Update for the Valvular Arrhythmia Clinical Blood Vessel Pharmacologic Chest Pain Electrocardiogram Myocardial Electrocardiogram Electrocardiogram Myocardial Arteriosclerosis Electrocardiogram Valvular Heart Disease  {{ modifier_class }}
                         </a>
                     </h2>
                 </div>
@@ -11675,7 +11692,7 @@ Styleguide DesignBase.Seals
 
 */
 .seal_normal {
-  background-image: url("../img/ACC_Seal.svg");
+  background-image: url("../img/ACC_seal.svg");
 }
 .seal_normal:before {
   padding-top: 100%;
@@ -11849,38 +11866,56 @@ Markup:
 
  Styleguide Recipes.InteractiveExtras.Links
  */
-.icon-before:before, a.link[href$=".pdf"]:before, a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before, a.link[href$=".zip"]:before, a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before, a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before, a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".pdf"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-a.link-light[href$=".zip"]:before,
+.icon-before:before, a.btn[href*=".pdf"]:before, a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before, a.btn[href*=".zip"]:before, a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before, a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before, a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".pdf"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link[href*=".zip"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".pdf"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+a.link-light[href*=".zip"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".pdf"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before,
-.reading-typography a[href$=".zip"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".pdf"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before,
+.reading-typography a[href*=".zip"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   width: 1.28571429em;
   margin-right: 4px;
   margin-right: 0.25rem;
   text-align: center;
+  text-indent: 0;
 }
 
-.icon-after:after, a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after, a.link[href^="mailto:"]:after, a.link[href^="tel:"]:after,
+.icon-after:after, a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after, a.btn[href^="mailto:"]:after, a.btn[href^="tel:"]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
+a.link[href^="mailto:"]:after,
+a.link[href^="tel:"]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -11895,6 +11930,7 @@ a.link-light[href^="tel:"]:after,
   margin-left: 4px;
   margin-left: 0.25rem;
   text-align: center;
+  text-indent: 0;
 }
 
 .link, .reading-typography a {
@@ -11911,54 +11947,70 @@ a.link-light[href^="tel:"]:after,
   color: #92f0dc;
 }
 
+a.btn:hover,
 a.link:hover,
 a.link-light:hover,
 .reading-typography a:hover {
   text-decoration: underline;
 }
-a.link[href$=".pdf"]:before,
-a.link-light[href$=".pdf"]:before,
-.reading-typography a[href$=".pdf"]:before {
+a.btn[href*=".pdf"]:before,
+a.link[href*=".pdf"]:before,
+a.link-light[href*=".pdf"]:before,
+.reading-typography a[href*=".pdf"]:before {
   content: "\f1c1";
 }
-a.link[href$=".doc"]:before, a.link[href$=".docx"]:before, a.link[href$=".txt"]:before,
-a.link-light[href$=".doc"]:before,
-a.link-light[href$=".docx"]:before,
-a.link-light[href$=".txt"]:before,
-.reading-typography a[href$=".doc"]:before,
-.reading-typography a[href$=".docx"]:before,
-.reading-typography a[href$=".txt"]:before {
+a.btn[href*=".doc"]:before, a.btn[href*=".docx"]:before, a.btn[href*=".txt"]:before,
+a.link[href*=".doc"]:before,
+a.link[href*=".docx"]:before,
+a.link[href*=".txt"]:before,
+a.link-light[href*=".doc"]:before,
+a.link-light[href*=".docx"]:before,
+a.link-light[href*=".txt"]:before,
+.reading-typography a[href*=".doc"]:before,
+.reading-typography a[href*=".docx"]:before,
+.reading-typography a[href*=".txt"]:before {
   content: "\f1c2";
 }
-a.link[href$=".zip"]:before,
-a.link-light[href$=".zip"]:before,
-.reading-typography a[href$=".zip"]:before {
+a.btn[href*=".zip"]:before,
+a.link[href*=".zip"]:before,
+a.link-light[href*=".zip"]:before,
+.reading-typography a[href*=".zip"]:before {
   content: "\f1c6";
 }
-a.link[href*=".ppt"]:before, a.link[href*=".pptx"]:before,
+a.btn[href*=".ppt"]:before, a.btn[href*=".pptx"]:before,
+a.link[href*=".ppt"]:before,
+a.link[href*=".pptx"]:before,
 a.link-light[href*=".ppt"]:before,
 a.link-light[href*=".pptx"]:before,
 .reading-typography a[href*=".ppt"]:before,
 .reading-typography a[href*=".pptx"]:before {
   content: "\f685";
 }
-a.link[href$=".csv"]:before, a.link[href$=".xls"]:before, a.link[href$=".xlsx"]:before,
-a.link-light[href$=".csv"]:before,
-a.link-light[href$=".xls"]:before,
-a.link-light[href$=".xlsx"]:before,
-.reading-typography a[href$=".csv"]:before,
-.reading-typography a[href$=".xls"]:before,
-.reading-typography a[href$=".xlsx"]:before {
+a.btn[href*=".csv"]:before, a.btn[href*=".xls"]:before, a.btn[href*=".xlsx"]:before,
+a.link[href*=".csv"]:before,
+a.link[href*=".xls"]:before,
+a.link[href*=".xlsx"]:before,
+a.link-light[href*=".csv"]:before,
+a.link-light[href*=".xls"]:before,
+a.link-light[href*=".xlsx"]:before,
+.reading-typography a[href*=".csv"]:before,
+.reading-typography a[href*=".xls"]:before,
+.reading-typography a[href*=".xlsx"]:before {
   content: "\f0ce";
 }
-a.link[href$=".mp4"]:before, a.link[href$=".mov"]:before,
-a.link-light[href$=".mp4"]:before,
-a.link-light[href$=".mov"]:before,
-.reading-typography a[href$=".mp4"]:before,
-.reading-typography a[href$=".mov"]:before {
+a.btn[href*=".mp4"]:before, a.btn[href*=".mov"]:before,
+a.link[href*=".mp4"]:before,
+a.link[href*=".mov"]:before,
+a.link-light[href*=".mp4"]:before,
+a.link-light[href*=".mov"]:before,
+.reading-typography a[href*=".mp4"]:before,
+.reading-typography a[href*=".mov"]:before {
   content: "\f03d";
 }
-a.link[target=_blank]:after, a.link[href^=http][target=_blank]:after, a.link[href^=https][target=_blank]:after,
+a.btn[target=_blank]:after, a.btn[href^=http][target=_blank]:after, a.btn[href^=https][target=_blank]:after,
+a.link[target=_blank]:after,
+a.link[href^=http][target=_blank]:after,
+a.link[href^=https][target=_blank]:after,
 a.link-light[target=_blank]:after,
 a.link-light[href^=http][target=_blank]:after,
 a.link-light[href^=https][target=_blank]:after,
@@ -11967,16 +12019,19 @@ a.link-light[href^=https][target=_blank]:after,
 .reading-typography a[href^=https][target=_blank]:after {
   content: "\f14c";
 }
+a.btn[href^="mailto:"]:after,
 a.link[href^="mailto:"]:after,
 a.link-light[href^="mailto:"]:after,
 .reading-typography a[href^="mailto:"]:after {
   content: "\f0e0";
 }
+a.btn[href^="tel:"]:after,
 a.link[href^="tel:"]:after,
 a.link-light[href^="tel:"]:after,
 .reading-typography a[href^="tel:"]:after {
   content: "\f095";
 }
+a.btn[href^="fax:"]:after,
 a.link[href^="fax:"]:after,
 a.link-light[href^="fax:"]:after,
 .reading-typography a[href^="fax:"]:after {
@@ -12066,7 +12121,7 @@ Styleguide Recipes.InteractiveExtras.ToggleIcons
   content: "\f0c9";
 }
 .active .icon-toggle_bars-times:before, .icon-toggle_bars-times:before.show, .show > .icon-toggle_bars-times:before, .active > .icon-toggle_bars-times:before {
-  content: "\f2d3";
+  content: "\f00d";
 }
 
 .icon-toggle_plus-minus:before {
@@ -19157,7 +19212,7 @@ Styleguide  Bootstrap.Carousel
   font-family: "Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif, "slab";
 }
 
-.dropdown-menu font_copy br-t_0 {
+.dropdown-menu {
   font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -19169,7 +19224,7 @@ Styleguide  Bootstrap.Carousel
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: white;
+  color: inherit;
 }
 
 .navbar-primary .dropdown-toggle:after {
@@ -19180,7 +19235,7 @@ Styleguide  Bootstrap.Carousel
   color: inherit;
 }
 
-.navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus-visible, .navbar-primary .nav-item:active {
+.navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus-visible {
   border-top-color: #16a385;
   border-bottom-color: #fff;
   background-color: #fff;
@@ -19191,7 +19246,7 @@ Styleguide  Bootstrap.Carousel
     border-top: 0.25rem #004176 solid;
     border-bottom: 0.25rem #004176 solid;
   }
-  .navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus-visible, .navbar-primary .nav-item:active {
+  .navbar-primary .nav-item:hover, .navbar-primary .nav-item:focus-visible {
     border-top-color: #16a385;
     border-bottom-color: #fff;
     background-color: #fff;
@@ -19204,17 +19259,17 @@ Styleguide  Bootstrap.Carousel
     border-top: 0.25rem #004176 solid;
     border-bottom: 0.25rem #004176 solid;
   }
-  .navbar-primary .navbar-nav .nav-item .nav-link, .navbar-primary .navbar-nav .nav-item .nav-link:hover, .navbar-primary .navbar-nav .nav-item .nav-link:focus-visible, .navbar-primary .navbar-nav .nav-item .nav-link:active {
-    color: #fff;
+  .navbar-primary .navbar-nav .nav-item .nav-link, .navbar-primary .navbar-nav .nav-item .nav-link:hover, .navbar-primary .navbar-nav .nav-item .nav-link:focus-visible {
+    color: inherit;
   }
-  .navbar-primary .navbar-nav .nav-item:hover, .navbar-primary .navbar-nav .nav-item:focus-visible, .navbar-primary .navbar-nav .nav-item:active {
+  .navbar-primary .navbar-nav .nav-item:hover, .navbar-primary .navbar-nav .nav-item:focus-visible {
     border-top-color: #16a385;
     border-bottom-color: #fff;
     background-color: #fff;
     color: #004176;
   }
-  .navbar-primary .navbar-nav .nav-item:hover .nav-link, .navbar-primary .navbar-nav .nav-item:hover .nav-link:hover, .navbar-primary .navbar-nav .nav-item:hover .nav-link:focus-visible, .navbar-primary .navbar-nav .nav-item:hover .nav-link:active, .navbar-primary .navbar-nav .nav-item:focus-visible .nav-link, .navbar-primary .navbar-nav .nav-item:focus-visible .nav-link:hover, .navbar-primary .navbar-nav .nav-item:focus-visible .nav-link:focus-visible, .navbar-primary .navbar-nav .nav-item:focus-visible .nav-link:active, .navbar-primary .navbar-nav .nav-item:active .nav-link, .navbar-primary .navbar-nav .nav-item:active .nav-link:hover, .navbar-primary .navbar-nav .nav-item:active .nav-link:focus-visible, .navbar-primary .navbar-nav .nav-item:active .nav-link:active {
-    color: #004176;
+  .navbar-primary .navbar-nav .nav-item:hover .nav-link, .navbar-primary .navbar-nav .nav-item:hover .nav-link:hover, .navbar-primary .navbar-nav .nav-item:hover .nav-link:focus-visible, .navbar-primary .navbar-nav .nav-item:focus-visible .nav-link, .navbar-primary .navbar-nav .nav-item:focus-visible .nav-link:hover, .navbar-primary .navbar-nav .nav-item:focus-visible .nav-link:focus-visible {
+    color: inherit;
   }
 }
 
@@ -19240,6 +19295,20 @@ Styleguide  Bootstrap.Carousel
     min-width: 20rem;
   }
 }
+.navbar-primary .navbar-nav .nav-item.active {
+  border-top-color: #9ea1a7;
+  border-bottom-color: #9ea1a7;
+  background-color: #9ea1a7;
+  color: #fff;
+}
+.navbar-primary .navbar-nav .nav-item.active .nav-link.active {
+  color: inherit;
+}
+.navbar-primary .navbar-nav .nav-item.active:hover {
+  border-top-color: #16a385;
+  color: #004176;
+}
+
 .accordion i.icon-toggle_plus-minus:before {
   content: "\f146";
 }

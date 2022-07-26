@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coveo Stand Alone</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="kss-node" name="generator">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet">
+    <link href="kss-assets/vendor/prism.css" rel="stylesheet">
+    <link href="kss-assets/css/kss.css" rel="stylesheet">
+    <link rel="stylesheet" href="../icons/css/fontawesome.css"/>
+<link rel="stylesheet" href="../icons/css/solid.css"/>
+<link rel="stylesheet" href="../icons/css/regular.css"/>
+<link rel="stylesheet" href="../icons/css/brands.css"/>
+<link rel="stylesheet" href="../icons/css/light.css"/>
+<link rel="stylesheet" href="../css/styleguide_override.css"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab&display=swap"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Maven+Pro&display=swap"/>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans&display=swap"/>
+<link rel="stylesheet" href="../css/color-code_LOE_COR.css"/>
+<link rel="stylesheet" href="../css/color-code_pathway.css"/>
+<link rel="stylesheet" href="../css/color-code_pathwayV2.css"/>
+<link rel="stylesheet" href="../css/color-code_credits.css"/>
+<link rel="stylesheet" href="../css/color-code_social.css"/>
+<link rel="stylesheet" href="../css/color-code_registry.css"/>
+<link rel="stylesheet" href="../css/acc_boot.css"/>
+<link rel="stylesheet" href="../css/acc_uc.css"/>
+<link rel="stylesheet" href="../css/coveo.css"/>
+
+</head>
+
+<body class="kss-body texture_light font_ui">
+    <!-- header. -->
+    <section class="display_none block:md" id="topbody">
+        <aside
+            class="m_auto font_ui font_n1 display_none block:md bg_secondary-n2 br_solid br_black-4 p-y_3 br-b_1 shadow_emboss-light">
+            <ul class="ul_none flex flex_row:md flex_column justify_center ">
+                <li class="w_auto:md w_100 md p_2 self_center">
+                    <span
+                        class="block inline-block:md c_white-8 undecorated p_2 nowrap uppercase font_xbold">Brands</span>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../" id="home_nav">Arches</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../utility_classes/" id="utility_classes">Utility Classes</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_acc/" id="boot_acc">ACC</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center is-active active">
+                    <a class="
+                is-active active font_bold 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../coveo_acc/" id="coveo_acc">Coveo</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_cardiosmart/" id="uc_cardiosmart">CardioSmart</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_cvquality/" id="boot_cvquality">CVQualtiy</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_virtual/" id="boot_virtual">Virtual</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../boot_journal/" id="boot_journal">JACC</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="../color_codes/" id="color_codes">Color Codes</a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="
+                 
+                block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 
+                a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap" href="https://acc-style.github.io/IconDictionary/" id="icon_dictionary">Icon Dictionary</a>
+                </li>
+                <li class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center">
+                    <a class=" block inline-block:md c_white-8 undecorated  h:c_white h:bg_black-5 a:bg_primary-n1 a:c_white h:undecorated p_2 p-x_3 br_radius nowrap"
+                        href="https://acc-style.github.io/origami6/?path=/story/introduction--page" id="origami"><i
+                            class="fas fa-paper-plane p-r_3"></i><span>Project Origami</span></a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <header
+        class="bg_white shadow_overlap-light br_black-1 br_solid br_1 sticky t_0 display_none:md flex flex_inline z_5">
+        <h1 class="self_center m_3">
+            <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">Arches</a>: Coveo Stand Alone
+        </h1>
+        <a class="m-l_auto self_center m_3 kss-header__hamburger-trigger">
+            <div class="kss-header__hamburger"></div>
+        </a>
+    </header>
+    <!-- /header. -->
+    <!-- navigation. -->
+    <!-- /navigation. -->
+    <!-- documentation. -->
+    <header class="p_4 text_center">
+        <h1 class="font_display font_10 font_light display_none block:md">
+            <a class="undecorated h:undecorated" href="https://acc-style.github.io/Arches/index.html">Arches:</a>Coveo Stand Alone
+        </h1>
+        <small class="font_0 m-t_n3 block m-b_4 font_xbold font_display display_none block:md">Multi Product Brand Style
+            System by the American College of Cardiology</small>
+    </header>
+    <section class="display_none block:md">
+        <aside class="m_auto font_copy display_none block:md sticky t_0">
+            <ul
+                class="ul_none flex flex_row:md flex_column flex_wrap justify_center br-t_1 br_solid br_black-4 p-y_3 br-b_1 ">
+                <li class=" w_auto:md w_100 p_2 self_center ">
+                    <a class="block inline-block:md undecorated  bg_primary-n1 h:bg_primary-n3 h:undecorated c_white p_3 br_radius nowrap"
+                        href="https://acc-style.github.io/Arches/index.html">
+                        <span class=""><i class="fas fa-chevron-left p-x_2"></i> Arches</span>
+                    </a>
+                </li>
+                <li class=" w_auto:md w_100 p_2 self_center ">
+                    <a class="block inline-block:md undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated c_black-8 h:c_black-9 p_3 br_radius nowrap"
+                        href="index.html">
+                        <span class=""><i class="fas fa-home p-x_2"></i></span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-coveo.html">
+                        <span class="">Coveo</span>
+                    </a>
+                </li>
+                <li
+                    class="w_auto:md w_100 br-l_1 br_black-2 br_solid:md p_2 self_center ">
+                    <a class="block inline-block:md c_black-8 h:c_black-9 undecorated  h:bg_black-2 a:bg_accent a:c_white h:undecorated p_3 br_radius nowrap"
+                        href="section-sub.html">
+                        <span class="">Sub</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <section id="MobleNav"
+        class="bg_secondary-n3 display_none:lg font_0 font_ui kss-navigation overflow_auto p-b_2 p-x_3 scrollbar-mini shadow_overlap-bold z_4"
+        style="padding-top:70px">
+        <aside class="display_none:md flex flex_column-reverse">
+            <ul class="block flex flex_column ul_none w_100 ul_none lh_3" id="sitenav">
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../" id="home_nav">Arches</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../utility_classes/" id="utility_classes">Utility Classes</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_acc/" id="boot_acc">ACC</a>
+                </li>
+                <li class="flex_auto is-active active m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../coveo_acc/" id="coveo_acc">Coveo</a>
+                </li>
+                <li class="flex_auto m-y_2 p_3 bg_black-5 br_radius p_3 shadow_emboss-light">
+                    <ul class="block flex flex_column ul_none w_100 ul_none lh_3">
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_black-5 relative br_radius p_2 m-b_1">
+                            <a class="  a:c_white c_white-8 h:c_white"
+                                href="index.html">
+                                <span class=""><i class="fas fa-home p-x_2"></i> Home</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-coveo.html">
+                                <span class="">Coveo</span>
+                            </a>
+                        </li>
+                        <li
+                            class=" m-b_2 a:bg_accent h:bg_accent-4 relative br_radius p_2 p-l_3 m-b_1">
+                            <a class=" a:c_white c_white-8 h:c_white block inline-block:md undecorated flex flex_row h:undecorated flex_nowrap"
+                                href="section-sub.html">
+                                <span class="">Sub</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_cardiosmart/" id="uc_cardiosmart">CardioSmart</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_cvquality/" id="boot_cvquality">CVQualtiy</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_virtual/" id="boot_virtual">Virtual</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../boot_journal/" id="boot_journal">JACC</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="../color_codes/" id="color_codes">Color Codes</a>
+                </li>
+                <li class="flex_auto  m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="https://acc-style.github.io/IconDictionary/" id="icon_dictionary">Icon Dictionary</a>
+                </li>
+                <li class="flex_auto m-b_2">
+                    <a class="c_white undecorated h:undecorated a:bg_primary h:bg_black-5 p_2 block br_radius"
+                        href="https://acc-style.github.io/origami6/?path=/story/introduction--page" id="origami"><i
+                            class="fas fa-paper-plane p-r_3"></i><span>Project Origami</span></a>
+                </li>
+            </ul>
+        </aside>
+    </section>
+    <div class="m_auto p-x_4 ">
+        <!-- display each section, in order. the "root" element comes first in this loop, and can be detected using the "#if @first" block as seen below. -->
+        <div class="flex flex_column flex_row:md gap-x_5 p-t_4 max-w_90 m_auto">
+            <main class="w_100 flex_auto">
+                <header
+                    class="bg_white kss-section kss-section--depth-3 br_radius shadow_overlap-light br_radius"
+                    id="kssref-coveo-arches-main">
+                        <article class="kss-section__content relative">
+                            <div class="absolute t_0 r_4 flex flex_row gap-x_2 justify_end">
+                                <div class="inline-block flex_none p_2 bg_highlight c_white shadow_overlap-light">
+                                    <i class="fas fa-fw fa-comment-alt"></i>
+                                </div>
+                                <a class="c_white bg_black-5 c_white flex_none h:bg_black-7 inline-block p_2 shadow_overlap-light"
+                                    target="_blank" href="item-coveo-arches-main.html"
+                                    title="pop out component into new tab">
+                                    <i class="fa-external-link fa-fw fas fa-fw fas"></i>
+                                </a>
+                            </div>
+                            <p class="kss-section__source font_n3"> Source: <span>dist/css/standalone_coveo.css</span>, line
+                                <span>289</span>
+                            </p>
+                            <a class="kss-section__permalink" href="#kssref-coveo-arches-main">
+                                <h3 class="kss-section__item c_primary kss-section__item--depth-3">
+                                    <span class="kss-section__ref">1.1.5</span>
+                                    <span class="kss-section__name">Arches Coveo Result: Main</span>
+                                </h3>
+                            </a>
+                            <div class="kss-section__description reading-typography font-size_up overflow_auto ">
+                                <div class="font_n1">
+                                </div>
+                                <p>New and hopefully improved Coveo result list layout.</p>
+
+                            </div>
+                            <div class="bg_black-1 br-l_1 br_ br_radius kss-section__section__subComponents p-x_4 p_3">
+                                <div class="kss-section__section__subComponent">
+                                    Sub.Coveo.Credits - Credits
+Sub.Coveo.Thumbnail - Thumbnail
+                                </div>
+                                <h6 class="c_black-6 inline p-r_3"><i class="fal fa-object-group p-r_3"></i>Sub
+                                    Components in Design:</h6>
+                                <ul class="list ul_inline-pipe"></ul>
+                            </div>
+                        </article>
+                        <article class="kss-section__modifiers">
+                            <h1 class="kss-modifiers__heading"> Example 
+                            </h1>
+                            <div class="kss-modifiers__example">
+                                <div class="">
+                                    <article class="br_radius br_1 br_black-2 bg_black_-05 br_solid p_4 relative m-b_4 font_ui">
+    <div class="absolute r_n1 t_3 text_center flex flex_column:md justify_end align-right font_n2:md font_n3 overflow_hidden">
+        <div class="flex flex_row justify_end c_white"><span class="flex_shrink p-y_2 p-x_3 br_1 br_solid br_white-7 bg_acc-1"><span class="p-x_2 m-t_1 m-b_2">editor’s pick</span> <i class="fas fa-fw m-t_1 m-b_2 fa-thumbs-up"></i></span></div>
+    </div>
+    <div class="flex flex_row:md flex_column gap-x_4">
+        <div class="aspect_1x1 flex_none" style="width: clamp(75px, 10vw, 125px);">
+        	<img src="https://picsum.photos/110/110" alt="" class="w_100">
+        </div>        <div class="flex_auto m-r_4:md">
+            <span class="journal-title c_accent-2 font_bold uppercase wrap block:md font_n1">Cardiovascular Team Section</span>
+            <h2 class="article-title c_primary-n2 cursor_pointer font_1 font_3:md font_display font_medium  h:underline lh_1 m-y_2">Long-Term Cardiovascular Outcomes After Bariatric Surgery in the Medicare Population | Journal of the American College of Cardiology</h2>
+            <div class="meta m-t_2:md m-l_3 m-l_0:md m-b_3 m-b_0:md font_bold">
+                <span class="c_black-7 m-r_3">Apr 11, 2022</span>
+                <a href="/">Julianne Fallon, PharmD</a>
+            </div>
+            <div class="font-size_down font_bold m-b_0:md m-b_3 m-l_0:md m-l_3 meta">
+                <span class="c_black-6 font_italic m-r_3"><strong class="p-r_3">On Demand Till:</strong>June 11, 2022</span>
+            </div>
+            <div class="credits">
+            	<ul class="ul_none flex flex_wrap font_n2 font_n1:md font_n1:print self_end">
+            		<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+            			<div class="inline-block br_1 br_radius c_white  br_CNE-n1 bg_CNE br_solid">
+            				<div class="flex flex_nowrap p-y_2 p-x_3 lh_2">
+            					<span class="flex_auto">CNE</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
+            				</div>
+            			</div>
+            		</li>		<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+            			<div class="inline-block br_1 br_radius c_white  br_CME-n1 bg_CME br_solid">
+            				<div class="flex flex_nowrap p-y_2 p-x_3 lh_2">
+            					<span class="flex_auto">CME</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
+            				</div>
+            			</div>
+            		</li>		<li class="block inline-block:md flex_shrink block:print m-y_2 m-x_2">
+            			<div class="inline-block br_1 br_radius c_white  br_COP-n1 bg_COP br_solid">
+            				<div class="flex flex_nowrap p-y_2 p-x_3 lh_2">
+            					<span class="flex_auto">COP</span> <span class="flex_shrink"><i class="fa-horizontal-rule fa-rotate-90 far"></i></span> <span class="flex_auto font_bold">1</span>
+            				</div>
+            			</div>
+            		</li>	</ul>
+            </div>        </div>
+    </div>
+    <div class="flex flex_row:md flex_column gap-x_4">
+        <div class="flex flex_column-reverse flex_row:md gap-x_4">
+            <div class="article-content">
+                <p class="excerpt font_copy font_0 lh_2 m-b_3 m-t_2 z_1">The patient is an 80-year-old male with a history of diabetes mellitus type 2, end stage renal disease, chronic obstructive pulmonary disease (COPD), and lung cancer with recent radiation therapy. He is seen in the emergency department because of...</p>
+                <div class="authors-list p-y_1 font_n2:md font_n3">
+                    <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Ty J. Gluckman, MD, MHA, FACC</a>
+                    <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Nicole M. Bhave, MD, FACC</a>
+                    <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Larry A. Allen, MD, MHS, FACC</a>
+                    <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Eugene H. Chung, MD, MSc, FACC</a>
+                    <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Erica S. Spatz, MD, MHS, FACC</a>
+                    <span class="collapse" id="authorToggle">
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Enrico Ammirati, MD, PhD</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Aaron L. Baggish, MD, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Biykem Bozkurt, MD, PhD, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>William K. Cornwell, III, MD, MSCS</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Kimberly G. Harmon, MD</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Jonathan H. Kim, MD, MSc, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Anuradha Lala, MD, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Benjamin D. Levine, MD, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Matthew W. Martinez, MD, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Oyere Onuma, MD, MSc</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Dermot Phelan, MD, PhD, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Valentina O. Puntmann, MD, PhD</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Saurabh Rajpal, MD, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Pam R. Taub, MD, FACC</a>
+                        <a class="link z_3 inline-block p-x_2  h:underline cursor_pointer"><i class="fa fa-user p-r_2 opacity_5"></i>Amanda K. Verma, MD, FACC</a>
+                    </span>
+                    <a class="font_bold" data-bs-toggle="collapse" href="#authorToggle" role="button" aria-expanded="false" aria-controls="authorToggle">Show More</a>
+                </div>
+                <div class="topics-list p-y_1 font_n2:md font_n3">
+                    <ul class="ul_inline-comma">
+                        <li class="no-after font_bold">Clinical Topics: </li>
+                        <li><a href="/">Acute Coronary Syndromes</a></li>
+                        <li><a href="/">Arrhythmias and Clinical EP</a></li>
+                        <li><a href="/">Cardiac Surgery</a></li>
+                        <li><a href="/">Heart Failure and Cardiomyopathies</a></li>
+                        <li><a href="/">Invasive Cardiovascular Angiography and Intervention</a></li>
+                        <li><a href="/">Prevention</a></li>
+                    </ul>
+                    <div class="collapse" id="topicsToggle">
+                        <ul class="ul_inline-comma">
+                            <li><a href="/">Vascular Medicine</a></li>
+                            <li><a href="/">Atherosclerotic Disease (CAD/PAD)</a></li>
+                            <li><a href="/">Implantable Devices</a></li>
+                            <li><a href="/">SCD/Ventricular Arrhythmias</a></li>
+                            <li><a href="/">Aortic Surgery</a></li>
+                            <li><a href="/">Cardiac Surgery and Arrhythmias</a></li>
+                            <li><a href="/">Cardiac Surgery and Heart Failure</a></li>
+                            <li><a href="/">Acute Heart Failure</a></li>
+                            <li><a href="/">Interventions and ACS</a></li>
+                            <li><a href="/">Interventions and Vascular Medicine</a></li>
+                        </ul>
+                    </div>
+                    <a class="font_bold" data-bs-toggle="collapse" href="#topicsToggle" role="button" aria-expanded="false" aria-controls="topicsToggle">Show More</a>
+                </div>
+                <div class="keywords-list p-y_1 font_n2:md font_n3">
+                    <ul class="ul_inline-comma">
+                        <li class="no-after font_bold">Keywords: </li>
+                        <li>Acute Coronary Syndrome</li>
+                        <li>Cardiac Surgical Procedures</li>
+                        <li>Coronary Artery Bypass</li>
+                        <li>Heart Arrest</li>
+                        <li>Heart Failure</li>
+                    </ul>
+                    <div class="collapse" id="keywordsToggle">
+                        <ul class="ul_inline-comma">
+                            <li>Hemorrhage</li>
+                            <li>Hospital Mortality</li>
+                            <li>Ischemic Attack, Transient</li>
+                            <li>Lower Extremity</li>
+                            <li>Myocardial Infarction</li>
+                            <li>Myocardial Revascularization</li>
+                            <li>Patient Care Team</li>
+                            <li>Percutaneous Coronary Intervention</li>
+                            <li>Peripheral Arterial Disease</li>
+                            <li>Risk Factors</li>
+                            <li>Secondary Prevention</li>
+                            <li>Shock, Cardiogenic</li>
+                            <li>Stroke</li>
+                            <li>Vascular Diseases</li>
+                        </ul>
+                    </div>
+                    <a class="font_bold" data-bs-toggle="collapse" href="#keywordsToggle" role="button" aria-expanded="false" aria-controls="keywordsToggle">Show More</a>
+                </div>
+                <div>
+                    <ul class="additional-details ul_none font_n1">
+                        <li><span class="font_bold">Webinars: </span> Live</li>
+                        <li><span class="font_bold">Online: </span> Yes</li>
+                        <li><span class="font_bold">Access Type:</span> Paid</li>
+                        <li><span class="font_bold">Price: </span> $888</li>
+                        <li><span class="font_bold">Document Type:</span> Guidelines</li>
+                        <li><span class="font_bold">Publish Date:</span> Mar 28, 2014</li>
+                        <li><span class="font_bold">Focused Update:</span> Jan 28, 2019 <a class="link c_primary h:c_primary-n2" href="/" target="_blank">(Open Update)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="article-tools m-l_0 m-l_4:md m-y_2">
+                <a href="/" class="font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5"><i class="fas fa-volume m-r_3"></i> <span class="nowrap text">Summary</span></a>
+                <a href="/" class="font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5"><i class="fas fa-calendar m-r_3"></i> <span class="nowrap text">iCal</span></a>
+                <a href="/" class="font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5"><i class="fas fa-file-pdf m-r_3"></i> <span class="nowrap text">PDF</span></a>
+                <a href="/" class="font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5"><i class="fas fa-file-pdf m-r_3"></i> <span class="nowrap text">PDF</span></a>
+                <a href="/" class="font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5"><i class="fas fa-book-open m-r_3"></i> <span class="nowrap text">JACC</span></a>
+                <a href="/" class="font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5"><i class="fas fa-search alt m-r_3"></i> <span class="nowrap text">Search</span></a>
+            </div>
+        </div>
+    </div>
+</article>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="bg_highlight-4 block c_black inline-block p-y_3 p-x_4 w_100">
+                            <h5 class="font_bold m_0 c_black">NOTE:</h5>
+                            Merge all the things.
+                        </div>
+                        <section
+                            class="relative  br-t_1 br_solid br_black-2 bg_black-1 shadow_n1 texture_light">
+                            <main class="kss-section__markup overflow_scroll scrollbar-mini collapse transition_3"
+                                id="collapse-coveo-arches-main">
+                                <pre><code class="language-markup"  id="code-coveo-arches-main" value='&lt;article class&#x3D;&quot;br_radius br_1 br_black-2 bg_black_-05 br_solid p_4 relative m-b_4 font_ui&quot;&gt;
+    &lt;div class&#x3D;&quot;absolute r_n1 t_3 text_center flex flex_column:md justify_end align-right font_n2:md font_n3 overflow_hidden&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex_row justify_end c_white&quot;&gt;&lt;span class&#x3D;&quot;flex_shrink p-y_2 p-x_3 br_1 br_solid br_white-7 bg_acc-1&quot;&gt;&lt;span class&#x3D;&quot;p-x_2 m-t_1 m-b_2&quot;&gt;editor’s pick&lt;/span&gt; &lt;i class&#x3D;&quot;fas fa-fw m-t_1 m-b_2 fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;flex flex_row:md flex_column gap-x_4&quot;&gt;
+        &lt;div class&#x3D;&quot;aspect_1x1 flex_none&quot; style&#x3D;&quot;width: clamp(75px, 10vw, 125px);&quot;&gt;
+        	&lt;img src&#x3D;&quot;https://picsum.photos/110/110&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;w_100&quot;&gt;
+        &lt;/div&gt;        &lt;div class&#x3D;&quot;flex_auto m-r_4:md&quot;&gt;
+            &lt;span class&#x3D;&quot;journal-title c_accent-2 font_bold uppercase wrap block:md font_n1&quot;&gt;Cardiovascular Team Section&lt;/span&gt;
+            &lt;h2 class&#x3D;&quot;article-title c_primary-n2 cursor_pointer font_1 font_3:md font_display font_medium  h:underline lh_1 m-y_2&quot;&gt;Long-Term Cardiovascular Outcomes After Bariatric Surgery in the Medicare Population | Journal of the American College of Cardiology&lt;/h2&gt;
+            &lt;div class&#x3D;&quot;meta m-t_2:md m-l_3 m-l_0:md m-b_3 m-b_0:md font_bold&quot;&gt;
+                &lt;span class&#x3D;&quot;c_black-7 m-r_3&quot;&gt;Apr 11, 2022&lt;/span&gt;
+                &lt;a href&#x3D;&quot;/&quot;&gt;Julianne Fallon, PharmD&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;font-size_down font_bold m-b_0:md m-b_3 m-l_0:md m-l_3 meta&quot;&gt;
+                &lt;span class&#x3D;&quot;c_black-6 font_italic m-r_3&quot;&gt;&lt;strong class&#x3D;&quot;p-r_3&quot;&gt;On Demand Till:&lt;/strong&gt;June 11, 2022&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;credits&quot;&gt;
+            	&lt;ul class&#x3D;&quot;ul_none flex flex_wrap font_n2 font_n1:md font_n1:print self_end&quot;&gt;
+            		&lt;li class&#x3D;&quot;block inline-block:md flex_shrink block:print m-y_2 m-x_2&quot;&gt;
+            			&lt;div class&#x3D;&quot;inline-block br_1 br_radius c_white  br_CNE-n1 bg_CNE br_solid&quot;&gt;
+            				&lt;div class&#x3D;&quot;flex flex_nowrap p-y_2 p-x_3 lh_2&quot;&gt;
+            					&lt;span class&#x3D;&quot;flex_auto&quot;&gt;CNE&lt;/span&gt; &lt;span class&#x3D;&quot;flex_shrink&quot;&gt;&lt;i class&#x3D;&quot;fa-horizontal-rule fa-rotate-90 far&quot;&gt;&lt;/i&gt;&lt;/span&gt; &lt;span class&#x3D;&quot;flex_auto font_bold&quot;&gt;1&lt;/span&gt;
+            				&lt;/div&gt;
+            			&lt;/div&gt;
+            		&lt;/li&gt;		&lt;li class&#x3D;&quot;block inline-block:md flex_shrink block:print m-y_2 m-x_2&quot;&gt;
+            			&lt;div class&#x3D;&quot;inline-block br_1 br_radius c_white  br_CME-n1 bg_CME br_solid&quot;&gt;
+            				&lt;div class&#x3D;&quot;flex flex_nowrap p-y_2 p-x_3 lh_2&quot;&gt;
+            					&lt;span class&#x3D;&quot;flex_auto&quot;&gt;CME&lt;/span&gt; &lt;span class&#x3D;&quot;flex_shrink&quot;&gt;&lt;i class&#x3D;&quot;fa-horizontal-rule fa-rotate-90 far&quot;&gt;&lt;/i&gt;&lt;/span&gt; &lt;span class&#x3D;&quot;flex_auto font_bold&quot;&gt;1&lt;/span&gt;
+            				&lt;/div&gt;
+            			&lt;/div&gt;
+            		&lt;/li&gt;		&lt;li class&#x3D;&quot;block inline-block:md flex_shrink block:print m-y_2 m-x_2&quot;&gt;
+            			&lt;div class&#x3D;&quot;inline-block br_1 br_radius c_white  br_COP-n1 bg_COP br_solid&quot;&gt;
+            				&lt;div class&#x3D;&quot;flex flex_nowrap p-y_2 p-x_3 lh_2&quot;&gt;
+            					&lt;span class&#x3D;&quot;flex_auto&quot;&gt;COP&lt;/span&gt; &lt;span class&#x3D;&quot;flex_shrink&quot;&gt;&lt;i class&#x3D;&quot;fa-horizontal-rule fa-rotate-90 far&quot;&gt;&lt;/i&gt;&lt;/span&gt; &lt;span class&#x3D;&quot;flex_auto font_bold&quot;&gt;1&lt;/span&gt;
+            				&lt;/div&gt;
+            			&lt;/div&gt;
+            		&lt;/li&gt;	&lt;/ul&gt;
+            &lt;/div&gt;        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;flex flex_row:md flex_column gap-x_4&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex_column-reverse flex_row:md gap-x_4&quot;&gt;
+            &lt;div class&#x3D;&quot;article-content&quot;&gt;
+                &lt;p class&#x3D;&quot;excerpt font_copy font_0 lh_2 m-b_3 m-t_2 z_1&quot;&gt;The patient is an 80-year-old male with a history of diabetes mellitus type 2, end stage renal disease, chronic obstructive pulmonary disease (COPD), and lung cancer with recent radiation therapy. He is seen in the emergency department because of...&lt;/p&gt;
+                &lt;div class&#x3D;&quot;authors-list p-y_1 font_n2:md font_n3&quot;&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Ty J. Gluckman, MD, MHA, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Nicole M. Bhave, MD, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Larry A. Allen, MD, MHS, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Eugene H. Chung, MD, MSc, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Erica S. Spatz, MD, MHS, FACC&lt;/a&gt;
+                    &lt;span class&#x3D;&quot;collapse&quot; id&#x3D;&quot;authorToggle&quot;&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Enrico Ammirati, MD, PhD&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Aaron L. Baggish, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Biykem Bozkurt, MD, PhD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;William K. Cornwell, III, MD, MSCS&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Kimberly G. Harmon, MD&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Jonathan H. Kim, MD, MSc, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Anuradha Lala, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Benjamin D. Levine, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Matthew W. Martinez, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Oyere Onuma, MD, MSc&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Dermot Phelan, MD, PhD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Valentina O. Puntmann, MD, PhD&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Saurabh Rajpal, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Pam R. Taub, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Amanda K. Verma, MD, FACC&lt;/a&gt;
+                    &lt;/span&gt;
+                    &lt;a class&#x3D;&quot;font_bold&quot; data-bs-toggle&#x3D;&quot;collapse&quot; href&#x3D;&quot;#authorToggle&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;authorToggle&quot;&gt;Show More&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;topics-list p-y_1 font_n2:md font_n3&quot;&gt;
+                    &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                        &lt;li class&#x3D;&quot;no-after font_bold&quot;&gt;Clinical Topics: &lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Acute Coronary Syndromes&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Arrhythmias and Clinical EP&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Cardiac Surgery&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Heart Failure and Cardiomyopathies&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Invasive Cardiovascular Angiography and Intervention&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Prevention&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;div class&#x3D;&quot;collapse&quot; id&#x3D;&quot;topicsToggle&quot;&gt;
+                        &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Vascular Medicine&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Atherosclerotic Disease (CAD/PAD)&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Implantable Devices&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;SCD/Ventricular Arrhythmias&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Aortic Surgery&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Cardiac Surgery and Arrhythmias&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Cardiac Surgery and Heart Failure&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Acute Heart Failure&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Interventions and ACS&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Interventions and Vascular Medicine&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;a class&#x3D;&quot;font_bold&quot; data-bs-toggle&#x3D;&quot;collapse&quot; href&#x3D;&quot;#topicsToggle&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;topicsToggle&quot;&gt;Show More&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;keywords-list p-y_1 font_n2:md font_n3&quot;&gt;
+                    &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                        &lt;li class&#x3D;&quot;no-after font_bold&quot;&gt;Keywords: &lt;/li&gt;
+                        &lt;li&gt;Acute Coronary Syndrome&lt;/li&gt;
+                        &lt;li&gt;Cardiac Surgical Procedures&lt;/li&gt;
+                        &lt;li&gt;Coronary Artery Bypass&lt;/li&gt;
+                        &lt;li&gt;Heart Arrest&lt;/li&gt;
+                        &lt;li&gt;Heart Failure&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;div class&#x3D;&quot;collapse&quot; id&#x3D;&quot;keywordsToggle&quot;&gt;
+                        &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                            &lt;li&gt;Hemorrhage&lt;/li&gt;
+                            &lt;li&gt;Hospital Mortality&lt;/li&gt;
+                            &lt;li&gt;Ischemic Attack, Transient&lt;/li&gt;
+                            &lt;li&gt;Lower Extremity&lt;/li&gt;
+                            &lt;li&gt;Myocardial Infarction&lt;/li&gt;
+                            &lt;li&gt;Myocardial Revascularization&lt;/li&gt;
+                            &lt;li&gt;Patient Care Team&lt;/li&gt;
+                            &lt;li&gt;Percutaneous Coronary Intervention&lt;/li&gt;
+                            &lt;li&gt;Peripheral Arterial Disease&lt;/li&gt;
+                            &lt;li&gt;Risk Factors&lt;/li&gt;
+                            &lt;li&gt;Secondary Prevention&lt;/li&gt;
+                            &lt;li&gt;Shock, Cardiogenic&lt;/li&gt;
+                            &lt;li&gt;Stroke&lt;/li&gt;
+                            &lt;li&gt;Vascular Diseases&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;a class&#x3D;&quot;font_bold&quot; data-bs-toggle&#x3D;&quot;collapse&quot; href&#x3D;&quot;#keywordsToggle&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;keywordsToggle&quot;&gt;Show More&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;ul class&#x3D;&quot;additional-details ul_none font_n1&quot;&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Webinars: &lt;/span&gt; Live&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Online: &lt;/span&gt; Yes&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Access Type:&lt;/span&gt; Paid&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Price: &lt;/span&gt; $888&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Document Type:&lt;/span&gt; Guidelines&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Publish Date:&lt;/span&gt; Mar 28, 2014&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Focused Update:&lt;/span&gt; Jan 28, 2019 &lt;a class&#x3D;&quot;link c_primary h:c_primary-n2&quot; href&#x3D;&quot;/&quot; target&#x3D;&quot;_blank&quot;&gt;(Open Update)&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;article-tools m-l_0 m-l_4:md m-y_2&quot;&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-volume m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;Summary&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-calendar m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;iCal&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-file-pdf m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;PDF&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-file-pdf m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;PDF&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-book-open m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;JACC&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-search alt m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;Search&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;'>&lt;article class&#x3D;&quot;br_radius br_1 br_black-2 bg_black_-05 br_solid p_4 relative m-b_4 font_ui&quot;&gt;
+    &lt;div class&#x3D;&quot;absolute r_n1 t_3 text_center flex flex_column:md justify_end align-right font_n2:md font_n3 overflow_hidden&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex_row justify_end c_white&quot;&gt;&lt;span class&#x3D;&quot;flex_shrink p-y_2 p-x_3 br_1 br_solid br_white-7 bg_acc-1&quot;&gt;&lt;span class&#x3D;&quot;p-x_2 m-t_1 m-b_2&quot;&gt;editor’s pick&lt;/span&gt; &lt;i class&#x3D;&quot;fas fa-fw m-t_1 m-b_2 fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;flex flex_row:md flex_column gap-x_4&quot;&gt;
+        &lt;div class&#x3D;&quot;aspect_1x1 flex_none&quot; style&#x3D;&quot;width: clamp(75px, 10vw, 125px);&quot;&gt;
+        	&lt;img src&#x3D;&quot;https://picsum.photos/110/110&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;w_100&quot;&gt;
+        &lt;/div&gt;        &lt;div class&#x3D;&quot;flex_auto m-r_4:md&quot;&gt;
+            &lt;span class&#x3D;&quot;journal-title c_accent-2 font_bold uppercase wrap block:md font_n1&quot;&gt;Cardiovascular Team Section&lt;/span&gt;
+            &lt;h2 class&#x3D;&quot;article-title c_primary-n2 cursor_pointer font_1 font_3:md font_display font_medium  h:underline lh_1 m-y_2&quot;&gt;Long-Term Cardiovascular Outcomes After Bariatric Surgery in the Medicare Population | Journal of the American College of Cardiology&lt;/h2&gt;
+            &lt;div class&#x3D;&quot;meta m-t_2:md m-l_3 m-l_0:md m-b_3 m-b_0:md font_bold&quot;&gt;
+                &lt;span class&#x3D;&quot;c_black-7 m-r_3&quot;&gt;Apr 11, 2022&lt;/span&gt;
+                &lt;a href&#x3D;&quot;/&quot;&gt;Julianne Fallon, PharmD&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;font-size_down font_bold m-b_0:md m-b_3 m-l_0:md m-l_3 meta&quot;&gt;
+                &lt;span class&#x3D;&quot;c_black-6 font_italic m-r_3&quot;&gt;&lt;strong class&#x3D;&quot;p-r_3&quot;&gt;On Demand Till:&lt;/strong&gt;June 11, 2022&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;credits&quot;&gt;
+            	&lt;ul class&#x3D;&quot;ul_none flex flex_wrap font_n2 font_n1:md font_n1:print self_end&quot;&gt;
+            		&lt;li class&#x3D;&quot;block inline-block:md flex_shrink block:print m-y_2 m-x_2&quot;&gt;
+            			&lt;div class&#x3D;&quot;inline-block br_1 br_radius c_white  br_CNE-n1 bg_CNE br_solid&quot;&gt;
+            				&lt;div class&#x3D;&quot;flex flex_nowrap p-y_2 p-x_3 lh_2&quot;&gt;
+            					&lt;span class&#x3D;&quot;flex_auto&quot;&gt;CNE&lt;/span&gt; &lt;span class&#x3D;&quot;flex_shrink&quot;&gt;&lt;i class&#x3D;&quot;fa-horizontal-rule fa-rotate-90 far&quot;&gt;&lt;/i&gt;&lt;/span&gt; &lt;span class&#x3D;&quot;flex_auto font_bold&quot;&gt;1&lt;/span&gt;
+            				&lt;/div&gt;
+            			&lt;/div&gt;
+            		&lt;/li&gt;		&lt;li class&#x3D;&quot;block inline-block:md flex_shrink block:print m-y_2 m-x_2&quot;&gt;
+            			&lt;div class&#x3D;&quot;inline-block br_1 br_radius c_white  br_CME-n1 bg_CME br_solid&quot;&gt;
+            				&lt;div class&#x3D;&quot;flex flex_nowrap p-y_2 p-x_3 lh_2&quot;&gt;
+            					&lt;span class&#x3D;&quot;flex_auto&quot;&gt;CME&lt;/span&gt; &lt;span class&#x3D;&quot;flex_shrink&quot;&gt;&lt;i class&#x3D;&quot;fa-horizontal-rule fa-rotate-90 far&quot;&gt;&lt;/i&gt;&lt;/span&gt; &lt;span class&#x3D;&quot;flex_auto font_bold&quot;&gt;1&lt;/span&gt;
+            				&lt;/div&gt;
+            			&lt;/div&gt;
+            		&lt;/li&gt;		&lt;li class&#x3D;&quot;block inline-block:md flex_shrink block:print m-y_2 m-x_2&quot;&gt;
+            			&lt;div class&#x3D;&quot;inline-block br_1 br_radius c_white  br_COP-n1 bg_COP br_solid&quot;&gt;
+            				&lt;div class&#x3D;&quot;flex flex_nowrap p-y_2 p-x_3 lh_2&quot;&gt;
+            					&lt;span class&#x3D;&quot;flex_auto&quot;&gt;COP&lt;/span&gt; &lt;span class&#x3D;&quot;flex_shrink&quot;&gt;&lt;i class&#x3D;&quot;fa-horizontal-rule fa-rotate-90 far&quot;&gt;&lt;/i&gt;&lt;/span&gt; &lt;span class&#x3D;&quot;flex_auto font_bold&quot;&gt;1&lt;/span&gt;
+            				&lt;/div&gt;
+            			&lt;/div&gt;
+            		&lt;/li&gt;	&lt;/ul&gt;
+            &lt;/div&gt;        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;flex flex_row:md flex_column gap-x_4&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex_column-reverse flex_row:md gap-x_4&quot;&gt;
+            &lt;div class&#x3D;&quot;article-content&quot;&gt;
+                &lt;p class&#x3D;&quot;excerpt font_copy font_0 lh_2 m-b_3 m-t_2 z_1&quot;&gt;The patient is an 80-year-old male with a history of diabetes mellitus type 2, end stage renal disease, chronic obstructive pulmonary disease (COPD), and lung cancer with recent radiation therapy. He is seen in the emergency department because of...&lt;/p&gt;
+                &lt;div class&#x3D;&quot;authors-list p-y_1 font_n2:md font_n3&quot;&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Ty J. Gluckman, MD, MHA, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Nicole M. Bhave, MD, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Larry A. Allen, MD, MHS, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Eugene H. Chung, MD, MSc, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Erica S. Spatz, MD, MHS, FACC&lt;/a&gt;
+                    &lt;span class&#x3D;&quot;collapse&quot; id&#x3D;&quot;authorToggle&quot;&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Enrico Ammirati, MD, PhD&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Aaron L. Baggish, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Biykem Bozkurt, MD, PhD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;William K. Cornwell, III, MD, MSCS&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Kimberly G. Harmon, MD&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Jonathan H. Kim, MD, MSc, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Anuradha Lala, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Benjamin D. Levine, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Matthew W. Martinez, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Oyere Onuma, MD, MSc&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Dermot Phelan, MD, PhD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Valentina O. Puntmann, MD, PhD&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Saurabh Rajpal, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Pam R. Taub, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Amanda K. Verma, MD, FACC&lt;/a&gt;
+                    &lt;/span&gt;
+                    &lt;a class&#x3D;&quot;font_bold&quot; data-bs-toggle&#x3D;&quot;collapse&quot; href&#x3D;&quot;#authorToggle&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;authorToggle&quot;&gt;Show More&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;topics-list p-y_1 font_n2:md font_n3&quot;&gt;
+                    &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                        &lt;li class&#x3D;&quot;no-after font_bold&quot;&gt;Clinical Topics: &lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Acute Coronary Syndromes&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Arrhythmias and Clinical EP&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Cardiac Surgery&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Heart Failure and Cardiomyopathies&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Invasive Cardiovascular Angiography and Intervention&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Prevention&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;div class&#x3D;&quot;collapse&quot; id&#x3D;&quot;topicsToggle&quot;&gt;
+                        &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Vascular Medicine&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Atherosclerotic Disease (CAD/PAD)&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Implantable Devices&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;SCD/Ventricular Arrhythmias&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Aortic Surgery&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Cardiac Surgery and Arrhythmias&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Cardiac Surgery and Heart Failure&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Acute Heart Failure&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Interventions and ACS&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Interventions and Vascular Medicine&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;a class&#x3D;&quot;font_bold&quot; data-bs-toggle&#x3D;&quot;collapse&quot; href&#x3D;&quot;#topicsToggle&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;topicsToggle&quot;&gt;Show More&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;keywords-list p-y_1 font_n2:md font_n3&quot;&gt;
+                    &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                        &lt;li class&#x3D;&quot;no-after font_bold&quot;&gt;Keywords: &lt;/li&gt;
+                        &lt;li&gt;Acute Coronary Syndrome&lt;/li&gt;
+                        &lt;li&gt;Cardiac Surgical Procedures&lt;/li&gt;
+                        &lt;li&gt;Coronary Artery Bypass&lt;/li&gt;
+                        &lt;li&gt;Heart Arrest&lt;/li&gt;
+                        &lt;li&gt;Heart Failure&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;div class&#x3D;&quot;collapse&quot; id&#x3D;&quot;keywordsToggle&quot;&gt;
+                        &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                            &lt;li&gt;Hemorrhage&lt;/li&gt;
+                            &lt;li&gt;Hospital Mortality&lt;/li&gt;
+                            &lt;li&gt;Ischemic Attack, Transient&lt;/li&gt;
+                            &lt;li&gt;Lower Extremity&lt;/li&gt;
+                            &lt;li&gt;Myocardial Infarction&lt;/li&gt;
+                            &lt;li&gt;Myocardial Revascularization&lt;/li&gt;
+                            &lt;li&gt;Patient Care Team&lt;/li&gt;
+                            &lt;li&gt;Percutaneous Coronary Intervention&lt;/li&gt;
+                            &lt;li&gt;Peripheral Arterial Disease&lt;/li&gt;
+                            &lt;li&gt;Risk Factors&lt;/li&gt;
+                            &lt;li&gt;Secondary Prevention&lt;/li&gt;
+                            &lt;li&gt;Shock, Cardiogenic&lt;/li&gt;
+                            &lt;li&gt;Stroke&lt;/li&gt;
+                            &lt;li&gt;Vascular Diseases&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;a class&#x3D;&quot;font_bold&quot; data-bs-toggle&#x3D;&quot;collapse&quot; href&#x3D;&quot;#keywordsToggle&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;keywordsToggle&quot;&gt;Show More&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;ul class&#x3D;&quot;additional-details ul_none font_n1&quot;&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Webinars: &lt;/span&gt; Live&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Online: &lt;/span&gt; Yes&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Access Type:&lt;/span&gt; Paid&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Price: &lt;/span&gt; $888&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Document Type:&lt;/span&gt; Guidelines&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Publish Date:&lt;/span&gt; Mar 28, 2014&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Focused Update:&lt;/span&gt; Jan 28, 2019 &lt;a class&#x3D;&quot;link c_primary h:c_primary-n2&quot; href&#x3D;&quot;/&quot; target&#x3D;&quot;_blank&quot;&gt;(Open Update)&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;article-tools m-l_0 m-l_4:md m-y_2&quot;&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-volume m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;Summary&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-calendar m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;iCal&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-file-pdf m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;PDF&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-file-pdf m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;PDF&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-book-open m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;JACC&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-search alt m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;Search&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                                <textarea class="display_none text-input html-code-input" type="text" name=""
+                                    id="input-coveo-arches-main">&lt;article class&#x3D;&quot;br_radius br_1 br_black-2 bg_black_-05 br_solid p_4 relative m-b_4 font_ui&quot;&gt;
+    &lt;div class&#x3D;&quot;absolute r_n1 t_3 text_center flex flex_column:md justify_end align-right font_n2:md font_n3 overflow_hidden&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex_row justify_end c_white&quot;&gt;&lt;span class&#x3D;&quot;flex_shrink p-y_2 p-x_3 br_1 br_solid br_white-7 bg_acc-1&quot;&gt;&lt;span class&#x3D;&quot;p-x_2 m-t_1 m-b_2&quot;&gt;editor’s pick&lt;/span&gt; &lt;i class&#x3D;&quot;fas fa-fw m-t_1 m-b_2 fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;flex flex_row:md flex_column gap-x_4&quot;&gt;
+        &lt;div class&#x3D;&quot;aspect_1x1 flex_none&quot; style&#x3D;&quot;width: clamp(75px, 10vw, 125px);&quot;&gt;
+        	&lt;img src&#x3D;&quot;https://picsum.photos/110/110&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;w_100&quot;&gt;
+        &lt;/div&gt;        &lt;div class&#x3D;&quot;flex_auto m-r_4:md&quot;&gt;
+            &lt;span class&#x3D;&quot;journal-title c_accent-2 font_bold uppercase wrap block:md font_n1&quot;&gt;Cardiovascular Team Section&lt;/span&gt;
+            &lt;h2 class&#x3D;&quot;article-title c_primary-n2 cursor_pointer font_1 font_3:md font_display font_medium  h:underline lh_1 m-y_2&quot;&gt;Long-Term Cardiovascular Outcomes After Bariatric Surgery in the Medicare Population | Journal of the American College of Cardiology&lt;/h2&gt;
+            &lt;div class&#x3D;&quot;meta m-t_2:md m-l_3 m-l_0:md m-b_3 m-b_0:md font_bold&quot;&gt;
+                &lt;span class&#x3D;&quot;c_black-7 m-r_3&quot;&gt;Apr 11, 2022&lt;/span&gt;
+                &lt;a href&#x3D;&quot;/&quot;&gt;Julianne Fallon, PharmD&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;font-size_down font_bold m-b_0:md m-b_3 m-l_0:md m-l_3 meta&quot;&gt;
+                &lt;span class&#x3D;&quot;c_black-6 font_italic m-r_3&quot;&gt;&lt;strong class&#x3D;&quot;p-r_3&quot;&gt;On Demand Till:&lt;/strong&gt;June 11, 2022&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;credits&quot;&gt;
+            	&lt;ul class&#x3D;&quot;ul_none flex flex_wrap font_n2 font_n1:md font_n1:print self_end&quot;&gt;
+            		&lt;li class&#x3D;&quot;block inline-block:md flex_shrink block:print m-y_2 m-x_2&quot;&gt;
+            			&lt;div class&#x3D;&quot;inline-block br_1 br_radius c_white  br_CNE-n1 bg_CNE br_solid&quot;&gt;
+            				&lt;div class&#x3D;&quot;flex flex_nowrap p-y_2 p-x_3 lh_2&quot;&gt;
+            					&lt;span class&#x3D;&quot;flex_auto&quot;&gt;CNE&lt;/span&gt; &lt;span class&#x3D;&quot;flex_shrink&quot;&gt;&lt;i class&#x3D;&quot;fa-horizontal-rule fa-rotate-90 far&quot;&gt;&lt;/i&gt;&lt;/span&gt; &lt;span class&#x3D;&quot;flex_auto font_bold&quot;&gt;1&lt;/span&gt;
+            				&lt;/div&gt;
+            			&lt;/div&gt;
+            		&lt;/li&gt;		&lt;li class&#x3D;&quot;block inline-block:md flex_shrink block:print m-y_2 m-x_2&quot;&gt;
+            			&lt;div class&#x3D;&quot;inline-block br_1 br_radius c_white  br_CME-n1 bg_CME br_solid&quot;&gt;
+            				&lt;div class&#x3D;&quot;flex flex_nowrap p-y_2 p-x_3 lh_2&quot;&gt;
+            					&lt;span class&#x3D;&quot;flex_auto&quot;&gt;CME&lt;/span&gt; &lt;span class&#x3D;&quot;flex_shrink&quot;&gt;&lt;i class&#x3D;&quot;fa-horizontal-rule fa-rotate-90 far&quot;&gt;&lt;/i&gt;&lt;/span&gt; &lt;span class&#x3D;&quot;flex_auto font_bold&quot;&gt;1&lt;/span&gt;
+            				&lt;/div&gt;
+            			&lt;/div&gt;
+            		&lt;/li&gt;		&lt;li class&#x3D;&quot;block inline-block:md flex_shrink block:print m-y_2 m-x_2&quot;&gt;
+            			&lt;div class&#x3D;&quot;inline-block br_1 br_radius c_white  br_COP-n1 bg_COP br_solid&quot;&gt;
+            				&lt;div class&#x3D;&quot;flex flex_nowrap p-y_2 p-x_3 lh_2&quot;&gt;
+            					&lt;span class&#x3D;&quot;flex_auto&quot;&gt;COP&lt;/span&gt; &lt;span class&#x3D;&quot;flex_shrink&quot;&gt;&lt;i class&#x3D;&quot;fa-horizontal-rule fa-rotate-90 far&quot;&gt;&lt;/i&gt;&lt;/span&gt; &lt;span class&#x3D;&quot;flex_auto font_bold&quot;&gt;1&lt;/span&gt;
+            				&lt;/div&gt;
+            			&lt;/div&gt;
+            		&lt;/li&gt;	&lt;/ul&gt;
+            &lt;/div&gt;        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;flex flex_row:md flex_column gap-x_4&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex_column-reverse flex_row:md gap-x_4&quot;&gt;
+            &lt;div class&#x3D;&quot;article-content&quot;&gt;
+                &lt;p class&#x3D;&quot;excerpt font_copy font_0 lh_2 m-b_3 m-t_2 z_1&quot;&gt;The patient is an 80-year-old male with a history of diabetes mellitus type 2, end stage renal disease, chronic obstructive pulmonary disease (COPD), and lung cancer with recent radiation therapy. He is seen in the emergency department because of...&lt;/p&gt;
+                &lt;div class&#x3D;&quot;authors-list p-y_1 font_n2:md font_n3&quot;&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Ty J. Gluckman, MD, MHA, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Nicole M. Bhave, MD, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Larry A. Allen, MD, MHS, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Eugene H. Chung, MD, MSc, FACC&lt;/a&gt;
+                    &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Erica S. Spatz, MD, MHS, FACC&lt;/a&gt;
+                    &lt;span class&#x3D;&quot;collapse&quot; id&#x3D;&quot;authorToggle&quot;&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Enrico Ammirati, MD, PhD&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Aaron L. Baggish, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Biykem Bozkurt, MD, PhD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;William K. Cornwell, III, MD, MSCS&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Kimberly G. Harmon, MD&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Jonathan H. Kim, MD, MSc, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Anuradha Lala, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Benjamin D. Levine, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Matthew W. Martinez, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Oyere Onuma, MD, MSc&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Dermot Phelan, MD, PhD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Valentina O. Puntmann, MD, PhD&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Saurabh Rajpal, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Pam R. Taub, MD, FACC&lt;/a&gt;
+                        &lt;a class&#x3D;&quot;link z_3 inline-block p-x_2  h:underline cursor_pointer&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user p-r_2 opacity_5&quot;&gt;&lt;/i&gt;Amanda K. Verma, MD, FACC&lt;/a&gt;
+                    &lt;/span&gt;
+                    &lt;a class&#x3D;&quot;font_bold&quot; data-bs-toggle&#x3D;&quot;collapse&quot; href&#x3D;&quot;#authorToggle&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;authorToggle&quot;&gt;Show More&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;topics-list p-y_1 font_n2:md font_n3&quot;&gt;
+                    &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                        &lt;li class&#x3D;&quot;no-after font_bold&quot;&gt;Clinical Topics: &lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Acute Coronary Syndromes&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Arrhythmias and Clinical EP&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Cardiac Surgery&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Heart Failure and Cardiomyopathies&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Invasive Cardiovascular Angiography and Intervention&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Prevention&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;div class&#x3D;&quot;collapse&quot; id&#x3D;&quot;topicsToggle&quot;&gt;
+                        &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Vascular Medicine&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Atherosclerotic Disease (CAD/PAD)&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Implantable Devices&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;SCD/Ventricular Arrhythmias&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Aortic Surgery&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Cardiac Surgery and Arrhythmias&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Cardiac Surgery and Heart Failure&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Acute Heart Failure&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Interventions and ACS&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;/&quot;&gt;Interventions and Vascular Medicine&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;a class&#x3D;&quot;font_bold&quot; data-bs-toggle&#x3D;&quot;collapse&quot; href&#x3D;&quot;#topicsToggle&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;topicsToggle&quot;&gt;Show More&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;keywords-list p-y_1 font_n2:md font_n3&quot;&gt;
+                    &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                        &lt;li class&#x3D;&quot;no-after font_bold&quot;&gt;Keywords: &lt;/li&gt;
+                        &lt;li&gt;Acute Coronary Syndrome&lt;/li&gt;
+                        &lt;li&gt;Cardiac Surgical Procedures&lt;/li&gt;
+                        &lt;li&gt;Coronary Artery Bypass&lt;/li&gt;
+                        &lt;li&gt;Heart Arrest&lt;/li&gt;
+                        &lt;li&gt;Heart Failure&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;div class&#x3D;&quot;collapse&quot; id&#x3D;&quot;keywordsToggle&quot;&gt;
+                        &lt;ul class&#x3D;&quot;ul_inline-comma&quot;&gt;
+                            &lt;li&gt;Hemorrhage&lt;/li&gt;
+                            &lt;li&gt;Hospital Mortality&lt;/li&gt;
+                            &lt;li&gt;Ischemic Attack, Transient&lt;/li&gt;
+                            &lt;li&gt;Lower Extremity&lt;/li&gt;
+                            &lt;li&gt;Myocardial Infarction&lt;/li&gt;
+                            &lt;li&gt;Myocardial Revascularization&lt;/li&gt;
+                            &lt;li&gt;Patient Care Team&lt;/li&gt;
+                            &lt;li&gt;Percutaneous Coronary Intervention&lt;/li&gt;
+                            &lt;li&gt;Peripheral Arterial Disease&lt;/li&gt;
+                            &lt;li&gt;Risk Factors&lt;/li&gt;
+                            &lt;li&gt;Secondary Prevention&lt;/li&gt;
+                            &lt;li&gt;Shock, Cardiogenic&lt;/li&gt;
+                            &lt;li&gt;Stroke&lt;/li&gt;
+                            &lt;li&gt;Vascular Diseases&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;a class&#x3D;&quot;font_bold&quot; data-bs-toggle&#x3D;&quot;collapse&quot; href&#x3D;&quot;#keywordsToggle&quot; role&#x3D;&quot;button&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;keywordsToggle&quot;&gt;Show More&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;ul class&#x3D;&quot;additional-details ul_none font_n1&quot;&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Webinars: &lt;/span&gt; Live&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Online: &lt;/span&gt; Yes&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Access Type:&lt;/span&gt; Paid&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Price: &lt;/span&gt; $888&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Document Type:&lt;/span&gt; Guidelines&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Publish Date:&lt;/span&gt; Mar 28, 2014&lt;/li&gt;
+                        &lt;li&gt;&lt;span class&#x3D;&quot;font_bold&quot;&gt;Focused Update:&lt;/span&gt; Jan 28, 2019 &lt;a class&#x3D;&quot;link c_primary h:c_primary-n2&quot; href&#x3D;&quot;/&quot; target&#x3D;&quot;_blank&quot;&gt;(Open Update)&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;article-tools m-l_0 m-l_4:md m-y_2&quot;&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-volume m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;Summary&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-calendar m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;iCal&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-file-pdf m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;PDF&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-file-pdf m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;PDF&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-book-open m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;JACC&lt;/span&gt;&lt;/a&gt;
+                &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;font_ui p-x_4 p-y_2 c_primary h:c_white h:bg_primary font-medium block:md nowrap w_100:md text_left m-b_2 m-b_0:md h:undecorated bg_shade-5&quot;&gt;&lt;i class&#x3D;&quot;fas fa-search alt m-r_3&quot;&gt;&lt;/i&gt; &lt;span class&#x3D;&quot;nowrap text&quot;&gt;Search&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</textarea>
+                            </main>
+                            <header class="flex_row flex shadow_n1 br-br_radius br-bl_radius">
+                                <div class="flex flex_row flex_auto collapsed h:bg_black-7 br-bl_radius c_black-8 h:c_white"
+                                    aria-expanded="false" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse-coveo-arches-main"
+                                    aria-controls="#collapse-coveo-arches-main">
+                                    <div class="flex_none p_2 font_1">
+                                        <i class="a:rotation fa-fw fa-chevron-up fas self_center text_center"></i>
+                                    </div>
+                                    <div class="flex_auto flex flex_row">
+                                        <h4 class="font_0 font_bold flex_auto p-l_2 self_center m_0 text_left">Code
+                                            Sample</h4>
+                                    </div>
+                                </div>
+                                <a class="bg_primary br_1 br_black-3 br_solid c_white flex_none font_medium font_ui h:bg_primary-n2 h:undecorated m-l_auto p-x_3 p-y_2 br-br_radius"
+                                    onclick="CopyCode( 'input-coveo-arches-main')"><i class="fas fa-copy"></i> Copy
+                                    Code</a>
+                            </header>
+                        </section>
+                </header>
+            </main>
+        </div>
+        </section>
+        <div id="CopyDOM"></div>
+        <!-- /documentation. -->
+        <!-- scripts. -->
+        <script src="kss-assets/vendor/jquery.js"></script>
+        <script src="kss-assets/vendor/prism.js"></script>
+        <script src="kss-assets/js/kss.js"></script>
+        <script>
+            var CopyCode = function ($id) {
+                console.log('event triggered with ' + $id);
+                var codeToBeCopied = document.getElementById($id).innerText;
+                var emptyArea =  document.createElement('TEXTAREA');
+                emptyArea.innerHTML = codeToBeCopied;
+                const parentElement = document.getElementById('CopyDOM');
+                parentElement.appendChild(emptyArea);
+                emptyArea.select();
+                document.execCommand('copy');
+                parentElement.removeChild(emptyArea);
+            };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/toggleActive.js"></script>
+
+        <!-- /scripts. -->
+</body>
+
+</html>
