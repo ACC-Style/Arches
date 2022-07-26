@@ -26,6 +26,7 @@ In each brand documentation area you will see direct representations of the styl
 | [Virtual](boot_virtual/)         | Partially Documented | The virtual platform for events has been restarted to build with vendor                                                            |
 | [Library](boot_library/)         | Partially Documented | the library is a spin off of the data from events. to make the styling more interesting it is utilizing a different look and feel. |
 | [Coveo](coveo/)         	   | Partially Documented | An augmenting style sheet that renders results and search ui when using Coveo. |
+| [Covid](boot_covid/)         	   | Depreciated! | An augmenting style sheet that renders results and search ui when using Coveo. |
 
 ### Playgrounds Documentation
 

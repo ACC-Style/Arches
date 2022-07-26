@@ -1,8 +1,10 @@
+
 /**
  * arches - Global style system focused on utility classes
- * @version v1.02.0
+ * @version v1.52.0
  * @link https://github.com/ACC-Style/Arches/
  */
+
 
 /** /setup/__preheader.scss **/ 
 @use "sass:math";
@@ -34,7 +36,9 @@ $theme-palette: ();
  $active-class-name: 'active';
 
 /** No Framework or is a Style Sheet that Should be used as an augmenting stylesheet **/ 
-/** Built With Base Branding 1.02.0 **//**  ACC Brands    *********************************/
+
+ /** Built With Base Branding 1.52.0 **/
+ /**  ACC Brands    *********************************/
 $teal: #198dae;
 $green-blue: #16a385;
 $dark-grey: #676a72;
@@ -89,22 +93,22 @@ $theme-palette: map-merge(
 $fonts: (
     accent: (
         name: 'Roboto Slab',
-        short-name:'RS'
+        short-name:'RS',
         stack: '"Roboto Slab","Times New Roman","Lucida Bright",Georgia,serif,"slab"',
     ),
     display: (
         name: 'Libre Franklin',
-        short-name:'LF'
+        short-name:'LF',
         stack: '"Libre Franklin","Muli","Open Sans","system",sans-serif',
     ),
     copy: (
         name: 'Open Sans',
-        short-name:'OS'
+        short-name:'OS',
         stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     ),
     ui: (
         name: 'Open Sans',
-        short-name:'OS'
+        short-name:'OS',
         stack: '"Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     ),
 );
@@ -259,8 +263,7 @@ $line-height_2: get-css-size(line-height, 2);
 $line-height_3: get-css-size(line-height, 3);
 $line-height_4: get-css-size(line-height, 4);
 $line-height_5: get-css-size(line-height, 5);
-/** Base UC File **//**  Utility Classes    *********************************/
+
+/** Base UC File **/
+/**  Utility Classes    *********************************/
 @import "utility-css/utility-css";
-.updateDecoration{
-    background-color: get-themecolor(highlight,3) !important;
-}

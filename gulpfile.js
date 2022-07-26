@@ -232,7 +232,7 @@ var constructStandaloneStyleSheet = function (name, brand = "acc") {
 	return gulp
 		.src(PATHS.SCSS + "/setup/__globalshame_uc.scss")
 		.pipe(clone())
-		.pipe(rename("standalone_"+name + ".scss"))
+		.pipe(rename(name + ".scss"))
 		.pipe(headerFromFile("/recipes/__recipes." + name + ".scss"))
 		.pipe(header("\n/** Standalone CSS FILE **/\n"))
 		.pipe(headerFromFile("/styleguide/_" + name + ".scss"))
@@ -602,6 +602,7 @@ gulp.task(
 	gulp.series(
 		"build-home",
 		"build-acc",
+		"build-uc",
 		"build-coveo",
 		"build-glsearch",
 		"build-cvquality",
@@ -723,7 +724,26 @@ gulp.task(
 		"build-layout_demo",
 		"build-mobile",
 		"build-journal",
+		"build-covid"
+	)
+);
+
+gulp.task( "build-all",
+	gulp.series(
+		"build-home",
+		"build-acc",
+		"build-uc",
+		"build-coveo",
+		"build-glsearch",
+		"build-cvquality",
+		"build-cardiosmart",
 		"build-virtual",
-		"build-library"
+		"build-library",
+		"build-colors",
+		"build-layout_demo",
+		"build-mobile",
+		"build-journal",
+		"build-covid"
+		
 	)
 );

@@ -1,7 +1,7 @@
 /*** COLOR CODES 3 **/
 /**
  * arches - Global style system focused on utility classes
- * @version v1.6.0
+ * @version v1.52.0
  * @link https://github.com/ACC-Style/Arches/
  */
 
@@ -36,7 +36,7 @@ $theme-palette: ();
  $active-class-name: 'active';
 
 /** No Framework or is a Style Sheet that Should be used as an augmenting stylesheet **/ 
-/** Built With Base Branding 1.6.0 **//**  Default Brands    *********************************/
+/** Built With Base Branding 1.52.0 **//**  Default Brands    *********************************/
 /**  Colors  **/
 
 @import 'setup/config/colors';
@@ -108,7 +108,9 @@ $line-height_2: get-css-size(line-height, 2);
 $line-height_3: get-css-size(line-height, 3);
 $line-height_4: get-css-size(line-height, 4);
 $line-height_5: get-css-size(line-height, 5);
-/** Base UC File **/@each $color-name, $color in $RegistryColors {
+
+/** Base UC File **/
+@each $color-name, $color in $RegistryColors {
     $color-name-alt: $color-name;
     @include color-loop(background-color, $color-name-alt, $color);
     @include color-loop(color, $color-name-alt, $color);
