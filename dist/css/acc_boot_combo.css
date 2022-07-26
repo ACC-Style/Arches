@@ -24975,6 +24975,101 @@ Weight:0
 
 Styleguide Navigation.PageHub.ChildrenLink
 */
+/*
+
+Price Table
+
+A collection of price points and the various features of each at a glance.
+
+Markup:
+<nav class="bg_black-1">
+    <ul class="flex flex_row:lg flex_column gap_5 ul_none c_black-6 font_copy font_0">
+        {{> Recipes.PriceTable.default  }}
+        {{> Recipes.PriceTable.preferred  }}
+    </ul>
+</nav>
+
+MarkupWrapperClasses: 
+w_100
+
+SubComponents:
+Recipes.PriceTable.default - default
+Recipes.PriceTable.preferred  - preferred
+
+Weight: -1000
+
+Styleguide Recipes.PriceTable
+*/
+/*
+
+Price Table Default
+
+A combination UI that shows the price point and value for a product with a nav button to start the purchase.
+
+Markup:
+<li>
+    <div data-element="data-table" class="br_round bg_white p_5:md p_4">
+        <header class="font_display font_4">
+            <h2 data-element="table-title" class="font-size_down-2 font_medium m-b_0 ">Basic</h2>
+            <h3 class="font-size_up-2 lh_2"><span class="font_bold c_black">$39</span><span>/Month</span></h3>
+        </header>
+        <main>
+            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nostrum corporis laboriosam necessitatibus praesentium similique repellat cumque enim tempore maiores, animi minus ipsam? Id minima et odio nostrum expedita tempore.</p>
+            <ul class="ul_none flex flex_column gap-y_3 p-b_4 p-x_3 font-size_1 font_medium c_black-9">
+                <li><i class="fas fa-check-circle m-r_2 c_primary"></i> Quality-focused</li>
+                <li><i class="fas fa-check-circle m-r_2 c_primary"></i> Phased</li>
+                <li><i class="fas fa-check-circle m-r_2 c_primary"></i> Automated</li>
+                <li><i class="fas fa-times-circle m-r_2 c_alert-n2"></i> Cross-platform</li>
+            </ul>
+        </main>
+        <footer class="m-b_n3"><a href="" class="btn btn-primary  h:undecorated">Choose Plan</a></footer>
+    </div>
+</li>
+
+
+MarkupWrapperClasses: 
+bg_black-1 p_4 max-w_30 flex flex_row:lg flex_column gap_5 ul_none c_black-6 font_copy font_0
+
+Weight: 0
+
+Styleguide Recipes.PriceTable.default
+
+*/
+/*
+
+Price Table Preferred
+
+There is the preferred plan in the price table.
+
+Markup:
+<li>
+        <div data-element="data-table" class="br_round bg_primary-n2 p_5:md p_4 c_white-8">
+            <header class="font_display font_4">
+                <h2 data-element="table-title" class="font-size_down-2 font_medium m-b_0 ">Advanced</h2>
+                <h3 class="font-size_up-2 lh_2"><span class="font_bold c_white">$99</span><span>/Month</span></h3>
+            </header>
+            <main>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nostrum corporis laboriosam necessitatibus praesentium similique repellat cumque enim tempore maiores, animi minus ipsam? Id minima et odio nostrum expedita tempore.</p>
+                <ul class="ul_none flex flex_column gap-y_3 p-b_4 p-x_3 font-size_1 font_medium c_white-9">
+                    <li><i class="fas fa-check-circle m-r_2 c_primary-5"></i> Phased</li>
+                    <li><i class="fas fa-check-circle m-r_2 c_primary-5"></i> Automated</li>
+                    <li><i class="fas fa-check-circle m-r_2 c_primary-5"></i> Cross-platform</li>
+                </ul>
+            </main>
+            <footer class="m-b_n3"><a href="" class="btn btn_primary bg_white h:bg_white-5 h:undecorated ">Choose Plan</a></footer>
+        </div>
+    </li>
+
+
+MarkupWrapperClasses: 
+bg_black-1 p_4 max-w_30 flex flex_row:lg flex_column gap_5 ul_none c_black-6 font_copy font_0
+
+Weight: -1000
+
+Styleguide Recipes.PriceTable.preferred
+
+
+*/
 body {
   font-size: 16px;
   font-size: 1rem;
