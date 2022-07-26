@@ -711,6 +711,7 @@ gulp.task(
     gulp.series(
         "build-home",
         "build-acc",
+        "build-coveo_acc",
         "build-mobile",
         "build-cvquality",
         "build-cardiosmart",
