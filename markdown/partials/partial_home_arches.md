@@ -128,7 +128,7 @@ Duplicate an existing kss-config file and set it up. It is recommended you copy 
 
 create a new entry in the script area of the package json for gulp to be able to call the styleguide build command. a
 
-~~~json
+~~~javascript
 "scripts":{
 	"boot_brandName": "kss --config kss-config_boot_brandName.json",	
 	}
