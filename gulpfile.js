@@ -239,7 +239,7 @@ var constructStandaloneStyleSheet = function (name, brand = "acc") {
 		.pipe(headerFromFile("/setup/__brand." + brand + ".scss"))
 		.pipe(headerFromFile("/setup/__preheader.scss"))
         .pipe(
-			header("\n/** Built With Base Branding <%= pkg.version %> **/\n", {
+			header("\n/** Built With "+ brand +" Branding <%= pkg.version %> **/\n", {
 				pkg: pkg,
 			})
 		)
@@ -252,16 +252,9 @@ var constructColorStyleSheet = function (brand) {
 		.pipe(clone())
 		.pipe(rename("color-code_" + brand + ".scss"))
 		.pipe(headerFromFile("/setup/config/_colors." + brand + ".scss"))
-		.pipe(header("\n/** Base UC File **/\n"));
+		.pipe(header("\n/** "+ brand +" Color Stylesheet **/\n"));
 };
-var concatCSS = function (brand, framework) {
-	var uc = gulp.src(PATHS.CSS + "/" + brand + "_uc.css");
-	var boot = gulp.src(PATHS.CSS + "/" + brand + "_" + framework + ".css");
-	return merge(uc, boot)
-		.pipe(concat("" + brand + "_" + framework + "_combo.css"))
-		.pipe(gulp.dest(PATHS.CSS));
-};
-var constructSassFiles = function (brand, framework) {
+var constructFrameworkAndUtilityStyleSheet = function (brand, framework) {
 	var uc = constructUCStyleSheet(brand);
 	uc = buildbrand(uc, brand, "");
 	if (framework == "") {
@@ -289,6 +282,14 @@ var constructMarkdown = function (brand, framework) {
 		)
 		.pipe(gulp.dest(SOURCE.MD));
 };
+var concatCSS = function (brand, framework) {
+	var uc = gulp.src(PATHS.CSS + "/" + brand + "_uc.css");
+	var boot = gulp.src(PATHS.CSS + "/" + brand + "_" + framework + ".css");
+	return merge(uc, boot)
+		.pipe(concat("" + brand + "_" + framework + "_combo.css"))
+		.pipe(gulp.dest(PATHS.CSS));
+};
+
 
 gulp.task("fontawesome", function () {
 	console.log("Gulp Font Awesome Tasks");
@@ -381,7 +382,7 @@ gulp.task( "build-home",
 gulp.task( "build-uc",
 	gulp.series(
 		function SCSS() {
-			return constructSassFiles("acc", "boot");
+			return constructFrameworkAndUtilityStyleSheet("acc", "boot");
 		},
 		function CSS() {
 			return runSass("acc");
@@ -403,7 +404,7 @@ gulp.task( "build-uc",
 gulp.task( "build-acc",
 	gulp.series(
 		function SCSS() {
-			return constructSassFiles("acc", "boot");
+			return constructFrameworkAndUtilityStyleSheet("acc", "boot");
 		},
 		function CSS() {
 			return runSass("acc");
@@ -424,7 +425,7 @@ gulp.task( "build-acc",
 gulp.task( "build-cardiosmart",
 	gulp.series(
 		function SCSS() {
-			return constructSassFiles("cardiosmart", "boot");
+			return constructFrameworkAndUtilityStyleSheet("cardiosmart", "boot");
 		},
 		function CSS() {
 			return runSass("cardiosmart");
@@ -445,7 +446,7 @@ gulp.task( "build-cardiosmart",
 gulp.task( "build-cvquality",
 	gulp.series(
 		function SCSS() {
-			return constructSassFiles("cvquality", "boot");
+			return constructFrameworkAndUtilityStyleSheet("cvquality", "boot");
 		},
 		function CSS() {
 			return runSass("cvquality");
@@ -467,7 +468,7 @@ gulp.task( "build-cvquality",
 gulp.task( "build-library",
 	gulp.series(
 		function SCSS() {
-			return constructSassFiles("library", "boot");
+			return constructFrameworkAndUtilityStyleSheet("library", "boot");
 		},
 		function CSS() {
 			return runSass("library");
@@ -488,7 +489,7 @@ gulp.task( "build-library",
 gulp.task( "build-virtual",
 	gulp.series(
 		function SCSS() {
-			return constructSassFiles("virtual", "boot");
+			return constructFrameworkAndUtilityStyleSheet("virtual", "boot");
 		},
 		function CSS() {
 			return runSass("virtual");
@@ -616,7 +617,7 @@ gulp.task(
 	"build-mobile",
 	gulp.series(
 		function SCSS() {
-			return constructSassFiles("mobile", "zurb");
+			return constructFrameworkAndUtilityStyleSheet("mobile", "zurb");
 		},
 		function CSS() {
 			return runSass("mobile");
@@ -639,7 +640,7 @@ gulp.task(
 	"build-covid",
 	gulp.series(
 		function SCSS() {
-			return constructSassFiles("covid", "boot");
+			return constructFrameworkAndUtilityStyleSheet("covid", "boot");
 		},
 		function CSS() {
 			return runSass("covid");
@@ -695,7 +696,7 @@ gulp.task(
 gulp.task( "build-journal",
 	gulp.series(
 		function SCSS() {
-			return constructSassFiles("journal", "boot");
+			return constructFrameworkAndUtilityStyleSheet("journal", "boot");
 		},
 		function CSS() {
 			return runSass("journal");
