@@ -124,6 +124,16 @@ Duplicate an existing kss-config file and set it up. It is recommended you copy 
 * adding in dependency javascript
 * add an new entry into the `site_nav` and set its active to true.
 
+### Create a new script entry in the `package.json`
+
+create a new entry in the script area of the package json for gulp to be able to call the styleguide build command. a
+
+~~~json
+"scripts":{
+	"boot_brandName": "kss --config kss-config_boot_brandName.json",	
+	}
+~~~
+
 ### Add Navigation to the new brand 
 
 This can be accomplished by either adding a new table row to `\markdown\partials\partial_home_arches.md` which outlines the style areas. *If and only If* you are making a new flagship brand should you add a new entry to all kss_config files so the nav item is available to all pages within the ARCHES documentation. 

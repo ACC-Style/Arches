@@ -355,6 +355,13 @@
 <li>adding in dependency javascript</li>
 <li>add an new entry into the <code>site_nav</code> and set its active to true.</li>
 </ul>
+<h3>Create a new script entry in the <code>package.json</code></h3>
+<p>create a new entry in the script area of the package json for gulp to be able to call the styleguide build command. a</p>
+<pre class="hljs"><code class="language-json"><span class="hljs-string">"scripts"</span>:{
+	<span class="hljs-attr">"boot_brandName"</span>: <span class="hljs-string">"kss --config kss-config_boot_brandName.json"</span>,	
+	}
+
+</code></pre>
 <h3>Add Navigation to the new brand</h3>
 <p>This can be accomplished by either adding a new table row to <code>\markdown\partials\partial_home_arches.md</code> which outlines the style areas. <em>If and only If</em> you are making a new flagship brand should you add a new entry to all kss_config files so the nav item is available to all pages within the ARCHES documentation.</p>
 
