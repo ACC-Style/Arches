@@ -230,6 +230,7 @@ var constructStandaloneStyleSheet = function (name, brand = "acc") {
 		.src(PATHS.SCSS + "/setup/__globalshame_uc.scss")
 		.pipe(clone())
 		.pipe(rename(name + ".scss"))
+		.pipe(headerFromFile("/components/__components." + name + ".scss"))
 		.pipe(headerFromFile("/recipes/__recipes." + name + ".scss"))
 		.pipe(header("\n/** Standalone CSS FILE **/\n"))
 		.pipe(headerFromFile("/styleguide/_" + name + ".scss"))

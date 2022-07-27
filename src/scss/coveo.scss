@@ -851,3 +851,91 @@ DEPRECATED: This is the current pattern on acc as of June 2022
 Styleguide Coveo.Old.SearchEducationalActivities
 
 */
+/* Yes, some of these selectors look verbose. Yes, the verbosity is required to overwrite. */
+
+.CoveoDynamicFacet {
+    border: 1px solid get-themecolor(secondary,3);
+    padding: 1em 1em 0 1em;
+    margin-bottom: 1em;
+    font: $font-ui;
+
+    .coveo-dynamic-facet-header {
+        border: none;
+        .coveo-dynamic-facet-header-title {
+            font-weight: normal;
+            font-family: $font-ui;
+            font-size: $font_0;
+            color: $teal;
+        }
+    }
+
+    .coveo-combobox-input-icon {
+        font-size: $font_n2;
+    }
+
+    button {
+        color: $teal;
+    }
+
+    .coveo-checkbox-button {
+        min-height: 0;
+    }
+}
+
+/* Sidebar Search */
+#sidebar .coveo-search-section {
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar .CoveoSearchbox {
+    border: 1px solid $dark-grey;
+    border-radius: 5px;
+}
+
+.CoveoSearchbox .magic-box {
+    border: none;
+    border-radius: 0;
+}
+
+.CoveoSearchbox .CoveoSearchButton {
+    border: none;
+    border-radius: 0;
+    height: 2rem;
+    width: 2rem;
+}
+
+.magic-box .magic-box-input .magic-box-underlay, .CoveoSearchbox .magic-box .magic-box-input > input {
+    padding: 0 0 0 1rem;
+    height: 100%;
+    box-shadow: none;
+    color: $black;
+    font-size: $font_n1;
+    font-family: $font_copy;
+}
+
+.CoveoSearchbox .magic-box .magic-box-input {
+    height: 100%;
+    border-radius: 6px;
+}
+
+.CoveoSearchbox .coveo-search-button-svg, .CoveoSearchbox .magic-box .magic-box-clear-svg {
+    height: .75rem;
+    width: .75rem;
+    color: $dark-grey;
+}
+
+.magic-box.magic-box-notEmpty .magic-box-clear {
+    width: 24px;
+}
+
+.magic-box .magic-box-clear {
+    width: 1.5rem;
+    height: 100%;
+    line-height: 1;
+}
+
+.magic-box-icon {
+    height: 100%;
+    margin-top:1px;
+}

@@ -295,6 +295,68 @@
 </tr>
 </tbody>
 </table>
+<hr>
+<h2>Adding a New Brand</h2>
+<p>Arches is a complex front end solution so adding a new brand has a decent amount of files that need to be added. Currently all brands are built on the bootstrap framework.</p>
+<h3>Files need to be added to the codebase to support a new brand.</h3>
+<p>All the files except the Setup Brand File can be left blank. The <code>base</code>,<code>components</code>,<code>recipes</code> all use a centralized root file that points to a folder to keep the system clean and organized.</p>
+<pre class="hljs"><code class="language-">.
+└── Src/
+    └── scss/
+        ├── base/
+        │   └── __base.brandName.scss
+        ├── components/
+        │   ├── brandName/
+        │   └── __base.brandName.scss
+        ├── recipes/
+        │   ├── brandName/
+        │   │   └── _brandName.recipe-name.scss
+        │   └── __recipes.brandName.scss
+        └── setup/
+            └── __brand.brandName.scss (Copy the __brand.temp.scss to pull in proper variables and modify from there. )
+
+</code></pre>
+<h3>When should I use <code>setup</code>,<code>base</code>,<code>components</code>, or <code>recipes</code></h3>
+<p><strong><code>Setup</code></strong> this is where you establish the design rules that arches will follow, Color Pallet, Font Families, and some sizing rules for the typography.</p>
+<p><strong><code>Base</code></strong> this is the most specialized section of brand structure. This is where depending on the style of the brand you can add flourishes and stylized global elements. <code>CardioSmart</code> for example has some typography rules that deviate from the base primary color for headers and uses the accent color for h1 - h3; and it also applies a colored gradient background to the wash over areas behind the page in desktop browsers. This is the area to make those types of changes.</p>
+<p><strong><code>Components</code></strong> is the area where the building of the UI elements requires some additional CSS.  A good example of is when your are doing a bootstrap component override where Arches classes don't have the appropriate specificity to correct the stylings.  A common component is the <code>_acc.boot._navbar.override</code> the subtle interactions of hovers make it mostly impossible for arches to alter the styles established by bootstrap so an override was needed to make this component work.</p>
+<p><strong><code>Recipes</code></strong> are used when you are just build DOM patterns that don't include any CSS.  Most <em>new</em> documentation patterns will be created here.</p>
+<h3>Adding a new Gulp Task</h3>
+<p>In the gulpfile.js you must duplicate the appropriate task and alter is brand to match the needs.</p>
+<pre class="hljs"><code class="language-javascript">gulp.task( <span class="hljs-string">"build-brandName"</span>,
+	gulp.series(
+		<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SCSS</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">return</span> constructFrameworkAndUtilityStyleSheet(<span class="hljs-string">"brandName"</span>, <span class="hljs-string">"boot"</span>);
+		},
+		<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">CSS</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">return</span> runSass(<span class="hljs-string">"brandName"</span>);
+		},
+		<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">CONCAT</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">return</span> concatCSS(<span class="hljs-string">"brandName"</span>, <span class="hljs-string">"boot"</span>);
+		},
+		<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Markdown</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">return</span> constructMarkdown(<span class="hljs-string">"brandName"</span>, <span class="hljs-string">"boot"</span>);
+		},
+		<span class="hljs-string">"copy-to-dist"</span>,
+		<span class="hljs-string">"copy-to-styleguide"</span>,
+		<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">return</span> run(<span class="hljs-string">"npm run boot_brandName"</span>).exec();
+		}
+	)
+);
+</code></pre>
+<h3>Update the Default Gulp Task</h3>
+<p>Depending on the need you should add the new <code>build-brandName</code> task to the group building tasks <code>default</code> or <code>default-depreciated</code>. Use default depreciated for any brand that isn't 100% official or going to be used in production straight away. a</p>
+<h3>Create a StyleGuide Config file</h3>
+<p>Duplicate an existing kss-config file and set it up. It is recommended you copy the <code>kss-config_boot_acc.json</code></p>
+<ul>
+<li>the direct it to the new css document you are making</li>
+<li>alter the appropriate stylesheets for stylings</li>
+<li>adding in dependency javascript</li>
+<li>add an new entry into the <code>site_nav</code> and set its active to true.</li>
+</ul>
+<h3>Add Navigation to the new brand</h3>
+<p>This can be accomplished by either adding a new table row to <code>\markdown\partials\partial_home_arches.md</code> which outlines the style areas. <em>If and only If</em> you are making a new flagship brand should you add a new entry to all kss_config files so the nav item is available to all pages within the ARCHES documentation.</p>
 
             </article>
         </section>
